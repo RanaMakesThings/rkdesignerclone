@@ -3,7 +3,7 @@
 Operational notes for the checked-in SAEM conference template:
 
 - template file:
-  `projects/saem-custom-gpt-creation/assets/powerpoint-template/saem-annual-meeting-powerpoint-template.pptx`
+  `projects/customgpt/assets/powerpoint-template/saem-annual-meeting-powerpoint-template.pptx`
 - source file metadata:
   creator `Holly Byrd-Duncan`
 - slide size:
@@ -57,7 +57,7 @@ layout picker when selecting among the three master variants.
 
 ## Practical workflow
 
-1. Develop slide content and figure logic under `projects/saem-custom-gpt-creation/`.
+1. Develop slide content and figure logic under `projects/customgpt/`.
 2. Generate canonical visual artifacts in `slide-figures/`.
 3. Assemble the final presentation in a copy of the SAEM template.
 4. Apply the closest matching master/layout for each slide.

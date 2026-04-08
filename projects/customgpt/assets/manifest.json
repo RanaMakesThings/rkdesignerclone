@@ -1,6 +1,6 @@
 {
   "manifestVersion": 1,
-  "projectId": "saem-custom-gpt-creation",
+  "projectId": "customgpt",
   "kind": "deck-assets",
   "assets": [
     {
@@ -15,13 +15,13 @@
       "files": [
         {
           "label": "PowerPoint Template",
-          "path": "projects/saem-custom-gpt-creation/assets/powerpoint-template/saem-annual-meeting-powerpoint-template.pptx"
+          "path": "projects/customgpt/assets/powerpoint-template/saem-annual-meeting-powerpoint-template.pptx"
         }
       ],
       "sourceFiles": [
         {
           "label": "Template Folder",
-          "path": "projects/saem-custom-gpt-creation/assets/powerpoint-template"
+          "path": "projects/customgpt/assets/powerpoint-template"
         }
       ],
       "tags": [

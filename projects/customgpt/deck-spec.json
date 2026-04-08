@@ -1,5 +1,5 @@
 {
-  "deckId": "saem-custom-gpt-creation",
+  "deckId": "customgpt",
   "title": "CustomGPT Creation",
   "version": "2026-04-08.1",
   "status": "active",
@@ -45,10 +45,10 @@
       "buildStatus": "packet and mockup drafted",
       "proof": [],
       "paths": {
-        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-01-title-promise.md",
+        "packet": "projects/customgpt/slide-packets/slide-01-title-promise.md",
         "specs": [],
         "stampedDir": null,
-        "assetsManifest": "projects/saem-custom-gpt-creation/slide-assets/slide-01/manifest.json"
+        "assetsManifest": "projects/customgpt/slide-assets/slide-01/manifest.json"
       },
       "selectedDirection": "Title-promise v1 is the current selected opener.",
       "notes": [
@@ -61,19 +61,19 @@
           "label": "Title Promise V1",
           "status": "selected",
           "summary": "Typographic opener that uses the SAEM palette and a three-step workshop promise panel.",
-          "previewPath": "projects/saem-custom-gpt-creation/slide-figures/slide-01/versions/version-000001--title-promise-v1/preview.png",
+          "previewPath": "projects/customgpt/slide-figures/slide-01/versions/version-000001--title-promise-v1/preview.png",
           "files": [
             {
               "label": "Version dir",
-              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-01/versions/version-000001--title-promise-v1"
+              "path": "projects/customgpt/slide-figures/slide-01/versions/version-000001--title-promise-v1"
             },
             {
               "label": "HTML",
-              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-01/versions/version-000001--title-promise-v1/generated.html"
+              "path": "projects/customgpt/slide-figures/slide-01/versions/version-000001--title-promise-v1/generated.html"
             },
             {
               "label": "Preview",
-              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-01/versions/version-000001--title-promise-v1/preview.png"
+              "path": "projects/customgpt/slide-figures/slide-01/versions/version-000001--title-promise-v1/preview.png"
             }
           ]
         }
@@ -94,10 +94,10 @@
       "buildStatus": "packet and mockup drafted",
       "proof": [],
       "paths": {
-        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-02-why-this-matters.md",
+        "packet": "projects/customgpt/slide-packets/slide-02-why-this-matters.md",
         "specs": [],
         "stampedDir": null,
-        "assetsManifest": "projects/saem-custom-gpt-creation/slide-assets/slide-02/manifest.json"
+        "assetsManifest": "projects/customgpt/slide-assets/slide-02/manifest.json"
       },
       "selectedDirection": "Workflow-burden v1 is the current selected problem frame.",
       "notes": [
@@ -110,19 +110,19 @@
           "label": "Workflow Burden V1",
           "status": "selected",
           "summary": "Two-panel burden slide showing the people who absorb policy lookup work and the repeated question loop they face.",
-          "previewPath": "projects/saem-custom-gpt-creation/slide-figures/slide-02/versions/version-000001--workflow-burden-v1/preview.png",
+          "previewPath": "projects/customgpt/slide-figures/slide-02/versions/version-000001--workflow-burden-v1/preview.png",
           "files": [
             {
               "label": "Version dir",
-              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-02/versions/version-000001--workflow-burden-v1"
+              "path": "projects/customgpt/slide-figures/slide-02/versions/version-000001--workflow-burden-v1"
             },
             {
               "label": "HTML",
-              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-02/versions/version-000001--workflow-burden-v1/generated.html"
+              "path": "projects/customgpt/slide-figures/slide-02/versions/version-000001--workflow-burden-v1/generated.html"
             },
             {
               "label": "Preview",
-              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-02/versions/version-000001--workflow-burden-v1/preview.png"
+              "path": "projects/customgpt/slide-figures/slide-02/versions/version-000001--workflow-burden-v1/preview.png"
             }
           ]
         }
@@ -143,10 +143,10 @@
       "buildStatus": "packet and mockup drafted",
       "proof": [],
       "paths": {
-        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-03-what-this-tool-is.md",
+        "packet": "projects/customgpt/slide-packets/slide-03-what-this-tool-is.md",
         "specs": [],
         "stampedDir": null,
-        "assetsManifest": "projects/saem-custom-gpt-creation/slide-assets/slide-03/manifest.json"
+        "assetsManifest": "projects/customgpt/slide-assets/slide-03/manifest.json"
       },
       "selectedDirection": "Policy-assistant-object v1 is the current selected concept card.",
       "notes": [
@@ -159,19 +159,19 @@
           "label": "Policy Assistant Object V1",
           "status": "selected",
           "summary": "Question-to-answer concept card that shows the assistant as a grounded policy Q&A workflow before the build walkthrough.",
-          "previewPath": "projects/saem-custom-gpt-creation/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1/preview.png",
+          "previewPath": "projects/customgpt/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1/preview.png",
           "files": [
             {
               "label": "Version dir",
-              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1"
+              "path": "projects/customgpt/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1"
             },
             {
               "label": "HTML",
-              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1/generated.html"
+              "path": "projects/customgpt/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1/generated.html"
             },
             {
               "label": "Preview",
-              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1/preview.png"
+              "path": "projects/customgpt/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1/preview.png"
             }
           ]
         }
@@ -192,7 +192,7 @@
       "buildStatus": "packet drafted, visual pending",
       "proof": [],
       "paths": {
-        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-04-why-it-works.md",
+        "packet": "projects/customgpt/slide-packets/slide-04-why-it-works.md",
         "specs": [],
         "stampedDir": null,
         "assetsManifest": null
@@ -217,7 +217,7 @@
       "buildStatus": "packet drafted, visual pending",
       "proof": [],
       "paths": {
-        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-05-what-good-looks-like.md",
+        "packet": "projects/customgpt/slide-packets/slide-05-what-good-looks-like.md",
         "specs": [],
         "stampedDir": null,
         "assetsManifest": null
@@ -242,7 +242,7 @@
       "buildStatus": "packet drafted, visual pending",
       "proof": [],
       "paths": {
-        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-06-source-prep.md",
+        "packet": "projects/customgpt/slide-packets/slide-06-source-prep.md",
         "specs": [],
         "stampedDir": null,
         "assetsManifest": null
@@ -267,7 +267,7 @@
       "buildStatus": "packet drafted, visual pending",
       "proof": [],
       "paths": {
-        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-07-live-walkthrough-setup.md",
+        "packet": "projects/customgpt/slide-packets/slide-07-live-walkthrough-setup.md",
         "specs": [],
         "stampedDir": null,
         "assetsManifest": null
@@ -292,7 +292,7 @@
       "buildStatus": "packet drafted, visual pending",
       "proof": [],
       "paths": {
-        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-08-live-build.md",
+        "packet": "projects/customgpt/slide-packets/slide-08-live-build.md",
         "specs": [],
         "stampedDir": null,
         "assetsManifest": null
@@ -317,7 +317,7 @@
       "buildStatus": "packet drafted, visual pending",
       "proof": [],
       "paths": {
-        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-09-live-testing.md",
+        "packet": "projects/customgpt/slide-packets/slide-09-live-testing.md",
         "specs": [],
         "stampedDir": null,
         "assetsManifest": null
@@ -342,7 +342,7 @@
       "buildStatus": "packet drafted, visual pending",
       "proof": [],
       "paths": {
-        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-10-governance-maintenance.md",
+        "packet": "projects/customgpt/slide-packets/slide-10-governance-maintenance.md",
         "specs": [],
         "stampedDir": null,
         "assetsManifest": null
@@ -367,7 +367,7 @@
       "buildStatus": "packet drafted, visual pending",
       "proof": [],
       "paths": {
-        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-11-takeaways-qa.md",
+        "packet": "projects/customgpt/slide-packets/slide-11-takeaways-qa.md",
         "specs": [],
         "stampedDir": null,
         "assetsManifest": null
@@ -379,6 +379,6 @@
     }
   ],
   "paths": {
-    "deckAssetsManifest": "projects/saem-custom-gpt-creation/assets/manifest.json"
+    "deckAssetsManifest": "projects/customgpt/assets/manifest.json"
   }
 }

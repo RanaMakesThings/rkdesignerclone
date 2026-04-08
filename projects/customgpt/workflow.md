@@ -1,7 +1,7 @@
 # Deck Workflow
 
 Project-local workflow for building the SAEM workshop deck under
-`projects/saem-custom-gpt-creation/`.
+`projects/customgpt/`.
 
 ## Core rule
 
@@ -10,7 +10,7 @@ Treat `deck-spec.json` as the canonical current deck backbone.
 Treat the checked-in SAEM PowerPoint template as the canonical conference shell
 for final deck assembly:
 
-- `projects/saem-custom-gpt-creation/assets/powerpoint-template/saem-annual-meeting-powerpoint-template.pptx`
+- `projects/customgpt/assets/powerpoint-template/saem-annual-meeting-powerpoint-template.pptx`
 
 Use this project to rebuild the workshop around a clearer sequence:
 
@@ -37,9 +37,9 @@ Use this project to rebuild the workshop around a clearer sequence:
 ## Required reports
 
 - per-slide:
-  - `npm run figures:report -- --project-root projects/saem-custom-gpt-creation --slide <slide-id>`
+  - `npm run figures:report -- --project-root projects/customgpt --slide <slide-id>`
 - whole deck:
-  - `npm run figures:deck-report -- --project-root projects/saem-custom-gpt-creation`
+  - `npm run figures:deck-report -- --project-root projects/customgpt`
 
 ## Execution policy
 
