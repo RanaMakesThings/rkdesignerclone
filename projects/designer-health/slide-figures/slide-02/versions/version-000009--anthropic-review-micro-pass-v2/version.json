@@ -1,0 +1,14 @@
+{
+  "id": "version-000009",
+  "slideId": "slide-02",
+  "slideDir": "projects/designer-health/slide-figures/slide-02",
+  "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000009--anthropic-review-micro-pass-v2",
+  "label": "anthropic-review-micro-pass-v2",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.436Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-02/anthropic-review-micro-pass-v2"
+  ]
+}

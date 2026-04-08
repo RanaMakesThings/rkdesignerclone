@@ -1,0 +1,50 @@
+Create a premium 16:9 investor-deck central figure for Designer Health.
+
+Use the attached slide-07 version-89 image as the single main composition
+anchor. Stay extremely close to version 89. This is a surgical refinement, not
+a redesign.
+
+Keep the same:
+- wide horizontal storyboard composition
+- panel widths and spacing
+- overall rhythm and left-to-right reading
+- beat-1 secure-link phone
+- beat-3 funnel from conversation fragments into the brief
+- person style and overall taste level from version 89
+- white background with restrained teal accents
+
+Only change these things:
+- remove the detached `VOX` badge in beat 3
+- keep beat 3 as a clean tech-forward brief/report object, but no extra badge
+- in beat 2, replace the ambiguous bubble logic with clearly owned speech
+  bubbles
+- patient bubble: `I've had a bad cough.`
+- phone bubble: `How long has it been going on?`
+- optional small patient reply: `Five days.`
+- make it visually obvious which bubble belongs to the patient and which
+  belongs to the phone
+- no thought bubbles
+- in beat 4, show one clinician reading one tablet only
+
+Visible text allowed:
+- `Before visit`
+- `Visit begins`
+- `1`
+- `2`
+- `3`
+- `4`
+- the dialogue bubbles above
+
+Do not add any other labels or copy.
+
+Style:
+- premium editorial healthcare illustration
+- grayscale with restrained teal accents
+- crisp and deck-native, not photoreal
+
+Avoid:
+- extra bottom labels
+- clipboard metaphor
+- dashboard-style center panel
+- duplicate devices in beat 4
+- new layout ideas

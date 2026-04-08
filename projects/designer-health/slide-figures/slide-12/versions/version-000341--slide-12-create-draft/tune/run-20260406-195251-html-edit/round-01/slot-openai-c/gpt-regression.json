@@ -1,0 +1,19 @@
+{
+  "provider": "gpt",
+  "verdict": "blocker",
+  "rationale": "The candidate is not clean: while the main shell is mostly resolved, the locked header area is visibly broken with overlapping duplicate text, and there is still a visible broken/missing image placeholder artifact at the lower right of the content area. Those are concrete regressions versus a finished slide.",
+  "blockers": [
+    "Locked header/subheader region is visibly overlapped and duplicated, making the required copy look wrong and partially unreadable.",
+    "A broken image/placeholder artifact remains visible near the lower-right of the slide content, indicating unresolved stub content."
+  ],
+  "nextMove": "Fix the header stack so the locked title and subheader render once with proper spacing, then remove the stray broken-image placeholder artifact in the lower-right before rechecking footer alignment.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate is not clean: while the main shell is mostly resolved, the locked header area is visibly broken with overlapping duplicate text, and there is still a visible broken/missing image placeholder artifact at the lower right of the content area. Those are concrete regressions versus a finished slide.",
+    "blockers": [
+      "Locked header/subheader region is visibly overlapped and duplicated, making the required copy look wrong and partially unreadable.",
+      "A broken image/placeholder artifact remains visible near the lower-right of the slide content, indicating unresolved stub content."
+    ],
+    "nextMove": "Fix the header stack so the locked title and subheader render once with proper spacing, then remove the stray broken-image placeholder artifact in the lower-right before rechecking footer alignment."
+  }
+}

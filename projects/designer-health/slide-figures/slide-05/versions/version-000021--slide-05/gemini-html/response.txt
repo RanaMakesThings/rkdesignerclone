@@ -1,0 +1,133 @@
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <!-- Colors based on Slide 3 reference -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5A8DC8" />
+      <stop offset="100%" stop-color="#4A7CB5" />
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+      text {
+        font-family: 'Inter', sans-serif;
+      }
+      .header { font-size: 40px; font-weight: 700; fill: #111827; letter-spacing: -0.5px; }
+      .ruler-text { font-size: 12px; font-weight: 500; fill: #6B7280; }
+      .bar-text { font-size: 14px; font-weight: 500; fill: #FFFFFF; }
+      .bar-text-dark { font-size: 14px; font-weight: 500; fill: #111827; }
+      .hero-text { font-size: 28px; font-weight: 600; fill: #FFFFFF; }
+      .support-heading { font-size: 22px; font-weight: 600; fill: #111827; }
+      .reason-title { font-size: 18px; font-weight: 600; fill: #111827; }
+      .reason-body { font-size: 16px; font-weight: 400; fill: #4B5563; }
+    </style>
+    
+    <!-- Arrowhead marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#FDFDFD" />
+
+  <!-- HEADER (Top Left) -->
+  <text x="80" y="120" class="header">History is the cleanest</text>
+  <text x="80" y="168" class="header">place to reclaim minutes</text>
+
+  <!-- QUOTED SOURCE BAR (Upper Right) -->
+  <g transform="translate(620, 100)">
+    <!-- Ruler -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="0" class="ruler-text" text-anchor="middle">0</text>
+      <line x1="0" y1="8" x2="0" y2="12" stroke="#D1D5DB" stroke-width="1.5" />
+      
+      <line x1="26.5" y1="10" x2="26.5" y2="12" stroke="#E5E7EB" stroke-width="1" />
+      <line x1="53" y1="10" x2="53" y2="12" stroke="#E5E7EB" stroke-width="1" />
+      <line x1="79.5" y1="10" x2="79.5" y2="12" stroke="#E5E7EB" stroke-width="1" />
+      <line x1="106" y1="10" x2="106" y2="12" stroke="#E5E7EB" stroke-width="1" />
+
+      <text x="132.5" y="0" class="ruler-text" text-anchor="middle">5</text>
+      <line x1="132.5" y1="8" x2="132.5" y2="12" stroke="#D1D5DB" stroke-width="1.5" />
+
+      <line x1="159" y1="10" x2="159" y2="12" stroke="#E5E7EB" stroke-width="1" />
+      <line x1="185.5" y1="10" x2="185.5" y2="12" stroke="#E5E7EB" stroke-width="1" />
+      <line x1="212" y1="10" x2="212" y2="12" stroke="#E5E7EB" stroke-width="1" />
+      <line x1="238.5" y1="10" x2="238.5" y2="12" stroke="#E5E7EB" stroke-width="1" />
+
+      <text x="265" y="0" class="ruler-text" text-anchor="middle">10</text>
+      <line x1="265" y1="8" x2="265" y2="12" stroke="#D1D5DB" stroke-width="1.5" />
+
+      <line x1="291.5" y1="10" x2="291.5" y2="12" stroke="#E5E7EB" stroke-width="1" />
+      <line x1="318" y1="10" x2="318" y2="12" stroke="#E5E7EB" stroke-width="1" />
+      <line x1="344.5" y1="10" x2="344.5" y2="12" stroke="#E5E7EB" stroke-width="1" />
+      <line x1="371" y1="10" x2="371" y2="12" stroke="#E5E7EB" stroke-width="1" />
+
+      <text x="397.5" y="0" class="ruler-text" text-anchor="middle">15</text>
+      <line x1="397.5" y1="8" x2="397.5" y2="12" stroke="#D1D5DB" stroke-width="1.5" />
+
+      <line x1="424" y1="10" x2="424" y2="12" stroke="#E5E7EB" stroke-width="1" />
+      <line x1="450.5" y1="10" x2="450.5" y2="12" stroke="#E5E7EB" stroke-width="1" />
+      <line x1="477" y1="10" x2="477" y2="12" stroke="#E5E7EB" stroke-width="1" />
+      <line x1="503.5" y1="10" x2="503.5" y2="12" stroke="#E5E7EB" stroke-width="1" />
+
+      <text x="530" y="0" class="ruler-text" text-anchor="middle">20</text>
+      <line x1="530" y1="8" x2="530" y2="12" stroke="#D1D5DB" stroke-width="1.5" />
+    </g>
+
+    <!-- Bar Segments -->
+    <g transform="translate(0, 20)">
+      <!-- Segment 1: Story reconstruction (Blue) -->
+      <path d="M 6 0 L 176 0 L 176 56 L 6 56 C 2.686 56 0 53.314 0 50 L 0 6 C 0 2.686 2.686 0 6 0 Z" fill="#5A8DC8" />
+      <text x="88" y="33" class="bar-text" text-anchor="middle">Story reconstruction</text>
+
+      <!-- Segment 2: Decisions + counseling (Gray) -->
+      <rect x="176" y="0" width="176" height="56" fill="#9CA6B0" />
+      <text x="264" y="33" class="bar-text" text-anchor="middle">Decisions + counseling</text>
+
+      <!-- Segment 3: Exam + workflow (Light Gray) -->
+      <path d="M 352 0 L 524 0 C 527.314 0 530 2.686 530 6 L 530 50 C 530 53.314 527.314 56 524 56 L 352 56 L 352 0 Z" fill="#DDE2E8" />
+      <text x="441" y="33" class="bar-text-dark" text-anchor="middle">Exam + workflow</text>
+    </g>
+  </g>
+
+  <!-- ELEGANT CURVED PEEL ARROW -->
+  <!-- Starts from bottom-center of the blue source segment, curves down and left to the top-center of the hero module -->
+  <path d="M 708 180 C 708 280, 270 230, 270 340" fill="none" stroke="#9CA3AF" stroke-width="2" marker-end="url(#arrowhead)" />
+
+  <!-- HERO MODULE (Center Left) -->
+  <g transform="translate(80, 350)">
+    <!-- Compact blue extracted band -->
+    <rect x="0" y="0" width="380" height="100" rx="8" fill="url(#blueGradient)" />
+    <!-- Optional Hero Text -->
+    <text x="190" y="58" class="hero-text" text-anchor="middle">History reconstruction</text>
+  </g>
+
+  <!-- GROUPED SUPPORT BLOCK (Center Right) -->
+  <g transform="translate(520, 270)">
+    <!-- Clean, subtle background to group the text -->
+    <rect x="0" y="0" width="680" height="320" rx="12" fill="#F4F6F8" stroke="#E5E7EB" stroke-width="1" />
+    
+    <!-- Heading -->
+    <text x="48" y="56" class="support-heading">Why this wedge</text>
+
+    <!-- Reason 1 -->
+    <g transform="translate(48, 104)">
+      <text x="0" y="0" class="reason-title">Repeated across visits</text>
+      <text x="0" y="24" class="reason-body">The same story gets repeated across encounters</text>
+    </g>
+
+    <!-- Reason 2 -->
+    <g transform="translate(48, 180)">
+      <text x="0" y="0" class="reason-title">Time-variable</text>
+      <text x="0" y="24" class="reason-body">Time required depends on complexity and communication</text>
+    </g>
+
+    <!-- Reason 3 -->
+    <g transform="translate(48, 256)">
+      <text x="0" y="0" class="reason-title">Can begin before the encounter</text>
+      <text x="0" y="24" class="reason-body">Much of it can happen before the clinician is on the clock</text>
+    </g>
+  </g>
+
+</svg>
+```

@@ -1,0 +1,436 @@
+Here’s the real ask:
+
+## 1) What the user is actually trying to get onto the slide
+
+They are **not** trying to show “the app.”
+
+They are trying to show **one believable clinician-facing artifact** that proves the product can take a messy patient conversation and turn it into a **structured brief a doctor could actually use**.
+
+The slide needs the viewer to instantly get:
+
+- this is **not raw transcription**
+- this is **not just a chatbot**
+- this is **not a dashboard of random widgets**
+- this is a **clinical brief** that captures:
+  - the story
+  - the key findings
+  - the likely considerations
+  - what still needs confirmation
+  - the next best question
+
+If the reaction isn’t “oh, the clinician gets *this*,” then the slide misses.
+
+---
+
+## 2) My blunt design opinion on what the artifact should be
+
+The artifact should be a **single report-like sheet**, not a product screenshot and not a split-screen dashboard.
+
+That means:
+
+- **one central white brief**
+- **minimal chrome**
+- **clinical headings**
+- **tight information hierarchy**
+- **small, restrained reasoning area on the right**
+- **a bottom timeline strip**
+- **one explicit unresolved/questions area**
+
+### What it should not be
+
+- not a browser window
+- not a fake EMR with nav/sidebar/tabs
+- not a dense dashboard
+- not a giant “Differential Diagnosis” panel screaming “we diagnose patients now”
+- not covered in loud green checks and red Xs like a consumer app
+
+That last part matters. The user likes the **supports / against / unknowns logic**, and that logic is good. But the presentation should be **calm and clinician-ready**, not gamified.
+
+### My strong opinion
+
+If you copy the reference component too literally, you will end up with a **nice-looking ops console**, which is the wrong vibe for this slide.
+
+The winning move is:
+
+> **A structured brief document with embedded reasoning, not a reasoning UI with some patient facts attached.**
+
+That’s the whole game.
+
+---
+
+## 3) Three concrete composition directions, ranked best to worst
+
+# 1. Best: Single structured brief with embedded reasoning rail
+
+### One-sentence visual description
+A single clean white “Intake Brief” sheet, with the left two-thirds showing the distilled patient story and findings, the right third showing ranked working considerations, and a full-width bottom timeline anchoring the story in time.
+
+### What to keep from the reference component
+- the calm white clinical-card feel
+- thin borders
+- muted typography
+- ranked candidates
+- the **Supports / Against / Unknowns** logic
+- a suggested next question
+
+### What to cut from the reference component
+- trace/provenance tabs
+- raw ops-console feel
+- visible tab systems
+- too many separate cards
+- anything that reads like internal tooling
+
+### What to translate or rename
+- `What We Know` → break into actual clinical sections:
+  - `Chief concern`
+  - `Why today`
+  - `Key positives`
+  - `Key negatives`
+  - `What happened when`
+- `Differential + Next Question + Trace` → split into:
+  - `Working considerations`
+  - `What still needs confirmation`
+  - `Suggested next question`
+- `Unknowns` → `To confirm` or `Still unclear`
+
+### Why it works on an investor deck
+Because it shows the **transformation**:
+conversation in → structured clinical brief out.
+
+That is the product. Not the UI chrome. Not the trace. Not the AI guts.
+
+It also matches the official slide intent almost perfectly:
+- **what matters** → key positives / negatives
+- **what happened when** → timeline
+- **what still needs confirmation** → unresolved items + next question
+
+### Biggest risk / failure mode
+If you overpack it, it becomes unreadable and the slide turns into tiny text soup.
+
+This direction only works if you’re ruthless:
+- 6–8 sections max
+- very short bullets
+- only 3 considerations
+- only 1 next question
+- timeline with 4 nodes, not 10
+
+---
+
+# 2. Good but weaker: Two-panel artifact derived from the reference component
+
+### One-sentence visual description
+A single framed artifact containing two side-by-side cards: left for patient story and extracted findings, right for working considerations with supports/against/to-confirm logic.
+
+### What to keep from the reference component
+- the two-column balance
+- the ranked list format
+- supports/against/unknowns structure
+- the next-question behavior
+- restrained status color
+
+### What to cut from the reference component
+- trace
+- raw provenance
+- any tabs
+- extra controls
+- “sandbox” flavor
+
+### What to translate or rename
+- left card `What We Know` → `Patient story + key findings` or just `Key findings`
+- right card `Differential + Next Question + Trace` → `Working considerations`
+- `Unknowns` → `To confirm`
+- add a small timeline row below the left card
+
+### Why it works on an investor deck
+It’s fast to understand. It clearly says:
+- left = extracted clinical picture
+- right = reasoning + next question
+
+And it preserves the sharpness the user liked in the reference.
+
+### Biggest risk / failure mode
+It reads like a **dashboard**.
+
+That is the problem. Even if it’s visually attractive, it drifts away from “structured brief” and toward “clinical decision-support tool UI.” On this slide, that’s weaker.
+
+---
+
+# 3. Worst: Browser-framed webpage screenshot of the mock report
+
+### One-sentence visual description
+A faux browser window with the report inside it, showing the brief as if the clinician opened a webpage.
+
+### What to keep from the reference component
+- overall visual calm
+- report card styling
+- clean section hierarchy
+- the reasoning logic
+
+### What to cut from the reference component
+- tabs
+- trace
+- raw console elements
+- any visible app scaffolding beyond the report itself
+
+### What to translate or rename
+Mostly the same clinical renaming as above, but housed inside a browser frame.
+
+### Why it works on an investor deck
+It instantly signals “this is software,” which is the only reason people keep reaching for this move.
+
+### Biggest risk / failure mode
+It’s the wrong move.
+
+It shrinks the content, adds useless chrome, and turns the slide into a screenshot instead of an artifact. The eye goes to the browser frame instead of the brief. It also violates the stated guidance: **one central artifact, not a screenshot, not a dashboard**.
+
+If you do this, the slide gets less believable, not more.
+
+---
+
+## 4) Should the right-hand reasoning area be labeled “Differential,” “Working differential,” “Working considerations,” “Clinical considerations,” “Considerations to confirm,” or something else?
+
+Use:
+
+# **Working considerations**
+
+That is the correct label.
+
+### Why not the others
+
+- **Differential**  
+  Too aggressive. Too loaded. Feels like you’re claiming diagnostic authority on the slide.
+
+- **Working differential**  
+  Better, but still very “we are producing the diagnosis list.” It invites the wrong read.
+
+- **Clinical considerations**  
+  Too vague. Sounds like consultant mush.
+
+- **Considerations to confirm**  
+  Good phrase, but not for the main reasoning area. That should be a **separate box for unresolved items**, not the title of the ranked list.
+
+### My blunt answer
+Show the reasoning logic, yes.  
+Do **not** make the headline word on the slide be **Differential**.
+
+If you absolutely must preserve the concept, do it inside the panel structure, not in the panel title.
+
+Example:
+- panel title: `Working considerations`
+- within each item:
+  - `Supports`
+  - `Against`
+  - `To confirm`
+
+That gives you the same intelligence without the wrong posture.
+
+---
+
+## 5) The exact section labels I would put into the winning artifact
+
+In order:
+
+- `Intake brief`  
+  small document title, optional but useful
+
+- `Chief concern`
+
+- `Why today`
+
+- `Key positives`
+
+- `Key negatives`
+
+- `Working considerations`
+
+- `What still needs confirmation`
+
+- `Suggested next question`
+
+- `What happened when`
+
+That’s it.
+
+Do **not** add more unless you have real data worth showing.
+
+I would specifically **not** add:
+- `Trace`
+- `Raw transcript`
+- `Assessment`
+- `Plan`
+- `Differential diagnosis`
+- `Workup & treatments so far` unless you actually have believable content for it
+
+---
+
+## 6) Rough wireframe in plain text
+
+Here’s the version I’d build.
+
+```text
+┌────────────────────────────────────────────────────────────────────────────────────┐
+│ Intake brief                                                      For clinician review │
+├───────────────────────────────────────────────┬────────────────────────────────────┤
+│ Chief concern                                 │ Working considerations              │
+│ Cough and breathing changes                   │                                    │
+│                                               │ 1. Community-acquired pneumonia    │
+│ Why today                                     │    Supports: yellow sputum; fever  │
+│ Cough for ~1 week after URI symptoms.         │    unresolved                      │
+│ Yellow sputum present. Measured fever         │    Against: no strong confirmed    │
+│ remains unresolved.                           │    counter-evidence yet            │
+│                                               │    To confirm: dyspnea severity;   │
+│ Key positives                                 │    pleuritic chest pain            │
+│ • URI prodrome present                        │                                    │
+│ • Cough for about one week                    │ 2. Acute bronchitis               │
+│ • Yellow sputum present                       │    Supports: URI prodrome; cough   │
+│ • Measured fever                              │    duration                        │
+│                                               │    Against: persistent fever makes │
+│ Key negatives                                 │    it less clean                   │
+│ • None confidently established yet            │    To confirm: breathing impact    │
+│                                               │                                    │
+│                                               │ 3. Post-viral cough               │
+│                                               │    Supports: preceding URI         │
+│                                               │    Against: sputum + fever are     │
+│                                               │    less typical                    │
+│                                               │    To confirm: whether fever       │
+│                                               │    actually resolved               │
+│                                               ├────────────────────────────────────┤
+│                                               │ What still needs confirmation      │
+│                                               │ • Has breathing changed from       │
+│                                               │   baseline?                        │
+│                                               │ • Any chest pain with deep breath? │
+│                                               │ • Is the fever ongoing or gone?    │
+│                                               │                                    │
+│                                               │ Suggested next question            │
+│                                               │ “How has your breathing changed,   │
+│                                               │ and does it hurt anywhere in the   │
+│                                               │ chest when you take a deep breath?”│
+├────────────────────────────────────────────────────────────────────────────────────┤
+│ What happened when                                                                 │
+│ URI symptoms begin → cough develops (~1 week ago) → yellow sputum noted →         │
+│ measured fever still unresolved today                                              │
+└────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Important visual note
+This should look like **one sheet**, not a bunch of floating widgets.
+
+So:
+- one main container
+- subtle internal dividers
+- no heavy shadows
+- no top nav
+- no sidebar
+- no browser frame
+
+---
+
+## 7) A few very specific visual rules I’d enforce
+
+Because this kind of mock lives or dies on restraint.
+
+### Typography
+- section labels: small, muted, semi-bold
+- content: dark gray, not pure black
+- candidate titles: slightly heavier, not oversized
+- no giant title inside the artifact
+
+### Color
+- mostly grayscale
+- supports: muted green dot or left border
+- against: muted rust/red dot
+- to confirm: amber or warm gray
+- no candy-color chips
+
+### Icons
+Do **not** use giant checkmarks and Xs everywhere.
+
+Use:
+- tiny dots
+- small pills
+- maybe a subtle arrow in the timeline
+
+The minute it looks like a consumer health app, the slide gets worse.
+
+### Density
+- 3 working considerations max
+- 3–4 bullets in key positives
+- 0–1 bullets in key negatives if sparse
+- 3 unresolved items max
+- 1 next question only
+
+---
+
+## 8) Blunt recommendation: if I had to ship one believable mock for the deck today, what exactly would I build first?
+
+I would build **Direction 1** immediately:
+
+> **A static HTML “Intake brief” artifact, exported as an image, with a left clinical-summary column, a right “Working considerations” rail, and a full-width bottom timeline.**
+
+### Exactly what I’d put in it
+
+#### Header
+- `Intake brief`
+- tiny tag: `For clinician review`
+
+#### Left side
+- `Chief concern`  
+  `Cough and breathing changes`
+
+- `Why today`  
+  `Cough for about one week after URI symptoms, with yellow sputum and measured fever that has not clearly resolved.`
+
+- `Key positives`
+  - `URI prodrome present`
+  - `Cough for about one week`
+  - `Yellow sputum present`
+  - `Measured fever present`
+
+- `Key negatives`
+  - `None confidently established yet`
+
+#### Right side
+- `Working considerations`
+  1. `Community-acquired pneumonia`
+     - Supports: `yellow sputum`, `fever unresolved`
+     - Against: `no strong confirmed counter-evidence yet`
+     - To confirm: `dyspnea severity`, `pleuritic pain`
+
+  2. `Acute bronchitis`
+     - Supports: `URI prodrome`, `cough duration`
+     - Against: `fever persistence makes simple bronchitis less clean`
+     - To confirm: `breathing impact`
+
+  3. `Post-viral cough`
+     - Supports: `preceding URI`
+     - Against: `productive sputum and fever are less typical`
+     - To confirm: `fever resolution`
+
+- `What still needs confirmation`
+  - `Has breathing changed from baseline?`
+  - `Any chest pain with deep breath?`
+  - `Is the fever ongoing or gone?`
+
+- `Suggested next question`
+  - `How has your breathing changed, and does it hurt anywhere in the chest when you take a deep breath?`
+
+#### Bottom
+- `What happened when`
+  - `URI symptoms begin`
+  - `Cough develops (~1 week ago)`
+  - `Yellow sputum noted`
+  - `Measured fever still unresolved today`
+
+### Then I would do one more thing
+I would place **three zoom callouts on the slide** pointing to:
+- `Key positives` → **what matters**
+- `What happened when` → **what happened when**
+- `What still needs confirmation` → **what still needs confirmation**
+
+That’s the version I’d ship first.
+
+Not a dashboard.  
+Not a screenshot.  
+Not a fake full product.
+
+A single, sharp, clinician-ready brief. That’s the believable mock.

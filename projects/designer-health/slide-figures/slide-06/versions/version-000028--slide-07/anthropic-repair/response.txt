@@ -1,0 +1,21 @@
+1. **Failure class**
+This is primarily a **layout** failure. The floating handoff brief creates visual chaos by breaking the clean four-step strip into five perceived objects, covers critical content in the Verify section, and disrupts the horizontal reading flow that should make this workflow obvious at a glance.
+
+2. **Stay in current family?**
+Yes. The workflow-strip family is correct for this slide's job. The four-step horizontal flow effectively shows the pre-visit preparation process, keeps Structure as the visual star through the highlighted treatment, and maintains the premium, restrained aesthetic. The core composition works—it's just broken by one poorly-placed floating element.
+
+3. **Exact next move**
+Remove the floating handoff brief entirely and make one targeted layout adjustment to show the handoff more elegantly. The semantic duplication with slide 7 (which will show the actual structured brief) makes this floating element redundant anyway. The handoff can be implied through the existing arrows and step descriptions without breaking the clean strip.
+
+4. **What the next render must change**
+• Remove the floating handoff brief completely
+• Ensure Verify section content is fully visible and readable
+• Strengthen the arrow between Structure and Verify to better imply the handoff
+• Keep Structure section's highlighted treatment as the visual focal point
+• Maintain the clean four-step horizontal reading flow
+
+5. **What not to do**
+• Don't add any new floating elements or callouts
+• Don't change the core four-step workflow or their names
+• Don't reduce Structure's visual prominence
+• Don't add complexity to show the handoff—keep it implied and clean

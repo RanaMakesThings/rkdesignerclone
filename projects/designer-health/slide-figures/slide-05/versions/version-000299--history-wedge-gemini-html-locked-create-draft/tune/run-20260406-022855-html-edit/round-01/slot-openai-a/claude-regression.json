@@ -1,0 +1,21 @@
+{
+  "provider": "claude",
+  "verdict": "blocker",
+  "rationale": "The candidate has resolved the headline and figure content correctly, but contains two hard visual blockers: (1) the bottom statement 'But reclaiming those minutes still requires clinical judgment.' collides directly with and overlaps the third proof row ('Can begin before the encounter' body text), making both unreadable — this is a layout collision that breaks the required read order; (2) the footer logo has failed to render and appears as a broken image placeholder box in the lower-right corner, meaning the locked Designer Health footer treatment is missing from the candidate. Additionally, the label below the lifted History segment reads 'Selected wedge' rather than the spec-required support line 'A high-leverage target for pre-visit prep.' with the History label — the wrong copy is surfaced as the primary attached label.",
+  "blockers": [
+    "Bottom locked statement overlaps and collides with the third proof row body text, making both illegible — layout overflow not resolved",
+    "Footer Designer Health logo is a broken image placeholder; the locked footer treatment is missing",
+    "Lifted segment label reads 'Selected wedge' instead of the spec-required 'History' label with support line 'A high-leverage target for pre-visit prep.'"
+  ],
+  "nextMove": "Fix the vertical layout so the proof field ends above the bottom statement with clear separation (increase figure zone height or reduce proof row spacing), replace the broken logo src with the correct Designer Health asset, and correct the lifted segment label copy to match the spec.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate has resolved the headline and figure content correctly, but contains two hard visual blockers: (1) the bottom statement 'But reclaiming those minutes still requires clinical judgment.' collides directly with and overlaps the third proof row ('Can begin before the encounter' body text), making both unreadable — this is a layout collision that breaks the required read order; (2) the footer logo has failed to render and appears as a broken image placeholder box in the lower-right corner, meaning the locked Designer Health footer treatment is missing from the candidate. Additionally, the label below the lifted History segment reads 'Selected wedge' rather than the spec-required support line 'A high-leverage target for pre-visit prep.' with the History label — the wrong copy is surfaced as the primary attached label.",
+    "blockers": [
+      "Bottom locked statement overlaps and collides with the third proof row body text, making both illegible — layout overflow not resolved",
+      "Footer Designer Health logo is a broken image placeholder; the locked footer treatment is missing",
+      "Lifted segment label reads 'Selected wedge' instead of the spec-required 'History' label with support line 'A high-leverage target for pre-visit prep.'"
+    ],
+    "nextMove": "Fix the vertical layout so the proof field ends above the bottom statement with clear separation (increase figure zone height or reduce proof row spacing), replace the broken logo src with the correct Designer Health asset, and correct the lifted segment label copy to match the spec."
+  }
+}

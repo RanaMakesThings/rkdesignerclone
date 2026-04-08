@@ -1,0 +1,37 @@
+{
+  "provider": "gpt",
+  "status": "partial",
+  "summary": "The candidate uses the Designer white shell and does introduce the intended argument structure—a visit bar with History emphasized, three proof reasons, and the locked bottom truth—but it is not fully presentation-ready because key text and composition details diverge from the brief, the selected wedge is mislabeled, and there is a visible broken image/logo artifact in the footer area.",
+  "evidence": [
+    "Top headline matches the locked title exactly: “History is the cleanest place to reclaim minutes.”",
+    "No top subheader is shown, preserving the requested read order and shell simplicity.",
+    "A single wide horizontal visit bar spans the upper-middle figure zone, with History enlarged in blue and visually lifted with shadow relative to Exam and Assessment / plan.",
+    "The lifted segment is labeled “History,” but the attached label below says “Selected wedge” instead of the required selected label/support treatment centered on History.",
+    "The support copy under the selected segment is not exact to spec: it reads “A high-leverage target for pre-visit prep.” rather than “A high-leverage target for pre-visit prep.” attached as the support line to the History label; additionally “Relevant details • Timeline • Next questions” is present as a separate teal line.",
+    "The proof area is open rather than boxed, and includes the three requested reasons: “Foundational to the encounter,” “Time-variable,” and “Can begin before the encounter.”",
+    "The bottom statement uses the locked wording exactly: “But reclaiming those minutes still requires clinical judgment.”",
+    "The bottom truth statement is oversized and collides visually with the proof field, reducing readability and weakening the intended separation between proof field and second truth.",
+    "A thin tether-like vertical and diagonal rule connects the selected area toward the proof side, reintroducing some of the hero-card/tether feel the brief explicitly asked to avoid.",
+    "The footer rule remains, but the footer logo area shows a broken/missing image placeholder instead of a clean aligned Designer logo, which means the shell is not fully resolved or presentation-ready."
+  ],
+  "nextPrompt": "Keep the current white Designer shell and overall visit-bar concept, but fully resolve slide-05: remove the broken footer image and restore the proper Designer footer logo, relabel the lifted segment simply as “History” with the support line “A high-leverage target for pre-visit prep.” attached directly beneath it, remove the extra “Selected wedge” label and any tether-like connector lines, keep the proof rows open and unboxed, and reposition/scale the bottom truth so it sits clearly below the proof field without overlap.",
+  "needsHuman": true,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate uses the Designer white shell and does introduce the intended argument structure—a visit bar with History emphasized, three proof reasons, and the locked bottom truth—but it is not fully presentation-ready because key text and composition details diverge from the brief, the selected wedge is mislabeled, and there is a visible broken image/logo artifact in the footer area.",
+    "evidence": [
+      "Top headline matches the locked title exactly: “History is the cleanest place to reclaim minutes.”",
+      "No top subheader is shown, preserving the requested read order and shell simplicity.",
+      "A single wide horizontal visit bar spans the upper-middle figure zone, with History enlarged in blue and visually lifted with shadow relative to Exam and Assessment / plan.",
+      "The lifted segment is labeled “History,” but the attached label below says “Selected wedge” instead of the required selected label/support treatment centered on History.",
+      "The support copy under the selected segment is not exact to spec: it reads “A high-leverage target for pre-visit prep.” rather than “A high-leverage target for pre-visit prep.” attached as the support line to the History label; additionally “Relevant details • Timeline • Next questions” is present as a separate teal line.",
+      "The proof area is open rather than boxed, and includes the three requested reasons: “Foundational to the encounter,” “Time-variable,” and “Can begin before the encounter.”",
+      "The bottom statement uses the locked wording exactly: “But reclaiming those minutes still requires clinical judgment.”",
+      "The bottom truth statement is oversized and collides visually with the proof field, reducing readability and weakening the intended separation between proof field and second truth.",
+      "A thin tether-like vertical and diagonal rule connects the selected area toward the proof side, reintroducing some of the hero-card/tether feel the brief explicitly asked to avoid.",
+      "The footer rule remains, but the footer logo area shows a broken/missing image placeholder instead of a clean aligned Designer logo, which means the shell is not fully resolved or presentation-ready."
+    ],
+    "nextPrompt": "Keep the current white Designer shell and overall visit-bar concept, but fully resolve slide-05: remove the broken footer image and restore the proper Designer footer logo, relabel the lifted segment simply as “History” with the support line “A high-leverage target for pre-visit prep.” attached directly beneath it, remove the extra “Selected wedge” label and any tether-like connector lines, keep the proof rows open and unboxed, and reposition/scale the bottom truth so it sits clearly below the proof field without overlap.",
+    "needsHuman": true
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "deckId": "<project-slug>",
+  "title": "<Deck Title>",
+  "version": "2026-03-29.1",
+  "status": "active",
+  "numberingPolicy": {
+    "summary": "Preserve original slide numbering. Use displayNumber for merged slides such as 4/5, and keep replaced slides as deprecated instead of renumbering later slides.",
+    "activeSequence": [
+      "1",
+      "2/3",
+      "4"
+    ],
+    "deprecatedSlides": [
+      "2",
+      "3"
+    ],
+    "notes": [
+      "Use displayNumber for the current running label the deck should show.",
+      "If two source slides merge into one active slide, keep the old slide numbers as deprecated history instead of renumbering the rest of the deck."
+    ]
+  },
+  "narrativeSpine": [
+    "<narrative statement 1>",
+    "<narrative statement 2>",
+    "<narrative statement 3>"
+  ],
+  "slides": [
+    {
+      "id": "slide-01",
+      "displayNumber": "1",
+      "importedSlides": [
+        1
+      ],
+      "status": "active",
+      "title": "<Slide title>",
+      "purpose": "<Why this slide exists>",
+      "header": "<Header copy>",
+      "subheader": "<Subheader copy>",
+      "takeaway": "<Takeaway>",
+      "figureRole": "<What the figure has to do>",
+      "family": "<Preferred figure family>",
+      "buildStatus": "missing canonical spec",
+      "proof": [],
+      "paths": {
+        "packet": "projects/<project-slug>/slide-packets/slide-01-<slug>.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/<project-slug>/slide-assets/slide-01/manifest.json"
+      },
+      "selectedDirection": "No selected visual yet.",
+      "notes": [],
+      "selectedVariantId": null,
+      "variants": []
+    },
+    {
+      "id": "slide-02-03",
+      "displayNumber": "2/3",
+      "importedSlides": [
+        2,
+        3
+      ],
+      "status": "active",
+      "title": "<Merged slide title>",
+      "purpose": "<Why the merged slide exists>",
+      "header": "<Header copy>",
+      "subheader": "<Subheader or none>",
+      "takeaway": "<Merged takeaway>",
+      "figureRole": "<What the merged figure must do>",
+      "family": "<Merged family>",
+      "buildStatus": "merged packet is locked; canonical render pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/<project-slug>/slide-packets/slide-02-03-<slug>.md",
+        "specs": [
+          "projects/<project-slug>/figures/specs/<candidate-a>.json",
+          "projects/<project-slug>/figures/specs/<candidate-b>.json"
+        ],
+        "stampedDir": null,
+        "assetsManifest": "projects/<project-slug>/slide-assets/slide-02-03/manifest.json"
+      },
+      "selectedDirection": "The merged packet is the current selected concept, but no canonical merged render exists yet.",
+      "notes": [
+        "This active slide replaces the old standalone slides 2 and 3.",
+        "The variants below are references until a stamped winner exists."
+      ],
+      "selectedVariantId": "merged-packet",
+      "variants": [
+        {
+          "id": "merged-packet",
+          "label": "Merged Packet",
+          "status": "selected",
+          "summary": "Current selected concept direction.",
+          "previewPath": null,
+          "files": [
+            {
+              "label": "Slide packet",
+              "path": "projects/<project-slug>/slide-packets/slide-02-03-<slug>.md"
+            }
+          ]
+        },
+        {
+          "id": "legacy-ingredient-a",
+          "label": "Legacy Ingredient A",
+          "status": "option",
+          "summary": "Historical candidate or ingredient branch.",
+          "previewPath": "output/figures/<slug-a>/figure.png",
+          "files": [
+            {
+              "label": "Spec",
+              "path": "projects/<project-slug>/figures/specs/<candidate-a>.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-02-legacy",
+      "displayNumber": "2",
+      "importedSlides": [
+        2
+      ],
+      "status": "deprecated",
+      "title": "<Old slide 2 title>",
+      "purpose": "<Old standalone purpose>",
+      "header": "<Old header>",
+      "subheader": "<Old subheader>",
+      "takeaway": "<Old takeaway>",
+      "figureRole": "<Old figure job>",
+      "family": "<Old family>",
+      "buildStatus": "deprecated after merge into slide 2/3",
+      "proof": [],
+      "paths": {
+        "packet": null,
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/<project-slug>/slide-assets/slide-02-legacy/manifest.json"
+      },
+      "selectedDirection": "Deprecated. Retained only as historical context for the merged slide 2/3.",
+      "notes": [],
+      "deprecated": {
+        "reason": "Merged into slide 2/3",
+        "replacedBy": "2/3"
+      },
+      "selectedVariantId": null,
+      "variants": []
+    }
+  ],
+  "paths": {
+    "deckAssetsManifest": "projects/<project-slug>/assets/manifest.json"
+  }
+}

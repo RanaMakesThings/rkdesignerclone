@@ -1,0 +1,78 @@
+.templateSection {
+  display: grid;
+  gap: 20px;
+}
+
+.templateSectionHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.templateHeaderChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.templateHeaderCopy {
+  display: grid;
+  gap: 10px;
+}
+
+.templateHeaderActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.templateList {
+  display: grid;
+  gap: 20px;
+}
+
+.templateRow {
+  align-items: start;
+}
+
+.templateCopy {
+  gap: 18px;
+}
+
+.templateBlock {
+  overflow: visible;
+}
+
+.templateListItems {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: rgba(21, 44, 39, 0.82);
+  display: grid;
+  gap: 0.5rem;
+  line-height: 1.55;
+}
+
+.templateMedia {
+  min-height: 320px;
+}
+
+.templateMedia :global(img) {
+  object-fit: contain;
+  background:
+    radial-gradient(circle at top left, rgba(107, 171, 158, 0.16), transparent 28%),
+    linear-gradient(180deg, #f8faf6 0%, #eef2eb 100%);
+}
+
+@media (max-width: 1100px) {
+  .templateSectionHeader {
+    flex-direction: column;
+  }
+
+  .templateHeaderChips {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "provider": "gpt",
+  "verdict": "blocker",
+  "rationale": "The candidate is not clean: while the headline and core figure are partly resolved, there are concrete visible regressions including a broken footer/logo area, an obviously wrong selected-label treatment, and major overlap/clipping in the locked bottom statement and proof content that makes the slide feel unfinished and out of family.",
+  "blockers": [
+    "Broken footer/logo shell at bottom right with a visible missing-image placeholder instead of the standard Designer footer logo",
+    "Locked bottom statement is oversized and overlaps the proof field, causing visible collision and clipping/family drift",
+    "Selected history label is obviously wrong: the lifted segment is labeled 'Selected wedge' instead of the required locked/explicit 'History' treatment"
+  ],
+  "nextMove": "Restore the standard footer/logo asset, relabel the lifted segment as 'History,' and reflow the lower half so the bottom truth statement sits cleanly below the proof rows without any overlap.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate is not clean: while the headline and core figure are partly resolved, there are concrete visible regressions including a broken footer/logo area, an obviously wrong selected-label treatment, and major overlap/clipping in the locked bottom statement and proof content that makes the slide feel unfinished and out of family.",
+    "blockers": [
+      "Broken footer/logo shell at bottom right with a visible missing-image placeholder instead of the standard Designer footer logo",
+      "Locked bottom statement is oversized and overlaps the proof field, causing visible collision and clipping/family drift",
+      "Selected history label is obviously wrong: the lifted segment is labeled 'Selected wedge' instead of the required locked/explicit 'History' treatment"
+    ],
+    "nextMove": "Restore the standard footer/logo asset, relabel the lifted segment as 'History,' and reflow the lower half so the bottom truth statement sits cleanly below the proof rows without any overlap."
+  }
+}

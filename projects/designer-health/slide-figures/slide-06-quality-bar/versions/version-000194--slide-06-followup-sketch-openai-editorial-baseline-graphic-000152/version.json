@@ -1,0 +1,25 @@
+{
+  "id": "version-000194",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000194--slide-06-followup-sketch-openai-editorial-baseline-graphic-000152",
+  "label": "slide-06-followup-sketch-openai-editorial-baseline-graphic-000152",
+  "status": "archived",
+  "createdAt": "2026-04-03T16:52:45.680Z",
+  "sourceKind": "presentation-image-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/presentation-images/vox-slide6-followup-sketch-override-2026-04-03/openai/version-05--editorial-baseline",
+    "output/figures/presentation-images/vox-slide6-followup-sketch-override-2026-04-03/openai/version-05--editorial-baseline/image-01.png"
+  ],
+  "runId": "graphic-batch-000031",
+  "attempt": 5,
+  "sourceGraphicId": "graphic-000152",
+  "sourceBatchId": "graphic-batch-000031",
+  "sourceBatchSlug": "vox-slide6-followup-sketch-override-2026-04-03",
+  "sourceProvider": "openai",
+  "sourceVariantId": "v01-editorial",
+  "sourceVariantLabel": "Editorial Baseline",
+  "sourcePath": "output/figures/presentation-images/vox-slide6-followup-sketch-override-2026-04-03/openai/version-05--editorial-baseline",
+  "sourceImagePath": "output/figures/presentation-images/vox-slide6-followup-sketch-override-2026-04-03/openai/version-05--editorial-baseline/image-01.png"
+}

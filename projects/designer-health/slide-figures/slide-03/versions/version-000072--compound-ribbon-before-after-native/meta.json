@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-03-30T00:35:33.375Z",
+  "slug": "slide-03-compound-ribbon-before-after",
+  "family": "compound_ribbon_before_after",
+  "deckId": "vox-pd-v1",
+  "theme": "vox",
+  "mode": "full-slide",
+  "title": "More efficient visits will increase supply.",
+  "subtitle": "Small per-visit gains compound.",
+  "specPath": "projects/designer-health/figures/specs/slide-03-compound-ribbon-before-after.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after/figure.html",
+    "svg": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after/figure.svg",
+    "png": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-compound-ribbon-before-after/render-assets.json"
+  },
+  "selectedMedia": []
+}

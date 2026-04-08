@@ -1,0 +1,25 @@
+{
+  "provider": "gpt",
+  "status": "partial",
+  "summary": "The connector arrow was changed to a simpler, smoother single arc, but the rest of the slide did not remain exactly the same, so the requested delta was only partially satisfied.",
+  "evidence": [
+    "The BEFORE arrow has a wavier path with a visible extra bend near the source wedge; the AFTER arrow is one cleaner broad curve from the top bar down to the blue hero.",
+    "The AFTER arrowhead still lands on and points toward the blue hero block.",
+    "However, the overall slide scale/layout changed in the AFTER image: the full slide appears reduced within a larger canvas with drop shadow/margins not present before.",
+    "The blue hero block appears smaller and shifted relative to the slide, and its text is cropped at the left edge in the AFTER image, indicating non-arrow changes."
+  ],
+  "nextPrompt": "Change only the connector arrow path: redraw it as a single smooth broad arc with no secondary bend or hook near either end, while keeping the source bar, blue hero box, all text, sizes, positions, and the overall canvas framing exactly identical to the original.",
+  "needsHuman": true,
+  "raw": {
+    "status": "partial",
+    "summary": "The connector arrow was changed to a simpler, smoother single arc, but the rest of the slide did not remain exactly the same, so the requested delta was only partially satisfied.",
+    "evidence": [
+      "The BEFORE arrow has a wavier path with a visible extra bend near the source wedge; the AFTER arrow is one cleaner broad curve from the top bar down to the blue hero.",
+      "The AFTER arrowhead still lands on and points toward the blue hero block.",
+      "However, the overall slide scale/layout changed in the AFTER image: the full slide appears reduced within a larger canvas with drop shadow/margins not present before.",
+      "The blue hero block appears smaller and shifted relative to the slide, and its text is cropped at the left edge in the AFTER image, indicating non-arrow changes."
+    ],
+    "nextPrompt": "Change only the connector arrow path: redraw it as a single smooth broad arc with no secondary bend or hook near either end, while keeping the source bar, blue hero box, all text, sizes, positions, and the overall canvas framing exactly identical to the original.",
+    "needsHuman": true
+  }
+}

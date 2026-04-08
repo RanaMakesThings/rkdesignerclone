@@ -1,0 +1,8 @@
+{
+  "model": "gemini-3.1-pro-preview",
+  "temperature": 0.4,
+  "images": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000257--slide-06-right-payoff-gemini-structured-slate-a/preview.png",
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000258--slide-06-right-payoff-gemini-structured-slate-b/preview.png"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "version-000039",
+  "slideId": "slide-10",
+  "slideDir": "projects/designer-health/slide-figures/slide-10",
+  "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000039--power-of-one-v1",
+  "label": "power-of-one-v1",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.879Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-10/power-of-one-v1"
+  ]
+}

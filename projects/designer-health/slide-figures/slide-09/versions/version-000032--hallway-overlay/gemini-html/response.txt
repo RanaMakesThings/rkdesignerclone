@@ -1,0 +1,324 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 9: Care Journey Gap</title>
+    <style>
+        /* CSS Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Slide Container (16:9 Aspect Ratio) */
+        .slide {
+            width: 1920px;
+            height: 1080px;
+            background-color: #f8fafc;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Background Context Layer (SVG Hallway) */
+        .bg-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Content Wrapper */
+        .content-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            padding: 100px 120px;
+        }
+
+        /* Typography */
+        header {
+            max-width: 1400px;
+            margin-bottom: auto;
+        }
+
+        h1 {
+            font-size: 64px;
+            font-weight: 600;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        p.subheader {
+            font-size: 32px;
+            font-weight: 400;
+            color: #475569;
+            line-height: 1.4;
+            max-width: 1200px;
+        }
+
+        /* Journey Strip Layout */
+        .journey-container {
+            position: relative;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 32px;
+            width: 100%;
+            height: 480px;
+            margin-bottom: 60px;
+        }
+
+        /* Connecting Timeline Line */
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background-color: #cbd5e1;
+            z-index: 0;
+            transform: translateY(-50%);
+        }
+
+        /* Individual Zones */
+        .zone {
+            position: relative;
+            z-index: 1;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Outer Zones (Softly tinted, lightly supported) */
+        .zone-outer {
+            flex: 1;
+            max-width: 400px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            padding: 48px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .zone-outer h2 {
+            font-size: 32px;
+            font-weight: 500;
+            color: #64748b;
+            letter-spacing: -0.01em;
+        }
+
+        .zone-outer .placeholder-lines {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .zone-outer .line {
+            height: 6px;
+            background-color: #f1f5f9;
+            border-radius: 3px;
+        }
+
+        .zone-outer .line:nth-child(1) { width: 60%; }
+        .zone-outer .line:nth-child(2) { width: 80%; }
+        .zone-outer .line:nth-child(3) { width: 40%; }
+
+        /* Center Zone (Clear outlined window, restrained blue accent) */
+        .zone-center {
+            flex: 1.5;
+            max-width: 640px;
+            background-color: transparent;
+            border: 3px solid #0284c7; /* Restrained blue accent */
+            padding: 48px;
+            justify-content: flex-start;
+        }
+
+        .zone-center h2 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #0284c7;
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: -0.01em;
+        }
+
+        .center-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Solid inner elements to avoid cheesy translucency while keeping window clear */
+        .center-item {
+            background-color: #ffffff;
+            padding: 24px 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .item-icon {
+            width: 12px;
+            height: 12px;
+            background-color: #0284c7;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .item-text {
+            font-size: 26px;
+            font-weight: 500;
+            color: #0f172a;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="slide">
+        <!-- Context Layer: Quiet documentary-style clinic hallway (Grayscale, spacious, light) -->
+        <svg class="bg-layer" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <!-- Soft gradients for architectural depth -->
+                <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#e2e8f0"/>
+                    <stop offset="100%" stop-color="#f8fafc"/>
+                </linearGradient>
+                <linearGradient id="wallLeftGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#f1f5f9"/>
+                    <stop offset="100%" stop-color="#e2e8f0"/>
+                </linearGradient>
+                <linearGradient id="wallRightGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#e2e8f0"/>
+                    <stop offset="100%" stop-color="#f1f5f9"/>
+                </linearGradient>
+                <!-- Heavy blur for out-of-focus documentary feel -->
+                <filter id="depthBlur" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="28" />
+                </filter>
+            </defs>
+
+            <!-- Blurred Architectural Group -->
+            <g filter="url(#depthBlur)">
+                <!-- Base Room -->
+                <rect width="1920" height="1080" fill="#f8fafc" />
+                
+                <!-- Ceiling -->
+                <polygon points="0,0 1920,0 1080,400 840,400" fill="#f1f5f9" />
+                
+                <!-- Floor -->
+                <polygon points="0,1080 1920,1080 1080,680 840,680" fill="url(#floorGrad)" />
+                
+                <!-- Left Wall -->
+                <polygon points="0,0 840,400 840,680 0,1080" fill="url(#wallLeftGrad)" />
+                
+                <!-- Right Wall -->
+                <polygon points="1920,0 1080,400 1080,680 1920,1080" fill="url(#wallRightGrad)" />
+                
+                <!-- Back Corridor -->
+                <rect x="840" y="400" width="240" height="280" fill="#cbd5e1" />
+                
+                <!-- Architectural Details (Doors / Recesses) -->
+                <!-- Left Door 1 -->
+                <polygon points="200,180 450,280 450,820 200,950" fill="#cbd5e1" opacity="0.4"/>
+                <!-- Left Door 2 -->
+                <polygon points="600,340 700,380 700,720 600,780" fill="#cbd5e1" opacity="0.3"/>
+                
+                <!-- Right Door 1 -->
+                <polygon points="1720,180 1470,280 1470,820 1720,950" fill="#cbd5e1" opacity="0.4"/>
+                
+                <!-- Ceiling Lights (Soft glow) -->
+                <polygon points="300,80 550,140 600,140 350,80" fill="#ffffff" opacity="0.9"/>
+                <polygon points="1620,80 1370,140 1320,140 1570,80" fill="#ffffff" opacity="0.9"/>
+                <polygon points="880,300 940,320 980,320 920,300" fill="#ffffff" opacity="0.7"/>
+            </g>
+        </svg>
+
+        <!-- Foreground Content Layer -->
+        <div class="content-layer">
+            
+            <header>
+                <h1>The visit still starts from zero.</h1>
+                <p class="subheader">Clinicians have shown they will adopt assistive tools. The open problem is starting the visit with better structure.</p>
+            </header>
+
+            <div class="journey-container">
+                <!-- Connecting Line -->
+                <div class="timeline-line"></div>
+
+                <!-- Zone 1: Before visit -->
+                <div class="zone zone-outer">
+                    <h2>Before visit</h2>
+                    <div class="placeholder-lines">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+                <!-- Zone 2: Start of visit (The Open Problem) -->
+                <div class="zone zone-center">
+                    <h2>Start of visit</h2>
+                    <div class="center-items">
+                        <div class="center-item">
+                            <div class="item-icon"></div>
+                            <div class="item-text">Structured starting point</div>
+                        </div>
+                        <div class="center-item">
+                            <div class="item-icon"></div>
+                            <div class="item-text">Pre-decision signal</div>
+                        </div>
+                        <div class="center-item">
+                            <div class="item-icon"></div>
+                            <div class="item-text">Recovered decision time</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zone 3: During / after -->
+                <div class="zone zone-outer">
+                    <h2>During / after</h2>
+                    <div class="placeholder-lines">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+```

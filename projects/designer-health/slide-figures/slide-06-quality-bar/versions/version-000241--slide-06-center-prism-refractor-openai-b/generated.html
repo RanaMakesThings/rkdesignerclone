@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Vox – Quality Bar Slide</title>
+<style>
+  html, body {
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: #f8fafc;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  }
+  .slide {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background:
+      radial-gradient(900px 500px at 24% 82%, rgba(143,180,212,.12), transparent 60%),
+      radial-gradient(700px 420px at 74% 76%, rgba(102,196,196,.10), transparent 58%),
+      radial-gradient(620px 340px at 10% 8%, rgba(113,182,191,.10), transparent 45%),
+      linear-gradient(180deg, #ffffff 0%, #fbfcfd 100%);
+    color: #172033;
+  }
+  .title {
+    position: absolute;
+    left: 108px;
+    top: 70px;
+    width: 1450px;
+    font-size: 62px;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+    color: #161d2d;
+  }
+  .title .vox {
+    color: #34939c;
+    font-weight: 800;
+  }
+  .subtitle {
+    position: absolute;
+    left: 108px;
+    top: 292px;
+    width: 1420px;
+    font-size: 22px;
+    line-height: 1.45;
+    color: #58677f;
+    font-weight: 400;
+  }
+
+  .chamber {
+    position: absolute;
+    left: 558px;
+    top: 410px;
+    width: 720px;
+    height: 524px;
+    border-radius: 38px;
+    background:
+      radial-gradient(300px 180px at 29% 60%, rgba(101,194,196,.10), transparent 55%),
+      radial-gradient(420px 220px at 80% 75%, rgba(117,208,207,.06), transparent 60%),
+      linear-gradient(180deg, rgba(255,255,255,.96), rgba(249,251,252,.94));
+    border: 1.2px solid rgba(170,182,198,.55);
+    box-shadow:
+      0 18px 60px rgba(155,175,198,.14),
+      inset 0 1px 0 rgba(255,255,255,.9);
+  }
+
+  .chamber-vox {
+    position: absolute;
+    left: 728px;
+    top: 454px;
+    font-size: 55px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: #34939c;
+  }
+  .chamber-sub {
+    position: absolute;
+    left: 663px;
+    top: 518px;
+    font-size: 18px;
+    color: #2a3548;
+    font-weight: 500;
+  }
+  .right-title {
+    position: absolute;
+    left: 948px;
+    top: 470px;
+    font-size: 31px;
+    line-height: 1.1;
+    font-weight: 650;
+    color: #253247;
+    letter-spacing: -0.025em;
+  }
+
+  .loop-label {
+    position: absolute;
+    left: 716px;
+    top: 650px;
+    width: 112px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.05;
+    color: #253247;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+  }
+
+  .rail {
+    position: absolute;
+    width: 250px;
+    height: 44px;
+    border-radius: 24px;
+    background: rgba(255,255,255,.88);
+    border: 1px solid rgba(204,214,226,.86);
+    box-shadow: 0 8px 26px rgba(167,180,199,.14);
+    display: flex;
+    align-items: center;
+    padding-left: 34px;
+    font-size: 17px;
+    font-weight: 650;
+    color: #2a3548;
+    letter-spacing: -0.02em;
+  }
+  .rail:before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 17px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #49aab0;
+    box-shadow: 0 0 0 6px rgba(73,170,176,.10);
+  }
+  .rail.one { left: 940px; top: 567px; }
+  .rail.two { left: 940px; top: 656px; }
+  .rail.three { left: 940px; top: 745px; height: 46px; padding-top: 0; }
+
+  .right-header {
+    position: absolute;
+    left: 1460px;
+    top: 553px;
+    font-size: 24px;
+    line-height: 1.1;
+    color: #1e2839;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  .doc-wrap {
+    position: absolute;
+    left: 1494px;
+    top: 601px;
+    width: 310px;
+    height: 330px;
+  }
+  .clipboard {
+    position: absolute;
+    left: 0;
+    top: 19px;
+    width: 38px;
+    height: 210px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #2f8c95, #1e6775);
+    box-shadow: 0 16px 34px rgba(46,120,133,.22);
+  }
+  .clipboard:after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 18px;
+    width: 10px;
+    height: 174px;
+    border-radius: 6px;
+    background: rgba(255,255,255,.24);
+  }
+  .doc {
+    position: absolute;
+    left: 26px;
+    top: 0;
+    width: 280px;
+    height: 320px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(247,250,252,.96));
+    border: 1px solid rgba(203,214,226,.88);
+    box-shadow: 0 18px 40px rgba(155,175,198,.18);
+    overflow: hidden;
+  }
+  .doc .topbar {
+    position: absolute;
+    left: 24px;
+    top: 0;
+    width: 232px;
+    height: 18px;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(90deg, #79c8cb, #a6dddd);
+  }
+  .doc .line {
+    position: absolute;
+    left: 24px;
+    height: 12px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #d7dee8, #e7edf3);
+  }
+  .doc .sep {
+    position: absolute;
+    left: 24px;
+    width: 232px;
+    height: 1px;
+    background: #d3dbe5;
+  }
+
+  .ribbon {
+    position: absolute;
+    width: 405px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    padding-left: 58px;
+    font-size: 19px;
+    font-weight: 500;
+    color: #47566f;
+    letter-spacing: -0.02em;
+    box-sizing: border-box;
+  }
+  .ribbon svg {
+    position: absolute;
+    left: 0; top: 0;
+    width: 405px; height: 68px;
+  }
+  .ribbon.teal {
+    color: #196d7a;
+    font-weight: 700;
+  }
+  .r1 { left: 118px; top: 463px; }
+  .r2 { left: 136px; top: 552px; }
+  .r3 { left: 118px; top: 641px; }
+  .r4 { left: 136px; top: 728px; }
+  .r5 { left: 118px; top: 817px; }
+
+  .soft-note {
+    position: absolute;
+    font-size: 14px;
+    color: #77909f;
+    letter-spacing: .01em;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="title">
+    <span class="vox">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.
+  </div>
+
+  <div class="subtitle">
+    Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+    By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.
+  </div>
+
+  <div class="chamber"></div>
+  <div class="chamber-vox">Vox</div>
+  <div class="chamber-sub">Adaptive clinical interviewer</div>
+  <div class="right-title">Clinical reasoning<br>+ medical knowledge</div>
+  <div class="loop-label">Adaptive<br>interview loop</div>
+
+  <div class="rail one">What matters</div>
+  <div class="rail two">What connects</div>
+  <div class="rail three">What still needs<br>verification</div>
+
+  <div class="right-header">Clinician-grade starting point</div>
+
+  <div class="doc-wrap">
+    <div class="clipboard"></div>
+    <div class="doc">
+      <div class="topbar"></div>
+      <div class="line" style="top:32px;width:105px;"></div>
+      <div class="line" style="top:61px;width:214px;"></div>
+      <div class="line" style="top:84px;width:148px;"></div>
+      <div class="sep" style="top:110px;"></div>
+
+      <div class="line" style="top:123px;width:106px;"></div>
+      <div class="line" style="top:150px;width:180px;"></div>
+      <div class="line" style="top:173px;width:214px;"></div>
+      <div class="line" style="top:196px;width:130px;"></div>
+      <div class="sep" style="top:223px;"></div>
+
+      <div class="line" style="top:236px;width:106px;"></div>
+      <div class="line" style="top:265px;width:156px;"></div>
+      <div class="line" style="top:286px;width:182px;"></div>
+    </div>
+  </div>
+
+  <div class="ribbon r1">
+    <svg viewBox="0 0 405 68" aria-hidden="true">
+      <path d="M2 34 L34 1 H362 L404 34 L362 67 H34 Z" fill="rgba(255,255,255,.38)" stroke="#a6b6c8" stroke-width="3"/>
+      <path d="M0 34 L33 34" stroke="#a6b6c8" stroke-width="3"/>
+    </svg>
+    My back has been hurting...
+  </div>
+
+  <div class="ribbon teal r2">
+    <svg viewBox="0 0 405 68" aria-hidden="true">
+      <path d="M2 34 L46 1 H385 V67 H46 Z" fill="rgba(105,206,203,.12)" stroke="#58b3b7" stroke-width="3"/>
+      <path d="M0 34 L28 34" stroke="#58b3b7" stroke-width="3"/>
+    </svg>
+    Vox: What makes it worse?
+  </div>
+
+  <div class="ribbon r3">
+    <svg viewBox="0 0 405 68" aria-hidden="true">
+      <path d="M2 34 L34 1 H362 L404 34 L362 67 H34 Z" fill="rgba(255,255,255,.38)" stroke="#a6b6c8" stroke-width="3"/>
+      <path d="M0 34 L33 34" stroke="#a6b6c8" stroke-width="3"/>
+    </svg>
+    It's worse in the morning.
+  </div>
+
+  <div class="ribbon teal r4">
+    <svg viewBox="0 0 405 68" aria-hidden="true">
+      <path d="M2 34 L46 1 H385 V67 H46 Z" fill="rgba(105,206,203,.12)" stroke="#58b3b7" stroke-width="3"/>
+      <path d="M0 34 L28 34" stroke="#58b3b7" stroke-width="3"/>
+    </svg>
+    Vox: When did this start?
+  </div>
+
+  <div class="ribbon r5">
+    <svg viewBox="0 0 405 68" aria-hidden="true">
+      <path d="M2 34 L34 1 H362 L404 34 L362 67 H34 Z" fill="rgba(255,255,255,.38)" stroke="#a6b6c8" stroke-width="3"/>
+      <path d="M0 34 L33 34" stroke="#a6b6c8" stroke-width="3"/>
+    </svg>
+    Started last Tuesday.
+  </div>
+
+  <svg width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute; left:0; top:0;">
+    <defs>
+      <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="10" result="b"/>
+        <feColorMatrix in="b" type="matrix"
+          values="1 0 0 0 0
+                  0 1 0 0 0.74
+                  0 0 1 0 0.74
+                  0 0 0 .22 0"/>
+      </filter>
+      <filter id="railGlow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="14" result="b"/>
+        <feColorMatrix in="b" type="matrix"
+          values="1 0 0 0 0
+                  0 1 0 0 0.78
+                  0 0 1 0 0.78
+                  0 0 0 .28 0"/>
+      </filter>
+      <linearGradient id="tealLine" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#61bcc0" stop-opacity=".95"/>
+        <stop offset="100%" stop-color="#bde9e7" stop-opacity=".55"/>
+      </linearGradient>
+      <linearGradient id="steelLine" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#9fb2c5" stop-opacity=".95"/>
+        <stop offset="100%" stop-color="#d6e0eb" stop-opacity=".55"/>
+      </linearGradient>
+      <linearGradient id="beamFill" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#64c1c2" stop-opacity=".95"/>
+        <stop offset="100%" stop-color="#d8f1ef" stop-opacity=".45"/>
+      </linearGradient>
+      <linearGradient id="beamFillSteel" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#a5b9cb" stop-opacity=".9"/>
+        <stop offset="100%" stop-color="#dfe7ef" stop-opacity=".35"/>
+      </linearGradient>
+      <linearGradient id="prismGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity=".95"/>
+        <stop offset="45%" stop-color="#edf7f7" stop-opacity=".92"/>
+        <stop offset="100%" stop-color="#d7efef" stop-opacity=".86"/>
+      </linearGradient>
+      <linearGradient id="prismEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#cceceb"/>
+        <stop offset="100%" stop-color="#5db5ba"/>
+      </linearGradient>
+    </defs>
+
+    <!-- left converging inputs -->
+    <path d="M523 497 C590 506, 614 650, 680 650" stroke="url(#steelLine)" stroke-width="16" fill="none" stroke-linecap="round" opacity=".52"/>
+    <path d="M523 497 C590 506, 614 650, 680 650" stroke="#9fb2c5" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"/>
+
+    <path d="M523 585 C585 585, 617 678, 680 678" stroke="url(#tealLine)" stroke-width="18" fill="none" stroke-linecap="round" opacity=".6"/>
+    <path d="M523 585 C585 585, 617 678, 680 678" stroke="#57b8bb" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+
+    <path d="M523 674 C591 674, 613 675, 680 678" stroke="url(#steelLine)" stroke-width="16" fill="none" stroke-linecap="round" opacity=".52"/>
+    <path d="M523 674 C591 674, 613 675, 680 678" stroke="#9fb2c5" stroke-width="5" fill="none" stroke-linecap="round" opacity=".88"/>
+
+    <path d="M523 761 C584 761, 616 705, 680 705" stroke="url(#tealLine)" stroke-width="18" fill="none" stroke-linecap="round" opacity=".6"/>
+    <path d="M523 761 C584 761, 616 705, 680 705" stroke="#57b8bb" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+
+    <path d="M523 850 C590 846, 615 710, 680 705" stroke="url(#steelLine)" stroke-width="16" fill="none" stroke-linecap="round" opacity=".52"/>
+    <path d="M523 850 C590 846, 615 710, 680 705" stroke="#9fb2c5" stroke-width="5" fill="none" stroke-linecap="round" opacity=".88"/>
+
+    <!-- center prism/refractor object -->
+    <g transform="translate(0,0)">
+      <!-- glow -->
+      <ellipse cx="768" cy="679" rx="92" ry="88" fill="#78cacc" opacity=".14" filter="url(#softGlow)"/>
+      <ellipse cx="768" cy="679" rx="66" ry="62" fill="#ffffff" opacity=".9"/>
+
+      <!-- outer loop arc -->
+      <circle cx="768" cy="679" r="82" fill="none" stroke="#e2f1f0" stroke-width="14"/>
+      <path d="M806 607 A82 82 0 0 1 845 645" stroke="#6dbfc1" stroke-width="14" fill="none"/>
+      <path d="M845 713 A82 82 0 0 1 816 762" stroke="#6dbfc1" stroke-width="14" fill="none"/>
+      <path d="M736 754 A82 82 0 0 1 704 722" stroke="#58b7bb" stroke-width="14" fill="none"/>
+      <path d="M688 650 A82 82 0 0 1 696 620" stroke="#58b7bb" stroke-width="14" fill="none"/>
+
+      <!-- loop arrow hints -->
+      <path d="M834 633 l12 12 l-12 12" fill="none" stroke="#3f9ea7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M734 722 l-12 12 l12 12" fill="none" stroke="#3f9ea7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- refractor prism -->
+      <polygon points="742,633 797,645 801,714 744,726 720,679" fill="url(#prismGlass)" stroke="url(#prismEdge)" stroke-width="2.5"/>
+      <line x1="742" y1="633" x2="744" y2="726" stroke="#c5e6e6" stroke-width="1.2"/>
+      <line x1="797" y1="645" x2="744" y2="726" stroke="#bde2e1" stroke-width="1.2"/>
+      <line x1="742" y1="633" x2="801" y2="714" stroke="#d4eeee" stroke-width="1.2"/>
+
+      <!-- checkpoints inside prism -->
+      <circle cx="752" cy="653" r="4.5" fill="#59b8bb"/>
+      <circle cx="770" cy="671" r="4.5" fill="#7dcacc"/>
+      <circle cx="786" cy="693" r="4.5" fill="#59b8bb"/>
+      <path d="M756 653 L767 666 L782 687" stroke="#8dcfd0" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+
+      <!-- incoming combined beam -->
+      <path d="M680 678 L720 678" stroke="url(#beamFillSteel)" stroke-width="28" stroke-linecap="round"/>
+      <path d="M680 678 L720 678" stroke="#9fb2c5" stroke-width="6" stroke-linecap="round" opacity=".85"/>
+
+      <!-- output rails from prism -->
+      <path d="M801 651 C826 651, 834 651, 850 651" stroke="url(#beamFill)" stroke-width="24" stroke-linecap="round"/>
+      <path d="M801 679 C828 679, 835 679, 850 679" stroke="url(#beamFill)" stroke-width="24" stroke-linecap="round"/>
+      <path d="M801 707 C826 707, 833 707, 850 707" stroke="url(#beamFill)" stroke-width="24" stroke-linecap="round"/>
+
+      <!-- explicit reasoning checkpoints -->
+      <g opacity=".95">
+        <rect x="852" y="573" rx="10" ry="10" width="70" height="10" fill="rgba(111,203,203,.20)"/>
+        <rect x="852" y="662" rx="10" ry="10" width="70" height="10" fill="rgba(111,203,203,.20)"/>
+        <rect x="852" y="751" rx="10" ry="10" width="70" height="10" fill="rgba(111,203,203,.20)"/>
+      </g>
+      <g font-family="Inter, sans-serif" font-size="12.5" font-weight="600" fill="#6d8493">
+        <text x="870" y="560">prioritize</text>
+        <text x="870" y="649">reconcile</text>
+        <text x="870" y="738">verify</text>
+      </g>
+    </g>
+
+    <!-- chamber to rails connectors -->
+    <path d="M1197 589 L940 589" stroke="url(#beamFill)" stroke-width="10" stroke-linecap="round" opacity=".9"/>
+    <path d="M1197 678 L940 678" stroke="url(#beamFill)" stroke-width="10" stroke-linecap="round" opacity=".9"/>
+    <path d="M1197 768 L940 768" stroke="url(#beamFill)" stroke-width="10" stroke-linecap="round" opacity=".9"/>
+
+    <!-- rails to document -->
+    <g filter="url(#railGlow)">
+      <path d="M1195 589 C1286 616, 1318 676, 1494 678" stroke="#9fe1df" stroke-width="7" fill="none" opacity=".7"/>
+      <path d="M1195 678 C1290 678, 1320 678, 1494 678" stroke="#8ed8d8" stroke-width="8" fill="none" opacity=".72"/>
+      <path d="M1195 768 C1286 740, 1318 682, 1494 678" stroke="#9fe1df" stroke-width="7" fill="none" opacity=".7"/>
+    </g>
+    <path d="M1195 589 C1286 616, 1318 676, 1494 678" stroke="#b9e8e5" stroke-width="5" fill="none" opacity=".9"/>
+    <path d="M1195 678 C1290 678, 1320 678, 1494 678" stroke="#b2e3e1" stroke-width="6" fill="none" opacity=".92"/>
+    <path d="M1195 768 C1286 740, 1318 682, 1494 678" stroke="#b9e8e5" stroke-width="5" fill="none" opacity=".9"/>
+
+    <!-- transformed structured beam -->
+    <polygon points="1434,702 1494,702 1518,724 1436,724 1418,701" fill="url(#

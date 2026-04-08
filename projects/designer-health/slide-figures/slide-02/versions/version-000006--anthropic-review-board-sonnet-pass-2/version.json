@@ -1,0 +1,14 @@
+{
+  "id": "version-000006",
+  "slideId": "slide-02",
+  "slideDir": "projects/designer-health/slide-figures/slide-02",
+  "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000006--anthropic-review-board-sonnet-pass-2",
+  "label": "anthropic-review-board-sonnet-pass-2",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.428Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-02/anthropic-review-board-sonnet-pass-2"
+  ]
+}

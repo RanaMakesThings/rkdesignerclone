@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Efficient Visits Slide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            /* Color Palette */
+            --bg-color: #F4F4F0;
+            --card-bg: #FFFFFF;
+            --text-dark: #16261F;
+            --text-muted: #5A6B64;
+            --story-blue: #588BCA;
+            --exam-gray: #E0E5E7;
+            --counsel-gray: #A7B1B8;
+            --new-green: #388E6D;
+            --dashed-border: #A7B1B8;
+            
+            /* Dimensions */
+            --slide-width: 1920px;
+            --slide-height: 1080px;
+            --padding-x: 100px;
+            --padding-y: 80px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #E8E8E8; /* Darker background outside slide */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .slide-container {
+            width: var(--slide-width);
+            height: var(--slide-height);
+            background-color: var(--bg-color);
+            position: relative;
+            overflow: hidden;
+            padding: var(--padding-y) var(--padding-x);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        /* --- Header --- */
+        header {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 64px;
+            font-weight: 800;
+            color: var(--text-dark);
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: -0.5px;
+        }
+
+        /* --- Top Anatomy Section --- */
+        .anatomy-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .main-bar-wrapper {
+            width: 80%;
+            position: relative;
+        }
+
+        .main-bar {
+            display: flex;
+            height: 70px;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .segment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .segment.blue {
+            background-color: var(--story-blue);
+            width: 45%; /* Proportion */
+        }
+
+        .segment.light-gray {
+            background-color: var(--exam-gray);
+            width: 20%;
+            color: var(--text-dark);
+        }
+
+        .segment.dark-gray {
+            background-color: var(--counsel-gray);
+            width: 35%;
+        }
+
+        /* Bracket */
+        .bracket-container {
+            width: 45%; /* Matches blue segment width */
+            position: absolute;
+            top: 70px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 15px;
+        }
+
+        .bracket-svg {
+            width: 90%;
+            height: 15px;
+            margin-bottom: 15px;
+        }
+
+        .bracket-svg path {
+            fill: none;
+            stroke: var(--text-muted);
+            stroke-width: 1.5;
+        }
+
+        .bracket-text {
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.4;
+            color: var(--text-dark);
+        }
+
+        .bracket-text strong {
+            font-weight: 700;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .bracket-text span {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* --- Bottom Modules --- */
+        .modules-container {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 40px;
+            flex-grow: 1;
+        }
+
+        .module {
+            background-color: var(--card-bg);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        /* --- Left Module: Mechanism --- */
+        .mechanism-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 28px;
+            height: 100%;
+        }
+
+        .mechanism-copy {
+            max-width: 420px;
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.28;
+            letter-spacing: -0.4px;
+        }
+
+        .mech-bar-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            padding-top: 34px;
+        }
+
+        .mech-bar {
+            display: flex;
+            height: 56px;
+            border-radius: 6px;
+            overflow: hidden;
+            width: 74%;
+        }
+
+        .mech-seg { height: 100%; }
+        .mech-seg.blue { width: 22%; background-color: var(--story-blue); }
+        .mech-seg.light-gray { width: 20%; background-color: var(--exam-gray); }
+        .mech-seg.dark-gray { width: 35%; background-color: var(--counsel-gray); }
+
+        .time-saved-box {
+            width: 22%;
+            height: 56px;
+            margin-left: 2%;
+            border: 2px dashed var(--dashed-border);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-muted);
+            background-color: rgba(167, 177, 184, 0.1);
+        }
+
+        /* Compression Arrows */
+        .compression-indicator {
+            position: absolute;
+            left: 17%;
+            top: -2px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .compression-indicator svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--text-dark);
+        }
+
+        /* --- Right Module: Payoff --- */
+        .payoff-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+            gap: 30px;
+        }
+
+        .payoff-row {
+            display: flex;
+            align-items: center;
+        }
+
+        .payoff-label {
+            width: 110px;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        .payoff-label span {
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .visits-track {
+            display: flex;
+            gap: 12px;
+            flex-grow: 1;
+            align-items: center;
+        }
+
+        .mini-visit {
+            display: flex;
+            height: 40px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        /* Math: 5 normal visits = 5 shrunk visits + 1 new visit */
+        /* Let normal visit be width: 18% */
+        .mini-visit.normal {
+            width: 18%;
+        }
+
+        /* Let shrunk visit be width: 14% */
+        .mini-visit.shrunk {
+            width: 14.5%;
+        }
+
+        .mini-visit .m-seg { height: 100%; }
+        .mini-visit .m-seg.blue { width: 45%; background-color: var(--story-blue); }
+        .mini-visit .m-seg.light-gray { width: 20%; background-color: var(--exam-gray); }
+        .mini-visit .m-seg.dark-gray { width: 35%; background-color: var(--counsel-gray); }
+
+        /* Adjust shrunk mini-visit segments so only blue shrinks visually */
+        .mini-visit.shrunk .m-seg.blue { width: 30%; }
+        .mini-visit.shrunk .m-seg.light-gray { width: 25%; }
+        .mini-visit.shrunk .m-seg.dark-gray { width: 45%; }
+
+
+        .new-visit-btn {
+            width: 18%; /* Matches normal visit width */
+            height: 48px; /* Slightly taller to pop */
+            background-color: var(--new-green);
+            color: white;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(56, 142, 109, 0.3);
+            margin-left: auto; /* Push to the right */
+        }
+
+        .flow-arrow {
+            margin-left: 120px; /* Align with track */
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+        
+        .flow-arrow svg {
+            width: 24px;
+            height: 24px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <header>
+        <h1>More efficient visits will increase supply.</h1>
+        <h2>Small per-visit gains compound.</h2>
+    </header>
+
+    <div class="anatomy-section">
+        <div class="main-bar-wrapper">
+            <div class="main-bar">
+                <div class="segment blue">Story reconstruction</div>
+                <div class="segment light-gray">Physical exam</div>
+                <div class="segment dark-gray">Decisions + counseling</div>
+            </div>
+            
+            <div class="bracket-container">
+                <svg class="bracket-svg" viewBox="0 0 100 20" preserveAspectRatio="none">
+                    <path d="M0,0 L0,10 L50,20 L100,10 L100,0" />
+                </svg>
+                <div class="bracket-text">
+                    <strong>Most variable minutes of the visit</strong>
+                    <span>Best target for upstream prep without losing quality</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modules-container">
+        
+        <!-- Left Module -->
+        <div class="module">
+            <div class="mechanism-content">
+                <div class="mechanism-copy">
+                    Shrink the story reconstruction piece, and those recovered minutes become usable time.
+                </div>
+                <div class="mech-bar-container">
+                    <div class="compression-indicator">
+                        <svg viewBox="0 0 24 24"><path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M7.99 11H20v2H7.99v3L4 12l3.99-4z"/></svg>
+                    </div>
+                    <div class="mech-bar">
+                        <div class="mech-seg blue"></div>
+                        <div class="mech-seg light-gray"></div>
+                        <div class="mech-seg dark-gray"></div>
+                    </div>
+                    <div class="time-saved-box">Time saved</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Module -->
+        <div class="module">
+            <div class="payoff-content">
+                <div class="payoff-row">
+                    <div class="payoff-label">Today<span>5 visits</span></div>
+                    <div class="visits-track">
+                        <div class="mini-visit normal"><div class="m-seg blue"></div><div class="m-seg light-gray"></div><div class="m-seg dark-gray"></div></div>
+                        <div class="mini-visit normal"><div class="m-seg blue"></div><div class="m-seg light-gray"></div><div class="m-seg dark-gray"></div></div>
+                        <div class="mini-visit normal"><div class="m-seg blue"></div><div class="m-seg light-gray"></div><div class="m-seg dark-gray"></div></div>
+                        <div class="mini-visit normal"><div class="m-seg blue"></div><div class="m-seg light-gray"></div><div class="m-seg dark-gray"></div></div>
+                        <div class="mini-visit normal"><div class="m-seg blue"></div><div class="m-seg light-gray"></div><div class="m-seg dark-gray"></div></div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                </div>
+
+                <div class="payoff-row">
+                    <div class="payoff-label">Same day<span>6 visits</span></div>
+                    <div class="visits-track">
+                        <div class="mini-visit shrunk"><div class="m-seg blue"></div><div class="m-seg light-gray"></div><div class="m-seg dark-gray"></div></div>
+                        <div class="mini-visit shrunk"><div class="m-seg blue"></div><div class="m-seg light-gray"></div><div class="m-seg dark-gray"></div></div>
+                        <div class="mini-visit shrunk"><div class="m-seg blue"></div><div class="m-seg light-gray"></div><div class="m-seg dark-gray"></div></div>
+                        <div class="mini-visit shrunk"><div class="m-seg blue"></div><div class="m-seg light-gray"></div><div class="m-seg dark-gray"></div></div>
+                        <div class="mini-visit shrunk"><div class="m-seg blue"></div><div class="m-seg light-gray"></div><div class="m-seg dark-gray"></div></div>
+                        <div class="new-visit-btn">New visit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

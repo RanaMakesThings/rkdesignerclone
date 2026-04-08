@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History Wedge Slide</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1600px;
+    height: 900px;
+    overflow: hidden;
+    background: #ffffff;
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    color: #1a1a1a;
+  }
+  .canvas {
+    width: 1600px;
+    height: 900px;
+    position: relative;
+    background: #ffffff;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <!-- ===================== HEADER ===================== -->
+  <div style="
+    position: absolute;
+    top: 52px;
+    left: 72px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #888;
+  ">History is the cleanest place to reclaim minutes</div>
+
+  <!-- ===================== BEAT 1 DIVIDER LINE ===================== -->
+  <!-- invisible guide, layout only -->
+
+  <!-- ===================== OBJECT 1 — SOURCE BAR (upper right) ===================== -->
+  <div style="
+    position: absolute;
+    top: 88px;
+    right: 72px;
+    width: 560px;
+  ">
+    <!-- Ruler -->
+    <div style="
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #aaa;
+      font-weight: 400;
+      margin-bottom: 5px;
+      padding: 0 2px;
+    ">
+      <span>0</span>
+      <span>5</span>
+      <span>10</span>
+      <span>15</span>
+      <span>20</span>
+    </div>
+    <!-- Tick marks via SVG -->
+    <svg width="560" height="8" style="display:block; margin-bottom:4px;">
+      <!-- major ticks -->
+      <line x1="1" y1="0" x2="1" y2="8" stroke="#ccc" stroke-width="1"/>
+      <line x1="141" y1="0" x2="141" y2="8" stroke="#ccc" stroke-width="1"/>
+      <line x1="281" y1="0" x2="281" y2="8" stroke="#ccc" stroke-width="1"/>
+      <line x1="421" y1="0" x2="421" y2="8" stroke="#ccc" stroke-width="1"/>
+      <line x1="559" y1="0" x2="559" y2="8" stroke="#ccc" stroke-width="1"/>
+      <!-- minor ticks -->
+      <line x1="71" y1="2" x2="71" y2="8" stroke="#ddd" stroke-width="0.8"/>
+      <line x1="211" y1="2" x2="211" y2="8" stroke="#ddd" stroke-width="0.8"/>
+      <line x1="351" y1="2" x2="351" y2="8" stroke="#ddd" stroke-width="0.8"/>
+      <line x1="491" y1="2" x2="491" y2="8" stroke="#ddd" stroke-width="0.8"/>
+    </svg>
+    <!-- Three-segment bar -->
+    <div style="
+      display: flex;
+      width: 560px;
+      height: 42px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    ">
+      <!-- Story reconstruction — blue, ~5/20 = 25% width but slightly wider for label -->
+      <div style="
+        width: 38%;
+        background: #5b8db8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: 0.02em;
+        border-right: 1px solid rgba(255,255,255,0.3);
+      ">Story reconstruction</div>
+      <!-- Decisions + counseling — mid gray -->
+      <div style="
+        width: 34%;
+        background: #8fa8bc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 500;
+        color: #fff;
+        letter-spacing: 0.02em;
+        border-right: 1px solid rgba(255,255,255,0.2);
+      ">Decisions + counseling</div>
+      <!-- Exam + workflow — light gray -->
+      <div style="
+        width: 28%;
+        background: #d5dde4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 500;
+        color: #6a7a88;
+        letter-spacing: 0.02em;
+      ">Exam + workflow</div>
+    </div>
+    <!-- Small label under source bar -->
+    <div style="
+      margin-top: 7px;
+      font-size: 10px;
+      color: #aaa;
+      text-align: right;
+      letter-spacing: 0.04em;
+    ">source: Slide 3 — visit time distribution</div>
+  </div>
+
+  <!-- ===================== OBJECT 2 — CURVED PEEL-BACK ARROW (SVG) ===================== -->
+  <svg style="
+    position: absolute;
+    top: 88px;
+    left: 0;
+    width: 1000px;
+    height: 230px;
+    pointer-events: none;
+  " overflow="visible">
+    <!-- Arrow starts near the blue segment of source bar (~right:72+560*0.19 = ~178px from right = 1422-178 = ~1100px from

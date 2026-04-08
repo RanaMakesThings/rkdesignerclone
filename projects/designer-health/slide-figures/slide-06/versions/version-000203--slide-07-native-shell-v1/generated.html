@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide 7 Native Shell v1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --bg: #ffffff;
+        --ink: #11161d;
+        --muted: #525e6b;
+        --line: rgba(17, 22, 29, 0.9);
+        --accent: #6c9490;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+        font-family: "Montserrat", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .figure {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 50% -4%, rgba(108, 148, 144, 0.12), transparent 38%),
+          linear-gradient(180deg, #ffffff 0%, #fbfaf8 100%);
+      }
+
+      .storyboard {
+        position: absolute;
+        inset: 102px 112px 124px;
+      }
+
+      .guide {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 16px;
+        height: 112px;
+      }
+
+      .before-visit {
+        position: absolute;
+        left: 18px;
+        top: 34px;
+        width: 1238px;
+        height: 34px;
+      }
+
+      .before-visit::before,
+      .before-visit::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        height: 2px;
+        background: rgba(17, 22, 29, 0.52);
+      }
+
+      .before-visit::before {
+        left: 18px;
+        right: calc(50% + 118px);
+      }
+
+      .before-visit::after {
+        left: calc(50% + 118px);
+        right: 22px;
+      }
+
+      .before-visit .cap {
+        position: absolute;
+        top: 15px;
+        width: 2px;
+        height: 28px;
+        background: rgba(17, 22, 29, 0.52);
+      }
+
+      .before-visit .cap--left {
+        left: 18px;
+        transform: translateY(1px);
+        border-radius: 999px 999px 0 0;
+      }
+
+      .before-visit .cap--right {
+        right: 22px;
+        transform: translateY(1px);
+        border-radius: 999px 999px 0 0;
+      }
+
+      .before-visit span,
+      .visit-begins {
+        font-size: 26px;
+        line-height: 1;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        color: var(--ink);
+      }
+
+      .before-visit span {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        padding: 0 16px;
+        background: rgba(255, 255, 255, 0.98);
+      }
+
+      .visit-begins {
+        position: absolute;
+        left: 1378px;
+        top: 12px;
+        width: 218px;
+        text-align: center;
+      }
+
+      .threshold {
+        position: absolute;
+        left: 1305px;
+        top: 108px;
+        width: 5px;
+        height: 352px;
+        border-radius: 999px;
+        background: rgba(108, 148, 144, 0.94);
+      }
+
+      .artboard {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 162px;
+        height: 430px;
+      }
+
+      .panel {
+        position: relative;
+        overflow: hidden;
+        border-radius: 34px;
+      }
+
+      .panel--1 {
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+        width: 280px;
+        height: 356px;
+      }
+
+      .panel--2 {
+        position: absolute;
+        left: 312px;
+        bottom: 30px;
+        width: 390px;
+        height: 356px;
+      }
+
+      .panel--3 {
+        position: absolute;
+        left: 736px;
+        bottom: 30px;
+        width: 540px;
+        height: 356px;
+      }
+
+      .panel--4 {
+        position: absolute;
+        left: 1360px;
+        bottom: 30px;
+        width: 336px;
+        height: 356px;
+      }
+
+      .panel img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .panel::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 102px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.78) 20%, rgba(255, 255, 255, 0.98) 46%, rgba(255, 255, 255, 1) 66%);
+      }
+
+      .panel--1 img {
+        object-position: 50% 35%;
+      }
+
+      .panel--2 img {
+        object-position: 50% 28%;
+      }
+
+      .panel--3 img {
+        object-position: 50% 32%;
+      }
+
+      .panel--4 img {
+        object-position: 50% 34%;
+      }
+
+      .panel--4::after {
+        height: 96px;
+      }
+
+      .baseline {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .copy-row {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 626px;
+        height: 232px;
+      }
+
+      .beat {
+        color: var(--ink);
+        position: absolute;
+      }
+
+      .beat h2 {
+        margin: 0 0 12px;
+        font-size: 36px;
+        line-height: 1.02;
+        font-weight: 700;
+        letter-spacing: -0.055em;
+      }
+
+      .beat p {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.24;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        color: var(--ink);
+      }
+
+      .beat--hero h2 {
+        color: #163334;
+      }
+
+      .beat--hero p,
+      .beat--four p {
+        max-width: 94%;
+      }
+
+      .beat--1 {
+        left: 0;
+        top: 0;
+        width: 280px;
+      }
+
+      .beat--2 {
+        left: 312px;
+        top: 0;
+        width: 390px;
+      }
+
+      .beat--3 {
+        left: 736px;
+        top: 0;
+        width: 540px;
+      }
+
+      .beat--4 {
+        left: 1360px;
+        top: 0;
+        width: 336px;
+      }
+
+      .marker-label {
+        font-family: "Montserrat", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        fill: #ffffff;
+        dominant-baseline: middle;
+        text-anchor: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="figure">
+      <section class="storyboard">
+        <div class="guide">
+          <div class="before-visit">
+            <i class="cap cap--left"></i>
+            <span>Before visit</span>
+            <i class="cap cap--right"></i>
+          </div>
+          <div class="visit-begins">Visit begins</div>
+          <div class="threshold"></div>
+        </div>
+
+        <div class="artboard">
+          <div class="panel panel--1">
+            <img src="./beat1.png" alt="Invite sent panel" />
+          </div>
+          <div class="panel panel--2">
+            <img src="./beat2.jpg" alt="Adaptive interview panel" />
+          </div>
+          <div class="panel panel--3">
+            <img src="./beat3.jpg" alt="Brief prepared panel" />
+          </div>
+          <div class="panel panel--4">
+            <img src="./beat4.jpg" alt="Clinician starts prepared panel" />
+          </div>
+
+          <svg class="baseline" viewBox="0 0 1696 494" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="0" y1="386" x2="1278" y2="386" stroke="rgba(17,22,29,0.9)" stroke-width="4" stroke-linecap="round" />
+            <line x1="1332" y1="386" x2="1696" y2="386" stroke="rgba(17,22,29,0.9)" stroke-width="4" stroke-linecap="round" />
+
+            <circle cx="140" cy="386" r="31" fill="#646b74" />
+            <circle cx="536" cy="386" r="31" fill="#646b74" />
+            <circle cx="983" cy="386" r="31" fill="#646b74" />
+            <circle cx="1518" cy="386" r="31" fill="#646b74" />
+
+            <text class="marker-label" x="140" y="390">1</text>
+            <text class="marker-label" x="536" y="390">2</text>
+            <text class="marker-label" x="983" y="390">3</text>
+            <text class="marker-label" x="1518" y="390">4</text>
+          </svg>
+        </div>
+
+        <div class="copy-row">
+          <article class="beat beat--1">
+            <h2>Invite sent</h2>
+            <p>Patient receives secure pre-visit link.</p>
+          </article>
+          <article class="beat beat--2">
+            <h2>Adaptive interview</h2>
+            <p>Vox asks follow-up questions and captures the story.</p>
+          </article>
+          <article class="beat beat--3 beat--hero">
+            <h2>Brief prepared</h2>
+            <p>Patient story becomes a clinician-ready handoff.</p>
+          </article>
+
+          <article class="beat beat--4 beat--four">
+            <h2>Clinician starts prepared</h2>
+            <p>Sets up a more efficient visit.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

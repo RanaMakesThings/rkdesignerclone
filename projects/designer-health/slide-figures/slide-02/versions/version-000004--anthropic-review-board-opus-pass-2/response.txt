@@ -1,0 +1,26 @@
+## 1. Verdict:
+The slide has strong data but feels visually fragmented with mismatched styling between elements and excessive variation in typography sizes and weights.
+
+## 2. Top issues:
+• The specialty breakout card's gray background and border create a disconnected "widget" feeling that doesn't integrate with the main visualization
+• The "+19% since 2022" annotation feels orphaned and poorly integrated into the chart's visual hierarchy
+• Typography scale jumps too dramatically between the giant "31 days" and tiny axis labels, creating jarring contrast
+• The blue banner at bottom uses a different visual language (banner + vertical divider) that doesn't match the rest of the slide
+• Inconsistent decimal precision in specialty wait times (41.8 vs 40.0 vs 36.5) looks sloppy rather than data-driven
+
+## 3. Board-read risk:
+• The specialty card appearing to float separately might prompt questions about whether it's even related to the main chart data
+• The "only 48%" statistic buried in small text below the banner headline will likely be missed, weakening the shortage argument
+• Mixing days as unit in both the main chart (31 days) and specialty card without clear connection may confuse the relationship between datasets
+
+## 4. Aesthetic upgrades:
+• Remove the gray background and border from the specialty card—use only typography hierarchy and subtle spacing to create separation
+• Align the "+19% since 2022" horizontally with "31 days" and reduce its size slightly to create clear primary/secondary relationship
+• Standardize the shortage area treatment—either make it a third proof point with similar visual weight or integrate it as a footnote
+• Use consistent decimal precision (either all whole numbers or all to one decimal) in the specialty wait times
+• Reduce the "31 days" size by ~15% and increase axis labels slightly to create smoother visual rhythm
+
+## 5. Keep as-is:
+• The main line chart's clean aesthetic and clear trend visualization effectively communicate the core message
+• The color choices (blue line, subtle grays) appropriately convey healthcare seriousness without being dull
+• The three-part proof structure (trend + specialty detail + shortage context) provides comprehensive support for the thesis

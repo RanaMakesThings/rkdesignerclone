@@ -1,0 +1,33 @@
+Generate a single 16:9 investor-deck figure.
+
+Use the attached board image as reference context.
+
+Goal:
+Create the most reduced left/right callback version of slide 10.
+
+Header:
+Recovered visit time creates real capacity.
+
+Subheader:
+When recovered minutes become completed visits, the impact is meaningful.
+
+Left side:
+- one compact capacity tile
+- derive it from slide 3's lower callback language
+- use a shortened bar fragment and one green `New visit` payoff block
+- keep it minimal but still recognizably connected to slide 3
+
+Right side:
+- dominant `+1 visit / provider / day`
+- quiet assumptions
+- `$11,000 / year`
+- optional tiny quiet upside note
+
+Style:
+- premium investor deck
+- minimal
+- editorial
+- no table
+- no dashboard chrome
+
+Return only the requested artifact.

@@ -1,0 +1,50 @@
+Create a premium 16:9 investor-deck slide concept for Designer Health.
+
+Slide copy:
+- Header: `Vox prepares the visit before it starts.`
+- Subheader: `Vox interviews, structures, and hands off a brief the clinician can verify and use.`
+
+Main composition:
+- one left-to-right storyboard with four unequal beats on one shared horizontal
+  baseline
+- beat 1 small: invite sent
+- beat 2 medium: adaptive interview
+- beat 3 largest: brief prepared
+- beat 4 medium: clinician starts prepared
+- a thin top bracket over beats 1 to 3 labeled `Before visit`
+- a vertical threshold marker before beat 4 labeled `Visit begins`
+
+Use this exact figure copy:
+- `Invite sent`
+  - `Patient receives secure pre-visit link.`
+- `Adaptive interview`
+  - `Vox asks follow-up questions and captures the story.`
+- `Brief prepared`
+  - `Patient story becomes a clinician-ready handoff.`
+- `Clinician starts prepared`
+  - `Sets up a more efficient visit.`
+
+Scene intent:
+- beat 1: phone plus secure-link notification
+- beat 2: phone or patient-with-phone with 2 to 3 short bubbles and one
+  follow-up
+- beat 3: story fragments compress into a structured brief card with a small
+  Vox badge and 2 to 3 rows
+- beat 4: calm clinician reviewing the brief on a tablet or desk
+
+Style:
+- white background
+- grayscale base
+- one restrained blue-green accent
+- crisp rounded forms
+- subtle shadows
+- vector/editorial, not photoreal
+- premium, calm, precise, legible
+
+Avoid:
+- 2x2 layout
+- four equal boxes
+- giant arrows
+- dashboard UI
+- photoreal stock-photo energy
+- heavy infographic clutter

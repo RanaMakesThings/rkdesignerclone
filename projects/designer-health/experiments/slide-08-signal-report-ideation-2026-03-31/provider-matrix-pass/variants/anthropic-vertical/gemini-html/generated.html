@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Health - Clinical Brief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F3F4F6; /* Quiet warm-neutral background */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Custom scrollbar for a cleaner look if it ever scrolls, though it shouldn't here */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-8 md:p-12">
+
+    <!-- Single Central Artifact -->
+    <div class="w-full max-w-[960px] bg-white rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.02)] border border-slate-200 overflow-hidden flex flex-col">
+        
+        <!-- 1. Document Header -->
+        <div class="px-10 py-8 border-b border-slate-200 bg-slate-50/50 flex justify-between items-end">
+            <div>
+                <div class="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase mb-2">Designer Health // Intake Synthesis</div>
+                <h1 class="text-2xl font-semibold text-slate-900 tracking-tight">Clinical Feature State & Differential</h1>
+            </div>
+            <div class="text-right">
+                <div class="text-sm text-slate-500 font-medium">Encounter: <span class="text-slate-800">Adult w/ persistent cough</span></div>
+                <div class="text-xs text-slate-400 font-mono mt-1">ID: MH-8824-A &nbsp;|&nbsp; Generated: Just now</div>
+            </div>
+        </div>
+
+        <div class="px-10 py-8 flex flex-col gap-10">
+            
+            <!-- EXTRACTION LEDGER -->
+            <div class="flex flex-col gap-8">
+                
+                <!-- 2. Social Context -->
+                <div>
+                    <h2 class="text-[11px] font-bold tracking-widest text-slate-400 uppercase mb-3 border-b border-slate-200 pb-2">Social Context</h2>
+                    <div class="flex flex-col">
+                        <div class="flex items-baseline py-2.5 border-b border-slate-100">
+                            <div class="w-1/3 font-medium text-slate-800 text-sm">Care seeking prompted by spouse</div>
+                            <div class="w-1/2 text-sm text-slate-600 pr-4">Spouse encouraged evaluation</div>
+                            <div class="w-24 text-[11px] font-mono text-slate-400">turn-002</div>
+                            <div class="flex-1 flex justify-end">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-slate-800 text-white">Present</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Symptoms -->
+                <div>
+                    <h2 class="text-[11px] font-bold tracking-widest text-slate-400 uppercase mb-3 border-b border-slate-200 pb-2">Symptoms</h2>
+                    <div class="flex flex-col">
+                        <div class="flex items-baseline py-2.5 border-b border-slate-100">
+                            <div class="w-1/3 font-medium text-slate-800 text-sm">Cough</div>
+                            <div class="w-1/2 text-sm text-slate-600 pr-4">—</div>
+                            <div class="w-24 text-[11px] font-mono text-slate-400">turn-002</div>
+                            <div class="flex-1 flex justify-end">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-slate-800 text-white">Present</span>
+                            </div>
+                        </div>
+                        <div class="flex items-baseline py-2.5 border-b border-slate-100">
+                            <div class="w-1/3 font-medium text-slate-800 text-sm">Cough pattern/frequency</div>
+                            <div class="w-1/2 text-sm text-slate-600 pr-4">Occurs in bursts with intermittent coughing fits separated by periods of relative calm</div>
+                            <div class="w-24 text-[11px] font-mono text-slate-400">turn-014</div>
+                            <div class="flex-1 flex justify-end">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-slate-800 text-white">Present</span>
+                            </div>
+                        </div>
+                        <div class="flex items-baseline py-2.5 border-b border-slate-100">
+                            <div class="w-1/3 font-medium text-slate-800 text-sm">Cough worse at night</div>
+                            <div class="w-1/2 text-sm text-slate-600 pr-4">—</div>
+                            <div class="w-24 text-[11px] font-mono text-slate-400">turn-016</div>
+                            <div class="flex-1 flex justify-end">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-slate-800 text-white">Present</span>
+                            </div>
+                        </div>
+                        <div class="flex items-baseline py-2.5 border-b border-slate-100">
+                            <div class="w-1/3 font-medium text-slate-800 text-sm">Cough worsens when lying down</div>
+                            <div class="w-1/2 text-sm text-slate-600 pr-4">—</div>
+                            <div class="w-24 text-[11px] font-mono text-slate-400">turn-016</div>
+                            <div class="flex-1 flex justify-end">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-slate-800 text-white">Present</span>
+                            </div>
+                        </div>
+                        <div class="flex items-baseline py-2.5 border-b border-slate-100">
+                            <div class="w-1/3 font-medium text-slate-800 text-sm">Scratchy throat</div>
+                            <div class="w-1/2 text-sm text-slate-600 pr-4">Preceded cough by a few days</div>
+                            <div class="w-24 text-[11px] font-mono text-slate-400">turn-004</div>
+                            <div class="flex-1 flex justify-end">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-slate-800 text-white">Present</span>
+                            </div>
+                        </div>
+                        <div class="flex items-baseline py-2.5 border-b border-slate-100">
+                            <div class="w-1/3 font-medium text-slate-800 text-sm">Sputum color</div>
+                            <div class="w-1/2 text-sm text-slate-600 pr-4">Mostly yellow; possibly green once (uncertain due to lighting)</div>
+                            <div class="w-24 text-[11px] font-mono text-slate-400">turn-010</div>
+                            <div class="flex-1 flex justify-end">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-slate-800 text-white">Present</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Key Negatives -->
+                <div>
+                    <h2 class="text-[11px] font-bold tracking-widest text-slate-400 uppercase mb-3 border-b border-slate-200 pb-2">Key Negatives</h2>
+                    <div class="flex flex-col">
+                        <div class="flex items-baseline py-2.5 border-b border-slate-100">
+                            <div class="w-1/3 font-medium text-slate-800 text-sm">Hemoptysis (blood in sputum)</div>
+                            <div class="w-1/2 text-sm text-slate-600 pr-4">Patient explicitly denied</div>
+                            <div class="w-24 text-[11px] font-mono text-slate-400">turn-012</div>
+                            <div class="flex-1 flex justify-end">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-slate-100 text-slate-500">Absent</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Workup / Uncertainties -->
+                <div>
+                    <h2 class="text-[11px] font-bold tracking-widest text-slate-400 uppercase mb-3 border-b border-slate-200 pb-2">Workup / Uncertainties</h2>
+                    <div class="flex flex-col">
+                        <div class="flex items-baseline py-2.5 border-b border-slate-100">
+                            <div class="w-1/3 font-medium text-slate-800 text-sm">Dyspnea with exertion</div>
+                            <div class="w-1/2 text-sm text-slate-600 pr-4">Mentioned feeling winded, but unclear if related to coughing fits or pure exertion</div>
+                            <div class="w-24 text-[11px] font-mono text-slate-400">turn-018</div>
+                            <div class="flex-1 flex justify-end">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-[#FFFbeb] text-[#92400e] border border-[#fde68a]">Unresolved</span>
+                            </div>
+                        </div>
+                        <div class="flex items-baseline py-2.5 border-b border-slate-100">
+                            <div class="w-1/3 font-medium text-slate-800 text-sm">Measured fever</div>
+                            <div class="w-1/2 text-sm text-slate-600 pr-4">Felt warm two days ago, no thermometer used</div>
+                            <div class="w-24 text-[11px] font-mono text-slate-400">turn-005</div>
+                            <div class="flex-1 flex justify-end">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-[#FFFbeb] text-[#92400e] border border-[#fde68a]">Not Assessed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Heavy Divider -->
+            <div class="w-full h-px bg-slate-300 my-2"></div>
+
+            <!-- 7. Working Considerations -->
+            <div>
+                <h2 class="text-[11px] font-bold tracking-widest text-slate-400 uppercase mb-6">Working Considerations</h2>
+                
+                <div class="flex flex-col gap-6">
+                    
+                    <!-- Consideration 1 -->
+                    <div class="border border-slate-200 rounded-lg p-5 bg-white">
+                        <div class="flex justify-between items-center mb-4 border-b border-slate-100 pb-3">
+                            <h3 class="text-base font-semibold text-slate-900">#1 Acute bronchitis (viral or post-infectious)</h3>
+                            <div class="flex items-center gap-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-slate-800 text-white">High</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-slate-50 text-slate-500 border border-slate-200">Stable</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-6">
+                            <div>
+                                <h4 class="text-xs font-semibold text-slate-500 uppercase mb-2">Supports</h4>
+                                <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-4 marker:text-slate-300">
+                                    <li>URI-like prodrome (scratchy throat)</li>
+                                    <li>Overall course ~1 week</li>
+                                    <li>Cough in bursts/fits with relative calm</li>
+                                    <li>Intermittent productive sputum (yellow)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-slate-500 uppercase mb-2">Against</h4>
+                                <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-4 marker:text-slate-300">
+                                    <li>Exertional dyspnea needs alternative causes excluded</li>
+                                    <li>Nocturnal/positional worsening could suggest non-bronchitis contributors</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-slate-500 uppercase mb-2">Unknowns</h4>
+                                <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-4 marker:text-slate-300">
+                                    <li>Fever/chills severity</li>
+                                    <li>Vitals (RR, O2 sat) and lung exam</li>
+                                    <li>True dyspnea severity/progression</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Consideration 2 -->
+                    <div class="border border-slate-200 rounded-lg p-5 bg-white">
+                        <div class="flex justify-between items-center mb-4 border-b border-slate-100 pb-3">
+                            <h3 class="text-base font-semibold text-slate-900">#2 Community-acquired pneumonia</h3>
+                            <div class="flex items-center gap-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-slate-200 text-slate-700">Medium</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-slate-50 text-slate-500 border border-slate-200">Stable</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-6">
+                            <div>
+                                <h4 class="text-xs font-semibold text-slate-500 uppercase mb-2">Supports</h4>
+                                <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-4 marker:text-slate-300">
+                                    <li>Persistent cough with potential exertional dyspnea</li>
+                                    <li>Productive sputum (yellow/green)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-slate-500 uppercase mb-2">Against</h4>
+                                <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-4 marker:text-slate-300">
+                                    <li>No hemoptysis reported</li>
+                                    <li>No documented fever or severe systemic symptoms</li>
+                                    <li>No objective data yet</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-slate-500 uppercase mb-2">Unknowns</h4>
+                                <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-4 marker:text-slate-300">
+                                    <li>Oxygen saturation, respiratory rate</li>
+                                    <li>Pleuritic chest pain, rigors</li>
+                                    <li>Focal lung findings or chest imaging</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Consideration 3 -->
+                    <div class="border border-slate-200 rounded-lg p-5 bg-white">
+                        <div class="flex justify-between items-center mb-4 border-b border-slate-100 pb-3">
+                            <h3 class="text-base font-semibold text-slate-900">#3 Post-viral cough</h3>
+                            <div class="flex items-center gap-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-slate-100 text-slate-500">Low</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-slate-50 text-slate-500 border border-slate-200">Stable</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-6">
+                            <div>
+                                <h4 class="text-xs font-semibold text-slate-500 uppercase mb-2">Supports</h4>
+                                <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-4 marker:text-slate-300">
+                                    <li>Scratchy throat preceded cough</li>
+                                    <li>Cough worse at night / lying down</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-slate-500 uppercase mb-2">Against</h4>
+                                <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-4 marker:text-slate-300">
+                                    <li>Productive sputum is less typical (usually dry)</li>
+                                    <li>Timeline may be too short (~1 week)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-slate-500 uppercase mb-2">Unknowns</h4>
+                                <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-4 marker:text-slate-300">
+                                    <li>Exact timeline of initial URI resolution</li>
+                                    <li>Presence of post-nasal drip</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 8. Open Questions / Suggested Next Step -->
+            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 mt-2">
+                <h2 class="text-[11px] font-bold tracking-widest text-slate-500 uppercase mb-4">Suggested Clinician Handoff Questions</h2>
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                        <div class="mt-0.5 text-slate-400">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        </div>
+                        <p class="text-sm font-medium text-slate-800">How has your breathing changed, especially when walking or climbing stairs?</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="mt-0.5 text-slate-400">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        </div>
+                        <p class="text-sm font-medium text-slate-800">Do you experience any sharp chest pain when taking a deep breath?</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="mt-0.5 text-slate-400">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        </div>
+                        <p class="text-sm font-medium text-slate-800">Is the feeling of being warm ongoing, or has it resolved?</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

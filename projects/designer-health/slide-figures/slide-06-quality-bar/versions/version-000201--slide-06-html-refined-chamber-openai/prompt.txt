@@ -1,0 +1,71 @@
+Return one self-contained HTML document for a 1920x1080 investor-deck figure.
+
+This is a premium healthcare startup slide figure, not a product mockup, not a browser page, and not a dashboard.
+
+Use the attached reference image only as family continuity for composition and taste. Improve it.
+
+Primary goal:
+Make the current composition feel more resolved, more premium, and more legible while keeping the same overall story:
+patient story on the left -> Vox adaptive interviewing and clinical reasoning in the center -> clinician-grade starting point on the right.
+
+Copy contract:
+
+Header:
+Vox is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.
+
+Support copy:
+Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.
+By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.
+
+Internal figure labels:
+- Vox
+- Adaptive clinical interviewer
+- What matters
+- What connects
+- What still needs verification
+- Clinician-grade starting point
+
+Left-side conversational ribbons:
+- My back has been hurting...
+- Vox: What makes it worse?
+- It’s worse in the morning.
+- Vox: When did this start?
+- Started last Tuesday.
+
+Design direction:
+- white background
+- grayscale / off-white base
+- restrained teal / blue accent
+- quiet industrial-design polish
+- editorial and clinically serious
+- soft shadows
+- no browser chrome
+- no extra labels beyond the allowed copy
+
+Composition requirements:
+- top area: header and support copy, well typeset with generous margins
+- left side: five simple ribbons, large and legible, alternating patient gray and Vox teal
+- center: one calm sculpted Vox chamber, but more elegant than the reference image
+- do not make the chamber feel like a SaaS dashboard, app card, or hardware appliance
+- inside the chamber, the internal logic should feel cleaner and more convincing than the reference
+- show a restrained adaptive reasoning path from the patient statements into three organized outputs
+- right side: a compact card emerging from the chamber edge
+- the right card must feel secondary, not like the hero
+
+Important:
+- no messy filler micro-text
+- no made-up medical tables
+- no extra icons except tiny neutral marks only if absolutely necessary
+- avoid generic rounded-rectangle UI panels inside the main chamber
+- keep the figure elegant first, readable second, intelligent third
+
+What to improve versus the attached reference:
+- make the internal reasoning story clearer
+- reduce the “UI mockup” feeling on the right
+- make the main chamber more sculptural and premium
+- tighten the typography so the whole slide feels intentional and high-end
+
+Output:
+- a complete HTML document only
+- inline CSS only
+- inline SVG allowed and preferred

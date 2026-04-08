@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slide 11 Founder Grid</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+      :root {
+        --font: "Montserrat", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+        --paper: #ffffff;
+        --ink: #121212;
+        --muted: #979797;
+        --accent: #ee5a2a;
+        --circle: #9f9f9f;
+        --footer: #1d1d1d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--paper);
+        font-family: var(--font);
+        color: var(--ink);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--paper);
+      }
+
+      .content {
+        padding: 60px 90px 0;
+      }
+
+      .section-title {
+        margin: 0 0 10px;
+        font-size: 58px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+      }
+
+      .header {
+        margin: 0;
+        max-width: 1180px;
+        font-size: 60px;
+        line-height: 1.06;
+        font-weight: 500;
+        letter-spacing: -0.055em;
+      }
+
+      .team-grid {
+        position: absolute;
+        left: 90px;
+        top: 345px;
+        width: 1740px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .member {
+        text-align: center;
+      }
+
+      .avatar-frame {
+        width: 256px;
+        height: 256px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 2px solid var(--circle);
+        border-radius: 50%;
+        background: #ffffff;
+      }
+
+      .avatar {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: var(--focus-x, 50%) var(--focus-y, 22%);
+        transform: scale(var(--avatar-scale, 1));
+        transform-origin: center;
+        background: #ffffff;
+      }
+
+      .role {
+        margin: 18px 0 12px;
+        font-size: 22px;
+        line-height: 1.1;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        color: var(--ink);
+      }
+
+      .name {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.18;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+
+      .detail {
+        margin: 6px 0 0;
+        font-size: 14px;
+        line-height: 1.12;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 993px;
+        width: 1536px;
+        height: 2px;
+        background: var(--footer);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1688px;
+        top: 952px;
+        width: 138px;
+        height: 76px;
+        object-fit: contain;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const prefix = window.location.pathname.includes("/versions/") ? "../../../../" : "../../";
+        document.querySelectorAll("[data-asset-path]").forEach((node) => {
+          node.setAttribute("src", `${prefix}${node.dataset.assetPath}`);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section class="slide" aria-label="Built by people who understand the visit">
+      <div class="content">
+        <h2 class="section-title">Our Team</h2>
+        <h1 class="header">Built by people who understand the visit</h1>
+      </div>
+
+      <section class="team-grid" aria-label="Founder grid">
+        <article class="member">
+          <div class="avatar-frame">
+            <img
+              class="avatar"
+              data-asset-path="slide-assets/slide-11/yashar-niknafs-headshot/preview.png"
+              alt="Yashar Niknafs"
+            />
+          </div>
+          <p class="role">Founder - CEO</p>
+          <p class="name">Yashar Niknafs, MD, PhD</p>
+          <p class="detail">Internal medicine</p>
+          <p class="detail">Duke University</p>
+        </article>
+
+        <article class="member">
+          <div class="avatar-frame">
+            <img
+              class="avatar"
+              data-asset-path="slide-assets/slide-11/balaji-pandian-headshot/preview.png"
+              alt="Balaji Pandian"
+            />
+          </div>
+          <p class="role">Founder</p>
+          <p class="name">Balaji Pandian, MD, MBA</p>
+          <p class="detail">Anesthesiology</p>
+          <p class="detail">Stanford University</p>
+        </article>
+
+        <article class="member">
+          <div class="avatar-frame">
+            <img
+              class="avatar"
+              data-asset-path="slide-assets/slide-11/rana-kabeer-headshot/preview.png"
+              alt="Rana Kabeer"
+            />
+          </div>
+          <p class="role">Founder</p>
+          <p class="name">Rana Kabeer, MD, MPH</p>
+          <p class="detail">Emergency medicine</p>
+          <p class="detail">Stanford University</p>
+        </article>
+
+        <article class="member">
+          <div class="avatar-frame">
+            <img
+              class="avatar"
+              data-asset-path="slide-assets/slide-11/kristian-black-headshot/preview.png"
+              alt="Kristian Black"
+            />
+          </div>
+          <p class="role">Founder</p>
+          <p class="name">Kristian Black, MD, MS</p>
+          <p class="detail">Urology</p>
+          <p class="detail">Cleveland Clinic</p>
+        </article>
+      </section>
+
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        data-asset-path="assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>

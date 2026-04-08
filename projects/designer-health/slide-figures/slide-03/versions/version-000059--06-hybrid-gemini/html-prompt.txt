@@ -1,0 +1,42 @@
+Generate a self-contained 1920x1080 HTML pitch-deck slide mockup for Vox.
+
+Use the attached reference images for style and structure. One reference is the current official slide 03. The other is a hybrid callback/payoff mockup that is directionally closer to what we want.
+
+Goal:
+Make the capacity story clearer without turning the slide into a dense explainer. The viewer should quickly understand:
+1. story reconstruction gets smaller
+2. the saved piece is visible
+3. repeated across the day, that creates one additional visit
+
+Important constraints:
+- Premium editorial healthcare pitch-deck design
+- Off-white background, restrained blue / gray / green palette
+- Montserrat-like typography feel
+- No dashboard UI
+- Do not imply rushed care or shortened physical exam / counseling
+- Keep the large anatomy bar at the top as the main callback anchor
+
+Desired structure:
+- Top: one large visit anatomy bar, similar to the existing slide
+- Bottom left: a compact mechanism callback, not a full mini-slide
+  - one before and one after visit
+  - only the blue story section gets smaller
+  - a dashed “time saved” block sits to the right of the after state
+  - subtle inward arrows or shrink markers should make the blue contraction obvious
+  - this panel should feel like an extracted subset reminder
+- Bottom right: the compounded result
+  - explicit before/after state labels like Today and With Vox Prep
+  - top row shows 5 visits
+  - bottom row shows 5 shorter visits plus a green new visit
+  - this should be horizontally tighter than the current official slide so it reads as one clear payoff object
+
+Copy direction:
+- Headline: More efficient visits will increase supply.
+- Subheader: Small per-visit gains compound.
+- Keep supporting copy minimal and crisp
+- Avoid abstract lines like “efficiency repeated across visits creates capacity” unless rewritten more concretely
+
+Design goal:
+The left panel answers “what changed?” and the right panel answers “what does that buy us?”
+
+Build the strongest version of that composition, not just a literal copy of the reference.

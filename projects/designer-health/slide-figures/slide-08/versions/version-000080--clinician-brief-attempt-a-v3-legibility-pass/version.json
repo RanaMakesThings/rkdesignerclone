@@ -1,0 +1,12 @@
+{
+  "id": "version-000080",
+  "slideId": "slide-08",
+  "slideDir": "projects/designer-health/slide-figures/slide-08",
+  "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000080--clinician-brief-attempt-a-v3-legibility-pass",
+  "label": "clinician-brief-attempt-a-v3-legibility-pass",
+  "status": "archived",
+  "createdAt": "2026-04-01T04:52:57.250Z",
+  "sourceKind": "fine-tune",
+  "baseVersionId": "version-000079",
+  "legacySourcePaths": []
+}

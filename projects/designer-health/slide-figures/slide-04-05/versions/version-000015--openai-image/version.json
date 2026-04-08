@@ -1,0 +1,14 @@
+{
+  "id": "version-000015",
+  "slideId": "slide-04-05",
+  "slideDir": "projects/designer-health/slide-figures/slide-04-05",
+  "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000015--openai-image",
+  "label": "openai-image",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.490Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-04-05/openai-image"
+  ]
+}

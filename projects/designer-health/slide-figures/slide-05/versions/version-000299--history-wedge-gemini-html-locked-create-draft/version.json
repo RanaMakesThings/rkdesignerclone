@@ -1,0 +1,16 @@
+{
+  "id": "version-000299",
+  "slideId": "slide-05",
+  "slideDir": "projects/designer-health/slide-figures/slide-05",
+  "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft",
+  "label": "history-wedge-gemini-html-locked-create-draft",
+  "status": "draft",
+  "createdAt": "2026-04-06T02:27:25.454Z",
+  "sourceKind": "create-draft",
+  "baseVersionId": null,
+  "legacySourcePaths": [],
+  "createLane": "html",
+  "templateId": "designer-deck-template-v1",
+  "bootstrapMode": "from-spec",
+  "runType": "slide-create"
+}

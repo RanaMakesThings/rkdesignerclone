@@ -1,0 +1,7 @@
+{
+  "assessor": {
+    "provider": "auto",
+    "strictJson": true,
+    "maxTokens": 1600
+  }
+}

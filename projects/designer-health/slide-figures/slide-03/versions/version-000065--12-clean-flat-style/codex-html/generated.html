@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide 03 Closer Current Style</title>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f4f4ef;
+    --ink: #16322b;
+    --muted: #677572;
+    --line: #d4d9d6;
+    --story: #558ac5;
+    --story-soft: #8bb2d8;
+    --exam: #dde3e4;
+    --counsel: #aab4bd;
+    --green: #56857b;
+  }
+
+  body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: #f8f8f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", system-ui, sans-serif;
+  }
+
+  .slide {
+    width: 1920px;
+    height: 1080px;
+    border-radius: 0;
+    background: #f8f8f4;
+    box-shadow: none;
+    padding: 40px 38px 36px;
+  }
+
+  h1 {
+    color: var(--ink);
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -0.06em;
+    font-weight: 800;
+    max-width: 1180px;
+  }
+
+  .subheader {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 20px;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+
+  .hero {
+    margin-top: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-bar {
+    width: 1110px;
+    display: flex;
+    height: 74px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .story { background: var(--story); color: white; }
+  .exam { background: var(--exam); color: var(--ink); }
+  .counsel { background: var(--counsel); color: white; }
+
+  .hero .story { width: 540px; }
+  .hero .exam { width: 216px; }
+  .hero .counsel { width: 324px; }
+
+  .callout-brace {
+    width: 540px;
+    margin-right: 570px;
+    margin-top: 12px;
+    position: relative;
+  }
+
+  .callout-brace svg {
+    display: block;
+    width: 100%;
+    height: 22px;
+  }
+
+  .hero-copy {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .hero-copy strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .bridge {
+    display: none;
+  }
+
+  .detail-grid {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: 0.97fr 1.13fr;
+    gap: 58px;
+    align-items: center;
+  }
+
+  .mechanism {
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 240px;
+  }
+
+  .mechanism-copy {
+    margin-top: 0;
+    color: var(--ink);
+    font-size: 23px;
+    line-height: 1.16;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+    max-width: 15ch;
+  }
+
+  .visit-shell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 0;
+  }
+
+  .visit-bar {
+    display: flex;
+    height: 64px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .visit-compact {
+    width: 404px;
+  }
+
+  .visit-full {
+    width: 500px;
+    height: 52px;
+    border-radius: 6px;
+  }
+
+  .visit-full .story { width: 202px; }
+  .visit-full .exam { width: 124px; }
+  .visit-full .counsel { width: 174px; }
+
+  .visit-compact .story { width: 122px; position: relative; }
+  .visit-compact .exam { width: 124px; }
+  .visit-compact .counsel { width: 158px; }
+
+  .mechanism-diagram {
+    position: relative;
+    width: 500px;
+    margin-top: 20px;
+    padding-top: 4px;
+  }
+
+  .visit-shell-top {
+    margin-top: 0;
+  }
+
+  .visit-shell-bottom {
+    margin-top: 40px;
+  }
+
+  .shrink-guides {
+    position: absolute;
+    left: 0;
+    top: 52px;
+    width: 500px;
+    height: 48px;
+    pointer-events: none;
+  }
+
+  .time-saved {
+    width: 96px;
+    height: 64px;
+    border: 2px dashed #a7b1b7;
+    border-radius: 6px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 700;
+    background: transparent;
+  }
+
+  .shrink-arrows {
+    position: absolute;
+    left: 34px;
+    top: 19px;
+    width: 54px;
+    height: 28px;
+    pointer-events: none;
+  }
+
+  .shrink-arrows svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .payoff {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 240px;
+  }
+
+  .payoff-shell {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .payoff-row {
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .payoff-row + .payoff-row {
+    margin-top: 28px;
+  }
+
+  .payoff-label {
+    color: var(--ink);
+    font-size: 24px;
+    line-height: 1.02;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .payoff-label span {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  .day-row {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .mini {
+    display: flex;
+    height: 56px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .mini.current {
+    width: 112px;
+  }
+
+  .mini.current .story { width: 56px; background: var(--story-soft); }
+  .mini.current .exam { width: 23px; }
+  .mini.current .counsel { width: 33px; background: #bcc4ca; }
+
+  .mini.vox {
+    width: 88px;
+  }
+
+  .mini.vox .story { width: 36px; background: var(--story-soft); }
+  .mini.vox .exam { width: 22px; }
+  .mini.vox .counsel { width: 30px; background: #bcc4ca; }
+
+  .new-visit {
+    width: 142px;
+    height: 56px;
+    border-radius: 6px;
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .payoff-connector {
+    width: 24px;
+    margin: 10px 0 10px 82px;
+    color: var(--muted);
+    opacity: 0.65;
+  }
+
+  .payoff-shell::before {
+    display: none;
+  }
+
+</style>
+</head>
+<body>
+  <div class="slide">
+    <h1>More efficient visits will increase supply.</h1>
+    <div class="subheader">Small per-visit gains compound.</div>
+
+    <section class="hero">
+      <div class="hero-bar">
+        <div class="seg story">Story reconstruction</div>
+        <div class="seg exam">Physical exam</div>
+        <div class="seg counsel">Decisions + counseling</div>
+      </div>
+      <div class="callout-brace">
+        <svg viewBox="0 0 540 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1V18H539V1" stroke="#a7b1b7" stroke-width="1.5"/>
+          <path d="M270 18V31" stroke="#a7b1b7" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="hero-copy">
+        <strong>Most variable minutes of the visit</strong>
+        Best target for upstream prep without losing quality
+      </div>
+    </section>
+
+    <div class="bridge">The story only works if the recovered minutes become a real new slot.</div>
+
+    <section class="detail-grid">
+      <div class="mechanism">
+        <div class="mechanism-copy">Shrink the story reconstruction piece and the recovered minutes become usable time.</div>
+
+        <div class="mechanism-diagram">
+          <div class="visit-shell visit-shell-top">
+            <div class="visit-bar visit-full">
+              <div class="seg story"></div>
+              <div class="seg exam"></div>
+              <div class="seg counsel"></div>
+            </div>
+          </div>
+
+          <svg class="shrink-guides" viewBox="0 0 500 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 1V27" stroke="#a7b1b7" stroke-width="1.5" stroke-dasharray="4 5"/>
+            <path d="M202 1L122 27" stroke="#a7b1b7" stroke-width="1.5" stroke-dasharray="4 5"/>
+          </svg>
+
+          <div class="visit-shell visit-shell-bottom">
+            <div class="visit-bar visit-compact">
+              <div class="seg story">
+                <div class="shrink-arrows">
+                  <svg viewBox="0 0 60 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 14H23" stroke="rgba(255,255,255,0.95)" stroke-width="2"/>
+                    <path d="M23 14L16 8" stroke="rgba(255,255,255,0.95)" stroke-width="2"/>
+                    <path d="M23 14L16 20" stroke="rgba(255,255,255,0.95)" stroke-width="2"/>
+                    <path d="M56 14H37" stroke="rgba(255,255,255,0.95)" stroke-width="2"/>
+                    <path d="M37 14L44 8" stroke="rgba(255,255,255,0.95)" stroke-width="2"/>
+                    <path d="M37 14L44 20" stroke="rgba(255,255,255,0.95)" stroke-width="2"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="seg exam"></div>
+              <div class="seg counsel"></div>
+            </div>
+            <div class="time-saved">Time saved</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="payoff">
+        <div class="payoff-shell">
+          <div class="payoff-row">
+            <div class="payoff-label">5<span>visits</span></div>
+            <div class="day-row">
+              <div class="mini current"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini current"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini current"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini current"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini current"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+            </div>
+          </div>
+
+          <div class="payoff-connector">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M6 14L12 20L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="payoff-row">
+            <div class="payoff-label">6<span>visits</span></div>
+            <div class="day-row">
+              <div class="mini vox"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini vox"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini vox"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini vox"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini vox"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="new-visit">New visit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

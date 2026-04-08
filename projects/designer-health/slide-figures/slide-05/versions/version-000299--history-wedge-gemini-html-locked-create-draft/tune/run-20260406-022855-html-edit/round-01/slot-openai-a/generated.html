@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, initial-scale=1" />
+    <title>Designer Deck Template v1 — slide-05</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --ink: #111111;
+        --headline: #141824;
+        --muted: #6f7785;
+        --muted-2: #8d96a6;
+        --line: rgba(0, 0, 0, 0.9);
+        --soft-line: rgba(24, 31, 47, 0.12);
+        --soft-line-2: rgba(24, 31, 47, 0.08);
+        --history: #4f88c4;
+        --history-deep: #3f78b3;
+        --exam: #d6dde6;
+        --plan: #9ea8b4;
+        --teal: #2f9aa0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+      }
+
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background:
+          radial-gradient(900px 500px at 68% 42%, rgba(80, 136, 196, 0.035), rgba(255,255,255,0) 60%),
+          radial-gradient(800px 420px at 28% 68%, rgba(47, 154, 160, 0.03), rgba(255,255,255,0) 64%),
+          #ffffff;
+      }
+
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 56px;
+        width: 1500px;
+        margin: 0;
+        font-size: 66px;
+        line-height: 1.03;
+        font-weight: 700;
+        letter-spacing: -0.055em;
+        color: var(--headline);
+      }
+
+      .figure-zone {
+        position: absolute;
+        left: 132px;
+        top: 214px;
+        width: 1560px;
+        height: 690px;
+      }
+
+      .visit-label {
+        position: absolute;
+        left: 88px;
+        top: 48px;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted-2);
+      }
+
+      .visit-bar {
+        position: absolute;
+        left: 86px;
+        top: 86px;
+        width: 1376px;
+        height: 84px;
+        border-radius: 14px;
+        overflow: visible;
+      }
+
+      .segment {
+        position: absolute;
+        top: 0;
+        height: 84px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        line-height: 1.1;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        border-radius: 14px 0 0 14px;
+      }
+
+      .segment.exam,
+      .segment.plan {
+        border-radius: 0;
+      }
+
+      .segment.plan {
+        border-radius: 0 14px 14px 0;
+      }
+
+      .segment.history {
+        left: 0;
+        width: 740px;
+        height: 104px;
+        top: -10px;
+        background: linear-gradient(180deg, var(--history) 0%, var(--history-deep) 100%);
+        color: #ffffff;
+        border-radius: 16px;
+        box-shadow:
+          0 12px 30px rgba(79, 136, 196, 0.18),
+          0 2px 0 rgba(255,255,255,0.45) inset,
+          0 0 0 1px rgba(42, 92, 150, 0.08);
+        z-index: 3;
+      }
+
+      .segment.exam {
+        left: 740px;
+        width: 296px;
+        background: var(--exam);
+        color: #243044;
+        z-index: 1;
+      }
+
+      .segment.plan {
+        left: 1036px;
+        width: 340px;
+        background: var(--plan);
+        color: #ffffff;
+        z-index: 1;
+      }
+
+      .history-support {
+        position: absolute;
+        left: 170px;
+        top: 212px;
+        width: 660px;
+        text-align: center;
+      }
+
+      .history-support .rule {
+        width: 112px;
+        height: 2px;
+        margin: 0 auto 14px auto;
+        background: linear-gradient(90deg, rgba(79,136,196,0), rgba(79,136,196,0.55), rgba(79,136,196,0));
+      }
+
+      .history-support .title {
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #2b3445;
+        letter-spacing: -0.02em;
+      }
+
+      .history-support .subtitle {
+        margin-top: 8px;
+        font-size: 15px;
+        line-height: 1.25;
+        font-weight: 500;
+        color: var(--muted);
+        letter-spacing: -0.01em;
+      }
+
+      .support-line-inline {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.25;
+        font-weight: 600;
+        color: var(--teal);
+        letter-spacing: -0.015em;
+      }
+
+      .proof {
+        position: absolute;
+        left: 920px;
+        top: 236px;
+        width: 560px;
+      }
+
+      .proof-intro {
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted-2);
+        margin-bottom: 24px;
+      }
+
+      .proof-row {
+        position: relative;
+        padding: 0 0 30px 24px;
+        margin-bottom: 30px;
+      }
+
+      .proof-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .proof-row::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--history);
+        box-shadow: 0 0 0 6px rgba(79, 136, 196, 0.08);
+      }
+
+      .proof-row::after {
+        content: "";
+        position: absolute;
+        left: 3.5px;
+        top: 24px;
+        width: 1px;
+        height: calc(100% - 6px);
+        background: linear-gradient(180deg, rgba(79,136,196,0.24), rgba(79,136,196,0));
+      }
+
+      .proof-row:last-child::after {
+        display: none;
+      }
+
+      .proof-title {
+        font-size: 29px;
+        line-height: 1.08;
+        font-weight: 700;
+        letter-spacing: -0.035em;
+        color: #263143;
+        margin: 0 0 10px 0;
+      }
+
+      .proof-copy {
+        width: 490px;
+        font-size: 21px;
+        line-height: 1.38;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: #5c6677;
+        margin: 0;
+      }
+
+      .bottom-truth {
+        position: absolute;
+        left: 214px;
+        bottom: 136px;
+        width: 1280px;
+        margin: 0;
+        font-size: 48px;
+        line-height: 1.1;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        color: #273243;
+      }
+
+      .bottom-accent {
+        position: absolute;
+        left: 214px;
+        bottom: 112px;
+        width: 360px;
+        height: 3px;
+        background: linear-gradient(90deg, rgba(47,154,160,0.65), rgba(47,154,160,0));
+      }
+
+      .scaffold {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="Designer investor deck slide: History is the cleanest place to reclaim minutes">
+      <h1 class="header">History is the cleanest place to reclaim minutes.</h1>
+
+      <div class="figure-zone" aria-label="Visit wedge figure and proof field">
+        <div class="visit-label">The visit as a whole</div>
+
+        <div class="visit-bar" aria-label="Visit bar">
+          <div class="segment history">History</div>
+          <div class="segment exam">Exam</div>
+          <div class="segment plan">Assessment / plan</div>
+        </div>
+
+        <div class="history-support" aria-label="History support label">
+          <div class="rule"></div>
+          <div class="title">Selected wedge</div>
+          <div class="subtitle">A high-leverage target for pre-visit prep.</div>
+          <div class="support-line-inline">Relevant details • Timeline • Next questions</div>
+        </div>
+
+        <div class="proof" aria-label="Three reasons history is the right wedge">
+          <div class="proof-intro">Why this part is attractive</div>
+
+          <div class="proof-row">
+            <h3 class="proof-title">Foundational to the encounter</h3>
+            <p class="proof-copy">Shapes the starting point for what follows in the visit.</p>
+          </div>
+
+          <div class="proof-row">
+            <h3 class="proof-title">Time-variable</h3>
+            <p class="proof-copy">Time required depends on complexity, communication, and context.</p>
+          </div>
+
+          <div class="proof-row">
+            <h3 class="proof-title">Can begin before the encounter</h3>
+            <p class="proof-copy">A meaningful portion can start before the clinician is on the clock.</p>
+          </div>
+        </div>
+
+        <svg class="scaffold" viewBox="0 0 1560 690" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="softStroke" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="rgba(79,136,196,0.26)"/>
+              <stop offset="100%" stop-color="rgba(79,136,196,0.02)"/>
+            </linearGradient>
+            <linearGradient id="softStroke2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="rgba(24,31,47,0.14)"/>
+              <stop offset="100%" stop-color="rgba(24,31,47,0.02)"/>
+            </linearGradient>
+          </defs>
+
+          <path d="M 154 181 C 232 181, 290 181, 352 181" fill="none" stroke="url(#softStroke2)" stroke-width="1.4"/>
+          <path d="M 456 168 C 612 168, 760 168, 890 168" fill="none" stroke="url(#softStroke)" stroke-width="2"/>
+          <path d="M 760 176 C 820 212, 860 232, 900 252" fill="none" stroke="rgba(24,31,47,0.07)" stroke-width="1.2"/>
+          <path d="M 760 176 C 825 176, 880 176, 920 176" fill="none" stroke="rgba(24,31,47,0.08)" stroke-width="1.2"/>
+          <path d="M 760 176 C 830 144, 882 124, 920 116" fill="none" stroke="rgba(24,31,47,0.06)" stroke-width="1.2"/>
+
+          <path d="M 714 204 C 714 244, 714 270, 714 290" fill="none" stroke="rgba(79,136,196,0.18)" stroke-width="1.5"/>
+          <circle cx="714" cy="204" r="3.5" fill="rgba(79,136,196,0.5)"/>
+        </svg>
+      </div>
+
+      <div class="bottom-accent" aria-hidden="true"></div>
+      <p class="bottom-truth">But reclaiming those minutes still requires clinical judgment.</p>
+
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../../../../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>

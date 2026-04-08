@@ -1,0 +1,41 @@
+{
+  "provider": "claude",
+  "status": "partial",
+  "summary": "The candidate successfully replaces the blank template with real content and gets several things right: the locked headline is present and correct, the visit bar with History/Exam/Assessment-plan segments is visible, the three proof rows are present with correct copy, and the footer rule and Designer logo position are preserved. However, the slide has two significant rendering failures that prevent a full 'applied' verdict: (1) the bottom truth statement 'But reclaiming those minutes still requires clinical judgment.' collides and overlaps with the third proof row ('Can begin before the encounter'), making both illegible — the layout has broken at the bottom of the figure zone; (2) the Designer footer logo appears to have failed to render (broken image icon visible in the lower-right). Additionally, the label below the History segment reads 'Selected wedge' rather than the specified selected label 'History' with support line 'A high-leverage target for pre-visit prep.' — the segment itself already says History so the sub-label copy is off-spec. The proof field is reasonably open and not fully boxed, which is a positive step, but the layout collapse at the bottom is a blocking issue for presentation-readiness.",
+  "evidence": [
+    "Locked headline 'History is the cleanest place to reclaim minutes.' is present and correctly set as the largest text on the slide.",
+    "No top subheader is shown — correct.",
+    "Visit bar with three segments (History in blue, Exam in medium gray, Assessment / plan in dark gray) is present and spans a large portion of the figure width.",
+    "History segment is visually dominant and larger than the other two segments — correct selection treatment.",
+    "Sub-label below History reads 'Selected wedge' rather than the spec-required label 'History' with support line 'A high-leverage target for pre-visit prep.'",
+    "Three proof rows are present with correct titles: 'Foundational to the encounter', 'Time-variable', 'Can begin before the encounter' — copy matches spec.",
+    "Bottom truth statement 'But reclaiming those minutes still requires clinical judgment.' is present but visually collides with and overlaps the third proof row, making both illegible.",
+    "Footer rule (horizontal line) is present near the bottom of the slide.",
+    "Designer Health logo in the footer appears as a broken/missing image icon rather than the actual logo.",
+    "Proof field is not enclosed in a large boxed panel — open structure is a positive step toward spec compliance.",
+    "No tethered hero card is used as the main organizing device — composition family is correctly replaced.",
+    "Support line 'Relevant details · Timeline · Next questions' is present in teal/green color below the History sub-label area."
+  ],
+  "nextPrompt": "Fix two blocking issues: (1) Increase the overall slide height or compress the proof field vertical spacing so the bottom statement 'But reclaiming those minutes still requires clinical judgment.' sits clearly below all three proof rows without any overlap — give it at least 40px clearance from the last proof row and place it in the bottom quarter of the slide. (2) Replace the broken footer logo with the correct Designer Health SVG or image asset. Also correct the sub-label below the lifted History segment: remove 'Selected wedge' and replace with the support line only: 'A high-leverage target for pre-visit prep.' followed by 'Relevant details · Timeline · Next questions' in the tertiary teal style. Everything else in the composition direction is acceptable — do not change the visit bar, proof field structure, or headline.",
+  "needsHuman": false,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate successfully replaces the blank template with real content and gets several things right: the locked headline is present and correct, the visit bar with History/Exam/Assessment-plan segments is visible, the three proof rows are present with correct copy, and the footer rule and Designer logo position are preserved. However, the slide has two significant rendering failures that prevent a full 'applied' verdict: (1) the bottom truth statement 'But reclaiming those minutes still requires clinical judgment.' collides and overlaps with the third proof row ('Can begin before the encounter'), making both illegible — the layout has broken at the bottom of the figure zone; (2) the Designer footer logo appears to have failed to render (broken image icon visible in the lower-right). Additionally, the label below the History segment reads 'Selected wedge' rather than the specified selected label 'History' with support line 'A high-leverage target for pre-visit prep.' — the segment itself already says History so the sub-label copy is off-spec. The proof field is reasonably open and not fully boxed, which is a positive step, but the layout collapse at the bottom is a blocking issue for presentation-readiness.",
+    "evidence": [
+      "Locked headline 'History is the cleanest place to reclaim minutes.' is present and correctly set as the largest text on the slide.",
+      "No top subheader is shown — correct.",
+      "Visit bar with three segments (History in blue, Exam in medium gray, Assessment / plan in dark gray) is present and spans a large portion of the figure width.",
+      "History segment is visually dominant and larger than the other two segments — correct selection treatment.",
+      "Sub-label below History reads 'Selected wedge' rather than the spec-required label 'History' with support line 'A high-leverage target for pre-visit prep.'",
+      "Three proof rows are present with correct titles: 'Foundational to the encounter', 'Time-variable', 'Can begin before the encounter' — copy matches spec.",
+      "Bottom truth statement 'But reclaiming those minutes still requires clinical judgment.' is present but visually collides with and overlaps the third proof row, making both illegible.",
+      "Footer rule (horizontal line) is present near the bottom of the slide.",
+      "Designer Health logo in the footer appears as a broken/missing image icon rather than the actual logo.",
+      "Proof field is not enclosed in a large boxed panel — open structure is a positive step toward spec compliance.",
+      "No tethered hero card is used as the main organizing device — composition family is correctly replaced.",
+      "Support line 'Relevant details · Timeline · Next questions' is present in teal/green color below the History sub-label area."
+    ],
+    "nextPrompt": "Fix two blocking issues: (1) Increase the overall slide height or compress the proof field vertical spacing so the bottom statement 'But reclaiming those minutes still requires clinical judgment.' sits clearly below all three proof rows without any overlap — give it at least 40px clearance from the last proof row and place it in the bottom quarter of the slide. (2) Replace the broken footer logo with the correct Designer Health SVG or image asset. Also correct the sub-label below the lifted History segment: remove 'Selected wedge' and replace with the support line only: 'A high-leverage target for pre-visit prep.' followed by 'Relevant details · Timeline · Next questions' in the tertiary teal style. Everything else in the composition direction is acceptable — do not change the visit bar, proof field structure, or headline.",
+    "needsHuman": false
+  }
+}

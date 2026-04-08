@@ -1,0 +1,339 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designer.health/schemas/figure-ideation-input.schema.json",
+  "title": "Figure Ideation Input",
+  "type": "object",
+  "required": [
+    "artifact_type",
+    "version",
+    "slide_metadata",
+    "locked_meaning",
+    "slide_copy",
+    "figure_requirements",
+    "starting_hypothesis",
+    "requested_outputs"
+  ],
+  "properties": {
+    "artifact_type": {
+      "const": "figure-ideation-input"
+    },
+    "version": {
+      "type": "string"
+    },
+    "run_mode": {
+      "type": "string",
+      "enum": [
+        "strict",
+        "standard",
+        "exploratory",
+        "high_confidence"
+      ]
+    },
+    "authoring_context": {
+      "type": "object",
+      "properties": {
+        "project": {
+          "type": "string"
+        },
+        "source_artifacts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "parent_run_id": {
+          "type": "string"
+        }
+      }
+    },
+    "slide_metadata": {
+      "type": "object",
+      "required": [
+        "slide_number",
+        "working_title",
+        "status"
+      ],
+      "properties": {
+        "slide_number": {
+          "type": "string"
+        },
+        "working_title": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "adjacent_slides": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "locked_meaning": {
+      "type": "object",
+      "required": [
+        "slide_job",
+        "audience_should_leave_believing",
+        "core_claim"
+      ],
+      "properties": {
+        "slide_job": {
+          "type": "string"
+        },
+        "audience_should_leave_believing": {
+          "type": "string"
+        },
+        "core_claim": {
+          "type": "string"
+        }
+      }
+    },
+    "slide_copy": {
+      "type": "object",
+      "required": [
+        "text_first",
+        "compressed"
+      ],
+      "properties": {
+        "text_first": {
+          "type": "object",
+          "required": [
+            "header"
+          ],
+          "properties": {
+            "header": {
+              "type": "string"
+            },
+            "support_line": {
+              "type": "string"
+            }
+          }
+        },
+        "compressed": {
+          "type": "object",
+          "required": [
+            "header"
+          ],
+          "properties": {
+            "header": {
+              "type": "string"
+            },
+            "subheader": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "figure_copy": {
+      "type": "object",
+      "properties": {
+        "panel_labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "figure_labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "figure_requirements": {
+      "type": "object",
+      "required": [
+        "figure_burden",
+        "figure_logic",
+        "must_not_become"
+      ],
+      "properties": {
+        "figure_burden": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "figure_logic": {
+          "type": "string"
+        },
+        "must_not_become": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "starting_hypothesis": {
+      "type": "object",
+      "required": [
+        "proposed_figure_direction",
+        "treat_as"
+      ],
+      "properties": {
+        "proposed_figure_direction": {
+          "type": "string"
+        },
+        "treat_as": {
+          "type": "string"
+        },
+        "explore_alternatives": {
+          "type": "boolean"
+        }
+      }
+    },
+    "current_visual_context": {
+      "type": "object",
+      "properties": {
+        "keep": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "change": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "design_constraints": {
+      "type": "object",
+      "properties": {
+        "tone": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "density_target": {
+          "type": "string"
+        },
+        "template": {
+          "type": "string"
+        },
+        "max_candidates": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "shortlist_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "thumbnail_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "allow_high_risk_candidate": {
+          "type": "boolean"
+        }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "current_slide_image": {
+          "type": "string"
+        },
+        "template_file": {
+          "type": "string"
+        },
+        "editable_source": {
+          "type": "string"
+        },
+        "reference_images": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "adjacent_slide_images": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "prior_build_spec": {
+          "type": "string"
+        },
+        "prior_critique_report": {
+          "type": "string"
+        }
+      }
+    },
+    "provider_preferences": {
+      "type": "object",
+      "properties": {
+        "text_ideators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "image_generators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "vision_critics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "orchestration_overrides": {
+      "type": "object",
+      "properties": {
+        "ideator_worker_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "generator_worker_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "critic_worker_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "auto_promote_allowed": {
+          "type": "boolean"
+        },
+        "human_review_required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "requested_outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "output_target": {
+      "type": "object",
+      "properties": {
+        "build_spec_filename": {
+          "type": "string"
+        },
+        "critique_filename": {
+          "type": "string"
+        },
+        "manifest_filename": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,351 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demand is outpacing clinical capacity</title>
+    <style>
+        /* CSS Reset & Base Setup */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #E5E4DF; /* Outer canvas color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* 16:9 Slide Container */
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F4F3EE; /* Premium warm neutral background */
+            position: relative;
+            overflow: hidden;
+            color: #1A2424;
+            padding: 56px 64px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+        }
+
+        /* Typography */
+        h1.main-header {
+            font-size: 44px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #111C1C;
+            margin-bottom: 48px;
+        }
+
+        .eyebrow {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #6B7A7A;
+            margin-bottom: 8px;
+        }
+
+        /* Middle Section: Panoramic Field */
+        .panoramic-field {
+            display: flex;
+            gap: 48px;
+            flex: 1;
+            margin-bottom: 32px;
+            align-items: flex-start;
+        }
+
+        /* Chart Area */
+        .chart-section {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chart-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #111C1C;
+            letter-spacing: -0.01em;
+            margin-bottom: 24px;
+        }
+
+        .chart-wrapper {
+            flex: 1;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Specialty Panel */
+        .specialty-section {
+            width: 340px;
+            flex-shrink: 0;
+            background-color: #FFFFFF;
+            border: 1px solid #E6E4DD;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.02);
+            margin-top: 12px; /* Visual alignment with chart */
+        }
+
+        .specialty-section .panel-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111C1C;
+            letter-spacing: -0.01em;
+            margin-bottom: 24px;
+        }
+
+        .bar-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .bar-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .bar-label {
+            width: 115px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1A2424;
+        }
+
+        .bar-track {
+            flex: 1;
+            height: 8px;
+            background-color: #E8EDEE;
+            border-radius: 4px;
+            margin: 0 16px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background-color: #255E67;
+            border-radius: 4px;
+        }
+
+        .bar-value {
+            width: 28px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #6B7A7A;
+            text-align: right;
+        }
+
+        /* Lower Third: Shortage Proof */
+        .shortage-band {
+            background-color: #E8E5DC;
+            border-radius: 16px;
+            padding: 32px 40px;
+            display: flex;
+            align-items: flex-start;
+            gap: 48px;
+            border: 1px solid #DFDCD2;
+        }
+
+        .shortage-left {
+            flex: 0 0 240px;
+        }
+
+        .shortage-left .hero {
+            font-size: 52px;
+            font-weight: 700;
+            color: #111C1C;
+            line-height: 1;
+            letter-spacing: -0.03em;
+            margin-top: 4px;
+        }
+
+        .shortage-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 2px;
+        }
+
+        .shortage-right .headline {
+            font-size: 20px;
+            font-weight: 600;
+            color: #111C1C;
+            margin-bottom: 8px;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+
+        .shortage-right .support {
+            font-size: 14px;
+            color: #5A6B6B;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: auto;
+            font-size: 10px;
+            color: #889999;
+            line-height: 1.5;
+            padding-top: 24px;
+            max-width: 90%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-container">
+        
+        <h1 class="main-header">Demand is outpacing clinical capacity.</h1>
+
+        <div class="panoramic-field">
+            
+            <!-- Left/Center: Trend Chart -->
+            <div class="chart-section">
+                <div class="eyebrow">AMN benchmark survey years</div>
+                <div class="chart-title">Average new-patient physician wait time</div>
+                
+                <div class="chart-wrapper">
+                    <svg width="100%" height="100%" viewBox="0 0 760 260" preserveAspectRatio="xMidYMid meet" style="overflow: visible;">
+                        <!-- Grid lines -->
+                        <line x1="40" y1="60" x2="720" y2="60" stroke="#E6E4DD" stroke-width="1" />
+                        <line x1="40" y1="120" x2="720" y2="120" stroke="#E6E4DD" stroke-width="1" />
+                        <line x1="40" y1="180" x2="720" y2="180" stroke="#E6E4DD" stroke-width="1" />
+                        <line x1="40" y1="240" x2="720" y2="240" stroke="#C4C2BB" stroke-width="2" /> <!-- Baseline -->
+
+                        <!-- Y-axis labels -->
+                        <text x="30" y="64" font-size="10" font-weight="600" fill="#889999" text-anchor="end">32</text>
+                        <text x="30" y="124" font-size="10" font-weight="600" fill="#889999" text-anchor="end">24</text>
+                        <text x="30" y="184" font-size="10" font-weight="600" fill="#889999" text-anchor="end">16</text>
+
+                        <!-- 
+                            Data Points Mapping:
+                            Y-Axis: 16 to 32 (range 16). Pixel range: 240 to 60 (180px). 1 unit = 11.25px.
+                            Y = 240 - ((Value - 16) * 11.25)
+                            X-Axis: 2004 to 2025 (21 years). Pixel range: 80 to 680 (600px). 1 year = 28.57px.
+                            
+                            Coordinates:
+                            2004 (21):   X=80,    Y=183.75
+                            2009 (20.5): X=222.8, Y=189.38
+                            2014 (18.5): X=365.7, Y=211.88
+                            2017 (24.1): X=451.4, Y=148.88
+                            2022 (26):   X=594.3, Y=127.50
+                            2025 (31):   X=680,   Y=71.25
+                        -->
+
+                        <!-- The Trend Line -->
+                        <path d="M 80 183.75 L 222.8 189.38 L 365.7 211.88 L 451.4 148.88 L 594.3 127.50 L 680 71.25" fill="none" stroke="#255E67" stroke-width="2.5" />
+
+                        <!-- Data Points & Labels -->
+                        <!-- 2004 -->
+                        <circle cx="80" cy="183.75" r="4.5" fill="#F4F3EE" stroke="#255E67" stroke-width="2.5" />
+                        <text x="80" y="168" font-size="12" font-weight="700" fill="#5A6B6B" text-anchor="middle">21</text>
+                        <text x="80" y="258" font-size="10" font-weight="600" fill="#889999" text-anchor="middle">2004</text>
+
+                        <!-- 2009 -->
+                        <circle cx="222.8" cy="189.38" r="4.5" fill="#F4F3EE" stroke="#255E67" stroke-width="2.5" />
+                        <text x="222.8" y="174" font-size="12" font-weight="700" fill="#5A6B6B" text-anchor="middle">20.5</text>
+                        <text x="222.8" y="258" font-size="10" font-weight="600" fill="#889999" text-anchor="middle">2009</text>
+
+                        <!-- 2014 -->
+                        <circle cx="365.7" cy="211.88" r="4.5" fill="#F4F3EE" stroke="#255E67" stroke-width="2.5" />
+                        <text x="365.7" y="196" font-size="12" font-weight="700" fill="#5A6B6B" text-anchor="middle">18.5</text>
+                        <text x="365.7" y="258" font-size="10" font-weight="600" fill="#889999" text-anchor="middle">2014</text>
+
+                        <!-- 2017 -->
+                        <circle cx="451.4" cy="148.88" r="4.5" fill="#F4F3EE" stroke="#255E67" stroke-width="2.5" />
+                        <text x="451.4" y="133" font-size="12" font-weight="700" fill="#5A6B6B" text-anchor="middle">24.1</text>
+                        <text x="451.4" y="258" font-size="10" font-weight="600" fill="#889999" text-anchor="middle">2017</text>
+
+                        <!-- 2022 -->
+                        <circle cx="594.3" cy="127.50" r="4.5" fill="#F4F3EE" stroke="#255E67" stroke-width="2.5" />
+                        <text x="594.3" y="112" font-size="12" font-weight="700" fill="#5A6B6B" text-anchor="middle">26</text>
+                        <text x="594.3" y="258" font-size="10" font-weight="600" fill="#889999" text-anchor="middle">2022</text>
+
+                        <!-- 2025 Endpoint & Callout -->
+                        <circle cx="680" cy="71.25" r="6" fill="#255E67" />
+                        <text x="680" y="258" font-size="10" font-weight="600" fill="#889999" text-anchor="middle">2025</text>
+                        
+                        <!-- Integrated Callout Group -->
+                        <g transform="translate(630, 0)">
+                            <rect x="-10" y="5" width="120" height="26" rx="13" fill="#D8E5E6" />
+                            <text x="50" y="22" font-size="11" font-weight="700" fill="#255E67" text-anchor="middle">+19% since 2022</text>
+                            <text x="50" y="62" font-size="36" font-weight="700" fill="#255E67" text-anchor="middle" letter-spacing="-0.03em">31 days</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right: Specialty Panel -->
+            <div class="specialty-section">
+                <div class="eyebrow">Where waits are longest</div>
+                <div class="panel-title">2025 waits by specialty</div>
+                
+                <div class="bar-chart">
+                    <!-- Max value is 41.8, setting 45 as 100% width for calculation -->
+                    <div class="bar-row">
+                        <span class="bar-label">OB/GYN</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 92.8%;"></div></div>
+                        <span class="bar-value">41.8</span>
+                    </div>
+                    <div class="bar-row">
+                        <span class="bar-label">Gastroenterology</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 88.8%;"></div></div>
+                        <span class="bar-value">40.0</span>
+                    </div>
+                    <div class="bar-row">
+                        <span class="bar-label">Dermatology</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 81.1%;"></div></div>
+                        <span class="bar-value">36.5</span>
+                    </div>
+                    <div class="bar-row">
+                        <span class="bar-label">Cardiology</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 72.6%;"></div></div>
+                        <span class="bar-value">32.7</span>
+                    </div>
+                    <div class="bar-row">
+                        <span class="bar-label">Family medicine</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 52.2%;"></div></div>
+                        <span class="bar-value">23.5</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Lower Third: Shortage Proof -->
+        <div class="shortage-band">
+            <div class="shortage-left">
+                <div class="eyebrow">Primary care HPSA, December 31, 2025</div>
+                <div class="hero">1 in 4+</div>
+            </div>
+            <div class="shortage-right">
+                <div class="headline">Americans live in federally designated primary care shortage areas.</div>
+                <div class="support">92.3 million people. In those areas, only 48.18% of primary care need is currently met.</div>
+            </div>
+        </div>
+
+        <!-- Footer Citations -->
+        <div class="footer">
+            [1] AMN Healthcare physician appointment wait-time benchmark surveys: 2004, 2009, 2014, 2017, 2022, and 2025. [2] HRSA primary care HPSA quarterly report, December 31, 2025. [3] U.S. Census Bureau July 1, 2025 resident population estimate; 92.3M / 341.8M = 27.0%.
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

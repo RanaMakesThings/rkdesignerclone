@@ -1,0 +1,19 @@
+{
+  "provider": "claude",
+  "verdict": "blocker",
+  "rationale": "The AFTER candidate has fixed the wavy/hooky arrow shape (the arc is now cleaner and smoother), but it introduced a visible stray rendering artifact: the text 'xml' appears in the top-left corner of the BEFORE baseline image and is still present as leaked markup in the rendered output of the candidate slide. More critically, comparing BEFORE to AFTER, the arrowhead in the AFTER image is now a small filled triangle pointing downward into the hero box, which is directionally correct, but the arrow line itself now appears noticeably thinner and lighter (dashed/dotted feel) compared to the solid stroke in the BEFORE, making the connector visually weaker and ambiguous in weight. Additionally, the 'xml' stray text artifact visible in the top-left of the BEFORE image appears to still be present in the live render, confirming leaked markup was not cleaned up.",
+  "blockers": [
+    "Stray 'xml' text artifact visible in the top-left corner of the rendered slide — leaked markup not removed",
+    "Arrow stroke in the AFTER candidate appears thinner/lighter than the BEFORE baseline, making the connector visually weaker and inconsistent with the original weight"
+  ],
+  "nextMove": "Remove the stray 'xml' text node from the HTML source, and restore the arrow stroke-width to match the BEFORE baseline weight while keeping the new clean single-arc path.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The AFTER candidate has fixed the wavy/hooky arrow shape (the arc is now cleaner and smoother), but it introduced a visible stray rendering artifact: the text 'xml' appears in the top-left corner of the BEFORE baseline image and is still present as leaked markup in the rendered output of the candidate slide. More critically, comparing BEFORE to AFTER, the arrowhead in the AFTER image is now a small filled triangle pointing downward into the hero box, which is directionally correct, but the arrow line itself now appears noticeably thinner and lighter (dashed/dotted feel) compared to the solid stroke in the BEFORE, making the connector visually weaker and ambiguous in weight. Additionally, the 'xml' stray text artifact visible in the top-left of the BEFORE image appears to still be present in the live render, confirming leaked markup was not cleaned up.",
+    "blockers": [
+      "Stray 'xml' text artifact visible in the top-left corner of the rendered slide — leaked markup not removed",
+      "Arrow stroke in the AFTER candidate appears thinner/lighter than the BEFORE baseline, making the connector visually weaker and inconsistent with the original weight"
+    ],
+    "nextMove": "Remove the stray 'xml' text node from the HTML source, and restore the arrow stroke-width to match the BEFORE baseline weight while keeping the new clean single-arc path."
+  }
+}

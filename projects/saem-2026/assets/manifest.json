@@ -1,0 +1,38 @@
+{
+  "manifestVersion": 1,
+  "projectId": "saem-2026",
+  "kind": "deck-assets",
+  "assets": [
+    {
+      "assetId": "asset-000001",
+      "id": "saem-annual-meeting-template",
+      "label": "SAEM Annual Meeting PowerPoint Template",
+      "status": "selected",
+      "kind": "presentation-template",
+      "role": "conference-template",
+      "summary": "Canonical SAEM annual meeting PowerPoint template for SAEM 2026 deck work.",
+      "previewPath": null,
+      "files": [
+        {
+          "label": "PowerPoint Template",
+          "path": "projects/saem-2026/assets/powerpoint-template/saem-annual-meeting-powerpoint-template.pptx"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Template Folder",
+          "path": "projects/saem-2026/assets/powerpoint-template"
+        }
+      ],
+      "tags": [
+        "saem",
+        "conference",
+        "powerpoint",
+        "template"
+      ],
+      "notes": [
+        "Use this as the baseline template for SAEM 2026 slide exports and final deck assembly."
+      ]
+    }
+  ]
+}

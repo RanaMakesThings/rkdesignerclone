@@ -1,0 +1,14 @@
+{
+  "id": "version-000018",
+  "slideId": "slide-04-05",
+  "slideDir": "projects/designer-health/slide-figures/slide-04-05",
+  "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000018--anthropic-html-opus",
+  "label": "anthropic-html-opus",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.504Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-04-05/anthropic-html-opus"
+  ]
+}

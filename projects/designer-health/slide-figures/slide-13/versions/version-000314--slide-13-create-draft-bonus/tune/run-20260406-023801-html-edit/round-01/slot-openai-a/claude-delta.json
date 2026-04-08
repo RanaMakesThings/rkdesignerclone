@@ -1,0 +1,31 @@
+{
+  "provider": "claude",
+  "status": "partial",
+  "summary": "The candidate has successfully replaced the blank template stub with substantive content — the locked header, subheader, left hero ask block ($1.25M), right stacked Build/Deploy/Validate milestone cards, and a use-of-funds ribbon are all visibly present and structurally correct. However, several execution issues prevent a full 'applied' rating: (1) the header text overflows and collides with the subheader, causing the subheader to be partially obscured; (2) the Designer Health footer logo has failed to render (broken image placeholder visible); (3) the left hero block stat row (core hires / pilot sites / months) is clipped at the bottom, cutting off the label text; (4) the master card does not sit cleanly within the white shell — it bleeds toward the edges and the overall layout feels slightly cramped rather than premium and clinically restrained; (5) the use-of-funds ribbon bar proportions appear unbalanced with very unequal segment widths that don't read as intentional.",
+  "evidence": [
+    "Header text wraps to two lines and visually overlaps the subheader 'Post-money SAFE • ~18–20 months of runway', making the subheader partially illegible",
+    "Footer logo area shows a broken/missing image placeholder instead of the Designer Health lockup",
+    "Left hero stat row labels ('core hires to support implementation and deployment', 'pilot sites to establish live operational proof', 'months of runway to execute and measure outcomes') are clipped at the bottom of the left card",
+    "Right milestone cards (BUILD / DEPLOY / VALIDATE) are present with correct outcome-first language and supporting tag chips — structure matches the brief",
+    "Use-of-funds ribbon is present at the bottom of the master card with labeled segments (Team, Pilot deployment, Product & data infrastructure, Validation / operating buffer) but segment proportions appear heavily skewed left",
+    "Closing line 'This round funds a concrete proof plan — not scale before proof.' is visible and on-brief",
+    "Master card uses soft gray field with white card surfaces and muted blue accent — visual family is directionally correct"
+  ],
+  "nextPrompt": "Fix three issues: (1) reduce the header font size so the full title fits on one or two lines without overlapping the subheader — target ~32–36px bold; (2) restore the Designer Health footer logo using the correct asset path or inline SVG so it renders reliably; (3) increase the left hero card height or reduce internal padding so the three stat columns (core hires / pilot sites / months of runway) are fully visible with their labels unclipped. Also rebalance the use-of-funds ribbon so segment widths are more proportional (Team ~35%, Pilot deployment ~25%, Product & data ~20%, Validation buffer ~20%). Do not change the milestone card content or overall layout structure.",
+  "needsHuman": true,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate has successfully replaced the blank template stub with substantive content — the locked header, subheader, left hero ask block ($1.25M), right stacked Build/Deploy/Validate milestone cards, and a use-of-funds ribbon are all visibly present and structurally correct. However, several execution issues prevent a full 'applied' rating: (1) the header text overflows and collides with the subheader, causing the subheader to be partially obscured; (2) the Designer Health footer logo has failed to render (broken image placeholder visible); (3) the left hero block stat row (core hires / pilot sites / months) is clipped at the bottom, cutting off the label text; (4) the master card does not sit cleanly within the white shell — it bleeds toward the edges and the overall layout feels slightly cramped rather than premium and clinically restrained; (5) the use-of-funds ribbon bar proportions appear unbalanced with very unequal segment widths that don't read as intentional.",
+    "evidence": [
+      "Header text wraps to two lines and visually overlaps the subheader 'Post-money SAFE • ~18–20 months of runway', making the subheader partially illegible",
+      "Footer logo area shows a broken/missing image placeholder instead of the Designer Health lockup",
+      "Left hero stat row labels ('core hires to support implementation and deployment', 'pilot sites to establish live operational proof', 'months of runway to execute and measure outcomes') are clipped at the bottom of the left card",
+      "Right milestone cards (BUILD / DEPLOY / VALIDATE) are present with correct outcome-first language and supporting tag chips — structure matches the brief",
+      "Use-of-funds ribbon is present at the bottom of the master card with labeled segments (Team, Pilot deployment, Product & data infrastructure, Validation / operating buffer) but segment proportions appear heavily skewed left",
+      "Closing line 'This round funds a concrete proof plan — not scale before proof.' is visible and on-brief",
+      "Master card uses soft gray field with white card surfaces and muted blue accent — visual family is directionally correct"
+    ],
+    "nextPrompt": "Fix three issues: (1) reduce the header font size so the full title fits on one or two lines without overlapping the subheader — target ~32–36px bold; (2) restore the Designer Health footer logo using the correct asset path or inline SVG so it renders reliably; (3) increase the left hero card height or reduce internal padding so the three stat columns (core hires / pilot sites / months of runway) are fully visible with their labels unclipped. Also rebalance the use-of-funds ribbon so segment widths are more proportional (Team ~35%, Pilot deployment ~25%, Product & data ~20%, Validation buffer ~20%). Do not change the milestone card content or overall layout structure.",
+    "needsHuman": true
+  }
+}

@@ -1,0 +1,434 @@
+{
+  "runId": "run-20260406-023801-html-edit",
+  "status": "failed",
+  "runType": "create",
+  "mode": "create",
+  "artifactDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus",
+  "projectRoot": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health",
+  "slideId": "slide-13",
+  "versionId": "version-000314",
+  "surface": "current-html",
+  "createdAt": "2026-04-06T02:38:01.236Z",
+  "updatedAt": "2026-04-06T02:39:08.207Z",
+  "config": {
+    "providers": [
+      "openai"
+    ],
+    "slotsPerProvider": 1,
+    "targetPassCount": 1,
+    "maxRounds": 1,
+    "maxSlotAttempts": 1,
+    "renderConcurrency": 2,
+    "judgeConcurrency": 6,
+    "generationConcurrency": 4,
+    "perProviderInFlightCap": 2
+  },
+  "baseline": {
+    "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/official-preview.png",
+    "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/parent-preview.png",
+    "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/parent-html.html",
+    "officialHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/official-html.html",
+    "approvedRegionsPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/approved-regions.json"
+  },
+  "request": {
+    "requestedChange": "Create a finished Designer deck slide from the seeded blank template.\n\nSlide id: slide-13\nLane: html\nSlide title: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment\nLocked header: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment\nLocked subheader: Post-money SAFE • ~18–20 months of runway\nAudience should leave believing: This is a finite, milestone-based raise tied to proof-stage deployment.\nCore claim: This is a finite, milestone-based raise tied to proof-stage deployment.\nSlide job: close with a disciplined proof-stage ask\nFigure burden: surface the ask first, then show what the round unlocks\nFigure logic: Use one integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.\nBuild status: create workflow underway from the April 5, 2026 ask build spec\n\nLocked spec guidance:\n### Current official read\n\n**Slide job**\nThis is the closing ask slide. It should turn the deck into a finite proof-stage financing plan rather than a generic raise page.\n\n**Core claim**\n**The ask is disciplined, milestone-based, and sized to prove the next stage of deployment.**\n\n**What this slide must make the audience believe**\n**$1.25M on a post-money SAFE funds the hires, pilots, runway, and validation needed to establish repeatable deployment.**\n\n**Current preferred header**\n**Raising $1.25M to launch pilots, prove value, and establish repeatable deployment**\n\n**Current preferred subheader**\n**Post-money SAFE • ~18–20 months of runway**\n\n**Current preferred figure logic**\nA single integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.\n\n### Preserved strategic discussion\n\nThe slide should surface the ask on first scan, then show exactly what the round unlocks. It should feel like a clean conversion slide: thesis translated into financing logic.\n\nKeep the left side focused on the amount, instrument, and support stats (`2 core hires`, `3 pilot sites`, `18–20 months`). Keep the right side focused on outcome-first milestone cards, not generic startup activity. Keep the bottom ribbon quieter than the milestone logic.\n\nThis slide must avoid:\n- spreadsheet or payroll memo energy\n- generic build / scale / go-to-market language\n- decorative icons or illustration\n- use-of-funds detail that overpowers the milestones\n\nPreferred visual treatment:\n- soft gray field with calm white card surfaces\n- restrained shadow and rounded corners\n- one muted blue accent family only\n- premium, clinically serious late-deck tone\n\nFallback only if needed: convert the right column into a horizontal three-card strip if the stacked milestone column becomes crowded.\n\n**One-line test**\n**This feels like funding a concrete proof plan, not funding hope.**\n\n---\n\nExisting slide note excerpt:\n# Slide 13 — The Ask",
+    "successChecks": "- The slide is fully resolved and presentation-ready.\n- No template placeholders remain.\n- The header reads: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment\n- The subheader reads: Post-money SAFE • ~18–20 months of runway\n- The figure visibly carries the specified burden.\n- The slide stays inside the locked Designer shell contract.\n- The footer rule and footer logo remain aligned with the shell.\n- The slide feels in-family with the adjacent official slides.",
+    "guardrails": "- preserve the white Designer shell\n- preserve the footer rule and footer logo\n- do not leave the figure stub or placeholder copy visible\n- do not turn the slide into a browser page, app UI, or card grid unless the brief explicitly requires it\n- do not weaken the locked slide claim",
+    "approvedRegions": [
+      {
+        "id": "footer-rule",
+        "label": "Footer Rule",
+        "shape": "rect",
+        "x": 112,
+        "y": 992,
+        "width": 1536,
+        "height": 4,
+        "freezeLevel": "pixel-strict",
+        "note": "Preserve the thin footer divider rule from the locked Designer shell."
+      },
+      {
+        "id": "footer-logo",
+        "label": "Footer Logo",
+        "shape": "rect",
+        "x": 1692,
+        "y": 962,
+        "width": 114,
+        "height": 59,
+        "freezeLevel": "semantic-stable",
+        "note": "Keep the official Designer footer logo aligned to the shell."
+      }
+    ],
+    "approvedRegionsPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/create/shell-regions.json",
+    "referenceIntent": "- Adjacent slide previews are for deck continuity only.\n- Optional reference images are for style or composition cues, not for literal copying unless explicitly stated.\n- Supplemental reference files are summarized above and may clarify slide intent.",
+    "stopIf": "- the request actually needs a new slide concept rather than execution\n- the brief is missing core copy needed to build the slide\n- the best candidate still conflicts with the locked slide job after repeated rounds",
+    "requiredTextSnippets": [
+      "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+      "Post-money SAFE • ~18–20 months of runway"
+    ]
+  },
+  "rounds": [
+    {
+      "roundNumber": 1,
+      "status": "completed",
+      "startedAt": "2026-04-06T02:38:01.903Z",
+      "completedAt": "2026-04-06T02:39:08.206Z",
+      "slots": [
+        {
+          "slotId": "openai-a",
+          "provider": "openai",
+          "status": "blocked",
+          "attemptNumber": 1,
+          "parentSlotId": null,
+          "parentAttemptRef": "baseline",
+          "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/round-01/slot-openai-a",
+          "before": {
+            "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/official-preview.png",
+            "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/parent-preview.png",
+            "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/parent-html.html"
+          },
+          "after": {
+            "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/round-01/slot-openai-a/generated.html",
+            "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/round-01/slot-openai-a/preview.png"
+          },
+          "prefilter": {
+            "ok": true,
+            "blockers": [],
+            "warnings": [
+              "Footer Logo drifted beyond semantic-stable threshold."
+            ],
+            "summary": "Prefilter passed with warnings. Footer Logo drifted beyond semantic-stable threshold.",
+            "staticSanity": {
+              "ok": true,
+              "summary": "No static sanity issues detected before render.",
+              "blockers": []
+            },
+            "contract": {
+              "hasHtml": true,
+              "hasRenderableHtml": true,
+              "htmlExists": true,
+              "previewExists": true
+            },
+            "lockedRegions": {
+              "ok": true,
+              "violations": [],
+              "warnings": [
+                {
+                  "id": "footer-logo",
+                  "label": "Footer Logo",
+                  "freezeLevel": "semantic-stable",
+                  "x": 1692,
+                  "y": 962,
+                  "width": 114,
+                  "height": 59,
+                  "mismatchedPixels": 1074,
+                  "totalPixels": 6726,
+                  "diffRatio": 0.15967885816235505,
+                  "threshold": 0.05,
+                  "outcome": "warn",
+                  "note": "Keep the official Designer footer logo aligned to the shell."
+                }
+              ],
+              "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+            }
+          },
+          "judges": {
+            "gptDelta": {
+              "provider": "gpt",
+              "status": "partial",
+              "summary": "The candidate substantially builds the requested ask slide structure with a left hero ask block, right milestone stack, and bottom use-of-funds ribbon in a Designer-like card treatment, but it is not fully presentation-ready because the header/subheader overlap badly and a broken/missing image placeholder remains at the bottom right instead of the clean shell logo treatment.",
+              "evidence": [
+                "The locked header text is present verbatim: “Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.”",
+                "The locked subheader text is present verbatim: “Post-money SAFE • ~18–20 months of runway.”",
+                "The main figure follows the requested integrated logic: a large left ask card, three stacked milestone cards on the right labeled BUILD / DEPLOY / VALIDATE, and a restrained use-of-funds ribbon across the bottom.",
+                "The left hero block surfaces the ask first with “$1.25M” and supporting proof-stage stats including core hires, pilot sites, and runway months.",
+                "The right-side cards are outcome-oriented (“Pilot-ready deployment foundation,” “Launch 3 pilot sites,” “Prove value and repeatability”) rather than generic startup activity.",
+                "Visual styling is broadly in-family: white shell, pale gray master card, rounded white cards, restrained blue accents, and clinically serious tone.",
+                "The header and subheader are visually broken: the subheader overlaps the two-line title, reducing readability and violating presentation-ready quality.",
+                "A small broken image/placeholder box appears at the bottom right where the shell logo area should remain clean and aligned; this suggests the footer/logo contract is not properly preserved.",
+                "The bottom ribbon is appropriately quieter than the milestones, but the overall slide feels slightly crowded because of text density and the top overlap issue."
+              ],
+              "nextPrompt": "Keep the current integrated ask/milestone/ribbon layout, but fix the title area so the locked header and subheader do not overlap, restore the proper Designer footer logo with no broken image placeholder, and slightly reduce text density so the slide reads cleanly at presentation distance.",
+              "needsHuman": true
+            },
+            "claudeDelta": {
+              "provider": "claude",
+              "status": "partial",
+              "summary": "The candidate has successfully replaced the blank template stub with substantive content — the locked header, subheader, left hero ask block ($1.25M), right stacked Build/Deploy/Validate milestone cards, and a use-of-funds ribbon are all visibly present and structurally correct. However, several execution issues prevent a full 'applied' rating: (1) the header text overflows and collides with the subheader, causing the subheader to be partially obscured; (2) the Designer Health footer logo has failed to render (broken image placeholder visible); (3) the left hero block stat row (core hires / pilot sites / months) is clipped at the bottom, cutting off the label text; (4) the master card does not sit cleanly within the white shell — it bleeds toward the edges and the overall layout feels slightly cramped rather than premium and clinically restrained; (5) the use-of-funds ribbon bar proportions appear unbalanced with very unequal segment widths that don't read as intentional.",
+              "evidence": [
+                "Header text wraps to two lines and visually overlaps the subheader 'Post-money SAFE • ~18–20 months of runway', making the subheader partially illegible",
+                "Footer logo area shows a broken/missing image placeholder instead of the Designer Health lockup",
+                "Left hero stat row labels ('core hires to support implementation and deployment', 'pilot sites to establish live operational proof', 'months of runway to execute and measure outcomes') are clipped at the bottom of the left card",
+                "Right milestone cards (BUILD / DEPLOY / VALIDATE) are present with correct outcome-first language and supporting tag chips — structure matches the brief",
+                "Use-of-funds ribbon is present at the bottom of the master card with labeled segments (Team, Pilot deployment, Product & data infrastructure, Validation / operating buffer) but segment proportions appear heavily skewed left",
+                "Closing line 'This round funds a concrete proof plan — not scale before proof.' is visible and on-brief",
+                "Master card uses soft gray field with white card surfaces and muted blue accent — visual family is directionally correct"
+              ],
+              "nextPrompt": "Fix three issues: (1) reduce the header font size so the full title fits on one or two lines without overlapping the subheader — target ~32–36px bold; (2) restore the Designer Health footer logo using the correct asset path or inline SVG so it renders reliably; (3) increase the left hero card height or reduce internal padding so the three stat columns (core hires / pilot sites / months of runway) are fully visible with their labels unclipped. Also rebalance the use-of-funds ribbon so segment widths are more proportional (Team ~35%, Pilot deployment ~25%, Product & data ~20%, Validation buffer ~20%). Do not change the milestone card content or overall layout structure.",
+              "needsHuman": true
+            },
+            "gptRegression": {
+              "provider": "gpt",
+              "verdict": "blocker",
+              "rationale": "The candidate is materially resolved, but it still contains clear visible regressions that make it feel unfinished: the header/subheader overlap badly, a stray broken image placeholder is visible in the bottom-right, and some body content is clipped within the master card. Those are concrete blockers relative to a finished ask slide.",
+              "blockers": [
+                "Locked header and subheader are visibly overlapping, making the top copy look broken and partially unreadable",
+                "A broken image/placeholder box is visible at the bottom-right instead of a resolved asset or clean footer area",
+                "Lower-left stat tiles/body copy are clipped/truncated inside the main card, so required support stats are not cleanly readable"
+              ],
+              "nextMove": "Fix the top text stack spacing first, remove the broken bottom-right placeholder, and reflow the lower-left support-stat area so all locked/support copy is fully visible within the card."
+            },
+            "claudeRegression": {
+              "provider": "claude",
+              "verdict": "blocker",
+              "rationale": "The candidate slide has resolved the figure area with real content but carries multiple visible regressions: the locked header text overflows into two lines and collides with the subheader, causing the subheader ('Post-money SAFE • ~18–20 months of runway') to be partially obscured and clipped behind the header block rather than sitting cleanly beneath it. The footer logo has failed to render — the Designer Health lockup in the bottom-right shows a broken image placeholder instead of the resolved SVG/PNG seen in the baseline and the adjacent slide-12 reference. Additionally, the left hero block stat row (core hires / pilot sites / months of runway) is visibly clipped at the bottom, cutting off the label text beneath the three stat columns, meaning required locked copy is missing from the visible slide area.",
+              "blockers": [
+                "Subheader 'Post-money SAFE • ~18–20 months of runway' is clipped and partially hidden behind the oversized header text block",
+                "Footer Designer Health logo is a broken image placeholder — lockup has not resolved",
+                "Left hero stat-row label text (core hires, pilot sites, months of runway descriptors) is clipped at the bottom of the card and not fully visible"
+              ],
+              "nextMove": "Fix header font size or line-height so the two-line header and subheader both render without overlap; replace the broken footer logo src with the correct resolved asset path; and expand or scroll-clip the left hero card so all three stat labels are fully visible within the card boundary."
+            }
+          },
+          "lockedRegions": {
+            "ok": true,
+            "violations": [],
+            "warnings": [
+              {
+                "id": "footer-logo",
+                "label": "Footer Logo",
+                "freezeLevel": "semantic-stable",
+                "x": 1692,
+                "y": 962,
+                "width": 114,
+                "height": 59,
+                "mismatchedPixels": 1074,
+                "totalPixels": 6726,
+                "diffRatio": 0.15967885816235505,
+                "threshold": 0.05,
+                "outcome": "warn",
+                "note": "Keep the official Designer footer logo aligned to the shell."
+              }
+            ],
+            "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+          },
+          "score": {
+            "class": "blocked",
+            "numeric": 0.05,
+            "status": "blocked",
+            "outcome": "block",
+            "reason": "Regression review found a concrete blocker.",
+            "blockers": [
+              "Locked header and subheader are visibly overlapping, making the top copy look broken and partially unreadable",
+              "A broken image/placeholder box is visible at the bottom-right instead of a resolved asset or clean footer area",
+              "Lower-left stat tiles/body copy are clipped/truncated inside the main card, so required support stats are not cleanly readable",
+              "Subheader 'Post-money SAFE • ~18–20 months of runway' is clipped and partially hidden behind the oversized header text block",
+              "Footer Designer Health logo is a broken image placeholder — lockup has not resolved",
+              "Left hero stat-row label text (core hires, pilot sites, months of runway descriptors) is clipped at the bottom of the card and not fully visible"
+            ],
+            "warnings": [
+              "Footer Logo drifted beyond semantic-stable threshold."
+            ]
+          },
+          "decision": {
+            "outcome": "block",
+            "reason": "Regression review found a concrete blocker."
+          },
+          "model": "gpt-5.4",
+          "settings": {}
+        }
+      ],
+      "summary": {
+        "passCount": 0,
+        "retryCount": 0,
+        "blockedCount": 1,
+        "escalatedCount": 0
+      },
+      "retrySynthesis": {
+        "global": "# Round 01 retry synthesis\n\n## preserve\n- Preserve stable parts of the current slide family.\n\n## still_missing\n- Keep pushing the requested change.\n\n## avoid\n- Avoid unrelated regressions.\n\n## next_move\n- Make the delta clearer in the next round.\n",
+        "slotLocal": {}
+      }
+    }
+  ],
+  "slots": [
+    {
+      "slotId": "openai-a",
+      "provider": "openai",
+      "status": "blocked",
+      "attemptNumber": 1,
+      "parentSlotId": null,
+      "parentAttemptRef": "baseline",
+      "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/round-01/slot-openai-a",
+      "before": {
+        "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/official-preview.png",
+        "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/parent-preview.png",
+        "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/parent-html.html"
+      },
+      "after": {
+        "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/round-01/slot-openai-a/generated.html",
+        "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/round-01/slot-openai-a/preview.png"
+      },
+      "prefilter": {
+        "ok": true,
+        "blockers": [],
+        "warnings": [
+          "Footer Logo drifted beyond semantic-stable threshold."
+        ],
+        "summary": "Prefilter passed with warnings. Footer Logo drifted beyond semantic-stable threshold.",
+        "staticSanity": {
+          "ok": true,
+          "summary": "No static sanity issues detected before render.",
+          "blockers": []
+        },
+        "contract": {
+          "hasHtml": true,
+          "hasRenderableHtml": true,
+          "htmlExists": true,
+          "previewExists": true
+        },
+        "lockedRegions": {
+          "ok": true,
+          "violations": [],
+          "warnings": [
+            {
+              "id": "footer-logo",
+              "label": "Footer Logo",
+              "freezeLevel": "semantic-stable",
+              "x": 1692,
+              "y": 962,
+              "width": 114,
+              "height": 59,
+              "mismatchedPixels": 1074,
+              "totalPixels": 6726,
+              "diffRatio": 0.15967885816235505,
+              "threshold": 0.05,
+              "outcome": "warn",
+              "note": "Keep the official Designer footer logo aligned to the shell."
+            }
+          ],
+          "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+        }
+      },
+      "judges": {
+        "gptDelta": {
+          "provider": "gpt",
+          "status": "partial",
+          "summary": "The candidate substantially builds the requested ask slide structure with a left hero ask block, right milestone stack, and bottom use-of-funds ribbon in a Designer-like card treatment, but it is not fully presentation-ready because the header/subheader overlap badly and a broken/missing image placeholder remains at the bottom right instead of the clean shell logo treatment.",
+          "evidence": [
+            "The locked header text is present verbatim: “Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.”",
+            "The locked subheader text is present verbatim: “Post-money SAFE • ~18–20 months of runway.”",
+            "The main figure follows the requested integrated logic: a large left ask card, three stacked milestone cards on the right labeled BUILD / DEPLOY / VALIDATE, and a restrained use-of-funds ribbon across the bottom.",
+            "The left hero block surfaces the ask first with “$1.25M” and supporting proof-stage stats including core hires, pilot sites, and runway months.",
+            "The right-side cards are outcome-oriented (“Pilot-ready deployment foundation,” “Launch 3 pilot sites,” “Prove value and repeatability”) rather than generic startup activity.",
+            "Visual styling is broadly in-family: white shell, pale gray master card, rounded white cards, restrained blue accents, and clinically serious tone.",
+            "The header and subheader are visually broken: the subheader overlaps the two-line title, reducing readability and violating presentation-ready quality.",
+            "A small broken image/placeholder box appears at the bottom right where the shell logo area should remain clean and aligned; this suggests the footer/logo contract is not properly preserved.",
+            "The bottom ribbon is appropriately quieter than the milestones, but the overall slide feels slightly crowded because of text density and the top overlap issue."
+          ],
+          "nextPrompt": "Keep the current integrated ask/milestone/ribbon layout, but fix the title area so the locked header and subheader do not overlap, restore the proper Designer footer logo with no broken image placeholder, and slightly reduce text density so the slide reads cleanly at presentation distance.",
+          "needsHuman": true
+        },
+        "claudeDelta": {
+          "provider": "claude",
+          "status": "partial",
+          "summary": "The candidate has successfully replaced the blank template stub with substantive content — the locked header, subheader, left hero ask block ($1.25M), right stacked Build/Deploy/Validate milestone cards, and a use-of-funds ribbon are all visibly present and structurally correct. However, several execution issues prevent a full 'applied' rating: (1) the header text overflows and collides with the subheader, causing the subheader to be partially obscured; (2) the Designer Health footer logo has failed to render (broken image placeholder visible); (3) the left hero block stat row (core hires / pilot sites / months) is clipped at the bottom, cutting off the label text; (4) the master card does not sit cleanly within the white shell — it bleeds toward the edges and the overall layout feels slightly cramped rather than premium and clinically restrained; (5) the use-of-funds ribbon bar proportions appear unbalanced with very unequal segment widths that don't read as intentional.",
+          "evidence": [
+            "Header text wraps to two lines and visually overlaps the subheader 'Post-money SAFE • ~18–20 months of runway', making the subheader partially illegible",
+            "Footer logo area shows a broken/missing image placeholder instead of the Designer Health lockup",
+            "Left hero stat row labels ('core hires to support implementation and deployment', 'pilot sites to establish live operational proof', 'months of runway to execute and measure outcomes') are clipped at the bottom of the left card",
+            "Right milestone cards (BUILD / DEPLOY / VALIDATE) are present with correct outcome-first language and supporting tag chips — structure matches the brief",
+            "Use-of-funds ribbon is present at the bottom of the master card with labeled segments (Team, Pilot deployment, Product & data infrastructure, Validation / operating buffer) but segment proportions appear heavily skewed left",
+            "Closing line 'This round funds a concrete proof plan — not scale before proof.' is visible and on-brief",
+            "Master card uses soft gray field with white card surfaces and muted blue accent — visual family is directionally correct"
+          ],
+          "nextPrompt": "Fix three issues: (1) reduce the header font size so the full title fits on one or two lines without overlapping the subheader — target ~32–36px bold; (2) restore the Designer Health footer logo using the correct asset path or inline SVG so it renders reliably; (3) increase the left hero card height or reduce internal padding so the three stat columns (core hires / pilot sites / months of runway) are fully visible with their labels unclipped. Also rebalance the use-of-funds ribbon so segment widths are more proportional (Team ~35%, Pilot deployment ~25%, Product & data ~20%, Validation buffer ~20%). Do not change the milestone card content or overall layout structure.",
+          "needsHuman": true
+        },
+        "gptRegression": {
+          "provider": "gpt",
+          "verdict": "blocker",
+          "rationale": "The candidate is materially resolved, but it still contains clear visible regressions that make it feel unfinished: the header/subheader overlap badly, a stray broken image placeholder is visible in the bottom-right, and some body content is clipped within the master card. Those are concrete blockers relative to a finished ask slide.",
+          "blockers": [
+            "Locked header and subheader are visibly overlapping, making the top copy look broken and partially unreadable",
+            "A broken image/placeholder box is visible at the bottom-right instead of a resolved asset or clean footer area",
+            "Lower-left stat tiles/body copy are clipped/truncated inside the main card, so required support stats are not cleanly readable"
+          ],
+          "nextMove": "Fix the top text stack spacing first, remove the broken bottom-right placeholder, and reflow the lower-left support-stat area so all locked/support copy is fully visible within the card."
+        },
+        "claudeRegression": {
+          "provider": "claude",
+          "verdict": "blocker",
+          "rationale": "The candidate slide has resolved the figure area with real content but carries multiple visible regressions: the locked header text overflows into two lines and collides with the subheader, causing the subheader ('Post-money SAFE • ~18–20 months of runway') to be partially obscured and clipped behind the header block rather than sitting cleanly beneath it. The footer logo has failed to render — the Designer Health lockup in the bottom-right shows a broken image placeholder instead of the resolved SVG/PNG seen in the baseline and the adjacent slide-12 reference. Additionally, the left hero block stat row (core hires / pilot sites / months of runway) is visibly clipped at the bottom, cutting off the label text beneath the three stat columns, meaning required locked copy is missing from the visible slide area.",
+          "blockers": [
+            "Subheader 'Post-money SAFE • ~18–20 months of runway' is clipped and partially hidden behind the oversized header text block",
+            "Footer Designer Health logo is a broken image placeholder — lockup has not resolved",
+            "Left hero stat-row label text (core hires, pilot sites, months of runway descriptors) is clipped at the bottom of the card and not fully visible"
+          ],
+          "nextMove": "Fix header font size or line-height so the two-line header and subheader both render without overlap; replace the broken footer logo src with the correct resolved asset path; and expand or scroll-clip the left hero card so all three stat labels are fully visible within the card boundary."
+        }
+      },
+      "lockedRegions": {
+        "ok": true,
+        "violations": [],
+        "warnings": [
+          {
+            "id": "footer-logo",
+            "label": "Footer Logo",
+            "freezeLevel": "semantic-stable",
+            "x": 1692,
+            "y": 962,
+            "width": 114,
+            "height": 59,
+            "mismatchedPixels": 1074,
+            "totalPixels": 6726,
+            "diffRatio": 0.15967885816235505,
+            "threshold": 0.05,
+            "outcome": "warn",
+            "note": "Keep the official Designer footer logo aligned to the shell."
+          }
+        ],
+        "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+      },
+      "score": {
+        "class": "blocked",
+        "numeric": 0.05,
+        "status": "blocked",
+        "outcome": "block",
+        "reason": "Regression review found a concrete blocker.",
+        "blockers": [
+          "Locked header and subheader are visibly overlapping, making the top copy look broken and partially unreadable",
+          "A broken image/placeholder box is visible at the bottom-right instead of a resolved asset or clean footer area",
+          "Lower-left stat tiles/body copy are clipped/truncated inside the main card, so required support stats are not cleanly readable",
+          "Subheader 'Post-money SAFE • ~18–20 months of runway' is clipped and partially hidden behind the oversized header text block",
+          "Footer Designer Health logo is a broken image placeholder — lockup has not resolved",
+          "Left hero stat-row label text (core hires, pilot sites, months of runway descriptors) is clipped at the bottom of the card and not fully visible"
+        ],
+        "warnings": [
+          "Footer Logo drifted beyond semantic-stable threshold."
+        ]
+      },
+      "decision": {
+        "outcome": "block",
+        "reason": "Regression review found a concrete blocker."
+      },
+      "model": "gpt-5.4",
+      "settings": {}
+    }
+  ],
+  "winner": null,
+  "pendingCodexReview": null,
+  "failureReason": "Reached stop conditions without a promotable winner.",
+  "metrics": {
+    "generationCalls": 1,
+    "judgeCalls": 4,
+    "renderCalls": 1,
+    "prefilterRejects": 0,
+    "timingsMs": {
+      "generation": 46122,
+      "render": 904,
+      "judging": 19196,
+      "synthesis": 0
+    }
+  },
+  "promoteVersionAfterMaterialize": false,
+  "copyDebugFiles": false
+}

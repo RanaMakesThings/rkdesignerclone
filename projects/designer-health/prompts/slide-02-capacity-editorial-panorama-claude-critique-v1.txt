@@ -1,0 +1,24 @@
+Review this investor-deck slide as a design critic and presentation editor.
+
+Context:
+- This is slide 2 in the Designer Health deck.
+- The slide thesis is: demand is outpacing clinical capacity.
+- The proof stack is:
+  - benchmark physician wait times rise to 31 days in 2025
+  - several 2025 specialty waits are already 5 to 6 weeks
+  - more than 1 in 4 Americans live in federally designated primary care
+    shortage areas
+
+What to assess:
+- visual hierarchy
+- whether the slide feels editorial or too dashboard-like
+- whether the shortage proof reads as a major argument or a footer
+- whether the citations have safe, intentional placement
+- whether the composition feels premium enough for an investor deck
+
+Return:
+1. A 3-bullet diagnosis of the biggest visual issues.
+2. A 3-bullet recommendation list for the next exploration pass.
+3. One short paragraph describing the strongest alternate composition to try.
+
+Be direct. Prefer concrete design feedback over generic praise.

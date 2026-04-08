@@ -1,0 +1,145 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-09-starting-point-strip-v1",
+    "family": "starting_point_strip",
+    "deckId": "vox-pd-v1",
+    "theme": "vox",
+    "mode": "full-slide",
+    "sourcePath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-09-starting-point-strip-v1.json"
+  },
+  "chrome": {
+    "title": "Current AI helps around the visit. Vox changes how the visit starts.",
+    "subtitle": "Most assistive AI reduces operational or documentation work. Vox gives the clinician a structured brief at the beginning of the visit.",
+    "chips": [],
+    "footnote": ""
+  },
+  "constraints": {
+    "figureJob": "Position Vox as the explicit start-of-visit layer while keeping adjacent assistive support visible but quiet.",
+    "focalPoint": "The blue Vox-prepared brief sitting inside the Start of visit zone.",
+    "layout": "One horizontal three-zone strip across the slide with quiet outer support panels and one centered Vox-prepared brief object in the middle zone.",
+    "big": [
+      "Headline contrast between current AI and Vox",
+      "Start of visit zone",
+      "Vox-prepared brief"
+    ],
+    "quiet": [
+      "Outer support panels",
+      "Track line",
+      "Optional reasoning chip"
+    ],
+    "accentTargets": [
+      "Headline Vox clause",
+      "Start of visit label",
+      "Vox-prepared brief"
+    ],
+    "forbidden": [
+      "competitor matrix",
+      "anti-scribe rhetoric",
+      "fake product UI",
+      "dense captions"
+    ],
+    "semanticGuards": [
+      "no_vendor_grid",
+      "no_ui"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Current AI helps around the visit. Vox changes how the visit starts.",
+      "Most assistive AI reduces operational or documentation work. Vox gives the clinician a structured brief at the beginning of the visit.",
+      "Before visit",
+      "Start of visit",
+      "During / after",
+      "Scheduling",
+      "Reminders",
+      "Documentation support",
+      "Note generation",
+      "Vox-prepared brief",
+      "What matters",
+      "What happened when",
+      "What still needs confirmation",
+      "Where clinical reasoning begins"
+    ],
+    "preferred": [
+      "starting-state layer",
+      "journey strip",
+      "quiet context plus explicit Vox center"
+    ],
+    "optional": [],
+    "forbidden": [
+      "ambient scribe critique",
+      "vendor logo wall",
+      "blank unresolved center gap"
+    ]
+  },
+  "media": {
+    "strategy": "native",
+    "provider": "none",
+    "slots": [],
+    "selection": []
+  },
+  "body": {
+    "zones": [
+      {
+        "label": "Before visit",
+        "role": "context",
+        "items": [
+          "Scheduling",
+          "Reminders"
+        ]
+      },
+      {
+        "label": "Start of visit",
+        "role": "focus",
+        "items": [
+          "Vox-prepared brief",
+          "What matters",
+          "What happened when",
+          "What still needs confirmation"
+        ]
+      },
+      {
+        "label": "During / after",
+        "role": "context",
+        "items": [
+          "Documentation support",
+          "Note generation"
+        ]
+      }
+    ],
+    "centerNote": "Where clinical reasoning begins"
+  },
+  "trace": [
+    {
+      "excerpt": "Current assistive AI mostly helps before, during, or after the encounter. Vox changes how the visit starts by giving the clinician a structured brief at the moment clinical reasoning begins.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Carry the packet thesis directly into the canonical spec."
+    },
+    {
+      "excerpt": "place one explicit Vox-prepared brief object at the start-of-visit point",
+      "targetPath": "body.zones[1].items[0]",
+      "ruleType": "body",
+      "note": "The center object must read as Vox itself, not a generic open gap."
+    },
+    {
+      "excerpt": "outer support zones stay gray and quiet; center Vox-prepared brief is the only strong blue object",
+      "targetPath": "constraints.accentTargets",
+      "ruleType": "constraint",
+      "note": "Preserve the visual hierarchy from the selected strip pass."
+    },
+    {
+      "excerpt": "Current AI helps around the visit. Vox changes how the visit starts.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Use the selected slide headline exactly."
+    },
+    {
+      "excerpt": "Most assistive AI reduces operational or documentation work. Vox gives the clinician a structured brief at the beginning of the visit.",
+      "targetPath": "chrome.subtitle",
+      "ruleType": "chrome",
+      "note": "Use the selected subheader exactly."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "provider": "claude",
+  "status": "partial",
+  "summary": "The candidate slide successfully replaces the blank template with real content — the locked header and subheader are present, the $1.25M hero ask is prominent on the left, and the three Build / Deploy / Validate milestone cards appear on the right with outcome-oriented copy. However, the layout is overflowing its container: the Validate card is cut off at the bottom, the left hero block has overlapping stat elements (the '18–20 months' counter visually collides with the core-hires and pilot-sites stats), the use-of-funds ribbon is partially obscured behind the left card rather than sitting cleanly below the master card, and the Designer footer logo appears broken (blank white box). The slide is not presentation-ready in its current state.",
+  "evidence": [
+    "Locked header 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' is correctly rendered in bold at top left",
+    "Locked subheader 'Post-money SAFE • ~18–20 months of runway' is present beneath the header",
+    "$1.25M hero figure is large and dominant in the left block with 'Finite proof-stage raise' label",
+    "Three milestone cards labeled Build, Deploy, and Validate are present on the right with FOUNDATION / PILOTS phase tags",
+    "Each milestone card contains three sub-bullets with specific outcome language (not generic startup copy)",
+    "Use-of-funds ribbon with four percentage allocations (38%, 27%, 18%, 17%) is visible at the bottom",
+    "Validate card body text and bullet points are cut off below the visible slide boundary — slide content overflows the frame",
+    "Left hero block stat row ('core hires', 'pilot sites', '18–20 months') has overlapping/colliding number elements making it illegible",
+    "Use-of-funds ribbon is partially hidden behind the left card overlay rather than sitting in a clean bottom ribbon position",
+    "Footer Designer logo renders as a blank white rectangle — logo asset is broken or missing"
+  ],
+  "nextPrompt": "Fix four layout issues: (1) Constrain the entire master card and milestone column to fit within the slide viewport — reduce font sizes or card padding so the Validate card is fully visible without scrolling. (2) Repair the left hero stat row so '2 core hires', '3 pilot sites', and '18–20 months' display as three clean side-by-side stat chips without number overlap. (3) Move the use-of-funds ribbon fully below the master card as a quiet bottom strip, not overlapping the left card. (4) Fix the Designer footer logo so the SVG or PNG renders correctly in the bottom-right corner matching the shell contract.",
+  "needsHuman": false,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate slide successfully replaces the blank template with real content — the locked header and subheader are present, the $1.25M hero ask is prominent on the left, and the three Build / Deploy / Validate milestone cards appear on the right with outcome-oriented copy. However, the layout is overflowing its container: the Validate card is cut off at the bottom, the left hero block has overlapping stat elements (the '18–20 months' counter visually collides with the core-hires and pilot-sites stats), the use-of-funds ribbon is partially obscured behind the left card rather than sitting cleanly below the master card, and the Designer footer logo appears broken (blank white box). The slide is not presentation-ready in its current state.",
+    "evidence": [
+      "Locked header 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' is correctly rendered in bold at top left",
+      "Locked subheader 'Post-money SAFE • ~18–20 months of runway' is present beneath the header",
+      "$1.25M hero figure is large and dominant in the left block with 'Finite proof-stage raise' label",
+      "Three milestone cards labeled Build, Deploy, and Validate are present on the right with FOUNDATION / PILOTS phase tags",
+      "Each milestone card contains three sub-bullets with specific outcome language (not generic startup copy)",
+      "Use-of-funds ribbon with four percentage allocations (38%, 27%, 18%, 17%) is visible at the bottom",
+      "Validate card body text and bullet points are cut off below the visible slide boundary — slide content overflows the frame",
+      "Left hero block stat row ('core hires', 'pilot sites', '18–20 months') has overlapping/colliding number elements making it illegible",
+      "Use-of-funds ribbon is partially hidden behind the left card overlay rather than sitting in a clean bottom ribbon position",
+      "Footer Designer logo renders as a blank white rectangle — logo asset is broken or missing"
+    ],
+    "nextPrompt": "Fix four layout issues: (1) Constrain the entire master card and milestone column to fit within the slide viewport — reduce font sizes or card padding so the Validate card is fully visible without scrolling. (2) Repair the left hero stat row so '2 core hires', '3 pilot sites', and '18–20 months' display as three clean side-by-side stat chips without number overlap. (3) Move the use-of-funds ribbon fully below the master card as a quiet bottom strip, not overlapping the left card. (4) Fix the Designer footer logo so the SVG or PNG renders correctly in the bottom-right corner matching the shell contract.",
+    "needsHuman": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "version-000214",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000214--slide-06-v212-centered-underlay-gemini-v1",
+  "label": "slide-06-v212-centered-underlay-gemini-v1",
+  "status": "draft",
+  "createdAt": "2026-04-03T18:41:17.591Z",
+  "sourceKind": "fine-tune-draft",
+  "baseVersionId": "version-000212",
+  "legacySourcePaths": []
+}

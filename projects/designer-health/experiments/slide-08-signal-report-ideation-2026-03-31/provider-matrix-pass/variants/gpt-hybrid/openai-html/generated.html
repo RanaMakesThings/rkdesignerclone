@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Designer Health — Slide 8 Structured Brief</title>
+<style>
+  html, body {
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+    background: #eef1f4;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #171717;
+  }
+  * { box-sizing: border-box; }
+
+  .slide {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(1200px 500px at 50% -120px, rgba(255,255,255,0.86), rgba(255,255,255,0) 70%),
+      linear-gradient(180deg, #f3f5f7 0%, #edf1f4 100%);
+  }
+
+  .sheet-shadow {
+    position: absolute;
+    left: 170px;
+    top: 90px;
+    width: 1580px;
+    height: 890px;
+    border-radius: 24px;
+    background: rgba(24, 30, 36, 0.06);
+    filter: blur(24px);
+    transform: translateY(18px);
+  }
+
+  .sheet {
+    position: absolute;
+    left: 140px;
+    top: 60px;
+    width: 1640px;
+    height: 920px;
+    border-radius: 26px;
+    background: #fbfbfa;
+    border: 1px solid #d7dcdf;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.9) inset,
+      0 10px 24px rgba(19, 27, 34, 0.06);
+    overflow: hidden;
+  }
+
+  .header {
+    height: 112px;
+    padding: 30px 34px 18px 34px;
+    border-bottom: 1px solid #dde2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(180deg, #fcfcfb 0%, #fafafa 100%);
+  }
+
+  .header-left .title {
+    font-size: 28px;
+    line-height: 1.1;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    color: #171a1c;
+    margin-bottom: 8px;
+  }
+
+  .header-left .subtitle {
+    font-size: 14px;
+    color: #6d747a;
+    letter-spacing: 0.01em;
+  }
+
+  .header-right {
+    text-align: right;
+    padding-top: 4px;
+  }
+
+  .case-meta {
+    font-size: 12px;
+    color: #7c8389;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .case-line {
+    font-size: 14px;
+    color: #3b4248;
+  }
+
+  .main {
+    display: flex;
+    height: 628px;
+  }
+
+  .left {
+    width: 64%;
+    border-right: 1px solid #dde2e6;
+    padding: 20px 24px 18px 24px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.35) 100%);
+  }
+
+  .right {
+    width: 36%;
+    padding: 20px 22px 18px 22px;
+    background:
+      linear-gradient(180deg, rgba(248,249,248,0.95) 0%, rgba(246,247,246,0.95) 100%);
+  }
+
+  .section {
+    margin-bottom: 16px;
+  }
+
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 6px 2px 10px 2px;
+  }
+
+  .section-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #737b82;
+    text-transform: uppercase;
+  }
+
+  .section-note {
+    font-size: 12px;
+    color: #a0a6ab;
+  }
+
+  .rows {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .row {
+    border: 1px solid #dce1e5;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 12px 14px 12px 14px;
+    min-height: 72px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 14px;
+    align-items: start;
+  }
+
+  .row.ledger {
+    background:
+      linear-gradient(180deg, #ffffff 0%, #fcfcfc 100%);
+  }
+
+  .row .label {
+    font-size: 18px;
+    line-height: 1.2;
+    color: #1d2023;
+    font-weight: 540;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .row .value {
+    font-size: 14px;
+    line-height: 1.35;
+    color: #697177;
+    margin-bottom: 4px;
+  }
+
+  .row .evidence {
+    font-size: 13px;
+    line-height: 1.3;
+    color: #949ba1;
+  }
+
+  .pill {
+    align-self: start;
+    font-size: 12px;
+    line-height: 1;
+    padding: 8px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+    font-weight: 650;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    margin-top: 1px;
+  }
+
+  .present {
+    background: #1f2123;
+    color: #fafafa;
+  }
+
+  .absent {
+    background: #eef1f3;
+    color: #656d74;
+    border-color: #d8dee3;
+  }
+
+  .unresolved {
+    background: #f5efe4;
+    color: #876f44;
+    border-color: #e5d8be;
+  }
+
+  .right-head {
+    margin: 4px 2px 14px 2px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e4e7;
+  }
+
+  .right-title {
+    font-size: 22px;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    margin-bottom: 7px;
+    color: #1d2023;
+  }
+
+  .right-subtitle {
+    font-size: 13px;
+    color: #7b8288;
+    line-height: 1.4;
+  }
+
+  .suggested {
+    border: 1px solid #d8dde1;
+    border-radius: 14px;
+    background: #fffdfb;
+    padding: 14px 15px;
+    margin-bottom: 14px;
+  }
+
+  .suggested .kicker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #8d9499;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .suggested .question {
+    font-size: 16px;
+    line-height: 1.42;
+    color: #23272a;
+    font-weight: 520;
+  }
+
+  .consideration {
+    border: 1px solid #d9dee2;
+    border-radius: 14px;
+    background: #ffffff;
+    padding: 14px 15px 14px 15px;
+    margin-bottom: 12px;
+  }
+
+  .cons-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .cons-left {
+    min-width: 0;
+  }
+
+  .rankline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+
+  .rank {
+    font-size: 13px;
+    color: #6b7379;
+    font-weight: 700;
+  }
+
+  .dx {
+    font-size: 18px;
+    color: #16191b;
+    font-weight: 630;
+    letter-spacing: -0.01em;
+  }
+
+  .tagline {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .confidence {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #2d3135;
+    background: #f0f3f5;
+    border: 1px solid #d9dfe3;
+    padding: 5px 8px;
+    border-radius: 999px;
+  }
+
+  .move {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 5px 8px;
+    border-radius: 999px;
+    border: 1px solid #d9dfe3;
+    background: #fafbfb;
+    color: #687077;
+  }
+
+  .up { color: #4e8066; }
+  .down { color: #9a5d5d; }
+  .qmark { color: #9a7a42; }
+
+  .cons-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .mini-block .mini-title {
+    font-size: 12px;
+    color: #6a7278;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 5px;
+  }
+
+  .mini-block ul {
+    margin: 0;
+    padding-left: 16px;
+  }
+
+  .mini-block li {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #4c545a;
+    margin: 2px 0;
+  }
+
+  .timeline {
+    height: 180px;
+    border-top: 1px solid #dde2e6;
+    background: linear-gradient(180deg, #f9faf9 0%, #f5f7f7 100%);
+    padding: 18px 28px 20px 28px;
+    position: relative;
+  }
+
+  .timeline-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+
+  .timeline-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #737b82;
+    font-weight: 700;
+  }
+
+  .timeline-note {
+    font-size: 13px;
+    color: #8a9298;
+  }
+
+  .axis-wrap {
+    position: absolute;
+    left: 36px;
+    right: 36px;
+    bottom: 28px;
+    top: 62px;
+  }
+
+  .time-label {
+    position: absolute;
+    top: 70px;
+    font-size: 12px;
+    color: #8a9197;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  .event {
+    position: absolute;
+    width: 250px;
+    transform: translateX(-50%);
+  }
+
+  .event .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #25282b;
+    border: 3px solid #fbfbfa;
+    box-shadow: 0 0 0 1px #cfd6db;
+    margin: 0 auto;
+  }
+
+  .event .card {
+    margin-top: 10px;
+    background: #ffffff;
+    border: 1px solid #d8dde1;
+    border-radius: 12px;
+    padding: 10px 12px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset;
+  }
+
+  .event .event-title {
+    font-size: 14px;
+    color: #23272a;
+    font-weight: 620;
+    margin-bottom: 3px;
+  }
+
+  .event .event-sub {
+    font-size: 12px;
+    color: #798188;
+    line-height: 1.35;
+  }
+
+  .footer-mark {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    font-size: 12px;
+    color: #9aa1a7;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="sheet-shadow"></div>
+
+    <div class="sheet">
+      <div class="header">
+        <div class="header-left">
+          <div class="title">Structured Brief</div>
+          <div class="subtitle">Adult cough intake synthesized from patient conversation into evidence-backed findings, considerations, and next question</div>
+        </div>
+        <div class="header-right">
+          <div class="case-meta">Case descriptor</div>
+          <div class="case-line">Subacute cough after URI-like symptoms · clinician-facing intake artifact</div>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="left">
+          <div class="section">
+            <div class="section-head">
+              <div class="section-title">Social Context</div>
+            </div>
+            <div class="rows">
+              <div class="row ledger">
+                <div>
+                  <div class="label">Care seeking prompted by spouse</div>
+                  <div class="value">Spouse encouraged evaluation due to ongoing cough and breathing concern</div>
+                  <div class="evidence">Evidence: patient conversation</div>
+                </div>
+                <div class="pill present">present</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-head">
+              <div class="section-title">Symptoms</div>
+              <div class="section-note">Structured extraction with evidence pointers</div>
+            </div>
+            <div class="rows">
+              <div class="row ledger">
+                <div>
+                  <div class="label">Cough</div>
+                  <div class="evidence">Evidence: ongoing cough described during intake</div>
+                </div>
+                <div class="pill present">present</div>
+              </div>
+
+              <div class="row ledger">
+                <div>
+                  <div class="label">Cough pattern / frequency</div>
+                  <div class="value">Occurs in bursts with intermittent coughing fits separated by periods of relative calm</div>
+                  <div class="evidence">Evidence: patient describes episodic coughing rather than constant symptoms</div>
+                </div>
+                <div class="pill present">present</div>
+              </div>
+
+              <div class="row ledger">
+                <div>
+                  <div class="label">Cough worse at night</div>
+                  <div class="evidence">Evidence: nocturnal worsening reported</div>
+                </div>
+                <div class="pill present">present</div>
+              </div>
+
+              <div class="row ledger">
+                <div>
+                  <div class="label">Cough worsens when lying down</div>
+                  <div class="evidence">Evidence: positional worsening reported during conversation</div>
+                </div>
+                <div class="pill present">present</div>
+              </div>
+
+              <div class="row ledger">
+                <div>
+                  <div class="label">Scratchy throat</div>
+                  <div class="value">Throat irritation preceded or accompanied early cough symptoms</div>
+                  <div class="evidence">Evidence: URI-like prodrome with throat symptoms</div>
+                </div>
+                <div class="pill present">present</div>
+              </div>
+
+              <div class="row ledger">
+                <div>
+                  <div class="label">Sputum color mostly yellow</div>
+                  <div class="value">Mostly yellow; possible green once, though color certainty was limited by lighting</div>
+                  <div class="evidence">Evidence: patient description of sputum appearance</div>
+                </div>
+                <div class="pill present">present</div>
+              </div>
+
+              <div class="row ledger">
+                <div>
+                  <div class="label">Dyspnea / breathing impact</div>
+                  <div class="value">Breathing change is suggested but not yet characterized by severity, exertional limit, or progression</div>
+                  <div class="evidence">Evidence: concern raised in intake, but detail remains incomplete</div>
+                </div>
+                <div class="pill unresolved">unresolved</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section" style="margin-bottom:0;">
+            <div class="section-head">
+              <div class="section-title">Key Negatives + Workup / Uncertainties</div>
+            </div>
+            <div class="rows" style="grid-template-columns: 1fr 1fr; gap: 10px;">
+              <div class="row ledger" style="min-height:76px;">
+                <div>
+                  <div class="label">Hemoptysis (blood in sputum)</div>
+                  <div class="evidence">Evidence: patient denies blood in sputum</div>
+                </div>
+                <div class="pill absent">absent</div>
+              </div>
+
+              <div class="row ledger" style="min-height:76px;">
+                <div>
+                  <div class="label">Fever</div>
+                  <div class="value">Not yet confirmed; unclear whether objective temperature elevation or chills are present</div>
+                  <div class="evidence">Evidence: fever history not established in current intake</div>
+                </div>
+                <div class="pill unresolved">unresolved</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="right-head">
+            <div class="right-title">Clinical Considerations</div>
+            <div class="right-subtitle">Ranked working differential based on extracted findings; emphasis on what supports each possibility, what argues against it, and what should be clarified next.</div>
+          </div>
+
+          <div class="suggested">
+            <div class="kicker">Suggested next question</div>
+            <div class="question">How has your breathing changed, and does it hurt anywhere in the chest when you take a deep breath?</div>
+          </div>
+
+          <div class="consideration">
+            <div class="cons-top">
+              <div class="cons-left">
+                <div class="rankline">
+                  <div class="rank">#1</div>
+                  <div class="dx">Community-acquired pneumonia</div>
+                </div>
+              </div>
+              <div class="tagline">
+                <div class="confidence">medium</div>
+                <div class="move"><span class="up">↑</span> 2→1</div>
+              </div>
+            </div>
+            <div class="cons-grid">
+              <div class="mini-block">
+                <div class="mini-title">Supports</div>
+                <ul>
+                  <li>Persistent cough with possible breathing impact</li>
+                  <li>Yellow sputum raises possibility of lower respiratory infection</li>
+                  <li>Nighttime symptoms can coexist with infectious process</li>
+                </ul>
+              </div>
+              <div class="mini-block">
+                <div class="mini-title">Against</div>
+                <ul>
+                  <li>No hemoptysis reported</li>
+                  <li>No confirmed fever or systemic symptoms yet documented</li>
+                  <li>No objective vitals, oxygen data, or exam findings</li>
+                </ul>
+              </div>
+              <div class="mini-block">
+                <div class="mini-title">To confirm / unknowns</div>
+                <ul>
+                  <li>Pleuritic chest pain, exertional dyspnea, rigors</li>
+                  <li>Temperature, respiratory rate, oxygen saturation</li>
+                  <li>Focal lung findings or imaging if indicated</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="consideration">
+            <div class="cons-top">
+              <div class="cons-left">
+                <div class="rankline">
+                  <div class="rank">#2</div>
+                  <div class="dx">Acute bronchitis</div>
+                </div>
+              </div>
+              <div class="tagline">
+                <div class="confidence">high</div>
+                <div class="move">— 1→2</div>
+              </div>
+            </div>
+            <div class="cons-grid">
+              <div class="mini-block">
+                <div class="mini-title">Supports</div>
+                <ul>
+                  <li>Scratchy throat / URI-like prodrome before cough</li>
+                  <li>Cough occurs in bursts with intermittent productive sputum</li>
+                  <li>Yellow sputum can occur in viral or post-infectious bronchitis</li>
+                </ul>
+              </div>
+              <div class="mini-block">
+                <div class="mini-title">Against</div>
+                <ul>
+                  <li>Meaningful breathing limitation would require reassessment for alternatives</li>
+                  <li>Positional worsening may suggest overlapping causes or incomplete history</li>
+                </ul>
+              </div>
+              <div class="mini-block">
+                <div class="mini-title">To confirm / unknowns</div>
+                <ul>
+                  <li>Severity and progression of dyspnea</li>
+                  <li>Any fever, fatigue, or reduced activity tolerance</li>
+                  <li>Exam findings to exclude focal process</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="consideration" style="margin-bottom:0;">
+            <div class="cons-top">
+              <div class="cons-left">
+                <div class="rankline">
+                  <div class="rank">#3</div>
+                  <div class="dx">Post-viral cough</div>
+                </div>
+              </div>
+              <div class="tagline">
+                <div class="confidence">medium</div>
+                <div class="move"><span class="down">↓</span> 1→3</div>
+              </div>
+            </div>
+            <div class="cons-grid">
+              <div class="mini-block">
+                <div class="mini-title">Supports</div>
+                <ul>
+                  <li>URI-type onset with throat irritation</li>
+                  <li>No blood in sputum and no clearly established fever</li>
+                  <li>Nocturnal cough can persist after initial infection</li>
+                </ul>
+              </div>
+              <div class="mini-block">
+                <div class="mini-title">Against</div>
+                <ul>
+                  <li>Yellow sputum and possible breathing change leave active infection in play</li>
+                  <li>Uncharacterized chest symptoms prevent cleaner attribution</li>
+                </ul>
+              </div>
+              <div class="mini-block">
+                <div class="mini-title">To confirm / unknowns</div>
+                <ul>
+                  <li>Exact duration since URI onset and overall symptom trajectory</li>
+                  <li>Whether cough is improving, stable, or worsening</li>
+                  <li><span class="qmark">?</span> Any chest pain or exertional limitation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-head">
+          <div class="timeline-title">Symptom chronology</div>
+          <div class="timeline-note">One longitudinal strip reunifying extraction, evidence, and remaining uncertainty</div>
+        </div>
+
+        <div class="axis-wrap">
+          <svg width="100%" height="100%" viewBox="0 0 1568 98" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="46" y1="28" x2="1520" y2="28" stroke="#cfd6db" stroke-width="2"/>
+            <line x1="46" y1="28" x2="1520" y2="28" stroke="#eef2f4" stroke-width="8" opacity="0.55"/>
+            <circle cx="230" cy="28" r="6" fill="#222629"/>
+            <circle cx="560" cy="28" r="6" fill="#222629"/>
+            <circle cx="930" cy="28" r="6" fill="#222629"/>
+            <circle cx="1310" cy="28" r="6" fill="#8c7346"/>
+          </svg>
+
+          <div class="event" style="left: 230px; top: 6px;">
+            <div class="dot"></div>
+            <div class="card">
+              <div class="event-title">URI symptoms begin</div>
+              <div class="event-sub">Scratchy throat and upper-respiratory prodrome precede lower-airway symptoms.</div>
+            </div>
+          </div>
+
+          <div class="event" style="left: 560px; top: 6px;">
+            <div class="dot"></div>
+            <div class="card">
+              <div class="event-title">Cough develops about one week ago</div>
+              <div class="event-sub">Bursts of coughing with periods of relative calm; worse at night and when lying down.</div>
+            </div>
+          </div>
+
+          <div class="event" style="left: 930px; top: 6px;">
+            <div class="dot"></div>
+            <div class="card">
+              <div class="event-title">Yellow sputum noted</div>
+              <div class="event-sub">Mostly yellow sputum reported; green appearance once was uncertain due to lighting.</div>
+            </div>
+          </div>
+
+          <div class="event" style="left: 1310px; top: 6px;">
+            <div class="dot" style="background:#8c7346;"></div>
+            <div class="card" style="background:#fffdf8;">
+              <div class="event-title">Fever / breathing impact still unresolved</div>
+              <div class="event-sub">Need characterization of dyspnea, pleuritic pain, temperature, and exertional limitation.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-mark">Designer Health</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

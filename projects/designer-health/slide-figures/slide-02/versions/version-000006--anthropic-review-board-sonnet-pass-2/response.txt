@@ -1,0 +1,42 @@
+## Review: Designer Health Slide 2 — Board Presentation Readiness
+
+---
+
+### 1. Verdict
+The slide is directionally strong and readable, but it still reads as a well-executed infographic rather than a premium investor deck — the specialty card floats awkwardly, the bottom banner competes for authority with the chart, and the overall weight distribution feels dashboard-y rather than boardroom-confident.
+
+---
+
+### 2. Top Issues (ordered by severity)
+
+- **The specialty card is visually orphaned.** It sits in the upper right without structural relationship to the chart — no shared baseline, no connecting logic, no visual bridge. It feels like a second slide stapled to the first. A board reader's eye doesn't know whether to finish the chart or pivot to the card.
+- **The bottom shortage banner is fighting for headline status.** The slide has two competing H1 moments: "31 days" and "More than 1 in 4 Americans." The banner copy is bold and important, but its blue left-border treatment makes it feel like a callout box from a white paper, not a premium data narrative. It undercuts the chart's authority instead of reinforcing it.
+- **"31 days / +19% since 2022" annotation is doing too much work in one cluster.** The large bold "31 days" and the "+19% since 2022" sub-label are jammed together mid-chart without sufficient breathing room. The annotation competes with the data point label and the endpoint dot — it reads as crowded exactly where it should read as decisive.
+- **The bar chart in the specialty card uses uniform color with no differentiation.** Every bar is the same blue. There's no visual way to instantly understand which specialties are most critical to Designer's thesis. If OB/GYN at 41.8 days is the signal, it should read as the signal — not just the longest bar in a monochrome list.
+- **Y-axis labels (16, 24, 32) are present but add almost no value.** The gridlines and axis numbers create visual noise without helping the reader. Given that every data point is labeled directly on the line, the Y-axis is redundant clutter that makes the chart feel less editorial and more spreadsheet.
+
+---
+
+### 3. Board-Read Risk
+
+- **A sophisticated investor will notice the specialty card and the trend chart don't share a common frame of reference** — the chart shows average wait time across all specialties over time, while the card shows 2025 wait times by specific specialty, but this relationship is never made explicit. A sharp board member may ask "are these the same dataset?" mid-presentation, which breaks momentum.
+- **The footnote block at the bottom is dense and visually prominent enough to draw the eye during the presentation.** Three footnotes in tight gray text spanning nearly the full slide width signal "this needed a lot of sourcing" rather than "this data is airtight." In a live board setting, footnotes this visible invite scrutiny of methodology rather than acceptance of the thesis.
+- **The shortage banner's "only 48%" stat is introduced without a denominator or comparator**, which means a board member has to mentally construct what 100% would mean. In a live read, this creates a half-second of cognitive friction exactly when you want full conviction — "48% of need being met" needs a reference point or it lands soft.
+
+---
+
+### 4. Aesthetic Upgrades
+
+- **Structurally unify the chart and specialty card** by giving them a shared section header or enclosing both in a light container with a common label like "2025 Appointment Wait Time Data" — this resolves the orphan problem and signals they are complementary, not competing.
+- **Kill the Y-axis labels and gridlines entirely.** Trust the inline labels. Remove the axis numbers and horizontal rules, and the chart immediately becomes 20% cleaner and more editorial — which is the standard for McKinsey-tier investor decks.
+- **Give the shortage banner a full-bleed dark treatment** — navy or near-black background, white headline, smaller blue accent for the percentage — so it reads as a deliberate final beat, not a footnote-adjacent callout box. This separates it from the chart section and gives it the tonal weight it deserves.
+- **Encode the specialty bar chart with one highlight color.** Keep four bars in muted blue-gray and make OB/GYN (or the specialty most relevant to Designer's ICP) the full-saturation blue. This turns a data list into a pointed argument.
+- **Tighten the "31 days" annotation hierarchy.** Make "31 days" the only element at display size. Move "+19% since 2022" to a smaller, lighter caption directly beneath it with more breathing room from the dot. This makes the number land as a fact and the delta land as context — currently they compete as co-equals.
+
+---
+
+### 5. Keep As-Is
+
+- **The headline "Demand is outpacing clinical capacity."** — It is declarative, specific, and thesis-first. The weight and size are appropriate. Do not soften it or add a colon.
+- **The line chart's trend shape and inline data labels.** — The upward arc from 18.5 (2014) to 31 (2025) is visually compelling and the direct labeling of each node is the right call. This is already doing serious work without requiring a legend.
+- **The blue color system overall.** — The single-hue discipline (no gratuitous secondary palette) is correct for a serious healthcare deck. It reads as focused and institutional, not startup-colorful.

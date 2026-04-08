@@ -1,0 +1,47 @@
+We are making a single image graphic for a pitch deck or presentation.
+Treat the following input as a design spec, not as a conversational prompt.
+Return one polished 16:9 image concept that feels premium, intentional, and presentation-ready.
+Do not generate browser chrome, UI screenshots, device mockups, or a slide-within-a-slide.
+Do not add on-image text unless the spec explicitly asks for it.
+Avoid generic stock-photo energy, generic SaaS dashboard imagery, and weak filler composition.
+
+Variant direction: Editorial Baseline. Start with the clearest premium editorial interpretation. One strong visual idea, calm hierarchy, restrained composition, and presentation-grade polish.
+
+Design spec:
+Create one premium investor-deck concept figure for a healthcare startup.
+
+This is a creative reset exploration for a slide about Vox, an adaptive clinical interviewer. Do not reuse the familiar visual trope of a monolithic rounded software box with inner channels, appliance shading, filter bolts, or "AI machine" plumbing.
+
+Concept family: Signal Emerging from Noise / Clinical Strata.
+
+Core idea:
+Patient narrative begins as compressed, chaotic informational layers. Vox cuts through that density and resolves it into clean clinical signal.
+
+Required visual story:
+- full composition should feel like horizontal strata or layered bands, not a box
+- left side = dense overlapping gray bands carrying messy narrative fragments or abstract quote texture
+- middle = a precise teal interview axis, sampling line, or extraction seam where Vox asks the decisive next question
+- right side = the layered bands separate, lighten, and resolve into three cleaner zones of meaning
+- the right-most area should imply a clinician-grade starting point without becoming a software card mockup
+
+Style:
+- white background with a lot of negative space
+- grayscale / off-white base with restrained teal accents
+- elegant editorial abstraction
+- premium clinical seriousness
+- not literal geology, not dirt, not rocks, not a cave
+- subtle depth and materiality, but keep it refined and modern
+
+Do not make:
+- a device
+- a product UI
+- a flowchart
+- a pipeline diagram
+- a dashboard
+- a busy infographic
+- a literal cross-section of earth
+
+Keep text very sparse. This is about the visual metaphor, not lots of labels.
+
+Success condition:
+In 2 seconds the viewer feels that Vox extracts what matters from noisy patient narrative and turns it into organized clinical signal.

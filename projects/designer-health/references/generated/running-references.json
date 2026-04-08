@@ -1,0 +1,467 @@
+{
+  "projectId": "designer-health",
+  "projectTitle": "Designer Health Deck",
+  "generatedAt": "2026-04-06T16:07:12.551Z",
+  "manifestPath": "projects/designer-health/references/manifest.json",
+  "templatePath": "projects/designer-health/references/vox-design-system-reference.html",
+  "stats": {
+    "libraryCount": 11,
+    "usageCount": 9,
+    "currentUsageCount": 8,
+    "runningCount": 8,
+    "activeSlideCountWithReferences": 4
+  },
+  "warnings": [],
+  "runningReferences": [
+    {
+      "appendixNumber": 1,
+      "referenceId": "amn-healthcare-2025-appointment-wait-times",
+      "label": "AMN Healthcare 2025 appointment wait times",
+      "citationText": "AMN Healthcare. 2025 Survey of Physician Appointment Wait Times. 2025. Reported average physician appointment wait time of 31 days in 2025, up 19% from 2022.",
+      "sourceType": "report",
+      "url": "https://www.amnhealthcare.com/amn-insights/physician/whitepapers/2025-survey-of-physician-appointment-wait-times/?utm_source=chatgpt.com",
+      "summary": "National appointment wait-time benchmark and specialty breakout used on the access slide.",
+      "tags": [
+        "access",
+        "wait-times",
+        "specialty-access"
+      ],
+      "firstSeenSlideId": "slide-02",
+      "firstSeenDisplayNumber": "2",
+      "slideIds": [
+        "slide-02"
+      ],
+      "displayNumbers": [
+        "2"
+      ],
+      "usages": [
+        {
+          "id": "usage-000001",
+          "slideId": "slide-02",
+          "displayNumber": "2",
+          "placement": "proof",
+          "claim": "Benchmark wait times continue to worsen and specialty waits are already stretched."
+        }
+      ]
+    },
+    {
+      "appendixNumber": 2,
+      "referenceId": "hrsa-2025-primary-care-hpsa-quarterly-report",
+      "label": "HRSA 2025 primary care HPSA quarterly report",
+      "citationText": "Health Resources and Services Administration. Primary Care Health Professional Shortage Areas Quarterly Summary. December 31, 2025. Reported 92.3 million people living in designated primary care shortage areas and only 48.18% of primary care need met in those areas.",
+      "sourceType": "dataset",
+      "url": null,
+      "summary": "Supports the federally designated primary care shortage proof on slide 2.",
+      "tags": [
+        "access",
+        "primary-care-shortage",
+        "hpsa"
+      ],
+      "firstSeenSlideId": "slide-02",
+      "firstSeenDisplayNumber": "2",
+      "slideIds": [
+        "slide-02"
+      ],
+      "displayNumbers": [
+        "2"
+      ],
+      "usages": [
+        {
+          "id": "usage-000009",
+          "slideId": "slide-02",
+          "displayNumber": "2",
+          "placement": "proof",
+          "claim": "The current shortage claim is grounded in federally designated primary care HPSA data and the associated unmet-need rate."
+        }
+      ]
+    },
+    {
+      "appendixNumber": 3,
+      "referenceId": "abbo-2008-clinical-items-primary-care-visits",
+      "label": "Abbo et al. 2008 crowded primary care visits",
+      "citationText": "Abbo ED, Zhang Q, Zelder M, Huang ES. The Increasing Number of Clinical Items Addressed During the Time of Adult Primary Care Visits. Journal of General Internal Medicine. 2008;23(12):2058-2065. Found visits increased from 18.0 to 20.9 minutes while clinical items increased from 5.4 to 7.1 per visit.",
+      "sourceType": "paper",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2596516/?utm_source=chatgpt.com",
+      "summary": "Grounds the argument that small per-visit gains compound because primary care visits are crowded.",
+      "tags": [
+        "visit-duration",
+        "primary-care",
+        "throughput"
+      ],
+      "firstSeenSlideId": "slide-03",
+      "firstSeenDisplayNumber": "3",
+      "slideIds": [
+        "slide-03"
+      ],
+      "displayNumbers": [
+        "3"
+      ],
+      "usages": [
+        {
+          "id": "usage-000003",
+          "slideId": "slide-03",
+          "displayNumber": "3",
+          "placement": "proof",
+          "claim": "Primary care visits are crowded enough that small workflow gains can create meaningful capacity."
+        }
+      ]
+    },
+    {
+      "appendixNumber": 4,
+      "referenceId": "ma-2025-ambient-ai-scribes-jamia",
+      "label": "Ma et al. 2025 ambient AI scribes utilization study",
+      "citationText": "Ma SP, Liang AS, Shah SJ, et al. Ambient artificial intelligence scribes: utilization and impact on documentation time. Journal of the American Medical Informatics Association. 2025;32(2):381-385. Reported 55.25% utilization and reductions in documentation, after-hours, and total EHR time.",
+      "sourceType": "paper",
+      "url": null,
+      "summary": "Supports the category-proof claim that AI adoption is already being proven in documentation.",
+      "tags": [
+        "ambient-ai",
+        "documentation",
+        "adoption"
+      ],
+      "firstSeenSlideId": "slide-09",
+      "firstSeenDisplayNumber": "8",
+      "slideIds": [
+        "slide-09"
+      ],
+      "displayNumbers": [
+        "8"
+      ],
+      "usages": [
+        {
+          "id": "usage-000004",
+          "slideId": "slide-09",
+          "displayNumber": "8",
+          "placement": "speaker-notes",
+          "claim": "AI adoption is already showing up in documentation workflows with real utilization and time savings."
+        }
+      ]
+    },
+    {
+      "appendixNumber": 5,
+      "referenceId": "lukac-2025-ambient-ai-scribes-rct",
+      "label": "Lukac et al. 2025 ambient AI scribes randomized trial",
+      "citationText": "Lukac PJ, Turner W, Vangala S, et al. Ambient AI Scribes in Clinical Practice: A Randomized Trial. NEJM AI. 2025. Reported a 9.5% decrease in time-in-note and improvements in workload-related measures.",
+      "sourceType": "paper",
+      "url": null,
+      "summary": "Reinforces that AI-driven documentation help is already showing real measured benefit.",
+      "tags": [
+        "ambient-ai",
+        "documentation",
+        "workload"
+      ],
+      "firstSeenSlideId": "slide-09",
+      "firstSeenDisplayNumber": "8",
+      "slideIds": [
+        "slide-09"
+      ],
+      "displayNumbers": [
+        "8"
+      ],
+      "usages": [
+        {
+          "id": "usage-000005",
+          "slideId": "slide-09",
+          "displayNumber": "8",
+          "placement": "speaker-notes",
+          "claim": "Randomized evidence reinforces that current ambient AI value is clustering around documentation work."
+        }
+      ]
+    },
+    {
+      "appendixNumber": 6,
+      "referenceId": "aasm-2025-evaluation-management-payment-comparison",
+      "label": "AASM 2025 E/M payment comparison",
+      "citationText": "American Academy of Sleep Medicine. Evaluation and Management Services: 2024 vs 2025 National Payment Comparison. 2025. Reported 2025 national payments of $88.95 for CPT 99213, $125.18 for CPT 99214, and $15.53 for G2211.",
+      "sourceType": "regulatory",
+      "url": "https://aasm.org/wp-content/uploads/2024/11/evaluation-management-comparison-2024-2025.pdf?utm_source=chatgpt.com",
+      "summary": "Provides the reimbursement anchors for the recovered-visit economics slide.",
+      "tags": [
+        "reimbursement",
+        "medicare",
+        "economics"
+      ],
+      "firstSeenSlideId": "slide-10",
+      "firstSeenDisplayNumber": "9",
+      "slideIds": [
+        "slide-10"
+      ],
+      "displayNumbers": [
+        "9"
+      ],
+      "usages": [
+        {
+          "id": "usage-000006",
+          "slideId": "slide-10",
+          "displayNumber": "9",
+          "placement": "speaker-notes",
+          "claim": "2025 Medicare payment anchors ground the recovered-visit revenue scenario."
+        }
+      ]
+    },
+    {
+      "appendixNumber": 7,
+      "referenceId": "appold-2016-practice-overhead",
+      "label": "Appold 2016 practice overhead survey",
+      "citationText": "Appold K. Keeping Medical Practice Overhead Down. Physicians Practice. 2016. Reported that 40.4% of physician-survey respondents placed overhead in the 41%-60% of revenue range.",
+      "sourceType": "article",
+      "url": null,
+      "summary": "Supports the contribution-margin planning assumption used in the slide 10 model.",
+      "tags": [
+        "practice-overhead",
+        "economics",
+        "margin"
+      ],
+      "firstSeenSlideId": "slide-10",
+      "firstSeenDisplayNumber": "9",
+      "slideIds": [
+        "slide-10"
+      ],
+      "displayNumbers": [
+        "9"
+      ],
+      "usages": [
+        {
+          "id": "usage-000007",
+          "slideId": "slide-10",
+          "displayNumber": "9",
+          "placement": "speaker-notes",
+          "claim": "Practice-overhead survey data supports using a conservative contribution-margin planning frame."
+        }
+      ]
+    },
+    {
+      "appendixNumber": 8,
+      "referenceId": "weiss-2003-practice-expenses",
+      "label": "Weiss 2003 practice expenses survey",
+      "citationText": "Weiss GG. Exclusive Survey: Practice Expenses. Medical Economics. 2003. Reported median practice expenses commonly around 50%-55% of revenue across regions and practice sizes.",
+      "sourceType": "article",
+      "url": null,
+      "summary": "Provides historical expense context for the slide 10 economics guardrails.",
+      "tags": [
+        "practice-expenses",
+        "economics",
+        "margin"
+      ],
+      "firstSeenSlideId": "slide-10",
+      "firstSeenDisplayNumber": "9",
+      "slideIds": [
+        "slide-10"
+      ],
+      "displayNumbers": [
+        "9"
+      ],
+      "usages": [
+        {
+          "id": "usage-000008",
+          "slideId": "slide-10",
+          "displayNumber": "9",
+          "placement": "speaker-notes",
+          "claim": "Historical practice-expense ranges provide a second guardrail for the contribution-margin assumption."
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "slide-01",
+      "displayNumber": "1",
+      "title": "VOX",
+      "proofCitationKeys": [],
+      "missingCitationKeys": [],
+      "currentReferences": []
+    },
+    {
+      "slideId": "slide-02",
+      "displayNumber": "2",
+      "title": "Demand is outpacing clinical capacity",
+      "proofCitationKeys": [
+        "1",
+        "2"
+      ],
+      "missingCitationKeys": [],
+      "currentReferences": [
+        {
+          "usageId": "usage-000001",
+          "appendixNumber": 1,
+          "placement": "proof",
+          "claim": "Benchmark wait times continue to worsen and specialty waits are already stretched.",
+          "referenceId": "amn-healthcare-2025-appointment-wait-times",
+          "label": "AMN Healthcare 2025 appointment wait times",
+          "citationText": "AMN Healthcare. 2025 Survey of Physician Appointment Wait Times. 2025. Reported average physician appointment wait time of 31 days in 2025, up 19% from 2022."
+        },
+        {
+          "usageId": "usage-000009",
+          "appendixNumber": 2,
+          "placement": "proof",
+          "claim": "The current shortage claim is grounded in federally designated primary care HPSA data and the associated unmet-need rate.",
+          "referenceId": "hrsa-2025-primary-care-hpsa-quarterly-report",
+          "label": "HRSA 2025 primary care HPSA quarterly report",
+          "citationText": "Health Resources and Services Administration. Primary Care Health Professional Shortage Areas Quarterly Summary. December 31, 2025. Reported 92.3 million people living in designated primary care shortage areas and only 48.18% of primary care need met in those areas."
+        }
+      ]
+    },
+    {
+      "slideId": "slide-03",
+      "displayNumber": "3",
+      "title": "More efficient visits will increase supply",
+      "proofCitationKeys": [
+        "3"
+      ],
+      "missingCitationKeys": [],
+      "currentReferences": [
+        {
+          "usageId": "usage-000003",
+          "appendixNumber": 3,
+          "placement": "proof",
+          "claim": "Primary care visits are crowded enough that small workflow gains can create meaningful capacity.",
+          "referenceId": "abbo-2008-clinical-items-primary-care-visits",
+          "label": "Abbo et al. 2008 crowded primary care visits",
+          "citationText": "Abbo ED, Zhang Q, Zelder M, Huang ES. The Increasing Number of Clinical Items Addressed During the Time of Adult Primary Care Visits. Journal of General Internal Medicine. 2008;23(12):2058-2065. Found visits increased from 18.0 to 20.9 minutes while clinical items increased from 5.4 to 7.1 per visit."
+        }
+      ]
+    },
+    {
+      "slideId": "slide-05",
+      "displayNumber": "4",
+      "title": "History is the cleanest place to reclaim minutes",
+      "proofCitationKeys": [],
+      "missingCitationKeys": [],
+      "currentReferences": []
+    },
+    {
+      "slideId": "slide-06",
+      "displayNumber": "5",
+      "title": "The hard part is producing a history clinicians can start from",
+      "proofCitationKeys": [],
+      "missingCitationKeys": [],
+      "currentReferences": []
+    },
+    {
+      "slideId": "slide-07",
+      "displayNumber": "6",
+      "title": "Vox prepares the visit before it starts",
+      "proofCitationKeys": [],
+      "missingCitationKeys": [],
+      "currentReferences": []
+    },
+    {
+      "slideId": "slide-08",
+      "displayNumber": "7",
+      "title": "The clinician starts from a structured brief",
+      "proofCitationKeys": [],
+      "missingCitationKeys": [],
+      "currentReferences": []
+    },
+    {
+      "slideId": "slide-09",
+      "displayNumber": "8",
+      "title": "Current AI helps around the visit",
+      "proofCitationKeys": [
+        "4",
+        "5"
+      ],
+      "missingCitationKeys": [],
+      "currentReferences": [
+        {
+          "usageId": "usage-000004",
+          "appendixNumber": 4,
+          "placement": "speaker-notes",
+          "claim": "AI adoption is already showing up in documentation workflows with real utilization and time savings.",
+          "referenceId": "ma-2025-ambient-ai-scribes-jamia",
+          "label": "Ma et al. 2025 ambient AI scribes utilization study",
+          "citationText": "Ma SP, Liang AS, Shah SJ, et al. Ambient artificial intelligence scribes: utilization and impact on documentation time. Journal of the American Medical Informatics Association. 2025;32(2):381-385. Reported 55.25% utilization and reductions in documentation, after-hours, and total EHR time."
+        },
+        {
+          "usageId": "usage-000005",
+          "appendixNumber": 5,
+          "placement": "speaker-notes",
+          "claim": "Randomized evidence reinforces that current ambient AI value is clustering around documentation work.",
+          "referenceId": "lukac-2025-ambient-ai-scribes-rct",
+          "label": "Lukac et al. 2025 ambient AI scribes randomized trial",
+          "citationText": "Lukac PJ, Turner W, Vangala S, et al. Ambient AI Scribes in Clinical Practice: A Randomized Trial. NEJM AI. 2025. Reported a 9.5% decrease in time-in-note and improvements in workload-related measures."
+        }
+      ]
+    },
+    {
+      "slideId": "slide-10",
+      "displayNumber": "9",
+      "title": "Recovered visit time creates real capacity",
+      "proofCitationKeys": [
+        "6",
+        "7",
+        "8"
+      ],
+      "missingCitationKeys": [],
+      "currentReferences": [
+        {
+          "usageId": "usage-000006",
+          "appendixNumber": 6,
+          "placement": "speaker-notes",
+          "claim": "2025 Medicare payment anchors ground the recovered-visit revenue scenario.",
+          "referenceId": "aasm-2025-evaluation-management-payment-comparison",
+          "label": "AASM 2025 E/M payment comparison",
+          "citationText": "American Academy of Sleep Medicine. Evaluation and Management Services: 2024 vs 2025 National Payment Comparison. 2025. Reported 2025 national payments of $88.95 for CPT 99213, $125.18 for CPT 99214, and $15.53 for G2211."
+        },
+        {
+          "usageId": "usage-000007",
+          "appendixNumber": 7,
+          "placement": "speaker-notes",
+          "claim": "Practice-overhead survey data supports using a conservative contribution-margin planning frame.",
+          "referenceId": "appold-2016-practice-overhead",
+          "label": "Appold 2016 practice overhead survey",
+          "citationText": "Appold K. Keeping Medical Practice Overhead Down. Physicians Practice. 2016. Reported that 40.4% of physician-survey respondents placed overhead in the 41%-60% of revenue range."
+        },
+        {
+          "usageId": "usage-000008",
+          "appendixNumber": 8,
+          "placement": "speaker-notes",
+          "claim": "Historical practice-expense ranges provide a second guardrail for the contribution-margin assumption.",
+          "referenceId": "weiss-2003-practice-expenses",
+          "label": "Weiss 2003 practice expenses survey",
+          "citationText": "Weiss GG. Exclusive Survey: Practice Expenses. Medical Economics. 2003. Reported median practice expenses commonly around 50%-55% of revenue across regions and practice sizes."
+        }
+      ]
+    },
+    {
+      "slideId": "slide-11",
+      "displayNumber": "10",
+      "title": "Start where throughput proof is fastest",
+      "proofCitationKeys": [],
+      "missingCitationKeys": [],
+      "currentReferences": []
+    },
+    {
+      "slideId": "slide-12",
+      "displayNumber": "11",
+      "title": "Built by people who understand the visit",
+      "proofCitationKeys": [],
+      "missingCitationKeys": [],
+      "currentReferences": []
+    },
+    {
+      "slideId": "slide-13",
+      "displayNumber": "12",
+      "title": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+      "proofCitationKeys": [],
+      "missingCitationKeys": [],
+      "currentReferences": []
+    },
+    {
+      "slideId": "slide-04",
+      "displayNumber": "4 (retired)",
+      "title": "Visits start with story, not structure",
+      "proofCitationKeys": [],
+      "missingCitationKeys": [],
+      "currentReferences": []
+    },
+    {
+      "slideId": "slide-04-05",
+      "displayNumber": "4/5",
+      "title": "History Bridge (Shelved Combined Concept)",
+      "proofCitationKeys": [],
+      "missingCitationKeys": [],
+      "currentReferences": []
+    }
+  ]
+}

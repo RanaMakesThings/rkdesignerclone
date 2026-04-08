@@ -1,0 +1,14 @@
+{
+  "id": "version-000008",
+  "slideId": "slide-02",
+  "slideDir": "projects/designer-health/slide-figures/slide-02",
+  "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000008--anthropic-review-diptych-candidate",
+  "label": "anthropic-review-diptych-candidate",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.433Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-02/anthropic-review-diptych-candidate"
+  ]
+}

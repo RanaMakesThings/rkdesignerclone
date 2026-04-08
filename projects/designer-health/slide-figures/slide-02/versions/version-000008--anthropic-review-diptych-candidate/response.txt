@@ -1,0 +1,33 @@
+## Candidate Slide Assessment: Designer Health Deck — Slide 2
+
+---
+
+### Three Strongest Advantages
+
+1. **The diptych creates genuine argumentative structure.** Left = wait is getting worse; Right = geography compounds it. This two-beat logic is more persuasive than a three-widget layout where the reader must construct the argument themselves. The slide does rhetorical work, not just data display.
+
+2. **"1 in 4+" as a typographic anchor is genuinely arresting.** Setting it at display scale with the dot-as-period device gives the right column a visual moment that the current format's shortage banner (typically a colored strip with smaller numerals) cannot match. It will land in a live pitch context where slides are seen for 8–12 seconds.
+
+3. **Hierarchy is meaningfully cleaner.** The current three-widget format forces the eye to triangulate between chart, specialty table, and shortage callout. Here, the primary headline ("31 days"), the trend line, and the "1 in 4+" are sequenced top-left to top-right in a readable Z-path. The OB/GYN bar sits subordinately, exactly where specialty proof belongs—supporting, not competing.
+
+---
+
+### Three Concrete Risks or Weaknesses
+
+1. **The specialty comparison bar is dramatically underweight for its position.** One bar (OB/GYN vs. family medicine) is insufficient proof of specialty-specific urgency if Designer's product targets multiple specialties. The current format's specialty breakout table likely shows 4–6 specialties, which is stronger evidence of systemic breadth. Reducing to one bar saves space but weakens the TAM implication.
+
+2. **The 48.18% met-need statistic is buried and oddly precise.** Placed in body-text weight below the "92.3 million people" call-out, it reads like a footnote. This is actually one of the most damning numbers on the slide—less than half of primary care need met—and it's typographically invisible. The precision of "48.18%" also signals raw data dump rather than editorial confidence; rounding to "fewer than half" would be sharper.
+
+3. **The left column has a pacing problem.** The line chart occupies roughly 60% of the left column's vertical space to show a trend that could be communicated in two numbers (18.5 days in 2014 → 31 days in 2025). For an investor audience, the chart earns its space only if the shape of the curve is the argument. Here the curve is not dramatic enough—it's a gentle slope—to justify the real estate relative to what a bold stat-plus-delta treatment would achieve.
+
+---
+
+### Verdict
+
+**Stronger than current native.**
+
+---
+
+### What the Next Native Rebuild Should Borrow
+
+Adopt the diptych's explicit two-beat argumentative frame—wait time severity on the left, geographic inaccessibility on the right—and carry over the "1 in 4+" display-scale typographic treatment as the right column's anchor. The current format's specialty breadth table should be reintegrated, but subordinated visually (small, right column, below the shortage proof) rather than given co-equal widget status. The rebuild should also treat the sub-50% met-need figure as a **callout number**, not body text, since that statistic closes the argument most forcefully for any investor calculating addressable urgency.

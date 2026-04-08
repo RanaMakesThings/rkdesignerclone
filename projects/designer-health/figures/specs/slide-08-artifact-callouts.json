@@ -1,0 +1,142 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-08-artifact-callouts",
+    "family": "artifact_with_zoom_callouts",
+    "deckId": "vox-pd-v1",
+    "theme": "vox",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "The clinician starts from a structured brief.",
+    "subtitle": "Scan, verify, decide.",
+    "chips": [],
+    "footnote": "Artifact, not UI. The callouts should do most of the explanatory work."
+  },
+  "constraints": {
+    "figureJob": "Make the clinician handoff artifact tangible without collapsing into software UI.",
+    "focalPoint": "The central brief and the three zoomed callouts.",
+    "layout": "Main brief centered with three large attached callouts around it.",
+    "big": [
+      "The central artifact",
+      "The three callout labels"
+    ],
+    "quiet": [
+      "Section labels inside the artifact",
+      "The footnote"
+    ],
+    "accentTargets": [
+      "Callout labels"
+    ],
+    "forbidden": [
+      "dashboard"
+    ],
+    "semanticGuards": [
+      "no_ui"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "The clinician starts from a structured brief.",
+      "What matters",
+      "What happened when",
+      "What still needs confirmation"
+    ],
+    "preferred": [
+      "Scan, verify, decide."
+    ],
+    "optional": [],
+    "forbidden": [
+      "full software screen"
+    ]
+  },
+  "body": {
+    "artifact": {
+      "label": "Structured brief",
+      "sections": [
+        {
+          "title": "What matters",
+          "rows": [
+            "Pain worse after meals",
+            "No fever or chest pain"
+          ]
+        },
+        {
+          "title": "What happened when",
+          "rows": [
+            "Started a few weeks ago",
+            "Intermittent since onset"
+          ]
+        },
+        {
+          "title": "What still needs confirmation",
+          "rows": [
+            "Relation to medications",
+            "Recent diet change"
+          ]
+        }
+      ]
+    },
+    "callouts": [
+      {
+        "label": "What matters",
+        "detail": "Key positives and negatives are already surfaced for fast scan.",
+        "anchorRegion": "left-top"
+      },
+      {
+        "label": "What happened when",
+        "detail": "Timeline anchors make the story easy to reconstruct without re-asking from zero.",
+        "anchorRegion": "left-bottom"
+      },
+      {
+        "label": "What still needs confirmation",
+        "detail": "Explicit open questions preserve trust and make verification efficient.",
+        "anchorRegion": "right-middle"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "excerpt": "The clinician starts from a structured brief.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Use the proposed header as the slide title."
+    },
+    {
+      "excerpt": "Scan, verify, decide.",
+      "targetPath": "chrome.subtitle",
+      "ruleType": "chrome",
+      "note": "Keep the subtitle extremely short and operational."
+    },
+    {
+      "excerpt": "Make the product tangible. Show what the clinician actually receives and starts from.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Keep the figure centered on the handoff artifact."
+    },
+    {
+      "excerpt": "Structured brief / artifact with three zoomed callouts.",
+      "targetPath": "body.artifact",
+      "ruleType": "body",
+      "note": "Choose the artifact-with-callouts family."
+    },
+    {
+      "excerpt": "The callouts should be large enough to read instantly.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "Keep the three labels prominent."
+    },
+    {
+      "excerpt": "Main artifact centered with three side callouts.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Place the artifact centrally and attach the explanations around it."
+    },
+    {
+      "excerpt": "The point is not look at our UI.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Keep the artifact conceptual."
+    }
+  ]
+}

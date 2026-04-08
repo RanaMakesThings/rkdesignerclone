@@ -1,0 +1,130 @@
+artifact_type: figure-ideation-input
+version: v0.2
+run_mode: standard
+authoring_context:
+  project: Designer / Vox Investor Deck
+  source_artifacts:
+  - designer_vox_deck_master_spec_v_1.md
+  - slide-09-concept-spec-v0.1.md
+  - template.html
+slide_metadata:
+  slide_number: 09
+  working_title: Category definition / positioning / whitespace / adoption proof
+  status: Strong direction, still live
+  adjacent_slides:
+  - 08
+  - '10'
+locked_meaning:
+  slide_job: Prevent Vox from being mentally collapsed into intake, scribe extension,
+    note automation, or generic assistive AI.
+  audience_should_leave_believing: Vox is not another assistive or documentation tool.
+    It occupies the opening clinical work inside the encounter, where the clinician's
+    starting point is still under-served.
+  core_claim: AI has already proven adoption after the visit, especially in documentation.
+    The encounter itself is still relatively open. Vox changes the clinician's starting
+    point by applying AI to the opening clinical work inside the visit.
+slide_copy:
+  text_first:
+    header: AI adoption is proven in documentation. The encounter itself is still
+      open.
+    support_line: Current AI is improving the work after the visit. Vox applies AI
+      to the opening clinical work inside the encounter itself.
+  compressed:
+    header: AI has traction after the visit. The visit itself is still thinly served.
+    subheader: Vox changes how the visit starts.
+figure_copy:
+  panel_labels:
+  - DOCUMENTATION
+  - THE VISIT ITSELF
+  figure_labels:
+  - Ambient scribe
+  - Note generation
+  - Documentation support
+  - VOX
+figure_requirements:
+  figure_burden:
+  - show that clinician-facing AI adoption is already real
+  - show where that adoption is clustering
+  - show that the opening clinical work of the encounter is still comparatively open
+  - show Vox occupying that opening clinical space
+  figure_logic: AI is already dense and validated after the visit; the encounter itself
+    remains relatively open; Vox occupies the opening clinical space at the start
+    of the visit.
+  must_not_become:
+  - competitor matrix
+  - anti-scribe attack slide
+  - workflow explainer
+  - semantic we are different slide without visual proof
+  - intake positioning
+  - generic before/during/after lifecycle strip
+starting_hypothesis:
+  proposed_figure_direction: Use two side-by-side territories or panels rather than
+    a timeline. Left panel is documentation-adoption dense. Right panel is encounter-adjacent
+    and mostly open, with one blue VOX chip in the opening clinical space.
+  treat_as: starting hypothesis, not fixed answer
+  explore_alternatives: true
+current_visual_context:
+  keep:
+  - central strategic instinct that Vox changes how the visit starts
+  - one blue VOX hero object or chip
+  - restraint and sparseness
+  - avoidance of a literal competitor matrix
+  change:
+  - replace timeline framing with territory-density framing
+  - make the left side much more documentation-specific and adoption-dense
+  - remove lightweight operational examples such as scheduling/reminders
+  - make the right side intentionally open
+  - ensure the slide reads as a market/territory claim rather than workflow arrangement
+design_constraints:
+  tone:
+  - serious
+  - clinically literate
+  - premium
+  - restrained
+  density_target: sparse
+  template: template.html
+  max_candidates: 8
+  shortlist_count: 3
+  thumbnail_count: 4
+  allow_high_risk_candidate: false
+assets:
+  current_slide_image: slide-09-current.png
+  template_file: template.html
+  reference_images: []
+  adjacent_slide_images:
+  - slide-08-current.png
+  - slide-10-current.png
+provider_preferences:
+  text_ideators:
+  - openai
+  - anthropic
+  - google_optional
+  image_generators:
+  - openai
+  - google
+  vision_critics:
+  - openai
+  - anthropic
+  - google
+orchestration_overrides:
+  ideator_worker_count: 2
+  generator_worker_count: 2
+  critic_worker_count: 3
+  auto_promote_allowed: false
+  human_review_required: true
+requested_outputs:
+- normalized_brief
+- figure_brief
+- figure_move_candidates
+- clustered_candidate_table
+- ranked_shortlist
+- selected_figure_family
+- spatial_spec
+- thumbnail_manifest
+- critique_report
+- build_spec
+- run_manifest
+output_target:
+  build_spec_filename: slide-09-build-spec-v0.2.md
+  critique_filename: slide-09-figure-critique-v0.2.json
+  manifest_filename: slide-09-run-manifest-v0.2.json

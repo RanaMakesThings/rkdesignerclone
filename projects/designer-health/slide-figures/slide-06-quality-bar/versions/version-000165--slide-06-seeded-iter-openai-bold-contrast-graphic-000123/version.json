@@ -1,0 +1,25 @@
+{
+  "id": "version-000165",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000165--slide-06-seeded-iter-openai-bold-contrast-graphic-000123",
+  "label": "slide-06-seeded-iter-openai-bold-contrast-graphic-000123",
+  "status": "archived",
+  "createdAt": "2026-04-03T04:02:49.594Z",
+  "sourceKind": "presentation-image-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/presentation-images/vox-slide6-seeded-iteration-2026-04-03/openai/version-04--bold-contrast",
+    "output/figures/presentation-images/vox-slide6-seeded-iteration-2026-04-03/openai/version-04--bold-contrast/image-01.png"
+  ],
+  "runId": "graphic-batch-000025",
+  "attempt": 4,
+  "sourceGraphicId": "graphic-000123",
+  "sourceBatchId": "graphic-batch-000025",
+  "sourceBatchSlug": "vox-slide6-seeded-iteration-2026-04-03",
+  "sourceProvider": "openai",
+  "sourceVariantId": "v02-bold",
+  "sourceVariantLabel": "Bold Contrast",
+  "sourcePath": "output/figures/presentation-images/vox-slide6-seeded-iteration-2026-04-03/openai/version-04--bold-contrast",
+  "sourceImagePath": "output/figures/presentation-images/vox-slide6-seeded-iteration-2026-04-03/openai/version-04--bold-contrast/image-01.png"
+}

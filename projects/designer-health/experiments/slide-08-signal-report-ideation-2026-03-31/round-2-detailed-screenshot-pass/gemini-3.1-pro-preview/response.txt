@@ -1,0 +1,132 @@
+Here is the deep, concrete specification for the clinical brief artifact, continuing our established direction of a clean, two-column clinical workspace while integrating your request for specific visual state indicators (like arrows) in a highly restrained, professional way.
+
+### 1. Locked Direction
+**The Two-Column Clinical Brief.** 
+We are building a single, unified white card that acts as the clinician’s starting point. It is not a dashboard; it is a document. The left column represents **Structured Patient Reality** (extracted facts, exactly as stated, with evidence pointers). The right column represents **Considerations to Confirm** (the AI’s clinical synthesis, differentials, and reasoning). The tone is quiet, authoritative, and entirely focused on reducing cognitive load.
+
+### 2. What Survives From The Screenshot
+*   **The Left/Right Split:** The fundamental architecture of "What We Know" vs. "Synthesis" is correct and survives.
+*   **The Categorized Left Side:** Grouping by `SOCIAL CONTEXT` and `SYMPTOMS` is excellent for scannability.
+*   **Evidence Pointers:** The `Evidence: turn-002` lines are critical for trust and must remain, though their styling will be refined.
+*   **The Tripartite Reasoning Structure:** The `Supports`, `Against`, and `Unknowns` buckets on the right side are the strongest part of the UX and will be the anchor of the right column.
+
+### 3. What Gets Softened Or Deleted
+*   **Heavy Card Borders (Left Side):** The screenshot uses individual bordered boxes for every single symptom. This creates a "settings menu" feel and adds massive visual noise. We will soften this to a clean list separated by subtle 1px gray lines or just whitespace.
+*   **The "SAME 1→1" Movement Chips:** Delete these entirely. They feel like a stock ticker or a machine learning debug view. The clinician cares about the *current* clinical picture, not the delta of the AI's internal ranking between conversational turns.
+*   **Heavy Black/Gray Pills:** The solid black `present` and gray `absent` pills are too visually dominant. They draw the eye away from the actual clinical text. We will shift to semantic, muted colors.
+
+### 4. Detailed Artifact Spec
+
+**Overall Frame:**
+A single large white container with a subtle drop shadow (`shadow-sm`), rounded corners (`rounded-xl`), and a 1px light gray border. Inside, a vertical 1px gray divider splits the card 40% (Left) / 60% (Right).
+
+**Left-Side Anatomy (Structured Patient Reality):**
+*   **Header:** `What We Know` (14px, bold, dark gray).
+*   **Categories:** `SOCIAL CONTEXT`, `REPORTED SYMPTOMS`, `KEY NEGATIVES`. (11px, uppercase, tracking-wider, medium gray).
+*   **Row Anatomy:** Flat rows, no individual borders.
+    *   **Title Line:** The symptom/fact (e.g., "Cough pattern"). 13px, medium weight.
+    *   **Value Line:** Appears directly below the title if detail exists (e.g., "Bursts with intermittent relative calm"). 13px, regular weight, slightly lighter text.
+    *   **Evidence Line:** Inline with the title, pushed to the right edge. `[Turn 14]`. 11px, light gray, clickable (hover state underlines it).
+    *   **State Pill:** Inline with the title, next to the evidence. Soft styling (detailed in Section 5).
+
+**Right-Side Anatomy (Considerations to Confirm):**
+*   **Header:** `Considerations to Confirm` (14px, bold, dark gray).
+*   **Candidate Card Anatomy:** Each differential gets a soft gray background block (`bg-gray-50`), rounded corners, no border.
+    *   **Rank & Title:** `#1 Acute bronchitis` (14px, bold).
+    *   **Confidence:** A small pill next to the title: `High match`, `Medium match`.
+    *   **Reasoning Lists:** Three distinct lists (`Supports`, `Against`, `Unknowns`).
+    *   **Suggested Next Question:** A dedicated, slightly highlighted block at the bottom of the right column (outside the individual candidate cards) that synthesizes the unknowns into the single highest-yield question to ask the patient next.
+
+### 5. Visual Language For State And Reasoning
+
+You mentioned wanting green up arrows and red down arrows. We will use them, but we must execute them with *clinical restraint*. If they are too bright or thick, the UI looks like a crypto exchange.
+
+**Left Side: State Pills**
+*   `Present`: Soft blue background (`bg-blue-50`), dark blue text (`text-blue-700`). No icon.
+*   `Absent`: Soft red background (`bg-red-50`), dark red text (`text-red-700`). No icon.
+*   *Why:* Blue is a standard, calm medical color for "noted/positive finding" without implying "good" (green) or "bad" (red). Red is standard for "denies/negative finding".
+
+**Right Side: Reasoning Glyphs (The Arrows)**
+Instead of standard bullet points, we use semantic typographic glyphs for the lists.
+*   **Supports:** Uses a muted green up-arrow.
+    *   *Glyph:* `↑` (Unicode U+2191)
+    *   *Styling:* 12px, `text-emerald-600`, medium weight.
+    *   *Example:* `↑ URI-like prodrome preceded cough`
+*   **Against:** Uses a muted red down-arrow.
+    *   *Glyph:* `↓` (Unicode U+2193)
+    *   *Styling:* 12px, `text-rose-600`, medium weight.
+    *   *Example:* `↓ No exertional dyspnea reported`
+*   **Unknowns:** Uses an amber hollow circle or question mark.
+    *   *Glyph:* `○` (Unicode U+25CB) or `?`
+    *   *Styling:* 12px, `text-amber-600`, medium weight.
+    *   *Example:* `○ Fever/chills severity`
+
+*Design Note:* By using standard text glyphs rather than heavy SVG icons, the arrows act as scannable bullet points rather than overwhelming UI elements.
+
+### 6. Filled Example Content
+
+**LEFT COLUMN (What We Know)**
+
+**SOCIAL CONTEXT**
+*   Care seeking prompted by spouse `[Turn 02]` `Present`
+
+**REPORTED SYMPTOMS**
+*   Cough `[Turn 02]` `Present`
+*   Cough pattern `[Turn 14]` `Present`
+    *   *Bursts with intermittent relative calm*
+*   Cough worse at night `[Turn 16]` `Present`
+*   Cough worsens when lying down `[Turn 16]` `Present`
+*   Scratchy throat `[Turn 04]` `Present`
+*   Sputum color `[Turn 10]` `Present`
+    *   *Mostly yellow; possibly green once*
+
+**KEY NEGATIVES**
+*   Hemoptysis (blood in sputum) `[Turn 12]` `Absent`
+
+---
+
+**RIGHT COLUMN (Considerations to Confirm)**
+
+**#1 Acute bronchitis (viral or post-infectious)** `High Match`
+*   `↑` URI-like prodrome (scratchy throat) preceded cough
+*   `↑` Intermittent productive sputum (yellow)
+*   `↓` Exertional dyspnea needs alternative causes excluded
+*   `○` Vitals (RR, O2 sat) and lung exam findings
+
+**#2 Community-acquired pneumonia** `Medium Match`
+*   `↑` Productive sputum (yellow/green)
+*   `↑` Persistent cough
+*   `↓` No documented fever or systemic symptoms
+*   `↓` No hemoptysis reported
+*   `○` Pleuritic chest pain, rigors
+
+**#3 GERD-induced cough** `Low Match`
+*   `↑` Cough worsens when lying down
+*   `↑` Cough worse at night
+*   `↓` Sputum production makes pure GERD less likely
+*   `○` History of heartburn or acid taste
+
+**Highest Yield Next Question:**
+"Have you been checking your temperature at home, and have you felt any shortness of breath when walking around the house?"
+
+### 7. Slide Callout Targets
+When placing this on Slide 8, use presentation arrows/callouts pointing to these specific innovations:
+1.  **Point to the `[Turn 14]` evidence link:** "100% Traceability: Clinicians never have to trust a hallucination; every fact links to the exact transcript moment."
+2.  **Point to the `↑` and `↓` reasoning lists:** "Transparent Logic: The AI doesn't just give an answer; it argues with itself, showing what fits and what doesn't."
+3.  **Point to the `Highest Yield Next Question` block:** "Actionable Handoff: The brief ends exactly where the clinician begins—with the missing pieces."
+
+### 8. HTML Build Notes
+*   **Typography:** Inter or a similar clean sans-serif.
+*   **Text Sizes:** Base text is 13px. Headers are 14px. Metadata (evidence, categories) is 11px. Do not go larger; clinical interfaces require density.
+*   **Spacing Rhythm:** 
+    *   `gap-2` (8px) between rows on the left.
+    *   `gap-4` (16px) between candidate cards on the right.
+    *   `gap-1` (4px) between bullet points inside the reasoning lists.
+*   **Padding:** The main left/right columns should have `p-6` (24px) to breathe.
+*   **Truncation:** If a value line on the left exceeds two lines, truncate with an ellipsis. The clinician can hover to see the full text.
+*   **Density Guardrails:** Limit the right side to a maximum of 3 candidate cards. If there are more, hide them behind a "View 2 more unlikely considerations" text link. Limit bullet points under Supports/Against to a maximum of 3 each to prevent wall-of-text syndrome.
+
+### 9. What Not To Do
+*   **Do not use primary colors.** No `#FF0000` red or `#00FF00` green. Use Tailwind's `rose-600` and `emerald-600`.
+*   **Do not put boxes inside boxes.** The right-side cards should just be soft background colors (`bg-gray-50`), not bordered boxes with drop shadows inside the main bordered box.
+*   **Do not hide the "Unknowns".** It is tempting to only show what the AI knows. Highlighting what is *missing* is the primary value-add for a clinician preparing to walk into the exam room.

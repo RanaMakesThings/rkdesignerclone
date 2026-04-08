@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox - Adaptive Clinical Interviewer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1920px;
+            height: 1080px;
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfd;
+            color: #111827;
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* Header Section */
+        .header {
+            padding: 80px 100px 40px 100px;
+            max-width: 1600px;
+        }
+
+        .h1 {
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            color: #111827;
+        }
+
+        .h1 .vox {
+            color: #2b827e;
+        }
+
+        .subtext {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #4b5563;
+            max-width: 1450px;
+        }
+
+        /* Main Diagram Area */
+        .diagram-area {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            margin-top: 20px;
+        }
+
+        /* SVG Connections */
+        .connections {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Left Ribbons */
+        .ribbon {
+            position: absolute;
+            left: 80px;
+            width: 420px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .ribbon svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.02));
+        }
+
+        .ribbon span {
+            padding-left: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #334155;
+        }
+
+        .ribbon.vox span {
+            color: #0f766e;
+            font-weight: 600;
+        }
+
+        /* Center Chamber */
+        .chamber {
+            position: absolute;
+            left: 560px;
+            top: 40px;
+            width: 760px;
+            height: 520px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05);
+            z-index: 5;
+        }
+
+        .chamber-header {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+
+        .vox-logo {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2b827e;
+            letter-spacing: -0.05em;
+            line-height: 1;
+        }
+
+        .chamber-subtitle {
+            font-size: 16px;
+            font-weight: 500;
+            color: #64748b;
+            margin-top: 8px;
+        }
+
+        /* New Center Object: Case Frame */
+        .case-frame-container {
+            position: absolute;
+            top: 130px;
+            left: 100px;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .case-frame {
+            width: 200px;
+            height: 220px;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 16px;
+            box-shadow: 0 12px 24px -4px rgba(43, 130, 126, 0.15), 0 4px 8px -4px rgba(43, 130, 126, 0.1);
+            border: 1px solid #cbd5e1;
+            border-top: 6px solid #2b827e;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+        }
+
+        .cf-header {
+            width: 65%;
+            height: 12px;
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .cf-body {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        .cf-line {
+            height: 8px;
+            border-radius: 4px;
+        }
+
+        .cf-line.full {
+            width: 100%;
+            background: #e2e8f0;
+        }
+
+        .cf-line.partial {
+            width: 75%;
+            background: #2b827e;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cf-line.partial::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+            animation: shimmer 2.5s infinite;
+        }
+
+        .cf-line.empty {
+            width: 90%;
+            border: 2px dashed #cbd5e1;
+            background: transparent;
+            height: 4px;
+        }
+
+        @keyframes shimmer {
+            100% { left: 200%; }
+        }
+
+        .center-label {
+            margin-top: 20px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #334155;
+            text-align: center;
+            letter-spacing: 0.01em;
+        }
+
+        /* Right Rails */
+        .rails-container {
+            position: absolute;
+            top: 112px;
+            right: 60px;
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+        }
+
+        .rails-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 16px;
+            text-align: left;
+            padding-left: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .rail {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 30px;
+            padding: 16px 24px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+            margin-bottom: 24px;
+        }
+
+        .rail:last-child {
+            margin-bottom: 0;
+        }
+
+        .rail .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #2b827e;
+        }
+
+        /* Far-right Output Card */
+        .output-container {
+            position: absolute;
+            right: 100px;
+            top: 120px;
+            width: 320px;
+            z-index: 10;
+        }
+
+        .output-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .output-card-stack {
+            position: relative;
+            width: 100%;
+            height: 360px;
+        }
+
+        .output-card-back {
+            position: absolute;
+            top: 16px;
+            left: -16px;
+            width: 100%;
+            height: 100%;
+            background: #1e4b4a;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .output-card-front {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-left: 6px solid #2b827e;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            padding: 36px 28px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .skel-line {
+            height: 10px;
+            background: #f1f5f9;
+            border-radius: 5px;
+        }
+
+        .skel-line.w-80 { width: 80%; }
+        .skel-line.w-100 { width: 100%; }
+        .skel-line.w-60 { width: 60%; }
+        .skel-line.w-40 { width: 40%; }
+        .skel-line.w-90 { width: 90%; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="h1"><span class="vox">Vox</span> is the adaptive interviewing system that takes on the<br>hard clinical reasoning work needed to turn patient story<br>into a clinician-grade starting point.</div>
+        <div class="subtext">
+            Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+            By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>what still needs verification before the visit begins.
+        </div>
+    </header>
+
+    <div class="diagram-area">
+        
+        <!-- SVG Connections -->
+        <svg class="connections" viewBox="0 0 1920 600" xmlns="http://www.w3.org/2000/svg">
+            <!-- Ribbons to Case Frame -->
+            <path d="M 500 124 C 580 124, 580 260, 660 260" fill="none" stroke="#cbd5e1" stroke-width="4" opacity="0.8" stroke-linecap="round"/>
+            <path d="M 500 212 C 580 212, 580 280, 660 280" fill="none" stroke="#99f6e4" stroke-width="4" opacity="0.9" stroke-linecap="round"/>
+            <path d="M 500 300 C 580 300, 580 300, 660 300" fill="none" stroke="#cbd5e1" stroke-width="4" opacity="0.8" stroke-linecap="round"/>
+            <path d="M 500 388 C 580 388, 580 320, 660 320" fill="none" stroke="#99f6e4" stroke-width="4" opacity="0.9" stroke-linecap="round"/>
+            <path d="M 500 476 C 580 476, 580 340, 660 340" fill="none" stroke="#cbd5e1" stroke-width="4" opacity="0.8" stroke-linecap="round"/>
+
+            <!-- Case Frame to Rails -->
+            <path d="M 860 280 C 920 280, 920 220, 980 220" fill="none" stroke="#ccfbf1" stroke-width="6" opacity="0.9" stroke-linecap="round"/>
+            <path d="M 860 300 C 920 300, 920 300, 980 300" fill="none" stroke="#ccfbf1" stroke-width="6" opacity="0.9" stroke-linecap="round"/>
+            <path d="M 860 320 C 920 320, 920 380, 980 380" fill="none" stroke="#ccfbf1" stroke-width="6" opacity="0.9" stroke-linecap="round"/>
+
+            <!-- Rails to Output Card -->
+            <path d="M 1260 220 C 1380 220, 1380 300, 1500 300" fill="none" stroke="#ccfbf1" stroke-width="6" opacity="0.9" stroke-linecap="round"/>
+            <path d="M 1260 300 C 1380 300, 1380 300, 1500 300" fill="none" stroke="#ccfbf1" stroke-width="6" opacity="0.9" stroke-linecap="round"/>
+            <path d="M 1260 380 C 1380 380, 1380 300, 1500 300" fill="none" stroke="#ccfbf1" stroke-width="6" opacity="0.9" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Left Ribbons -->
+        <div class="ribbon patient" style="top: 92px;">
+            <svg viewBox="0 0 420 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2 L400 2 L418 32 L400 62 L20 62 L38 32 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+            </svg>
+            <span>My back has been hurting...</span>
+        </div>
+        
+        <div class="ribbon vox" style="top: 180px;">
+            <svg viewBox="0 0 420 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2 L400 2 L418 32 L400 62 L20 62 L38 32 Z" fill="#f0fdfa" stroke="#5eead4" stroke-width="2"/>
+            </svg>
+            <span>Vox: What makes it worse?</span>
+        </div>
+
+        <div class="ribbon patient" style="top: 268px;">
+            <svg viewBox="0 0 420 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2 L400 2 L418 32 L400 62 L20 62 L38 32 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+            </svg>
+            <span>It's worse in the morning.</span>
+        </div>
+
+        <div class="ribbon vox" style="top: 356px;">
+            <svg viewBox="0 0 420 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2 L400 2 L418 32 L400 62 L20 62 L38 32 Z" fill="#f0fdfa" stroke="#5eead4" stroke-width="2"/>
+            </svg>
+            <span>Vox: When did this start?</span>
+        </div>
+
+        <div class="ribbon patient" style="top: 444px;">
+            <svg viewBox="0 0 420 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2 L400 2 L418 32 L400 62 L20 62 L38 32 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+            </svg>
+            <span>Started last Tuesday.</span>
+        </div>
+
+        <!-- Center Chamber -->
+        <div class="chamber">
+            <div class="chamber-header">
+                <div class="vox-logo">Vox</div>
+                <div class="chamber-subtitle">Adaptive clinical interviewer</div>
+            </div>
+
+            <!-- New Center Object: Case Frame -->
+            <div class="case-frame-container">
+                <div class="case-frame">
+                    <div class="cf-header"></div>
+                    <div class="cf-body">
+                        <div class="cf-line full"></div>
+                        <div class="cf-line full"></div>
+                        <div class="cf-line partial active"></div>
+                        <div class="cf-line empty"></div>
+                    </div>
+                </div>
+                <div class="center-label">Adaptive interview loop</div>
+            </div>
+
+            <!-- Right Rails -->
+            <div class="rails-container">
+                <div class="rails-title">Clinical reasoning + medical knowledge</div>
+                <div class="rail"><span class="dot"></span>What matters</div>
+                <div class="rail"><span class="dot"></span>What connects</div>
+                <div class="rail"><span class="dot"></span>What still needs verification</div>
+            </div>
+        </div>
+
+        <!-- Far-right Output Card -->
+        <div class="output-container">
+            <div class="output-title">Clinician-grade starting point</div>
+            <div class="output-card-stack">
+                <div class="output-card-back"></div>
+                <div class="output-card-front">
+                    <div class="skel-line w-80"></div>
+                    <div class="skel-line w-100"></div>
+                    <div class="skel-line w-90"></div>
+                    <div style="height: 12px;"></div>
+                    <div class="skel-line w-60"></div>
+                    <div class="skel-line w-100"></div>
+                    <div class="skel-line w-80"></div>
+                    <div style="height: 12px;"></div>
+                    <div class="skel-line w-40"></div>
+                    <div class="skel-line w-90"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

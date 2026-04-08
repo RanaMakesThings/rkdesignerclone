@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designer slide-11 report</title>
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --panel: #ffffff;
+        --text: #12202f;
+        --muted: #617286;
+        --line: #dbe3ec;
+        --accent: #4a89c8;
+        --accent-soft: #eef5fc;
+        --shadow: 0 16px 40px rgba(18, 32, 47, 0.08);
+        --radius: 22px;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 32px;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+      .page {
+        max-width: 1380px;
+        margin: 0 auto;
+      }
+      .hero {
+        padding: 30px 32px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: radial-gradient(circle at top right, rgba(74, 137, 200, 0.09), transparent 32%), var(--panel);
+        box-shadow: var(--shadow);
+      }
+      .eyebrow {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 12px 0 0;
+        font-size: 48px;
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+      .summary {
+        margin-top: 14px;
+        max-width: 940px;
+        font-size: 19px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .file-chip, .mini-chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 9px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .file-chip:hover { border-color: var(--accent); color: var(--accent); }
+      .grid {
+        display: grid;
+        gap: 20px;
+        margin-top: 24px;
+      }
+      .grid.context {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .grid.visuals {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .grid.summary {
+        grid-template-columns: 1.2fr 1fr 1fr;
+      }
+      .card, .step {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+      .card {
+        padding: 22px 24px;
+      }
+      .step {
+        margin-top: 22px;
+        overflow: hidden;
+      }
+      .step-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 20px 24px;
+        border-bottom: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(238, 245, 252, 0.68), rgba(255,255,255,0.98));
+      }
+      .step-index {
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .step-title {
+        margin-top: 6px;
+        font-size: 26px;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+      }
+      .step-body {
+        padding: 24px;
+      }
+      .markdown h1, .markdown h2, .markdown h3, .markdown h4 {
+        margin: 1.1em 0 0.45em;
+        line-height: 1.15;
+      }
+      .markdown h1 { font-size: 30px; }
+      .markdown h2 { font-size: 24px; }
+      .markdown h3 { font-size: 18px; text-transform: none; }
+      .markdown p, .markdown li {
+        font-size: 16px;
+        line-height: 1.55;
+        color: #243344;
+      }
+      .markdown ul, .markdown ol {
+        padding-left: 22px;
+      }
+      .markdown code {
+        padding: 1px 6px;
+        border-radius: 8px;
+        background: #f2f6fa;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.92em;
+      }
+      .markdown pre {
+        padding: 14px 16px;
+        border-radius: 16px;
+        background: #0f1720;
+        color: #eff6ff;
+        overflow: auto;
+      }
+      .artifact-shot {
+        margin: 0;
+        overflow: hidden;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+      .artifact-shot img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .artifact-shot figcaption {
+        padding: 12px 14px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.4;
+      }
+      .missing {
+        padding: 18px;
+        border-radius: 16px;
+        border: 1px dashed var(--line);
+        color: var(--muted);
+        background: #fbfcfe;
+      }
+      .shortlist {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .note {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      .summary-list {
+        display: grid;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .summary-item {
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: #f8fbfe;
+        border: 1px solid var(--line);
+      }
+      .summary-item strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .review-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .review-card {
+        padding: 18px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: #fbfdff;
+      }
+      .review-card h3 {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.1;
+      }
+      .review-card p {
+        margin: 12px 0 0;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #243344;
+      }
+      @media (max-width: 1100px) {
+        .grid.context, .grid.visuals, .grid.summary, .review-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <section class="hero">
+        <div class="eyebrow">Designer Health Slide Report</div>
+        <h1>Slide 10 report</h1>
+        <div class="summary">
+          This report captures the full working pass for slide-11, but it leads with the decision: what happened, what was made, what
+          the three reviewers said, and what happens next.
+        </div>
+        <div class="chips"><span class="mini-chip">Current version: version-000047</span></div>
+        <div class="chips"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/workflow.md">Workflow doc</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/master-slide-specs.md">Master slide specs</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/manifest.json">Slide manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-11/README.md">Slide note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1">Current version dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-11-beachhead-proof.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/briefs/slide-11-beachhead-proof-v1.md">Figure brief</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/ideation/slide-11-beachhead-proof-v1.md">Ideation note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/compositions/slide-11-proof-column-v1.md">Composition note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/render-briefs/slide-11-proof-column-v1.md">Render brief</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1/gemini-image/image-01.jpg">Gemini image</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1/gemini-html/generated.html">Gemini HTML</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1/gemini-html/preview.png">Gemini HTML preview</a></div>
+      </section>
+
+      <section class="grid summary">
+        <article class="card">
+          <div class="eyebrow">Executive Summary</div>
+          <div class="markdown"><p>_No assessment synthesis found._</p></div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">What Was Made</div>
+          <div class="summary-list">
+            <div class="summary-item"><strong>Visual branches</strong><span class="mini-chip">Gemini image branch</span><span class="mini-chip">Gemini HTML branch</span></div>
+            <div class="summary-item"><strong>Reviews run</strong></div>
+            <div class="summary-item"><strong>Repair consults</strong></div>
+            <div class="summary-item"><strong>Latest micro-pass</strong>No micro-pass recorded</div>
+            <div class="summary-item"><strong>Approval state</strong>No approved micro-pass yet</div>
+            <div class="summary-item"><strong>Current native spec</strong>missing</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">What Happens Next</div>
+          <div class="markdown"><p>_No next-pass plan found._</p></div>
+        </article>
+      </section>
+
+      <section class="step" id="assessments">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Assessments</div>
+            <div class="step-title">Three-review readout</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="review-grid">
+            <article class="review-card">
+              <h3>Codex</h3>
+              <p>No Codex review summary found.</p>
+              
+            </article>
+            <article class="review-card">
+              <h3>Gemini</h3>
+              <p>No Gemini review summary found.</p>
+              
+            </article>
+            <article class="review-card">
+              <h3>Anthropic</h3>
+              <p>No Anthropic review summary found.</p>
+              
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="step" id="repair">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Repair</div>
+            <div class="step-title">What the three tools said to do next</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="review-grid">
+            <article class="review-card">
+              <h3>Codex repair</h3>
+              <p>No Codex repair summary found.</p>
+              
+            </article>
+            <article class="review-card">
+              <h3>Gemini repair</h3>
+              <p>No Gemini repair summary found.</p>
+              
+            </article>
+            <article class="review-card">
+              <h3>Anthropic repair</h3>
+              <p>No Anthropic repair summary found.</p>
+              
+            </article>
+          </div>
+          <div class="card" style="margin-top:16px;">
+            <div class="eyebrow">Repair synthesis</div>
+            <div class="markdown"><p>_No repair synthesis found._</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid context">
+        <article class="card">
+          <div class="eyebrow">Lead In</div>
+          <div class="markdown"><h2>Slide 9 — Recovered visit time creates real capacity</h2>
+<h3>Slide job</h3>
+<p>Convert product/category logic into business consequence.</p>
+<h3>Core claim</h3>
+<p>**Recovered time matters when it becomes realized capacity.**</p>
+<h3>What the audience should believe after this slide</h3>
+<p>**If Vox produces even modest realized throughput gains, the economics can be meaningful enough to justify spend and pilot interest.**</p>
+<h3>Strategic role in deck</h3>
+<p>This is the economics bridge. It should feel like operating leverage, not spreadsheet theater.</p>
+<h3>Current running copy plan</h3>
+<p>**Header** Recovered visit time creates real capacity.</p>
+<p>**Subheader** When recovered minutes become completed visits, the impact is meaningful.</p>
+<p>**Hero line** +1 visit / provider / day</p>
+<p>**Hero value** $11,000 / year</p>
+<p>**Secondary line** ~$917 / month break-even spend / provider</p>
+<p>**Bottom line** Recovered time matters when it becomes completed visits.</p>
+<h3>Current running figure plan</h3>
+<p>A hero economics treatment with scenario support, not a dense ROI worksheet.</p>
+<h3>Why this works</h3>
+<p>It focuses on one disciplined thought:</p>
+<ul><li>if recovered time converts into completed visits, even modest gains matter economically</li></ul>
+<p>That is the right business consequence for this deck.</p>
+<h3>Assessment</h3>
+<p>This slide is structurally in a good place. The main risk is tone: it can become either too spreadsheet-like or too soft. The current direction is strong if kept controlled.</p>
+<h3>What to avoid</h3>
+<ul><li>dense ROI tables</li><li>implying all time saved is automatically monetized</li><li>TAM creep</li><li>finance memo energy</li></ul>
+<h3>Current status</h3>
+<p>**Strong and near locked conceptually.**</p>
+<p>---</p></div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">Current Slide</div>
+          <div class="markdown"><h2>Slide 10 — Start where throughput proof is fastest</h2>
+<h3>Slide job</h3>
+<p>Show where to prove the value claim first.</p>
+<h3>Core claim</h3>
+<p>**The right first market is the one where throughput proof is fastest.**</p>
+<h3>What the audience should believe after this slide</h3>
+<p>**The team has a disciplined and testable plan for where to prove Vox first, and the proof criteria are tightly linked to the product’s value claim.**</p>
+<h3>Strategic role in deck</h3>
+<p>This is the beachhead / proof-design slide. It is not a TAM slide. It is not an eventual expansion slide. It is not “big market” theater.</p>
+<h3>Current running copy plan</h3>
+<p>**Header** Start where throughput proof is fastest.</p>
+<p>Support idea:</p>
+<ul><li>visit pressure is visible</li><li>buying is concentrated</li><li>deployment friction is low</li><li>pilot outcomes can be measured quickly</li></ul>
+<h3>Current running figure plan</h3>
+<p>A disciplined proof-path / beachhead selection treatment.</p>
+<p>The essential logic should be:</p>
+<ul><li>choose first market for speed and clarity of proof</li><li>not for abstract market size</li></ul>
+<h3>Assessment</h3>
+<p>This slide is in a good conceptual place. Its main risk is becoming generic market-selection language.</p>
+<h3>What to avoid</h3>
+<ul><li>beachhead buzzwords without readout logic</li><li>broad expansion talk</li><li>overcommitting to too many settings</li><li>market-size language overshadowing proof logic</li></ul>
+<h3>Current status</h3>
+<p>**Near locked.**</p>
+<p>---</p></div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">What Comes Next</div>
+          <div class="markdown"><h2>Slide 11 — Built by people who understand the visit</h2>
+<h3>Slide job</h3>
+<p>Compress execution trust.</p>
+<h3>Core claim</h3>
+<p>**This team understands the visit deeply enough to build the right product and deploy it credibly.**</p>
+<h3>What the audience should believe after this slide</h3>
+<p>**These people seem specifically suited to build this company, not just impressive in general.**</p>
+<h3>Strategic role in deck</h3>
+<p>This is not a résumé slide. It is an execution-risk reduction slide.</p>
+<h3>Current running copy plan</h3>
+<p>**Header** Built by people who understand the visit.</p>
+<p>**Subheader** Clinical insight, product judgment, and deployment realism.</p>
+<h3>Current running figure plan</h3>
+<p>Founder grid with one risk-reduction line per founder.</p>
+<p>The governing rule should be:</p>
+<p>**[what this person understands or can do] → [which Vox execution risk it reduces]**</p>
+<h3>Assessment</h3>
+<p>The structure is right. The slide is not finished because the actual founder lines matter a lot here. If those lines are generic, the slide weakens late.</p>
+<h3>What to avoid</h3>
+<ul><li>prestige parade</li><li>vague founder adjectives</li><li>generic bios</li><li>logos-for-the-sake-of-logos</li></ul>
+<h3>Current status</h3>
+<p>**Structurally clear; pending final founder wording.**</p>
+<p>---</p></div>
+        </article>
+      </section>
+
+      <section class="step" id="workflow">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Workflow</div>
+            <div class="step-title">Current project methodology</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="markdown"><h1>Designer Deck Workflow</h1>
+<p>Current working methodology for building Designer slide figures inside this repo.</p>
+<p>This is the project-local source of truth for how we actually run the process. The imported manual at <code>inputs/pitch_deck_figure_workflow_manual.md</code> remains the upstream reference, but this file reflects the hardened process after real deck passes in this repo.</p>
+<h2>Purpose</h2>
+<p>Use a repeatable loop that keeps strategy, figure decisions, model comparison, and review artifacts organized under one project root.</p>
+<p>The goal is not just to make a figure. The goal is to preserve:</p>
+<ul><li>why the slide exists</li><li>what the figure is trying to prove</li><li>what was tried</li><li>what won</li><li>how to understand the full pass later without reconstructing context</li></ul>
+<p>Current execution policy:</p>
+<p>challenge branches</p>
+<p><code>Gemini image + Gemini HTML</code></p>
+<p>HTML/SVG/PNG artifact set</p>
+<ul><li>use multiple models for high-level idea generation, critique, and occasional</li><li>once a visual direction is locked, the main execution lane becomes:</li><li>use other model-generation branches only when:</li><li>the Gemini lane is stuck</li><li>we need a deliberate challenge branch</li><li>we want a one-off sanity check on a hard slide</li><li>after the Gemini lane is stable, promote the winner into the canonical native</li></ul>
+<h2>Project-first rule</h2>
+<p>All active deck work should live under <code>projects/designer-health/</code>.</p>
+<p>The key folders are:</p>
+<ul><li><code>deck-spec.json</code></li><li><code>master-slide-specs.md</code></li><li><code>figure-companion.md</code></li><li><code>slide-packets/</code></li><li><code>figures/briefs/</code></li><li><code>figures/ideation/</code></li><li><code>figures/compositions/</code></li><li><code>figures/render-briefs/</code></li><li><code>figures/specs/</code></li><li><code>prompts/</code></li><li><code>slide-figures/</code></li></ul>
+<p>Generated runtime artifacts may still land in <code>output/</code>, but stamped slide-review artifacts should resolve through the manifest-backed <code>slide-figures/slide-XX/</code> tree.</p>
+<p>Each stamped slide directory is manifest-backed. The root stays intentionally clean and keeps only the current selected figure projection plus version history:</p>
+<ul><li><code>manifest.json</code></li><li><code>versions/</code></li><li><code>slide-XX--version-YYYYYY.html</code></li><li><code>slide-XX--version-YYYYYY.svg</code></li><li><code>slide-XX--version-YYYYYY.png</code></li><li>optional alternate raster like <code>slide-XX--version-YYYYYY.jpg</code> or <code>.webp</code></li></ul>
+<p>The current selected version is projected into the slide root for compatibility and fast browsing. Historical and draft candidates live under <code>versions/version-*--&lt;slug&gt;/</code>. Slide-level notes and change requests live under <code>slide-notes/&lt;slide-dir&gt;/</code>, and one-slide HTML reports live under <code>slide-reports/&lt;slide-dir&gt;.html</code>.</p>
+<p>Use canonical stamped review directories inside the current selected version bundle:</p>
+<ul><li><code>gemini-review/</code></li><li><code>anthropic-review/</code></li><li><code>gemini-repair/</code></li><li><code>anthropic-repair/</code></li></ul>
+<p>When re-running a review or repair consult for the same current pass, overwrite the canonical directory instead of inventing a new suffixed folder name.</p>
+<h2>Standard artifact chain per slide</h2>
+<p>Every fully worked slide should have:</p>
+<ol><li>slide packet</li><li>figure brief</li><li>ideation note</li><li>composition note</li><li>render brief</li><li>Gemini image branch for active visual iteration</li><li>Gemini HTML branch for active editable iteration</li><li>optional side branches from other providers only when justified</li><li>three-review assessment set</li><li>assessment synthesis</li><li>repair consultation set when the pass fails</li><li>repair synthesis and next-pass plan when the pass fails</li><li>final native figure spec</li><li>stamped native export</li><li>final HTML slide report</li></ol>
+<h2>Slide fine-tuning mode</h2>
+<p>After a slide is stamped, later chats may enter a slide-local fine-tuning mode instead of replaying the full concept workflow.</p>
+<p>Use this mode only when the requested change is polish-level and the current selected direction is still valid.</p>
+<p>The handoff contract for that mode lives in:</p>
+<ul><li><code>projects/designer-health/slide-fine-tuning.md</code></li></ul>
+<p>In fine-tuning mode:</p>
+<p>version</p>
+<p><code>slide-reports/&lt;slide-dir&gt;.html</code>, and the stamped slide note in <code>slide-notes/&lt;slide-dir&gt;/README.md</code></p>
+<ol><li>resolve the official slide through <code>deck-spec.json</code></li><li>read <code>manifest.json</code> inside <code>paths.stampedDir</code> to find the current selected</li><li>inspect <code>deck-report.html</code>, the stamped slide report in</li><li>make the smallest possible change on the correct edit surface:</li></ol>
+<p>a contained HTML delta</p>
+<ul><li>a draft <code>versions/version-*--&lt;slug&gt;/gemini-html/generated.html</code> branch for</li><li>canonical <code>figures/specs/*.json</code> when the slide is spec-driven</li></ul>
+<p>draft is promoted</p>
+<ol><li>refresh the draft bundle&#39;s preview and the mirrored <code>figure.*</code> assets if the</li><li>regenerate the slide report</li><li>regenerate the deck report if the visible official state changed</li></ol>
+<p>Do not reopen ideation, packet writing, or direction selection unless the requested change exposes a structural problem.</p>
+<h2>Slide creation bootstrap</h2>
+<p>When a slide needs a new first draft from the locked Designer shell rather than polish on an existing HTML surface, use the create bootstrap instead of <code>html:edit:run</code> or <code>gemini:html:tune</code>.</p>
+<p>The handoff contract for that mode lives in:</p>
+<ul><li><code>projects/designer-health/slide-creation.md</code></li></ul>
+<p>In create mode:</p>
+<p><code>templates/designer-deck-template-v1/template.html</code></p>
+<p>under <code>versions/version-*/create/</code></p>
+<p>against the seeded shell</p>
+<p>it with <code>slide:versions promote</code></p>
+<ol><li>resolve the slide through <code>deck-spec.json</code></li><li>allocate a draft <code>create-draft</code> version bundle under <code>versions/</code></li><li>seed the version root from</li><li>write <code>slide-notes/&lt;slide&gt;/create-request.md</code> plus a version-local snapshot</li><li>run <code>slide:create:run</code> to fan out the first-pass multimodal HTML search</li><li>leave the winning draft in <code>draft</code> state until a human explicitly promotes</li></ol>
+<p>Lane policy in v1:</p>
+<ul><li><code>html</code>: default first-draft path</li><li><code>hybrid</code>: same HTML bootstrap plus extra reference images/files</li><li><code>native</code>: scaffold-only handoff to the existing native/spec workflow</li></ul>
+<h2>Standard loop</h2>
+<p>Pull the current slide, the lead-in slide, and the next slide from <code>deck-spec.json</code> and sanity-check the human copy in <code>master-slide-specs.md</code>.</p>
+<p>Lock the slide thesis, non-goals, figure job, and figure-specific copy.</p>
+<p>Keep this short and execution-facing.</p>
+<p>Start with <code>figures:ideate</code> against the checked-in brief. For essential slides or when the wrapper is brittle, also gather direct concept sets from GPT-5.4, Claude, and Gemini.</p>
+<p>Do not leave the raw model artifact as the only record. The ideation note should make the distinct concept families obvious and name the current lead direction.</p>
+<p>Compare materially different visual families and choose one.</p>
+<p>Lock the chosen direction before native rendering.</p>
+<p>Use it as the main taste / composition iteration lane.</p>
+<p>Use it as the main editable / structural iteration lane.</p>
+<p>Run <code>html:screenshot</code> on <code>gemini-html/generated.html</code>.</p>
+<p>before broader review or repair. Use it for moves like spacing, position, visibility, size, or one contained structural tweak. Every micro-pass now has two checks:</p>
+<ol><li>Confirm slide context.</li><li>Make or update the slide packet.</li><li>Write the figure brief.</li><li>Run model-backed ideation.</li><li>Synthesize ideation into a checked-in ideation note.</li><li>Write the composition note.</li><li>Write the render brief.</li><li>Build the Gemini image branch.</li><li>Build the Gemini HTML branch.</li><li>Preview Gemini HTML with a PNG.</li><li>If the next move is one concrete local HTML delta, run <code>gemini:html:tune</code></li></ol>
+<p>Do not use it for family changes, semantic rewrites, or broader layout redesigns. The micro-pass draft should live in <code>slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/</code>.</p>
+<ul><li>delta check: did the requested change happen?</li><li>regression check: did anything else break?</li></ul>
+<p>OpenAI or Anthropic generation branches are no longer default per-slide requirements. Use them only for high-level ideas, challenge passes, or blocked Gemini cases.</p>
+<p>Ask for:</p>
+<ol><li>Run side-branch generations only when justified.</li><li>Run the three-review assessment set.</li></ol>
+<p>Save those under the current selected version bundle.</p>
+<ul><li>Codex visual assessment</li><li>Gemini visual assessment</li><li>Anthropic visual assessment</li></ul>
+<p>Summarize:</p>
+<ol><li>Write the assessment synthesis.</li></ol>
+<ul><li>what happened</li><li>what was made</li><li>what each reviewer said</li><li>the consensus</li><li>the final operator decision</li></ul>
+<p>Decide whether the current winner has only polish issues or still has a structural problem. If the issue is structural, reopen the loop and do a deliberate revision pass before promotion.</p>
+<p>Ask Codex, Gemini, and Anthropic what to do next now that the failure class is known.</p>
+<p>Classify the failure and state the exact next move before touching the next revision.</p>
+<p>Native remains the canonical editable asset set: <code>figure.html</code>, <code>figure.svg</code>, and <code>figure.png</code>. Those artifacts stay inside the selected version bundle and are projected to the slide root as <code>slide-XX--version-YYYYYY.html</code>, <code>.svg</code>, and <code>.png</code> when the version is promoted.</p>
+<p>If the pass changed the slide thesis, header, subheader, takeaway, figure role, family recommendation, numbering status, or current build status, update <code>deck-spec.json</code>, <code>master-slide-specs.md</code>, <code>deck-matrix.md</code>, and <code>figure-companion.md</code> in the same turn.</p>
+<p>Write a clean HTML report into <code>slide-reports/slide-XX.html</code> so the whole pass is reviewable in one click.</p>
+<ol><li>Run the loop gate.</li><li>If the pass failed, run the three-tool repair consultation.</li><li>Write the next-pass plan.</li><li>Build and stamp the final native branch after the Gemini lane is stable.</li><li>Sync the deck-level source docs if the slide understanding changed.</li><li>Generate the final slide report.</li></ol>
+<h2>Required decisions during the loop</h2>
+<p>direction is locked</p>
+<p>delta before the pass goes back through broader review</p>
+<p>break</p>
+<p>until the regression gate runs again</p>
+<p>Gemini lane is stable</p>
+<p>defaults</p>
+<p>Codex, Gemini, and Anthropic</p>
+<p>understanding</p>
+<ul><li>packet first, not prompt-first wandering</li><li>slide packet before prompt iteration</li><li>one stamped slide folder per slide</li><li>Gemini image + Gemini HTML are now the default active execution lane once a</li><li><code>gemini:html:tune</code> is now the default micro-loop for one concrete Gemini HTML</li><li>a micro-pass can promote only when:</li><li>both delta judges say the requested change was applied</li><li>GPT and Claude regression reviews both clear it</li><li>a checked-in Codex/operator micro-review note clears it</li><li>any single reviewer can block promotion if they identify a concrete visual</li><li>any manual edit to <code>generated.html</code> invalidates prior micro-pass approval</li><li>native is still the canonical final asset, but it is promoted after the</li><li>non-Gemini generation branches are optional challenge branches, not routine</li><li>every mature pass gets three visual reviews:</li><li>every mature pass gets an explicit assessment synthesis</li><li>every pass must go through a loop gate before promotion</li><li>deck-level docs must be updated when a hardened pass changes the slide</li><li>report generation at the end of the pass</li></ul>
+<h2>Loop gate</h2>
+<p>Ask this after the first comparison pass:</p>
+<p>now stale?</p>
+<ul><li>is the winner missing a required object or relationship?</li><li>is the figure still unclear in its 3-second read?</li><li>is the hierarchy still wrong?</li><li>does the winner still disagree with the slide job in a meaningful way?</li><li>did the pass change the slide meaning or family enough that the deck docs are</li></ul>
+<p>If the answer is yes to any of those, loop again.</p>
+<p>If the answer is no and the remaining issues are polish only, promote.</p>
+<p>For figure-essential slides, prefer at least one critique and one deliberate revision unless the first pass is already clearly stable.</p>
+<p>Also run this visual sanity check before promotion:</p>
+<p>visibly justified</p>
+<p>ambiguous</p>
+<p><code>xml</code></p>
+<p>composition rather than a cropped fragment</p>
+<ul><li>no new object should cover key copy or structure underneath it</li><li>no semantic object should appear twice unless duplication is intentional and</li><li>no directional marker or arrowhead should disappear or become visually</li><li>no text should be clipped, cropped, or partially missing</li><li>no stray rendering artifact should be visible, including leaked text like</li><li>if a section was removed, the slide must still read as a resolved standalone</li></ul>
+<p>Also ask:</p>
+<p>noise?</p>
+<p>first, or has it crossed into a broader layout / family / semantic problem?</p>
+<ul><li>is a side-model generation branch actually helping, or is it just creating</li><li>is this a concrete HTML delta that should go through <code>gemini:html:tune</code></li></ul>
+<p>If a branch is not meaningfully helping, archive it out of the primary comparison set.</p>
+<h2>Formal assessment method</h2>
+<p>Use this exact order:</p>
+<p>Write a blunt local assessment based on the actual rendered image.</p>
+<p>Use <code>gemini:review</code> with the stamped image and the checked-in critique prompt.</p>
+<p>Use <code>anthropic review</code> with the same stamped image and prompt.</p>
+<p>Write one checked-in synthesis note that captures:</p>
+<ol><li>Codex visual assessment</li><li>Gemini visual assessment</li><li>Anthropic visual assessment</li><li>Assessment synthesis</li></ol>
+<ul><li>what happened</li><li>what was made</li><li>each reviewer verdict</li><li>unique blocker findings</li><li>the consensus</li><li>the final operator decision</li></ul>
+<p>The operator decision is not a vote count. It is a synthesis. But the point of the three-review set is to make weak self-approval much harder.</p>
+<p>Unique blocker findings must be preserved even when only one reviewer catches them. Do not omit a concrete severe finding just because the other reviewers missed it.</p>
+<h2>Formal next-step method when a pass fails</h2>
+<p>When the slide does not clear the loop gate, classify the failure before revising:</p>
+<p>Small spacing, sizing, or emphasis issues. Same concept, same family.</p>
+<p>The right ingredients exist, but their arrangement or hierarchy is wrong.</p>
+<p>The slide is readable but the figure is proving the wrong thing or duplicating meaning badly.</p>
+<p>The chosen visual family is wrong for the slide job.</p>
+<ul><li><code>polish</code></li><li><code>layout</code></li><li><code>semantic</code></li><li><code>family</code></li></ul>
+<p>Then run a separate repair consultation.</p>
+<p>This is not the same thing as the review prompt.</p>
+<p>The review prompt asks:</p>
+<ul><li>what is wrong</li><li>whether it is working</li></ul>
+<p>The repair prompt asks:</p>
+<ul><li>what to do next</li><li>whether to stay in the same family</li><li>whether to do one targeted fix or reopen composition</li><li>which exact change should happen before the next render</li></ul>
+<p>Then choose the next move:</p>
+<p>run <code>gemini:html:tune</code> first and only reopen the broader loop if that fails</p>
+<p>do one targeted revision pass</p>
+<p>write 2 to 3 concrete revision options in the composition note and choose one</p>
+<p>update the slide packet before rendering again</p>
+<p>stop iterating inside the same family and reopen composition</p>
+<ul><li>if the request is one contained HTML delta inside the current family:</li><li>if all three reviewers agree on one concrete fix:</li><li>if all three agree the slide is broken, but disagree on the fix:</li><li>if the reviews expose slide-strategy confusion:</li><li>if the reviews show the family is wrong:</li></ul>
+<p>Do not jump straight from “broken” to “new render” without writing the next move down.</p>
+<h2>How the repair consultation becomes a decision</h2>
+<p>Do not synthesize the repair round loosely. Compare the three repair responses across the same four axes:</p>
+<p>stay in the current family or reopen composition</p>
+<p>targeted revision or broader redesign</p>
+<ul><li>failure class</li><li>family decision:</li><li>fix scope:</li><li>exact next render change</li></ul>
+<p>Then apply this rule:</p>
+<p>take the shared path and write it into <code>next-pass.md</code></p>
+<p>of the same move: take the majority path and note the dissent in <code>repair-synthesis.md</code></p>
+<p>do not render yet; reopen composition</p>
+<p>update the slide packet before choosing a figure move</p>
+<ul><li>if 3 of 3 agree on family and fix scope:</li><li>if 2 of 3 agree on family and fix scope, and the third is a narrower variant</li><li>if the tools split on family choice:</li><li>if the tools split because the slide thesis itself is unclear:</li></ul>
+<p>The operator decision is still a synthesis, not a vote count. But the synthesis must be traceable to those four axes.</p>
+<h2>Commands</h2>
+<p><code>projects/designer-health/figures/briefs/&lt;brief&gt;.md</code></p>
+<p><code>projects/designer-health/figures/specs/&lt;spec&gt;.json</code></p>
+<p><code>projects/designer-health/figures/specs/&lt;spec&gt;.json --project-root</code> <code>projects/designer-health --slide slide-XX --version-id version-000123 --no-images</code></p>
+<p><code>projects/designer-health/prompts/&lt;prompt&gt;.txt --out</code> <code>projects/designer-health/slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/gemini-image</code></p>
+<p><code>projects/designer-health/prompts/&lt;prompt&gt;.txt --out</code> <code>projects/designer-health/slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/gemini-html</code></p>
+<p><code>projects/designer-health/slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/gemini-html/generated.html</code> <code>--output</code> <code>projects/designer-health/slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/gemini-html/preview.png</code></p>
+<p><code>projects/designer-health/slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/gemini-html</code> <code>--change-file</code> <code>projects/designer-health/slide-notes/slide-XX/fine-tune-request.md</code> <code>--codex-review-file</code> <code>projects/designer-health/slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/gemini-html/tune/&lt;run-id&gt;/&lt;attempt&gt;/codex-micro-review.md</code></p>
+<p><code>--slide slide-XX</code></p>
+<p>requires the checked-in <code>codex-repair.md</code> as the Codex / GPT-5.4 input and writes <code>repair-synthesis.generated.md</code> as a scaffold</p>
+<ul><li>native ideation:</li><li><code>npm run figures:ideate -- --brief</code></li><li>native render:</li><li><code>npm run figures:render -- --spec</code></li><li>native export direct to stamped slide folder:</li><li><code>npm run figures:export -- --spec</code></li><li>versioned slide management:</li><li><code>npm run slide:versions -- create</code></li><li><code>npm run slide:versions -- promote</code></li><li><code>npm run slide:versions -- migrate</code></li><li>Gemini image:</li><li><code>npm run gemini:image -- --prompt-file</code></li><li>Gemini HTML:</li><li><code>npm run gemini:html -- --prompt-file</code></li><li>Gemini HTML preview:</li><li><code>npm run html:screenshot -- --input</code></li><li>finalize a pending micro-pass after writing the Codex/operator note:</li><li><code>npm run gemini:html:tune -- --dir</code></li><li>final slide report:</li><li><code>npm run figures:report -- --project-root projects/designer-health --slide slide-XX</code></li><li>repair loop wrapper:</li><li><code>npm run figures:repair-loop -- --project-root projects/designer-health</code></li><li>notes:</li></ul>
+<h2>Review rules</h2>
+<p>loop gate says the remaining issues are polish-level</p>
+<p>considering the pass complete</p>
+<p>and the relevant tooling docs before moving on</p>
+<ul><li>title and figure should work together, not duplicate badly</li><li>the native branch should always exist before comparison branches</li><li>keep the winner as a canonical spec, not just a stamped image</li><li>do not stop after one pass just because artifacts exist; stop only after the</li><li>if the slide-level pass changes deck-level truth, sync the deck docs before</li><li>if a process improvement appears during a slide pass, update this workflow doc</li></ul>
+<h2>Current known improvements after slide 6</h2>
+<p><code>versions/version-*</code> bundle is better than copying later</p>
+<p>no outer frame, no browser-like margins, full-slide scale</p>
+<p>defer it just to keep the first pass cleaner; that should trigger a reopened loop, not a promotion</p>
+<ul><li>direct export into the current selected version bundle or a draft</li><li>Gemini HTML should be constrained harder:</li><li>final reports should be part of the default loop, not an optional afterthought</li><li>if the brief names a required object or relationship, do not intentionally</li></ul></div>
+        </div>
+      </section>
+
+      <section class="step" id="packet">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 1</div>
+            <div class="step-title">Slide packet</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="markdown"><h1>Slide 11 — Beachhead Proof</h1>
+<h2>Status</h2>
+<p>follows slide <code>10</code> and precedes slide <code>12</code></p>
+<ul><li>current deck numbering: slide 11</li><li>decision state: active packet</li><li>role in deck sequence:</li></ul>
+<h2>Why this slide exists</h2>
+<ul><li>turn the economics claim into a concrete go-to-market choice</li><li>show that the first market is chosen for speed of proof, not abstract size</li><li>define the beachhead by operational shape rather than by a single specialty</li><li>make the beachhead feel product-specific rather than consulting-generic</li><li>define what the first pilot must prove so the market choice feels testable</li></ul>
+<h2>Locked slide thesis</h2>
+<p>The right beachhead is any care setting where Vox can prove real clinical throughput quickly because visit pressure is visible, buying is simple, and deployment friction is low.</p>
+<h2>Zoomed-out deck role</h2>
+<ul><li>slide <code>10</code> says throughput gains matter economically</li><li>slide <code>11</code> says where to prove those gains first in the market</li><li>slide <code>12</code> then asks whether the team is credible enough to execute that plan</li></ul>
+<p>So this slide is the bridge from economics to go-to-market discipline.</p>
+<h2>Slide purpose brief</h2>
+<p>the best first market is not one specialty but a repeatable operating profile: settings where throughput pain is visible, buying is concentrated, and proof shows up quickly in live clinical operations</p>
+<p>the choice should feel like a practical deployment decision, not a category or market-size abstraction</p>
+<p>fails</p>
+<p>workflow startup</p>
+<ul><li>top claim:</li><li>support claim:</li><li>non-goals:</li><li>do not turn this into a TAM, SAM, SOM, or sizing slide</li><li>do not use filter, gate, or funnel clichés unless every simpler composition</li><li>do not make the rationale so generic that it could describe any healthcare</li></ul>
+<h2>Figure job</h2>
+<p>60 to 90 days</p>
+<ul><li>make one beachhead profile explicit: <code>High-throughput groups with simple deployment</code></li><li>keep example settings visible but clearly de-emphasized</li><li>attach three reasons that feel specific to Vox deployment and proof</li><li>make the pilot scorecard concrete enough that investors can imagine the first</li><li>keep the full composition easy to scan in one sweep</li></ul>
+<h2>Locked copy architecture</h2>
+<p><code>Start where throughput proof is fastest.</code></p>
+<p><code>The best first market is any setting with visible visit pressure, simple</code> <code>buying, and low deployment friction.</code></p>
+<p><code>High-throughput groups with simple deployment</code></p>
+<p><code>A profile, not a specialty</code></p>
+<p><code>What the first pilot must prove</code></p>
+<p><code>Pick the profile where proof happens fastest.</code></p>
+<ul><li>header:</li><li>subheader:</li><li>hero beachhead label:</li><li>hero support line:</li><li>example-setting labels:</li><li><code>Primary care</code></li><li><code>GI / gastroenterology</code></li><li><code>Orthopedics</code></li><li><code>Urgent care</code></li><li><code>Multi-site specialty groups</code></li><li>proof reasons:</li><li><code>throughput pain is visible in every clinic day</code></li><li><code>buying and rollout are concentrated</code></li><li><code>pilot outcomes are measurable fast</code></li><li>proof panel title:</li><li>proof panel rows:</li><li><code>patient completion before visit</code></li><li><code>clinician verification time</code></li><li><code>re-asking reduction in the room</code></li><li><code>visit throughput or schedule lift</code></li><li>optional bottom line:</li></ul>
+<h2>Current best direction</h2>
+<ul><li>one dominant highlighted beachhead profile card</li><li>one row or cluster of quiet example-setting cards</li><li>three attached reason tags, rails, or side labels</li><li>one compact proof scorecard nearby</li></ul>
+<p>This is the lead direction. It keeps the market choice explicit without pretending the wedge is locked to a single specialty.</p>
+<h2>Figure directions to explore</h2>
+<p>beachhead profile hero plus pilot proof scorecard</p>
+<p>shape-not-specialty field</p>
+<p>point explicit</p>
+<p>qualifying-conditions strip</p>
+<ul><li>direction 1:</li><li>one blue hero profile card</li><li>faint example-setting cards orbiting or lining up around it</li><li>three attached reasons around the hero card</li><li>separate proof scorecard on the right</li><li>best for clarity and investor readability</li><li>direction 2:</li><li>one dominant profile card in the center</li><li>faint surrounding settings shown as examples, not rejected alternatives</li><li>proof scorecard integrated beneath or beside the hero card</li><li>best if we want the slide to feel more premium and make the cross-specialty</li><li>direction 3:</li><li>horizontal strip anchored by the three qualifying conditions</li><li>example settings appear only after or beneath the conditions</li><li>proof metrics panel on the right</li><li>only worth testing if it stays simpler than a funnel</li></ul>
+<h2>Current read</h2>
+<p>specialty as the whole wedge</p>
+<p>vague market attractiveness</p>
+<ul><li>strategically, the slide should be about proof speed, not just market fit</li><li>the slide should define a repeatable first-market profile, not name one</li><li>the three reasons should stay grounded in deployment and measurement, not</li><li>the proof panel should feel like a real pilot readout, not a generic KPI list</li><li>if the slide starts to resemble a consulting framework, it has failed</li></ul>
+<h2>Visual rules</h2>
+<ul><li>white or warm-light background</li><li>grayscale candidate settings</li><li>one restrained blue accent on the chosen beachhead</li><li>premium deck feel, not sales-ops or consulting template</li><li>strong hierarchy: beachhead first, reasons second, proof panel third</li><li>avoid crowded matrix layouts, scoring grids, or verbose explanation blocks</li><li>avoid layouts that imply only one specialty qualifies</li></ul>
+<h2>Comparison plan</h2>
+<p>beachhead profile hero plus proof scorecard</p>
+<p>varying how explicit or premium the beachhead-profile moment feels</p>
+<ul><li>lead concept:</li><li>challenge concepts:</li><li>shape-not-specialty field</li><li>simplified qualifying-conditions strip</li><li>ask Claude and Gemini for concept comps that preserve the same thesis while</li></ul>
+<h2>Prompting notes for model comparisons</h2>
+<p>the thesis itself</p>
+<ul><li>keep the slide about first-market proof, not market size</li><li>make the beachhead profile explicit and cross-specialty</li><li>if example settings appear, they should read as examples of the profile, not</li><li>avoid funnel or consultancy motifs</li><li>make the proof panel concrete and operational</li><li>preserve strong whitespace and premium investor-deck restraint</li></ul>
+<h2>Starting references</h2>
+<p><code>deck-spec.json</code></p>
+<p><code>deck-report.html</code></p>
+<p><code>inputs/vox_deck_slide_specs_clean_pack.md</code> <code>inputs/vox-full-slide-map-copy.md</code></p>
+<ul><li>running deck spec:</li><li>deck-level summary:</li><li>source concept inputs:</li></ul></div>
+        </div>
+      </section>
+
+      <section class="step" id="brief">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 2</div>
+            <div class="step-title">Figure brief</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="markdown"><h1>Slide 11 Figure Brief</h1>
+<p>Header:</p>
+<ul><li><code>Start where throughput proof is fastest.</code></li></ul>
+<p>Subheader:</p>
+<p><code>buying, and low deployment friction.</code></p>
+<ul><li><code>The best first market is any setting with visible visit pressure, simple</code></li></ul>
+<p>Scope:</p>
+<p>the visual job is the beachhead definition object, not text chrome.</p>
+<ul><li>Design the figure / graphic area for the slide.</li><li>The figure may include the slide title and subtitle in the native spec, but</li></ul>
+<p>Must-keep logic:</p>
+<p><code>A profile, not a specialty</code></p>
+<p><code>What the first pilot must prove</code></p>
+<ul><li>the beachhead is a profile, not a specialty</li><li>one dominant beachhead profile object:</li><li><code>High-throughput groups with simple deployment</code></li><li>optional small support line:</li><li>three qualifying conditions:</li><li><code>visible visit pressure</code></li><li><code>simple buying</code></li><li><code>low deployment friction</code></li><li>supporting example settings stay secondary:</li><li><code>Primary care</code></li><li><code>GI / gastroenterology</code></li><li><code>Orthopedics</code></li><li><code>Urgent care</code></li><li><code>Multi-site specialty groups</code></li><li>one compact proof panel:</li><li>title:</li><li>rows:</li><li><code>patient completion before visit</code></li><li><code>clinician verification time</code></li><li><code>re-asking reduction in the room</code></li><li><code>visit throughput or schedule lift</code></li></ul>
+<p>Desired effect:</p>
+<ul><li>make the first-market choice feel operational and disciplined</li><li>make it obvious this is about proof speed, not market size</li><li>preserve the cross-specialty point without becoming abstract</li><li>feel premium, calm, and investor-facing</li></ul>
+<p>Helpful directions:</p>
+<p>profile first, qualifying conditions second, proof panel third</p>
+<ul><li>one blue hero profile object in the center or left-center</li><li>example settings as quiet orbiting or row-based context</li><li>one compact scorecard on the right</li><li>strong hierarchy:</li></ul>
+<p>Avoid:</p>
+<ul><li>funnels</li><li>filters</li><li>consulting scorecards</li><li>TAM / market map visual language</li><li>dense scoring matrices</li><li>making one specialty feel like the whole thesis</li></ul></div>
+        </div>
+      </section>
+
+      <section class="step" id="ideation">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 3</div>
+            <div class="step-title">Ideation synthesis</div>
+          </div>
+        </div>
+        <div class="step-body">
+          
+          <div class="markdown"><h1>Slide 11 Ideation — Beachhead Proof v1</h1>
+<h2>Brief read</h2>
+<p>Slide 11 is the beachhead-definition slide.</p>
+<ul><li>slide <code>10</code> says the product creates real throughput value</li><li>slide <code>11</code> says where Vox should prove that value first</li><li>slide <code>12</code> then says why the team can execute the plan</li></ul>
+<p>So this slide should not read as market sizing or specialty selection. It should read as a disciplined first-market definition: pick the settings where proof happens fastest.</p>
+<h2>Current family read</h2>
+<p>The packet&#39;s core family is right:</p>
+<ul><li>one dominant beachhead profile object</li><li>three qualifying conditions attached to it</li><li>example settings used only as supporting evidence</li><li>one compact proof scorecard</li></ul>
+<p>The main design risk is not a missing idea. It is slipping back into consulting syntax: funnel, filters, scorecards, or specialty taxonomy.</p>
+<h2>Codex directions</h2>
+<h3>1. Beachhead Profile Hero + Proof Scorecard</h3>
+<p><code>High-throughput groups with simple deployment</code></p>
+<ul><li>one large blue profile card:</li><li>three qualifying conditions attached as rails, tags, or side labels</li><li>example settings shown quietly around it as examples of the profile</li><li>proof scorecard on the right</li></ul>
+<p>Why it works:</p>
+<ul><li>makes the profile the thesis</li><li>keeps the slide cross-specialty</li><li>gives the proof panel a clean secondary role</li></ul>
+<p>Main risk:</p>
+<p>market map</p>
+<ul><li>if the example settings get too prominent, the slide starts reading like a</li></ul>
+<h3>2. Shape-Not-Specialty Field</h3>
+<p><code>A profile, not a specialty</code></p>
+<ul><li>one central blue profile object</li><li>faint surrounding example settings as contextual satellites</li><li>very sparse proof card integrated below or to the right</li><li>small line:</li></ul>
+<p>Why it works:</p>
+<ul><li>the profile point becomes emotionally obvious</li><li>feels more premium and less diagrammatic</li></ul>
+<p>Main risk:</p>
+<ul><li>can become too abstract if the qualifiers are not explicit enough</li></ul>
+<h3>3. Qualifying-Conditions Strip</h3>
+<p><code>visible visit pressure</code> <code>simple buying</code> <code>low deployment friction</code></p>
+<ul><li>horizontal strip anchored by:</li><li>one quiet group of example settings beneath or after the strip</li><li>proof scorecard on the right</li></ul>
+<p>Why it works:</p>
+<ul><li>makes the qualification logic explicit</li><li>gives the viewer a very fast checklist read</li></ul>
+<p>Main risk:</p>
+<ul><li>easiest path into a filter/funnel/consulting slide</li></ul>
+<h2>Model-backed ideation</h2>
+<p>The packet already made the strategic correction: the wedge is not primary care. The model pass should stress-test only the expression.</p>
+<p>The provider-backed <code>figures:ideate</code> wrapper was attempted first, but it failed because the Claude response was not strict JSON. Direct Claude ideation and Gemini concept generation were still collected and used for synthesis.</p>
+<h3>Claude Sonnet 4.6 themes</h3>
+<ul><li>strongest families:</li><li>proof column</li><li>field with anchor</li><li>lit condition strip</li><li>Claude&#39;s final judgment:</li><li>best overall: proof column</li><li>strongest visual alternative: field with anchor</li></ul>
+<p>What is useful from that:</p>
+<p>original card-led direction</p>
+<p>example settings should probably live as a quiet footer group, not as satellites, because satellites make the slide read like specialty selection</p>
+<p>the examples appear</p>
+<ul><li>Claude is pushing toward a more memo-like investor-reading structure than the</li><li>the most important useful correction is placement:</li><li>the profile point gets stronger when the conditions read as criteria before</li></ul>
+<h3>Gemini rendering themes</h3>
+<p>First Gemini image pass for the profile-hero concept landed.</p>
+<p>What is useful from that:</p>
+<p>proof panel</p>
+<p>execution branch before promotion</p>
+<ul><li>the profile-card family is viable</li><li>the concept does read quickly</li><li>but the current comp is too literal and slightly too spreadsheet-like on the</li><li>prompt leakage near the top confirms the family still needs a cleaner</li></ul>
+<h2>Synthesis</h2>
+<p>The slide should not ask:</p>
+<ul><li>which specialty first?</li></ul>
+<p>It should ask:</p>
+<ul><li>what operating profile gives Vox the shortest path to proof?</li></ul>
+<p>That means the hero object must be a profile, not a named setting. Example settings are valid only if they visibly behave like evidence, not like the answer itself.</p>
+<h2>Recommendation</h2>
+<p>Lead concept for the next render/composition pass:</p>
+<h3>Beachhead Profile Hero + Proof Scorecard</h3>
+<p>than orbiting satellites</p>
+<ul><li>one dominant beachhead profile card</li><li>three qualifying conditions visibly attached</li><li>example settings remain faint and secondary, ideally as a footer group rather</li><li>proof scorecard sits to the right as the practical pilot frame</li></ul>
+<p>This is the clearest way to preserve both halves of the message:</p>
+<ul><li>cross-specialty first-market profile</li><li>real pilot proof discipline</li></ul>
+<h2>Challenge direction</h2>
+<h3>Proof Column</h3>
+<p>conditions first, then profile statement, then proof panel, then example settings</p>
+<p>card</p>
+<ul><li>let the argument itself become the object:</li><li>best if the profile-card branch keeps feeling too much like a UI or a market</li></ul></div>
+        </div>
+      </section>
+
+      <section class="step" id="composition">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 4</div>
+            <div class="step-title">Composition choice</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="markdown"><h1>Slide 11 Composition Study</h1>
+<ul><li><code>slug</code>: <code>slide-11-proof-column-v1</code></li><li><code>slide</code>: <code>11</code></li><li><code>deck</code>: <code>designer-health</code></li><li><code>status</code>: <code>challenge-direction</code></li></ul>
+<h2>Inputs</h2>
+<ul><li>slide packet path:</li><li>[slide-11-beachhead-proof.md](../../slide-packets/slide-11-beachhead-proof.md)</li><li>brief path:</li><li>[slide-11-beachhead-proof-v1.md](../briefs/slide-11-beachhead-proof-v1.md)</li><li>ideation path:</li><li>[slide-11-beachhead-proof-v1.md](../ideation/slide-11-beachhead-proof-v1.md)</li></ul>
+<h2>Direction</h2>
+<h3>Proof Column</h3>
+<ul><li>make the slide read top to bottom as one investor argument</li><li>stack the three qualifying conditions first</li><li>land the profile statement in the middle as the thesis</li><li>place the proof panel below as the operational consequence</li><li>keep example settings in a small quiet footer group</li></ul>
+<h2>Why this is promising</h2>
+<ul><li>strongest match to Claude&#39;s critique</li><li>avoids specialty-selection framing</li><li>makes the argument feel memo-like and disciplined</li></ul>
+<h2>Design rules</h2>
+<ul><li>no market map</li><li>no satellites that imply a specialty taxonomy</li><li>no UI card grid</li><li>conditions must read before examples</li><li>example settings must stay equal-weight and footer-level</li><li>proof panel should read as a ledger, not a table-heavy box</li></ul></div>
+        </div>
+      </section>
+
+      <section class="step" id="render-brief">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 5</div>
+            <div class="step-title">Render brief</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="markdown"><h1>Slide 11 Render Brief</h1>
+<ul><li><code>slug</code>: <code>slide-11-proof-column-v1</code></li><li><code>slide</code>: <code>11</code></li><li><code>deck</code>: <code>designer-health</code></li><li><code>status</code>: <code>ready-for-gemini</code></li></ul>
+<h2>Inputs</h2>
+<ul><li>slide packet path:</li><li>[slide-11-beachhead-proof.md](../../slide-packets/slide-11-beachhead-proof.md)</li><li>brief path:</li><li>[slide-11-beachhead-proof-v1.md](../briefs/slide-11-beachhead-proof-v1.md)</li><li>composition path:</li><li>[slide-11-proof-column-v1.md](../compositions/slide-11-proof-column-v1.md)</li></ul>
+<h2>Figure Job</h2>
+<ul><li>make the beachhead logic read in one vertical sweep</li><li>prioritize investor readability over decorative structure</li><li>show example settings only after the logic is complete</li></ul>
+<h2>Final Direction</h2>
+<h3>Proof Column</h3>
+<p>profile statement second, proof panel third, examples last.</p>
+<p><code>A profile, not a specialty</code></p>
+<ul><li>one sentence promise:</li><li>Turn the slide into a disciplined vertical argument: conditions first,</li><li>spatial map:</li><li>top:</li><li>normal slide chrome with title and subtitle</li><li>upper middle:</li><li>three qualifying conditions stacked with generous spacing</li><li>center:</li><li>profile statement and support line</li><li>lower middle:</li><li>compact proof panel</li><li>bottom:</li><li>small equal-weight example settings footer</li><li>hierarchy:</li><li>dominates first:</li><li>the stacked conditions and profile statement together</li><li>reads second:</li><li>support line:</li><li>reads third:</li><li><code>What the first pilot must prove</code></li><li>stays quiet:</li><li>example settings footer</li><li>anti-patterns:</li><li>decorative orbit layouts</li><li>market option rows that feel like a comparison table</li><li>heavy ruled tables</li></ul></div>
+        </div>
+      </section>
+
+      
+
+      <section class="step" id="outputs">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 6</div>
+            <div class="step-title">Visual branches</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="grid visuals">
+            <article class="card">
+              <div class="eyebrow">Native preferred branch</div>
+              <div class="missing">Missing artifact: figure.png</div>
+            </article>
+            <article class="card">
+              <div class="eyebrow">Gemini image branch</div>
+              
+      <figure class="artifact-shot">
+        <img src="../slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1/gemini-image/image-01.jpg" alt="Gemini image branch" />
+        <figcaption>Gemini image pass used as a taste and composition comparison branch.</figcaption>
+      </figure>
+    
+            </article>
+            <article class="card">
+              <div class="eyebrow">Gemini HTML branch</div>
+              
+      <figure class="artifact-shot">
+        <img src="../slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1/gemini-html/preview.png" alt="Gemini HTML preview" />
+        <figcaption>PNG preview of the Gemini HTML branch generated via html:screenshot.</figcaption>
+      </figure>
+    
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="step" id="review">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 7</div>
+            <div class="step-title">Process review and decision</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="markdown"></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

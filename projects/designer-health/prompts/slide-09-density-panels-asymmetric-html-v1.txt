@@ -1,0 +1,96 @@
+Generate one self-contained HTML document for a premium 1920x1080 investor deck
+slide.
+
+Use the locked raster images directly with normal `<img>` tags. Do not redraw,
+reinterpret, stylize, or replace them.
+Show each selected image in full.
+Do not crop, clip, zoom, or use `object-fit: cover`.
+Preserve the original framing exactly and use `contain`-style treatment.
+
+Left asset path:
+/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-doc-admin-slide7-v113-batch-b/openai/version-06--minimal-restraint/image-01.png
+
+Right asset path:
+/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-encounter-slide7-v113-batch/openai/version-05--bold-contrast/image-01.png
+
+This is not a new concept. It is a harder composition pass on the existing
+two-panel density-comparison family.
+
+The current problem is that the lower panels feel too even, too polite, and too
+much like balanced product cards. The slide needs to feel like an asymmetric
+strategic comparison.
+
+Use this exact on-slide copy:
+
+Header:
+AI has traction after the visit. The visit itself is still thinly served.
+
+Left panel kicker:
+AI impact after the visit
+
+Left support line:
+Ambient scribes have already established clinician buy-in.
+
+Left density label:
+More crowded
+
+Left chips:
+- ambient scribe
+- note generation
+- clerical relief
+- documentation support
+
+Right panel kicker:
+AI impact during the visit
+
+Right support line:
+Few tools change the encounter itself. Vox does.
+
+Right density label:
+Still thin
+
+Right field:
+- one blue VOX chip
+- two or three very faint outline chips
+- lots of whitespace
+
+Layout rules:
+- keep the header exactly as written
+- no subheader
+- two soft light cards below the header
+- the two cards should match as a pair, but they should not be twins
+- the right card should be slightly larger and feel more important
+- both images should be much taller and more dominant inside the cards
+- show the entire locked image in each card
+- panel order inside each card:
+  - kicker
+  - image
+  - support line
+  - tiny density label
+  - chip field
+- chips sit below the support line, never over the image
+- the support lines should feel like arguments, not captions
+- left card should feel crowded, validated, and already occupied
+- right card should feel strategically open and intentionally thin, not
+  unfinished
+
+Style rules:
+- white or warm-white background
+- premium editorial investor-deck feel
+- restrained grayscale palette
+- one blue accent only for the VOX chip
+- rounded geometry
+- subtle but intentional hierarchy
+- avoid a light generic SaaS card look
+
+Do not add:
+- a subheader
+- arrows
+- a center explainer
+- a workflow map
+- a large blue brief inside the image
+- extra body copy
+- more than four gray chips on the left
+- a crowded right-side chip field
+
+Return only the HTML document with inline CSS and any inline SVG needed.

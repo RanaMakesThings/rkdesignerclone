@@ -1,0 +1,264 @@
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designer Deck Template v1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --ink: #111111;
+        --muted: #6f7785;
+        --line: rgba(0, 0, 0, 0.9);
+        --blue: #4A89C8;
+        --gray-light: #EAECEF;
+        --gray-dark: #9AA4AF;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+      }
+
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+      }
+
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 62px;
+        margin: 0;
+        font-size: 64px;
+        line-height: 1.04;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        width: 1736px;
+        color: var(--ink);
+      }
+
+      .visit-bar-container {
+        position: absolute;
+        top: 340px;
+        left: 120px;
+        width: 1480px;
+        height: 60px;
+        display: flex;
+      }
+
+      .segment {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+
+      .history-segment {
+        position: absolute;
+        left: 0;
+        top: -60px;
+        width: 640px;
+        height: 180px;
+        background: var(--blue);
+        border-radius: 8px;
+        box-shadow: 0 24px 48px rgba(74, 137, 200, 0.2), 0 8px 16px rgba(0, 0, 0, 0.05);
+        flex-direction: column;
+        z-index: 10;
+        color: #ffffff;
+      }
+
+      .history-title {
+        font-size: 44px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .history-support-inner {
+        font-size: 20px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.85);
+        letter-spacing: -0.01em;
+        margin-top: 12px;
+      }
+
+      .exam-segment {
+        position: absolute;
+        left: 640px;
+        width: 300px;
+        background: var(--gray-light);
+        color: var(--muted);
+      }
+
+      .decisions-segment {
+        position: absolute;
+        left: 940px;
+        width: 540px;
+        background: var(--gray-dark);
+        color: #ffffff;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .history-support-outer {
+        position: absolute;
+        top: 490px;
+        left: 120px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--muted);
+        letter-spacing: -0.02em;
+      }
+
+      .proof-field {
+        position: absolute;
+        top: 460px;
+        left: 860px;
+        width: 740px;
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+      }
+
+      .proof-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+      }
+
+      .proof-marker {
+        width: 40px;
+        height: 4px;
+        background: var(--blue);
+        margin-top: 16px;
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+
+      .proof-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .proof-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--ink);
+        letter-spacing: -0.02em;
+      }
+
+      .proof-desc {
+        font-size: 22px;
+        font-weight: 400;
+        color: var(--muted);
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+      }
+
+      .bottom-statement {
+        position: absolute;
+        top: 840px;
+        left: 92px;
+        font-size: 48px;
+        font-weight: 700;
+        color: var(--ink);
+        letter-spacing: -0.04em;
+        width: 1736px;
+      }
+
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="History is the cleanest place to reclaim minutes">
+      <h1 class="header">History is the cleanest place to reclaim minutes.</h1>
+      
+      <div class="visit-bar-container">
+        <div class="segment history-segment">
+          <div class="history-title">History</div>
+          <div class="history-support-inner">Relevant details • Timeline • Next questions</div>
+        </div>
+        <div class="segment exam-segment">
+          Physical exam
+        </div>
+        <div class="segment decisions-segment">
+          Decisions + counseling
+        </div>
+      </div>
+
+      <div class="history-support-outer">
+        A high-leverage target for pre-visit prep.
+      </div>
+
+      <div class="proof-field">
+        <div class="proof-row">
+          <div class="proof-marker"></div>
+          <div class="proof-content">
+            <div class="proof-title">Foundational to the encounter</div>
+            <div class="proof-desc">Shapes the starting point for what follows in the visit.</div>
+          </div>
+        </div>
+        <div class="proof-row">
+          <div class="proof-marker"></div>
+          <div class="proof-content">
+            <div class="proof-title">Time-variable</div>
+            <div class="proof-desc">Time required depends on complexity, communication, and context.</div>
+          </div>
+        </div>
+        <div class="proof-row">
+          <div class="proof-marker"></div>
+          <div class="proof-content">
+            <div class="proof-title">Can begin before the encounter</div>
+            <div class="proof-desc">A meaningful portion can start before the clinician is on the clock.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-statement">
+        But reclaiming those minutes still requires clinical judgment.
+      </div>
+
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../../../../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>
+```

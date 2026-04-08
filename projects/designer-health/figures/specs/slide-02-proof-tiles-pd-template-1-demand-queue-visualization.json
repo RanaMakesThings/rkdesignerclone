@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-proof-tiles-pd-template-1-demand-queue-visualization",
+    "family": "proof_tiles",
+    "deckId": "pd-template-1",
+    "theme": "pd-template-1",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Demand is outpacing clinical capacity.",
+    "subtitle": "",
+    "chips": [],
+    "footnote": "[1] AMN/Merritt Hawkins physician appointment wait-time survey. [2] CDC/NCHS delayed-care measure."
+  },
+  "constraints": {
+    "figureJob": "Show demand piling up against fixed appointment supply so the two proof stats feel systemic.",
+    "focalPoint": "The request queue meeting the bottleneck first, then the two proof metrics.",
+    "layout": "Header top left, request queue and supply bottleneck centered above two proof stats.",
+    "big": [
+      "The queue object",
+      "The two proof metrics"
+    ],
+    "quiet": [
+      "Queue labels",
+      "Support copy",
+      "Footnote"
+    ],
+    "accentTargets": [
+      "none"
+    ],
+    "forbidden": [
+      "generic funnel icon",
+      "dashboard bars"
+    ],
+    "semanticGuards": []
+  },
+  "copyPolicy": {
+    "locked": [
+      "Demand is outpacing clinical capacity.",
+      "~1 month",
+      "10.6%"
+    ],
+    "preferred": [],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "motif": "demand-queue-visualization",
+    "tiles": [
+      {
+        "eyebrow": "Access",
+        "metric": "~1 month",
+        "detail": "Average wait for a new doctor appointment",
+        "kicker": "Up 19% in three years [1]",
+        "graphic": {
+          "kind": ""
+        }
+      },
+      {
+        "eyebrow": "Deferred care",
+        "metric": "10.6%",
+        "detail": "Adults delayed or did not get care because no appointment was available when needed [2]",
+        "kicker": "",
+        "graphic": {
+          "kind": ""
+        }
+      }
+    ]
+  },
+  "trace": [
+    {
+      "excerpt": "Demand Queue Visualization",
+      "targetPath": "body.motif",
+      "ruleType": "body",
+      "note": "Use queued requests and scarce openings as the figure object."
+    }
+  ]
+}

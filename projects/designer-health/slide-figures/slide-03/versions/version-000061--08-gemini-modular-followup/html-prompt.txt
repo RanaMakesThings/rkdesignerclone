@@ -1,0 +1,60 @@
+Generate a self-contained 1920x1080 HTML pitch-deck slide mockup for Vox.
+
+Use the attached references as starting points.
+
+What to keep:
+- The headline and subheader from the current slide.
+- One large visit anatomy bar on top as the callback anchor.
+- The bracketed callout under the story-reconstruction segment.
+
+What to improve:
+- The lower half should feel more intentional and modular than the current hybrid.
+- Avoid tiny text and avoid over-explaining.
+- Make the left subset callback feel like one extracted reminder object, not a second mini slide.
+- Make the right payoff feel like the unmistakable consequence: 5 visits becomes 6.
+
+Exact composition target:
+- Top:
+  - headline: More efficient visits will increase supply.
+  - subheader: Small per-visit gains compound.
+  - one large anatomy bar with Story reconstruction, Physical exam, Decisions + counseling
+  - bracket text under the blue segment explaining it is the most variable minutes of the visit
+
+- Lower half:
+  - use two clearly separated modules, side by side
+  - left module is about one visit becoming more efficient
+  - right module is about one extra visit fitting into the day
+
+- Left module:
+  - strong short label like “One visit gets more efficient”
+  - show a before bar and an after bar
+  - only the blue story-reconstruction segment should shrink
+  - make the shrink more obvious than prior attempts
+  - show a dashed “Time saved” block to the right of the after bar
+  - use simple arrows or inward indicators, but keep them elegant
+  - minimal supporting copy
+
+- Right module:
+  - strong short label like “That creates one new slot”
+  - explicit before and after labels
+  - top row: 5 visits
+  - bottom row: 5 shorter visits plus one green New visit
+  - the payoff object should be larger and easier to read than prior attempts
+  - tighter and cleaner than the original full-width 5-to-6 layout
+
+Communication goals:
+- The reader should instantly understand the causal chain:
+  less story reconstruction per visit -> saved time accumulates -> one more visit fits
+- Do not imply rushed exam or counseling.
+- Preserve a premium investor-deck aesthetic.
+
+Design direction:
+- Off-white slide background
+- Quiet editorial shadows and framing are okay
+- Restrained blue / gray / green palette
+- Montserrat-like typography
+- Clear hierarchy
+- Sparse copy
+- No generic dashboard feel
+
+Please produce the strongest, clearest version of this refined two-module layout.

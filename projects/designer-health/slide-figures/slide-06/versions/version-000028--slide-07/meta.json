@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-03-29T14:31:00.571Z",
+  "slug": "slide-06-workflow-strip-v3",
+  "family": "workflow_strip",
+  "deckId": "vox-pd-v1",
+  "theme": "vox",
+  "mode": "full-slide",
+  "title": "Vox prepares the visit before it starts.",
+  "subtitle": "Vox interviews, structures, and hands off a brief the clinician can verify and use.",
+  "specPath": "projects/designer-health/figures/specs/slide-06-workflow-strip-v3.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/figure.html",
+    "svg": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/figure.svg",
+    "png": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/render-assets.json"
+  },
+  "selectedMedia": []
+}

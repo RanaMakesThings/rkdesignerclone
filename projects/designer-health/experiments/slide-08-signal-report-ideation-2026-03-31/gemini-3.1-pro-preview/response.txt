@@ -1,0 +1,98 @@
+Here is a blunt, unfiltered take on what you should build for Slide 8. I am ignoring the diplomatic urge to say "all your ideas are great" and focusing entirely on what will actually survive contact with investors and clinicians.
+
+### 1. What you are actually trying to get onto the slide
+You are trying to build a "hero artifact." You want a single, high-fidelity UI component that proves your AI doesn't just transcribe a rambling patient—it actively structures clinical reasoning. 
+
+You are trying to show investors the "Aha!" moment for the clinician: the exact second the doctor opens the chart and realizes the AI has already done the heavy lifting of organizing the history, weighing the evidence, and teeing up the exact missing pieces needed to make a decision. You want it to look like a sleek, expensive, enterprise-ready medical tool, not a developer sandbox.
+
+### 2. Blunt design opinion on the artifact
+Your instinct to use a left/right split is correct, but your instinct to use "green checks, red Xs, and up/down arrows" is wrong. 
+
+If you use heavy red/green stock-ticker iconography, it will look like a cheap consumer dashboard or a crypto app. The reference component you liked works precisely because it is calm, muted, and restrained. Medical UI should reduce cognitive load, not flash colors at the user. Keep the *logic* of "Supports / Against / Unknowns," but style them as quiet, pill-shaped badges or muted text labels, not aggressive icons.
+
+More importantly: **You must abandon the word "Differential."** The grounding notes explicitly warn against this, and for good reason. If you put "Differential Diagnosis" on an investor deck, smart healthcare investors will immediately flag you for regulatory and liability risk because it implies the AI is practicing medicine. You need the *mechanics* of a differential without the *legal baggage* of the word.
+
+### 3. Three concrete composition directions (Ranked Best to Worst)
+
+#### #1 (The Winner): The "Clinical Brief" (Maps perfectly to Slide 8)
+* **Visual description:** A clean, two-column white card layout where the left column is the structured patient reality (History & Status) and the right column is the AI's synthesis (Considerations & Next Steps).
+* **What to keep:** The calm white UI, thin borders, the "Supports / Against / Unknowns" logic, and the Suggested Next Question.
+* **What to cut:** The raw trace tabs, the ops-console feel, and the developer-centric "What We Know" label.
+* **What to translate/rename:** "What We Know" becomes `Patient History & Status`. "Differential" becomes `Considerations to Confirm`.
+* **Why it works on an investor deck:** It perfectly maps to your required Slide 8 zoom callouts. The left side handles "what matters" and "what happened when." The right side handles "what still needs confirmation." It frames the AI as a brilliant prep assistant, not a robot doctor.
+* **Biggest risk/failure mode:** Text density. If you don't use enough whitespace and typographic hierarchy (bolding key terms), it will just look like a wall of text rather than a scannable tool.
+
+#### #2: The "Intake Summary & Action Plan"
+* **Visual description:** A top-and-bottom split layout where a horizontal timeline sits across the top, and the bottom splits into key findings and clinical logic.
+* **What to keep:** The clinical logic, the cough example data.
+* **What to cut:** The strict left/right vertical split.
+* **What to translate/rename:** "Differential" becomes `Working Considerations`.
+* **Why it works on an investor deck:** It heavily emphasizes the "what happened when" aspect of the user brief, making the temporal reasoning of the AI very obvious.
+* **Biggest risk/failure mode:** Horizontal timelines are notoriously difficult to mock up cleanly with varying text lengths. It breaks the proven layout of your reference component and will take twice as long to build in HTML.
+
+#### #3 (The Worst): The "Diagnostic Sandbox"
+* **Visual description:** Exactly what you described in your raw audio: a "Patient Story" paragraph on the left, and a "Differential" on the right with green up arrows and red down arrows.
+* **What to keep:** The exact labels you spoke aloud, the heavy iconography.
+* **What to cut:** The nuanced "Considerations" language, the structured timeline.
+* **What to translate/rename:** None. Just use the raw words from the brief.
+* **Why it works on an investor deck:** It doesn't. 
+* **Biggest risk/failure mode:** It ignores the strategic deck guidance. It uses the dangerous "Differential" label, and the heavy red/green arrows will make it look noisy and unrefined. It fails the "clinician-ready" test.
+
+### 4. The right-hand reasoning area label
+Do not use "Differential" or "Working differential." 
+
+You must use **`Considerations to confirm`**. 
+
+This is the exact phrase from your older internal Signal Report guidance, and it is bulletproof. It tells the investor: "The AI is teeing up considerations, but the human doctor is the one who confirms them." It perfectly supports your slide subheader: *Scan, verify, decide.*
+
+### 5. Exact section labels for the winning artifact
+* **Left Column (The Reality):**
+  * `Chief Concern`
+  * `Timeline & Workup`
+  * `Key Positives`
+  * `Key Negatives`
+* **Right Column (The Synthesis):**
+  * `Considerations to Confirm`
+  * `Flagged Uncertainties`
+  * `Suggested Next Question`
+
+### 6. Rough Wireframe (Plain Text)
+
+```text
++---------------------------------------------------------------------------------------------------+
+|  CLINICAL BRIEF                                                                                   |
++---------------------------------------------------------------------------------------------------+
+|                                                 |                                                 |
+|  [ LEFT COLUMN: The Reality ]                   |  [ RIGHT COLUMN: The Synthesis ]                |
+|                                                 |                                                 |
+|  CHIEF CONCERN                                  |  CONSIDERATIONS TO CONFIRM                      |
+|  Cough and breathing changes                    |                                                 |
+|                                                 |  1. Community-acquired pneumonia                |
+|  TIMELINE & WORKUP                              |     [+] Supports: Productive yellow sputum      |
+|  • ~1 week ago: URI prodrome                    |     [-] Against:  (None established)            |
+|  • Current: Persistent cough, yellow sputum     |     [?] Unknown:  Breathing impact severity     |
+|                                                 |                                                 |
+|  KEY POSITIVES                                  |  2. Acute bronchitis                            |
+|  • URI prodrome present                         |     [+] Supports: 1-week cough, URI prodrome    |
+|  • Yellow sputum present                        |     [-] Against:  (None established)            |
+|                                                 |     [?] Unknown:  Fever status                  |
+|  KEY NEGATIVES                                  |                                                 |
+|  (None established yet)                         |  3. Post-viral cough                            |
+|                                                 |     [+] Supports: URI prodrome                |
+|  FLAGGED UNCERTAINTIES                          |     [-] Against:  Productive yellow sputum      |
+|  • Measured fever: Unresolved                   |                                                 |
+|  • Dyspnea presence/severity: Unresolved        |  SUGGESTED NEXT QUESTION                        |
+|  • Pleuritic pain: Unresolved                   |  "How has your breathing changed, and does it   |
+|                                                 |   hurt anywhere in the chest when you take a    |
+|                                                 |   deep breath?"                                 |
+|                                                 |                                                 |
++---------------------------------------------------------------------------------------------------+
+```
+*(Note how this maps perfectly to the deck's zoom callouts: Left side is "What matters" and "What happened when". Right side is "What still needs confirmation".)*
+
+### 7. Blunt Recommendation: What to build first today
+Stop iterating on backend logic or prompt engineering for this specific task. 
+
+Take the wireframe above and build a **static, hardcoded HTML/Tailwind CSS component**. Use a white background, slate-gray text for labels, dark text for values, and very subtle muted background colors for the `[+]`, `[-]`, and `[?]` badges (e.g., a very pale, washed-out green background for Supports, pale amber for Unknowns). 
+
+Do not make it interactive. Do not hook it up to an LLM. Just make it look incredibly sharp, take a high-resolution screenshot, drop it onto Slide 8, and draw your three zoom callout boxes pointing to the Chief Concern, the Timeline, and the Considerations. That is exactly what you need to close the narrative loop for the pitch.

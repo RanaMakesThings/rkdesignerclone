@@ -1,0 +1,14 @@
+{
+  "id": "version-000061",
+  "slideId": "slide-03",
+  "slideDir": "projects/designer-health/slide-figures/slide-03",
+  "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000061--08-gemini-modular-followup",
+  "label": "08-gemini-modular-followup",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:05:30.341Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-03/variants/08-gemini-modular-followup"
+  ]
+}

@@ -1,0 +1,1572 @@
+{
+  "deckId": "designer-health",
+  "title": "Designer Health Deck",
+  "version": "2026-03-31.1",
+  "status": "active",
+  "template": {
+    "id": "designer-deck-template-v1",
+    "status": "locked",
+    "themeId": "designer-v1",
+    "sourceBoard": "https://www.figma.com/board/v4gKaR3gn0lLpRb75CRIJq/PD-template-1?node-id=0-1&p=f&t=I1zXkgkEWkhVpJCg-0",
+    "summary": "Use the PD-template-1 FigJam board plus the promoted designer-v1 theme as the canonical Designer slide shell.",
+    "paths": {
+      "contractPath": "projects/designer-health/designer-deck-template.md",
+      "templateDir": "projects/designer-health/templates/designer-deck-template-v1",
+      "previewPath": "projects/designer-health/templates/designer-deck-template-v1/template.png",
+      "htmlPath": "projects/designer-health/templates/designer-deck-template-v1/template.html"
+    },
+    "rules": [
+      "Use Montserrat for both display and body typography.",
+      "Use a white full-slide canvas with no outer dark frame or browser-like board around the slide.",
+      "Keep the page grammar restrained: black ink, quiet secondary text, and green accent only where it carries meaning.",
+      "Treat the branded footer shell as part of the deck template: thin bottom divider rule plus small Designer footer lockup.",
+      "Preserve generous editorial margins and avoid generic app-card chrome.",
+      "When a current slide winner does not yet fully carry the footer lockup, treat that as template debt rather than a new style direction."
+    ],
+    "notes": [
+      "The existing promoted repo theme id is designer-v1.",
+      "Older pd-template-1 experiments remain useful historical references, but designer-v1 is the stable deck baseline."
+    ]
+  },
+  "numberingPolicy": {
+    "summary": "The active deck is now sequentially renumbered 1-12 after the slide-4/5 merge. Public slide numbers map onto stable legacy slide ids and stamped asset roots, while the retired mechanism slide 4 and the historical merged 4/5 concept remain deprecated references.",
+    "activeSequence": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "deprecatedSlides": [
+      "4 (retired)",
+      "4/5"
+    ],
+    "notes": [
+      "Public slide numbering is now sequential after the slide-4/5 merge: 1 through 12.",
+      "The active middle now maps as public 4 -> slide-05, 5 -> slide-06, 6 -> slide-07, and 7 -> slide-08.",
+      "Old Slide 4 and old Slide 5 now both belong to the current public Slide 4 conversation, even though legacy archive roots remain on disk.",
+      "Legacy slide ids, stamped roots, notes directories, and version bundles remain in place to avoid path churn during the renumber.",
+      "Current workflow assets for public slide 6 still live under legacy slide-06 directories because on-disk artifact ids were not renamed in this pass."
+    ]
+  },
+  "narrativeSpine": [
+    "Demand is outpacing clinical capacity.",
+    "Recovering visit minutes can create supply.",
+    "History is the cleanest place to reclaim minutes because it is the wedge to pull first.",
+    "Visits start with story, not structure, so clinicians spend valuable minutes turning patient story into usable structure.",
+    "That only matters if the output is clinician-grade.",
+    "Vox prepares that starting point before the visit.",
+    "The clinician should start from a structured brief, not from zero.",
+    "If that shift is real, the category, economics, and beachhead are credible."
+  ],
+  "slides": [
+    {
+      "id": "slide-01",
+      "displayNumber": "1",
+      "importedSlides": [
+        1
+      ],
+      "status": "active",
+      "title": "VOX",
+      "purpose": "set tone and establish seriousness",
+      "header": "VOX",
+      "subheader": "Pre-visit clinical intelligence for efficient, high-quality care.",
+      "takeaway": "Vox is a serious, premium, clinically oriented workflow company.",
+      "figureRole": "minimal brand lockup only",
+      "family": "minimal lockup",
+      "buildStatus": "historical opener concepts are now stamped; minimal lockup-only selection is still unresolved",
+      "proof": [],
+      "paths": {
+        "packet": null,
+        "specs": [
+          "projects/figures/specs/slide-01-one-human-story-to-structure-membrane.json",
+          "projects/figures/specs/slide-01-one-human-story-to-structure.json"
+        ],
+        "stampedDir": "projects/designer-health/slide-figures/slide-01",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-01/manifest.json"
+      },
+      "selectedDirection": "Two older opener concepts are now stamped under the manifest-backed slide-01 inventory. The membrane version is the current historical reference lead, but the active deck still needs a simpler lockup-only final choice.",
+      "notes": [
+        "Treat the current stamped surface as a reference lead, not a final locked opener.",
+        "The current deck still wants a more minimal title-slide treatment than these older concept comps."
+      ],
+      "selectedVariantId": "one-human-story-to-structure-membrane",
+      "variants": [
+        {
+          "id": "one-human-story-to-structure-membrane",
+          "label": "One Human Story to Structure Membrane",
+          "status": "selected",
+          "summary": "Current stamped historical lead for slide 1. Useful opener-direction reference, but still richer than the desired minimal lockup.",
+          "previewPath": "projects/designer-health/slide-figures/slide-01/versions/version-000070--one-human-story-to-structure-membrane/figure.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-01/versions/version-000070--one-human-story-to-structure-membrane"
+            },
+            {
+              "label": "Spec",
+              "path": "projects/figures/specs/slide-01-one-human-story-to-structure-membrane.json"
+            }
+          ]
+        },
+        {
+          "id": "one-human-story-to-structure",
+          "label": "One Human Story to Structure",
+          "status": "option",
+          "summary": "Alternative historical opener concept imported into the stamped version set for comparison.",
+          "previewPath": "projects/designer-health/slide-figures/slide-01/versions/version-000071--one-human-story-to-structure/figure.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-01/versions/version-000071--one-human-story-to-structure"
+            },
+            {
+              "label": "Spec",
+              "path": "projects/figures/specs/slide-01-one-human-story-to-structure.json"
+            }
+          ]
+        }
+      ],
+      "specText": "### Current official read\n\n**Slide job**\nSet the tone. This slide is not here to explain the company. It is here to establish seriousness before evidence appears.\n\n**Core claim**\n**Vox is a serious clinical workflow product, not a gimmick, not a chatbot, and not a thin consumer-health layer.**\n\n**What this slide must make the audience believe**\n**This is a thoughtful, clinically serious company. I am willing to hear the problem they think matters.**\n\n**Current preferred header**\n**VOX**\n\n**Current preferred subheader**\n**Pre-visit clinical intelligence for efficient, high-quality care.**\n\n**Current preferred figure role**\nNot really a figure. This is a brand lockup and tone-setting surface.\n\n### Preserved strategic discussion\n\nThis slide is functioning as the **precondition for trust**. Before the audience evaluates the logic of the argument, they are evaluating taste, judgment, seriousness, and signal quality.\n\nIt should quietly say:\n- this company understands the domain\n- this company is focused\n- this company is not confused about its category\n- this company does not need to oversell itself in the first five seconds\n\nThe right emotional tone is:\n- calm\n- credible\n- high-signal\n- controlled\n- premium\n\nIt should **not**:\n- explain the mechanism\n- preview the workflow\n- show story-to-structure\n- show UI\n- make a big emotional claim\n- carry too much copy\n\nA weak version would feel like:\n- a generic AI startup opener\n- a vague healthcare mission slide\n- an overdesigned brand opener\n- a conceptual figure too early in the deck\n- a consumer-style wellness brand\n\nA strong version earns the transition:\n- Slide 1: serious clinical company\n- Slide 2: serious systemic problem\n\n### Preserved refinements / notes\n\nThe slide should stay extremely sparse. The more it explains, the weaker Slide 2 becomes.\n\n**One-line test**\n**This looks like a serious clinical workflow company.**\n\n---"
+    },
+    {
+      "id": "slide-02",
+      "displayNumber": "2",
+      "importedSlides": [
+        2
+      ],
+      "status": "active",
+      "title": "Demand is outpacing clinical capacity",
+      "purpose": "establish the system problem with clean proof",
+      "header": "Demand is outpacing clinical capacity.",
+      "subheader": "",
+      "takeaway": "Waits are rising, specialty access is already stretched, and the primary care shortage is federally designated.",
+      "figureRole": "show worsening waits, current specialty strain, and hard shortage proof in one read",
+      "family": "wait-time trend + specialty breakout + shortage banner",
+      "buildStatus": "locked Gemini HTML chart-led anchor is now selected; older native spec remains as historical coverage",
+      "proof": [
+        "Average new-patient physician wait time reached 31 days in 2025, up from 26 days in 2022 [1]",
+        "2025 specialty waits include OB/GYN at 41.8 days, gastroenterology at 40.0, dermatology at 36.5, cardiology at 32.7, and family medicine at 23.5 [1]",
+        "More than 1 in 4 Americans live in primary care HPSAs as of December 31, 2025; HRSA estimates only 48.18% of need is met in those areas [2]"
+      ],
+      "paths": {
+        "packet": "projects/designer-health/slide-packets/slide-02-wait-times-shortage-anchor.md",
+        "specs": [
+          "projects/designer-health/figures/specs/slide-02-wait-times-shortage-banner.json",
+          "projects/designer-health/figures/specs/slide-02-proof-tiles.json",
+          "projects/designer-health/figures/specs/slide-02-proof-tiles-pd-template-1.json"
+        ],
+        "stampedDir": "projects/designer-health/slide-figures/slide-02",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-02/manifest.json"
+      },
+      "selectedDirection": "The current selected slide-2 anchor is the locked Gemini HTML chart-led composition: benchmark wait-time trend on the left, 2025 specialty breakout on the right, and a full-width primary care shortage banner across the bottom, now restyled onto the white Designer theme canvas.",
+      "specText": "### Current official read\n\n**Slide job**\nThis is the first real argumentative slide. It establishes that the problem is real, structural, worsening, already visible to patients, and large enough to matter.\n\n**Core claim**\n**There are not enough clinical slots relative to demand, and the strain is already showing up in access.**\n\n**What this slide must make the audience believe**\n**There is a real capacity/access problem here, and it is severe enough that improving throughput would matter.**\n\n**Current preferred header**\n**Demand is outpacing clinical capacity.**\n\n**Current preferred visual direction**\nThe strongest explored direction was:\n**One month to the next available appointment**\n\n### Preserved strategic discussion\n\nThis slide is not merely saying healthcare is inefficient. It is making a narrower and stronger claim:\n- access is worsening\n- shortage is structural\n- patients are already being delayed by lack of available appointments\n- creating more usable supply is therefore a serious and legitimate wedge\n\nInside the broader deck, this slide is choosing the **type of problem** the company is solving.\n\nNot:\n- burnout relief\n- documentation automation\n- intake form improvement\n- generic AI assistance\n- consumer triage\n\nBut:\n- a clinical-capacity problem with downstream access consequences\n\nThe slide should create reactions like:\n- this is worse than I expected\n- this is already visible in the real world\n- this is structural, not anecdotal\n- there is real pressure in the system\n\nIt should **not**:\n- explain Vox\n- introduce history yet\n- introduce clinician-grade output yet\n- become a policy memo\n- become a dashboard\n- overload the audience with unrelated statistics\n\nMain risks:\n- too generic: a vague healthcare-macro slide\n- too data-heavy: a mini-report instead of a persuasive proof surface\n\n### Preserved refinements / alternates\n\nThe source explored multiple visual directions:\n- benchmark trend + patient consequence\n- specialty wait ladder\n- one month to the next available appointment\n- fully booked schedule strip\n- milestone benchmark blocks\n- demand up / supply constrained\n- hard shortage proof\n- patient-friction cluster\n- 31 days as the new baseline\n- family medicine is not exempt\n- scale + friction paradox\n- first empty slot / access gap\n\nThe top three explored concepts were:\n1. **One month to the next available appointment**\n2. **Benchmark trend + patient consequence**\n3. **Specialty wait ladder**\n\nThe winner in the source was **One month to the next available appointment**, because it made constrained capacity feel like the literal absence of slots while staying elegant and deck-appropriate.\n\n**One-line test**\n**This is a real capacity bottleneck, not just generic healthcare friction.**\n\n---",
+      "notes": [
+        "This slide replaces the older two-proof-tile concept as the current selected direction.",
+        "The wait-time series must be labeled as benchmark survey years, not an annual series.",
+        "The bottom banner should keep the primary care HPSA designation explicit.",
+        "Current active fine-tune surface is slide-02/gemini-html/generated.html."
+      ],
+      "selectedVariantId": "wait-times-shortage-banner-gemini-html",
+      "variants": [
+        {
+          "id": "wait-times-shortage-banner-gemini-html",
+          "label": "Wait Times + Shortage Banner Gemini HTML",
+          "status": "selected",
+          "summary": "Current locked slide-2 winner. Keeps the chart-led proof structure, but promotes it into the Montserrat-backed white Designer theme and makes the HTML branch the active fine-tune surface.",
+          "previewPath": "projects/designer-health/slide-figures/slide-02/versions/version-000002--slide-02/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Locked branch",
+              "path": "projects/designer-health/slide-figures/slide-02/versions/version-000002--slide-02/gemini-html"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/designer-health/slide-figures/slide-02/versions/version-000002--slide-02/gemini-html/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/designer-health/slide-figures/slide-02/versions/version-000002--slide-02/gemini-html/preview.png"
+            },
+            {
+              "label": "Slide packet",
+              "path": "projects/designer-health/slide-packets/slide-02-wait-times-shortage-anchor.md"
+            },
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-02/versions/version-000002--slide-02"
+            }
+          ]
+        },
+        {
+          "id": "wait-times-shortage-banner-native",
+          "label": "Wait Times + Shortage Banner Native",
+          "status": "option",
+          "summary": "Earlier native selected anchor built from the slide-2 spec. Retained as historical coverage and fallback reference, but no longer the selected working surface.",
+          "previewPath": "",
+          "files": [
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/slide-02-wait-times-shortage-banner.json"
+            },
+            {
+              "label": "Slide packet",
+              "path": "projects/designer-health/slide-packets/slide-02-wait-times-shortage-anchor.md"
+            }
+          ]
+        },
+        {
+          "id": "proof-tiles-legacy",
+          "label": "Proof Tiles Legacy",
+          "status": "option",
+          "summary": "Older slide-2 family built around two proof tiles and scheduling motifs. Retained as historical coverage, but no longer the selected direction.",
+          "previewPath": "",
+          "files": [
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/slide-02-proof-tiles.json"
+            },
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/slide-02-proof-tiles-pd-template-1.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-03",
+      "displayNumber": "3",
+      "importedSlides": [
+        3
+      ],
+      "status": "active",
+      "title": "More efficient visits will increase supply",
+      "purpose": "introduce the operational lever",
+      "header": "More efficient visits will increase supply.",
+      "subheader": "Use chips: Every minute matters / Small per-visit gains compound.",
+      "takeaway": "Small per-visit gains compound into real capacity.",
+      "figureRole": "make history wedge plus repeated efficiency equals capacity land instantly",
+      "family": "segmented visit bar plus compounding capacity",
+      "buildStatus": "strong stamped anchor exists; older native output bundles are now also registered as historical versions",
+      "proof": [
+        "Adult primary care visits increased from 18.0 to 20.9 minutes while items addressed increased from 5.4 to 7.1 per visit [3]"
+      ],
+      "paths": {
+        "packet": "projects/designer-health/slide-packets/slide-03-compound-ribbon-anchor.md",
+        "specs": [
+          "projects/designer-health/figures/specs/slide-03-compound-ribbon-before-after.json",
+          "projects/designer-health/figures/specs/slide-03-segmented-focus-bar.json",
+          "projects/designer-health/figures/specs/compound-ribbon-v2-hero-day-view.json"
+        ],
+        "stampedDir": "projects/designer-health/slide-figures/slide-03",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-03/manifest.json"
+      },
+      "selectedDirection": "Compound ribbon before/after is the current selected slide-3 anchor.",
+      "notes": [
+        "The compound-ribbon before/after version is the current preferred anchor.",
+        "Older native output bundles are now imported into the manifest-backed history instead of living only under output/figures."
+      ],
+      "selectedVariantId": "compound-ribbon-before-after",
+      "variants": [
+        {
+          "id": "compound-ribbon-before-after",
+          "label": "Compound Ribbon Before/After",
+          "status": "selected",
+          "summary": "Current selected slide-3 anchor restored from the pre-migration slide comp and promoted into the manifest-backed version system.",
+          "previewPath": "projects/designer-health/slide-figures/slide-03/versions/version-000069--restored-pre-migration-slide-03/figure.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-03/versions/version-000069--restored-pre-migration-slide-03"
+            },
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/slide-03-compound-ribbon-before-after.json"
+            }
+          ]
+        },
+        {
+          "id": "compound-ribbon-before-after-native",
+          "label": "Compound Ribbon Before/After Native Output",
+          "status": "option",
+          "summary": "Archived native output bundle imported into the stamped history so the original render no longer lives only under output/figures.",
+          "previewPath": "projects/designer-health/slide-figures/slide-03/versions/version-000072--compound-ribbon-before-after-native/figure.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-03/versions/version-000072--compound-ribbon-before-after-native"
+            },
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/slide-03-compound-ribbon-before-after.json"
+            }
+          ]
+        },
+        {
+          "id": "segmented-focus-bar",
+          "label": "Segmented Focus Bar",
+          "status": "option",
+          "summary": "Cleaner original conceptual wedge version with the highlighted history segment and compounding capacity logic.",
+          "previewPath": "projects/designer-health/slide-figures/slide-03/versions/version-000073--segmented-focus-bar-native/figure.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-03/versions/version-000073--segmented-focus-bar-native"
+            },
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/slide-03-segmented-focus-bar.json"
+            }
+          ]
+        },
+        {
+          "id": "compound-ribbon-v2",
+          "label": "Compound Ribbon v2",
+          "status": "option",
+          "summary": "A more expansive native comp with the hero visit plus day-view capacity argument.",
+          "previewPath": "output/figures/compound-ribbon-v2-hero-day-view/figure.png",
+          "files": [
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/compound-ribbon-v2-hero-day-view.json"
+            },
+            {
+              "label": "Render",
+              "path": "output/figures/compound-ribbon-v2-hero-day-view/figure.html"
+            }
+          ]
+        }
+      ],
+      "specText": "### Current official read\n\n**Slide job**\nThis is the deck’s first proposed answer. It moves the audience from “access is bad” to “improving visit efficiency could actually matter.”\n\n**Core claim**\n**In a capacity-constrained system, small repeatable gains inside the visit can compound into real clinical capacity.**\n\n**What this slide must make the audience believe**\n**There is a credible throughput lever here, and it is worth asking where the cleanest minutes can be reclaimed.**\n\n**Current preferred header**\n**More efficient visits will increase supply.**\n\n**Current preferred figure role**\nA clean, conceptual cumulative visit-efficiency figure.\n\n### Preserved strategic discussion\n\nThis slide is doing bridge work from macro problem to operational lever.\n\nIt is not claiming:\n- every visit becomes radically shorter\n- AI transforms medicine instantly\n- there is a perfectly measured visit-time anatomy\n\nIt is claiming:\n- the unit of leverage is the visit\n- visits repeat many times per day\n- small per-visit gains multiply across schedules\n- modest operational improvements can create real additional supply\n\nThis is the slide that earns permission for the company to pursue a **narrow wedge with large consequences**.\n\nIt should feel:\n- clarifying\n- economical\n- quietly persuasive\n- not overclaimed\n\nIt should **not**:\n- identify history yet\n- explain story-to-structure yet\n- do financial math yet\n- rely on fake minute precision\n\nMain risks:\n- it feels trivial\n- it feels like generic productivity software logic\n- it looks pseudo-precise without a defendable basis\n\n### Preserved refinements / notes\n\nThe source repeatedly emphasized that the power of this slide comes from the **compounding logic**, not from precise minute labels.\n\n**One-line test**\n**In a packed system, small repeatable visit gains can actually create real supply.**\n\n---"
+    },
+    {
+      "id": "slide-05",
+      "displayNumber": "4",
+      "importedSlides": [
+        4,
+        5
+      ],
+      "historySourceSlideIds": [
+        "slide-04",
+        "slide-04-05"
+      ],
+      "status": "active",
+      "title": "History is the cleanest place to reclaim minutes",
+      "purpose": "make the wedge/intervention-point argument immediately after slide 3",
+      "header": "History is the cleanest place to reclaim minutes.",
+      "subheader": "No formal subtitle; keep the message sparse and grouped around the wedge.",
+      "takeaway": "History can begin before the encounter, is repeated across visits, and remains time-variable, so it is the wedge to pull first.",
+      "figureRole": "quote the slide-3 source bar, peel out the history wedge, and attach one compressed warrant stack",
+      "family": "quoted slide-3 wedge plus grouped reasons",
+      "buildStatus": "Gemini HTML top-beat branch version 000024 is now the current winner; older native v1 remains as a historical option",
+      "proof": [],
+      "paths": {
+        "packet": "projects/designer-health/slide-packets/slide-05-history-wedge.md",
+        "specs": [
+          "projects/designer-health/figures/specs/slide-05-history-wedge-v1.json"
+        ],
+        "stampedDir": "projects/designer-health/slide-figures/slide-05",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-05/manifest.json"
+      },
+      "selectedDirection": "The current selected direction is version 000024: the locked Gemini HTML top-beat slide that keeps the quoted slide-3 source bar, one clean broad arc, the extracted history wedge, and the attached grouped reasons, with no lower explanatory panel.",
+      "notes": [
+        "This slide now sits immediately after slide 3 in the active backbone.",
+        "Old Slide 4 mechanism work and old Slide 5 wedge work both now belong to this current public Slide 4 surface.",
+        "Keep this slide sparse; do not let lower mechanism detail leak in.",
+        "The current locked winner is the Gemini HTML branch in version 000024, derived from the shelved merged top-beat reference.",
+        "The lower explanatory mechanism beat has been removed; this slide now lives as a standalone top-beat intervention slide.",
+        "The older native v1 asset remains useful historical reference, but it is no longer the selected winner."
+      ],
+      "selectedVariantId": "history-wedge-gemini-html-locked",
+      "variants": [
+        {
+          "id": "history-wedge-gemini-html-locked",
+          "label": "History Wedge Gemini HTML",
+          "status": "selected",
+          "summary": "Current locked slide-5 winner. Uses the shelved merged top-beat as the direct reference, then strips the lower explanatory panel so the slide stands alone as the sparse intervention-point argument.",
+          "previewPath": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01/preview.png",
+          "files": [
+            {
+              "label": "Locked branch",
+              "path": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01/preview.png"
+            }
+          ]
+        },
+        {
+          "id": "history-wedge-v1",
+          "label": "History Wedge Native v1",
+          "status": "option",
+          "summary": "Earlier native reopened wedge slide. Kept as historical reference, but no longer the selected direction after the Gemini HTML top-beat branch proved stronger.",
+          "previewPath": "projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05/figure.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05"
+            },
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/slide-05-history-wedge-v1.json"
+            },
+            {
+              "label": "Slide report",
+              "path": "projects/designer-health/slide-reports/slide-05.html"
+            }
+          ]
+        },
+        {
+          "id": "history-wedge-packet",
+          "label": "Slide 5 Packet",
+          "status": "option",
+          "summary": "The current active packet and copy authority for the reopened slide-5 wedge argument.",
+          "previewPath": "",
+          "files": [
+            {
+              "label": "Slide packet",
+              "path": "projects/designer-health/slide-packets/slide-05-history-wedge.md"
+            }
+          ]
+        },
+        {
+          "id": "merged-gemini-top-beat-reference",
+          "label": "Shelved Merge Top-Beat Reference",
+          "status": "option",
+          "summary": "Useful composition reference from the shelved merged concept. Stronger on the upper wedge/hero/support grouping than on the lower explanatory beat.",
+          "previewPath": "projects/designer-health/slide-figures/slide-04-05/versions/version-000013--gemini-image/image-01.jpg",
+          "files": [
+            {
+              "label": "Historical note",
+              "path": "projects/designer-health/slide-notes/slide-04-05/README.md"
+            },
+            {
+              "label": "Image",
+              "path": "projects/designer-health/slide-figures/slide-04-05/versions/version-000013--gemini-image/image-01.jpg"
+            }
+          ]
+        }
+      ],
+      "specText": "### Current official read\n\n**Slide job**\nThis is the wedge-selection slide. It answers: where, specifically, inside the visit are the best minutes to reclaim?\n\n**Core claim**\n**History is the cleanest wedge because it is repeated, time-variable, and can begin before the encounter.**\n\n**What this slide must make the audience believe**\n**History is the right place to focus if the goal is to recover visit time in a meaningful, scalable way.**\n\n**Current preferred header**\n**History is the cleanest place to reclaim minutes.**\n\n**Current preferred subheader**\n**It is repeated, time-variable, and can begin before the encounter.**\n\n**Current preferred supporting labels**\n- **Repeated across visits**\n- **Time-variable**\n- **Can begin before the encounter**\n\n### Preserved strategic discussion\n\nThis slide is where the deck turns from a general throughput story into a specific wedge.\n\nIt is not merely saying history matters. It is saying history has the structural properties that make it the right operational wedge:\n- repeated\n- time-variable\n- movable upstream\n\nThis slide has to prevent several bad readings:\n- why history and not documentation, counseling, triage, or scheduling?\n- this sounds like generic intake logic\n- you are just trying to move any work earlier\n\nIt should feel like a **clean narrowing insight**.\n\nIt should **not**:\n- fully explain the mechanism\n- show the story-to-structure pipeline in detail\n- show product UI\n- talk about clinician-grade output yet\n- become a checklist memo\n\nMain risks:\n- too thin to earn the wedge\n- too generic and intake-adjacent\n- starts stealing work from Slide 5\n\n### Preserved refinements / appended copy recommendations\n\nThis slide was one of the explicit “tighten the copy” slides in the appended recommendations.\n\n**Recommended direction**\nStay sparse, but make the wedge feel selected, not merely highlighted.\n\n**Optional tiny support lines if needed**\n- The same story is often retold across encounters.\n- Time required varies meaningfully with complexity.\n- Much of this work can move upstream.\n\n**What this slide should not say**\n- history is the largest part of the visit\n- history takes ~X minutes\n- AI can automate history taking\n- intake can solve this\n\n### Preserved deck-wide note tied to Slide 4\n\nThe source explicitly called out Slide 4 as a slide at risk of feeling thin. It needs to feel decisive, not decorative.\n\n**One-line test**\n**Okay — history is the right place to intervene if you want to recover visit time.**\n\n---"
+    },
+    {
+      "id": "slide-06",
+      "displayNumber": "5",
+      "importedSlides": [
+        6
+      ],
+      "status": "active",
+      "title": "The hard part is producing a history clinicians can start from",
+      "purpose": "define the quality bar",
+      "header": "The hard part is producing a history clinicians can start from.",
+      "subheader": "Vox creates value by turning patient story into adaptive, structured, verifiable history clinicians can actually use.",
+      "takeaway": "This only matters if the output is clinician-grade.",
+      "figureRole": "codify the success state",
+      "family": "success-state qualification card",
+      "buildStatus": "user-provided HTML snapshot is now selected and stamped as the current official public Slide 5 quality-bar pass",
+      "proof": [],
+      "paths": {
+        "packet": null,
+        "specs": [],
+        "stampedDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-06/manifest.json"
+      },
+      "selectedDirection": "Version 000271 is the current selected direction: an exact user-provided HTML snapshot that frames Vox as an adaptive clinical interviewer, centers the interviewing engine inside the chamber, and resolves into a compact clinician-grade summary card.",
+      "notes": [
+        "The current official public Slide 5 winner is an exact user HTML snapshot rather than a model-regenerated variation.",
+        "Older quality-bar versions remain in the stamped history for comparison, but version 000271 is now the canonical root projection."
+      ],
+      "selectedVariantId": "slide-06-user-html-final-official-v1",
+      "variants": [
+        {
+          "id": "slide-06-user-html-final-official-v1",
+          "label": "User HTML Final Official v1",
+          "status": "selected",
+          "summary": "Current official public Slide 5 quality-bar winner. Exact user-provided HTML snapshot promoted into the manifest-backed stamped root.",
+          "previewPath": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000271--slide-06-user-html-final-official-v1/preview.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000271--slide-06-user-html-final-official-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000271--slide-06-user-html-final-official-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000271--slide-06-user-html-final-official-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "### Current official read\n\n**Slide job**\nThis is the quality-bar slide. It defines the actual success standard.\n\n**Core claim**\n**The value is not in gathering more information. The value is in producing a clinician-grade starting point.**\n\n**What this slide must make the audience believe**\n**The hard problem is not capturing the story — it is producing a clinician-grade history that can actually change the starting point of the visit.**\n\n**Current preferred header**\n**The hard part is producing a history clinicians can start from.**\n\n**Current preferred subheader**\n**Not more intake. A clinician-grade starting point.**\n\n**Current preferred main object label**\n**History clinicians can start from**\n\n**Current preferred qualifier row**\n- **Adaptive**\n- **Structured**\n- **Prioritized**\n- **Verifiable**\n\n**Current preferred payoff line**\n**Changes the starting point of the visit**\n\n### Preserved strategic discussion\n\nThis slide is the hinge between the conceptual half of the deck and the product-proof half.\n\nIt reframes the challenge away from:\n- forms\n- transcription\n- summarization\n- better intake\n\nand toward:\n- clinical usability\n- trust\n- prioritization\n- relevance\n- a starting point clinicians can actually begin from\n\nThis slide has to carry several burdens:\n- separate Vox from ordinary intake\n- separate Vox from mere summarization\n- introduce defensibility without sounding boastful\n- make trust legible before workflow proof arrives\n\nIt should create reactions like:\n- yes, that is the real bar\n- this is more serious than intake automation\n- I see why this is hard\n- if they can do that, it matters\n\nIt should **not**:\n- prove the workflow yet\n- become a systems architecture slide\n- become a safety disclaimer slide\n- turn into a pile of adjectives without weight\n\nMain risks:\n- sounds like empty product marketing\n- feels redundant with Slide 5\n- tries to prove too much too early\n\n### Preserved refinements / appended copy recommendations\n\nThis was one of the most important “tighten the copy” slides in the appended section.\n\n**Why the contrast line matters**\n`Not more intake. A clinician-grade starting point.`\n\nThis is strategically strong because it immediately kills weaker interpretations of the company.\n\n**Preferred payoff line options explored**\n- Changes the starting point of the visit\n- Good enough to reduce reconstruction in the room\n- Good enough to begin from, not rebuild\n- Useful before the first clinical question is asked\n\nThe source favored:\n**Changes the starting point of the visit**\n\n### Preserved deck-wide note tied to Slide 6\n\nThe source explicitly identified Slide 6 as a major conceptual fulcrum and one of the slides most at risk of becoming airy or adjectival.\n\n**One-line test**\n**Right — the hard part is not collecting the story, it is producing something a clinician can really begin from.**\n\n---"
+    },
+    {
+      "id": "slide-07",
+      "displayNumber": "6",
+      "importedSlides": [
+        7
+      ],
+      "status": "active",
+      "title": "Vox prepares the visit before it starts",
+      "purpose": "explain the workflow",
+      "header": "Vox prepares the visit before it starts.",
+      "subheader": "Vox interviews, structures, and hands off a brief the clinician can verify and use.",
+      "takeaway": "Vox interviews, structures, and hands off a brief the clinician verifies.",
+      "figureRole": "show a credible pre-visit operational flow",
+      "family": "four-step workflow strip",
+      "buildStatus": "canonical native v3 exists and clears the loop gate; older native v1 is now also registered as historical coverage",
+      "proof": [],
+      "paths": {
+        "packet": "projects/designer-health/slide-packets/slide-06-workflow-strip.md",
+        "specs": [
+          "projects/designer-health/figures/specs/slide-06-workflow-strip-v3.json"
+        ],
+        "stampedDir": "projects/designer-health/slide-figures/slide-06",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-07/manifest.json"
+      },
+      "selectedDirection": "Version 000113 is the current selected direction: a single-row storyboard image that shows the pre-visit invite, adaptive interview, brief preparation, and prepared clinician handoff. This is public Slide 6 even though the artifact directory still uses legacy slide-06 paths.",
+      "notes": [
+        "Canonical public deck slide number is 6.",
+        "Current packet and stamped assets still live under legacy slide-06 paths from the temporary renumbered phase."
+      ],
+      "selectedVariantId": "slide-07-v108-native-2k-gemini-v2",
+      "variants": [
+        {
+          "id": "slide-07-v108-native-2k-gemini-v2",
+          "label": "Storyboard Gemini Native 2K v2",
+          "status": "selected",
+          "summary": "Current selected public Slide 6 image-led storyboard. Native 2K Gemini rerender of the locked v108 composition and the closest higher-resolution match.",
+          "previewPath": "projects/designer-health/slide-figures/slide-06/versions/version-000113--slide-07-v108-native-2k-gemini-v2/image-01.jpg",
+          "files": [
+            {
+              "label": "Artifact dir",
+              "path": "projects/designer-health/slide-figures/slide-06/versions/version-000113--slide-07-v108-native-2k-gemini-v2"
+            },
+            {
+              "label": "Prompt",
+              "path": "projects/designer-health/slide-figures/slide-06/versions/version-000113--slide-07-v108-native-2k-gemini-v2/prompt.txt"
+            },
+            {
+              "label": "Meta",
+              "path": "projects/designer-health/slide-figures/slide-06/versions/version-000113--slide-07-v108-native-2k-gemini-v2/meta.json"
+            }
+          ]
+        },
+        {
+          "id": "workflow-strip-v3",
+          "label": "Workflow Strip v3",
+          "status": "option",
+          "summary": "Current selected native workflow figure. The overlapping handoff card was removed and the strip now clears the loop gate.",
+          "previewPath": "projects/designer-health/slide-figures/slide-06/versions/version-000028--slide-07/figure.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-06/versions/version-000028--slide-07"
+            },
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/slide-06-workflow-strip-v3.json"
+            },
+            {
+              "label": "Slide report",
+              "path": "projects/designer-health/slide-reports/slide-06.html"
+            }
+          ]
+        },
+        {
+          "id": "workflow-strip-v1-native",
+          "label": "Workflow Strip v1 Native",
+          "status": "option",
+          "summary": "Earlier native workflow-strip pass imported into the manifest-backed history so the legacy render is no longer orphaned under output/figures.",
+          "previewPath": "projects/designer-health/slide-figures/slide-06/versions/version-000076--workflow-strip-v1-native/figure.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-06/versions/version-000076--workflow-strip-v1-native"
+            }
+          ]
+        },
+        {
+          "id": "workflow-strip-gemini-image",
+          "label": "Gemini Image Pass",
+          "status": "option",
+          "summary": "Taste/composition branch from Gemini image generation. Useful for style comparison, but not canonical.",
+          "previewPath": "projects/designer-health/slide-figures/slide-06/versions/version-000028--slide-07/gemini-image/image-01.jpg",
+          "files": [
+            {
+              "label": "Artifact dir",
+              "path": "projects/designer-health/slide-figures/slide-06/versions/version-000028--slide-07/gemini-image"
+            }
+          ]
+        },
+        {
+          "id": "workflow-strip-gemini-html",
+          "label": "Gemini HTML Pass",
+          "status": "option",
+          "summary": "Editable HTML/SVG-leaning branch from Gemini. Useful for structural comparison, but not the selected winner.",
+          "previewPath": "projects/designer-health/slide-figures/slide-06/versions/version-000028--slide-07/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Artifact dir",
+              "path": "projects/designer-health/slide-figures/slide-06/versions/version-000028--slide-07/gemini-html"
+            }
+          ]
+        }
+      ],
+      "specText": "Apr 1, 2026 • 11:17 AM • Wed • GPT-5.4 Thinking • user_info\n\nYes — I agree. If the header already starts with **Vox**, I would drop the eyebrow.\n\nHaving both an eyebrow and the first word of the headline be **Vox** is redundant. It makes the slide feel more branded, but less sharp. For this slide, the better move is to let the header do the naming, and use the accent color to make **Vox** pop immediately.\n\nSo I'd lock it like this:\n\n**Header**\n**Vox** is an adaptive pre-visit interviewer that prepares a clinician-ready brief before the visit.\n\nSet only **Vox** in the accent color. Keep the rest in your standard dark text.\n\n**Subheader**\nThe clinician starts prepared, not from zero.\n\nThat's cleaner and stronger.\n\nIt gives you:\n\n- product name immediately\n- product definition immediately\n- workflow consequence immediately\n\nAnd it avoids the VOX / Vox double-hit.\n\nThe only caveat is: if you remove the eyebrow, the figure should still carry a little brand presence. The best way to do that is not another label at the top - it's a tiny **Vox** chip or badge in the center preparation/handoff zone.\n\nSo my recommendation is:\n\n- No eyebrow.\n- Accent-color **Vox** at the start of the header.\n- Keep the subheader short.\n- Put a small Vox marker in the figure itself.\n\nThat's the cleanest version.\n\n---\n\n### Current official read\n\n**Slide job**\nThis is the workflow-credibility slide. It makes the product’s operating model believable.\n\n**Core claim**\n**Vox is not a loose AI assistant. It is a structured pre-visit workflow.**\n\n**What this slide must make the audience believe**\n**There is a credible pre-visit workflow by which Vox could produce a clinician-usable starting point.**\n\n**Current preferred header**\n**Vox prepares the visit before it starts.**\n\n**Current preferred supporting idea**\nVox:\n- interviews\n- structures\n- hands off a brief the clinician verifies and uses\n\n**Current preferred figure role**\nOne calm, credible operational strip.\n\n**Current preferred workflow shape**\nA four-step strip:\n- invite\n- interview\n- structure\n- verify\n\n### Preserved strategic discussion\n\nThis slide is crossing an important boundary in the deck. Everything before it has been:\n- problem\n- lever\n- wedge\n- mechanism\n- quality bar\n\nNow the audience is asking:\n**What does the system actually do to make that happen?**\n\nThis slide must answer that without getting lost in implementation detail.\n\nWhat it needs to do in deck context:\n1. show that the product has a coherent workflow shape\n2. make the upstream movement of work operationally believable\n3. prepare the audience to see the actual structured brief on public Slide 7\n\nThis slide has to prevent several bad readings:\n- this is just a chatbot talking to the patient\n- this is just intake automation\n- this is too autonomous to trust\n\nThat is why the four-step strip is strategically correct. It shows process without drowning in systems language and keeps the clinician visibly in the loop through verification.\n\nThe slide should feel:\n- calm\n- credible\n- structured\n- not flashy\n- not software-demo-ish\n\nIt should **not**:\n- show full UI screenshots\n- become a systems architecture slide\n- carry too much product copy\n- become a swimlane diagram\n- make the workflow feel fully autonomous\n\nMain risks:\n- the workflow feels generic\n- the workflow feels too product-ops heavy\n- the workflow does not preserve clinician trust\n\n### Preserved refinements / notes\n\nWithin this source document, public Slide 6 did **not** receive the same appended multi-round exploration that public Slide 8 did. Most of the public Slide 6 thinking lives in the main strategic section above.\n\nThe important preserved point is that this slide is **not yet the proof artifact slide**. It is the slide that makes the proof artifact feel procedurally believable.\n\n**One-line test**\n**This is a believable pre-visit workflow that could produce a real clinical starting point.**\n\n---\n\n---\n\n## Public Slide 6 figure spec\n\nYes. I think this should be a single-row storyboard with flowchart discipline.\n\nNot three vague zones.\nNot four equal boxes.\nNot a 2x2 grid.\nNot giant arrows.\n\nThe product is temporal, so the slide should read left to right in one pass.\n\n### The right layout\n\nUse four beats in one horizontal line, but make them unequal.\n\nBeat 1 and Beat 2 are the setup.\nBeat 3 is the hero transition.\nBeat 4 is the payoff.\n\nSo visually:\n\n`[ Invite sent ] -> [ Adaptive interview ] -> [ Brief prepared ] | Start of visit | [ Clinician starts prepared ]`\n\nThat is the structure.\n\n### Why not the other layouts\n\nA 2x2 makes it feel like a feature grid, not a workflow.\n\nFour equal boxes in one row makes it feel too procedural and too generic. It turns the product into a process with four steps, instead of a product that changes the visit.\n\nThree soft zones is too abstract for this moment. The audience needs to understand the product instantly.\n\nSo the best answer is:\none row, four beats, unequal emphasis, with a threshold marker before the final beat.\n\n### The figure skeleton\n\n#### Top of figure\n\nA thin bracket or hairline band spanning the first three beats:\n\n**Before visit**\n\nThen a vertical threshold marker just before beat 4:\n\n**Visit begins**\n\nThat one device makes the whole argument spatially obvious.\n\n#### Main row\n\nFour beats on a shared horizontal baseline.\n\nSuggested relative emphasis:\n\n- Beat 1: small\n- Beat 2: medium\n- Beat 3: largest\n- Beat 4: medium\n\nRough width feel:\n\n- Beat 1: 15%\n- Beat 2: 22%\n- Beat 3: 33%\n- Beat 4: 20%\n- remaining space: breathing room\n\nSo this is not four same-sized panels.\n\n#### Connectors / arrows\n\nUse subtle directional cues, not chunky arrows.\n\nMy recommendation:\n\n- one thin connector line running through the first three beats\n- tiny arrowheads or motion ticks between beats\n- then the Start of visit threshold line\n- then a short final connector into beat 4\n\nSo yes, there is directional flow, but it should feel designed, not like a textbook flowchart.\n\nThink:\n\n- hairline arrows\n- soft motion line\n- maybe tiny dots\n\nnot:\n\n- thick chevrons\n- giant arrows\n- diagram energy\n\n### The four beats\n\n#### Beat 1 - Invite sent\n\nThis should be the cleanest and smallest beat.\n\n**Visual**\n\nphone with lock-screen or notification-style card\nvery little else\n\n**Beat label**\nInvite sent\n\n**Micro-copy**\nPatient receives secure pre-visit link.\n\nThis beat should read in under one second.\n\n#### Beat 2 - Adaptive interview\n\nThis is where the product becomes real.\n\n**Visual**\n\nphone or patient-with-phone\n2-3 conversation bubbles\none follow-up question\nmaybe one response chip\noptional subtle speech-wave / orb motif to suggest active interviewing\n\nThe orb/wave idea is good, but it should be secondary, not the main object. The main object should still be the interview interaction.\n\n**Beat label**\nAdaptive interview\n\n**Micro-copy**\nVox asks follow-up questions and captures the story.\n\nThis is the beat that makes it feel like more than intake.\n\n#### Beat 3 - Brief prepared\n\nThis is the visual hero of the figure.\n\nNot the full public Slide 7 artifact.\nA simplified handoff object.\n\n**Visual**\n\nstory fragments or chat snippets compressing into a structured card\nsmall Vox badge on the card\n2-3 simple rows inside the card\ntiny trust tags nearby if needed\n\nThis beat should feel like:\npatient story becomes a clinician-ready handoff\n\n**Beat label**\nBrief prepared\n\n**Micro-copy**\nPatient story becomes a clinician-ready handoff.\n\nThis is the beat that should get the most accent color and the most visual weight.\n\n#### Beat 4 - Clinician starts prepared\n\nThis is the payoff.\n\n**Visual**\n\nclinician with tablet, or review surface on desk\npacket visible, but only as a glimpse\ncalm, not busy\n\n**Beat label**\nClinician starts prepared\n\n**Micro-copy**\nSets up a more efficient visit.\n\nThat last line is where you can tuck the efficiency point without making it the main label.\n\n### What text belongs where\n\nSince the header is already doing the product-definition work, and the subheader is already doing the consequence work, the figure should not repeat those sentences.\n\nSo the figure should use:\n\n- one beat label per step\n- one short supporting line per step\n- one threshold label\n\nThat is enough.\n\nAnd I would drop the old bottom support rail.\nIt becomes redundant now.\n\nThe beat labels themselves are the support rail.\n\n### Full text block for the figure\n\nUse this exact beat copy:\n\n**Invite sent**\nPatient receives secure pre-visit link.\n\n**Adaptive interview**\nVox asks follow-up questions and captures the story.\n\n**Brief prepared**\nPatient story becomes a clinician-ready handoff.\n\n**Clinician starts prepared**\nSets up a more efficient visit.\n\nAnd above the first three beats:\n\n**Before visit**\n\nAnd at the threshold:\n\n**Visit begins**\n\n### Visual style\n\nI would do this as a designed vector/editorial composition, not photoreal.\n\nSo:\n\n- white background\n- grayscale base\n- one restrained accent color\n- crisp rounded forms\n- subtle shadows\n- controlled overlays\n- all readable text added manually\n\nBeat 1 and Beat 2 can use vector-style phone/interview scenes.\nBeat 3 should be mostly designed manually.\nBeat 4 can use a very minimal clinician review scene, also preferably vector/editorial rather than stock-like.\n\n### What should get accent color\n\nUse accent color on:\n\n- the word Vox in the header\n- one or two interface highlights in Beat 2\n- the prepared brief in Beat 3\n- maybe a tiny highlight in Beat 4\n\nDo not accent every beat equally.\n\nThe visual center of gravity should be:\nAdaptive interview -> Brief prepared -> Clinician starts prepared\n\nnot the initial invite.\n\n### The actual composition I'd recommend\n\nIf I were laying this out, I'd do:\n\n- copy block at top\n- main figure below\n- four beats on one shared horizontal axis\n- first three beats grouped under Before visit\n- threshold line before beat 4\n- beat 3 slightly taller and larger than the rest\n- beat 4 closer to beat 3 than beat 1 is to beat 2, so the handoff feels tight\n\nThat creates a real story rhythm:\nsmall setup -> real interaction -> transformation -> payoff\n\n### The one sentence summary\n\nThe figure should look like:\n\na left-to-right storyboard showing invitation, adaptive interviewing, brief preparation, and a clinician entering the visit prepared - with the start-of-visit threshold made spatially explicit.\n\nThat's the figure I'd lock."
+    },
+    {
+      "id": "slide-08",
+      "displayNumber": "7",
+      "importedSlides": [
+        8
+      ],
+      "status": "active",
+      "title": "The clinician starts from a structured brief",
+      "purpose": "make the product tangible",
+      "header": "The clinician starts from a structured brief.",
+      "subheader": "Scan, verify, decide.",
+      "takeaway": "The product is a structured clinical brief the clinician can actually start from.",
+      "figureRole": "turn the abstract product into a concrete object",
+      "family": "artifact with zoom callouts",
+      "buildStatus": "versioned clinician-brief HTML is now stamped as the current lead; older artifact-callouts native remains archived as prior reference coverage",
+      "proof": [],
+      "paths": {
+        "packet": null,
+        "specs": [
+          "projects/designer-health/figures/specs/slide-08-artifact-callouts.json"
+        ],
+        "stampedDir": "projects/designer-health/slide-figures/slide-08",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-08/manifest.json"
+      },
+      "selectedDirection": "Clinician-brief-attempt-a-v5-locked-width is now the current stamped public Slide 7 lead. It keeps the approved slide shell, preserves the locked artifact tuning, and constrains the inner report width so the wraps track the reference more faithfully.",
+      "notes": [
+        "A multi-model public Slide 7 ideation pass also exists under experiments and remains useful context.",
+        "The older artifact-callouts native version remains in stamped history as archived reference coverage."
+      ],
+      "selectedVariantId": "clinician-brief-attempt-a-v5-locked-width",
+      "variants": [
+        {
+          "id": "artifact-callouts-native",
+          "label": "Artifact Callouts Native",
+          "status": "option",
+          "summary": "Archived prior stamped public Slide 7 reference lead imported from the legacy native artifact-callout spec.",
+          "previewPath": "projects/designer-health/slide-figures/slide-08/versions/version-000077--artifact-callouts-native/figure.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-08/versions/version-000077--artifact-callouts-native"
+            },
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/slide-08-artifact-callouts.json"
+            }
+          ]
+        },
+        {
+          "id": "clinician-brief-attempt-a-v2-slide-chrome",
+          "label": "Clinician Brief Attempt A V2 Slide Chrome",
+          "status": "option",
+          "summary": "Prior stamped public Slide 7 lead. Keeps the clinician brief as the central artifact and wraps it in proper Designer slide chrome with the official header and subheader.",
+          "previewPath": "projects/designer-health/slide-figures/slide-08/versions/version-000079--clinician-brief-attempt-a-v2-slide-chrome/preview.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-08/versions/version-000079--clinician-brief-attempt-a-v2-slide-chrome"
+            },
+            {
+              "label": "Root HTML",
+              "path": "projects/designer-health/slide-figures/slide-08/slide-08--version-000079.html"
+            },
+            {
+              "label": "Root PNG",
+              "path": "projects/designer-health/slide-figures/slide-08/slide-08--version-000079.png"
+            }
+          ]
+        },
+        {
+          "id": "clinician-brief-attempt-a-v3-legibility-pass",
+          "label": "Clinician Brief Attempt A V3 Legibility Pass",
+          "status": "option",
+          "summary": "Prior stamped slide-8 legibility pass. Preserves the approved slide-chrome composition while increasing the artifact font sizes for better readability on the deck.",
+          "previewPath": "projects/designer-health/slide-figures/slide-08/versions/version-000080--clinician-brief-attempt-a-v3-legibility-pass/preview.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-08/versions/version-000080--clinician-brief-attempt-a-v3-legibility-pass"
+            },
+            {
+              "label": "Root HTML",
+              "path": "projects/designer-health/slide-figures/slide-08/slide-08--version-000080.html"
+            },
+            {
+              "label": "Root PNG",
+              "path": "projects/designer-health/slide-figures/slide-08/slide-08--version-000080.png"
+            }
+          ]
+        },
+        {
+          "id": "clinician-brief-attempt-a-v4-locked-graphic",
+          "label": "Clinician Brief Attempt A V4 Locked Graphic",
+          "status": "option",
+          "summary": "Prior stamped slide-8 locked-graphic pass. Keeps the approved slide shell and integrates the user-provided locked clinician-summary tuning into the artifact itself.",
+          "previewPath": "projects/designer-health/slide-figures/slide-08/versions/version-000081--clinician-brief-attempt-a-v4-locked-graphic/preview.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-08/versions/version-000081--clinician-brief-attempt-a-v4-locked-graphic"
+            },
+            {
+              "label": "Root HTML",
+              "path": "projects/designer-health/slide-figures/slide-08/slide-08--version-000081.html"
+            },
+            {
+              "label": "Root PNG",
+              "path": "projects/designer-health/slide-figures/slide-08/slide-08--version-000081.png"
+            }
+          ]
+        },
+        {
+          "id": "clinician-brief-attempt-a-v5-locked-width",
+          "label": "Clinician Brief Attempt A V5 Locked Width",
+          "status": "selected",
+          "summary": "Current stamped public Slide 7 lead. Keeps the locked graphic treatment while constraining the inner artifact width so the wraps track the user reference more closely.",
+          "previewPath": "projects/designer-health/slide-figures/slide-08/versions/version-000082--clinician-brief-attempt-a-v5-locked-width/preview.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-08/versions/version-000082--clinician-brief-attempt-a-v5-locked-width"
+            },
+            {
+              "label": "Root HTML",
+              "path": "projects/designer-health/slide-figures/slide-08/slide-08--version-000082.html"
+            },
+            {
+              "label": "Root PNG",
+              "path": "projects/designer-health/slide-figures/slide-08/slide-08--version-000082.png"
+            }
+          ]
+        },
+        {
+          "id": "signal-report-ideation",
+          "label": "Signal Report Ideation",
+          "status": "option",
+          "summary": "User-directed multi-model ideation comparing alternate ways to make the structured brief tangible without over-synthesizing the brief.",
+          "previewPath": "",
+          "files": [
+            {
+              "label": "Experiment README",
+              "path": "projects/designer-health/experiments/slide-08-signal-report-ideation-2026-03-31/README.md"
+            },
+            {
+              "label": "Compare board",
+              "path": "projects/designer-health/experiments/slide-08-signal-report-ideation-2026-03-31/compare.html"
+            }
+          ]
+        }
+      ],
+      "specText": "### Current official read\n\n**Slide job**\nThis is the product-tangibility slide. It shows the actual object the clinician receives and starts from.\n\n**Core claim**\n**The product is a structured clinical brief the clinician can actually start from.**\n\n**What this slide must make the audience believe**\n**Vox’s output is a real, structured clinical object that could plausibly change how a clinician begins the visit.**\n\n**Current preferred header**\n**The clinician starts from a structured brief.**\n\n**Current preferred subheader**\n**Scan, verify, decide.**\n\n**Current preferred artifact labels**\n- **What matters**\n- **What happened when**\n- **What still needs confirmation**\n\n**Current preferred optional framing line if needed**\n**Not a transcript. Not a note. A starting point.**\n\n### Preserved strategic discussion\n\nThis slide is argument payoff.\n\nEverything earlier has been building toward the moment when the audience can finally see the object that the deck has been talking about.\n\nThis object must feel distinct from:\n- a transcript\n- a summary blob\n- an intake form\n- a post hoc note\n- a generic patient report\n\nIt must feel like:\n- a clinician-facing starting artifact\n- fast to scan\n- organized around what matters\n- explicit about what is known and what still needs confirmation\n\nThis slide has to carry several burdens:\n- make the product real without becoming a software demo\n- distinguish the brief from weaker output types\n- make trust legible without overexplaining it\n- preserve the deck’s editorial restraint\n\nIt should create reactions like:\n- okay, that is tangible\n- I can see what the clinician is actually looking at\n- this is more useful than a transcript or form output\n- that does feel like a different starting point\n\nIt should **not**:\n- show too many product states\n- explain the workflow again\n- overload the artifact with tiny unreadable text\n- become an EHR mimic\n- become a note-template slide\n\nMain risks:\n- the artifact looks like a generic summary document\n- the artifact looks like product UI\n- the artifact is too dense to read in a deck context\n\n### Preserved refinements / appended copy recommendations\n\nThis was one of the explicitly tightened copy slides.\n\nThe preferred triad of callouts stayed:\n- **What matters**\n- **What happened when**\n- **What still needs confirmation**\n\nThe appended section emphasized that this triad works because it communicates:\n- prioritization\n- temporal structure\n- uncertainty handling\n\nThe strongest optional framing line explored was:\n**Not a transcript. Not a note. A starting point.**\n\n### Preserved deck-wide note tied to Slide 8\n\nSlide 8 was explicitly identified as one of the anti-collapse slides. If it is weak, Vox gets mentally collapsed into a generic summary artifact and Slide 9 becomes much weaker.\n\n**One-line test**\n**Okay — that is a real clinical brief a visit could actually start from.**\n\n---"
+    },
+    {
+      "id": "slide-09",
+      "displayNumber": "8",
+      "importedSlides": [
+        9
+      ],
+      "status": "active",
+      "title": "Current AI helps around the visit",
+      "purpose": "define the category gap",
+      "header": "Current AI helps around the visit. Vox changes how the visit starts.",
+      "subheader": "Most assistive AI reduces operational or documentation work. Vox gives the clinician a structured brief at the beginning of the visit.",
+      "takeaway": "Current assistive AI helps around the encounter; Vox changes the clinician's starting point.",
+      "figureRole": "position Vox as the start-of-visit layer inside the care journey",
+      "family": "starting-point strip with Vox brief",
+      "buildStatus": "official starting-point strip remains stamped, but slide 9 is actively reopened for a market-positioning compare round across the market-field-map and proof-left-whitespace-right families",
+      "proof": [
+        "Optional evidence line: ambient AI scribes have already shown utilization and reduced documentation burden [4][5]"
+      ],
+      "paths": {
+        "packet": "projects/designer-health/slide-packets/slide-09-care-journey-gap.md",
+        "specs": [
+          "projects/designer-health/figures/specs/slide-09-starting-point-strip-v1.json"
+        ],
+        "stampedDir": "projects/designer-health/slide-figures/slide-09",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-09/manifest.json"
+      },
+      "selectedDirection": "Starting-point strip v1 is the current selected and stamped direction. It keeps existing assistive support visible around the encounter while making Vox explicit as the start-of-visit layer.",
+      "notes": [
+        "Historical compare rounds: versions 000136-000140 explored the asymmetric density-panels family, and versions 000141-000145 explored the territory-argument family.",
+        "Active compare round: versions 000146-000150 and 000155 explore the market-field-map family, while versions 000149 and 000151-000154 explore the proof-left-whitespace-right family; the official selected variant remains starting-point-strip-v1."
+      ],
+      "selectedVariantId": "starting-point-strip-v1",
+      "variants": [
+        {
+          "id": "starting-point-strip-v1",
+          "label": "Starting-Point Strip v1",
+          "status": "selected",
+          "summary": "Current selected official slide 9. The center Vox-prepared brief makes the category point explicit while the outer support zones stay quiet.",
+          "previewPath": "projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09/figure.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09"
+            },
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/slide-09-starting-point-strip-v1.json"
+            },
+            {
+              "label": "Slide report",
+              "path": "projects/designer-health/slide-reports/slide-09.html"
+            }
+          ]
+        },
+        {
+          "id": "starting-point-strip-gemini-image",
+          "label": "Strip Gemini Image",
+          "status": "option",
+          "summary": "Taste and composition reference for the selected strip direction.",
+          "previewPath": "projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09/gemini-image/image-01.jpg",
+          "files": [
+            {
+              "label": "Artifact dir",
+              "path": "projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09/gemini-image"
+            }
+          ]
+        },
+        {
+          "id": "starting-point-threshold-v2",
+          "label": "Threshold v2",
+          "status": "option",
+          "summary": "Challenge branch that emphasizes the encounter boundary more symbolically.",
+          "previewPath": "projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09/v2-threshold/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Artifact dir",
+              "path": "projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09/v2-threshold"
+            }
+          ]
+        },
+        {
+          "id": "starting-point-hallway-v2",
+          "label": "Hallway v2",
+          "status": "option",
+          "summary": "Contextual clinical-photo branch. Useful for comparison, but less direct than the selected strip.",
+          "previewPath": "projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09/v2-hallway/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Artifact dir",
+              "path": "projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09/v2-hallway"
+            }
+          ]
+        },
+        {
+          "id": "starting-point-clipboard-v2",
+          "label": "Clipboard v2",
+          "status": "option",
+          "summary": "Tangible hybrid branch that makes the brief feel physical, but reads less cleanly than the selected strip.",
+          "previewPath": "projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09/v2-clipboard/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Artifact dir",
+              "path": "projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09/v2-clipboard"
+            }
+          ]
+        },
+        {
+          "id": "market-field-map-v1",
+          "label": "Market Field Map v1",
+          "status": "option",
+          "summary": "Abstract market-positioning reset that replaces imagery with occupied-vs-open territories. Representative preview shown from the OpenAI HTML lane.",
+          "previewPath": "projects/designer-health/slide-figures/slide-09/versions/version-000148--market-field-map-openai-html/figure.png",
+          "files": [
+            {
+              "label": "Representative version",
+              "path": "projects/designer-health/slide-figures/slide-09/versions/version-000148--market-field-map-openai-html"
+            },
+            {
+              "label": "Packet",
+              "path": "projects/designer-health/slide-packets/slide-09-workflow-reset-market-positioning-v1.md"
+            }
+          ]
+        },
+        {
+          "id": "proof-left-whitespace-right-v1",
+          "label": "Proof Left / Whitespace Right v1",
+          "status": "option",
+          "summary": "Asymmetric proof-plus-opportunity reset. Representative preview shown from the OpenAI HTML lane.",
+          "previewPath": "projects/designer-health/slide-figures/slide-09/versions/version-000152--proof-left-whitespace-right-openai-html/figure.png",
+          "files": [
+            {
+              "label": "Representative version",
+              "path": "projects/designer-health/slide-figures/slide-09/versions/version-000152--proof-left-whitespace-right-openai-html"
+            },
+            {
+              "label": "Packet",
+              "path": "projects/designer-health/slide-packets/slide-09-workflow-reset-market-positioning-v1.md"
+            }
+          ]
+        }
+      ],
+      "specText": "### Current official read\n\n**Slide job**\nThis is the category-definition slide. It must stop the audience from collapsing Vox into intake, scribe extension, note automation, or generic assistive AI.\n\n**Current official core claim**\n**AI adoption is proven in documentation. The encounter itself is still open.**\n\n**Current official supporting claim**\n**Current AI is improving the work after the visit. Vox applies AI to the opening clinical work inside the visit itself.**\n\n**What this slide must make the audience believe**\n**Vox occupies a distinct and important layer in the workflow: it changes the clinician’s starting point at the beginning of the encounter.**\n\n**Current preferred figure family**\nA two-scene or two-territory composition:\n- left = documentation / post-visit AI-adoption zone\n- right = encounter / opening-clinical-work zone with a blue Vox-prepared brief inside the encounter scene\n\n**Current preferred center labels**\n- **Vox-prepared brief**\n- **Where clinical reasoning begins**\n\n**Current preferred brief rows**\n- **What matters**\n- **What happened when**\n- **What still needs confirmation**\n\n### Preserved strategic discussion — base Slide 9 section\n\nAt the base level, this slide is trying to say:\n\n**Vox is not just helping around the visit. Vox changes how the visit begins.**\n\nThis matters because once the product becomes tangible, the audience will start trying to map it into known categories:\n- intake tool\n- scribe-adjacent product\n- pre-charting aid\n- generic clinical workflow AI\n\nIf the deck does not answer that classification question, the audience will answer it on their own, usually by mapping Vox to a weaker category.\n\nThe slide therefore has to:\n- differentiate without sounding hostile or derivative\n- make the distinction spatial and intuitive\n- protect the company from being collapsed into adjacent categories\n- make the product feel more important, not just more different\n\nIt should create reactions like:\n- ah, that is the real difference\n- this is adjacent to current AI, but not the same thing\n- that is a more central moment in the visit than documentation support\n- I can see why this could matter economically\n\nIt should **not**:\n- become a competitor matrix\n- become a hostile anti-scribe slide\n- turn into category theory\n- drift into broad AI-in-healthcare commentary\n\nThe original baseline line for the slide was:\n**Current AI helps around the visit. Vox changes how the visit starts.**\n\n### Preserved appended exploration — copy exploration phase\n\nThe source then contained a large dedicated Slide 9 copy exploration section.\n\n#### Strong early copy directions explored\n\n**Direction A — clearest strategic version**\nHeader:\n**Current AI helps around the visit. Vox changes how the visit starts.**\nSubheader:\n**Most assistive AI reduces operational or documentation work. Vox gives the clinician a structured brief before clinical reasoning begins.**\n\n**Direction B — sharper / more concise**\nHeader:\n**Most AI helps around the encounter. Vox changes the starting point.**\nSubheader:\n**The clinician begins with structure, not a blank slate.**\n\n**Direction C — more premium / editorial**\nHeader:\n**Vox changes the starting point of the visit.**\nSubheader:\n**Current assistive AI reduces work around care delivery. Vox gives the clinician structured signal before reasoning begins.**\n\nThe preferred winner at that stage remained closest to Direction A.\n\n### Preserved appended exploration — threshold / first-minute refinement\n\nThe next refinement pushed the slide away from generic “before the visit” language and toward a stronger framing:\n\n**Vox changes the first minute and therefore changes how the visit is conducted.**\n\n#### Stronger header explored here\n**Current AI helps around the visit. Vox changes how the visit begins.**\n\n#### Stronger subheader explored here\n**Most assistive AI reduces operational or documentation work. Vox gives the clinician structure at the first minute of the visit.**\n\n#### Strong challenger subheader from this phase\n**Most assistive AI helps around care delivery. Vox changes the visit from the first minute.**\n\n#### Figure concept explored here\n**Start-of-visit threshold graphic**\n\nCore idea:\n- left side = usual blank-start condition\n- center = the threshold where the visit begins\n- right side = Vox-prepared brief changing the starting state\n\nImportant micro-lines explored in this phase:\n- **Where clinical reasoning begins**\n- **The visit no longer starts from zero**\n\n### Preserved appended exploration — reset to “core encounter vs surrounding assistive ring”\n\nA later reset concluded that the threshold framing was still drifting too far toward process explanation.\n\nThe slide’s true job was re-stated as:\n\n**show that Vox occupies a distinct and more central place in the visit than current assistive AI.**\n\nThe preferred figure family at that phase became:\n\n#### Direction 1 — encounter core + surrounding assistive ring\n- one central encounter object\n- blue Vox-prepared brief in the center\n- muted assistive functions around the outside:\n  - scheduling\n  - reminders\n  - documentation support\n  - note generation\n  - clerical relief\n\nThe point of this phase was:\n- other tools help the surroundings\n- Vox changes the center\n\nThis was described as stronger than a simple before/during/after journey strip.\n\n### Preserved appended exploration — post-visit documentation fill vs open start-of-visit zone\n\nThe next refinement made the market argument sharper:\n\n**the current AI landscape is mostly filling the post-encounter / documentation space, while the opening clinical work inside the visit remains comparatively unaddressed.**\n\nAt this phase, the stronger header became:\n**Current AI fills the space after the visit. Vox changes how the visit begins.**\n\nThe stronger supporting line became:\n**AI has already shown value in documentation. Vox applies it to the opening clinical work inside the visit itself.**\n\nPreferred figure direction at this phase:\n- occupied post-visit zone vs open start-of-visit zone\n- trailing documentation-support region already visibly filled\n- opening clinical region still open\n- Vox-prepared brief occupying that open, high-value moment\n\n### Preserved appended exploration — final adoption-proof + untapped-encounter framing\n\nThe strongest final refinement in the source added an important strategic market story:\n\n- AI adoption is already being proven in clinical workflow\n- that adoption is clustering around documentation / post-visit work\n- the actual encounter itself remains comparatively under-addressed\n- Vox applies AI to the opening clinical work inside the encounter, where it can change how the visit is conducted and create efficiency inside the visit itself\n\nThat produced the strongest final framing in the source:\n\n**Header**\n**AI adoption is proven in documentation. The encounter itself is still open.**\n\n**Subheader**\n**Current AI is improving the work after the visit. Vox applies AI to the opening clinical work inside the visit itself.**\n\n**Preferred figure family at the end**\nTwo editorial scenes or two territory cards:\n- left = documentation zone already visibly occupied by current assistive AI\n- right = encounter zone calmer, more open, with one blue Vox-prepared brief placed inside the encounter scene itself\n\nThe reason this became the strongest version is that it does three things at once:\n- de-risks the category by showing AI buy-in is already real\n- shows the visible adoption has clustered in documentation\n- claims a more central, more open, and more important territory for Vox\n\n### Preserved “what to avoid” guidance across all Slide 9 explorations\n\nDo not let Slide 9 become:\n- a with/without comparison\n- a competitor matrix\n- a hostile anti-scribe argument\n- a workflow explainer\n- a semantic “we are different” slide\n- a pre-visit prep slide that sounds like intake\n- a threshold metaphor the audience has to decode too hard\n\n### Preserved deck-wide note tied to Slide 9\n\nSlide 9 was repeatedly identified as one of the deck’s critical anti-collapse slides. If it is weak, Vox gets mentally collapsed into a more crowded and less important category.\n\n**One-line test**\n**AI has already proven its value in documentation. Vox is applying AI to the still-open clinical work inside the encounter itself.**\n\n---"
+    },
+    {
+      "id": "slide-10",
+      "displayNumber": "9",
+      "importedSlides": [
+        10
+      ],
+      "status": "active",
+      "title": "Recovered visit time creates real capacity",
+      "purpose": "show economic consequence",
+      "header": "Recovered visit time creates real capacity.",
+      "subheader": "When recovered minutes become completed visits, the impact is meaningful.",
+      "takeaway": "Recovered minutes matter when they convert into completed visits.",
+      "figureRole": "make the economics intuitive and credible",
+      "family": "hero economics block plus scenarios",
+      "buildStatus": "versioned comparison set exists; equation-hero Gemini HTML remains current while newer left-right callback variants are stamped as active options",
+      "proof": [
+        "+1 visit / provider / day",
+        "$11,000 / year",
+        "~$917 / month break-even spend / provider",
+        "Use 2025 Medicare anchors and 40% contribution-margin planning assumption [6][7][8]"
+      ],
+      "paths": {
+        "packet": "projects/designer-health/slide-packets/slide-10-capacity-economics.md",
+        "specs": [
+          "projects/designer-health/figures/specs/slide-10-hero-metrics.json"
+        ],
+        "stampedDir": "projects/designer-health/slide-figures/slide-10",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-10/manifest.json"
+      },
+      "selectedDirection": "The current running direction is the Gemini HTML equation-hero branch: one dominant economics proof object that makes +1 visit / provider / day clearly resolve into $11,000 / year, with ~$917 / month as the quieter punchline.",
+      "notes": [
+        "The legacy hero-metrics native spec remains a useful historical reference, but it is no longer the active lead.",
+        "The current winner is the Gemini HTML equation-hero branch, not the image branch.",
+        "Range-check detail should remain visually subordinate to the hero economics proof."
+      ],
+      "selectedVariantId": "equation-hero-gemini-html-v1",
+      "variants": [
+        {
+          "id": "equation-hero-gemini-html-v1",
+          "label": "Equation Hero Gemini HTML",
+          "status": "selected",
+          "summary": "Current running slide-10 direction. The slide is anchored by one dominant economics proof object that shows how +1 visit / provider / day turns into $11,000 / year, with the monthly break-even number staying secondary.",
+          "previewPath": "projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "HTML branch",
+              "path": "projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-html"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-html/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-html/preview.png"
+            },
+            {
+              "label": "SVG",
+              "path": "projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-html/preview.svg"
+            }
+          ]
+        },
+        {
+          "id": "equation-hero-gemini-image-v1",
+          "label": "Equation Hero Gemini Image",
+          "status": "option",
+          "summary": "More aggressive visual interpretation of the equation-hero concept. Useful composition reference, but less controlled than the selected HTML branch.",
+          "previewPath": "projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-image/image-01.jpg",
+          "files": [
+            {
+              "label": "Image branch",
+              "path": "projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-image"
+            }
+          ]
+        },
+        {
+          "id": "power-of-one-v1",
+          "label": "Power of One",
+          "status": "option",
+          "summary": "Punchier card-led version of the economics claim, explored through Gemini image and HTML.",
+          "previewPath": "projects/designer-health/slide-figures/slide-10/versions/version-000039--power-of-one-v1/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Option folder",
+              "path": "projects/designer-health/slide-figures/slide-10/versions/version-000039--power-of-one-v1"
+            }
+          ]
+        },
+        {
+          "id": "break-even-threshold-v1",
+          "label": "Break-even Threshold",
+          "status": "option",
+          "summary": "Threshold-led variant that foregrounds the monthly break-even spend before the annual contribution logic.",
+          "previewPath": "projects/designer-health/slide-figures/slide-10/versions/version-000040--break-even-threshold-v1/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Option folder",
+              "path": "projects/designer-health/slide-figures/slide-10/versions/version-000040--break-even-threshold-v1"
+            }
+          ]
+        },
+        {
+          "id": "capacity-waterfall-v1",
+          "label": "Capacity Waterfall",
+          "status": "option",
+          "summary": "More explicit operating-leverage flow variant that explains the translation from recovered capacity into annual contribution.",
+          "previewPath": "projects/designer-health/slide-figures/slide-10/versions/version-000041--capacity-waterfall-v1/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Option folder",
+              "path": "projects/designer-health/slide-figures/slide-10/versions/version-000041--capacity-waterfall-v1"
+            }
+          ]
+        },
+        {
+          "id": "left-right-capacity-tile-v1",
+          "label": "Left / Right Capacity Tile",
+          "status": "option",
+          "summary": "Most reduced callback variant. Tests whether a very compressed slide-3-derived capacity tile on the left can support the economics proof on the right without replaying slide 3.",
+          "previewPath": "projects/designer-health/slide-figures/slide-10/versions/version-000042--left-right-capacity-tile-v1/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Option folder",
+              "path": "projects/designer-health/slide-figures/slide-10/versions/version-000042--left-right-capacity-tile-v1"
+            }
+          ]
+        },
+        {
+          "id": "left-right-micro-journey-v1",
+          "label": "Left / Right Micro Journey",
+          "status": "option",
+          "summary": "Left/right callback variant that uses two shortened visit bars, a light causal cue, and one green new-visit payoff before the economics proof.",
+          "previewPath": "projects/designer-health/slide-figures/slide-10/versions/version-000043--left-right-micro-journey-v1/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Option folder",
+              "path": "projects/designer-health/slide-figures/slide-10/versions/version-000043--left-right-micro-journey-v1"
+            }
+          ]
+        },
+        {
+          "id": "left-right-motif-card-v1",
+          "label": "Left / Right Motif Card",
+          "status": "option",
+          "summary": "Strongest callback-led challenge branch so far. Keeps the right-side economics proof simple while quoting slide 3 with two shortened bars plus one green new-visit block on the left.",
+          "previewPath": "projects/designer-health/slide-figures/slide-10/versions/version-000044--left-right-motif-card-v1/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Option folder",
+              "path": "projects/designer-health/slide-figures/slide-10/versions/version-000044--left-right-motif-card-v1"
+            }
+          ]
+        },
+        {
+          "id": "legacy-hero-metrics",
+          "label": "Legacy Hero Metrics",
+          "status": "option",
+          "summary": "Earlier native economics comp. Historically important, but now superseded by the stronger equation-hero direction.",
+          "previewPath": "projects/designer-health/slide-figures/slide-10/versions/version-000046--slide-10-legacy/figure.png",
+          "files": [
+            {
+              "label": "Legacy render",
+              "path": "projects/designer-health/slide-figures/slide-10/versions/version-000046--slide-10-legacy"
+            },
+            {
+              "label": "Legacy spec",
+              "path": "projects/designer-health/figures/specs/slide-10-hero-metrics.json"
+            }
+          ]
+        }
+      ],
+      "specText": "### Current official read\n\n**Slide job**\nThis is the economics bridge. It converts product/category logic into business consequence.\n\n**Core claim**\n**Recovered time matters when it becomes realized capacity.**\n\n**What this slide must make the audience believe**\n**If Vox produces even modest realized throughput gains, the economics can be meaningful enough to justify spend and pilot interest.**\n\n**Current preferred header**\n**Recovered visit time creates real capacity.**\n\n**Current preferred subheader**\n**When recovered minutes become completed visits, the impact is meaningful.**\n\n**Current preferred hero line**\n**+1 visit / provider / day**\n\n**Current preferred hero value**\n**$11,000 / year**\n\n**Current preferred secondary line**\n**~$917 / month break-even spend / provider**\n\n**Current preferred bottom line**\n**Recovered time matters when it becomes completed visits.**\n\n### Preserved strategic discussion\n\nThis slide does not need to prove the whole business. It needs to establish one disciplined idea:\n\n**when recovered minutes become additional completed visits, even modest gains can support meaningful spend.**\n\nThat means the slide must feel like operating leverage, not fantasy arithmetic.\n\nIt has to solve several concerns:\n- a few minutes saved doesn’t sound like much\n- healthcare ROI math often looks hand-wavy\n- operational improvement does not always translate into money\n- even if the product is good, is the spend meaningful enough?\n\nThat is why the bottom-line sentence matters so much:\n**Recovered time matters when it becomes completed visits.**\n\nIt should create reactions like:\n- that is more meaningful than I expected\n- the math is not crazy\n- even a modest win could support real spend\n- now I want to know where they can prove that fastest\n\nIt should **not**:\n- become a dense ROI worksheet\n- imply all time saved is automatically monetized\n- become a TAM slide\n- feel like a finance memo\n\nMain risks:\n- spreadsheet theater\n- overstating conversion from minutes to money\n- being so cautious that the slide becomes underwhelming\n\n### Preserved refinements / appended copy recommendations\n\nThis was one of the explicitly tightened copy slides.\n\nThe appended recommendation locked:\n- hero line: **+1 visit / provider / day**\n- hero value: **$11,000 / year**\n- secondary line: **~$917 / month break-even spend / provider**\n- assumptions line kept quiet:\n  - 220 clinic days\n  - $125 / visit\n  - 40% contribution margin\n- scenario tiles:\n  - **Conservative**\n  - **Base**\n  - **Upside**\n\n### Preserved deck-wide note tied to Slide 10\n\nThe source explicitly called Slide 10 one of the most fragile slides: it can easily become either spreadsheet-like or too soft. It has to feel like real operating leverage.\n\n**One-line test**\n**If they can create even modest realized throughput gains, the economics are meaningful enough to matter.**\n\n---"
+    },
+    {
+      "id": "slide-11-beachhead",
+      "displayNumber": "10",
+      "importedSlides": [
+        11
+      ],
+      "status": "active",
+      "title": "Start where throughput proof is fastest",
+      "purpose": "identify the beachhead and proof logic",
+      "header": "Start where throughput proof is fastest.",
+      "subheader": "The best first market is any setting with visible visit pressure, simple buying, and low deployment friction.",
+      "takeaway": "The beachhead is defined by operational shape, not specialty: choose settings where deployment is light and pilot outcomes show up fast.",
+      "figureRole": "make the beachhead definition feel operational, cross-specialty, credible, and testable",
+      "family": "highlighted beachhead profile plus pilot proof scorecard",
+      "buildStatus": "versioned comparison set exists; beachhead-profile hero Gemini HTML is now the stamped current lead",
+      "proof": [],
+      "paths": {
+        "packet": "projects/designer-health/slide-packets/slide-11-beachhead-proof.md",
+        "specs": [],
+        "stampedDir": "projects/designer-health/slide-figures/slide-11",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-11-beachhead/manifest.json"
+      },
+      "selectedDirection": "The current stamped lead is the beachhead-profile-hero Gemini HTML branch: one highlighted beachhead profile, de-emphasized example settings, and a compact pilot-proof scorecard. Proof-column remains the strongest challenge branch.",
+      "notes": [
+        "This is a beachhead-selection slide, not a TAM or market-map slide.",
+        "The persuasive job is to show where Vox can prove throughput gains fastest in the real world.",
+        "Do not collapse the beachhead into a single specialty like primary care; the point is that the profile can travel across specialties.",
+        "Avoid generic filter, gate, funnel, or consulting-style market-selection graphics.",
+        "The highlighted reasons should feel specific to Vox deployment and proof, not generic healthcare GTM criteria."
+      ],
+      "selectedVariantId": "beachhead-profile-hero-v1",
+      "variants": [
+        {
+          "id": "beachhead-profile-hero-v1",
+          "label": "Beachhead Profile Hero v1",
+          "status": "selected",
+          "summary": "Current stamped public Slide 10 lead. Highlights the target beachhead profile as a repeatable operating shape, not a single specialty, and pairs it with a compact pilot-proof panel.",
+          "previewPath": "projects/designer-health/slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1/gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1"
+            },
+            {
+              "label": "HTML branch",
+              "path": "projects/designer-health/slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1/gemini-html"
+            }
+          ]
+        },
+        {
+          "id": "proof-column-v1",
+          "label": "Proof Column v1",
+          "status": "option",
+          "summary": "Stronger memo-like challenge branch. More document-like than the current lead, but useful if the profile-hero family keeps feeling too UI-card-like.",
+          "previewPath": "projects/designer-health/slide-figures/slide-11/versions/version-000048--proof-column-v1/gemini-image/image-01.jpg",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-11/versions/version-000048--proof-column-v1"
+            }
+          ]
+        },
+        {
+          "id": "claude-ideation",
+          "label": "Claude Ideation",
+          "status": "option",
+          "summary": "Supporting ideation artifact that helped sharpen the proof-column challenge branch and the reasons/examples structure.",
+          "previewPath": "",
+          "files": [
+            {
+              "label": "Ideation response",
+              "path": "projects/designer-health/slide-figures/slide-11/versions/version-000049--claude-ideation/response.txt"
+            },
+            {
+              "label": "Slide packet",
+              "path": "projects/designer-health/slide-packets/slide-11-beachhead-proof.md"
+            }
+          ]
+        }
+      ],
+      "specText": "### Current official read\n\n**Slide job**\nThis is the beachhead / proof-design slide. It is about where to prove the value claim fastest, cleanest, and most believably.\n\n**Core claim**\n**The right first market is the one where throughput proof is fastest.**\n\n**What this slide must make the audience believe**\n**The team has a disciplined and testable plan for where to prove Vox first, and the proof criteria are tightly linked to the product’s actual value claim.**\n\n**Current preferred header**\n**Start where throughput proof is fastest.**\n\n**Current preferred supporting idea**\nStart in care settings where:\n- visit pressure is visible\n- buying is concentrated\n- deployment friction is low\n- pilot outcomes can be measured quickly\n\n### Preserved strategic discussion\n\nThis slide is not asking:\n- where is the biggest market?\n- where could this theoretically apply?\n- where do we eventually expand?\n\nIt is asking:\n**where can Vox prove throughput lift fastest, with the least friction and the clearest readout?**\n\nThis is why the slide should feel proof-driven, not strategy-framework-ish.\n\nIt has to avoid:\n- generic market-selection language\n- overcommitting to one specialty too early\n- vague beachhead claims without concrete pilot-readout logic\n\nThe first pilot should feel concrete and measurable, likely around things like:\n- completion before visit\n- clinician verification time\n- re-asking reduction\n- visit throughput / schedule lift\n\nIt should create reactions like:\n- that is a sensible place to start\n- they are choosing for speed of proof, not just market size\n- the pilot goals feel measurable and relevant\n- this is a company that understands how to de-risk its own thesis\n\n### Preserved deck-wide note tied to Slide 11\n\nThis slide should make the company sound more mature, not more expansive.\n\n**One-line test**\n**They have a disciplined, testable plan for where to prove this first and what success would look like.**\n\n---"
+    },
+    {
+      "id": "slide-11",
+      "displayNumber": "11",
+      "importedSlides": [
+        12
+      ],
+      "status": "active",
+      "title": "Built by people who understand the visit",
+      "purpose": "establish execution credibility",
+      "header": "Built by people who understand the visit.",
+      "subheader": "Clinical insight, product judgment, and deployment realism.",
+      "takeaway": "The team matches the problem.",
+      "figureRole": "compress trust quickly",
+      "family": "clean founder grid",
+      "buildStatus": "native HTML founder-grid refresh is now stamped current, replacing the stale Figma-imported image wrapper while keeping the preserved April 5, 2026 baseline archived in history",
+      "proof": [],
+      "paths": {
+        "packet": null,
+        "specs": [],
+        "stampedDir": "projects/designer-health/slide-figures/slide-11-team",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-11/manifest.json"
+      },
+      "selectedDirection": "Native HTML founder grid is current: four founder columns, one execution-risk line per founder, and canonical headshots served from the Slide 11 asset manifest.",
+      "notes": [
+        "The April 5, 2026 Figma import remains preserved as the archived baseline version.",
+        "Slide 11 now uses canonical founder headshots from projects/designer-health/slide-assets/slide-11/."
+      ],
+      "selectedVariantId": "founder-grid-refresh-v1",
+      "variants": [
+        {
+          "id": "founder-grid-refresh-v1",
+          "label": "Founder Grid Refresh v1",
+          "status": "selected",
+          "summary": "Current stamped public Slide 11 surface. Rebuilds the founder grid as native HTML and wires it to canonical Slide 11 headshots for direct editing.",
+          "previewPath": "projects/designer-health/slide-figures/slide-11-team/versions/version-000349--slide-11-user-html-founder-grid-refresh-v1/preview.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-11-team/versions/version-000349--slide-11-user-html-founder-grid-refresh-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/designer-health/slide-figures/slide-11-team/versions/version-000349--slide-11-user-html-founder-grid-refresh-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/designer-health/slide-figures/slide-11-team/versions/version-000349--slide-11-user-html-founder-grid-refresh-v1/preview.png"
+            }
+          ]
+        },
+        {
+          "id": "figma-team-import-v1",
+          "label": "Figma Team Import V1",
+          "status": "option",
+          "summary": "Imported from the April 5, 2026 Figma-exported team slide and retained as the archived baseline that the refreshed HTML version replaced.",
+          "previewPath": "projects/designer-health/slide-figures/slide-11-team/versions/version-000291--slide-11-team-figma-import-v1/preview.png",
+          "files": [
+            {
+              "label": "HTML",
+              "path": "projects/designer-health/slide-figures/slide-11-team/versions/version-000291--slide-11-team-figma-import-v1/figure.html"
+            },
+            {
+              "label": "SVG",
+              "path": "projects/designer-health/slide-figures/slide-11-team/versions/version-000291--slide-11-team-figma-import-v1/figure.svg"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/designer-health/slide-figures/slide-11-team/versions/version-000291--slide-11-team-figma-import-v1/preview.png"
+            },
+            {
+              "label": "Source PDF",
+              "path": "projects/designer-health/inputs/slide-12-team-import-2026-04-05/figma-export-team-slide.pdf"
+            },
+            {
+              "label": "Source PPTX",
+              "path": "projects/designer-health/inputs/slide-12-team-import-2026-04-05/figma-export-team-slide.pptx"
+            }
+          ]
+        }
+      ],
+      "specText": "### Current official read\n\n**Slide job**\nThis is the execution-credibility slide. It needs to answer why this team is the right team for this exact company.\n\n**Core claim**\n**This team understands the visit deeply enough to build the right product and deploy it credibly.**\n\n**What this slide must make the audience believe**\n**This team plausibly has the clinical, product, and execution judgment needed to build Vox and prove it in the real world.**\n\n**Current preferred header**\n**Built by people who understand the visit.**\n\n**Current preferred subheader**\n**Clinical insight, product judgment, and deployment realism.**\n\n**Current preferred founder-card rule**\nEach founder gets one trust line tied directly to a Vox execution risk.\n\n### Preserved strategic discussion\n\nThis is not really a team slide in the generic sense. It is a trust-compression slide.\n\nThe audience is no longer mostly asking whether the idea is good. They are asking:\n**Can this team actually pull it off?**\n\nSo every line on the slide has to reduce execution risk, not merely fill space.\n\nThe slide needs to show:\n- problem-fit, not just résumé quality\n- clinical intuition about what is hard inside the visit\n- product judgment about the artifact and workflow\n- technical or systems judgment\n- deployment realism\n\nIt should **not** become:\n- a generic founder-bio page\n- a credential parade\n- a prestige / logo slide\n- a list of vague founder adjectives\n\nMain risks:\n- the slide feels generic\n- the slide is too résumé-driven\n- the slide undershoots the trust burden for a clinically serious product\n\n### Preserved refinements / appended copy recommendations\n\nThis was one of the explicitly tightened copy slides.\n\nThe appended recommendation gave a formula for the founder lines:\n\n**[what this person understands or can do] → [which Vox risk it reduces]**\n\nExamples given in the source of the type of line desired:\n- Understands how history work actually consumes visit time.\n- Can shape the product artifact around real clinical use.\n- Can build the system that turns story into structured signal.\n- Can translate pilots into repeatable deployment.\n\nOptional footer if the slide still feels thin:\n**The team matches the wedge.**\n\n### Preserved deck-wide note tied to Slide 12\n\nSlide 12 was explicitly flagged as one of the places the deck can weaken late if it turns into generic startup furniture.\n\n**One-line test**\n**These people seem specifically suited to build this, not just impressive in general.**\n\n---"
+    },
+    {
+      "id": "slide-12",
+      "displayNumber": "12",
+      "importedSlides": [
+        13
+      ],
+      "status": "active",
+      "title": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+      "purpose": "close the deck with a concrete financing ask that feels like a de-risking plan",
+      "header": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+      "subheader": "Post-money SAFE • ~18–20 months of runway",
+      "takeaway": "This round is sized for a disciplined next step and funds the exact work needed to turn the product story into pilot proof and seed readiness.",
+      "figureRole": "surface the ask first, then show what the round unlocks with disciplined milestone logic",
+      "family": "ask hero with milestone column",
+      "buildStatus": "slide-12 ask lane reset completed on April 6, 2026; 000320 remains the baseline current and 000342 through 000347 are the latest draft-bank variants built from the locked Apr 6 spec with 000320 and 000340 as visual references",
+      "proof": [],
+      "paths": {
+        "packet": null,
+        "specs": [
+          "projects/designer-health/inputs/slide-12-ask-spec-2026-04-06/slide-12-ask-spec-v1.1-locked.md"
+        ],
+        "stampedDir": "projects/designer-health/slide-figures/slide-12",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-12/manifest.json"
+      },
+      "selectedDirection": "Use one integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, a restrained bottom ribbon, and allow tasteful extra proof structure like a timeline or allocation bars when it sharpens the argument.",
+      "notes": [
+        "Slide 12 is the ask slide and should no longer route through a legacy slide-13 workstream.",
+        "Bias the next exploration toward the visual language of versions 000320 and 000340.",
+        "Allow elegant add-on structure like a timeline, rollout sequence, or restrained percent bars when it improves the read."
+      ],
+      "variants": [],
+      "specText": "### Current official read\n\n**Slide job**\nClose the deck with a concrete financing ask that feels like a de-risking plan, not a generic raise.\n\n**Core claim**\n**We are raising $1.25M to fund the next proof stage: launch pilots, demonstrate value, and show deployment can be repeated.**\n\n**What the audience should believe after this slide**\n**This round is sized for a disciplined next step. It funds the exact work needed to turn the product story into pilot proof and seed readiness.**\n\n**Strategic role in deck**\nThis is the closing conversion slide. It should translate the entire deck from thesis into financing logic.\n\n**Current running copy plan**\n- eyebrow: `The Ask`\n- header: `Raising $1.25M to launch pilots, prove value, and establish repeatable deployment`\n- subheader: `Post-money SAFE • ~18–20 months of runway`\n- hero block: `$1.25M` + `Pre-Seed SAFE`\n- support stats: `2 key hires` / `3 pilot sites` / `18–20 months runway`\n- milestone cards:\n  - Build: `Founding engineer in place` / `Clinician-grade product loop live`\n  - Deploy: `Implementation / ops lead in place` / `Pilot sites launched with a repeatable rollout motion`\n  - Validate: `Measurable pilot outcomes` / `Seed-ready proof package`\n- bottom ribbon / small footer treatment: `Use of funds: Build • Deploy • Validate`\n\n**Figure plan**\nThe slide should read in three zones:\n- left hero block: large raise amount and structure\n- right milestone area: three clean Build / Deploy / Validate cards\n- bottom ribbon: one restrained use-of-funds line, not a budget table\n\n### Exploration bias for the next draft bank\n\nUse the stronger visual language from versions `000320` and `000340` as continuity cues. It is acceptable to introduce tasteful added structure when it helps the slide read faster, for example:\n- a simple timeline or staged sequence\n- restrained allocation bars or percentage-style breakdowns\n- compact proof checkpoints or rollout markers\n\nOnly add those if they clarify the ask. They should feel like elegant slide logic, not fabricated diligence detail or a finance spreadsheet.\n\n### What to avoid\n\n- a dense use-of-funds table\n- salary-heavy budget detail\n- fuzzy wording like `clinician trust` on the headline\n- too many milestones\n- a generic close like `build team / go to market / scale`\n\n**One-line test**\n**This feels like funding a concrete proof plan, not funding hope.**\n\n---"
+    },
+    {
+      "id": "slide-13",
+      "displayNumber": "12 (legacy merged into slide-12)",
+      "importedSlides": [
+        13
+      ],
+      "status": "deprecated",
+      "title": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+      "purpose": "close with a disciplined proof-stage ask",
+      "header": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+      "subheader": "Post-money SAFE • ~18–20 months of runway",
+      "takeaway": "This is a finite, milestone-based raise tied to proof-stage deployment.",
+      "figureRole": "surface the ask first, then show what the round unlocks",
+      "family": "ask hero with milestone column",
+      "buildStatus": "legacy archive only; the active ask slot is now slide-12",
+      "proof": [],
+      "paths": {
+        "packet": null,
+        "specs": [],
+        "stampedDir": "projects/designer-health/slide-figures/slide-13",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-13/manifest.json"
+      },
+      "selectedDirection": "Legacy archive only after the ask slide was reassigned to slide-12.",
+      "notes": [
+        "Public slide 12 now runs off the locked ask build spec imported on April 5, 2026.",
+        "Prefer the left-hero / right-stacked milestone composition unless crowding forces the horizontal fallback.",
+        "The current ask candidate bank lives under slide-13 versions version-000315 through version-000320."
+      ],
+      "variants": [],
+      "specText": "### Current official read\n\n**Slide job**\nThis is the closing ask slide. It should turn the deck into a finite proof-stage financing plan rather than a generic raise page.\n\n**Core claim**\n**The ask is disciplined, milestone-based, and sized to prove the next stage of deployment.**\n\n**What this slide must make the audience believe**\n**$1.25M on a post-money SAFE funds the hires, pilots, runway, and validation needed to establish repeatable deployment.**\n\n**Current preferred header**\n**Raising $1.25M to launch pilots, prove value, and establish repeatable deployment**\n\n**Current preferred subheader**\n**Post-money SAFE • ~18–20 months of runway**\n\n**Current preferred figure logic**\nA single integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.\n\n### Preserved strategic discussion\n\nThe slide should surface the ask on first scan, then show exactly what the round unlocks. It should feel like a clean conversion slide: thesis translated into financing logic.\n\nKeep the left side focused on the amount, instrument, and support stats (`2 core hires`, `3 pilot sites`, `18–20 months`). Keep the right side focused on outcome-first milestone cards, not generic startup activity. Keep the bottom ribbon quieter than the milestone logic.\n\nThis slide must avoid:\n- spreadsheet or payroll memo energy\n- generic build / scale / go-to-market language\n- decorative icons or illustration\n- use-of-funds detail that overpowers the milestones\n\nPreferred visual treatment:\n- soft gray field with calm white card surfaces\n- restrained shadow and rounded corners\n- one muted blue accent family only\n- premium, clinically serious late-deck tone\n\nFallback only if needed: convert the right column into a horizontal three-card strip if the stacked milestone column becomes crowded.\n\n**One-line test**\n**This feels like funding a concrete proof plan, not funding hope.**\n\n---"
+    },
+    {
+      "id": "slide-04",
+      "displayNumber": "4 (retired)",
+      "importedSlides": [
+        4
+      ],
+      "status": "deprecated",
+      "title": "Visits start with story, not structure",
+      "purpose": "make the mechanism legible after the wedge/intervention claim has already landed",
+      "header": "Visits start with story, not structure.",
+      "subheader": "Clinicians spend valuable minutes turning patient story into decision-ready structure.",
+      "takeaway": "Valuable visit time is spent turning patient story into decision-ready structure.",
+      "figureRole": "show human story on the left, necessary organizing work in the middle, and decision-ready structure on the right",
+      "family": "standalone transformation flow",
+      "buildStatus": "retired from the active deck after the slide-4/5 merge; keep as a legacy mechanism reference only",
+      "proof": [],
+      "paths": {
+        "packet": "projects/designer-health/slide-packets/slide-04-story-not-structure.md",
+        "specs": [
+          "projects/designer-health/figures/specs/slide-04-transformation-flow.json",
+          "projects/designer-health/figures/specs/slide-04-story-streams-v1.json"
+        ],
+        "stampedDir": "projects/designer-health/slide-figures/slide-04",
+        "assetsManifest": "projects/designer-health/slide-assets/slide-04/manifest.json"
+      },
+      "selectedDirection": "Retired from the active deck after the slide-4/5 merge. Keep the stamped comparison set as historical mechanism reference work only.",
+      "notes": [
+        "Retired from the active backbone after the April 4 slide-4/5 merge.",
+        "Public slide 4 now resolves to slide-05, so this workstream remains archive-only.",
+        "Keep the stamped comparison set for historical reference; do not treat it as the live deck slot.",
+        "Some supporting packet/spec files remain useful source material if the mechanism beat is ever reopened."
+      ],
+      "selectedVariantId": "transformation-flow-native",
+      "variants": [
+        {
+          "id": "story-not-structure-packet",
+          "label": "Slide 4 Packet",
+          "status": "option",
+          "summary": "The reopened active slide-4 mechanism direction. Use the old mechanism family as the base, especially the softer story field and wobbly narrative texture on the left.",
+          "previewPath": "",
+          "files": [
+            {
+              "label": "Slide packet",
+              "path": "projects/designer-health/slide-packets/slide-04-story-not-structure.md"
+            },
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-04"
+            }
+          ]
+        },
+        {
+          "id": "transformation-flow-native",
+          "label": "Transformation Flow Native",
+          "status": "selected",
+          "summary": "Strong standalone mechanism slide from the pre-merge direction. This is now the stamped current reference lead for the reopened active slide 4.",
+          "previewPath": "projects/designer-health/slide-figures/slide-04/versions/version-000074--transformation-flow-native/figure.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-04/versions/version-000074--transformation-flow-native"
+            },
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/slide-04-transformation-flow.json"
+            }
+          ]
+        },
+        {
+          "id": "story-streams-v1-native",
+          "label": "Story Streams v1 Native",
+          "status": "option",
+          "summary": "Membrane-style story-to-structure direction. Useful as a middle-zone reference for the reopened mechanism slide.",
+          "previewPath": "projects/designer-health/slide-figures/slide-04/versions/version-000075--story-streams-v1-native/figure.png",
+          "files": [
+            {
+              "label": "Stamped dir",
+              "path": "projects/designer-health/slide-figures/slide-04/versions/version-000075--story-streams-v1-native"
+            },
+            {
+              "label": "Spec",
+              "path": "projects/designer-health/figures/specs/slide-04-story-streams-v1.json"
+            }
+          ]
+        }
+      ],
+      "specText": "### Current official read\n\n**Slide job**\nThis is the mechanism slide. It explains what is actually happening during history work that consumes valuable time.\n\n**Core claim**\n**The costly part is not merely hearing a patient speak. The costly part is turning patient story into usable clinical structure.**\n\n**What this slide must make the audience believe**\n**A meaningful part of visit time is spent transforming patient story into decision-ready structure, and that work is both necessary and expensive.**\n\n**Current preferred header**\n**Visits start with story, not structure.**\n\n**Current preferred figure role**\nA left-to-right conceptual transformation from messy patient narrative to usable clinical structure, with the middle transformation work clearly carrying the weight.\n\n### Preserved strategic discussion\n\nThis slide is what makes the wedge legible.\n\nIt is not really about “intake.” It is about the transformation from:\n- messy natural-language patient account\n\nto:\n- usable, clinically relevant, decision-ready structure\n\nThe hidden labor inside the visit includes:\n- sorting\n- sequencing\n- disambiguating\n- extracting what matters\n- reconciling uncertainty\n- turning narrative into a usable starting point\n\nThis slide has to prevent several bad readings:\n- this is just a form-filling problem\n- this is just transcription earlier in the workflow\n- this is just ambient scribing moved upstream\n\nIt should create recognition more than excitement:\n- yes, that is exactly the hidden work\n- yes, that feels clinically true\n- now the trust / quality problem makes sense\n\nIt should **not**:\n- show product UI\n- explain the full Vox workflow\n- become a software architecture slide\n- become too literary about the patient story\n- become a rigid pipeline diagram\n\nMain risks:\n- the middle feels vague or decorative\n- the slide becomes too product-y too early\n- the slide becomes visually clever but strategically soft\n\n### Preserved deck-wide note tied to Slide 5\n\nSlide 5 is one of the key anti-collapse slides. If it is weak, Vox gets mentally collapsed into intake or generic workflow automation.\n\n**One-line test**\n**Right — the costly work is turning patient story into usable clinical structure.**\n\n---",
+      "deprecated": {
+        "reason": "Retired from the active deck after the slide-4/5 merge shifted the middle into a new sequential 1-12 structure."
+      }
+    },
+    {
+      "id": "slide-04-05",
+      "displayNumber": "4/5",
+      "importedSlides": [
+        4,
+        5
+      ],
+      "status": "deprecated",
+      "title": "History Bridge (Shelved Combined Concept)",
+      "purpose": "historical combined bridge concept created when slides 4 and 5 were temporarily merged",
+      "header": "History is the cleanest place to reclaim minutes.",
+      "subheader": "No formal subtitle; use distributed figure copy instead.",
+      "takeaway": "Shelved concept: merge the wedge/intervention claim and the story-to-structure explanation into one two-beat bridge slide.",
+      "figureRole": "historical reference only",
+      "family": "quoted slide-3 source bar plus peel-back bridge plus subordinate story-to-structure zoom",
+      "buildStatus": "shelved; keep for rationale and reference branches only",
+      "proof": [],
+      "paths": {
+        "packet": "projects/designer-health/slide-packets/slide-04-history-bridge.md",
+        "specs": [
+          "projects/designer-health/figures/specs/slide-04-story-streams-v1.json",
+          "projects/designer-health/figures/specs/slide-04-transformation-flow.json"
+        ],
+        "stampedDir": "projects/designer-health/slide-figures/slide-04-05"
+      },
+      "selectedDirection": "Shelved combined bridge concept. Keep for historical rationale and reference branches only; it is no longer part of the active backbone.",
+      "notes": [
+        "The deck is now sequentially renumbered 1-12 after the slide-4/5 merge.",
+        "Keep this bundle as historical rationale only; it is not part of the live backbone.",
+        "The visual branches below remain useful references, especially for the upper wedge/intervention beat."
+      ],
+      "selectedVariantId": "history-bridge-packet",
+      "variants": [
+        {
+          "id": "history-bridge-packet",
+          "label": "Merged History Bridge Packet",
+          "status": "selected",
+          "summary": "Historical packet for the shelved combined concept. Useful for rationale, constraints, and the attempt history that led to the temporary merge.",
+          "previewPath": "",
+          "files": [
+            {
+              "label": "Slide packet",
+              "path": "projects/designer-health/slide-packets/slide-04-history-bridge.md"
+            },
+            {
+              "label": "Gemini prompt",
+              "path": "projects/designer-health/prompts/slide-04-history-bridge-gemini.txt"
+            },
+            {
+              "label": "External handoff",
+              "path": "projects/designer-health/references/slide-04-05-chatgpt-handoff-2026-03-28.md"
+            }
+          ]
+        },
+        {
+          "id": "gemini-reference-image-v1",
+          "label": "Gemini Reference-Image Pass",
+          "status": "option",
+          "summary": "Strongest historical composition reference for the combined concept. Especially useful for the upper wedge/hero/support grouping.",
+          "previewPath": "projects/designer-health/slide-figures/slide-04-05/versions/version-000013--gemini-image/image-01.jpg",
+          "files": [
+            {
+              "label": "Historical note",
+              "path": "projects/designer-health/slide-notes/slide-04-05/README.md"
+            },
+            {
+              "label": "Image",
+              "path": "projects/designer-health/slide-figures/slide-04-05/versions/version-000013--gemini-image/image-01.jpg"
+            }
+          ]
+        },
+        {
+          "id": "gemini-reference-html-v1",
+          "label": "Gemini HTML Reference Pass",
+          "status": "option",
+          "summary": "Historical editable reference for the combined concept. Cleaner on the lower explanatory beat than the Gemini image, but flatter overall.",
+          "previewPath": "projects/designer-health/slide-figures/slide-04-05/versions/version-000012--gemini-html/preview.png",
+          "files": [
+            {
+              "label": "Historical note",
+              "path": "projects/designer-health/slide-notes/slide-04-05/README.md"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/designer-health/slide-figures/slide-04-05/versions/version-000012--gemini-html/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/designer-health/slide-figures/slide-04-05/versions/version-000012--gemini-html/preview.png"
+            }
+          ]
+        },
+        {
+          "id": "openai-reference-html-v1",
+          "label": "OpenAI HTML Reference Pass",
+          "status": "option",
+          "summary": "Archived challenge branch for the combined concept. Still useful as a structural reference, but not part of the main Gemini-first execution lane.",
+          "previewPath": "projects/designer-health/slide-figures/slide-04-05/versions/version-000014--openai-html/preview.png",
+          "files": [
+            {
+              "label": "HTML",
+              "path": "projects/designer-health/slide-figures/slide-04-05/versions/version-000014--openai-html/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/designer-health/slide-figures/slide-04-05/versions/version-000014--openai-html/preview.png"
+            }
+          ]
+        },
+        {
+          "id": "anthropic-reference-html-sonnet",
+          "label": "Anthropic Sonnet HTML Pass",
+          "status": "option",
+          "summary": "Archived challenge branch for the combined concept. Valid comparison branch, but no longer part of the primary lane.",
+          "previewPath": "projects/designer-health/slide-figures/slide-04-05/versions/version-000017--anthropic-html-sonnet/preview.png",
+          "files": [
+            {
+              "label": "HTML",
+              "path": "projects/designer-health/slide-figures/slide-04-05/versions/version-000017--anthropic-html-sonnet/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/designer-health/slide-figures/slide-04-05/versions/version-000017--anthropic-html-sonnet/preview.png"
+            }
+          ]
+        },
+        {
+          "id": "anthropic-reference-html-opus",
+          "label": "Anthropic Opus HTML Pass",
+          "status": "option",
+          "summary": "Archived challenge branch for the combined concept. Bolder than Sonnet, but still secondary to the Gemini-first lane.",
+          "previewPath": "projects/designer-health/slide-figures/slide-04-05/versions/version-000018--anthropic-html-opus/preview.png",
+          "files": [
+            {
+              "label": "HTML",
+              "path": "projects/designer-health/slide-figures/slide-04-05/versions/version-000018--anthropic-html-opus/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/designer-health/slide-figures/slide-04-05/versions/version-000018--anthropic-html-opus/preview.png"
+            }
+          ]
+        }
+      ],
+      "deprecated": {
+        "reason": "Historical combined bridge concept kept only for rationale and archived reference branches."
+      }
+    }
+  ],
+  "paths": {
+    "deckAssetsManifest": "projects/designer-health/assets/manifest.json"
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designer.health/schemas/build-spec-output.schema.json",
+  "title": "Build Spec Output",
+  "type": "object",
+  "required": [
+    "metadata",
+    "source_artifacts",
+    "locked_meaning_snapshot",
+    "copy_recommendation",
+    "selected_candidate_id",
+    "selected_spatial_spec_id",
+    "selected_figure_move",
+    "selected_family",
+    "selected_thumbnail_id",
+    "spatial_spec",
+    "lock_status",
+    "version_status"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "slide_number",
+        "working_title",
+        "artifact_type",
+        "version",
+        "status"
+      ],
+      "properties": {
+        "slide_number": {
+          "type": "string"
+        },
+        "working_title": {
+          "type": "string"
+        },
+        "artifact_type": {
+          "const": "build-spec"
+        },
+        "version": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "source_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "run_manifest_ref": {
+      "type": "string"
+    },
+    "locked_meaning_snapshot": {
+      "type": "object",
+      "required": [
+        "slide_job",
+        "audience_belief",
+        "core_claim"
+      ],
+      "properties": {
+        "slide_job": {
+          "type": "string"
+        },
+        "audience_belief": {
+          "type": "string"
+        },
+        "core_claim": {
+          "type": "string"
+        }
+      }
+    },
+    "copy_recommendation": {
+      "type": "object",
+      "required": [
+        "header"
+      ],
+      "properties": {
+        "header": {
+          "type": "string"
+        },
+        "subheader": {
+          "type": "string"
+        },
+        "panel_labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "figure_labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "selected_figure_move": {
+      "type": "object",
+      "required": [
+        "candidate_id",
+        "move_name",
+        "one_sentence_logic"
+      ],
+      "properties": {
+        "candidate_id": {
+          "type": "string"
+        },
+        "move_name": {
+          "type": "string"
+        },
+        "one_sentence_logic": {
+          "type": "string"
+        }
+      }
+    },
+    "selected_candidate_id": {
+      "type": "string"
+    },
+    "selected_spatial_spec_id": {
+      "type": "string"
+    },
+    "selected_family": {
+      "type": "string"
+    },
+    "selected_thumbnail_id": {
+      "type": "string"
+    },
+    "spatial_spec": {
+      "type": "object",
+      "required": [
+        "visual_anchor",
+        "viewer_order",
+        "regions"
+      ],
+      "properties": {
+        "visual_anchor": {
+          "type": "string"
+        },
+        "viewer_order": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regions": {
+          "type": "object"
+        },
+        "density_map": {
+          "type": "object"
+        },
+        "accent_usage": {
+          "type": "object"
+        },
+        "text_load": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "figure_load": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "protected_whitespace": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "element_inventory": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "keep_remove": {
+      "type": "object",
+      "properties": {
+        "keep": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "remove": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "critique_summary": {
+      "type": "object",
+      "properties": {
+        "winner": {
+          "type": "string"
+        },
+        "why_winner_wins": {
+          "type": "string"
+        },
+        "revision_before_build": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "disagreement_score": {
+          "type": "number"
+        },
+        "human_review_required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "builder_handoff_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lock_status": {
+      "type": "string"
+    },
+    "still_unresolved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_action": {
+      "type": "string"
+    },
+    "version_status": {
+      "type": "object",
+      "required": [
+        "version",
+        "status"
+      ],
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "changes_from_previous_version": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

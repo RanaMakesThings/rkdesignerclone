@@ -1,0 +1,18 @@
+Review this 16:9 pitch-deck slide mockup as a visual polish problem.
+
+The user likes the composition direction, but wants it to feel sleeker and cleaner.
+Use this framing when you review:
+- The target feel is the clean reference screenshot the user provided: flat white background, no rounded outer card or stage treatment, crisp bars, understated annotations, and a "Time saved" dashed box that feels integrated and elegant.
+- The concept is already close. Do not redesign the slide into a different visual family.
+- Focus on whether the current candidate achieves that sleek finish.
+
+What to pay special attention to:
+1. Does the slide feel flat/white/clean enough, or still slightly heavy or rough?
+2. Does the dotted "Time saved" box feel elegant and integrated?
+3. Do the dotted guide lines between the two left bars feel clean and intentional?
+4. Does the left mechanism feel smoother than before, or still a little awkward?
+
+Please answer in plain text with:
+1. A short verdict: is this doing a good job of matching the sleek reference feel or not?
+2. 3-5 concrete visual findings.
+3. 2-3 specific polish tweaks that would get it closer without changing the concept.

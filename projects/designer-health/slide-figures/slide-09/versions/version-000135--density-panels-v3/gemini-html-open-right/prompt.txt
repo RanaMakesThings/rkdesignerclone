@@ -1,0 +1,73 @@
+Generate one self-contained HTML document for a premium 1920x1080 investor deck
+slide.
+
+Use the locked raster images directly with normal `<img>` tags. Do not redraw,
+reinterpret, stylize, or replace them.
+
+Left asset path:
+/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-doc-admin-slide7-v113-batch-b/openai/version-06--minimal-restraint/image-01.png
+
+Right asset path:
+/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-encounter-slide7-v113-batch/openai/version-05--bold-contrast/image-01.png
+
+Use this exact on-slide copy:
+
+Header:
+AI has traction after the visit. The visit itself is still thinly served.
+
+Left panel kicker:
+AI impact after the visit
+
+Left support line:
+Ambient scribes validate clinician buy-in for AI assistance.
+
+Left chips:
+- ambient scribe
+- note generation
+- clerical relief
+- documentation support
+
+Right panel kicker:
+AI impact during the visit
+
+Right support line:
+Few tools actually change how the encounter is conducted. Vox does.
+
+Right field:
+- one blue VOX chip
+- optionally one faint outline chip
+- otherwise mostly whitespace
+
+Layout rules:
+- header only, no subheader
+- two side-by-side soft light cards
+- same card shape on both sides
+- same image size on both sides
+- panel order inside each card:
+  - kicker
+  - image
+  - support line
+  - chip field
+- left card should read as occupied and validated
+- right card should carry visibly more internal whitespace than the left
+- the right support line can sit in a slightly airier field than the left, but
+  the cards should still feel like a pair
+
+Style rules:
+- white or warm-white background
+- premium editorial deck feel
+- restrained grayscale palette
+- one blue accent only for the VOX chip
+- rounded geometry
+- generous whitespace
+
+Do not add:
+- a subheader
+- arrows
+- a center explainer
+- a workflow map
+- a large blue brief inside the image
+- any extra labels beyond the defined header, kickers, support lines, and chip
+  text
+
+Return only the HTML document with inline CSS and any inline SVG needed.

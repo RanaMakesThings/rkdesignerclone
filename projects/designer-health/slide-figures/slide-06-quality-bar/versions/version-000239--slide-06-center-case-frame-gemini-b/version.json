@@ -1,0 +1,12 @@
+{
+  "id": "version-000239",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000239--slide-06-center-case-frame-gemini-b",
+  "label": "slide-06-center-case-frame-gemini-b",
+  "status": "archived",
+  "createdAt": "2026-04-03T20:06:37.443Z",
+  "sourceKind": "fine-tune-draft",
+  "baseVersionId": "version-000222",
+  "legacySourcePaths": []
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designer.health/schemas/critique-report.schema.json",
+  "title": "Critique Report",
+  "type": "object",
+  "required": [
+    "slide_number",
+    "version",
+    "thumbnail_reports",
+    "winner",
+    "next_action"
+  ],
+  "properties": {
+    "slide_number": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "thumbnail_reports": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "aggregate_scores": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "disagreement_score": {
+      "type": "number"
+    },
+    "critic_quorum": {
+      "type": "number"
+    },
+    "critics_completed": {
+      "type": "number"
+    },
+    "winner": {
+      "type": "string"
+    },
+    "why_winner_wins": {
+      "type": "string"
+    },
+    "human_review_required": {
+      "type": "boolean"
+    },
+    "reopen_upstream_truth": {
+      "type": "boolean"
+    },
+    "retry_thumbnails": {
+      "type": "boolean"
+    },
+    "next_action": {
+      "type": "string"
+    }
+  }
+}

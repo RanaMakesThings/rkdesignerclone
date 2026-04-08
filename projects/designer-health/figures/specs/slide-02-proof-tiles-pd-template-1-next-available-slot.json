@@ -1,0 +1,85 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-proof-tiles-pd-template-1-next-available-slot",
+    "family": "proof_tiles",
+    "deckId": "pd-template-1",
+    "theme": "pd-template-1",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Demand is outpacing clinical capacity.",
+    "subtitle": "",
+    "chips": [],
+    "footnote": "[1] AMN/Merritt Hawkins physician appointment wait-time survey. [2] CDC/NCHS delayed-care measure."
+  },
+  "constraints": {
+    "figureJob": "Show the delay as distance to the next available appointment slot, not as generic passage of time.",
+    "focalPoint": "The four-week progression and next-open marker, then the proof metrics.",
+    "layout": "Header top left, one week-by-week appointment progression centered above two proof tiles.",
+    "big": [
+      "The week progression object",
+      "The two proof metrics"
+    ],
+    "quiet": [
+      "Eyebrows",
+      "Support copy",
+      "Footnote"
+    ],
+    "accentTargets": [
+      "none"
+    ],
+    "forbidden": [
+      "chart junk",
+      "literal stopwatch or clock icon"
+    ],
+    "semanticGuards": []
+  },
+  "copyPolicy": {
+    "locked": [
+      "Demand is outpacing clinical capacity.",
+      "~1 month",
+      "10.6%"
+    ],
+    "preferred": [],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "motif": "next-available-slot",
+    "tiles": [
+      {
+        "eyebrow": "Access",
+        "metric": "~1 month",
+        "detail": "Average wait for a new doctor appointment",
+        "kicker": "Up 19% in three years [1]",
+        "graphic": {
+          "kind": ""
+        }
+      },
+      {
+        "eyebrow": "Deferred care",
+        "metric": "10.6%",
+        "detail": "Adults delayed or did not get care because no appointment was available when needed [2]",
+        "kicker": "",
+        "graphic": {
+          "kind": ""
+        }
+      }
+    ]
+  },
+  "trace": [
+    {
+      "excerpt": "Next Available Slot",
+      "targetPath": "body.motif",
+      "ruleType": "body",
+      "note": "Use the week progression as the figure concept."
+    },
+    {
+      "excerpt": "Make constrained clinical access feel real.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Use appointment distance instead of abstract time symbolism."
+    }
+  ]
+}

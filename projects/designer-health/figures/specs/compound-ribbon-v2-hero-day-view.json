@@ -1,0 +1,164 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "compound-ribbon-v2-hero-day-view",
+    "family": "compound_ribbon_day_view",
+    "deckId": "pitch-deck-lab",
+    "theme": "pd-template-1",
+    "mode": "body-only"
+  },
+  "chrome": {
+    "title": "",
+    "subtitle": "",
+    "chips": [],
+    "footnote": ""
+  },
+  "constraints": {
+    "figureJob": "Make one highlighted visit segment feel like the cleanest lever to recover minutes, then show those minutes accumulating into a usable new visit across a day.",
+    "focalPoint": "The hero visit and its highlighted story reconstruction segment.",
+    "layout": "Large hero bar on top with ruler, bracket, and stacked callout; subtle transition label in the middle; five shortened visits plus one new visit block across the bottom.",
+    "big": [
+      "The hero visit bar",
+      "The highlighted story reconstruction segment",
+      "The final new visit capacity block"
+    ],
+    "quiet": [
+      "Minute ruler",
+      "Guide outlines behind the day-row visits",
+      "Bottom caption"
+    ],
+    "accentTargets": [
+      "Story reconstruction segment",
+      "New visit capacity block"
+    ],
+    "forbidden": [
+      "literal equation",
+      "thick arrows",
+      "floating slivers",
+      "fake precision"
+    ],
+    "semanticGuards": [
+      "no_ui"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Typical visit",
+      "Story reconstruction",
+      "Repeated across visits",
+      "Five slightly shorter visits",
+      "New visit capacity"
+    ],
+    "preferred": [
+      "Most variable minutes of the visit",
+      "Best target for upstream prep without losing quality",
+      "The part AI can help most"
+    ],
+    "optional": [
+      "Conceptual: small reductions in prep-able minutes can accumulate into usable capacity."
+    ],
+    "forbidden": [
+      "equation",
+      "20-minute visit"
+    ]
+  },
+  "body": {
+    "hero": {
+      "label": "Typical visit",
+      "rulerTicks": [
+        0,
+        5,
+        10,
+        15,
+        20
+      ],
+      "segments": [
+        {
+          "label": "Story reconstruction",
+          "width": 24,
+          "role": "focus"
+        },
+        {
+          "label": "Decisions + counseling",
+          "width": 34,
+          "role": "neutral"
+        },
+        {
+          "label": "Exam + workflow",
+          "width": 42,
+          "role": "quiet"
+        }
+      ],
+      "callout": {
+        "lines": [
+          "Most variable minutes of the visit",
+          "Best target for upstream prep without losing quality",
+          "The part AI can help most"
+        ]
+      }
+    },
+    "transitionLabel": "Repeated across visits",
+    "dayView": {
+      "label": "Five slightly shorter visits",
+      "count": 5,
+      "guideWidth": 165,
+      "height": 24,
+      "gap": 18,
+      "newVisitGap": 44,
+      "newVisitWidth": 150,
+      "reducedStoryWidthPct": 10,
+      "newVisitLabel": "New visit capacity",
+      "caption": "Conceptual: small reductions in prep-able minutes can accumulate into usable capacity."
+    }
+  },
+  "trace": [
+    {
+      "excerpt": "Show one large visit at the top with the highlighted story/history segment and the three callout points.",
+      "targetPath": "body.hero",
+      "ruleType": "body",
+      "note": "Use a dominant hero visit with the story segment highlighted and a three-line callout."
+    },
+    {
+      "excerpt": "Beneath it, zoom out to a row of five slightly shorter visits. After those five, a clearly visible new visit block appears in accent green.",
+      "targetPath": "body.dayView",
+      "ruleType": "body",
+      "note": "Make the bottom row conceptual, repeated, and capped by one accent visit."
+    },
+    {
+      "excerpt": "Use a small centered transition label with thin rules on either side: Repeated across visits.",
+      "targetPath": "body.transitionLabel",
+      "ruleType": "layout",
+      "note": "Keep the transition understated and centered."
+    },
+    {
+      "excerpt": "Top hero bar with callout above, subtle transition in the middle, repeated visits plus a new visit payoff across the bottom.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Lock the two-level composition from hero explanation to day-view capacity."
+    },
+    {
+      "excerpt": "The lower section is about capacity effect, not anatomy.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Make the new-visit payoff obvious without turning the row into math."
+    },
+    {
+      "excerpt": "The top hero bar remains the dominant object. The new visit should be the only strongly accented object in the lower row.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "Preserve the visual hierarchy between hero context and day-view payoff."
+    },
+    {
+      "excerpt": "Create a premium two-level pitch-deck figure on a white background.",
+      "targetPath": "meta.theme",
+      "ruleType": "copy-policy",
+      "note": "Use the clean white `pd-template-1` slide theme and body-only composition."
+    },
+    {
+      "excerpt": "Keep the essential labels locked: Typical visit, Story reconstruction, Repeated across visits, Five slightly shorter visits, and New visit capacity.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Require the core labels that carry the narrative at a glance."
+    }
+  ]
+}

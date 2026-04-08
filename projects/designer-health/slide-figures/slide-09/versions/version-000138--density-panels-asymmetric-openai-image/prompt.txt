@@ -1,0 +1,59 @@
+Generate a premium 16:9 investor-deck slide image.
+
+Use the two provided reference images as the required left and right scene
+anchors.
+Preserve their composition and framing as much as the image model allows.
+Do not invent a new concept.
+
+This is a harder composition pass on the existing two-panel density-comparison
+family.
+
+The current problem is that the lower panels feel too even, too polite, and too
+much like balanced product cards. The slide needs to feel like an asymmetric
+strategic comparison.
+
+Design direction:
+- header remains exactly:
+  `AI has traction after the visit. The visit itself is still thinly served.`
+- two soft light panels beneath
+- right panel slightly larger and more important than the left
+- both images much taller and more dominant inside the cards
+- left side reads as proof of existing adoption
+- right side reads as the more strategic, thinner, more interesting territory
+
+Exact card copy:
+- left kicker:
+  `AI impact after the visit`
+- left support line:
+  `Ambient scribes have already established clinician buy-in.`
+- left density label:
+  `More crowded`
+- left chips:
+  `ambient scribe`
+  `note generation`
+  `clerical relief`
+  `documentation support`
+- right kicker:
+  `AI impact during the visit`
+- right support line:
+  `Few tools change the encounter itself. Vox does.`
+- right density label:
+  `Still thin`
+- right field:
+  one blue `VOX` chip plus two or three very faint outline chips with lots of
+  whitespace
+
+Style:
+- premium editorial deck
+- white or warm-white background
+- restrained grayscale
+- one blue accent only
+- elegant rounded geometry
+- not a product-card UI
+
+Avoid:
+- cropping or clipping the selected reference scenes
+- subheaders
+- center diagrams
+- workflow arrows
+- a crowded right-side chip field

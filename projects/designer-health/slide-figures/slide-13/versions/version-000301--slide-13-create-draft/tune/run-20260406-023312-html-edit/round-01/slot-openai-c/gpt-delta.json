@@ -1,0 +1,33 @@
+{
+  "provider": "gpt",
+  "status": "partial",
+  "summary": "The candidate clearly attempts the intended ask slide and gets the locked title, subheader, integrated ask-plus-milestones structure, and restrained blue-accent Designer feel mostly right, but the execution is not fully presentation-ready because the composition is overcrowded, key footer shell elements are compromised by an extra broken image artifact, and the bottom ribbon intrudes into the main milestone area.",
+  "evidence": [
+    "The header matches the locked claim: 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.'",
+    "The subheader matches the locked text: 'Post-money SAFE · ~18–20 months of runway.'",
+    "The figure uses the requested integrated master card with a left hero ask panel showing '$1.25M' and support stats for '2', '3', and '18–20'.",
+    "The right side contains stacked milestone cards labeled 'Build', 'Deploy', and 'Validate', aligning with the required proof-stage milestone logic.",
+    "A muted blue accent family, soft gray field, white cards, rounded corners, and restrained shadows keep it broadly in-family with the Designer aesthetic.",
+    "The bottom use-of-funds ribbon is present, but it is too tall and visually collides with the lower content, partially covering the Validate section rather than staying quiet and secondary.",
+    "There is an obvious broken/empty image placeholder artifact near the bottom-right above the logo, which makes the slide look unfinished and violates the no-placeholder/presentation-ready requirement.",
+    "The footer rule remains, but the extra artifact near the footer area disrupts the locked shell cleanliness and undermines the polished late-deck tone."
+  ],
+  "nextPrompt": "Keep the current structure and copy, but make the slide fully presentation-ready: remove the broken image/placeholder artifact at bottom right, reduce the height of the use-of-funds ribbon so it stays secondary, and ensure the Build/Deploy/Validate stack is fully visible without overlap while preserving the footer rule and Designer logo alignment.",
+  "needsHuman": false,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate clearly attempts the intended ask slide and gets the locked title, subheader, integrated ask-plus-milestones structure, and restrained blue-accent Designer feel mostly right, but the execution is not fully presentation-ready because the composition is overcrowded, key footer shell elements are compromised by an extra broken image artifact, and the bottom ribbon intrudes into the main milestone area.",
+    "evidence": [
+      "The header matches the locked claim: 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.'",
+      "The subheader matches the locked text: 'Post-money SAFE · ~18–20 months of runway.'",
+      "The figure uses the requested integrated master card with a left hero ask panel showing '$1.25M' and support stats for '2', '3', and '18–20'.",
+      "The right side contains stacked milestone cards labeled 'Build', 'Deploy', and 'Validate', aligning with the required proof-stage milestone logic.",
+      "A muted blue accent family, soft gray field, white cards, rounded corners, and restrained shadows keep it broadly in-family with the Designer aesthetic.",
+      "The bottom use-of-funds ribbon is present, but it is too tall and visually collides with the lower content, partially covering the Validate section rather than staying quiet and secondary.",
+      "There is an obvious broken/empty image placeholder artifact near the bottom-right above the logo, which makes the slide look unfinished and violates the no-placeholder/presentation-ready requirement.",
+      "The footer rule remains, but the extra artifact near the footer area disrupts the locked shell cleanliness and undermines the polished late-deck tone."
+    ],
+    "nextPrompt": "Keep the current structure and copy, but make the slide fully presentation-ready: remove the broken image/placeholder artifact at bottom right, reduce the height of the use-of-funds ribbon so it stays secondary, and ensure the Build/Deploy/Validate stack is fully visible without overlap while preserving the footer rule and Designer logo alignment.",
+    "needsHuman": false
+  }
+}

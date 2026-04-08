@@ -1,0 +1,19 @@
+Return one self-contained HTML document for a 1920x1080 investor-deck slide.
+Use the attached reference image as the family anchor.
+Keep the overall slide composition, palette, typography tone, left ribbons, right reasoning rails, and clinician-grade card consistent with the reference image.
+Do not redesign the whole slide. Only change the center object and only make the smallest surrounding adjustments needed for it to fit naturally.
+This is slide 6, the quality-bar slide. The hard part is not collecting the story; it is producing a clinician-grade starting point.
+The center object must make the hidden clinical work feel real: adaptive questioning, prioritization, reconciliation, judgment, and transformation from patient story into usable structure.
+Avoid generic AI tropes, sparkles, brains, chat bubbles, network-node cliches, robot imagery, or software architecture diagrams.
+Keep the text hierarchy aligned to the current copy map:
+- Top-left of chamber: Vox / Adaptive clinical interviewer
+- Center label: Adaptive interview loop
+- Right-side chamber title: Clinical reasoning + medical knowledge
+- Rails: What matters / What connects / What still needs verification
+- Far-right card: Clinician-grade starting point
+
+Center-object concept: Reconciliation Ring.
+Interpret it as: a segmented ring where different parts of the patient story are reconciled into a coherent clinical picture before feeding rightward.
+Make it slightly more explicit and legible. Add just enough internal structure or checkpoints so the hidden clinical work feels real, while still staying premium and uncluttered.
+The result should still feel like the same slide family, just with a better middle object than a generic circle with arrows.
+Return only the HTML.

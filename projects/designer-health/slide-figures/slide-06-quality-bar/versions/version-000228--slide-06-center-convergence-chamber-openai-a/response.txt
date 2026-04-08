@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Vox – Quality Bar Slide</title>
+<style>
+  :root{
+    --bg:#f7f8f7;
+    --ink:#172033;
+    --muted:#5f6d84;
+    --line:#c8d3df;
+    --line2:#aac3d8;
+    --teal:#3a9aa3;
+    --teal-dark:#1f6f7d;
+    --teal-soft:#dff3f2;
+    --teal-pale:#ebf7f6;
+    --shadow:0 18px 50px rgba(112,133,160,.14);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#fff;font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif}
+  .slide{
+    width:1920px;height:1080px;position:relative;overflow:hidden;
+    background:
+      radial-gradient(900px 500px at 20% 10%, rgba(68,153,161,.10), transparent 50%),
+      radial-gradient(700px 420px at 74% 78%, rgba(68,153,161,.08), transparent 48%),
+      radial-gradient(1200px 500px at 50% 100%, rgba(117,153,176,.07), transparent 55%),
+      linear-gradient(180deg,#fafbfb 0%, #f6f7f7 100%);
+    color:var(--ink);
+  }
+  .title{
+    position:absolute;left:108px;top:72px;width:1420px;
+    font-size:64px;line-height:1.03;font-weight:700;letter-spacing:-0.04em;
+  }
+  .title .brand{color:var(--teal);font-weight:800}
+  .sub{
+    position:absolute;left:108px;top:292px;width:1320px;
+    font-size:24px;line-height:1.35;color:var(--muted);letter-spacing:-0.02em;
+  }
+
+  .center-panel{
+    position:absolute;left:558px;top:410px;width:720px;height:526px;
+    border:1.5px solid rgba(154,170,188,.45);
+    border-radius:38px;
+    background:
+      radial-gradient(280px 180px at 32% 56%, rgba(84,176,181,.07), transparent 62%),
+      radial-gradient(280px 180px at 78% 50%, rgba(84,176,181,.05), transparent 62%),
+      linear-gradient(180deg, rgba(255,255,255,.90), rgba(249,251,251,.88));
+    box-shadow: 0 24px 70px rgba(104,127,150,.10);
+  }
+
+  .vox-mark{
+    position:absolute;left:725px;top:455px;text-align:center;width:210px;
+  }
+  .vox-mark .logo{
+    font-size:56px;font-weight:800;letter-spacing:-.05em;color:var(--teal);
+    line-height:1;
+  }
+  .vox-mark .tag{
+    margin-top:6px;font-size:17px;color:#2d394d;font-weight:500;
+  }
+
+  .loop-label{
+    position:absolute;left:704px;top:647px;width:126px;text-align:center;
+    font-size:18px;line-height:1.1;font-weight:700;color:#253044;
+  }
+
+  .right-chamber-title{
+    position:absolute;left:935px;top:468px;width:250px;
+    font-size:20px;line-height:1.15;color:#253044;font-weight:700;text-align:center;
+  }
+
+  .rail{
+    position:absolute;left:938px;width:261px;height:46px;
+    border-radius:23px;background:rgba(255,255,255,.94);
+    border:1px solid rgba(194,206,219,.75);box-shadow:0 8px 22px rgba(116,136,157,.08);
+    display:flex;align-items:center;padding-left:36px;
+    font-size:18px;line-height:1.08;color:#2a3445;font-weight:700;
+  }
+  .rail:before{
+    content:"";position:absolute;left:16px;top:50%;transform:translateY(-50%);
+    width:9px;height:9px;border-radius:50%;background:var(--teal);
+    box-shadow:0 0 0 6px rgba(58,154,163,.08);
+  }
+  .rail.r1{top:566px}
+  .rail.r2{top:656px}
+  .rail.r3{top:746px;height:48px}
+
+  .right-title{
+    position:absolute;left:1459px;top:554px;width:320px;text-align:left;
+    font-size:23px;line-height:1.1;font-weight:700;color:#1f2938;
+    letter-spacing:-0.03em;
+  }
+
+  .doc{
+    position:absolute;left:1520px;top:602px;width:280px;height:320px;
+    border-radius:20px;
+    background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(245,247,249,.95));
+    border:1.4px solid rgba(205,214,223,.85);
+    box-shadow:0 20px 44px rgba(92,117,144,.16);
+    overflow:hidden;
+  }
+  .doc:before{
+    content:"";position:absolute;left:0;top:0;right:24px;height:18px;
+    background:linear-gradient(90deg,#dff4f3 0%, #acd9dc 55%, #87c9cf 100%);
+  }
+  .doc .line{
+    height:13px;border-radius:8px;background:#dfe5ea;margin-left:24px;opacity:.95;
+  }
+  .doc .hr{
+    height:1px;background:#cfd8df;margin:14px 24px 12px;
+  }
+  .binder{
+    position:absolute;left:1494px;top:620px;width:38px;height:210px;border-radius:18px;
+    background:linear-gradient(180deg,#2b8690,#175e69);
+    box-shadow:0 10px 26px rgba(35,108,120,.18);
+  }
+  .binder:before{
+    content:"";position:absolute;left:14px;top:18px;bottom:18px;width:10px;border-radius:8px;
+    background:rgba(255,255,255,.16);
+  }
+
+  .ribbon{
+    position:absolute;height:68px;display:flex;align-items:center;
+    padding-left:56px;padding-right:46px;font-size:20px;font-weight:600;
+    color:#445066; letter-spacing:-0.03em;
+    background:rgba(255,255,255,.25);
+    clip-path:polygon(0 50%, 4% 0, 89% 0, 100% 50%, 89% 100%, 4% 100%);
+    border:3px solid #9eb0c4;
+    backdrop-filter: blur(1px);
+  }
+  .ribbon.teal{
+    border-color:#59b3b8;color:var(--teal-dark);background:rgba(223,243,242,.55);
+    font-weight:700;
+  }
+  .rib1{left:118px;top:463px;width:440px}
+  .rib2{left:136px;top:552px;width:386px}
+  .rib3{left:118px;top:640px;width:440px}
+  .rib4{left:136px;top:727px;width:386px}
+  .rib5{left:118px;top:815px;width:440px}
+
+  .soft-glow{
+    position:absolute;inset:auto;pointer-events:none;
+    filter:blur(20px);opacity:.55;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="title">
+    <span class="brand">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.
+  </div>
+
+  <div class="sub">
+    Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+    By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>
+    what still needs verification before the visit begins.
+  </div>
+
+  <div class="ribbon rib1">My back has been hurting...</div>
+  <div class="ribbon teal rib2">Vox: What makes it worse?</div>
+  <div class="ribbon rib3">It's worse in the morning.</div>
+  <div class="ribbon teal rib4">Vox: When did this start?</div>
+  <div class="ribbon rib5">Started last Tuesday.</div>
+
+  <div class="center-panel"></div>
+
+  <div class="vox-mark">
+    <div class="logo">Vox</div>
+    <div class="tag">Adaptive clinical interviewer</div>
+  </div>
+
+  <div class="loop-label">Adaptive<br>interview loop</div>
+  <div class="right-chamber-title">Clinical reasoning + medical knowledge</div>
+
+  <div class="rail r1">What matters</div>
+  <div class="rail r2">What connects</div>
+  <div class="rail r3">What still needs<br>verification</div>
+
+  <div class="right-title">Clinician-grade starting point</div>
+
+  <div class="binder"></div>
+  <div class="doc">
+    <div class="line" style="width:105px;margin-top:30px;"></div>
+    <div class="line" style="width:214px;margin-top:12px;"></div>
+    <div class="line" style="width:148px;margin-top:10px;"></div>
+    <div class="hr"></div>
+    <div class="line" style="width:105px;margin-top:8px;"></div>
+    <div class="line" style="width:180px;margin-top:14px;"></div>
+    <div class="line" style="width:212px;margin-top:10px;"></div>
+    <div class="line" style="width:130px;margin-top:10px;"></div>
+    <div class="hr"></div>
+    <div class="line" style="width:106px;margin-top:8px;"></div>
+    <div class="line" style="width:156px;margin-top:14px;"></div>
+    <div class="line" style="width:180px;margin-top:10px;"></div>
+  </div>
+
+  <svg width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute;left:0;top:0">
+    <defs>
+      <linearGradient id="storyBlue" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#b6c5d5"/>
+        <stop offset="100%" stop-color="#8ca7be"/>
+      </linearGradient>
+      <linearGradient id="storyTeal" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#74c7c8"/>
+        <stop offset="100%" stop-color="#45a8ae"/>
+      </linearGradient>
+      <linearGradient id="fadeRail" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#9dd9da" stop-opacity=".85"/>
+        <stop offset="100%" stop-color="#9dd9da" stop-opacity=".15"/>
+      </linearGradient>
+      <linearGradient id="fadeRail2" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#8db3bf" stop-opacity=".62"/>
+        <stop offset="100%" stop-color="#8db3bf" stop-opacity=".10"/>
+      </linearGradient>
+      <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="8"/>
+      </filter>
+      <filter id="soft2" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="16"/>
+      </filter>
+      <linearGradient id="chamberGlow" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#e9f6f5"/>
+        <stop offset="100%" stop-color="#cfe9e8"/>
+      </linearGradient>
+      <linearGradient id="tealCore" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#68bdc1"/>
+        <stop offset="100%" stop-color="#2f8e98"/>
+      </linearGradient>
+    </defs>
+
+    <!-- incoming narrative strands -->
+    <path d="M 520 497 C 590 500, 618 633, 683 650" fill="none" stroke="url(#storyBlue)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 520 586 C 594 586, 622 672, 683 676" fill="none" stroke="url(#storyTeal)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 520 674 C 592 672, 617 675, 683 681" fill="none" stroke="url(#storyBlue)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 520 761 C 596 760, 620 706, 683 708" fill="none" stroke="url(#storyTeal)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 520 849 C 592 846, 620 740, 683 706" fill="none" stroke="url(#storyBlue)" stroke-width="6" stroke-linecap="round"/>
+
+    <path d="M 524 497 C 584 502, 614 623, 679 648" fill="none" stroke="#dfe7ee" stroke-width="18" stroke-linecap="round" opacity=".55" filter="url(#soft)"/>
+    <path d="M 524 586 C 590 588, 618 670, 679 676" fill="none" stroke="#bde8e7" stroke-width="18" stroke-linecap="round" opacity=".55" filter="url(#soft)"/>
+    <path d="M 524 674 C 588 675, 617 676, 679 680" fill="none" stroke="#dfe7ee" stroke-width="18" stroke-linecap="round" opacity=".55" filter="url(#soft)"/>
+    <path d="M 524 761 C 592 759, 618 709, 679 708" fill="none" stroke="#bde8e7" stroke-width="18" stroke-linecap="round" opacity=".55" filter="url(#soft)"/>
+    <path d="M 524 849 C 590 842, 616 742, 679 707" fill="none" stroke="#dfe7ee" stroke-width="18" stroke-linecap="round" opacity=".55" filter="url(#soft)"/>
+
+    <!-- convergence chamber -->
+    <ellipse cx="770" cy="678" rx="88" ry="88" fill="url(#chamberGlow)" opacity=".85" filter="url(#soft2)"/>
+    <path d="M 690 650
+             C 724 606, 794 598, 840 624
+             C 874 643, 886 682, 876 717
+             C 865 758, 827 785, 785 786
+             C 744 786, 710 770, 694 739
+             C 676 705, 674 671, 690 650 Z"
+          fill="rgba(255,255,255,.72)" stroke="#d9e6ea" stroke-width="2"/>
+
+    <!-- tightened throat / quality standard -->
+    <path d="M 680 648
+             C 702 652, 712 655, 724 658
+             C 732 660, 736 668, 735 676
+             C 734 686, 727 693, 717 693
+             C 704 693, 693 690, 680 688 Z"
+          fill="url(#tealCore)"/>
+    <path d="M 683 704
+             C 700 703, 712 704, 724 705
+             C 732 706, 737 713, 737 721
+             C 737 730, 732 737, 723 739
+             C 710 742, 699 742, 684 742 Z"
+          fill="#63bcc0"/>
+
+    <!-- loop arc accents -->
+    <path d="M 804 604 A 80 80 0 0 1 852 639" fill="none" stroke="#6dbfc2" stroke-width="14" opacity=".9"/>
+    <path d="M 863 673 A 82 82 0 0 1 857 716" fill="none" stroke="#4aaab0" stroke-width="14" opacity=".9"/>
+    <path d="M 784 761 A 82 82 0 0 1 724 744" fill="none" stroke="#2b8f99" stroke-width="14" opacity=".92"/>
+    <path d="M 698 648 A 81 81 0 0 1 708 613" fill="none" stroke="#dbe7ec" stroke-width="10"/>
+
+    <!-- minimal direction chevrons -->
+    <path d="M 829 636 l12 10 l-12 10" fill="none" stroke="#2d949e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 735 723 l-10 12" fill="none" stroke="#2d949e" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- internal narrowing / transformation -->
+    <path d="M 852 678
+             C 878 678, 886 678, 898 678
+             C 910 678, 922 678, 938 678"
+          fill="none" stroke="url(#fadeRail)" stroke-width="22" stroke-linecap="round"/>
+
+    <!-- rails from chamber to pills -->
+    <path d="M 850 589 C 885 589, 907 589, 938 589" fill="none" stroke="url(#fadeRail)" stroke-width="24" stroke-linecap="round"/>
+    <path d="M 850 678 C 885 678, 907 678, 938 678" fill="none" stroke="url(#fadeRail)" stroke-width="24" stroke-linecap="round"/>
+    <path d="M 850 769 C 885 769, 907 769, 938 769" fill="none" stroke="url(#fadeRail)" stroke-width="24" stroke-linecap="round"/>
+
+    <!-- output fan to document -->
+    <path d="M 1278 603 C 1360 642, 1370 674, 1496 678" fill="none" stroke="url(#fadeRail)" stroke-width="8" stroke-linecap="round" opacity=".9"/>
+    <path d="M 1278 678 C 1360 678, 1390 678, 1496 678" fill="none" stroke="url(#fadeRail)" stroke-width="8" stroke-linecap="round" opacity=".9"/>
+    <path d="M 1278 753 C 1360 716, 1374 686, 1496 678" fill="none" stroke="url(#fadeRail)" stroke-width="8" stroke-linecap="round" opacity=".9"/>
+
+    <path d="M 1276 604 C 1352 640, 1368 667, 1482 678" fill="none" stroke="#d6f0ef" stroke-width="28" stroke-linecap="round" opacity=".34" filter="url(#soft)"/>
+    <path d="M 1276 678 C 1352 678, 1376 678, 1482 678" fill="none" stroke="#d6f0ef" stroke-width="28" stroke-linecap="round" opacity=".34" filter="url(#soft)"/>
+    <path d="M 1276 752 C 1352 718, 1368 691, 1482 678" fill="none" stroke="#d6f0ef" stroke-width="28" stroke-linecap="round" opacity=".34" filter="url(#soft)"/>
+
+    <!-- convergence arrow wedge -->
+    <path d="M 1424 702
+             L 1468 702
+             L 1495 678
+             L 1468 654
+             L 1424 654
+             L 1441 678 Z"
+          fill="url(#tealCore)" opacity=".42" filter="url(#soft)"/>
+  </svg>
+
+</div>
+</body>
+</html>

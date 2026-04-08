@@ -1,0 +1,12 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.1-pro-preview",
+  "temperature": 0.4,
+  "referenceImages": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft/tune/run-20260406-022855-html-edit/baseline/official-preview.png",
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft/tune/run-20260406-022855-html-edit/baseline/parent-preview.png",
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/slide-03--version-000069.png",
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06-quality-bar/slide-06-quality-bar--version-000271.png"
+  ],
+  "thinkingLevel": "high"
+}

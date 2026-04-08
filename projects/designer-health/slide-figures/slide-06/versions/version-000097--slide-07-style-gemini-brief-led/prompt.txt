@@ -1,0 +1,35 @@
+Create a figure-only 16:9 investor-deck illustration for Designer Health.
+
+No words anywhere in the image.
+No title, subtitle, labels, UI text, numbers, or letterforms. If text would
+normally appear, use blank rows, blocks, or quiet line placeholders only.
+
+Composition:
+- one left-to-right storyboard with four unequal beats
+- beat 1 small: secure pre-visit invite on phone
+- beat 2 medium: adaptive interview
+- beat 3 largest and clearest: brief prepared
+- beat 4 medium: clinician begins prepared
+- before-visit grouping shown as a simple graphic bracket only
+- visit threshold shown as a simple vertical line only
+- leave open white space above for live typography
+
+Style target:
+- match the human figure style and grayscale softness of the references
+- editorial healthcare illustration, premium and calm
+- restrained teal accent concentrated in the brief prepared beat
+- white field with soft fade and almost no environmental clutter
+
+Important:
+- beat 3 must read as a physical brief / structured handoff card, not a
+  dashboard, tablet UI, or browser window
+- beats 2 and 4 should use the refined people style from the references
+- sequence should read through object shape, spacing, and posture rather than
+  any typography
+
+Avoid:
+- any words, letters, or numbers
+- centered software dashboards
+- heavy room props
+- hard black outlines
+- childish illustration style

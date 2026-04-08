@@ -1,0 +1,31 @@
+{
+  "provider": "claude",
+  "status": "not_applied",
+  "summary": "The AFTER image has completely lost all visual structure: the source bar with its blue segmented chart, the extracted blue wedge block, the arced arrow connector, and the support block container have all disappeared. What remains is plain unstyled text stacked vertically on the left with no layout, no color, no shapes, and no graphical elements. This is not a style/theme pass — it is a rendering failure that stripped the entire slide down to raw text nodes.",
+  "evidence": [
+    "The segmented horizontal bar chart (0–20 scale with Story reconstruction / Decisions + counseling / Exam + workflow) is completely absent in the AFTER image",
+    "The blue 'History reconstruction' wedge/block is gone — only plain text remains",
+    "The arced arrow connecting the bar to the wedge has disappeared entirely",
+    "The support block ('Why this wedge' with three reasons) has lost all container styling, background, and layout — it is just stacked plain text",
+    "No blue color family is visible anywhere in the AFTER image",
+    "Text appears to be rendered in a default serif/system font with no evidence of Montserrat being applied visually",
+    "The slide reads as a broken HTML render with CSS/SVG failing to load, not as a themed redesign"
+  ],
+  "nextPrompt": "The AFTER render appears to have lost all CSS and SVG rendering — the slide collapsed to unstyled text. Please restore the full HTML artifact with: (1) Montserrat imported via Google Fonts and applied to all text, (2) the horizontal segmented bar chart preserved with the blue slide-3 color family, (3) the blue 'History reconstruction' block preserved, (4) the single clean SVG arc arrow preserved, (5) the 'Why this wedge' support block rendered as a light flat card (e.g. 1px #e2e8f0 border, white or #f8fafc background, no heavy shadow), and (6) white slide background. Do not strip any visual elements — this is a style pass only.",
+  "needsHuman": true,
+  "raw": {
+    "status": "not_applied",
+    "summary": "The AFTER image has completely lost all visual structure: the source bar with its blue segmented chart, the extracted blue wedge block, the arced arrow connector, and the support block container have all disappeared. What remains is plain unstyled text stacked vertically on the left with no layout, no color, no shapes, and no graphical elements. This is not a style/theme pass — it is a rendering failure that stripped the entire slide down to raw text nodes.",
+    "evidence": [
+      "The segmented horizontal bar chart (0–20 scale with Story reconstruction / Decisions + counseling / Exam + workflow) is completely absent in the AFTER image",
+      "The blue 'History reconstruction' wedge/block is gone — only plain text remains",
+      "The arced arrow connecting the bar to the wedge has disappeared entirely",
+      "The support block ('Why this wedge' with three reasons) has lost all container styling, background, and layout — it is just stacked plain text",
+      "No blue color family is visible anywhere in the AFTER image",
+      "Text appears to be rendered in a default serif/system font with no evidence of Montserrat being applied visually",
+      "The slide reads as a broken HTML render with CSS/SVG failing to load, not as a themed redesign"
+    ],
+    "nextPrompt": "The AFTER render appears to have lost all CSS and SVG rendering — the slide collapsed to unstyled text. Please restore the full HTML artifact with: (1) Montserrat imported via Google Fonts and applied to all text, (2) the horizontal segmented bar chart preserved with the blue slide-3 color family, (3) the blue 'History reconstruction' block preserved, (4) the single clean SVG arc arrow preserved, (5) the 'Why this wedge' support block rendered as a light flat card (e.g. 1px #e2e8f0 border, white or #f8fafc background, no heavy shadow), and (6) white slide background. Do not strip any visual elements — this is a style pass only.",
+    "needsHuman": true
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-proof-tiles",
+    "family": "proof_tiles",
+    "deckId": "vox-pd-v1",
+    "theme": "vox",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Demand is outpacing clinical capacity.",
+    "subtitle": "Two access signals are enough to make the constraint legible without turning the slide into a stat wall.",
+    "chips": [],
+    "footnote": "Proof-of-problem slide. Let typography and spacing do most of the work."
+  },
+  "constraints": {
+    "figureJob": "Show constrained access with two crisp proof tiles.",
+    "focalPoint": "The two large proof metrics.",
+    "layout": "Header at top, two large rounded tiles centered side by side, no extra chart furniture.",
+    "big": [
+      "The main numbers",
+      "The tile bodies"
+    ],
+    "quiet": [
+      "Tile eyebrows",
+      "The footnote"
+    ],
+    "accentTargets": [
+      "none"
+    ],
+    "forbidden": [
+      "paragraph",
+      "stat wall"
+    ],
+    "semanticGuards": []
+  },
+  "copyPolicy": {
+    "locked": [
+      "Demand is outpacing clinical capacity.",
+      "~1 month",
+      "~1 in 10"
+    ],
+    "preferred": [
+      "Average wait for a new doctor appointment",
+      "Adults deferred care because they couldn't get a timely appointment"
+    ],
+    "optional": [
+      "Use a faint schedule motif if it stays quiet."
+    ],
+    "forbidden": [
+      "spreadsheet"
+    ]
+  },
+  "body": {
+    "motif": "calendar",
+    "tiles": [
+      {
+        "eyebrow": "Access",
+        "metric": "~1 month",
+        "detail": "Average wait for a new doctor appointment",
+        "kicker": "Up ~20% in 3 years"
+      },
+      {
+        "eyebrow": "Deferred care",
+        "metric": "~1 in 10",
+        "detail": "Adults deferred care because they couldn't get a timely appointment",
+        "kicker": "Last year"
+      }
+    ]
+  },
+  "trace": [
+    {
+      "excerpt": "Demand is outpacing clinical capacity.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the proposed header verbatim."
+    },
+    {
+      "excerpt": "Two access signals are enough to make the constraint legible without turning the slide into a stat wall.",
+      "targetPath": "chrome.subtitle",
+      "ruleType": "chrome",
+      "note": "Preserve the quiet explanatory subtitle."
+    },
+    {
+      "excerpt": "State the system problem clearly: the issue is constrained clinical capacity.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Lock the proof-of-problem purpose before styling."
+    },
+    {
+      "excerpt": "Two large proof tiles showing worsening access and delayed care.",
+      "targetPath": "body.tiles",
+      "ruleType": "body",
+      "note": "Map the body family to proof tiles."
+    },
+    {
+      "excerpt": "The main numbers should be the largest elements on the slide after the header.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "Prioritize the two metrics."
+    },
+    {
+      "excerpt": "Use two large rounded tiles in the middle of the slide, side-by-side.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Lock the centered two-tile layout."
+    },
+    {
+      "excerpt": "The typography and spacing need to do most of the work.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Keep copy minimal and preserve the proof metrics."
+    }
+  ]
+}

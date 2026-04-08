@@ -1,0 +1,121 @@
+Visual thesis:
+- editorial clinical sheet, strongest on the left, restrained reasoning rail on the right, chronology anchored below
+
+Content plan:
+- one shared sheet
+- dominant left extraction column
+- restrained right reasoning rail
+- full-width bottom timeline strip
+
+Interaction thesis:
+- static artifact only
+- no product chrome, no hidden controls
+
+Build one investor-deck figure for Designer Health slide 8.
+
+This figure should be one central clinician-facing report sheet on a quiet
+deck background. It should make the viewer instantly understand that the system
+turns messy patient conversation into a structured brief with evidence,
+considerations, and the next question.
+
+Use the attached screenshot as family reference:
+- preserve the row anatomy on the left
+- preserve the ranked reasoning blocks on the right
+- preserve the calm thin-border utility aesthetic
+- do not keep the screenshot as two equal cards
+
+Locked direction:
+- one shared outer sheet
+- left column wider than right
+- right side is a reasoning rail, not a co-equal workspace
+- full-width bottom timeline strip reunifies the whole artifact
+
+Hard constraints:
+- no browser chrome
+- no fake EHR nav
+- no trace tabs
+- no giant diagnosis headline
+- no busy chip soup
+
+Layout proportions:
+- left column around 62% to 66%
+- right rail around 34% to 38%
+- bottom timeline strip across full width
+
+Top header:
+- artifact title such as `Structured Brief` or `Intake Brief`
+- quiet subtitle / case descriptor
+- should feel editorial and clinical, not marketing
+
+Left column content:
+- section groups like:
+  - SOCIAL CONTEXT
+  - SYMPTOMS
+  - KEY NEGATIVES
+  - WORKUP / UNCERTAINTIES
+- rows should retain:
+  - label
+  - optional value line
+  - evidence line
+  - state pill
+- rows can remain lightly bordered or ledger-like, but must be cleaner than the
+  source screenshot
+
+Left state-pill semantics:
+- present = strongest neutral pill
+- absent = quieter gray pill
+- unresolved = warm gray or pale amber pill
+- do not use green for present
+
+Right rail content:
+- title such as `Clinical Considerations` or `Working Considerations`
+- three ranked candidate blocks
+- each block includes:
+  - rank
+  - diagnosis title
+  - confidence
+  - compact movement chip only if it is clean enough, for example `↑ 2→1`,
+    `— 1→1`, `↓ 1→3`
+  - Supports
+  - Against
+  - To confirm / Unknowns
+- glyphs on the right can use very small typographic marks:
+  - `↑` muted green
+  - `↓` muted red
+  - `○` or `?` amber
+
+Bottom timeline strip:
+- must run full width
+- should visually reunify the sheet
+- include a simple chronological sequence:
+  - URI symptoms begin
+  - cough develops about one week ago
+  - yellow sputum noted
+  - fever / breathing impact still unresolved
+
+Use real cough-case content:
+- Care seeking prompted by spouse
+- Cough
+- Cough pattern / frequency
+- Worse at night
+- Worse when lying down
+- Scratchy throat
+- Sputum color mostly yellow
+- Hemoptysis absent
+- Dyspnea / breathing impact
+- Fever unresolved or not yet confirmed
+
+Use three considerations:
+- Community-acquired pneumonia
+- Acute bronchitis
+- Post-viral cough
+
+Add one explicit handoff block near the right or above the timeline:
+- `Suggested next question`
+- “How has your breathing changed, and does it hurt anywhere in the chest when
+  you take a deep breath?”
+
+The result should feel like:
+- the best hybrid of the source screenshot and a deck-safe clinical document
+- a single tangible artifact
+- strong enough to screenshot and drop directly into the slide

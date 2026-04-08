@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Vox – Clinician-grade starting point</title>
+<style>
+  :root{
+    --bg:#f8f8f5;
+    --ink:#162034;
+    --muted:#5b6a80;
+    --line:#cfd7e2;
+    --line2:#dbe3ea;
+    --panel:#fbfcfb;
+    --panel2:#f2f5f3;
+    --teal:#2f9aa0;
+    --teal2:#61c0c0;
+    --teal3:#d9f0ef;
+    --teal4:#b8e3e0;
+    --soft:#eef3f6;
+    --shadow:0 24px 60px rgba(22,32,52,.10), 0 8px 22px rgba(22,32,52,.06);
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#fff;font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif}
+  .slide{
+    width:1920px;height:1080px;position:relative;overflow:hidden;
+    background:
+      radial-gradient(900px 460px at 20% 8%, rgba(186,210,226,.20), rgba(255,255,255,0) 55%),
+      radial-gradient(800px 500px at 72% 72%, rgba(194,235,232,.12), rgba(255,255,255,0) 50%),
+      linear-gradient(180deg,#fcfcfa 0%,#f8f8f6 100%);
+    color:var(--ink);
+  }
+
+  .title{
+    position:absolute; left:108px; top:68px; width:1460px;
+    font-size:64px; line-height:1.04; font-weight:800; letter-spacing:-0.04em;
+  }
+  .title .vox{color:var(--teal)}
+  .sub{
+    position:absolute; left:108px; top:292px; width:1400px;
+    font-size:23px; line-height:1.42; color:var(--muted); font-weight:500;
+  }
+
+  /* Left dialogue ribbons */
+  .ribbon{position:absolute; display:flex; align-items:center; justify-content:center; padding:0 26px; font-size:19px; font-weight:600; color:#4f5f76;}
+  .ribbon svg{position:absolute; inset:0; width:100%; height:100%}
+  .ribbon .txt{position:relative; z-index:1; white-space:nowrap}
+  .ribbon.grey .shape{fill:#fbfbfb; stroke:#a8b6c8; stroke-width:2.5}
+  .ribbon.teal .shape{fill:#edf8f6; stroke:#53aeb2; stroke-width:2.5}
+  .ribbon.teal .txt{color:#166b74; font-weight:700}
+
+  .r1{left:98px; top:455px; width:392px; height:84px}
+  .r2{left:118px; top:543px; width:352px; height:84px}
+  .r3{left:98px; top:631px; width:392px; height:84px}
+  .r4{left:118px; top:719px; width:352px; height:84px}
+  .r5{left:98px; top:807px; width:392px; height:84px}
+
+  /* Main chamber */
+  .chamber{
+    position:absolute; left:532px; top:409px; width:782px; height:526px;
+    background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(251,252,251,.96));
+    border:1.5px solid rgba(189,199,212,.8);
+    border-radius:42px;
+    box-shadow:0 30px 70px rgba(45,71,91,.10), inset 0 1px 0 rgba(255,255,255,.9);
+  }
+
+  .ch-title{
+    position:absolute; left:0; right:0; top:34px; text-align:center;
+    font-size:54px; font-weight:800; letter-spacing:-.04em; color:#2d8f99;
+  }
+  .ch-sub{
+    position:absolute; left:0; right:0; top:103px; text-align:center;
+    font-size:18px; color:#304053; font-weight:500;
+  }
+
+  .cycle{
+    position:absolute; left:697px; top:590px; width:180px; height:180px;
+  }
+  .cycle text{font-family:inherit}
+  .cycle-center{
+    position:absolute; left:745px; top:647px; width:92px;
+    text-align:center; font-weight:700; line-height:1.05; font-size:18px; color:#253247;
+  }
+
+  .lane{
+    position:absolute; left:884px; width:350px; height:48px;
+    display:flex; align-items:center;
+  }
+  .lane .bar{
+    width:110px; height:24px; border-radius:999px;
+    background:linear-gradient(90deg, rgba(129,208,208,.45), rgba(227,242,241,0));
+    margin-right:-18px;
+  }
+  .lane .pill{
+    height:46px; min-width:260px; border-radius:24px;
+    border:1.5px solid #d6dee6; background:rgba(255,255,255,.9);
+    display:flex; align-items:center; padding:0 18px 0 16px;
+    box-shadow:0 8px 18px rgba(26,35,52,.05);
+    font-size:17px; color:#2a374b; font-weight:700;
+  }
+  .lane .dot{
+    width:10px; height:10px; border-radius:50%; background:#3aa0a2; margin-right:12px;
+    box-shadow:0 0 0 4px rgba(58,160,162,.10);
+  }
+  .l1{top:566px}.l2{top:656px}.l3{top:746px}
+
+  .right-title{
+    position:absolute; left:1460px; top:551px; width:320px;
+    font-size:24px; font-weight:800; letter-spacing:-.03em; color:#1d2533;
+  }
+
+  /* Right premium slate */
+  .slate-wrap{
+    position:absolute; left:1494px; top:600px; width:322px; height:324px;
+  }
+  .slate-shadow{
+    position:absolute; inset:14px 0 0 0;
+    filter:blur(16px);
+    opacity:.28;
+    background:radial-gradient(160px 120px at 30% 55%, rgba(32,153,155,.45), rgba(32,153,155,0) 70%);
+  }
+  .slate-clip{
+    position:absolute; left:0; top:20px; width:34px; height:210px;
+    border-radius:18px;
+    background:linear-gradient(180deg,#2e818d 0%, #1f5e69 100%);
+    box-shadow:inset -3px 0 0 rgba(255,255,255,.14), 0 14px 28px rgba(18,43,57,.18);
+  }
+  .slate-clip:after{
+    content:"";
+    position:absolute; left:13px; top:18px; width:8px; height:174px; border-radius:8px;
+    background:rgba(255,255,255,.18);
+  }
+  .slate{
+    position:absolute; left:26px; top:0; width:280px; height:322px;
+    border-radius:22px;
+    background:linear-gradient(180deg,#fdfdfc 0%, #f3f5f3 100%);
+    border:1.5px solid #d8e0e7;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .slate .cap{
+    position:absolute; left:0; top:0; right:0; height:16px;
+    background:linear-gradient(90deg,#d9f0ef 0%, #94d7d5 74%, #c6e8e5 100%);
+  }
+  .band{
+    position:absolute; left:24px; right:24px; border-radius:14px;
+  }
+  .band.header{
+    top:30px; height:62px; background:linear-gradient(180deg,#f4f7f7,#eef2f2);
+  }
+  .band.mid{
+    top:111px; height:96px; background:#fbfcfc; border:1px solid #e4e9ee;
+  }
+  .band.low{
+    top:222px; height:74px; background:linear-gradient(180deg,#f8faf9,#f3f6f5);
+  }
+  .rule{
+    position:absolute; left:24px; right:24px; height:1.5px; background:#d5dde5;
+    opacity:.95;
+  }
+  .rule.r1{top:110px}.rule.r2{top:222px}
+  .mini{
+    position:absolute; left:24px; right:24px; top:34px; height:12px; display:flex; gap:10px;
+  }
+  .mini span,.line span{
+    display:block; height:100%; border-radius:999px;
+    background:#dfe5ea;
+  }
+  .line{position:absolute; left:24px; right:24px; height:12px; display:flex; gap:10px}
+  .line.t1{top:63px}.line.t2{top:141px}.line.t3{top:166px}.line.t4{top:191px}.line.t5{top:244px}.line.t6{top:272px}
+  .teal-chip{
+    position:absolute; right:24px; top:44px; width:56px; height:26px; border-radius:999px; background:#e2f2e8;
+  }
+  .teal-chip:after{
+    content:""; position:absolute; left:18px; top:8px; width:20px; height:10px; border-radius:999px; background:#2c8f66; opacity:.85;
+  }
+
+  /* Connector flourish behind right object */
+  .flow{
+    position:absolute; left:1285px; top:563px; width:330px; height:250px; pointer-events:none;
+  }
+
+  /* Chamber connector from left */
+  .threads{
+    position:absolute; left:460px; top:475px; width:460px; height:390px; pointer-events:none;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="title">
+    <span class="vox">Vox</span> is the adaptive interviewing system that takes on the
+    hard clinical reasoning work needed to turn patient story
+    into a clinician-grade starting point.
+  </div>
+
+  <div class="sub">
+    Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+    By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces
+    what still needs verification before the visit begins.
+  </div>
+
+  <div class="ribbon grey r1">
+    <svg viewBox="0 0 392 84" preserveAspectRatio="none">
+      <path class="shape" d="M6,42 L38,10 H342 L388,42 L342,74 H38 Z"/>
+    </svg>
+    <div class="txt">My back has been hurting...</div>
+  </div>
+
+  <div class="ribbon teal r2">
+    <svg viewBox="0 0 352 84" preserveAspectRatio="none">
+      <path class="shape" d="M6,42 L46,10 H346 V74 H46 Z"/>
+    </svg>
+    <div class="txt">Vox: What makes it worse?</div>
+  </div>
+
+  <div class="ribbon grey r3">
+    <svg viewBox="0 0 392 84" preserveAspectRatio="none">
+      <path class="shape" d="M6,42 L38,10 H342 L388,42 L342,74 H38 Z"/>
+    </svg>
+    <div class="txt">It's worse in the morning.</div>
+  </div>
+
+  <div class="ribbon teal r4">
+    <svg viewBox="0 0 352 84" preserveAspectRatio="none">
+      <path class="shape" d="M6,42 L46,10 H346 V74 H46 Z"/>
+    </svg>
+    <div class="txt">Vox: When did this start?</div>
+  </div>
+
+  <div class="ribbon grey r5">
+    <svg viewBox="0 0 392 84" preserveAspectRatio="none">
+      <path class="shape" d="M6,42 L38,10 H342 L388,42 L342,74 H38 Z"/>
+    </svg>
+    <div class="txt">Started last Tuesday.</div>
+  </div>
+
+  <svg class="threads" viewBox="0 0 460 390">
+    <defs>
+      <linearGradient id="gGrey" x1="0" x2="1">
+        <stop offset="0%" stop-color="#b8c4d1"/>
+        <stop offset="100%" stop-color="#d5dde6"/>
+      </linearGradient>
+      <linearGradient id="gTeal" x1="0" x2="1">
+        <stop offset="0%" stop-color="#63babb"/>
+        <stop offset="100%" stop-color="#9dd7d5"/>
+      </linearGradient>
+    </defs>
+    <path d="M25 22 C 110 18, 150 80, 212 145 S 320 180, 362 175" fill="none" stroke="url(#gGrey)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M25 106 C 122 106, 145 108, 208 154 S 307 174, 362 175" fill="none" stroke="url(#gTeal)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M25 195 C 140 193, 164 195, 226 195 S 308 194, 362 195" fill="none" stroke="url(#gGrey)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M25 283 C 115 287, 156 264, 219 226 S 315 205, 362 195" fill="none" stroke="url(#gTeal)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M25 372 C 115 374, 151 316, 213 250 S 307 224, 362 215" fill="none" stroke="url(#gGrey)" stroke-width="10" stroke-linecap="round"/>
+
+    <path d="M25 22 C 110 18, 150 80, 212 145 S 320 180, 362 175" fill="none" stroke="#eef3f8" stroke-width="4" stroke-linecap="round" opacity=".95"/>
+    <path d="M25 106 C 122 106, 145 108, 208 154 S 307 174, 362 175" fill="none" stroke="#d9f3f2" stroke-width="4" stroke-linecap="round" opacity=".95"/>
+    <path d="M25 195 C 140 193, 164 195, 226 195 S 308 194, 362 195" fill="none" stroke="#eef3f8" stroke-width="4" stroke-linecap="round" opacity=".95"/>
+    <path d="M25 283 C 115 287, 156 264, 219 226 S 315 205, 362 195" fill="none" stroke="#d9f3f2" stroke-width="4" stroke-linecap="round" opacity=".95"/>
+    <path d="M25 372 C 115 374, 151 316, 213 250 S 307 224, 362 215" fill="none" stroke="#eef3f8" stroke-width="4" stroke-linecap="round" opacity=".95"/>
+  </svg>
+
+  <div class="chamber">
+    <div class="ch-title">Vox</div>
+    <div class="ch-sub">Adaptive clinical interviewer</div>
+  </div>
+
+  <svg class="cycle" viewBox="0 0 180 180">
+    <defs>
+      <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+        <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#7eced0" flood-opacity=".18"/>
+      </filter>
+    </defs>
+    <circle cx="90" cy="90" r="82" fill="#f6fbfb" stroke="#e2eded" stroke-width="4" filter="url(#softGlow)"/>
+    <circle cx="90" cy="90" r="74" fill="#fff" stroke="#d8ecec" stroke-width="2"/>
+    <path d="M25,90 A65,65 0 0 1 40,46" fill="none" stroke="#4aaeb0" stroke-width="10" stroke-linecap="round"/>
+    <path d="M130,36 A65,65 0 0 1 154,78" fill="none" stroke="#7bc9c7" stroke-width="10" stroke-linecap="round"/>
+    <path d="M138,140 A65,65 0 0 1 92,154" fill="none" stroke="#4aaeb0" stroke-width="10" stroke-linecap="round"/>
+    <path d="M53,145 A65,65 0 0 1 26,112" fill="none" stroke="#2f9096" stroke-width="10" stroke-linecap="round"/>
+    <path d="M138 43 l16 8 -12 13" fill="none" stroke="#2f9096" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M47 144 l-2 18 16-9" fill="none" stroke="#2f9096" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <div class="cycle-center">Adaptive<br>clinical<br>interviewer</div>
+
+  <div class="lane l1">
+    <div class="bar"></div>
+    <div class="pill"><div class="dot"></div>What matters</div>
+  </div>
+  <div class="lane l2">
+    <div class="bar"></div>
+    <div class="pill"><div class="dot"></div>What connects</div>
+  </div>
+  <div class="lane l3">
+    <div class="bar"></div>
+    <div class="pill"><div class="dot"></div>What still needs<br>&nbsp;verification</div>
+  </div>
+
+  <div class="right-title">Clinician-grade starting point</div>
+
+  <svg class="flow" viewBox="0 0 330 250">
+    <defs>
+      <linearGradient id="fadeTeal" x1="0" x2="1">
+        <stop offset="0%" stop-color="#bfe7e4" stop-opacity=".92"/>
+        <stop offset="55%" stop-color="#88d3d0" stop-opacity=".72"/>
+        <stop offset="100%" stop-color="#88d3d0" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="deepTeal" x1="0" x2="1">
+        <stop offset="0%" stop-color="#5fbfc0"/>
+        <stop offset="100%" stop-color="#bfe7e4" stop-opacity=".15"/>
+      </linearGradient>
+      <filter id="blurFlow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="6"/>
+      </filter>
+    </defs>
+
+    <path d="M0 116 C58 116, 92 116, 130 116 C172 116, 198 116, 248 116" fill="none" stroke="url(#deepTeal)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M0 118 C80 118, 114 140, 170 176 S 250 198, 320 198" fill="none" stroke="url(#fadeTeal)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M0 114 C78 114, 112 90, 170 56 S 252 34, 320 34" fill="none" stroke="url(#fadeTeal)" stroke-width="8" stroke-linecap="round"/>
+
+    <path d="M96 140 L182 140 L206 176 L120 176 Z" fill="url(#fadeTeal)" opacity=".95"/>
+    <path d="M82 94 L188 94 L210 116 L104 116 Z" fill="url(#fadeTeal)" opacity=".75" filter="url(#blurFlow)"/>
+  </svg>
+
+  <div class="slate-wrap">
+    <div class="slate-shadow"></div>
+    <div class="slate-clip"></div>
+    <div class="slate">
+      <div class="cap"></div>
+      <div class="band header"></div>
+      <div class="teal-chip"></div>
+
+      <div class="mini">
+        <span style="width:104px"></span>
+      </div>
+      <div class="line t1">
+        <span style="width:214px"></span>
+      </div>
+
+      <div class="rule r1"></div>
+
+      <div class="band mid"></div>
+      <div class="line t2">
+        <span style="width:105px"></span>
+      </div>
+      <div class="line t3">
+        <span style="width:182px"></span>
+      </div>
+      <div class="line t4">
+        <span style="width:148px"></span>
+      </div>
+
+      <div class="rule r2"></div>
+
+      <div class="band low"></div>
+      <div class="line t5">
+        <span style="width:106px"></span>
+      </div>
+      <div class="line t6">
+        <span style="width:182px"></span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

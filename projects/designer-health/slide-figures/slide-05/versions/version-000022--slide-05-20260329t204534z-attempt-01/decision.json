@@ -1,0 +1,7 @@
+{
+  "outcome": "escalate",
+  "reason": "A judge flagged ambiguity, out-of-scope change, or needsHuman.",
+  "nextAction": "needs-human",
+  "beforeImagePath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/gemini-html/preview.png",
+  "afterImagePath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/gemini-html/tune/20260329T204534Z/attempt-01/preview.png"
+}

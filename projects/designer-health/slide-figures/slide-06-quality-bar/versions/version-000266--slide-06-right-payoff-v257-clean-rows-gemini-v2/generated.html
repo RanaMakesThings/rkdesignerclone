@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox Pitch Deck Slide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --slate-50: #F8FAFC;
+            --slate-100: #F1F5F9;
+            --slate-200: #E2E8F0;
+            --slate-300: #CBD5E1;
+            --slate-400: #94A3B8;
+            --slate-500: #64748B;
+            --slate-600: #475569;
+            --slate-800: #1E293B;
+            --slate-900: #0F172A;
+            
+            --teal-light: #EAF5F4;
+            --teal-border: #A5D0CB;
+            --teal-main: #147B72;
+            --teal-dark: #0F5C55;
+            
+            --orange-main: #F59E0B;
+            --blue-light: #EFF6FF;
+            --blue-border: #BFDBFE;
+            --blue-text: #3B82F6;
+
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            --shadow-lg: 0 10px 30px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+            --shadow-xl: 0 20px 40px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--slate-900);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1920px;
+            height: 1080px;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* --- Header Section --- */
+        .header-section {
+            position: absolute;
+            top: 90px;
+            left: 100px;
+            width: 1500px;
+            z-index: 10;
+        }
+
+        .main-headline {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: var(--slate-900);
+            margin-bottom: 24px;
+            max-width: 1500px;
+        }
+
+        .main-headline span.brand {
+            color: var(--teal-main);
+        }
+
+        .sub-headline {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--slate-600);
+            max-width: 1400px;
+        }
+
+        .sub-headline p {
+            margin-bottom: 8px;
+        }
+
+        /* --- Background SVG Lines --- */
+        .bg-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* --- Chat Column --- */
+        .chat-column {
+            position: absolute;
+            left: 100px;
+            top: 440px;
+            width: 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            z-index: 5;
+        }
+
+        .chat-bubble {
+            position: relative;
+            width: 340px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--slate-800);
+        }
+
+        .chat-bubble.vox {
+            margin-left: 20px;
+            color: var(--teal-dark);
+            font-weight: 600;
+        }
+
+        .chat-bubble svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* --- Center Chamber --- */
+        .center-chamber {
+            position: absolute;
+            left: 540px;
+            top: 400px;
+            width: 780px;
+            height: 520px;
+            background: #ffffff;
+            border-radius: 24px;
+            border: 1px solid var(--slate-100);
+            box-shadow: var(--shadow-xl);
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 48px;
+        }
+
+        .chamber-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .chamber-logo {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--teal-main);
+            letter-spacing: -0.03em;
+            margin-bottom: 4px;
+        }
+
+        .chamber-subtitle {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--slate-500);
+        }
+
+        .chamber-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 40px;
+            position: relative;
+        }
+
+        .chamber-graphic {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .chamber-graphic svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .graphic-text {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--slate-900);
+            max-width: 100px;
+            z-index: 2;
+        }
+
+        .chamber-pills {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            position: relative;
+        }
+
+        .pill-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .pill-highlight {
+            position: absolute;
+            left: -80px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100px;
+            height: 36px;
+            background: linear-gradient(to right, rgba(20,123,114,0.08), transparent);
+            border-radius: 18px;
+            z-index: 0;
+        }
+
+        .chamber-pill {
+            position: relative;
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 999px;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: var(--shadow-sm);
+            width: 260px;
+            z-index: 1;
+        }
+
+        .chamber-pill .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--teal-main);
+        }
+
+        .chamber-pill .text {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
+
+        .chamber-pill.multi-line {
+            padding: 10px 24px;
+        }
+
+        .chamber-pill.multi-line .text {
+            line-height: 1.2;
+        }
+
+        /* --- Right Report Column --- */
+        .report-column {
+            position: absolute;
+            left: 1420px;
+            top: 440px;
+            width: 400px;
+            z-index: 5;
+        }
+
+        .report-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--slate-900);
+            margin-bottom: 16px;
+            padding-left: 4px;
+        }
+
+        .report-card {
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid var(--slate-100);
+            box-shadow: var(--shadow-lg);
+            padding: 32px;
+            position: relative;
+        }
+
+        .report-tag {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-size: 10px;
+            font-weight: 800;
+            color: var(--blue-text);
+            letter-spacing: 0.05em;
+        }
+
+        .report-section {
+            margin-bottom: 32px;
+        }
+
+        .report-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--slate-400);
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        /* Mock UI Elements */
+        .mock-line {
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .mock-line:last-child { margin-bottom: 0; }
+        
+        .mock-line.primary { background-color: var(--slate-600); height: 10px; }
+        .mock-line.secondary { background-color: var(--slate-300); height: 8px; }
+        .mock-line.tertiary { background-color: var(--slate-200); height: 6px; }
+
+        /* Split Layout for Assessment */
+        .assessment-split {
+            display: flex;
+            gap: 20px;
+        }
+
+        .assessment-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .assessment-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .assessment-item .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        .assessment-item .dot.teal { background-color: var(--teal-main); }
+        .assessment-item .dot.orange { background-color: var(--orange-main); }
+
+        .assessment-item .lines {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .assessment-side {
+            width: 80px;
+            background: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .assessment-side .mock-line {
+            margin-bottom: 0;
+            height: 4px;
+            background-color: var(--slate-300);
+        }
+
+        /* Clarify Pills */
+        .clarify-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .mock-pill {
+            height: 24px;
+            border-radius: 12px;
+            background-color: var(--blue-light);
+            border: 1px solid var(--blue-border);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Background SVG for connecting lines -->
+    <svg class="bg-lines" viewBox="0 0 1920 1080">
+        <!-- Lines from Chat to Center Chamber -->
+        <!-- Chat 1 to Center -->
+        <path d="M 440 472 C 490 472, 500 500, 540 500" fill="none" stroke="#A7D8D1" stroke-width="2" />
+        <!-- Chat 2 to Center -->
+        <path d="M 460 560 C 500 560, 500 560, 540 560" fill="none" stroke="#A7D8D1" stroke-width="2" />
+        <!-- Chat 3 to Center -->
+        <path d="M 440 648 C 490 648, 500 620, 540 620" fill="none" stroke="#A7D8D1" stroke-width="2" />
+        <!-- Chat 4 to Center -->
+        <path d="M 460 736 C 500 736, 500 680, 540 680" fill="none" stroke="#A7D8D1" stroke-width="2" />
+        <!-- Chat 5 to Center -->
+        <path d="M 440 824 C 490 824, 500 740, 540 740" fill="none" stroke="#A7D8D1" stroke-width="2" />
+
+        <!-- Lines from Center Chamber Pills to Report Card -->
+        <!-- Pill 1 (What matters) to Chief Complaint -->
+        <path d="M 1320 568 C 1370 568, 1370 550, 1420 550" fill="none" stroke="#A7D8D1" stroke-width="2" />
+        <!-- Pill 2 (What connects) to Prioritized Assessment -->
+        <path d="M 1320 660 C 1370 660, 1370 680, 1420 680" fill="none" stroke="#A7D8D1" stroke-width="2" />
+        <!-- Pill 3 (What still needs verification) to Clarify/Verify -->
+        <path d="M 1320 762 C 1370 762, 1370 800, 1420 800" fill="none" stroke="#A7D8D1" stroke-width="2" />
+    </svg>
+
+    <!-- Header Section -->
+    <div class="header-section">
+        <h1 class="main-headline">
+            <span class="brand">Vox</span> is the adaptive interviewing system that takes on the<br>
+            hard clinical reasoning work needed to turn patient story<br>
+            into a clinician-grade starting point.
+        </h1>
+        <div class="sub-headline">
+            <p>Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.</p>
+            <p>By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>what still needs verification before the visit begins.</p>
+        </div>
+    </div>
+
+    <!-- Left Column: Chat Ribbons -->
+    <div class="chat-column">
+        <!-- Patient 1 -->
+        <div class="chat-bubble">
+            <svg viewBox="0 0 340 64" preserveAspectRatio="none">
+                <polygon points="0,0 320,0 340,32 320,64 0,64" fill="#ffffff" stroke="#CBD5E1" stroke-width="2"/>
+            </svg>
+            My back has been hurting...
+        </div>
+        <!-- Vox 1 -->
+        <div class="chat-bubble vox">
+            <svg viewBox="0 0 340 64" preserveAspectRatio="none">
+                <polygon points="20,0 320,0 340,32 320,64 20,64 0,32" fill="#EAF5F4" stroke="#82C3BD" stroke-width="2"/>
+            </svg>
+            Vox: What makes it worse?
+        </div>
+        <!-- Patient 2 -->
+        <div class="chat-bubble">
+            <svg viewBox="0 0 340 64" preserveAspectRatio="none">
+                <polygon points="0,0 320,0 340,32 320,64 0,64" fill="#ffffff" stroke="#CBD5E1" stroke-width="2"/>
+            </svg>
+            It's worse in the morning.
+        </div>
+        <!-- Vox 2 -->
+        <div class="chat-bubble vox">
+            <svg viewBox="0 0 340 64" preserveAspectRatio="none">
+                <polygon points="20,0 320,0 340,32 320,64 20,64 0,32" fill="#EAF5F4" stroke="#82C3BD" stroke-width="2"/>
+            </svg>
+            Vox: When did this start?
+        </div>
+        <!-- Patient 3 -->
+        <div class="chat-bubble">
+            <svg viewBox="0 0 340 64" preserveAspectRatio="none">
+                <polygon points="0,0 320,0 340,32 320,64 0,64" fill="#ffffff" stroke="#CBD5E1" stroke-width="2"/>
+            </svg>
+            Started last Tuesday.
+        </div>
+    </div>
+
+    <!-- Center Column: Vox Chamber -->
+    <div class="center-chamber">
+        <div class="chamber-header">
+            <div class="chamber-logo">Vox</div>
+            <div class="chamber-subtitle">Adaptive clinical interviewer</div>
+        </div>
+        
+        <div class="chamber-body">
+            <!-- Circular Graphic -->
+            <div class="chamber-graphic">
+                <svg viewBox="0 0 160 160">
+                    <!-- Background track -->
+                    <circle cx="80" cy="80" r="68" fill="none" stroke="#F1F5F9" stroke-width="12"/>
+                    <!-- Teal progress (approx 65%) -->
+                    <!-- Circumference = 2 * pi * 68 = 427. 65% of 427 = 277 -->
+                    <circle cx="80" cy="80" r="68" fill="none" stroke="#147B72" stroke-width="12" stroke-dasharray="277 427" stroke-linecap="round"/>
+                </svg>
+                <div class="graphic-text">Adaptive<br>clinical<br>interviewer</div>
+            </div>
+
+            <!-- Pills -->
+            <div class="chamber-pills">
+                <div class="pill-wrapper">
+                    <div class="pill-highlight"></div>
+                    <div class="chamber-pill">
+                        <div class="dot"></div>
+                        <div class="text">What matters</div>
+                    </div>
+                </div>
+                
+                <div class="pill-wrapper">
+                    <div class="pill-highlight"></div>
+                    <div class="chamber-pill">
+                        <div class="dot"></div>
+                        <div class="text">What connects</div>
+                    </div>
+                </div>
+
+                <div class="pill-wrapper">
+                    <div class="pill-highlight"></div>
+                    <div class="chamber-pill multi-line">
+                        <div class="dot"></div>
+                        <div class="text">What still needs<br>verification</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column: Clinician-grade starting point -->
+    <div class="report-column">
+        <div class="report-title">Clinician-grade starting point</div>
+        
+        <div class="report-card">
+            <div class="report-tag">VOX SUMMARY</div>
+            
+            <!-- Section 1: Chief Complaint -->
+            <div class="report-section">
+                <div class="section-label">Chief Complaint</div>
+                <div class="mock-line primary" style="width: 85%;"></div>
+                <div class="mock-line secondary" style="width: 60%;"></div>
+            </div>
+
+            <!-- Section 2: Prioritized Assessment (Split Layout) -->
+            <div class="report-section">
+                <div class="section-label">Prioritized Assessment</div>
+                <div class="assessment-split">
+                    <!-- Left: Main Assessment Items -->
+                    <div class="assessment-main">
+                        <div class="assessment-item">
+                            <div class="dot teal"></div>
+                            <div class="lines">
+                                <div class="mock-line primary" style="width: 100%;"></div>
+                                <div class="mock-line secondary" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="assessment-item">
+                            <div class="dot orange"></div>
+                            <div class="lines">
+                                <div class="mock-line primary" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right: Structured Meta Block -->
+                    <div class="assessment-side">
+                        <div class="mock-line" style="width: 100%;"></div>
+                        <div class="mock-line" style="width: 60%;"></div>
+                        <div class="mock-line" style="width: 80%; margin-top: 4px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Clarify / Verify -->
+            <div class="report-section">
+                <div class="section-label">Clarify / Verify</div>
+                <div class="clarify-row">
+                    <div class="mock-pill" style="width: 56px;"></div>
+                    <div class="mock-pill" style="width: 48px;"></div>
+                    <div class="mock-pill" style="width: 64px;"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+Create a 16:9 healthcare investor pitch-deck slide mockup for Vox.
+
+Use the attached reference image as the starting point. The current version is close in spirit but not yet the right picture.
+
+The user wants this composition:
+- Large anatomy bar on top stays.
+- Bottom-left becomes a compact subset callback for one more efficient visit.
+- Bottom-right becomes a clearer and tighter 5-visits-to-6-visits payoff.
+
+Detailed art direction:
+- Headline: More efficient visits will increase supply.
+- Subheader: Small per-visit gains compound.
+- Top anatomy bar should stay large and centered with the story-reconstruction section called out.
+- Bottom-left should show:
+  - one before visit
+  - one after visit where the blue story section is even smaller than it is in the reference
+  - inward arrows or shrink markers showing the blue section being compressed
+  - a dashed “Time saved” block to the right
+  - this whole area should feel like a clean callback subset, not a mini full slide
+- Bottom-right should show:
+  - explicit before/after labels
+  - 5 visits on top
+  - 5 shorter visits plus a green new visit on bottom
+  - tighter horizontal footprint than the reference so it reads as one strong payoff object
+
+Communication priorities:
+- Make the mechanism and consequence obvious.
+- Keep exam and counseling protected.
+- Do not imply rushed care.
+
+Visual style:
+- Premium editorial healthcare deck
+- Off-white background
+- Restrained blue, gray, green palette
+- Strong typography with Montserrat feel
+- Clean composition, sparse copy, no clutter
+
+This should feel like a sharper and more intentional evolution of the attached reference, not a generic redesign.

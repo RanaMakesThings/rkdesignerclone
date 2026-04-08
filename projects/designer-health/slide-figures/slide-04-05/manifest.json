@@ -1,0 +1,106 @@
+{
+  "slideId": "slide-04-05",
+  "slideDir": "projects/designer-health/slide-figures/slide-04-05",
+  "currentVersionId": null,
+  "versions": [
+    {
+      "id": "version-000012",
+      "label": "gemini-html",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:04:29.479Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000012--gemini-html",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000013",
+      "label": "gemini-image",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:04:29.482Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000013--gemini-image",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000014",
+      "label": "openai-html",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:04:29.486Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000014--openai-html",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000015",
+      "label": "openai-image",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:04:29.490Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000015--openai-image",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000016",
+      "label": "anthropic-html",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:04:29.497Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000016--anthropic-html",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000017",
+      "label": "anthropic-html-sonnet",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:04:29.499Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000017--anthropic-html-sonnet",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000018",
+      "label": "anthropic-html-opus",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:04:29.504Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000018--anthropic-html-opus",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000019",
+      "label": "anthropic-html-v2",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:04:29.508Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000019--anthropic-html-v2",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000020",
+      "label": "anthropic-html-v3",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:04:29.512Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000020--anthropic-html-v3",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

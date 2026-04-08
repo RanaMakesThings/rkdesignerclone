@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide 7 Hybrid Beat Assets HTML v1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
+
+      :root {
+        --bg: #ffffff;
+        --text: #11161d;
+        --muted: #5e6977;
+        --line: rgba(31, 37, 44, 0.9);
+        --accent: #6c9490;
+        --chip: #5b626b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Manrope", system-ui, sans-serif;
+        color: var(--text);
+      }
+
+      .figure {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 50% 0%, rgba(108, 148, 144, 0.07), transparent 32%),
+          linear-gradient(180deg, #ffffff 0%, #fbfbfa 100%);
+      }
+
+      .storyboard {
+        position: absolute;
+        inset: 112px 126px 118px;
+      }
+
+      .art-row {
+        position: absolute;
+        top: 98px;
+        left: 0;
+        right: 0;
+        display: grid;
+        grid-template-columns: 15fr 22fr 33fr 20fr;
+        column-gap: 28px;
+        align-items: end;
+      }
+
+      .before-visit {
+        position: absolute;
+        top: 16px;
+        left: 14px;
+        width: 1150px;
+        height: 44px;
+      }
+
+      .before-visit::before,
+      .before-visit::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        height: 2px;
+        background: rgba(31, 37, 44, 0.72);
+      }
+
+      .before-visit::before {
+        left: 0;
+        right: calc(50% + 92px);
+        border-top-left-radius: 12px;
+      }
+
+      .before-visit::after {
+        left: calc(50% + 92px);
+        right: 0;
+        border-top-right-radius: 12px;
+      }
+
+      .before-visit span {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        padding: 0 20px;
+        background: #ffffff;
+        font-family: "Space Grotesk", "Manrope", system-ui, sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .threshold {
+        position: absolute;
+        top: 36px;
+        left: 1186px;
+        width: 4px;
+        height: 420px;
+        border-radius: 999px;
+        background: rgba(108, 148, 144, 0.92);
+      }
+
+      .visit-begins {
+        position: absolute;
+        top: 4px;
+        left: 1194px;
+        width: 238px;
+        text-align: center;
+        font-family: "Space Grotesk", "Manrope", system-ui, sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .art-frame {
+        position: relative;
+        overflow: hidden;
+        border-radius: 34px;
+        background: transparent;
+      }
+
+      .art-frame img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .beat-1 {
+        height: 320px;
+      }
+
+      .beat-2 {
+        height: 352px;
+      }
+
+      .beat-3 {
+        height: 368px;
+      }
+
+      .beat-4 {
+        height: 342px;
+      }
+
+      .baseline {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 206px;
+        height: 2px;
+        background: var(--line);
+      }
+
+      .beats {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: 15fr 22fr 33fr 20fr;
+        column-gap: 28px;
+      }
+
+      .beat {
+        position: relative;
+        padding-top: 34px;
+      }
+
+      .beat-number {
+        position: absolute;
+        top: -64px;
+        left: 0;
+        width: 56px;
+        height: 56px;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--chip);
+        color: #ffffff;
+        font-family: "Space Grotesk", "Manrope", system-ui, sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        box-shadow: 0 12px 30px rgba(17, 22, 29, 0.14);
+      }
+
+      .beat h2 {
+        margin: 0 0 10px;
+        font-family: "Space Grotesk", "Manrope", system-ui, sans-serif;
+        font-size: 32px;
+        line-height: 1.03;
+        letter-spacing: -0.04em;
+      }
+
+      .beat p {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.3;
+        color: var(--muted);
+      }
+
+      .beat--hero h2 {
+        color: #213f42;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="figure">
+      <section class="storyboard">
+        <div class="before-visit"><span>Before visit</span></div>
+        <div class="threshold"></div>
+        <div class="visit-begins">Visit begins</div>
+
+        <div class="art-row">
+          <div class="art-frame beat-1">
+            <img src="./beat1-art.png" alt="Invite art" />
+          </div>
+          <div class="art-frame beat-2">
+            <img src="./beat2-art.png" alt="Interview art" />
+          </div>
+          <div class="art-frame beat-3">
+            <img src="./beat3-art.png" alt="Brief art" />
+          </div>
+          <div class="art-frame beat-4">
+            <img src="./beat4-art.png" alt="Clinician art" />
+          </div>
+        </div>
+
+        <div class="baseline"></div>
+
+        <div class="beats">
+          <article class="beat">
+            <div class="beat-number">1</div>
+            <h2>Invite sent</h2>
+            <p>Patient receives secure pre-visit link.</p>
+          </article>
+          <article class="beat">
+            <div class="beat-number">2</div>
+            <h2>Adaptive interview</h2>
+            <p>Vox asks follow-up questions and captures the story.</p>
+          </article>
+          <article class="beat beat--hero">
+            <div class="beat-number">3</div>
+            <h2>Brief prepared</h2>
+            <p>Patient story becomes a clinician-ready handoff.</p>
+          </article>
+          <article class="beat">
+            <div class="beat-number">4</div>
+            <h2>Clinician starts prepared</h2>
+            <p>Sets up a more efficient visit.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+You are continuing your own prior ideation thread about the Designer Health
+slide-8 signal report.
+
+Important:
+
+- this is a follow-up, not a fresh brainstorm
+- stay inside your own prior point of view unless the attached screenshot
+  forces you to change it
+- the human explicitly wants much more depth on the actual artifact spec
+- the screenshot is the concrete object to mutate
+- do not be generic
+- do not give three new directions
+- lock to your chosen direction and specify it in detail
+
+## Current user follow-up, verbatim
+
+I think it's okay to keep this as three different specs or just like kind of
+follow, let each one follow its own thing. But like given that picture that I
+gave you, I can screenshot it again, but it would be nice if you, like, we
+should make a really, like a much more detailed spec on, like I was saying,
+like the different symptoms or like the differential things, like green up
+arrow, red down arrow, or whatever, like, I want to go through and continue to
+ideate, but make it like really more, like much more in depth. Um, so, and
+hopefully with your ideation, you're smart enough to know to like give the
+follow-up chat to the different things, if you know what I mean.
+
+## Slide/deck constraints that still apply
+
+- this is slide 8: `The clinician starts from a structured brief`
+- purpose: make the product tangible
+- official subheader: `Scan, verify, decide.`
+- it should read like one central clinical artifact, not a dashboard
+- clinician remains verifier / decision-maker
+- the cough case remains the example case
+
+## Screenshot context
+
+The attached screenshot shows:
+
+- left card: `What We Know`
+- small uppercase category headers
+- many bordered rows with:
+  - label
+  - optional value line
+  - evidence line
+  - a black or gray state pill like `present` or `absent`
+- right card: `Differential + Next Question + Trace`
+- candidate cards with:
+  - rank prefix like `#1`
+  - title
+  - confidence chip like `high` / `medium`
+  - movement chip like `SAME 1→1`
+  - `Supports`
+  - `Against`
+  - `Unknowns`
+
+The user specifically wants deeper thinking about:
+
+- symptom-state styling
+- whether green up arrow / red down arrow / other symbols should appear
+- how detailed the left-side extraction should be
+- how detailed the right-side consideration cards should be
+- what should be preserved from this screenshot feel and what should be softened
+
+## Your prior answer, which you should continue from
+
+You previously argued:
+
+- the screenshot logic is excellent but the container is too ops-console
+- the artifact should feel like a single-page clinical summary document
+- one unified card with clear vertical sections is stronger than a split-screen
+  dashboard
+- the right-side reasoning area should be present but subordinate to the brief
+- your preferred label was `Working Considerations`
+
+## Task
+
+Produce one deep, concrete spec for your chosen direction.
+
+Use these exact sections:
+
+1. `Locked Direction`
+2. `What Survives From The Screenshot`
+3. `What Gets Softened Or Deleted`
+4. `Detailed Artifact Spec`
+5. `Visual Language For State And Reasoning`
+6. `Filled Example Content`
+7. `Slide Callout Targets`
+8. `HTML Build Notes`
+9. `What Not To Do`
+
+Inside `Detailed Artifact Spec`, go deep on:
+
+- exact overall frame and section order
+- whether the artifact is one card or multiple internal zones
+- left-side row anatomy:
+  - title line
+  - value line
+  - evidence line
+  - whether evidence remains visible at all
+- which categories should exist:
+  - social context
+  - symptoms
+  - key negatives
+  - timeline
+  - workup
+  - uncertainties
+- right-side candidate anatomy:
+  - rank
+  - title
+  - confidence
+  - movement
+  - supports / against / unknowns
+  - suggested next question
+- whether movement chips like `SAME 1→1` should stay, change, or disappear
+- whether the timeline should be integrated or separated
+
+Inside `Visual Language For State And Reasoning`, be extremely specific:
+
+- should there be a green up arrow for support?
+- should there be a red down arrow for against?
+- should unknowns use amber question marks or something else?
+- should these be arrows, bullets, left borders, pills, or tiny glyphs?
+- exactly how restrained or prominent should they be?
+- how should `present`, `absent`, and `unresolved` look?
+
+Inside `Filled Example Content`, give:
+
+- 8 to 12 concrete left-side rows using the cough case
+- 3 concrete right-side candidate blocks
+- 1 concrete uncertainties / confirmation block
+
+Inside `HTML Build Notes`, give concrete implementation guidance:
+
+- typography sizes
+- spacing rhythm
+- border radius
+- row padding
+- maximum bullets per section
+- truncation rules
+- density guardrails
+
+No JSON. Depth over brevity. Be specific enough that a designer or engineer
+could build your version directly.

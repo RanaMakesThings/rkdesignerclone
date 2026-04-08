@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deck Concept Flow Builder</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+      :root {
+        --bg: #f5f8f7;
+        --surface: #ffffff;
+        --ink: #122421;
+        --muted: #546b65;
+        --line: #d4e3df;
+        --overlap: #0b8e73;
+        --similar: #bf7c22;
+        --chat: #1f77b6;
+        --claude: #7a5fc5;
+        --unique-chat: #1c6da5;
+        --unique-claude: #6f4eb0;
+        --shadow: 0 12px 28px rgba(18, 41, 36, 0.08);
+        --radius: 14px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Manrope', 'Segoe UI', sans-serif;
+        color: var(--ink);
+        line-height: 1.4;
+        background:
+          radial-gradient(1000px 420px at 12% -14%, #def3ed 0%, rgba(222, 243, 237, 0) 74%),
+          radial-gradient(920px 420px at 92% -12%, #fbeed9 0%, rgba(251, 238, 217, 0) 76%),
+          var(--bg);
+      }
+
+      main {
+        width: 100%;
+        max-width: none;
+        padding: 20px clamp(12px, 2.3vw, 36px) 34px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        font-family: 'Space Grotesk', 'Avenir Next', sans-serif;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .hero {
+        border: 1px solid var(--line);
+        border-radius: calc(var(--radius) + 2px);
+        background: linear-gradient(130deg, #ffffff 0%, #f8fcfa 100%);
+        box-shadow: var(--shadow);
+        padding: 18px;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.3rem, 2vw, 1.9rem);
+        margin-bottom: 6px;
+      }
+
+      .hero p {
+        color: var(--muted);
+        max-width: 920px;
+      }
+
+      .hero-stats {
+        margin-top: 12px;
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      .stat {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        padding: 9px;
+      }
+
+      .stat .k {
+        display: block;
+        font-size: 0.77rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #5b746d;
+      }
+
+      .stat .v {
+        display: block;
+        font-size: 0.97rem;
+        font-weight: 700;
+        margin-top: 2px;
+      }
+
+      .section {
+        margin-top: 18px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        padding: 14px;
+      }
+
+      .section-head {
+        margin-bottom: 10px;
+      }
+
+      .section-head h2 {
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+      }
+
+      .section-head p {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .match-grid {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1.35fr 1fr 1fr;
+      }
+
+      .match-col {
+        border: 1px solid var(--line);
+        border-radius: 11px;
+        background: #fcfefd;
+        padding: 10px;
+      }
+
+      .col-head {
+        margin-bottom: 8px;
+      }
+
+      .col-head h3 {
+        font-size: 0.93rem;
+        margin-bottom: 2px;
+      }
+
+      .col-head p {
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+
+      .concept-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .concept-card {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        padding: 9px;
+      }
+
+      .concept-title-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+
+      .concept-title {
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .badge {
+        border-radius: 999px;
+        border: 1px solid;
+        padding: 2px 7px;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        white-space: nowrap;
+      }
+
+      .badge.overlap {
+        border-color: #9ed9ca;
+        background: #eaf9f4;
+        color: #226352;
+      }
+
+      .badge.similar {
+        border-color: #efcfab;
+        background: #fff5e8;
+        color: #7d5520;
+      }
+
+      .badge.unique-chatgpt {
+        border-color: #b8d8ef;
+        background: #ecf6fd;
+        color: #225e8c;
+      }
+
+      .badge.unique-claude {
+        border-color: #d7c9f5;
+        background: #f3eefc;
+        color: #5f4397;
+      }
+
+      .concept-summary {
+        margin-top: 5px;
+        color: #4e6862;
+        font-size: 0.8rem;
+      }
+
+      .evidence-grid {
+        margin-top: 8px;
+        display: grid;
+        gap: 6px;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .evidence {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 6px;
+        background: #fbfdfd;
+      }
+
+      .evidence .deck {
+        display: inline-block;
+        border: 1px solid;
+        border-radius: 999px;
+        padding: 1px 6px;
+        font-size: 0.66rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        margin-bottom: 4px;
+      }
+
+      .evidence .deck.chat {
+        border-color: #b8d8ef;
+        color: #255f8d;
+        background: #edf7ff;
+      }
+
+      .evidence .deck.claude {
+        border-color: #d6c7f4;
+        color: #63479c;
+        background: #f5efff;
+      }
+
+      .evidence ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 4px;
+      }
+
+      .evidence li {
+        font-size: 0.74rem;
+        color: #455f59;
+      }
+
+      .evidence li strong {
+        color: #223d37;
+      }
+
+      .e-empty {
+        font-size: 0.72rem;
+        color: #6f8680;
+      }
+
+      .builder-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+
+      .btn {
+        appearance: none;
+        border: 1px solid #bdd7d0;
+        background: #fff;
+        color: #20423a;
+        border-radius: 9px;
+        padding: 7px 10px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        border-color: #8fbeb2;
+        background: #f4fbf9;
+      }
+
+      .builder {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1.4fr;
+      }
+
+      .lane {
+        border: 1px solid var(--line);
+        border-radius: 11px;
+        background: #fff;
+        padding: 10px;
+      }
+
+      .lane.final {
+        background: linear-gradient(140deg, #fcfffd 0%, #f2faf7 100%);
+        border-color: #bfded5;
+      }
+
+      .lane h3 {
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+      }
+
+      .lane p {
+        font-size: 0.76rem;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .flow-list {
+        display: grid;
+        gap: 7px;
+      }
+
+      .flow-card {
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: #fff;
+        padding: 7px 8px;
+        cursor: grab;
+      }
+
+      .flow-card:active {
+        cursor: grabbing;
+      }
+
+      .flow-card.dragging {
+        opacity: 0.48;
+      }
+
+      .flow-card-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+
+      .flow-card .name {
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .flow-card .meta {
+        margin-top: 3px;
+        font-size: 0.72rem;
+        color: #58736d;
+      }
+
+      .add-btn,
+      .remove-btn {
+        appearance: none;
+        border: 1px solid #c8d9d4;
+        background: #fff;
+        border-radius: 7px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        padding: 2px 7px;
+        cursor: pointer;
+        color: #33514a;
+      }
+
+      .add-btn:hover,
+      .remove-btn:hover {
+        border-color: #96beb3;
+        background: #f5fbf9;
+      }
+
+      .flow-empty {
+        border: 1px dashed #bdd8d1;
+        border-radius: 9px;
+        padding: 10px;
+        color: #59756e;
+        font-size: 0.78rem;
+        background: #fbfefd;
+      }
+
+      .drop-target {
+        outline: 2px dashed #77af9e;
+        outline-offset: 2px;
+      }
+
+      .export {
+        margin-top: 9px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: #fff;
+        min-height: 120px;
+        padding: 8px;
+        white-space: pre-wrap;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.72rem;
+        color: #35514b;
+      }
+
+      @media (max-width: 1160px) {
+        .match-grid,
+        .builder {
+          grid-template-columns: 1fr;
+        }
+
+        .evidence-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <h1>Pitch Deck Concept Matcher + Flow Builder</h1>
+        <p>
+          This version is intentionally minimal: first identify which concepts are
+          overlapping vs unique, then build your final argument order at concept level.
+          You can pick ChatGPT vs Claude slide content after the narrative flow is locked.
+        </p>
+        <div id="heroStats" class="hero-stats"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Concept Match Map</h2>
+          <p>
+            Left column: overlap/similar concepts. Right columns: concepts unique to one deck.
+            Each card includes a one-line summary and slide evidence from both decks.
+          </p>
+        </div>
+        <div class="match-grid">
+          <div class="match-col">
+            <div class="col-head">
+              <h3>Overlap + Similar</h3>
+              <p>Concept exists in both decks (directly or embedded).</p>
+            </div>
+            <div id="overlapList" class="concept-list"></div>
+          </div>
+          <div class="match-col">
+            <div class="col-head">
+              <h3>Unique to ChatGPT</h3>
+              <p>Concept called out in ChatGPT main flow only.</p>
+            </div>
+            <div id="uniqueChatList" class="concept-list"></div>
+          </div>
+          <div class="match-col">
+            <div class="col-head">
+              <h3>Unique to Claude</h3>
+              <p>Concept called out in Claude main flow only.</p>
+            </div>
+            <div id="uniqueClaudeList" class="concept-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Argument Flow Builder (Concept-Only)</h2>
+          <p>
+            Drag from the concept library into Final Argument Flow. Reorder until the argument feels right.
+            This avoids committing to slide-level content too early.
+          </p>
+        </div>
+
+        <div class="builder-toolbar">
+          <button id="seedFlowBtn" class="btn" type="button">Seed Suggested Flow</button>
+          <button id="seedOverlapBtn" class="btn" type="button">Seed Overlap-First Flow</button>
+          <button id="clearFlowBtn" class="btn" type="button">Clear Flow</button>
+        </div>
+
+        <div class="builder">
+          <section class="lane">
+            <h3>Concept Library</h3>
+            <p>Add or drag any concept card into the final flow.</p>
+            <div id="sourceList" class="flow-list"></div>
+          </section>
+
+          <section class="lane final">
+            <h3>Final Argument Flow</h3>
+            <p>Recommended size for first meeting: 12-14 concepts.</p>
+            <div id="finalFlowList" class="flow-list"></div>
+            <div id="flowExport" class="export"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const chatgptSlides = {
+        1: { title: 'Title', summary: 'VOX opener + scheduleable-minutes framing' },
+        2: { title: 'Access Is Tightening', summary: 'Wait-time pressure + deferred-care proof chips' },
+        3: { title: 'Supply = Completed Visits', summary: 'Operational reframe: small per-visit gains compound' },
+        4: { title: 'Narrative -> Decision Signal Bottleneck', summary: 'Today vs Vox history translation' },
+        5: { title: 'Move History Upstream', summary: 'Before / during / after wedge articulation' },
+        6: { title: 'Why Wedge Works (Forms Fail)', summary: 'Repetition, entropy, async advantage' },
+        7: { title: 'Trusted Pre-Visit Workflow', summary: '4-step workflow + trust tags' },
+        8: { title: 'Signal Report Artifact', summary: 'Zoom callouts to make artifact legible' },
+        9: { title: 'Why Now', summary: 'Wave 1 docs assist -> Wave 2 prep mechanics' },
+        10: { title: 'Economics', summary: 'Conservative +1/day ROI and break-even' },
+        11: { title: 'GTM + Pilot Design', summary: 'Beachhead + capture metrics' },
+        12: { title: 'Raise / Plan', summary: '$1M raise with milestones' },
+        13: { title: 'Team', summary: 'Founder grid with credibility lines' }
+      };
+
+      const claudeSlides = {
+        1: { title: 'Title', summary: 'VOX opener + appointment-capacity thesis' },
+        2: { title: 'Problem: Access Tightening', summary: '31 days / 10.6% / ~80k shortfall stats' },
+        3: { title: 'Insight: Supply = Visits', summary: '22.9 min + 5.3 min narrative load framing' },
+        4: { title: 'Why Existing Tools Do Not Solve It', summary: 'Intake-form limits + ambient-scribe limits' },
+        5: { title: 'Thesis: Move History Upstream', summary: 'Three-argument case + pre-visit completion evidence' },
+        6: { title: 'How Vox Works', summary: '4-step workflow + clinician control' },
+        7: { title: 'History Brief Artifact', summary: 'Large mockup of pre-visit output' },
+        8: { title: 'Trust Posture', summary: 'Provenance + unknowns + verify queue' },
+        9: { title: 'Before/After Encounter Flow', summary: 'Time-bar model with banked minutes' },
+        10: { title: 'Economics', summary: 'Hero number + sensitivity table' },
+        11: { title: 'Market Size', summary: 'TAM / SAM / SOM funnel in main deck' },
+        12: { title: 'GTM', summary: 'Beachhead -> expansion' },
+        13: { title: 'Summary', summary: 'Problem / insight / solution / proof recap' },
+        14: { title: 'Team', summary: 'Founder slide near close' },
+        15: { title: 'The Ask', summary: '$1M raise + 18-month milestone chain' }
+      };
+
+      const concepts = [
+        {
+          id: 'title_core',
+          name: 'Title + Core Promise',
+          status: 'overlap',
+          summary: 'Both open with VOX and a capacity-through-time thesis.',
+          chatgpt: [1],
+          claude: [1]
+        },
+        {
+          id: 'access_problem',
+          name: 'Access Pressure Problem',
+          status: 'overlap',
+          summary: 'Both establish outpatient access stress with wait-time framing.',
+          chatgpt: [2],
+          claude: [2]
+        },
+        {
+          id: 'supply_reframe',
+          name: 'Supply = Completed Visits Reframe',
+          status: 'overlap',
+          summary: 'Both shift from staffing shortage to throughput mechanics.',
+          chatgpt: [3],
+          claude: [3]
+        },
+        {
+          id: 'bottleneck',
+          name: 'Narrative-to-Signal Bottleneck',
+          status: 'similar',
+          summary: 'ChatGPT isolates this explicitly; Claude mostly folds it into thesis framing.',
+          chatgpt: [4],
+          claude: [5]
+        },
+        {
+          id: 'tools_fail',
+          name: 'Why Existing Tools Fail',
+          status: 'overlap',
+          summary: 'Both answer the "is this just forms/scribes?" objection.',
+          chatgpt: [6],
+          claude: [4]
+        },
+        {
+          id: 'upstream_thesis',
+          name: 'Move History Upstream Thesis',
+          status: 'overlap',
+          summary: 'Core wedge is shared: start the visit in refinement, not reconstruction.',
+          chatgpt: [5],
+          claude: [5]
+        },
+        {
+          id: 'workflow',
+          name: 'Workflow Mechanics',
+          status: 'overlap',
+          summary: 'Both describe a 4-step pre-visit to clinician-verify workflow.',
+          chatgpt: [7],
+          claude: [6]
+        },
+        {
+          id: 'artifact',
+          name: 'History Brief Artifact',
+          status: 'overlap',
+          summary: 'Both make the output tangible with a concrete artifact slide.',
+          chatgpt: [8],
+          claude: [7]
+        },
+        {
+          id: 'trust',
+          name: 'Trust Primitives',
+          status: 'similar',
+          summary: 'Claude has a dedicated trust slide; ChatGPT embeds trust inside workflow.',
+          chatgpt: [7],
+          claude: [8]
+        },
+        {
+          id: 'why_now',
+          name: 'Why Now Positioning',
+          status: 'unique_chatgpt',
+          summary: 'Explicit wave framing is called out in ChatGPT main flow.',
+          chatgpt: [9],
+          claude: []
+        },
+        {
+          id: 'encounter_model',
+          name: 'Encounter Time Model',
+          status: 'unique_claude',
+          summary: 'Claude adds an explicit before/after time bar to show captured minutes.',
+          chatgpt: [],
+          claude: [9]
+        },
+        {
+          id: 'economics',
+          name: 'Economics + ROI',
+          status: 'overlap',
+          summary: 'Both include economics as a core conviction point.',
+          chatgpt: [10],
+          claude: [10]
+        },
+        {
+          id: 'gtm',
+          name: 'GTM + Pilot Proof',
+          status: 'overlap',
+          summary: 'Both define a beachhead and pilot success logic.',
+          chatgpt: [11],
+          claude: [12]
+        },
+        {
+          id: 'market',
+          name: 'Market Sizing',
+          status: 'unique_claude',
+          summary: 'Claude keeps TAM/SAM/SOM in the main story; ChatGPT defers to appendix.',
+          chatgpt: [],
+          claude: [11]
+        },
+        {
+          id: 'summary_recap',
+          name: 'Summary Recap',
+          status: 'unique_claude',
+          summary: 'Claude includes an explicit recap slide near close.',
+          chatgpt: [],
+          claude: [13]
+        },
+        {
+          id: 'team',
+          name: 'Team Credibility',
+          status: 'overlap',
+          summary: 'Both close with a founder/team credibility slide.',
+          chatgpt: [13],
+          claude: [14]
+        },
+        {
+          id: 'raise_ask',
+          name: 'Raise / Ask',
+          status: 'similar',
+          summary: 'Same fundraising objective, phrased and placed slightly differently.',
+          chatgpt: [12],
+          claude: [15]
+        }
+      ];
+
+      const suggestedFlow = [
+        'title_core',
+        'access_problem',
+        'supply_reframe',
+        'bottleneck',
+        'tools_fail',
+        'upstream_thesis',
+        'workflow',
+        'artifact',
+        'trust',
+        'why_now',
+        'economics',
+        'gtm',
+        'team',
+        'raise_ask'
+      ];
+
+      const overlapFirstFlow = concepts
+        .filter((c) => c.status === 'overlap' || c.status === 'similar')
+        .map((c) => c.id)
+        .concat(concepts.filter((c) => c.status.includes('unique')).map((c) => c.id));
+
+      const conceptById = new Map(concepts.map((c) => [c.id, c]));
+
+      const state = {
+        flow: [...suggestedFlow],
+        draggingFlowId: null
+      };
+
+      function statusLabel(status) {
+        if (status === 'overlap') return 'Overlap';
+        if (status === 'similar') return 'Similar';
+        if (status === 'unique_chatgpt') return 'Unique ChatGPT';
+        return 'Unique Claude';
+      }
+
+      function statusClass(status) {
+        if (status === 'unique_chatgpt') return 'unique-chatgpt';
+        if (status === 'unique_claude') return 'unique-claude';
+        return status;
+      }
+
+      function slideEvidence(deck, slideNumbers) {
+        const source = deck === 'chat' ? chatgptSlides : claudeSlides;
+        if (!slideNumbers.length) {
+          return '<div class="e-empty">Not explicitly present</div>';
+        }
+
+        return `
+          <ul>
+            ${slideNumbers
+              .map((n) => {
+                const s = source[n];
+                if (!s) return '';
+                return `<li><strong>S${n} ${s.title}</strong>: ${s.summary}</li>`;
+              })
+              .join('')}
+          </ul>
+        `;
+      }
+
+      function conceptCardHTML(c, compact = false) {
+        return `
+          <article class="concept-card">
+            <div class="concept-title-row">
+              <div class="concept-title">${c.name}</div>
+              <span class="badge ${statusClass(c.status)}">${statusLabel(c.status)}</span>
+            </div>
+            <p class="concept-summary">${c.summary}</p>
+            ${
+              compact
+                ? ''
+                : `<div class="evidence-grid">
+                    <div class="evidence">
+                      <span class="deck chat">ChatGPT</span>
+                      ${slideEvidence('chat', c.chatgpt)}
+                    </div>
+                    <div class="evidence">
+                      <span class="deck claude">Claude</span>
+                      ${slideEvidence('claude', c.claude)}
+                    </div>
+                  </div>`
+            }
+          </article>
+        `;
+      }
+
+      function renderMatchMap() {
+        const overlap = concepts.filter((c) => c.status === 'overlap' || c.status === 'similar');
+        const uniqueChat = concepts.filter((c) => c.status === 'unique_chatgpt');
+        const uniqueClaude = concepts.filter((c) => c.status === 'unique_claude');
+
+        document.getElementById('overlapList').innerHTML = overlap.map((c) => conceptCardHTML(c)).join('');
+        document.getElementById('uniqueChatList').innerHTML = uniqueChat.map((c) => conceptCardHTML(c)).join('');
+        document.getElementById('uniqueClaudeList').innerHTML = uniqueClaude.map((c) => conceptCardHTML(c)).join('');
+
+        document.getElementById('heroStats').innerHTML = `
+          <div class="stat"><span class="k">Total Concepts</span><span class="v">${concepts.length}</span></div>
+          <div class="stat"><span class="k">Overlap</span><span class="v">${concepts.filter((c) => c.status === 'overlap').length}</span></div>
+          <div class="stat"><span class="k">Similar</span><span class="v">${concepts.filter((c) => c.status === 'similar').length}</span></div>
+          <div class="stat"><span class="k">Unique ChatGPT</span><span class="v">${concepts.filter((c) => c.status === 'unique_chatgpt').length}</span></div>
+          <div class="stat"><span class="k">Unique Claude</span><span class="v">${concepts.filter((c) => c.status === 'unique_claude').length}</span></div>
+        `;
+      }
+
+      function sourceCardHTML(c) {
+        return `
+          <article class="flow-card" draggable="true" data-source-id="${c.id}">
+            <div class="flow-card-head">
+              <div class="name">${c.name}</div>
+              <button class="add-btn" type="button" data-add-id="${c.id}">Add</button>
+            </div>
+            <div class="meta">${statusLabel(c.status)} · ${c.summary}</div>
+          </article>
+        `;
+      }
+
+      function flowCardHTML(id, index) {
+        const c = conceptById.get(id);
+        if (!c) return '';
+
+        const chat = c.chatgpt.length ? `ChatGPT S${c.chatgpt.join(', S')}` : 'ChatGPT -';
+        const claude = c.claude.length ? `Claude S${c.claude.join(', S')}` : 'Claude -';
+
+        return `
+          <article class="flow-card" draggable="true" data-flow-id="${c.id}">
+            <div class="flow-card-head">
+              <div class="name">${index + 1}. ${c.name}</div>
+              <button class="remove-btn" type="button" data-remove-id="${c.id}">Remove</button>
+            </div>
+            <div class="meta">${statusLabel(c.status)} · ${chat} · ${claude}</div>
+          </article>
+        `;
+      }
+
+      function renderSource() {
+        document.getElementById('sourceList').innerHTML = concepts.map((c) => sourceCardHTML(c)).join('');
+      }
+
+      function renderFlow() {
+        const final = document.getElementById('finalFlowList');
+        if (!state.flow.length) {
+          final.innerHTML = '<div class="flow-empty">Drop concept cards here to create your argument flow.</div>';
+        } else {
+          final.innerHTML = state.flow.map((id, i) => flowCardHTML(id, i)).join('');
+        }
+
+        const exportLines = state.flow.map((id, i) => {
+          const c = conceptById.get(id);
+          const chat = c.chatgpt.length ? `ChatGPT S${c.chatgpt.join('/S')}` : 'ChatGPT -';
+          const claude = c.claude.length ? `Claude S${c.claude.join('/S')}` : 'Claude -';
+          return `${i + 1}. ${c.name} (${chat} | ${claude})`;
+        });
+
+        document.getElementById('flowExport').textContent = exportLines.length
+          ? exportLines.join('\n')
+          : 'No argument flow yet.';
+      }
+
+      function upsertFlow(id, index = state.flow.length) {
+        const clean = state.flow.filter((x) => x !== id);
+        const at = Math.max(0, Math.min(index, clean.length));
+        clean.splice(at, 0, id);
+        state.flow = clean;
+        renderFlow();
+      }
+
+      function removeFromFlow(id) {
+        state.flow = state.flow.filter((x) => x !== id);
+        renderFlow();
+      }
+
+      function getDropIndex(container, clientY, draggingId) {
+        const cards = [...container.querySelectorAll('[data-flow-id]')].filter(
+          (el) => el.dataset.flowId !== draggingId
+        );
+
+        for (let i = 0; i < cards.length; i += 1) {
+          const rect = cards[i].getBoundingClientRect();
+          if (clientY < rect.top + rect.height / 2) return i;
+        }
+        return cards.length;
+      }
+
+      function parsePayload(text) {
+        try {
+          return JSON.parse(text);
+        } catch {
+          return null;
+        }
+      }
+
+      function bindFlowBuilder() {
+        const source = document.getElementById('sourceList');
+        const final = document.getElementById('finalFlowList');
+
+        source.addEventListener('click', (event) => {
+          const btn = event.target.closest('[data-add-id]');
+          if (!btn) return;
+          upsertFlow(btn.dataset.addId);
+        });
+
+        source.addEventListener('dragstart', (event) => {
+          const card = event.target.closest('[data-source-id]');
+          if (!card) return;
+          card.classList.add('dragging');
+          event.dataTransfer.setData(
+            'text/plain',
+            JSON.stringify({ kind: 'source', id: card.dataset.sourceId })
+          );
+          event.dataTransfer.effectAllowed = 'copy';
+        });
+
+        source.addEventListener('dragend', (event) => {
+          const card = event.target.closest('[data-source-id]');
+          if (card) card.classList.remove('dragging');
+        });
+
+        final.addEventListener('click', (event) => {
+          const btn = event.target.closest('[data-remove-id]');
+          if (!btn) return;
+          removeFromFlow(btn.dataset.removeId);
+        });
+
+        final.addEventListener('dragstart', (event) => {
+          const card = event.target.closest('[data-flow-id]');
+          if (!card) return;
+          state.draggingFlowId = card.dataset.flowId;
+          card.classList.add('dragging');
+          event.dataTransfer.setData(
+            'text/plain',
+            JSON.stringify({ kind: 'flow', id: card.dataset.flowId })
+          );
+          event.dataTransfer.effectAllowed = 'move';
+        });
+
+        final.addEventListener('dragend', (event) => {
+          const card = event.target.closest('[data-flow-id]');
+          if (card) card.classList.remove('dragging');
+          state.draggingFlowId = null;
+          final.classList.remove('drop-target');
+        });
+
+        final.addEventListener('dragover', (event) => {
+          event.preventDefault();
+          final.classList.add('drop-target');
+        });
+
+        final.addEventListener('dragleave', (event) => {
+          if (!final.contains(event.relatedTarget)) {
+            final.classList.remove('drop-target');
+          }
+        });
+
+        final.addEventListener('drop', (event) => {
+          event.preventDefault();
+          final.classList.remove('drop-target');
+          const payload = parsePayload(event.dataTransfer.getData('text/plain'));
+          if (!payload || !payload.id) return;
+
+          const index = getDropIndex(final, event.clientY, state.draggingFlowId);
+          upsertFlow(payload.id, index);
+        });
+
+        document.getElementById('seedFlowBtn').addEventListener('click', () => {
+          state.flow = [...suggestedFlow];
+          renderFlow();
+        });
+
+        document.getElementById('seedOverlapBtn').addEventListener('click', () => {
+          state.flow = [...overlapFirstFlow];
+          renderFlow();
+        });
+
+        document.getElementById('clearFlowBtn').addEventListener('click', () => {
+          state.flow = [];
+          renderFlow();
+        });
+      }
+
+      function boot() {
+        renderMatchMap();
+        renderSource();
+        renderFlow();
+        bindFlowBuilder();
+      }
+
+      window.addEventListener('load', boot);
+    </script>
+  </body>
+</html>

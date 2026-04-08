@@ -1,0 +1,27 @@
+Review this investor-deck slide as a presentation design critic.
+
+Context:
+- This is the current locked HTML winner for slide 2 of the Designer Health deck.
+- The slide thesis is: demand is outpacing clinical capacity.
+- The slide currently shows:
+  - a benchmark wait-time trend ending at 31 days in 2025
+  - a right-side specialty breakout
+  - a lower shortage banner tied to primary care HPSA designation
+
+Focus especially on these potential issues:
+- `31 days` may be too large and too loud relative to the rest of the slide
+- spacing may feel uneven or awkward
+- the shortage ratio and its sentence may not read in a natural sequence
+- `1 in 4+` may be less clear than `more than 1 in 4`
+- the `92.3 million` number may be unnecessary on the slide
+- language around federally designated primary care shortage areas may be more
+  useful than the raw count
+- overall the slide may still feel a bit busy
+
+Return:
+1. A 5-bullet diagnosis ordered by importance.
+2. A 5-bullet action list with concrete fixes.
+3. A one-paragraph recommendation for the cleanest on-slide shortage wording.
+
+Be direct and specific. Favor hierarchy, spacing, and wording guidance over
+general praise.

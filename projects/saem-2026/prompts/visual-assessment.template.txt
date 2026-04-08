@@ -1,0 +1,22 @@
+You are reviewing ONE static investor pitch-deck figure.
+
+Evaluate:
+- whether the slide works in a 3-second scan
+- whether the hierarchy is correct
+- whether the key relationship is obvious
+- whether any directional marker or arrowhead is missing or visually ambiguous
+- whether any text is clipped, cropped, or partially missing
+- whether any stray rendering artifact is visible, including leaked text such as `xml`
+- whether the composition feels resolved, not like a cropped fragment
+
+Answer with sections:
+
+## 1. Verdict
+
+## 2. What works
+
+## 3. What is broken
+
+## 4. Anything obviously off
+
+## 5. Best next move

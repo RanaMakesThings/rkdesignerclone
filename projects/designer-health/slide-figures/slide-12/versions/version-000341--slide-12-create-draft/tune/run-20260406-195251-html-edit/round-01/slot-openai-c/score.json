@@ -1,0 +1,16 @@
+{
+  "class": "blocked",
+  "numeric": 0.05,
+  "status": "blocked",
+  "outcome": "block",
+  "reason": "Regression review found a concrete blocker.",
+  "blockers": [
+    "Locked header/subheader region is visibly overlapped and duplicated, making the required copy look wrong and partially unreadable.",
+    "A broken image/placeholder artifact remains visible near the lower-right of the slide content, indicating unresolved stub content.",
+    "Footer logo renders as plain lowercase 'designer' wordmark only — the Designer Health logomark icon is missing, breaking family alignment with the baseline shell and all reference slides",
+    "Left hero block uses 'PRE-SEED ROUND' eyebrow instead of the locked 'Pre-Seed SAFE' badge label specified in the hero block copy plan"
+  ],
+  "warnings": [
+    "Footer Logo drifted beyond semantic-stable threshold."
+  ]
+}

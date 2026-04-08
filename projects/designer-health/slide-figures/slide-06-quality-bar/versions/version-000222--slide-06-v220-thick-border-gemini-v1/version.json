@@ -1,0 +1,12 @@
+{
+  "id": "version-000222",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000222--slide-06-v220-thick-border-gemini-v1",
+  "label": "slide-06-v220-thick-border-gemini-v1",
+  "status": "archived",
+  "createdAt": "2026-04-03T19:47:00.297Z",
+  "sourceKind": "fine-tune-draft",
+  "baseVersionId": "version-000220",
+  "legacySourcePaths": []
+}

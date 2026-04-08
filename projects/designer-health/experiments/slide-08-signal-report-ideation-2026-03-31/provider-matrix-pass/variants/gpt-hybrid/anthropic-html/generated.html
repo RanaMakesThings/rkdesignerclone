@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Designer Health – Structured Brief</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #F0EFEB;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    background: #FFFFFF;
+    border: 1px solid #D4D2CC;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1080px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+    overflow: hidden;
+  }
+
+  /* ── Header ── */
+  .sheet-header {
+    padding: 28px 36px 24px;
+    border-bottom: 1px solid #E5E3DE;
+  }
+
+  .sheet-header h1 {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #111;
+  }
+
+  .sheet-header p {
+    font-size: 12.5px;
+    font-weight: 400;
+    color: #7A7772;
+    margin-top: 3px;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── Body grid ── */
+  .sheet-body {
+    display: grid;
+    grid-template-columns: 64fr 36fr;
+    min-height: 0;
+  }
+
+  /* ── Left column ── */
+  .left-col {
+    padding: 24px 32px 28px 36px;
+    border-right: 1px solid #E5E3DE;
+  }
+
+  .section-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #94918A;
+    margin-bottom: 8px;
+    margin-top: 22px;
+  }
+
+  .section-title:first-child {
+    margin-top: 0;
+  }
+
+  .row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 9px 0;
+    border-bottom: 1px solid #F0EFEB;
+    gap: 12px;
+  }
+
+  .row:last-child {
+    border-bottom: none;
+  }
+
+  .row-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .row-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a1a1a;
+    line-height: 1.35;
+  }
+
+  .row-value {
+    font-size: 11.5px;
+    font-weight: 400;
+    color: #6B6862;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
+  .row-evidence {
+    font-size: 10.5px;
+    font-weight: 400;
+    color: #A09D96;
+    margin-top: 2px;
+  }
+
+  .pill {
+    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-top: 2px;
+    white-space: nowrap;
+  }
+
+  .pill-present {
+    background: #1a1a1a;
+    color: #fff;
+  }
+
+  .pill-absent {
+    background: #E8E7E3;
+    color: #7A7772;
+  }
+
+  .pill-unresolved {
+    background: #F5EDDF;
+    color: #8B7A55;
+  }
+
+  /* ── Right rail ── */
+  .right-rail {
+    padding: 24px 28px 28px 24px;
+    background: #FAFAF8;
+  }
+
+  .rail-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #94918A;
+    margin-bottom: 16px;
+  }
+
+  .candidate {
+    background: #FFFFFF;
+    border: 1px solid #E5E3DE;
+    border-radius: 7px;
+    padding: 14px 16px 14px;
+    margin-bottom: 12px;
+  }
+
+  .candidate:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .candidate-header {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .candidate-rank {
+    font-size: 10px;
+    font-weight: 700;
+    color: #94918A;
+    flex-shrink: 0;
+  }
+
+  .candidate-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.3;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .candidate-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .confidence-badge {
+    font-size: 9.5px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 3px;
+    letter-spacing: 0.02em;
+  }
+
+  .conf-high {
+    background: #1a1a1a;
+    color: #fff;
+  }
+
+  .conf-medium {
+    background: #E8E7E3;
+    color: #55534E;
+  }
+
+  .conf-low {
+    background: #F5EDDF;
+    color: #8B7A55;
+  }
+
+  .movement {
+    font-size: 9.5px;
+    font-weight: 500;
+    color: #A09D96;
+    letter-spacing: 0.01em;
+  }
+
+  .movement .glyph-up { color: #5A8A6A; }
+  .movement .glyph-down { color: #B06464; }
+  .movement .glyph-same { color: #C2A85A; }
+
+  .candidate-section-label {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #94918A;
+    margin-top: 8px;
+    margin-bottom: 3px;
+  }
+
+  .candidate-section-label:first-of-type {
+    margin-top: 0;
+  }
+
+  .candidate-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .candidate-list li {
+    font-size: 11.5px;
+    font-weight: 400;
+    color: #4A4843;
+    line-height: 1.55;
+    padding-left: 12px;
+    position: relative;
+  }
+
+  .candidate-list li::before {
+    content: "·";
+    position: absolute;
+    left: 2px;
+    color: #BDBAB3;
+    font-weight: 700;
+  }
+
+  /* ── Handoff ── */
+  .handoff {
+    margin-top: 16px;
+    background: #FFFFFF;
+    border: 1px solid #D4D2CC;
+    border-radius: 7px;
+    padding: 14px 16px;
+  }
+
+  .handoff-label {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #94918A;
+    margin-bottom: 5px;
+  }
+
+  .handoff-question {
+    font-size: 12.5px;
+    font-weight: 500;
+    font-style: italic;
+    color: #2C2B28;
+    line-height: 1.55;
+  }
+
+  /* ── Timeline ── */
+  .timeline-strip {
+    border-top: 1px solid #E5E3DE;
+    padding: 20px 36px 22px;
+    background: #FAFAF8;
+  }
+
+  .timeline-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #94918A;
+    margin-bottom: 14px;
+  }
+
+  .timeline-track {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    gap: 0;
+  }
+
+  .timeline-track::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    right: 6px;
+    height: 1.5px;
+    background: #D4D2CC;
+    z-index: 0;
+  }
+
+  .tl-node {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 4px;
+  }
+
+  .tl-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #B0AEA7;
+    flex-shrink: 0;
+  }
+
+  .tl-dot.solid {
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+  }
+
+  .tl-dot.open {
+    background: #fff;
+    border-color: #C2A85A;
+  }
+
+  .tl-text {
+    font-size: 10.5px;
+    font-weight: 450;
+    color: #55534E;
+    margin-top: 8px;
+    line-height: 1.4;
+    max-width: 140px;
+  }
+
+  .tl-turn {
+    font-size: 9px;
+    color: #A09D96;
+    margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <!-- Header -->
+  <div class="sheet-header">
+    <h1>Structured Intake Brief</h1>
+    <p>Cough evaluation · ~1 week duration · Spouse-prompted visit · Conversation turns 001–016</p>
+  </div>
+
+  <!-- Body -->
+  <div class="sheet-body">
+
+    <!-- Left column -->
+    <div class="left-col">
+      <div class="section-title">Social Context</div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Care seeking prompted by spouse</div>
+          <div class="row-value">Spouse encouraged evaluation</div>
+          <div class="row-evidence">turn-002</div>
+        </div>
+        <span class="pill pill-present">present</span>
+      </div>
+
+      <div class="section-title">Symptoms</div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Cough</div>
+          <div class="row-evidence">turn-002</div>
+        </div>
+        <span class="pill pill-present">present</span>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Cough pattern / frequency</div>
+          <div class="row-value">Bursts with intermittent fits separated by periods of relative calm</div>
+          <div class="row-evidence">turn-014</div>
+        </div>
+        <span class="pill pill-present">present</span>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Cough worse at night</div>
+          <div class="row-evidence">turn-016</div>
+        </div>
+        <span class="pill pill-present">present</span>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Cough worsens when lying down</div>
+          <div class="row-evidence">turn-016</div>
+        </div>
+        <span class="pill pill-present">present</span>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Scratchy throat</div>
+          <div class="row-evidence">turn-004</div>
+        </div>
+        <span class="pill pill-present">present</span>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Sputum color</div>
+          <div class="row-value">Mostly yellow; possibly green once (uncertain due to lighting)</div>
+          <div class="row-evidence">turn-010</div>
+        </div>
+        <span class="pill pill-present">present</span>
+      </div>
+
+      <div class="section-title">Key Negatives</div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Hemoptysis (blood in sputum)</div>
+          <div class="row-evidence">turn-012</div>
+        </div>
+        <span class="pill pill-absent">absent</span>
+      </div>
+
+      <div class="section-title">Workup / Uncertainties</div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Dyspnea / breathing impact</div>
+          <div class="row-value">Exertional component mentioned; severity and progression not yet characterized</div>
+          <div class="row-evidence">turn-014</div>
+        </div>
+        <span class="pill pill-unresolved">unresolved</span>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Fever / chills</div>
+          <div class="row-value">Not yet confirmed or denied</div>
+        </div>
+        <span class="pill pill-unresolved">unresolved</span>
+      </div>
+
+      <div class="row">
+        <div class="row-text">
+          <div class="row-label">Pleuritic chest pain</div>
+          <div class="row-value">Not yet asked</div>
+        </div>
+        <span class="pill pill-unresolved">unresolved</span>
+      </div>
+    </div>
+
+    <!-- Right rail -->
+    <div class="right-rail">
+      <div class="rail-title">Working Considerations</div>
+
+      <!-- #1 -->
+      <div class="candidate">
+        <div class="candidate-header">
+          <span class="candidate-rank">#1</span>
+          <span class="candidate-name">Acute bronchitis</span>
+          <div class="candidate-meta">
+            <span class="confidence-badge conf-high">high</span>
+            <span class="movement"><span class="glyph-up">↑</span> 2→1</span>
+          </div>
+        </div>
+        <div class="candidate-section-label">Supports</div>
+        <ul class="candidate-list">
+          <li>URI-like prodrome preceding cough by a few days</li>
+          <li>Course ~1 week, cough in bursts/fits</li>
+          <li>Intermittent productive sputum, yellow</li>
+          <li>Hemoptysis absent</li>
+        </ul>
+        <div class="candidate-section-label">Against</div>
+        <ul class="candidate-list">
+          <li>Nocturnal/positional worsening could suggest non-bronchitis contributors</li>
+        </ul>
+        <div class="candidate-section-label">To confirm</div>
+        <ul class="candidate-list">
+          <li>Fever/chills, fatigue severity</li>
+          <li>Vitals (RR, O₂ sat) and lung exam</li>
+        </ul>
+      </div>
+
+      <!-- #2 -->
+      <div class="candidate">
+        <div class="candidate-header">
+          <span class="candidate-rank">#2</span>
+          <span class="candidate-name">Community-acquired pneumonia</span>
+          <div class="candidate-meta">
+            <span class="confidence-badge conf-medium">medium</span>
+            <span class="movement"><span class="glyph-down">↓</span> 1→2</span>
+          </div>
+        </div>
+        <div class="candidate-section-label">Supports</div>
+        <ul class="candidate-list">
+          <li>Persistent productive cough with exertional dyspnea</li>
+          <li>Yellow sputum; possible green once</li>
+        </ul>
+        <div class="candidate-section-label">Against</div>
+        <ul class="candidate-list">
+          <li>No hemoptysis reported</li>
+          <li>No documented fever or systemic symptoms</li>
+          <li>No objective data yet (vitals, imaging)</li>
+        </ul>
+        <div class="candidate-section-label">To confirm</div>
+        <ul class="candidate-list">
+          <li>O₂ sat, respiratory rate, temperature</li>
+          <li>Pleuritic chest pain, rigors</li>
+          <li>Chest imaging</li>
+        </ul>
+      </div>
+
+      <!-- #3 -->
+      <div class="candidate">
+        <div class="candidate-header">
+          <span class="candidate-rank">#3</span>
+          <span class="candidate-name">Post-viral cough</span>
+          <div class="candidate-meta">
+            <span class="confidence-badge conf-low">low</span>
+            <span class="movement"><span class="glyph-same">○</span> 3→3</span>
+          </div>
+        </div>
+        <div class="candidate-section-label">Supports</div>
+        <ul class="candidate-list">
+          <li>URI prodrome consistent with viral trigger</li>
+          <li>Nocturnal/positional cough pattern</li>
+        </ul>
+        <div class="candidate-section-label">Against</div>
+        <ul class="candidate-list">
+          <li>Only ~1 week; typically diagnosed when cough persists &gt;3 weeks</li>
+          <li>Ongoing productive sputum less typical</li>
+        </ul>
+        <div class="candidate-section-label">To confirm</div>
+        <ul class="candidate-list">
+          <li>Duration trajectory over coming weeks</li>
+        </ul>
+      </div>
+
+      <!-- Handoff -->
+      <div class="handoff">
+        <div class="handoff-label">Suggested Next Question</div>
+        <div class="handoff-question">"How has your breathing changed—do you get short of breath walking across a room? And does it hurt anywhere in your chest when you take a deep breath?"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline strip -->
+  <div class="timeline-strip">
+    <div class="timeline-label">Conversation Timeline</div>
+    <div class="timeline-track">
+      <div class="tl-node">
+        <div class="tl-dot solid"></div>
+        <div class="tl-text">Scratchy throat begins</div>
+        <div class="tl-turn">~10 days ago</div>
+      </div>
+      <div class="tl-node">
+        <div class="tl-dot solid"></div>
+        <div class="tl-text">Cough develops</div>
+        <div class="tl-turn">~7 days ago</div>
+      </div>
+      <div class="tl-node">
+        <div class="tl-dot solid"></div>
+        <div class="tl-text">Yellow sputum noted</div>
+        <div class="tl-turn">turn-010</div>
+      </div>
+      <div class="tl-node">
+        <div class="tl-dot solid"></div>
+        <div class="tl-text">Night / lying-down worsening</div>
+        <div class="tl-turn">turn-016</div>
+      </div>
+      <div class="tl-node">
+        <div class="tl-dot open"></div>
+        <div class="tl-text">Fever, breathing impact still unresolved</div>
+        <div class="tl-turn">next</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

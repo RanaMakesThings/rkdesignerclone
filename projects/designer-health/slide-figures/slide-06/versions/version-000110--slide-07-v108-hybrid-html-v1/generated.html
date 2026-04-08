@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide 7 Hybrid HTML v1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
+
+      :root {
+        --bg: #f7f6f2;
+        --panel: #ffffff;
+        --text: #121820;
+        --muted: #576270;
+        --line: #d8dde2;
+        --accent: #3d8b89;
+        --shadow: 0 28px 80px rgba(18, 24, 32, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background:
+          radial-gradient(circle at top center, rgba(61, 139, 137, 0.08), transparent 34%),
+          linear-gradient(180deg, #fcfcfa 0%, var(--bg) 100%);
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Manrope", system-ui, sans-serif;
+        color: var(--text);
+      }
+
+      .slide {
+        width: 1920px;
+        height: 1080px;
+        background: transparent;
+        padding: 84px 120px 76px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .eyebrow {
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 18px;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 1320px;
+        font-family: "Space Grotesk", "Manrope", system-ui, sans-serif;
+        font-size: 72px;
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+        font-weight: 700;
+      }
+
+      .subhead {
+        margin: 22px 0 44px;
+        max-width: 1180px;
+        font-size: 28px;
+        line-height: 1.38;
+        color: var(--muted);
+      }
+
+      .figure-frame {
+        width: 1680px;
+        margin: 0 auto;
+        border-radius: 34px;
+        overflow: hidden;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(216, 221, 226, 0.8);
+      }
+
+      .figure-frame img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .footer-note {
+        margin: 24px auto 0;
+        width: 1680px;
+        font-size: 18px;
+        line-height: 1.4;
+        color: #6a7685;
+      }
+
+      .footer-note strong {
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="slide">
+      <p class="eyebrow">Hybrid HTML</p>
+      <h1>Vox prepares the visit before it starts.</h1>
+      <p class="subhead">
+        The art is frozen as a high-resolution image. The surrounding slide copy
+        stays live, editable, and font-controlled in HTML.
+      </p>
+
+      <section class="figure-frame">
+        <img src="./image-01-4k.png" alt="Frozen Slide 7 figure" />
+      </section>
+
+      <p class="footer-note">
+        <strong>Use case:</strong> safest wrapper if you want to keep the exact
+        figure and just place live slide copy around it.
+      </p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAEM CustomGPT Creation - Slide 03</title>
+    <style>
+      :root {
+        --navy: #0e2841;
+        --teal: #156082;
+        --orange: #e97132;
+        --ink: #133145;
+        --muted: #5f798a;
+        --line: #d8e2e8;
+        --paper: #f4f8fb;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 80% 10%, rgba(21, 96, 130, 0.14), transparent 24%),
+          linear-gradient(180deg, #fbfdff 0%, #eef4f8 100%);
+      }
+
+      body {
+        padding: 70px 84px 58px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .eyebrow {
+        font-size: 23px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--teal);
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 14px 0 14px;
+        max-width: 1320px;
+        font-size: 74px;
+        line-height: 1.03;
+        letter-spacing: -0.04em;
+        color: var(--navy);
+      }
+
+      .subhead {
+        margin: 0;
+        max-width: 1040px;
+        font-size: 31px;
+        line-height: 1.32;
+        color: #476477;
+      }
+
+      .canvas {
+        display: grid;
+        grid-template-columns: 0.78fr 1.22fr;
+        gap: 28px;
+        flex: 1;
+      }
+
+      .ask-card,
+      .answer-card {
+        border-radius: 32px;
+        background: rgba(255, 255, 255, 0.93);
+        border: 1px solid rgba(14, 40, 65, 0.1);
+        box-shadow: 0 22px 54px rgba(14, 40, 65, 0.08);
+      }
+
+      .ask-card {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      .label {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+        padding: 10px 16px;
+        border-radius: 999px;
+        font-size: 19px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .label.ask {
+        background: rgba(233, 113, 50, 0.12);
+        color: #b1541f;
+      }
+
+      .label.answer {
+        background: rgba(21, 96, 130, 0.1);
+        color: var(--teal);
+      }
+
+      .ask-card h2,
+      .answer-card h2 {
+        margin: 0;
+        font-size: 32px;
+        color: var(--navy);
+      }
+
+      .question-box {
+        padding: 26px 28px;
+        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(233, 113, 50, 0.1), rgba(255, 255, 255, 0.9));
+        border: 1px solid rgba(233, 113, 50, 0.18);
+      }
+
+      .question-box p {
+        margin: 0;
+        font-size: 34px;
+        line-height: 1.34;
+        color: var(--navy);
+      }
+
+      .ask-foot {
+        margin-top: auto;
+        padding: 20px 22px;
+        border-radius: 24px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+      }
+
+      .ask-foot strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 23px;
+        color: var(--navy);
+      }
+
+      .ask-foot p {
+        margin: 0;
+        font-size: 21px;
+        line-height: 1.4;
+        color: var(--muted);
+      }
+
+      .answer-card {
+        padding: 30px;
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        gap: 20px;
+      }
+
+      .answer-shell {
+        border-radius: 28px;
+        background: linear-gradient(180deg, #f8fbfd 0%, #ffffff 100%);
+        border: 1px solid var(--line);
+        padding: 24px 26px;
+      }
+
+      .answer-shell p {
+        margin: 0 0 18px;
+        font-size: 27px;
+        line-height: 1.45;
+        color: #27465a;
+      }
+
+      .citations {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .citations span {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(21, 96, 130, 0.08);
+        border: 1px solid rgba(21, 96, 130, 0.12);
+        font-size: 18px;
+        color: var(--teal);
+      }
+
+      .principles {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .principle {
+        padding: 18px 18px 16px;
+        border-radius: 22px;
+        background: var(--white);
+        border: 1px solid var(--line);
+      }
+
+      .principle strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 23px;
+        color: var(--navy);
+      }
+
+      .principle p {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.36;
+        color: var(--muted);
+      }
+
+      .system-strip {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .system-chip {
+        padding: 20px 18px;
+        border-radius: 24px;
+        color: var(--white);
+        background: var(--navy);
+      }
+
+      .system-chip:nth-child(2) {
+        background: var(--teal);
+      }
+
+      .system-chip:nth-child(3) {
+        background: var(--orange);
+      }
+
+      .system-chip span {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        opacity: 0.84;
+      }
+
+      .system-chip strong {
+        font-size: 28px;
+        line-height: 1.18;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        font-size: 22px;
+        color: #4a6879;
+      }
+
+      .footer strong {
+        color: var(--navy);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="eyebrow">What this tool is</div>
+    <h1>A custom GPT can act like a residency policy assistant.</h1>
+    <p class="subhead">
+      The audience should understand the object before any build theory: a user
+      asks a policy question, and the GPT answers from uploaded documents and instructions.
+    </p>
+
+    <section class="canvas">
+      <article class="ask-card">
+        <div class="label ask">Ask</div>
+        <h2>Example policy question</h2>
+        <div class="question-box">
+          <p>
+            "Can a resident use vacation during an elective month, and who has to
+            approve it?"
+          </p>
+        </div>
+
+        <div class="ask-foot">
+          <strong>What the user wants</strong>
+          <p>
+            A fast answer, plain-language guidance, and a pointer back to the real policy source.
+          </p>
+        </div>
+      </article>
+
+      <article class="answer-card">
+        <div class="label answer">Answer</div>
+        <h2>Grounded assistant response</h2>
+
+        <div class="answer-shell">
+          <p>
+            Vacation can be requested during elective time if the request is submitted in
+            advance and approved by program leadership. The handbook also notes that
+            final approval depends on coverage and rotation requirements.
+          </p>
+          <div class="citations">
+            <span>Resident Handbook</span>
+            <span>Vacation Policy</span>
+            <span>Section 4.2</span>
+          </div>
+        </div>
+
+        <div class="principles">
+          <div class="principle">
+            <strong>Specific</strong>
+            <p>Answers the actual question instead of giving generic AI advice.</p>
+          </div>
+          <div class="principle">
+            <strong>Sourced</strong>
+            <p>Points back to the policy file or section used for the answer.</p>
+          </div>
+          <div class="principle">
+            <strong>Bounded</strong>
+            <p>States conditions and avoids pretending when the source is unclear.</p>
+          </div>
+        </div>
+
+        <div class="system-strip">
+          <div class="system-chip">
+            <span>Instructions</span>
+            <strong>Tell it how to behave.</strong>
+          </div>
+          <div class="system-chip">
+            <span>Knowledge files</span>
+            <strong>Give it the policy source material.</strong>
+          </div>
+          <div class="system-chip">
+            <span>ChatGPT</span>
+            <strong>Turns that into a usable Q&amp;A workflow.</strong>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <span>This is the mental model the audience needs before the walkthrough.</span>
+      <strong>Object first. Build second.</strong>
+    </footer>
+  </body>
+</html>

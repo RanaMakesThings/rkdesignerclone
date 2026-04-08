@@ -1,0 +1,111 @@
+{
+  "generatedAt": "2026-03-30T02:25:30.441Z",
+  "slug": "slide-02-wait-times-shortage-banner",
+  "family": "trend_breakout_banner",
+  "pass": true,
+  "summary": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "id": "artifacts.html",
+      "pass": true,
+      "severity": "error",
+      "message": "Rendered HTML artifact exists.",
+      "details": null
+    },
+    {
+      "id": "artifacts.png",
+      "pass": true,
+      "severity": "info",
+      "message": "PNG artifact exists.",
+      "details": null
+    },
+    {
+      "id": "constraints.focal-point",
+      "pass": true,
+      "severity": "error",
+      "message": "Focal point is declared.",
+      "details": null
+    },
+    {
+      "id": "constraints.accent-targets",
+      "pass": true,
+      "severity": "error",
+      "message": "Accent targets are declared.",
+      "details": null
+    },
+    {
+      "id": "copy.locked.Demand is outpacing clinical capacity.",
+      "pass": true,
+      "severity": "error",
+      "message": "Locked copy present: \"Demand is outpacing clinical capacity.\".",
+      "details": null
+    },
+    {
+      "id": "copy.locked.31 days",
+      "pass": true,
+      "severity": "error",
+      "message": "Locked copy present: \"31 days\".",
+      "details": null
+    },
+    {
+      "id": "copy.locked.1 in 4+",
+      "pass": true,
+      "severity": "error",
+      "message": "Locked copy present: \"1 in 4+\".",
+      "details": null
+    },
+    {
+      "id": "copy.forbidden.10.6% delayed care tile",
+      "pass": true,
+      "severity": "error",
+      "message": "Forbidden copy absent: \"10.6% delayed care tile\".",
+      "details": null
+    },
+    {
+      "id": "copy.forbidden.orthopedics on the main slide",
+      "pass": true,
+      "severity": "error",
+      "message": "Forbidden copy absent: \"orthopedics on the main slide\".",
+      "details": null
+    },
+    {
+      "id": "trace.constraints.figureJob",
+      "pass": true,
+      "severity": "error",
+      "message": "Trace covers constraints.figureJob.",
+      "details": null
+    },
+    {
+      "id": "trace.constraints.focalPoint",
+      "pass": true,
+      "severity": "error",
+      "message": "Trace covers constraints.focalPoint.",
+      "details": null
+    },
+    {
+      "id": "trace.constraints.layout",
+      "pass": true,
+      "severity": "error",
+      "message": "Trace covers constraints.layout.",
+      "details": null
+    },
+    {
+      "id": "trace.chrome.title",
+      "pass": true,
+      "severity": "error",
+      "message": "Trace covers chrome.title.",
+      "details": null
+    },
+    {
+      "id": "trace.copyPolicy.locked",
+      "pass": true,
+      "severity": "error",
+      "message": "Trace covers copyPolicy.locked.",
+      "details": null
+    }
+  ]
+}

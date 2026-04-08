@@ -1,0 +1,110 @@
+# Signal Report Artifact Spec — Deep Build Document
+
+---
+
+## 1. Locked Direction
+
+One unified clinical brief rendered as a single full-width card. The left-right split from the screenshot collapses into a vertical document with clearly zoned internal sections. The top two-thirds is the structured extraction (what we know). The bottom third is the reasoning layer (working considerations). This is a document you'd print and hand to someone, not a dashboard you'd monitor. The clinician reads top-to-bottom, not left-to-right.
+
+The hierarchy is:
+
+1. **Header stripe** — patient context, case label, session metadata
+2. **Extracted findings** — the structured left-side content, reorganized into tighter categorical groups
+3. **Working considerations** — the differential candidates, subordinated visually but fully detailed
+4. **Open questions** — a single terminal block that makes the artifact feel unfinished on purpose, because it is
+
+The whole thing lives inside one `<div>` with a single outer border, a single background, and no card-inside-card nesting. Internal zones are separated by thin horizontal rules or subtle background tinting — never by separate card shadows.
+
+---
+
+## 2. What Survives From The Screenshot
+
+**Left-side (extraction) — almost everything survives:**
+
+- The row-based anatomy: label, optional value, evidence pointer
+- The state pills (`present`, `absent`)
+- The categorical grouping (`SOCIAL CONTEXT`, `SYMPTOMS`)
+- The idea that each row is a discrete, individually sourced fact
+- The evidence turn-pointers (`Evidence: turn-012`) — these are genuinely useful and differentiate the product
+
+**Right-side (reasoning) — the structure survives, the density survives:**
+
+- Ranked candidate list with `#1`, `#2`, `#3`
+- Confidence level chip (`high`, `medium`, `low`)
+- The tripartite breakdown: Supports / Against / Unknowns
+- Bullet-level reasoning inside each section
+- The movement indicator concept (something changed or didn't between turns)
+
+**Overall:**
+
+- The density philosophy. This is not a sparse marketing mockup. It should feel like a real clinical document with real information. The screenshot's density is a strength.
+- The black-and-white palette with minimal color. Color is reserved for signal, not decoration.
+
+---
+
+## 3. What Gets Softened Or Deleted
+
+**Structural changes:**
+
+- The two-column split-screen layout is deleted. Vertical stack replaces it.
+- The separate card shadows on left and right are deleted. One container.
+- The `Differential + Next Question + Trace` title is too long and too ops-flavored. Replaced with `Working Considerations`.
+- The loading progress bar visible at the top of the right card is deleted from the static slide version (it implies a dashboard polling state).
+
+**Row-level changes:**
+
+- The bordered rows on the left side get their full rectangular borders softened. Instead of each row being a fully enclosed card with rounded corners, rows become separated by a single bottom border — more like a table or ledger than a stack of cards. This reduces visual noise dramatically when you have 10+ rows.
+- The `Evidence: turn-XXX` lines stay but get pushed to a lighter visual weight. They're still present (this is a key product differentiator — provenance) but they should feel like footnote references, not primary content.
+
+**Pill changes:**
+
+- The `present` / `absent` pills stay but get refined. The current screenshot uses identical black pills for both `present` and `absent`, which forces the reader to actually read the word inside. The new version uses differentiated styling (see Visual Language section below).
+
+**Movement chips:**
+
+- `SAME 1→1` and `SAME 2→2` are confusing in the current form. The arrow notation implies a rank trajectory across turns, but it reads as cryptic shorthand. This gets replaced with a simpler, more legible indicator (detailed below).
+
+**Right-side prose:**
+
+- Some of the bullet text in Supports/Against/Unknowns is quite long ("Nocturnal/positional worsening could suggest non-bronchitis contributors"). These should be tightened to single-line fragments. The artifact is a brief, not a narrative. Max ~80 characters per bullet.
+
+---
+
+## 4. Detailed Artifact Spec
+
+### 4a. Overall Frame
+
+- **Container:** Single `div`, full width of the slide's content area (roughly 960–1040px in a 16:9 deck at 1440px canvas). Not inset like a card floating in space — it should feel like it occupies the slide.
+- **Background:** White (`#FFFFFF`) or very faint warm gray (`#FAFAF8`).
+- **Border:** 1px solid `#E0E0E0`, border-radius 12px. Single shadow: `0 1px 3px rgba(0,0,0,0.06)`. Subtle. This is a document, not a modal.
+- **Internal padding:** 32px on all sides.
+- **Section separation:** Horizontal rules (`1px solid #EBEBEB`) between major zones, with 24px vertical spacing above and below each rule.
+
+### 4b. Section Order (top to bottom)
+
+1. **Document header**
+2. **Horizontal rule**
+3. **Social context row group** (1–2 rows)
+4. **Symptoms row group** (5–7 rows)
+5. **Key negatives row group** (2–3 rows)
+6. **Timeline row group** (2–3 rows, or one integrated mini-timeline)
+7. **Horizontal rule (heavier — 2px or slightly darker)**
+8. **Working Considerations header**
+9. **Candidate #1 block**
+10. **Candidate #2 block**
+11. **Candidate #3 block** (if space)
+12. **Horizontal rule**
+13. **Open Questions / Suggested Next Steps block**
+
+### 4c. Document Header
+
+- **Left-aligned title:** `Clinical Signal Brief` in 13px medium-weight all-caps tracking (`letter-spacing: 0.08em`), color `#888`.
+- **Below it:** Case descriptor in 20px semibold, e.g., `Persistent cough — ~1 week, productive, worsening nocturnally`
+- **Right-aligned metadata (same vertical band):** `Session: 16 turns · Last updated: 2 min ago` in 12px regular, color `#999`. This is the kind of thing that signals liveness without a loading bar.
+
+### 4d. Left-Side Row Group Anatomy (Extraction Zones)
+
+Each category (Social Context, Symptoms, Key Negatives, Timeline) follows the same pattern:
+
+**Category header:**
+- All-caps, 11px, `letter-spacing: 0.1em`, color `#999`, `font-weight:

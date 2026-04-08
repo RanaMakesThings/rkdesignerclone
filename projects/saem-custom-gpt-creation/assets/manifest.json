@@ -1,0 +1,38 @@
+{
+  "manifestVersion": 1,
+  "projectId": "saem-custom-gpt-creation",
+  "kind": "deck-assets",
+  "assets": [
+    {
+      "assetId": "asset-000001",
+      "id": "saem-annual-meeting-template",
+      "label": "SAEM Annual Meeting PowerPoint Template",
+      "status": "selected",
+      "kind": "presentation-template",
+      "role": "conference-template",
+      "summary": "Canonical SAEM annual meeting PowerPoint template for the CustomGPT Creation workshop deck.",
+      "previewPath": null,
+      "files": [
+        {
+          "label": "PowerPoint Template",
+          "path": "projects/saem-custom-gpt-creation/assets/powerpoint-template/saem-annual-meeting-powerpoint-template.pptx"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Template Folder",
+          "path": "projects/saem-custom-gpt-creation/assets/powerpoint-template"
+        }
+      ],
+      "tags": [
+        "saem",
+        "conference",
+        "powerpoint",
+        "template"
+      ],
+      "notes": [
+        "Use this as the baseline template for workshop slide exports and final deck assembly."
+      ]
+    }
+  ]
+}

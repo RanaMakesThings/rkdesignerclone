@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designer.health/schemas/figure-move-ideator-output.schema.json",
+  "title": "Figure Move Ideator Output",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "required": [
+      "candidate_id",
+      "move_name",
+      "one_sentence_logic",
+      "what_makes_it_smart",
+      "viewer_sees_first",
+      "fits_slide_because",
+      "failure_mode",
+      "predicted_scores"
+    ],
+    "properties": {
+      "candidate_id": {
+        "type": "string"
+      },
+      "move_name": {
+        "type": "string"
+      },
+      "one_sentence_logic": {
+        "type": "string"
+      },
+      "what_makes_it_smart": {
+        "type": "string"
+      },
+      "viewer_sees_first": {
+        "type": "string"
+      },
+      "fits_slide_because": {
+        "type": "string"
+      },
+      "failure_mode": {
+        "type": "string"
+      },
+      "predicted_scores": {
+        "type": "object",
+        "required": [
+          "job_fidelity",
+          "clarity",
+          "distinctness",
+          "collapse_resistance",
+          "buildability"
+        ],
+        "properties": {
+          "job_fidelity": {
+            "type": "number"
+          },
+          "clarity": {
+            "type": "number"
+          },
+          "distinctness": {
+            "type": "number"
+          },
+          "collapse_resistance": {
+            "type": "number"
+          },
+          "buildability": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+Generate a self-contained HTML document for one premium 16:9 investor pitch
+deck slide. Use inline CSS only. Do not use external scripts. If you use SVG,
+keep it inline inside the HTML.
+
+Use this exact on-slide copy:
+
+Header:
+Start where throughput proof is fastest.
+
+Subheader:
+The best first market is any setting with visible visit pressure, simple buying, and low deployment friction.
+
+Main figure:
+Build one dominant beachhead profile hero card in the center-left of the slide.
+
+The hero card should be labeled:
+High-throughput groups with simple deployment
+
+Optional small support line:
+A profile, not a specialty
+
+Attach these three qualifying conditions clearly to the hero card:
+- visible visit pressure
+- simple buying
+- low deployment friction
+
+Show a few quiet example settings only as supporting context, not as the
+thesis. These can appear as a faint row or faint secondary labels:
+- Primary care
+- GI / gastroenterology
+- Orthopedics
+- Urgent care
+- Multi-site specialty groups
+
+On the right side, add one compact proof panel titled:
+What the first pilot must prove
+
+Include these rows:
+- patient completion before visit
+- clinician verification time
+- re-asking reduction in the room
+- visit throughput or schedule lift
+
+Visual rules:
+- white background
+- grayscale base
+- one restrained blue accent
+- rounded geometry
+- strong whitespace
+- clean premium typography
+- no fake product UI
+- no funnels
+- no filters
+- no market map
+- no consulting score grid
+
+Overall feel:
+calm, strategic, premium, operational, and obvious at a glance.
+
+Return HTML only.

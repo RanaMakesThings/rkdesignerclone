@@ -1,0 +1,33 @@
+{
+  "provider": "claude",
+  "status": "partial",
+  "summary": "The candidate has successfully replaced the blank template stub with substantive content — the locked header, subheader, left hero ask block ($1.25M, Post-money SAFE, 2 hires, 3 pilots), right stacked Build/Deploy/Validate milestone cards, and a use-of-funds ribbon (45% Team build, 25% Pilot delivery, 20% Product/data readiness, 10% Operating buffer) are all visibly present and structurally correct. However, several execution issues prevent a full 'applied' rating: (1) the master card is overflowing its container — the bottom ribbon and left stat block are clipping outside the card boundary and overlapping the footer zone; (2) the Designer Health logo in the footer is broken/missing (renders as a blank box instead of the wordmark); (3) the subheader is partially obscured by the oversized header text wrapping into it; (4) the left column stat rows ('2 hires', '3 pilots', '18–20 months') are partially cut off or overlapping with the ribbon layer; (5) the overall card height exceeds the slide canvas, pushing content into the footer rule area. The structural logic and content are correct but the layout needs height/overflow correction and the footer logo needs to be restored.",
+  "evidence": [
+    "Header text 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' is present and correct but wraps into the subheader zone, partially obscuring 'Post-money SAFE • ~18–20 months of runway'",
+    "Left hero block shows '$1.25M', 'Post-money SAFE', and descriptive copy — correctly surfacing the ask first",
+    "Right column shows three stacked milestone cards labeled 01 Build, 02 Deploy, 03 Validate with outcome-first language — matches the brief",
+    "Use-of-funds ribbon is present with four segments (45% Team build, 25% Pilot delivery, 20% Product/data readiness, 10% Operating buffer) — matches the restrained ribbon spec",
+    "Master card container is visibly overflowing: the ribbon and left stat rows clip below the card boundary and overlap the footer rule area",
+    "Footer logo renders as a broken/blank image box rather than the Designer Health wordmark",
+    "Left stat block ('2 hires', '3 pilots') text is partially cut off where the ribbon overlaps",
+    "The 'USE OF FUNDS' label and ribbon text overlap with the left column stat copy, creating a legibility collision"
+  ],
+  "nextPrompt": "Fix the layout overflow: reduce the master card's internal padding and font sizes so the entire card — including the use-of-funds ribbon — fits within the slide canvas above the footer rule. Restore the Designer Health footer logo (use the same SVG/PNG path as the shell). Ensure the subheader 'Post-money SAFE • ~18–20 months of runway' is fully visible below the header without overlap. The left stat block (2 hires, 3 pilots, 18–20 months) must not be clipped by the ribbon. Keep all content, structure, and copy unchanged — this is a sizing and overflow fix only.",
+  "needsHuman": false,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate has successfully replaced the blank template stub with substantive content — the locked header, subheader, left hero ask block ($1.25M, Post-money SAFE, 2 hires, 3 pilots), right stacked Build/Deploy/Validate milestone cards, and a use-of-funds ribbon (45% Team build, 25% Pilot delivery, 20% Product/data readiness, 10% Operating buffer) are all visibly present and structurally correct. However, several execution issues prevent a full 'applied' rating: (1) the master card is overflowing its container — the bottom ribbon and left stat block are clipping outside the card boundary and overlapping the footer zone; (2) the Designer Health logo in the footer is broken/missing (renders as a blank box instead of the wordmark); (3) the subheader is partially obscured by the oversized header text wrapping into it; (4) the left column stat rows ('2 hires', '3 pilots', '18–20 months') are partially cut off or overlapping with the ribbon layer; (5) the overall card height exceeds the slide canvas, pushing content into the footer rule area. The structural logic and content are correct but the layout needs height/overflow correction and the footer logo needs to be restored.",
+    "evidence": [
+      "Header text 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' is present and correct but wraps into the subheader zone, partially obscuring 'Post-money SAFE • ~18–20 months of runway'",
+      "Left hero block shows '$1.25M', 'Post-money SAFE', and descriptive copy — correctly surfacing the ask first",
+      "Right column shows three stacked milestone cards labeled 01 Build, 02 Deploy, 03 Validate with outcome-first language — matches the brief",
+      "Use-of-funds ribbon is present with four segments (45% Team build, 25% Pilot delivery, 20% Product/data readiness, 10% Operating buffer) — matches the restrained ribbon spec",
+      "Master card container is visibly overflowing: the ribbon and left stat rows clip below the card boundary and overlap the footer rule area",
+      "Footer logo renders as a broken/blank image box rather than the Designer Health wordmark",
+      "Left stat block ('2 hires', '3 pilots') text is partially cut off where the ribbon overlaps",
+      "The 'USE OF FUNDS' label and ribbon text overlap with the left column stat copy, creating a legibility collision"
+    ],
+    "nextPrompt": "Fix the layout overflow: reduce the master card's internal padding and font sizes so the entire card — including the use-of-funds ribbon — fits within the slide canvas above the footer rule. Restore the Designer Health footer logo (use the same SVG/PNG path as the shell). Ensure the subheader 'Post-money SAFE • ~18–20 months of runway' is fully visible below the header without overlap. The left stat block (2 hires, 3 pilots, 18–20 months) must not be clipped by the ribbon. Keep all content, structure, and copy unchanged — this is a sizing and overflow fix only.",
+    "needsHuman": false
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "version-000056",
+  "slideId": "slide-03",
+  "slideDir": "projects/designer-health/slide-figures/slide-03",
+  "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000056--03-single-visit-scale",
+  "label": "03-single-visit-scale",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:05:30.283Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-03/variants/03-single-visit-scale"
+  ]
+}

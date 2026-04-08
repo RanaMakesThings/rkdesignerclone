@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designer.health/schemas/figure-brief-output.schema.json",
+  "title": "Figure Brief Output",
+  "type": "object",
+  "required": [
+    "figure_burden_summary",
+    "one_sentence_figure_logic",
+    "viewer_should_see_first",
+    "what_must_be_shown_spatially",
+    "what_text_should_keep_carrying",
+    "what_should_remain_sparse",
+    "what_should_be_dense",
+    "acceptable_abstraction_level",
+    "failure_risks_if_figure_is_wrong"
+  ],
+  "properties": {
+    "figure_burden_summary": {
+      "type": "string"
+    },
+    "one_sentence_figure_logic": {
+      "type": "string"
+    },
+    "viewer_should_see_first": {
+      "type": "string"
+    },
+    "what_must_be_shown_spatially": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "what_text_should_keep_carrying": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "what_should_remain_sparse": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "what_should_be_dense": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "acceptable_abstraction_level": {
+      "type": "string"
+    },
+    "failure_risks_if_figure_is_wrong": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

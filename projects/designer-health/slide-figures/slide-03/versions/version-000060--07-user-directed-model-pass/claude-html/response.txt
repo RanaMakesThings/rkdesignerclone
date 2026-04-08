@@ -1,0 +1,215 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vox – More Efficient Visits</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: #f0ede8;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide {
+    width: 1920px;
+    height: 1080px;
+    background: #faf9f7;
+    display: flex;
+    flex-direction: column;
+    padding: 64px 100px 56px 100px;
+    position: relative;
+  }
+
+  /* ── TOP SECTION ── */
+  .top-section {
+    flex-shrink: 0;
+  }
+
+  .headline {
+    font-size: 54px;
+    font-weight: 900;
+    color: #0d2f2a;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+  }
+
+  .subheader {
+    font-size: 20px;
+    font-weight: 500;
+    color: #8a9490;
+    margin-top: 8px;
+    letter-spacing: 0.2px;
+  }
+
+  /* Anatomy bar */
+  .anatomy-wrapper {
+    margin-top: 32px;
+  }
+
+  .anatomy-bar {
+    display: flex;
+    height: 64px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .seg-story {
+    background: #5a8db5;
+    flex: 0 0 42%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.3px;
+  }
+
+  .seg-exam {
+    background: #b0bec9;
+    flex: 0 0 28%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.3px;
+  }
+
+  .seg-counseling {
+    background: #9aaab5;
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.3px;
+  }
+
+  /* Bracket annotation */
+  .bracket-row {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .bracket-area {
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 2px;
+  }
+
+  .bracket-line {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .bracket-svg {
+    width: 100%;
+    height: 18px;
+  }
+
+  .bracket-text {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a7090;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+  }
+
+  .bracket-sub {
+    font-size: 12px;
+    font-weight: 500;
+    color: #8a9490;
+    line-height: 1.5;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: #e0ddd8;
+    margin: 32px 0 28px 0;
+    flex-shrink: 0;
+  }
+
+  /* ── BOTTOM SECTION ── */
+  .bottom-section {
+    display: flex;
+    flex: 1;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  /* ── BOTTOM LEFT ── */
+  .bottom-left {
+    flex: 0 0 38%;
+    padding-right: 60px;
+    border-right: 1px solid #e0ddd8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #aab8b4;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0d2f2a;
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+
+  .visit-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    gap: 14px;
+  }
+
+  .visit-row-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #8a9490;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 110px;
+    flex-shrink: 0;
+    line-height: 1.3;
+  }
+
+  .mini-bar {
+    display: flex;
+    height: 46px;
+    border-radius: 7px;
+    overflow: visible;
+    flex: 1;
+    align-items: stretch;

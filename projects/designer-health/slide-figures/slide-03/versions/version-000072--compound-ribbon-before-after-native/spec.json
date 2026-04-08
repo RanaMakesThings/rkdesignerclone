@@ -1,0 +1,212 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-03-compound-ribbon-before-after",
+    "family": "compound_ribbon_before_after",
+    "deckId": "vox-pd-v1",
+    "theme": "vox",
+    "mode": "full-slide",
+    "sourcePath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-03-compound-ribbon-before-after.json"
+  },
+  "chrome": {
+    "title": "More efficient visits will increase supply.",
+    "subtitle": "Small per-visit gains compound.",
+    "chips": [],
+    "footnote": ""
+  },
+  "constraints": {
+    "figureJob": "Show one highlighted visit segment, then make the compounding-capacity effect obvious through a clean before-versus-after day view.",
+    "focalPoint": "The highlighted story reconstruction segment in the hero bar and the final new visit block.",
+    "layout": "Large hero bar with ruler and bracketed callout on top; original visit row above a transition label; shortened visit row plus a new visit block on the bottom.",
+    "big": [
+      "Hero visit bar",
+      "Highlighted story reconstruction segment",
+      "New visit block"
+    ],
+    "quiet": [
+      "Minute ruler",
+      "Repeated mini-visit rows",
+      "Transition rules"
+    ],
+    "accentTargets": [
+      "Story reconstruction segment",
+      "New visit block"
+    ],
+    "forbidden": [
+      "workflow diagram",
+      "fake precision",
+      "icons",
+      "decorative clutter"
+    ],
+    "semanticGuards": [
+      "no_ui"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Story reconstruction",
+      "Decisions + counseling",
+      "Physical exam",
+      "Most variable minutes of the visit",
+      "Best target for upstream prep without losing quality",
+      "The part AI can help most",
+      "Efficiency repeated across visits creates capacity",
+      "New visit"
+    ],
+    "preferred": [
+      "Compound ribbon",
+      "History wedge",
+      "Small gains compound"
+    ],
+    "optional": [],
+    "forbidden": [
+      "20-minute visit",
+      "equation"
+    ]
+  },
+  "media": {
+    "strategy": "native",
+    "provider": "pexels",
+    "slots": [],
+    "selection": []
+  },
+  "body": {
+    "hero": {
+      "rulerTicks": [
+        0,
+        5,
+        10,
+        15,
+        20
+      ],
+      "segments": [
+        {
+          "label": "Story reconstruction",
+          "width": 50,
+          "role": "focus"
+        },
+        {
+          "label": "Physical exam",
+          "width": 20,
+          "role": "quiet"
+        },
+        {
+          "label": "Decisions + counseling",
+          "width": 30,
+          "role": "neutral"
+        }
+      ],
+      "callout": {
+        "lines": [
+          "Most variable minutes of the visit",
+          "Best target for upstream prep without losing quality",
+          "The part AI can help most"
+        ]
+      }
+    },
+    "beforeRow": {
+      "count": 5,
+      "segments": [
+        {
+          "label": "",
+          "width": 50,
+          "role": "focus"
+        },
+        {
+          "label": "",
+          "width": 20,
+          "role": "quiet"
+        },
+        {
+          "label": "",
+          "width": 30,
+          "role": "neutral"
+        }
+      ]
+    },
+    "transitionLabel": "Efficiency repeated across visits creates capacity",
+    "afterRow": {
+      "count": 5,
+      "segments": [
+        {
+          "label": "",
+          "width": 20,
+          "role": "focus"
+        },
+        {
+          "label": "",
+          "width": 15,
+          "role": "quiet"
+        },
+        {
+          "label": "",
+          "width": 65,
+          "role": "neutral"
+        }
+      ],
+      "newVisitLabel": "New visit"
+    }
+  },
+  "trace": [
+    {
+      "excerpt": "Show one highlighted visit segment, then make the compounding-capacity effect obvious through a clean before-versus-after day view.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Anchor the figure around one recoverable wedge and its day-level payoff."
+    },
+    {
+      "excerpt": "More efficient visits will increase supply.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Restore the official slide header when promoting the figure into a full slide."
+    },
+    {
+      "excerpt": "Small per-visit gains compound.",
+      "targetPath": "chrome.subtitle",
+      "ruleType": "chrome",
+      "note": "Use the compounding point as the slide subheader and drop the chip treatment."
+    },
+    {
+      "excerpt": "The highlighted story reconstruction segment in the hero bar and the final new visit block should carry the figure.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "Keep the top focus segment and lower-right payoff as the visual protagonists."
+    },
+    {
+      "excerpt": "One large visit bar at the top with a minute ruler, a bracketed callout under the highlighted story segment, and a simple before-versus-after day view beneath it.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Lock the exact two-row compound ribbon composition."
+    },
+    {
+      "excerpt": "Story reconstruction should dominate the bar, physical exam should be the small middle slice, and decisions + counseling should take the remaining width.",
+      "targetPath": "body.hero.segments",
+      "ruleType": "body",
+      "note": "Use the revised label order and segment weights rather than the old equal-thirds split."
+    },
+    {
+      "excerpt": "Most variable minutes of the visit; Best target for upstream prep without losing quality; The part AI can help most.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Preserve the exact stacked callout copy from the liked version."
+    },
+    {
+      "excerpt": "A first row of original visits, then a transition label, then shortened visits plus a new visit block.",
+      "targetPath": "body.beforeRow",
+      "ruleType": "body",
+      "note": "Encode the before row explicitly rather than relying on guide outlines."
+    },
+    {
+      "excerpt": "Efficiency repeated across visits creates capacity.",
+      "targetPath": "body.transitionLabel",
+      "ruleType": "chrome",
+      "note": "Use the transition sentence exactly as shown in the reference comp."
+    },
+    {
+      "excerpt": "The last block should read New visit and serve as the payoff object.",
+      "targetPath": "body.afterRow.newVisitLabel",
+      "ruleType": "body",
+      "note": "Keep the lower-right payoff simple and direct."
+    }
+  ]
+}

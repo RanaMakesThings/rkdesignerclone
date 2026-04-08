@@ -1,0 +1,25 @@
+{
+  "id": "version-000179",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000179--slide-06-fresh-loom-tension-openai-bold-contrast-graphic-000137",
+  "label": "slide-06-fresh-loom-tension-openai-bold-contrast-graphic-000137",
+  "status": "archived",
+  "createdAt": "2026-04-03T04:34:50.052Z",
+  "sourceKind": "presentation-image-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/presentation-images/vox-slide6-fresh-loom-tension-2026-04-03/openai/version-04--bold-contrast",
+    "output/figures/presentation-images/vox-slide6-fresh-loom-tension-2026-04-03/openai/version-04--bold-contrast/image-01.png"
+  ],
+  "runId": "graphic-batch-000028",
+  "attempt": 4,
+  "sourceGraphicId": "graphic-000137",
+  "sourceBatchId": "graphic-batch-000028",
+  "sourceBatchSlug": "vox-slide6-fresh-loom-tension-2026-04-03",
+  "sourceProvider": "openai",
+  "sourceVariantId": "v02-bold",
+  "sourceVariantLabel": "Bold Contrast",
+  "sourcePath": "output/figures/presentation-images/vox-slide6-fresh-loom-tension-2026-04-03/openai/version-04--bold-contrast",
+  "sourceImagePath": "output/figures/presentation-images/vox-slide6-fresh-loom-tension-2026-04-03/openai/version-04--bold-contrast/image-01.png"
+}

@@ -1,0 +1,27 @@
+You are reviewing whether a pitch-deck micro-pass introduced any visible regression.
+
+Image A is the baseline.
+Image B is the candidate after one targeted change.
+Image C is optional reference context for the intended family.
+
+Focus on regression, not general taste.
+
+Required checks:
+- did any directional marker or arrowhead disappear or become ambiguous?
+- is any text clipped, cropped, or partially missing?
+- is any stray rendering artifact visible, including leaked text such as `xml`?
+- did the composition become top-heavy, under-filled, or fragment-like?
+- did any attachment, notch, connector, or join become awkward or inherited-looking?
+
+Requested change for context:
+<fill in requested delta>
+
+Return sections:
+
+## Verdict
+
+## Visible blockers
+
+## Safe preserves
+
+## Best next move

@@ -1,0 +1,14 @@
+{
+  "id": "version-000041",
+  "slideId": "slide-10",
+  "slideDir": "projects/designer-health/slide-figures/slide-10",
+  "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000041--capacity-waterfall-v1",
+  "label": "capacity-waterfall-v1",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.908Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-10/capacity-waterfall-v1"
+  ]
+}

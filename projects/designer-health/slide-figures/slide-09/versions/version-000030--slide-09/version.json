@@ -1,0 +1,23 @@
+{
+  "id": "version-000030",
+  "slideId": "slide-09",
+  "slideDir": "projects/designer-health/slide-figures/slide-09",
+  "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09",
+  "label": "slide-09",
+  "status": "current",
+  "createdAt": "2026-03-31T17:04:29.654Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-09/assessment-synthesis.md",
+    "projects/designer-health/slide-figures/slide-09/codex-review.md",
+    "projects/designer-health/slide-figures/slide-09/figure.html",
+    "projects/designer-health/slide-figures/slide-09/figure.png",
+    "projects/designer-health/slide-figures/slide-09/figure.svg",
+    "projects/designer-health/slide-figures/slide-09/gemini-html",
+    "projects/designer-health/slide-figures/slide-09/gemini-image",
+    "projects/designer-health/slide-figures/slide-09/hollow-node",
+    "projects/designer-health/slide-figures/slide-09/meta.json",
+    "projects/designer-health/slide-figures/slide-09/spec.json"
+  ]
+}

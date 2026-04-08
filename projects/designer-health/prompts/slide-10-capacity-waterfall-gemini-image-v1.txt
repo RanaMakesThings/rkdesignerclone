@@ -1,0 +1,41 @@
+You are designing ONE investor-deck slide figure.
+
+This is Slide 10 in the Designer Health deck.
+
+Header:
+Recovered visit time creates real capacity.
+
+Subheader:
+When recovered minutes become completed visits, the impact is meaningful.
+
+Strategic job:
+Show the operating-leverage translation from recovered time into annual
+contribution value.
+
+Use these exact anchors:
+- +1 visit / provider / day
+- 220 clinic days
+- $125 / visit
+- 40% contribution margin
+- $11,000 / year
+- ~$917 / month break-even spend / provider
+
+Direction:
+- use a simplified step or waterfall logic
+- make the progression into `$11,000 / year` feel clear and premium
+- keep the break-even number as a quieter support badge
+- any range-check view must be tiny and secondary
+
+Style:
+- premium investor-deck feel
+- restrained green accent
+- simple visual flow
+- not technical or dashboard-like
+
+Do not:
+- create a dense finance chart
+- use many labels
+- use spreadsheet grids
+- turn this into analytics software
+
+Produce ONE strong static slide concept.

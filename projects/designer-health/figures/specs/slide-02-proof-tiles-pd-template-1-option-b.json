@@ -1,0 +1,107 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-proof-tiles-pd-template-1-option-b",
+    "family": "proof_tiles",
+    "deckId": "pd-template-1",
+    "theme": "pd-template-1",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Demand is outpacing clinical capacity.",
+    "subtitle": "",
+    "chips": [],
+    "footnote": "[1] AMN/Merritt Hawkins physician appointment wait-time survey. [2] CDC/NCHS delayed-care measure."
+  },
+  "constraints": {
+    "figureJob": "State the system problem with two proof points, using subtle operational cues instead of decorative blocks.",
+    "focalPoint": "The two metrics and their mini-graphics.",
+    "layout": "Title top left, two proof tiles centered, faint schedule motif behind, each tile with a purposeful monochrome cue above the number.",
+    "big": [
+      "The two metrics",
+      "The tile bodies"
+    ],
+    "quiet": [
+      "Tile eyebrows",
+      "The footnote"
+    ],
+    "accentTargets": [
+      "none"
+    ],
+    "forbidden": [
+      "purple block"
+    ],
+    "semanticGuards": []
+  },
+  "copyPolicy": {
+    "locked": [
+      "Demand is outpacing clinical capacity.",
+      "~1 month",
+      "10.6%"
+    ],
+    "preferred": [],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "motif": "calendar",
+    "tiles": [
+      {
+        "eyebrow": "Access",
+        "metric": "~1 month",
+        "detail": "Average wait for a new doctor appointment",
+        "kicker": "Up 19% in three years [1]",
+        "graphic": {
+          "kind": "booked-out"
+        }
+      },
+      {
+        "eyebrow": "Deferred care",
+        "metric": "10.6%",
+        "detail": "Adults delayed or did not get care because no appointment was available when needed [2]",
+        "kicker": "",
+        "graphic": {
+          "kind": "broken-care-path"
+        }
+      }
+    ]
+  },
+  "trace": [
+    {
+      "excerpt": "Demand is outpacing clinical capacity.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the slide header directly."
+    },
+    {
+      "excerpt": "State the system problem clearly: the issue is constrained clinical capacity, not just healthcare is hard.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Keep the tile pair focused on the system constraint."
+    },
+    {
+      "excerpt": "Two large proof tiles showing worsening access and delayed care.",
+      "targetPath": "body.tiles",
+      "ruleType": "body",
+      "note": "Use the proof-tiles family with alternate mini-graphics."
+    },
+    {
+      "excerpt": "Main numbers should dominate visually.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "The mini-graphics support the numbers rather than compete with them."
+    },
+    {
+      "excerpt": "Keep it very clean.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Keep the operational cues monochrome and compact."
+    },
+    {
+      "excerpt": "These are the first true external-fact citations in the deck.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Retain the cited proof copy."
+    }
+  ]
+}

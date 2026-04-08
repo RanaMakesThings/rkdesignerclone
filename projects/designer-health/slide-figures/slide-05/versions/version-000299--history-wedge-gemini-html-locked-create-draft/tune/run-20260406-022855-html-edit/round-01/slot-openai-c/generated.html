@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, initial-scale=1" />
+    <title>Designer Deck Template v1 — slide-05</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --ink: #141821;
+        --muted: #6f7785;
+        --muted-2: #8e97a7;
+        --line: rgba(0, 0, 0, 0.9);
+        --soft-line: rgba(20, 24, 33, 0.12);
+        --soft-line-2: rgba(20, 24, 33, 0.08);
+        --blue: #4f89c6;
+        --blue-deep: #3e76b2;
+        --exam: #d6dde6;
+        --plan: #aab2bd;
+        --teal: #3f8f97;
+        --shadow: 0 10px 26px rgba(45, 83, 126, 0.12), 0 2px 6px rgba(20, 24, 33, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+      }
+
+      .slide {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        background: #ffffff;
+      }
+
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 48px;
+        width: 1360px;
+        margin: 0;
+        font-size: 64px;
+        line-height: 0.98;
+        font-weight: 700;
+        letter-spacing: -0.055em;
+        color: #111318;
+      }
+
+      .visit-wrap {
+        position: absolute;
+        left: 218px;
+        top: 248px;
+        width: 1478px;
+        height: 190px;
+      }
+
+      .visit-bar {
+        position: absolute;
+        left: 0;
+        top: 34px;
+        width: 1478px;
+        height: 92px;
+        border-radius: 16px;
+        overflow: visible;
+      }
+
+      .seg {
+        position: absolute;
+        top: 0;
+        height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+      }
+
+      .seg.history-base {
+        left: 0;
+        width: 740px;
+        background: rgba(79, 137, 198, 0.18);
+        color: rgba(20, 24, 33, 0.18);
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+      }
+
+      .seg.exam {
+        left: 740px;
+        width: 298px;
+        background: var(--exam);
+        color: #283243;
+      }
+
+      .seg.plan {
+        left: 1038px;
+        width: 440px;
+        background: var(--plan);
+        color: #ffffff;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+      }
+
+      .history-lift {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 740px;
+        height: 108px;
+        border-radius: 16px;
+        background: linear-gradient(180deg, var(--blue) 0%, var(--blue-deep) 100%);
+        box-shadow: var(--shadow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 35px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -0.035em;
+        transform: translateY(-8px);
+        z-index: 4;
+      }
+
+      .history-support {
+        position: absolute;
+        left: 24px;
+        top: 126px;
+        font-size: 20px;
+        line-height: 1.25;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: var(--muted);
+        z-index: 5;
+      }
+
+      .history-support .dot {
+        color: var(--teal);
+        padding-right: 8px;
+        font-weight: 700;
+      }
+
+      .proof-field {
+        position: absolute;
+        left: 1028px;
+        top: 492px;
+        width: 670px;
+        height: 320px;
+      }
+
+      .proof-row {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding-left: 34px;
+      }
+
+      .proof-row::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 12px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: rgba(63, 143, 151, 0.18);
+        border: 2px solid rgba(63, 143, 151, 0.75);
+      }
+
+      .proof-row::after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 32px;
+        width: 2px;
+        height: calc(100% + 14px);
+        background: linear-gradient(180deg, rgba(20, 24, 33, 0.14) 0%, rgba(20, 24, 33, 0.05) 100%);
+      }
+
+      .proof-row.last::after {
+        display: none;
+      }
+
+      .proof-title {
+        margin: 0 0 10px 0;
+        font-size: 33px;
+        line-height: 1.02;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        color: #1e2430;
+      }
+
+      .proof-copy {
+        margin: 0;
+        width: 600px;
+        font-size: 23px;
+        line-height: 1.34;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        color: var(--muted);
+      }
+
+      .reason-1 {
+        top: 0;
+        height: 94px;
+      }
+
+      .reason-2 {
+        top: 118px;
+        height: 96px;
+      }
+
+      .reason-3 {
+        top: 238px;
+        height: 74px;
+      }
+
+      .open-guides {
+        position: absolute;
+        left: 240px;
+        top: 520px;
+        width: 680px;
+        height: 248px;
+        pointer-events: none;
+      }
+
+      .bottom-truth {
+        position: absolute;
+        left: 220px;
+        top: 820px;
+        width: 1385px;
+        margin: 0;
+        font-size: 46px;
+        line-height: 1.05;
+        font-weight: 700;
+        letter-spacing: -0.045em;
+        color: #1c2431;
+      }
+
+      .bottom-truth .emph {
+        color: #111318;
+      }
+
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="History is the cleanest place to reclaim minutes">
+      <h1 class="header">History is the cleanest place to reclaim minutes.</h1>
+
+      <div class="visit-wrap" aria-label="Visit bar with selected history segment">
+        <div class="visit-bar">
+          <div class="seg history-base">History</div>
+          <div class="seg exam">Exam</div>
+          <div class="seg plan">Assessment / plan</div>
+          <div class="history-lift">History</div>
+        </div>
+        <div class="history-support"><span class="dot">•</span>A high-leverage target for pre-visit prep.</div>
+      </div>
+
+      <svg class="open-guides" viewBox="0 0 680 248" aria-hidden="true">
+        <defs>
+          <linearGradient id="fadeLine" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="rgba(20,24,33,0.14)" />
+            <stop offset="100%" stop-color="rgba(20,24,33,0.02)" />
+          </linearGradient>
+        </defs>
+        <path d="M56 18 C 180 18, 236 18, 306 18" fill="none" stroke="rgba(20,24,33,0.13)" stroke-width="2"/>
+        <path d="M56 112 C 172 112, 244 112, 338 112" fill="none" stroke="rgba(20,24,33,0.10)" stroke-width="2"/>
+        <path d="M56 204 C 168 204, 254 204, 358 204" fill="none" stroke="rgba(20,24,33,0.08)" stroke-width="2"/>
+        <circle cx="56" cy="18" r="4" fill="rgba(63,143,151,0.65)"/>
+        <circle cx="56" cy="112" r="4" fill="rgba(63,143,151,0.45)"/>
+        <circle cx="56" cy="204" r="4" fill="rgba(63,143,151,0.35)"/>
+      </svg>
+
+      <div class="proof-field" aria-label="Three reasons history is the attractive wedge">
+        <div class="proof-row reason-1">
+          <h3 class="proof-title">Foundational to the encounter</h3>
+          <p class="proof-copy">Shapes the starting point for what follows in the visit.</p>
+        </div>
+
+        <div class="proof-row reason-2">
+          <h3 class="proof-title">Time-variable</h3>
+          <p class="proof-copy">Time required depends on complexity, communication, and context.</p>
+        </div>
+
+        <div class="proof-row reason-3 last">
+          <h3 class="proof-title">Can begin before the encounter</h3>
+          <p class="proof-copy">A meaningful portion can start before the clinician is on the clock.</p>
+        </div>
+      </div>
+
+      <p class="bottom-truth"><span class="emph">But reclaiming those minutes still requires clinical judgment.</span></p>
+
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../../../../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>

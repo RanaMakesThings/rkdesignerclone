@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Vox - Handoff Capsule</title>
+<style>
+  :root{
+    --bg:#f8fafc;
+    --ink:#172033;
+    --muted:#5e6b82;
+    --line:#c8d2df;
+    --panel:#ffffff;
+    --teal:#2f8f98;
+    --teal-2:#58b8bf;
+    --teal-3:#dff4f3;
+    --teal-4:#9fd8d9;
+    --soft:#eef3f8;
+    --shadow:0 18px 50px rgba(44,78,108,.10), 0 4px 16px rgba(44,78,108,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#fff;font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif}
+  .slide{
+    width:1920px;height:1080px;position:relative;overflow:hidden;background:
+      radial-gradient(900px 500px at 8% 10%, rgba(96,160,177,.14), rgba(255,255,255,0) 55%),
+      radial-gradient(700px 380px at 55% 75%, rgba(112,179,188,.08), rgba(255,255,255,0) 58%),
+      #ffffff;
+  }
+  .title{
+    position:absolute;left:108px;top:72px;width:1450px;
+    font-size:64px;line-height:1.05;font-weight:700;letter-spacing:-0.05em;color:var(--ink);
+  }
+  .title .vox{color:var(--teal);font-weight:700}
+  .sub{
+    position:absolute;left:108px;top:292px;width:1380px;
+    color:var(--muted);font-size:24px;line-height:1.35;font-weight:400;
+  }
+
+  .chamber{
+    position:absolute;left:532px;top:409px;width:782px;height:526px;
+    background:linear-gradient(180deg, rgba(255,255,255,.97), rgba(250,252,255,.96));
+    border:1.5px solid rgba(175,189,205,.55);
+    border-radius:42px;
+    box-shadow:0 20px 55px rgba(88,120,150,.08), inset 0 1px 0 rgba(255,255,255,.9);
+  }
+  .chamber .voxbrand{
+    position:absolute;left:350px;top:34px;font-size:54px;font-weight:700;color:var(--teal);letter-spacing:-0.04em;
+  }
+  .chamber .subtitle{
+    position:absolute;left:286px;top:102px;font-size:18px;color:#2f3d53;
+  }
+
+  .label-pill{
+    position:absolute;height:46px;border-radius:999px;background:#fff;
+    border:1.25px solid rgba(188,201,215,.65);
+    box-shadow:0 3px 10px rgba(83,110,136,.05), inset 0 1px 0 rgba(255,255,255,.9);
+    display:flex;align-items:center;padding-left:34px;padding-right:24px;
+    color:#2b394c;font-size:17px;font-weight:600;
+  }
+  .label-pill:before{
+    content:"";position:absolute;left:14px;top:50%;transform:translateY(-50%);
+    width:10px;height:10px;border-radius:50%;background:var(--teal);
+    box-shadow:0 0 0 4px rgba(56,157,165,.10);
+  }
+  .lp1{left:973px;top:566px;width:260px}
+  .lp2{left:973px;top:656px;width:260px}
+  .lp3{left:973px;top:746px;width:260px;line-height:1.05;padding-top:6px;padding-bottom:6px}
+
+  .right-title{
+    position:absolute;left:1458px;top:551px;color:#1e2838;font-size:23px;font-weight:700;letter-spacing:-0.03em;
+  }
+
+  /* redesigned endpoint */
+  .handoff{
+    position:absolute;left:1500px;top:601px;width:302px;height:322px;
+    filter:drop-shadow(0 18px 36px rgba(68,102,122,.12)) drop-shadow(0 4px 10px rgba(68,102,122,.07));
+  }
+  .artifact{
+    position:absolute;left:20px;top:0;width:280px;height:322px;border-radius:22px;
+    background:linear-gradient(180deg,#ffffff 0%, #fbfdff 64%, #f5f9fc 100%);
+    border:1.5px solid rgba(196,208,220,.62);
+    overflow:hidden;
+  }
+  .artifact:before{
+    content:"";position:absolute;left:0;top:0;right:0;height:5px;
+    background:linear-gradient(90deg, rgba(87,178,184,.0) 0%, rgba(87,178,184,.45) 16%, rgba(87,178,184,.55) 84%, rgba(87,178,184,.0) 100%);
+  }
+  .artifact .header{
+    position:absolute;left:24px;top:22px;right:24px;height:50px;
+    display:flex;align-items:flex-start;justify-content:space-between;
+  }
+  .artifact .headline{
+    width:164px;height:18px;border-radius:10px;
+    background:linear-gradient(90deg, #d6dde7 0%, #e7edf3 100%);
+  }
+  .artifact .micro{
+    width:68px;height:30px;border-radius:999px;
+    background:linear-gradient(180deg,#e5f4ed,#def1e7);
+    color:#2f6d46;font-size:11px;font-weight:700;letter-spacing:.08em;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .artifact .section{
+    position:absolute;left:22px;right:22px;top:84px;height:144px;
+    border-radius:18px;
+    background:linear-gradient(180deg,#f9fcfe,#f6fafc);
+    border:1px solid rgba(208,218,228,.7);
+    padding:16px 16px 14px 16px;
+  }
+  .row{height:14px;border-radius:8px;background:linear-gradient(90deg,#dce4ed 0%, #e8eef4 100%);margin-bottom:12px}
+  .row.sm{width:54%}
+  .row.md{width:78%}
+  .row.lg{width:92%}
+  .row.indent{margin-left:20px;width:64%}
+  .divider{
+    height:1px;background:linear-gradient(90deg, rgba(190,202,214,.0), rgba(190,202,214,.9), rgba(190,202,214,.0));
+    margin:14px 0 12px 0;
+  }
+  .verify{
+    position:absolute;left:22px;right:22px;bottom:24px;height:56px;border-radius:16px;
+    background:linear-gradient(180deg,#fbfdff,#f7fafc);
+    border:1px solid rgba(208,218,228,.78);
+    display:flex;align-items:center;padding:0 16px;
+  }
+  .verify .dot{
+    width:10px;height:10px;border-radius:50%;background:#87c8cb;margin-right:12px;
+    box-shadow:0 0 0 5px rgba(135,200,203,.12);
+  }
+  .verify .line{
+    height:13px;border-radius:7px;background:linear-gradient(90deg,#dbe3ec 0%, #e8eef4 100%);width:132px;
+  }
+  .verify .tag{
+    margin-left:auto;width:74px;height:26px;border-radius:999px;background:linear-gradient(180deg,#eef5fb,#e8f0f8);
+    border:1px solid rgba(205,216,227,.8);
+  }
+
+  .spine{
+    position:absolute;left:-6px;top:19px;width:34px;height:210px;border-radius:18px;
+    background:linear-gradient(180deg, #2b7c87 0%, #245f68 100%);
+    box-shadow:inset 1px 0 0 rgba(255,255,255,.22), inset -2px 0 8px rgba(0,0,0,.10);
+  }
+  .spine:before{
+    content:"";position:absolute;left:13px;top:18px;bottom:18px;width:6px;border-radius:6px;
+    background:rgba(140,214,217,.34);
+  }
+
+  svg{position:absolute;inset:0}
+  .ribbonText{font-size:20px;fill:#4d5d73;font-weight:500}
+  .ribbonTextTeal{font-size:20px;fill:#176674;font-weight:600}
+  .cycleText{font-size:18px;fill:#1f2b3b;font-weight:600}
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="title"><span class="vox">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.</div>
+  <div class="sub">
+    Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+    By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>
+    what still needs verification before the visit begins.
+  </div>
+
+  <div class="chamber">
+    <div class="voxbrand">Vox</div>
+    <div class="subtitle">Adaptive clinical interviewer</div>
+  </div>
+
+  <div class="label-pill lp1">What matters</div>
+  <div class="label-pill lp2">What connects</div>
+  <div class="label-pill lp3">What still needs<br>verification</div>
+
+  <div class="right-title">Clinician-grade starting point</div>
+
+  <div class="handoff">
+    <div class="spine"></div>
+    <div class="artifact">
+      <div class="header">
+        <div class="headline"></div>
+        <div class="micro">READY</div>
+      </div>
+      <div class="section">
+        <div class="row sm"></div>
+        <div class="row lg"></div>
+        <div class="row md"></div>
+        <div class="divider"></div>
+        <div class="row sm"></div>
+        <div class="row lg"></div>
+        <div class="row md"></div>
+      </div>
+      <div class="verify">
+        <div class="dot"></div>
+        <div class="line"></div>
+        <div class="tag"></div>
+      </div>
+    </div>
+  </div>
+
+  <svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="tealStroke" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#64c2c5"/>
+        <stop offset="100%" stop-color="#2f8f98"/>
+      </linearGradient>
+      <linearGradient id="greyStroke" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#b2c0cf"/>
+        <stop offset="100%" stop-color="#94a8bb"/>
+      </linearGradient>
+      <linearGradient id="laneFill" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#d7f0ef"/>
+        <stop offset="100%" stop-color="#edf8f8"/>
+      </linearGradient>
+      <linearGradient id="connectorGlow" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="rgba(86,185,191,.85)"/>
+        <stop offset="100%" stop-color="rgba(86,185,191,.05)"/>
+      </linearGradient>
+      <linearGradient id="capsuleBody" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#2c7a85"/>
+        <stop offset="28%" stop-color="#4baeb3"/>
+        <stop offset="62%" stop-color="#d7f0f0"/>
+        <stop offset="100%" stop-color="#eff8f8"/>
+      </linearGradient>
+      <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="10"/>
+      </filter>
+      <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+        <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#6a869c" flood-opacity=".16"/>
+      </filter>
+    </defs>
+
+    <!-- Left ribbons -->
+    <g>
+      <path d="M103 465 H438 L486 497 L438 530 H103 L136 497 Z" fill="#fff" stroke="#9daec0" stroke-width="3"/>
+      <text x="143" y="504" class="ribbonText">My back has been hurting...</text>
+
+      <path d="M121 553 H468 V618 H166 L121 585 Z" fill="#dff4f3" stroke="#4ca8af" stroke-width="3"/>
+      <text x="176" y="594" class="ribbonTextTeal">Vox: What makes it worse?</text>
+
+      <path d="M103 641 H438 L486 673 L438 706 H103 L136 673 Z" fill="#fff" stroke="#9daec0" stroke-width="3"/>
+      <text x="143" y="680" class="ribbonText">It's worse in the morning.</text>
+
+      <path d="M121 728 H468 V793 H166 L121 760 Z" fill="#dff4f3" stroke="#4ca8af" stroke-width="3"/>
+      <text x="184" y="769" class="ribbonTextTeal">Vox: When did this start?</text>
+
+      <path d="M103 816 H438 L486 849 L438 882 H103 L136 849 Z" fill="#fff" stroke="#9daec0" stroke-width="3"/>
+      <text x="143" y="858" class="ribbonText">Started last Tuesday.</text>
+    </g>
+
+    <!-- Left lines into chamber -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M486 497 C600 497, 615 648, 700 648" stroke="url(#greyStroke)" stroke-width="11"/>
+      <path d="M486 497 C600 497, 615 648, 700 648" stroke="#d7e0ea" stroke-width="19" opacity=".4"/>
+
+      <path d="M468 585 C580 585, 612 678, 700 678" stroke="url(#tealStroke)" stroke-width="11"/>
+      <path d="M468 585 C580 585, 612 678, 700 678" stroke="#bfe8e8" stroke-width="19" opacity=".45"/>
+
+      <path d="M486 673 C598 673, 622 678, 700 678" stroke="url(#greyStroke)" stroke-width="9"/>
+      <path d="M486 673 C598 673, 622 678, 700 678" stroke="#dde5ed" stroke-width="16" opacity=".38"/>
+
+      <path d="M468 760 C580 760, 612 694, 700 694" stroke="url(#tealStroke)" stroke-width="11"/>
+      <path d="M468 760 C580 760, 612 694, 700 694" stroke="#bfe8e8" stroke-width="19" opacity=".45"/>
+
+      <path d="M486 849 C596 849, 620 706, 700 706" stroke="url(#greyStroke)" stroke-width="9"/>
+      <path d="M486 849 C596 849, 620 706, 700 706" stroke="#dde5ed" stroke-width="16" opacity=".38"/>
+    </g>
+
+    <!-- center cycle -->
+    <g transform="translate(786 678)">
+      <circle r="86" fill="#f7fbfc" stroke="#e3edf1" stroke-width="2"/>
+      <circle r="78" fill="#fff" stroke="#e1ebf0" stroke-width="1.5"/>
+      <circle r="70" fill="#fbfdfd" stroke="#dfe9ec" stroke-width="1.5"/>
+      <path d="M39,-69 A79,79 0 0 1 77,-5" fill="none" stroke="#67bcc0" stroke-width="12" stroke-linecap="butt"/>
+      <path d="M17,76 A79,79 0 0 1 -57,55" fill="none" stroke="#50aeb4" stroke-width="12" stroke-linecap="butt"/>
+      <path d="M-78,-2 A79,79 0 0 1 -53,-58" fill="none" stroke="#3398a2" stroke-width="12" stroke-linecap="butt"/>
+      <path d="M71,-28 l11 -12 l-17 -2" fill="none" stroke="#3398a2" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M-41,64 l-13 10 l16 4" fill="none" stroke="#3398a2" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <text text-anchor="middle" x="0" y="-12" class="cycleText">Adaptive</text>
+      <text text-anchor="middle" x="0" y="8" class="cycleText">clinical</text>
+      <text text-anchor="middle" x="0" y="28" class="cycleText">interviewer</text>
+    </g>
+
+    <!-- center to label pills -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M884 589 H973" stroke="url(#laneFill)" stroke-width="24"/>
+      <path d="M884 679 H973" stroke="url(#laneFill)" stroke-width="24"/>
+      <path d="M884 769 H973" stroke="url(#laneFill)" stroke-width="24"/>
+      <path d="M884 589 H973" stroke="#b5dfe0" stroke-width="1.5" opacity=".35"/>
+      <path d="M884 679 H973" stroke="#b5dfe0" stroke-width="1.5" opacity=".35"/>
+      <path d="M884 769 H973" stroke="#b5dfe0" stroke-width="1.5" opacity=".35"/>
+    </g>
+
+    <!-- redesigned handoff from chamber -->
+    <g>
+      <!-- broadening output glow -->
+      <path d="M1313 678 C1386 678, 1417 678, 1452 678" stroke="#8fd6d9" stroke-width="6" opacity=".4" fill="none"/>
+      <path d="M1313 625 C1395 671, 1438 673, 1498 679" stroke="#c8eeef" stroke-width="8" opacity=".42" fill="none"/>
+      <path d="M1313 731 C1395 687, 1438 684, 1498 679" stroke="#c8eeef" stroke-width="8" opacity=".42" fill="none"/>
+
+      <!-- compact capsule body integrated into endpoint -->
+      <path d="M1316 679
+               C1378 679, 1415 679, 1452 679
+               L1490 679
+               L1510 701
+               L1489 736
+               L1436 736
+               C1406 718, 1370 696, 1316 679 Z"
+            fill="url(#capsuleBody)" opacity=".95" filter="url(#softShadow)"/>
+
+      <path d="M1316 679
+               C1378 679, 1415 679, 1452 679
+               L1490 679
+               L1510 701
+               L1489 736
+               L1436 736
+               C1406 718, 1370 696, 1316 679 Z"
+            fill="none" stroke="#d8eff0" stroke-width="1.2" opacity=".8"/>
+
+      <!-- subtle under-glow behind handoff -->
+      <ellipse cx="1480" cy="709" rx="74" ry="44" fill="#80c9cd" opacity=".18" filter="url(#softBlur)"/>
+    </g>
+  </svg>
+</div>
+</body>
+</html>

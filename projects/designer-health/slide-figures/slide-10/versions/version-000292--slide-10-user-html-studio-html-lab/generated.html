@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designer Deck Template - Revenue Proof Slide</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --ink: #111111;
+        --muted: #6f7785;
+        --surface: #FBFBFC;
+        --card: #FFFFFF;
+        --border-main: rgba(17, 17, 17, 0.08);
+        --border-light: rgba(17, 17, 17, 0.07);
+        --divider-faint: rgba(17, 17, 17, 0.04);
+        --accent: #4338CA; /* Restrained Cobalt */
+        --line: rgba(0, 0, 0, 0.9);
+        --shadow-subtle: 0 4px 24px rgba(0,0,0,0.02);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+      }
+
+      .slide {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        background: #ffffff;
+        overflow: hidden;
+      }
+
+      /* Layout Guidelines per Spec */
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 60px;
+        width: 1320px;
+        margin: 0;
+        font-size: 56px;
+        line-height: 1.04;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        color: var(--ink);
+      }
+
+      .subheader {
+        position: absolute;
+        left: 92px;
+        top: 192px;
+        width: 1220px;
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.30;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: var(--muted);
+      }
+
+      /* Main Figure Zone */
+      .figure-container {
+        position: absolute;
+        left: 182px;
+        top: 286px;
+        width: 1296px;
+        height: 514px;
+        background: var(--surface);
+        border: 1px solid var(--border-main);
+        border-radius: 28px;
+        padding: 40px;
+        display: flex;
+        gap: 40px;
+      }
+
+      /* Left Hero Region */
+      .hero-region {
+        width: 820px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-cards-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
+      }
+
+      .metric-card {
+        background: var(--card);
+        border: 1px solid var(--border-light);
+        border-radius: 22px;
+        flex: 1;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: var(--shadow-subtle);
+      }
+
+      .metric-numeral {
+        font-weight: 800;
+        color: var(--accent);
+        line-height: 1;
+        margin-bottom: 12px;
+      }
+
+      .numeral-a { font-size: 104px; }
+      .numeral-b { font-size: 86px; }
+
+      .metric-label {
+        font-size: 20px;
+        color: var(--ink);
+        line-height: 1.2;
+        font-weight: 500;
+      }
+
+      .connector {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        width: 60px;
+      }
+
+      .formula-pill {
+        margin-top: 32px;
+        height: 44px;
+        padding: 0 24px;
+        border-radius: 999px;
+        background: rgba(17, 17, 17, 0.035);
+        border: 1px solid rgba(17, 17, 17, 0.06);
+        font-size: 14px;
+        color: #5F6775;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Right Support Rail */
+      .support-rail {
+        width: 356px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        height: 100%;
+      }
+
+      .support-card {
+        background: var(--card);
+        border: 1px solid var(--border-light);
+        border-radius: 20px;
+        padding: 24px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        box-shadow: var(--shadow-subtle);
+      }
+
+      .support-title {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0 0 16px 0;
+        color: var(--ink);
+        text-transform: none;
+      }
+
+      .assumptions-list {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: center;
+      }
+
+      .assumption-row {
+        font-size: 15px;
+        line-height: 1.4;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border-light);
+        color: var(--ink);
+      }
+
+      .assumption-row:first-child { padding-top: 0; }
+      .assumption-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+      .business-metrics {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: center;
+      }
+
+      .biz-row {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--divider-faint);
+      }
+
+      .biz-row:first-child { padding-top: 0; }
+      .biz-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+      .biz-metric {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+
+      .biz-caption {
+        font-size: 13px;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      /* Bottom Citations Block */
+      .citation-block {
+        position: absolute;
+        left: 112px;
+        top: 838px;
+        width: 1510px;
+        font-size: 12px;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+
+      /* Footer Elements */
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: rgba(17, 17, 17, 0.1);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 112px;
+        top: 1010px;
+        font-weight: 800;
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink);
+      }
+
+      .page-number {
+        position: absolute;
+        right: 272px;
+        top: 1010px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide">
+      <!-- Top Copy -->
+      <h1 class="header">
+        Turning saved time into<br/>
+        filled visits creates real revenue.
+      </h1>
+      <p class="subheader">
+        One additional filled outpatient visit per clinician per day is worth<br/>
+        roughly $23k in annual revenue.
+      </p>
+
+      <!-- Main Figure Zone -->
+      <div class="figure-container">
+        
+        <!-- Left Hero Region -->
+        <div class="hero-region">
+          <div class="hero-cards-row">
+            <!-- Metric Card A -->
+            <div class="metric-card">
+              <div class="metric-numeral numeral-a">+1</div>
+              <div class="metric-label">
+                filled outpatient visit<br/>
+                / clinician / day
+              </div>
+            </div>
+
+            <!-- Connector Arrow -->
+            <div class="connector">
+              <svg width="60" height="24" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 12H58M58 12L50 6M58 12L50 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- Metric Card B -->
+            <div class="metric-card">
+              <div class="metric-numeral numeral-b">≈$23k*</div>
+              <div class="metric-label">
+                / clinician / year
+              </div>
+            </div>
+          </div>
+
+          <!-- Formula Pill -->
+          <div class="formula-pill">
+            1 visit &times; 240 clinic days &times; ~$100 / visit
+          </div>
+        </div>
+
+        <!-- Right Support Rail -->
+        <div class="support-rail">
+          
+          <!-- Assumptions Card -->
+          <div class="support-card">
+            <h2 class="support-title">Illustrative assumptions</h2>
+            <div class="assumptions-list">
+              <div class="assumption-row">99213 office/outpatient established visit baseline[1]</div>
+              <div class="assumption-row">~$100 Medicare-like national payment benchmark[2]</div>
+              <div class="assumption-row">240 clinic days / year*</div>
+            </div>
+          </div>
+
+          <!-- Business Card -->
+          <div class="support-card">
+            <h2 class="support-title">Business implication</h2>
+            <div class="business-metrics">
+              <div class="biz-row">
+                <div class="biz-metric">~$10M ARR*</div>
+                <div class="biz-caption">at ~10% value capture</div>
+              </div>
+              <div class="biz-row">
+                <div class="biz-metric">~4,500 clinicians*</div>
+                <div class="biz-caption">required</div>
+              </div>
+              <div class="biz-row">
+                <div class="biz-metric">~0.5%*</div>
+                <div class="biz-caption">of U.S. patient-care physician base[3]</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Citation Block -->
+      <div class="citation-block">
+        <div>[1] AMA, “CPT® code 99213: Established patient office visit, 20-29 minutes.”</div>
+        <div>[2] CMS, “Calendar Year (CY) 2026 Medicare Physician Fee Schedule Final Rule (CMS-1832-F)” and 2026 PFS Look-up / National Payment Amount files.</div>
+        <div>[3] HRSA, State of the U.S. Health Care Workforce, 2025.</div>
+        <div style="margin-top: 4px;">* Derived from illustrative slide assumptions: one added filled visit/day, 240 clinic days/year, ~$100 visit benchmark, and 10% value capture for ARR framing.</div>
+      </div>
+
+      <!-- Footer Elements -->
+      <div class="footer-line"></div>
+      <div class="footer-logo">Designer Health</div>
+      <div class="page-number">08</div>
+    </div>
+  </body>
+</html>

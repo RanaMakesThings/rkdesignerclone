@@ -1,0 +1,22 @@
+[
+  {
+    "id": "footer-rule",
+    "label": "Footer Rule",
+    "x": 112,
+    "y": 992,
+    "width": 1536,
+    "height": 4,
+    "freezeLevel": "pixel-strict",
+    "note": "Preserve the thin footer divider rule from the locked Designer shell."
+  },
+  {
+    "id": "footer-logo",
+    "label": "Footer Logo",
+    "x": 1692,
+    "y": 962,
+    "width": 114,
+    "height": 59,
+    "freezeLevel": "semantic-stable",
+    "note": "Keep the official Designer footer logo aligned to the shell."
+  }
+]

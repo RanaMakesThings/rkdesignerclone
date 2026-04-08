@@ -1,0 +1,34 @@
+Create a premium 16:9 investor-deck central figure for Designer Health.
+
+Use the attached slide-07 version-108 image as the single composition anchor.
+Preserve it almost exactly. This is a native higher-resolution rerender, not a
+redesign.
+
+Keep everything the same:
+- overall composition and spacing
+- all four beats and their relative proportions
+- the secure-link phone in beat 1
+- the two speech bubbles in beat 2
+- the brief object in beat 3
+- the one-tablet clinician in beat 4
+- the existing labels and typography already present in version 108
+- the white background and restrained teal accent
+
+Important:
+- no new text
+- no extra speech bubble
+- no new badge
+- no added word `Vox` inside beat 3
+- keep beat 3 visually like version 108, with the clean badge-less brief card
+- no extra device
+- no layout change
+- no style change
+
+Goal:
+- reproduce the exact look of version 108 as faithfully as possible at higher
+  native fidelity
+
+Style:
+- identical visual style to version 108
+- premium editorial healthcare illustration
+- grayscale with restrained teal accents

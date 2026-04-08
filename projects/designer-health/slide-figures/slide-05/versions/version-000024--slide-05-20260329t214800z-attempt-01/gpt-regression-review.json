@@ -1,0 +1,19 @@
+{
+  "provider": "gpt",
+  "verdict": "blocker",
+  "rationale": "The connector arrow itself is cleaner, but the candidate introduces a visible rendering artifact and changes the overall composition relative to the baseline. The stray `xml` text at the top-left is clearly leaked markup, and the slide is now shown inside a reduced canvas with large outer margins/drop-shadow, making the composition feel smaller and more fragment-like than before.",
+  "blockers": [
+    "Stray `xml` text is visible at the top-left of the slide.",
+    "The slide is rendered inside a smaller inset canvas with large surrounding margins/shadow, making the composition under-filled/fragment-like versus the baseline."
+  ],
+  "nextMove": "Remove the leaked `xml` artifact and render the updated slide at the original full-slide framing while keeping only the simplified connector arrow change.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The connector arrow itself is cleaner, but the candidate introduces a visible rendering artifact and changes the overall composition relative to the baseline. The stray `xml` text at the top-left is clearly leaked markup, and the slide is now shown inside a reduced canvas with large outer margins/drop-shadow, making the composition feel smaller and more fragment-like than before.",
+    "blockers": [
+      "Stray `xml` text is visible at the top-left of the slide.",
+      "The slide is rendered inside a smaller inset canvas with large surrounding margins/shadow, making the composition under-filled/fragment-like versus the baseline."
+    ],
+    "nextMove": "Remove the leaked `xml` artifact and render the updated slide at the original full-slide framing while keeping only the simplified connector arrow change."
+  }
+}

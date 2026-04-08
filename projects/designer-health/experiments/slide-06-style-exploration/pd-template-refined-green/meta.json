@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-03-29T17:59:56.891Z",
+  "slug": "slide-06-workflow-strip-pd-template-refined-green",
+  "family": "workflow_strip",
+  "deckId": "vox-pd-v1",
+  "theme": "pd-template-1-workflow-refined-green",
+  "mode": "full-slide",
+  "title": "Vox prepares the visit before it starts.",
+  "subtitle": "Vox interviews, structures, and hands off a brief the clinician can verify and use.",
+  "specPath": "projects/designer-health/experiments/slide-06-style-exploration/specs/slide-06-workflow-strip-pd-template-refined-green.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green/figure.html",
+    "svg": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green/figure.svg",
+    "png": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/pd-template-refined-green/render-assets.json"
+  },
+  "selectedMedia": []
+}

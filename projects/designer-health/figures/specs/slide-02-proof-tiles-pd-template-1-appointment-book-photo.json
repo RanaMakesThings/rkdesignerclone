@@ -1,0 +1,100 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-proof-tiles-pd-template-1-appointment-book-photo",
+    "family": "proof_tiles",
+    "deckId": "pd-template-1",
+    "theme": "pd-template-1",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Demand is outpacing clinical capacity.",
+    "subtitle": "",
+    "chips": [],
+    "footnote": "[1] AMN/Merritt Hawkins physician appointment wait-time survey. [2] CDC/NCHS delayed-care measure."
+  },
+  "constraints": {
+    "figureJob": "Use a single scheduling-artifact photo so the slide feels tied to a real appointment surface rather than a generic proof tile layout.",
+    "focalPoint": "The appointment-book image first, then the proof metrics.",
+    "layout": "Header top left, one centered photo card of an appointment-book scene above two proof tiles.",
+    "big": [
+      "The appointment-book photo card",
+      "The two proof metrics"
+    ],
+    "quiet": [
+      "Eyebrows",
+      "Support copy",
+      "Footnote"
+    ],
+    "accentTargets": [
+      "none"
+    ],
+    "forbidden": [
+      "generic medical exam photos",
+      "flat placeholder card"
+    ],
+    "semanticGuards": []
+  },
+  "copyPolicy": {
+    "locked": [
+      "Demand is outpacing clinical capacity.",
+      "~1 month",
+      "10.6%"
+    ],
+    "preferred": [],
+    "optional": [],
+    "forbidden": []
+  },
+  "media": {
+    "slots": [
+      {
+        "id": "artifact-photo",
+        "label": "Appointment-book photo",
+        "query": "medical appointment calendar desk clinic schedule",
+        "orientation": "landscape",
+        "maxCandidates": 4,
+        "placementNote": "Use a photo where the appointment artifact is visible."
+      }
+    ],
+    "selection": [
+      {
+        "slotId": "artifact-photo",
+        "candidateId": "6809657",
+        "placement": "motif",
+        "treatment": "soft",
+        "objectPosition": "center center"
+      }
+    ]
+  },
+  "body": {
+    "motif": "appointment-book-photo",
+    "tiles": [
+      {
+        "eyebrow": "Access",
+        "metric": "~1 month",
+        "detail": "Average wait for a new doctor appointment",
+        "kicker": "Up 19% in three years [1]",
+        "graphic": {
+          "kind": ""
+        }
+      },
+      {
+        "eyebrow": "Deferred care",
+        "metric": "10.6%",
+        "detail": "Adults delayed or did not get care because no appointment was available when needed [2]",
+        "kicker": "",
+        "graphic": {
+          "kind": ""
+        }
+      }
+    ]
+  },
+  "trace": [
+    {
+      "excerpt": "Appointment Book Photo Card",
+      "targetPath": "body.motif",
+      "ruleType": "body",
+      "note": "Use one tangible scheduling artifact photo rather than a diagram."
+    }
+  ]
+}

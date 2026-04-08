@@ -1,0 +1,29 @@
+{
+  "provider": "claude",
+  "status": "partial",
+  "summary": "The arrow in the AFTER image is simpler and less hooky than the BEFORE, but it now reads as a nearly straight diagonal line rather than a clean broad arc with smooth even curvature. The requested style called for one clean broad arc, but the AFTER arrow is quite straight/angular with only a slight curve, and it still has a small kink/bend near the arrowhead where it meets the hero box. Additionally, the overall layout has shifted — the slide appears more compact/zoomed-out with the bar chart and support block repositioned, which violates the 'keep the rest of the slide exactly the same' requirement.",
+  "evidence": [
+    "BEFORE arrow: a wide sweeping arc that curves from the source bar down-left to the hero, with a noticeable hook near the arrowhead",
+    "AFTER arrow: a nearly straight diagonal line from the bar to the hero with minimal curvature — not a 'clean broad arc'",
+    "AFTER arrow still shows a slight directional change/kink just before the arrowhead tip",
+    "The source bar in AFTER is noticeably smaller and repositioned higher/more centered compared to BEFORE",
+    "The support block in AFTER is smaller and repositioned, violating the 'keep the rest of the slide exactly the same' guardrail",
+    "The hero box in AFTER appears smaller and shifted left compared to BEFORE"
+  ],
+  "nextPrompt": "Fix only the connector arrow path. Keep the arrow as a single smooth quadratic or cubic Bézier arc — start from the left edge of the 'Story reconstruction' bar segment, arc broadly downward-left, and end with a clean arrowhead pointing into the top-right of the blue hero box. The arc should have a clear, even bow (not a straight line). Do not change the size, position, or styling of the bar chart, hero box, support block, typography, or any other element on the slide.",
+  "needsHuman": true,
+  "raw": {
+    "status": "partial",
+    "summary": "The arrow in the AFTER image is simpler and less hooky than the BEFORE, but it now reads as a nearly straight diagonal line rather than a clean broad arc with smooth even curvature. The requested style called for one clean broad arc, but the AFTER arrow is quite straight/angular with only a slight curve, and it still has a small kink/bend near the arrowhead where it meets the hero box. Additionally, the overall layout has shifted — the slide appears more compact/zoomed-out with the bar chart and support block repositioned, which violates the 'keep the rest of the slide exactly the same' requirement.",
+    "evidence": [
+      "BEFORE arrow: a wide sweeping arc that curves from the source bar down-left to the hero, with a noticeable hook near the arrowhead",
+      "AFTER arrow: a nearly straight diagonal line from the bar to the hero with minimal curvature — not a 'clean broad arc'",
+      "AFTER arrow still shows a slight directional change/kink just before the arrowhead tip",
+      "The source bar in AFTER is noticeably smaller and repositioned higher/more centered compared to BEFORE",
+      "The support block in AFTER is smaller and repositioned, violating the 'keep the rest of the slide exactly the same' guardrail",
+      "The hero box in AFTER appears smaller and shifted left compared to BEFORE"
+    ],
+    "nextPrompt": "Fix only the connector arrow path. Keep the arrow as a single smooth quadratic or cubic Bézier arc — start from the left edge of the 'Story reconstruction' bar segment, arc broadly downward-left, and end with a clean arrowhead pointing into the top-right of the blue hero box. The arc should have a clear, even bow (not a straight line). Do not change the size, position, or styling of the bar chart, hero box, support block, typography, or any other element on the slide.",
+    "needsHuman": true
+  }
+}

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox Pitch Deck Slide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e5e7eb; /* Darker background to frame the slide */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 1920px;
+            height: 1080px;
+            background-color: #f8f9fa;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section */
+        .header {
+            position: absolute;
+            top: 80px;
+            left: 100px;
+            width: 1500px;
+            z-index: 10;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #111827;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            max-width: 1400px;
+        }
+
+        .header h1 span {
+            color: #2a8c82;
+        }
+
+        .header p {
+            font-size: 20px;
+            color: #4b5563;
+            line-height: 1.5;
+            max-width: 1350px;
+            font-weight: 400;
+        }
+
+        /* SVG Connections Overlay */
+        .connections {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Left Ribbons */
+        .ribbons-container {
+            position: absolute;
+            top: 460px;
+            left: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            z-index: 10;
+        }
+
+        .ribbon {
+            width: 340px;
+            height: 56px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .ribbon-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .ribbon-text {
+            padding-left: 40px;
+            padding-right: 30px;
+            font-size: 16px;
+            font-weight: 400;
+            z-index: 2;
+        }
+
+        .ribbon.patient .ribbon-text {
+            color: #334155;
+        }
+
+        .ribbon.vox .ribbon-text {
+            color: #0f766e;
+            font-weight: 600;
+            padding-left: 30px; /* Adjust for different shape */
+        }
+
+        /* Center Chamber */
+        .chamber {
+            position: absolute;
+            top: 410px;
+            left: 530px;
+            width: 760px;
+            height: 420px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .chamber-title {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .chamber-title h2 {
+            color: #2a8c82;
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            margin: 0;
+        }
+
+        .chamber-title p {
+            color: #1e293b;
+            font-size: 15px;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .chamber-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .chamber-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 0 0 10px #f1f5f9;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: #0f172a;
+            line-height: 1.2;
+            padding: 20px;
+        }
+
+        .chamber-circle::after {
+            content: '';
+            position: absolute;
+            top: -10px; left: -10px; right: -10px; bottom: -10px;
+            border-radius: 50%;
+            border: 10px solid transparent;
+            border-bottom-color: #2a8c82;
+            border-left-color: #2a8c82;
+            transform: rotate(-45deg);
+        }
+
+        .chamber-pills {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .pill {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 14px 24px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            width: 240px;
+            position: relative;
+        }
+
+        .pill::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #2a8c82;
+        }
+
+        /* Right Artifact (Redesign) */
+        .artifact-container {
+            position: absolute;
+            top: 500px;
+            left: 1460px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            z-index: 10;
+        }
+
+        .artifact-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 24px;
+            letter-spacing: -0.01em;
+        }
+
+        .artifact {
+            width: 380px;
+            height: 300px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 24px 48px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #e2e8f0;
+            border-left: 6px solid #2a8c82; /* Anchors the handoff */
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Fade out at the bottom to imply emerging/cropped document */
+        .artifact::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+            pointer-events: none;
+        }
+
+        /* Abstracted Content Bands */
+        .art-header-block {
+            width: 80%;
+            height: 24px;
+            background: #1e293b;
+            border-radius: 4px;
+            margin-bottom: 32px;
+        }
+
+        .art-band {
+            margin-bottom: 28px;
+        }
+
+        .art-label {
+            width: 30%;
+            height: 8px;
+            background: #94a3b8;
+            border-radius: 2px;
+            margin-bottom: 16px;
+        }
+
+        .art-line {
+            width: 100%;
+            height: 8px;
+            background: #f1f5f9;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+
+        .art-line.short {
+            width: 85%;
+        }
+
+        .art-pills-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .art-pill {
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .art-pill.green { background: #dcfce7; width: 64px; }
+        .art-pill.green-long { background: #dcfce7; width: 86px; }
+        .art-pill.red { background: #fee2e2; width: 72px; }
+
+    </style>
+</head>
+<body>
+
+<div class="slide">
+    
+    <!-- Header -->
+    <div class="header">
+        <h1><span>Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.</h1>
+        <p>Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+        By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.</p>
+    </div>
+
+    <!-- SVG Connections -->
+    <svg class="connections" viewBox="0 0 1920 1080">
+        <defs>
+            <!-- Gradient for the deliberate handoff manifold -->
+            <linearGradient id="handoffGradient" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#2a8c82" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#2a8c82" stop-opacity="0.95"/>
+            </linearGradient>
+        </defs>
+
+        <!-- Left Side Paths (Ribbons to Chamber) -->
+        <!-- Ribbon 1 (Patient) to Circle -->
+        <path d="M 440 488 C 550 488, 550 620, 650 620" fill="none" stroke="#cbd5e1" stroke-width="4"/>
+        <!-- Ribbon 2 (Vox) to Circle -->
+        <path d="M 440 568 C 550 568, 550 620, 650 620" fill="none" stroke="#2a8c82" stroke-width="4" opacity="0.5"/>
+        <!-- Ribbon 3 (Patient) to Circle -->
+        <path d="M 440 648 C 550 648, 550 620, 650 620" fill="none" stroke="#cbd5e1" stroke-width="4"/>
+        <!-- Ribbon 4 (Vox) to Circle -->
+        <path d="M 440 728 C 550 728, 550 620, 650 620" fill="none" stroke="#2a8c82" stroke-width="4" opacity="0.5"/>
+        <!-- Ribbon 5 (Patient) to Circle -->
+        <path d="M 440 808 C 550 808, 550 620, 650 620" fill="none" stroke="#cbd5e1" stroke-width="4"/>
+
+        <!-- Right Side Handoff (Pills to Artifact) -->
+        <!-- 
+            Coordinates:
+            Pills right edge: x=1250
+            Pill 1 y-range: 546 to 590
+            Pill 2 y-range: 606 to 650
+            Pill 3 y-range: 666 to 710
+            Artifact left edge: x=1460
+            Artifact connection y-range: 560 to 700
+        -->
+        <path d="
+            M 1250 546
+            C 1350 546, 1350 560, 1460 560
+            L 1460 700
+            C 1350 700, 1350 710, 1250 710
+            L 1250 666
+            C 1300 666, 1300 650, 1250 650
+            L 1250 606
+            C 1300 606, 1300 590, 1250 590
+            Z" 
+            fill="url(#handoffGradient)"
+        />
+    </svg>
+
+    <!-- Left Ribbons -->
+    <div class="ribbons-container">
+        <!-- Ribbon 1: Patient -->
+        <div class="ribbon patient">
+            <svg class="ribbon-bg" viewBox="0 0 340 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 28L0 0H324L340 28L324 56H0L16 28Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            </svg>
+            <div class="ribbon-text">My back has been hurting...</div>
+        </div>
+        
+        <!-- Ribbon 2: Vox -->
+        <div class="ribbon vox">
+            <svg class="ribbon-bg" viewBox="0 0 340 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 28L16 0H324L340 28L324 56H16L0 28Z" fill="#F0FDFA" stroke="#2A8C82" stroke-width="2"/>
+            </svg>
+            <div class="ribbon-text">Vox: What makes it worse?</div>
+        </div>
+
+        <!-- Ribbon 3: Patient -->
+        <div class="ribbon patient">
+            <svg class="ribbon-bg" viewBox="0 0 340 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 28L0 0H324L340 28L324 56H0L16 28Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            </svg>
+            <div class="ribbon-text">It's worse in the morning.</div>
+        </div>
+
+        <!-- Ribbon 4: Vox -->
+        <div class="ribbon vox">
+            <svg class="ribbon-bg" viewBox="0 0 340 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 28L16 0H324L340 28L324 56H16L0 28Z" fill="#F0FDFA" stroke="#2A8C82" stroke-width="2"/>
+            </svg>
+            <div class="ribbon-text">Vox: When did this start?</div>
+        </div>
+
+        <!-- Ribbon 5: Patient -->
+        <div class="ribbon patient">
+            <svg class="ribbon-bg" viewBox="0 0 340 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 28L0 0H324L340 28L324 56H0L16 28Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            </svg>
+            <div class="ribbon-text">Started last Tuesday.</div>
+        </div>
+    </div>
+
+    <!-- Center Chamber -->
+    <div class="chamber">
+        <div class="chamber-title">
+            <h2>Vox</h2>
+            <p>Adaptive clinical interviewer</p>
+        </div>
+        <div class="chamber-content">
+            <div class="chamber-circle">
+                Adaptive<br>clinical<br>interviewer
+            </div>
+            <div class="chamber-pills">
+                <div class="pill">What matters</div>
+                <div class="pill">What connects</div>
+                <div class="pill">What still needs verification</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Artifact (Emerging Brief Edge) -->
+    <div class="artifact-container">
+        <div class="artifact-title">Clinician-grade starting point</div>
+        <div class="artifact">
+            <!-- Title Row -->
+            <div class="art-header-block"></div>
+            
+            <!-- Content Band 1 (e.g., Clinical Story) -->
+            <div class="art-band">
+                <div class="art-label"></div>
+                <div class="art-line"></div>
+                <div class="art-line"></div>
+                <div class="art-line short"></div>
+            </div>
+
+            <!-- Content Band 2 (e.g., Pertinent Positives/Negatives) -->
+            <div class="art-band">
+                <div class="art-label" style="width: 40%;"></div>
+                <div class="art-pills-row">
+                    <div class="art-pill green"></div>
+                    <div class="art-pill green-long"></div>
+                    <div class="art-pill red"></div>
+                    <div class="art-pill green"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+Generate a single self-contained HTML document for a 16:9 investor-deck slide.
+
+Slide header:
+Recovered visit time creates real capacity.
+
+Slide subheader:
+When recovered minutes become completed visits, the impact is meaningful.
+
+Strategic job:
+Show the operating-leverage translation from recovered time into annual
+contribution value.
+
+Use these exact anchors:
+- +1 visit / provider / day
+- 220 clinic days
+- $125 / visit
+- 40% contribution margin
+- $11,000 / year
+- ~$917 / month break-even spend / provider
+
+Direction:
+- use a simplified step or waterfall logic
+- make the progression into `$11,000 / year` feel clear and premium
+- keep the break-even number as a quieter support badge
+- any range-check view must be tiny and secondary
+
+Style:
+- premium investor-deck feel
+- restrained green accent
+- simple visual flow
+- not technical or dashboard-like
+
+Do not:
+- create a dense finance chart
+- use many labels
+- use spreadsheet grids
+- turn this into analytics software
+
+Return only the HTML document with inline CSS and any inline SVG needed.

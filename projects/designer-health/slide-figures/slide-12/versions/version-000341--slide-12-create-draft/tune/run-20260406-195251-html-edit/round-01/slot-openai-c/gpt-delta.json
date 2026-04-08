@@ -1,0 +1,35 @@
+{
+  "provider": "gpt",
+  "status": "partial",
+  "summary": "The candidate clearly attempts the correct ask-slide structure and includes the locked headline, subheader, hero ask, milestone logic, and bottom use-of-funds ribbon, but the execution is not presentation-ready because the header area is visibly broken/overlapping and parts of the content appear clipped and crowded within the shell.",
+  "evidence": [
+    "The locked header text is present: 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.'",
+    "The locked subheader appears with the correct wording: 'Post-money SAFE • ~18–20 months of runway,' but it is visually overlapped by stray dark text from the headline area.",
+    "The slide uses the intended integrated master-card layout: left hero ask block and right-side stacked Build / Deploy / Validate milestone cards.",
+    "The hero ask block includes '$1.25M' prominently and financing structure language, matching the brief's ask-first emphasis.",
+    "The right side shows milestone sequencing with Build, Deploy, and Validate labels plus milestone copy, which supports the disciplined de-risking logic.",
+    "A restrained bottom ribbon is present with use-of-funds bars/categories and a closing line about funding a concrete proof plan.",
+    "The header region is visibly corrupted: a duplicate/overlapping black text line sits on top of the subheader area, making the slide feel unfinished.",
+    "Several lower content areas are cut off or overly compressed near the footer rule, with text and cards crowded into the bottom of the shell.",
+    "The footer rule and Designer logo remain in place, preserving the shell, but the overall composition does not feel fully resolved."
+  ],
+  "nextPrompt": "Keep the current ask-slide structure, but fix layout integrity: remove all duplicate/overlapping headline text, ensure the subheader sits cleanly below the title, reduce content density so no cards or copy are clipped near the footer, and keep the finished slide within the locked Designer shell with a clean hero ask block, three milestone cards, and one restrained bottom ribbon.",
+  "needsHuman": false,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate clearly attempts the correct ask-slide structure and includes the locked headline, subheader, hero ask, milestone logic, and bottom use-of-funds ribbon, but the execution is not presentation-ready because the header area is visibly broken/overlapping and parts of the content appear clipped and crowded within the shell.",
+    "evidence": [
+      "The locked header text is present: 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.'",
+      "The locked subheader appears with the correct wording: 'Post-money SAFE • ~18–20 months of runway,' but it is visually overlapped by stray dark text from the headline area.",
+      "The slide uses the intended integrated master-card layout: left hero ask block and right-side stacked Build / Deploy / Validate milestone cards.",
+      "The hero ask block includes '$1.25M' prominently and financing structure language, matching the brief's ask-first emphasis.",
+      "The right side shows milestone sequencing with Build, Deploy, and Validate labels plus milestone copy, which supports the disciplined de-risking logic.",
+      "A restrained bottom ribbon is present with use-of-funds bars/categories and a closing line about funding a concrete proof plan.",
+      "The header region is visibly corrupted: a duplicate/overlapping black text line sits on top of the subheader area, making the slide feel unfinished.",
+      "Several lower content areas are cut off or overly compressed near the footer rule, with text and cards crowded into the bottom of the shell.",
+      "The footer rule and Designer logo remain in place, preserving the shell, but the overall composition does not feel fully resolved."
+    ],
+    "nextPrompt": "Keep the current ask-slide structure, but fix layout integrity: remove all duplicate/overlapping headline text, ensure the subheader sits cleanly below the title, reduce content density so no cards or copy are clipped near the footer, and keep the finished slide within the locked Designer shell with a clean hero ask block, three milestone cards, and one restrained bottom ribbon.",
+    "needsHuman": false
+  }
+}

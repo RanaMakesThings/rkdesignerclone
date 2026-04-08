@@ -1,0 +1,11 @@
+{
+  "model": "gpt-5.4",
+  "images": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/versions/version-000091--slide-07-style-openai-minimal-restraint/image-01.png",
+    "/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/clinician-patient-brief-vignette/openai/version-04--editorial-baseline/image-01.png",
+    "/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/clinician-patient-brief-vignette/openai/version-06--minimal-restraint/image-01.png"
+  ],
+  "size": "1536x1024",
+  "quality": "high",
+  "background": "opaque"
+}

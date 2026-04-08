@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pitch Deck Figure Studio</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+      :root {
+        --page-bg: #eae4da;
+        --page-ink: #17322d;
+        --slide-bg: #fcfbf8;
+        --slide-bg-2: #fffdf8;
+        --ink: #17322d;
+        --muted: #6b7d79;
+        --quiet: #95a5a0;
+        --line: #d8ded9;
+        --panel: rgba(255, 255, 255, 0.82);
+        --panel-strong: rgba(255, 255, 255, 0.94);
+        --accent: #1d766c;
+        --accent-deep: #155b53;
+        --accent-soft: #dcedea;
+        --warm: #f6f1e9;
+        --stone: #d0d4d1;
+        --fog: #eef1ef;
+        --shadow: 0 18px 50px rgba(23, 50, 45, 0.12);
+        --radius: 26px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        font-family: 'Manrope', 'Avenir Next', sans-serif;
+        color: var(--page-ink);
+        background:
+          radial-gradient(1100px 520px at 10% -10%, rgba(29, 118, 108, 0.12) 0%, rgba(29, 118, 108, 0) 72%),
+          radial-gradient(920px 460px at 100% 0%, rgba(210, 196, 166, 0.28) 0%, rgba(210, 196, 166, 0) 74%),
+          linear-gradient(180deg, #f4f0e8 0%, var(--page-bg) 100%);
+      }
+
+      .app {
+        display: grid;
+        grid-template-columns: 390px minmax(720px, 1fr);
+        min-height: 100vh;
+      }
+
+      .sidebar {
+        padding: 26px 22px 30px;
+        border-right: 1px solid rgba(23, 50, 45, 0.08);
+        background: rgba(255, 255, 255, 0.36);
+        backdrop-filter: blur(12px);
+        overflow: auto;
+      }
+
+      .sidebar h1,
+      .sidebar h2,
+      .sidebar h3 {
+        margin: 0;
+        font-family: 'Space Grotesk', 'Avenir Next', sans-serif;
+        letter-spacing: -0.03em;
+      }
+
+      .sidebar h1 {
+        font-size: 1.55rem;
+        line-height: 1;
+      }
+
+      .sidebar p {
+        margin: 0;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .lede {
+        margin-top: 10px;
+        font-size: 0.93rem;
+      }
+
+      .controls,
+      .card {
+        margin-top: 18px;
+        border: 1px solid rgba(23, 50, 45, 0.08);
+        border-radius: 20px;
+        background: var(--panel);
+        box-shadow: 0 10px 28px rgba(23, 50, 45, 0.06);
+      }
+
+      .controls {
+        padding: 16px;
+      }
+
+      .card {
+        padding: 14px 16px;
+      }
+
+      .control-row {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.77rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--quiet);
+      }
+
+      select,
+      textarea,
+      button {
+        font: inherit;
+      }
+
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid rgba(23, 50, 45, 0.12);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.88);
+        color: var(--ink);
+      }
+
+      select {
+        padding: 10px 12px;
+      }
+
+      textarea {
+        min-height: 360px;
+        padding: 14px;
+        resize: vertical;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.8rem;
+        line-height: 1.45;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      button {
+        appearance: none;
+        border: 0;
+        border-radius: 999px;
+        padding: 10px 14px;
+        font-size: 0.86rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .primary-btn {
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+        color: #f8fffd;
+      }
+
+      .secondary-btn {
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--ink);
+        border: 1px solid rgba(23, 50, 45, 0.1);
+      }
+
+      .error {
+        margin-top: 10px;
+        min-height: 18px;
+        font-size: 0.84rem;
+        font-weight: 700;
+        color: #b14949;
+      }
+
+      .contract-grid,
+      .usage-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .contract-item strong {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 0.78rem;
+        letter-spacing: 0.03em;
+      }
+
+      .contract-item span,
+      .usage-list div,
+      .brief {
+        font-size: 0.88rem;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .brief {
+        white-space: pre-wrap;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.74rem;
+        color: var(--ink);
+      }
+
+      .usage-list div {
+        padding-left: 14px;
+        position: relative;
+      }
+
+      .usage-list div::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.52em;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: rgba(29, 118, 108, 0.68);
+      }
+
+      .preview-shell {
+        display: grid;
+        place-items: center;
+        padding: 28px;
+      }
+
+      .slide {
+        position: relative;
+        width: min(1440px, calc(100vw - 480px));
+        aspect-ratio: 16 / 9;
+        border-radius: 30px;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0) 30%),
+          linear-gradient(135deg, var(--slide-bg-2) 0%, var(--slide-bg) 100%);
+        box-shadow: var(--shadow);
+      }
+
+      .slide::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(720px 340px at 86% 84%, rgba(29, 118, 108, 0.06) 0%, rgba(29, 118, 108, 0) 72%),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0) 36%);
+        pointer-events: none;
+      }
+
+      .slide-inner {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        padding: 70px 78px 44px;
+      }
+
+      .slide-header {
+        max-width: 980px;
+      }
+
+      .slide-title,
+      .figure-title {
+        margin: 0;
+        font-family: 'Space Grotesk', 'Avenir Next', sans-serif;
+        letter-spacing: -0.04em;
+      }
+
+      .slide-title {
+        font-size: clamp(2rem, 2.9vw, 3.35rem);
+        line-height: 1.04;
+      }
+
+      .slide-subtitle {
+        margin-top: 12px;
+        max-width: 900px;
+        font-size: clamp(1rem, 1.18vw, 1.2rem);
+        color: var(--muted);
+      }
+
+      .slide-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .chip {
+        padding: 9px 15px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.76);
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .figure-zone {
+        position: relative;
+        height: calc(100% - 174px);
+      }
+
+      .footnote {
+        position: absolute;
+        left: 78px;
+        bottom: 18px;
+        font-size: 0.78rem;
+        color: rgba(23, 50, 45, 0.48);
+      }
+
+      .transformation-layout {
+        position: absolute;
+        inset: 4% 0 14% 0;
+        display: grid;
+        grid-template-columns: 1.05fr 0.9fr 1fr;
+        align-items: center;
+        gap: 26px;
+      }
+
+      .story-blob {
+        position: relative;
+        min-height: 308px;
+        padding: 28px 28px;
+        border: 1px solid rgba(23, 50, 45, 0.08);
+        border-radius: 38% 34% 36% 32% / 24% 34% 28% 30%;
+        background:
+          radial-gradient(circle at 24% 24%, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0) 46%),
+          linear-gradient(135deg, #f9f4eb 0%, #f2ebe1 100%);
+        box-shadow:
+          0 16px 40px rgba(23, 50, 45, 0.08),
+          inset 0 1px 0 rgba(255, 255, 255, 0.7);
+      }
+
+      .story-blob::after {
+        content: '';
+        position: absolute;
+        right: 26px;
+        bottom: -18px;
+        width: 58px;
+        height: 58px;
+        border-radius: 18px 22px 24px 28px;
+        background: linear-gradient(135deg, #f4ecdf 0%, #efe4d4 100%);
+        transform: rotate(32deg);
+      }
+
+      .object-label {
+        margin: 0 0 18px;
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--quiet);
+      }
+
+      .story-fragments {
+        display: grid;
+        gap: 12px;
+      }
+
+      .fragment {
+        max-width: max-content;
+        padding: 10px 14px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.88);
+        color: var(--ink);
+        font-size: 0.96rem;
+        font-weight: 600;
+        box-shadow: 0 8px 18px rgba(23, 50, 45, 0.05);
+      }
+
+      .fragment:nth-child(2n) {
+        margin-left: 28px;
+      }
+
+      .fragment:nth-child(3n) {
+        margin-left: 10px;
+      }
+
+      .middle-stack {
+        position: relative;
+        display: grid;
+        gap: 14px;
+        justify-items: center;
+      }
+
+      .transform-core {
+        position: relative;
+        width: 100%;
+        min-height: 194px;
+        padding: 24px 26px;
+        border-radius: 30px;
+        background:
+          linear-gradient(135deg, #23877b 0%, var(--accent) 52%, var(--accent-deep) 100%);
+        box-shadow:
+          0 20px 48px rgba(23, 50, 45, 0.16),
+          inset 0 1px 0 rgba(255, 255, 255, 0.24);
+        color: #f8fffd;
+      }
+
+      .transform-core::before {
+        content: '';
+        position: absolute;
+        inset: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 22px;
+      }
+
+      .transform-core::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -16px;
+        width: 40px;
+        height: 40px;
+        background: var(--accent);
+        transform: translateX(-50%) rotate(45deg);
+        border-radius: 10px;
+        z-index: -1;
+      }
+
+      .figure-title {
+        font-size: clamp(1.8rem, 2.2vw, 2.45rem);
+        line-height: 1.05;
+      }
+
+      .transform-caption {
+        margin-top: 12px;
+        max-width: 18ch;
+        color: rgba(248, 255, 253, 0.78);
+        font-size: 0.95rem;
+        line-height: 1.32;
+      }
+
+      .callout-pill {
+        max-width: 236px;
+        padding: 12px 14px;
+        border-radius: 20px;
+        border: 1.5px solid rgba(29, 118, 108, 0.3);
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 16px 32px rgba(23, 50, 45, 0.08);
+        color: var(--ink);
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .output-card {
+        position: relative;
+        min-height: 334px;
+        padding: 28px 28px 24px;
+        border-radius: 28px;
+        border: 1px solid rgba(23, 50, 45, 0.1);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 251, 249, 0.98) 100%);
+        box-shadow:
+          0 20px 44px rgba(23, 50, 45, 0.09),
+          inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      }
+
+      .output-sections {
+        display: grid;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .section-row {
+        padding: 12px 14px;
+        border-radius: 16px;
+        background: linear-gradient(180deg, #f2f6f5 0%, #edf2f1 100%);
+        color: var(--ink);
+        font-size: 0.94rem;
+        font-weight: 700;
+      }
+
+      .output-note {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      .link-line {
+        position: absolute;
+        top: 52%;
+        width: 44px;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(23, 50, 45, 0.18) 0%, rgba(23, 50, 45, 0.06) 100%);
+      }
+
+      .link-line.left {
+        left: calc(33.333% - 4px);
+      }
+
+      .link-line.right {
+        right: calc(33.333% - 8px);
+      }
+
+      .segment-layout {
+        position: absolute;
+        inset: 8% 0 8% 0;
+      }
+
+      .bar-wrap {
+        position: absolute;
+        left: 2%;
+        right: 33%;
+        bottom: 18%;
+      }
+
+      .bar-label {
+        margin: 0 0 12px 4px;
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--quiet);
+      }
+
+      .visit-bar {
+        display: flex;
+        height: 214px;
+        overflow: hidden;
+        border-radius: 28px;
+        border: 1px solid rgba(23, 50, 45, 0.06);
+        box-shadow: 0 18px 40px rgba(23, 50, 45, 0.11);
+      }
+
+      .visit-segment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 20px;
+        text-align: center;
+      }
+
+      .visit-segment span {
+        max-width: 18ch;
+      }
+
+      .visit-segment.accent {
+        position: relative;
+        background: linear-gradient(135deg, #23877b 0%, var(--accent) 52%, var(--accent-deep) 100%);
+        color: #f8fffd;
+      }
+
+      .visit-segment.accent::after {
+        content: '';
+        position: absolute;
+        inset: 12px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .visit-segment.accent span {
+        font-size: 2.1rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1.02;
+      }
+
+      .visit-segment.mid {
+        background: linear-gradient(180deg, #d0d5d2 0%, #c7cdca 100%);
+        color: rgba(23, 50, 45, 0.72);
+      }
+
+      .visit-segment.light {
+        background: linear-gradient(180deg, #f3f5f4 0%, #ecefed 100%);
+        color: rgba(23, 50, 45, 0.62);
+      }
+
+      .visit-segment.mid span,
+      .visit-segment.light span {
+        font-size: 0.96rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .callout-box {
+        position: absolute;
+        top: 16%;
+        right: 4%;
+        width: 32%;
+        padding: 26px 28px 24px;
+        border: 1.5px solid rgba(29, 118, 108, 0.34);
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 16px 42px rgba(23, 50, 45, 0.1);
+      }
+
+      .callout-box::before {
+        content: '';
+        position: absolute;
+        left: -276px;
+        top: 58%;
+        width: 276px;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(29, 118, 108, 0.74) 0%, rgba(29, 118, 108, 0.18) 100%);
+      }
+
+      .callout-box::after {
+        content: '';
+        position: absolute;
+        left: -286px;
+        top: calc(58% - 6px);
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 6px rgba(29, 118, 108, 0.12);
+      }
+
+      .callout-title {
+        margin: 0 0 12px;
+        font-family: 'Space Grotesk', 'Avenir Next', sans-serif;
+        font-size: 1.85rem;
+        letter-spacing: -0.03em;
+      }
+
+      .callout-list {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .callout-list li {
+        position: relative;
+        padding-left: 18px;
+        font-size: 1.08rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .callout-list li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.5em;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: rgba(29, 118, 108, 0.9);
+      }
+
+      @media (max-width: 1200px) {
+        .app {
+          grid-template-columns: 360px minmax(0, 1fr);
+        }
+
+        .slide {
+          width: min(100%, calc(100vw - 420px));
+        }
+      }
+
+      @media (max-width: 980px) {
+        .app {
+          grid-template-columns: 1fr;
+        }
+
+        .slide {
+          width: min(100%, 980px);
+        }
+
+        .preview-shell {
+          padding-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app">
+      <aside class="sidebar">
+        <h1>Figure Studio</h1>
+        <p class="lede">
+          This is a constrained spec-to-figure renderer for deck visuals. The system is intentionally narrow: typed specs, strong archetypes, and deck-style output.
+        </p>
+
+        <section class="controls">
+          <div class="control-row">
+            <div>
+              <label for="presetSelect">Preset</label>
+              <select id="presetSelect"></select>
+            </div>
+            <div>
+              <label for="specEditor">Figure Spec JSON</label>
+              <textarea id="specEditor" spellcheck="false"></textarea>
+            </div>
+          </div>
+          <div class="button-row">
+            <button class="primary-btn" id="renderButton">Render Spec</button>
+            <button class="secondary-btn" id="loadPresetButton">Load Preset</button>
+            <button class="secondary-btn" id="formatButton">Format JSON</button>
+          </div>
+          <div class="error" id="errorBox"></div>
+        </section>
+
+        <section class="card">
+          <h2>Contract</h2>
+          <div class="contract-grid" id="contractGrid"></div>
+        </section>
+
+        <section class="card">
+          <h2>Generated Brief</h2>
+          <div class="brief" id="briefBox"></div>
+        </section>
+
+        <section class="card">
+          <h2>Why This Works</h2>
+          <div class="usage-list">
+            <div>It avoids asking a model to invent both the argument and the layout at the same time.</div>
+            <div>It forces every figure into an archetype with a clear focal point.</div>
+            <div>It separates the spec from the rendering, so we can tune the figure system once and reuse it.</div>
+            <div>It keeps the output close to deck language instead of drifting into product UI or infographic clutter.</div>
+          </div>
+        </section>
+      </aside>
+
+      <section class="preview-shell">
+        <div class="slide" id="slide">
+          <div class="slide-inner">
+            <header class="slide-header">
+              <h1 class="slide-title" id="slideTitle"></h1>
+              <p class="slide-subtitle" id="slideSubtitle"></p>
+              <div class="slide-chips" id="slideChips"></div>
+            </header>
+            <div class="figure-zone" id="figureZone"></div>
+            <div class="footnote" id="footnote"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const presets = {
+        transformation: {
+          meta: {
+            name: 'Story -> Structure Transformation',
+            archetype: 'transformation',
+            figureJob: 'Explain that the expensive work in the visit is turning messy patient story into decision-ready structure.',
+          },
+          slide: {
+            title: 'Visits start with story, not structure.',
+            subtitle: 'Clinicians spend valuable minutes turning patient story into decision-ready structure.',
+            chips: ['Conceptual figure', 'Middle step is focal point'],
+            footnote: 'Conceptual transformation, not product UI.',
+          },
+          contract: {
+            focalPoint: 'The middle transformation step and its label',
+            layout: 'Left narrative object, center transformation block, right output card, small callout attached to middle',
+            big: ['Middle label', 'Patient story object', 'Output card'],
+            quiet: ['Decorative fragments', 'Output row chrome', 'Footer note'],
+            accentUse: 'Accent only on the middle transformation object and attached callout',
+            failureMode: 'Do not make the right side feel like literal software UI or make the right side louder than the middle',
+          },
+          figure: {
+            left: {
+              label: 'Patient story',
+              fragments: [
+                '"It started a few weeks ago..."',
+                '"Worse after meals..."',
+                '"I am not sure if it is related..."',
+                '"The pain comes and goes..."',
+                '"It feels different at night..."',
+              ],
+            },
+            middle: {
+              label: 'Translate -> structure -> verify',
+              eyebrow: 'Transformation step',
+              caption: 'Necessary work that is valuable, but does not have to consume visit time.',
+              callout: 'Necessary work that does not have to consume visit time.',
+            },
+            right: {
+              label: 'Decision-ready structure',
+              sections: ['Key positives / negatives', 'Timeline', 'Questions to verify'],
+              note: 'Structured starting point for clinician review',
+            },
+          },
+        },
+        highlightedSegment: {
+          meta: {
+            name: 'Highlighted Segment / Visit Bar',
+            archetype: 'highlighted-segment',
+            figureJob: 'Show that history reconstruction is the safest and most valuable place to recover time in the visit.',
+          },
+          slide: {
+            title: 'More efficient visits will increase supply.',
+            subtitle: '',
+            chips: ['Every minute matters', 'Small per-visit gains compound'],
+            footnote: 'Illustrative breakdown, not a time-and-motion study.',
+          },
+          contract: {
+            focalPoint: 'The highlighted history segment',
+            layout: 'Header at top, two chips beneath, large visit bar centered, callout upper-right attached to the history segment',
+            big: ['The bar', 'The history segment', 'The callout title and bullets'],
+            quiet: ['The typical visit label', 'Secondary segment labels', 'Any footnote'],
+            accentUse: 'Accent only on the history segment and callout connector',
+            failureMode: 'Do not imply fake precision with over-annotated percentages or too many labels',
+          },
+          figure: {
+            barLabel: 'Typical visit',
+            segments: [
+              { label: 'History reconstruction', role: 'accent', width: 44 },
+              { label: 'Decisions + counseling', role: 'mid', width: 24 },
+              { label: 'Everything else', role: 'light', width: 32 },
+            ],
+            calloutTitle: 'Why this matters',
+            calloutBullets: [
+              'Most variable minutes of the visit',
+              'Best target for upstream prep without losing quality',
+              'Most amenable to automation',
+            ],
+          },
+        },
+      };
+
+      const presetSelect = document.getElementById('presetSelect');
+      const specEditor = document.getElementById('specEditor');
+      const renderButton = document.getElementById('renderButton');
+      const loadPresetButton = document.getElementById('loadPresetButton');
+      const formatButton = document.getElementById('formatButton');
+      const errorBox = document.getElementById('errorBox');
+      const slideTitle = document.getElementById('slideTitle');
+      const slideSubtitle = document.getElementById('slideSubtitle');
+      const slideChips = document.getElementById('slideChips');
+      const figureZone = document.getElementById('figureZone');
+      const contractGrid = document.getElementById('contractGrid');
+      const briefBox = document.getElementById('briefBox');
+      const footnote = document.getElementById('footnote');
+
+      for (const [key, preset] of Object.entries(presets)) {
+        const option = document.createElement('option');
+        option.value = key;
+        option.textContent = preset.meta.name;
+        presetSelect.append(option);
+      }
+
+      function pretty(value) {
+        return JSON.stringify(value, null, 2);
+      }
+
+      function loadPreset() {
+        const preset = presets[presetSelect.value];
+        specEditor.value = pretty(preset);
+        renderCurrent();
+      }
+
+      function clearElement(node) {
+        while (node.firstChild) {
+          node.removeChild(node.firstChild);
+        }
+      }
+
+      function renderContract(contract = {}) {
+        clearElement(contractGrid);
+        const fields = [
+          ['Focal Point', contract.focalPoint],
+          ['Layout', contract.layout],
+          ['Big', Array.isArray(contract.big) ? contract.big.join(' | ') : contract.big],
+          ['Quiet', Array.isArray(contract.quiet) ? contract.quiet.join(' | ') : contract.quiet],
+          ['Accent', contract.accentUse],
+          ['Failure Mode', contract.failureMode],
+        ];
+
+        for (const [label, value] of fields) {
+          const item = document.createElement('div');
+          item.className = 'contract-item';
+          item.innerHTML = `<strong>${label}</strong><span>${value || ''}</span>`;
+          contractGrid.append(item);
+        }
+      }
+
+      function renderBrief(spec) {
+        const lines = [
+          `Figure job`,
+          `- ${spec.meta?.figureJob || ''}`,
+          ``,
+          `Archetype`,
+          `- ${spec.meta?.archetype || ''}`,
+          ``,
+          `Focal point`,
+          `- ${spec.contract?.focalPoint || ''}`,
+          ``,
+          `Layout`,
+          `- ${spec.contract?.layout || ''}`,
+          ``,
+          `Big`,
+          `- ${(spec.contract?.big || []).join('; ')}`,
+          ``,
+          `Quiet`,
+          `- ${(spec.contract?.quiet || []).join('; ')}`,
+          ``,
+          `Accent use`,
+          `- ${spec.contract?.accentUse || ''}`,
+          ``,
+          `Failure mode`,
+          `- ${spec.contract?.failureMode || ''}`,
+        ];
+        briefBox.textContent = lines.join('\n');
+      }
+
+      function renderSlideChrome(spec) {
+        slideTitle.textContent = spec.slide?.title || '';
+        slideSubtitle.textContent = spec.slide?.subtitle || '';
+        slideSubtitle.style.display = spec.slide?.subtitle ? 'block' : 'none';
+        clearElement(slideChips);
+        for (const chipLabel of spec.slide?.chips || []) {
+          const chip = document.createElement('span');
+          chip.className = 'chip';
+          chip.textContent = chipLabel;
+          slideChips.append(chip);
+        }
+        footnote.textContent = spec.slide?.footnote || '';
+      }
+
+      function renderTransformation(spec) {
+        const layout = document.createElement('div');
+        layout.className = 'transformation-layout';
+
+        const left = document.createElement('div');
+        left.className = 'story-blob';
+        left.innerHTML = `<p class="object-label">${spec.figure.left.label}</p>`;
+        const fragments = document.createElement('div');
+        fragments.className = 'story-fragments';
+        for (const fragmentText of spec.figure.left.fragments || []) {
+          const fragment = document.createElement('div');
+          fragment.className = 'fragment';
+          fragment.textContent = fragmentText;
+          fragments.append(fragment);
+        }
+        left.append(fragments);
+
+        const middle = document.createElement('div');
+        middle.className = 'middle-stack';
+        const core = document.createElement('div');
+        core.className = 'transform-core';
+        core.innerHTML = `
+          <p class="object-label" style="color: rgba(248, 255, 253, 0.74);">${spec.figure.middle.eyebrow || 'Transformation step'}</p>
+          <h2 class="figure-title">${spec.figure.middle.label}</h2>
+          <p class="transform-caption">${spec.figure.middle.caption || ''}</p>
+        `;
+        const callout = document.createElement('div');
+        callout.className = 'callout-pill';
+        callout.textContent = spec.figure.middle.callout || '';
+        middle.append(core, callout);
+
+        const right = document.createElement('div');
+        right.className = 'output-card';
+        right.innerHTML = `<p class="object-label">${spec.figure.right.label}</p>`;
+        const sections = document.createElement('div');
+        sections.className = 'output-sections';
+        for (const row of spec.figure.right.sections || []) {
+          const section = document.createElement('div');
+          section.className = 'section-row';
+          section.textContent = row;
+          sections.append(section);
+        }
+        const note = document.createElement('div');
+        note.className = 'output-note';
+        note.textContent = spec.figure.right.note || '';
+        right.append(sections, note);
+
+        const leftLink = document.createElement('div');
+        leftLink.className = 'link-line left';
+        const rightLink = document.createElement('div');
+        rightLink.className = 'link-line right';
+
+        layout.append(left, middle, right, leftLink, rightLink);
+        figureZone.append(layout);
+      }
+
+      function renderHighlightedSegment(spec) {
+        const layout = document.createElement('div');
+        layout.className = 'segment-layout';
+
+        const barWrap = document.createElement('div');
+        barWrap.className = 'bar-wrap';
+        barWrap.innerHTML = `<p class="bar-label">${spec.figure.barLabel || ''}</p>`;
+
+        const bar = document.createElement('div');
+        bar.className = 'visit-bar';
+
+        for (const segment of spec.figure.segments || []) {
+          const segmentEl = document.createElement('div');
+          segmentEl.className = `visit-segment ${segment.role || 'light'}`;
+          segmentEl.style.flexBasis = `${segment.width || 33}%`;
+          segmentEl.innerHTML = `<span>${segment.label}</span>`;
+          bar.append(segmentEl);
+        }
+
+        const callout = document.createElement('aside');
+        callout.className = 'callout-box';
+        callout.innerHTML = `<h2 class="callout-title">${spec.figure.calloutTitle || ''}</h2>`;
+        const list = document.createElement('ul');
+        list.className = 'callout-list';
+        for (const bullet of spec.figure.calloutBullets || []) {
+          const li = document.createElement('li');
+          li.textContent = bullet;
+          list.append(li);
+        }
+        callout.append(list);
+        barWrap.append(bar);
+        layout.append(barWrap, callout);
+        figureZone.append(layout);
+      }
+
+      function renderFigure(spec) {
+        clearElement(figureZone);
+        const archetype = spec.meta?.archetype;
+        if (archetype === 'transformation') {
+          renderTransformation(spec);
+          return;
+        }
+        if (archetype === 'highlighted-segment') {
+          renderHighlightedSegment(spec);
+          return;
+        }
+        throw new Error(`Unsupported archetype: ${archetype}`);
+      }
+
+      function renderCurrent() {
+        try {
+          const spec = JSON.parse(specEditor.value);
+          errorBox.textContent = '';
+          renderSlideChrome(spec);
+          renderContract(spec.contract);
+          renderBrief(spec);
+          renderFigure(spec);
+        } catch (error) {
+          errorBox.textContent = error.message;
+        }
+      }
+
+      renderButton.addEventListener('click', renderCurrent);
+      loadPresetButton.addEventListener('click', loadPreset);
+      formatButton.addEventListener('click', () => {
+        try {
+          specEditor.value = pretty(JSON.parse(specEditor.value));
+          errorBox.textContent = '';
+        } catch (error) {
+          errorBox.textContent = error.message;
+        }
+      });
+
+      let renderTimer = null;
+      specEditor.addEventListener('input', () => {
+        clearTimeout(renderTimer);
+        renderTimer = setTimeout(renderCurrent, 220);
+      });
+
+      presetSelect.value = 'transformation';
+      loadPreset();
+    </script>
+  </body>
+</html>

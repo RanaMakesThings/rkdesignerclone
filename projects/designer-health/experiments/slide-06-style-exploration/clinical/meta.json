@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-03-29T16:20:36.722Z",
+  "slug": "slide-06-workflow-strip-clinical",
+  "family": "workflow_strip",
+  "deckId": "vox-pd-v1",
+  "theme": "vox-clinical",
+  "mode": "full-slide",
+  "title": "Vox prepares the visit before it starts.",
+  "subtitle": "Vox interviews, structures, and hands off a brief the clinician can verify and use.",
+  "specPath": "projects/designer-health/experiments/slide-06-style-exploration/specs/slide-06-workflow-strip-clinical.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical/figure.html",
+    "svg": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical/figure.svg",
+    "png": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/clinical/render-assets.json"
+  },
+  "selectedMedia": []
+}

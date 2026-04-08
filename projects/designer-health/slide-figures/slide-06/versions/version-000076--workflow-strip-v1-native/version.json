@@ -1,0 +1,14 @@
+{
+  "id": "version-000076",
+  "slideId": "slide-07",
+  "slideDir": "projects/designer-health/slide-figures/slide-06",
+  "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000076--workflow-strip-v1-native",
+  "label": "workflow-strip-v1-native",
+  "status": "archived",
+  "createdAt": "2026-03-31T21:13:43.095Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/slide-06-workflow-strip-v1"
+  ]
+}

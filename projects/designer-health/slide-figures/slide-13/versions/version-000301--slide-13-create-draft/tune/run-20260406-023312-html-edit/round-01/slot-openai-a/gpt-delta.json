@@ -1,0 +1,27 @@
+{
+  "provider": "gpt",
+  "status": "partial",
+  "summary": "The candidate did replace the blank stub with the intended ask-slide structure and the locked headline/subheader, but the execution is not presentation-ready: there are major text overlap/rendering issues, the shell/footer contract is broken, and the slide does not yet meet the clean in-family finish required for a Designer close slide.",
+  "evidence": [
+    "The locked header and subheader are present with the correct wording, and the figure follows the requested integrated logic: left hero ask card, right Build/Deploy/Validate milestone stack, and a bottom use-of-funds ribbon.",
+    "The main content visually surfaces the ask first with '$1.25M', 'Post-money SAFE', and supporting stats for hires, pilot sites, and runway, matching the brief's figure burden.",
+    "Multiple text blocks are visibly broken or overlapping: the subheader collides with the title, and body copy inside milestone cards shows duplicated/overprinted text, making sections hard to read.",
+    "The Designer shell contract is not fully preserved: the official footer logo is missing/replaced by a broken image placeholder at bottom right, even though the footer rule remains.",
+    "The slide feels less polished than adjacent official slides because of cramped spacing, oversized headline wrapping, and rendering artifacts that undermine the clinically serious tone."
+  ],
+  "nextPrompt": "Keep the current ask-slide concept, but fix all rendering and shell issues: preserve the official Designer footer logo, separate the title and subheader with proper spacing, remove all duplicate/overprinted text in the milestone cards, and tighten typography so the slide reads cleanly and presentation-ready in-family with adjacent official slides.",
+  "needsHuman": true,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate did replace the blank stub with the intended ask-slide structure and the locked headline/subheader, but the execution is not presentation-ready: there are major text overlap/rendering issues, the shell/footer contract is broken, and the slide does not yet meet the clean in-family finish required for a Designer close slide.",
+    "evidence": [
+      "The locked header and subheader are present with the correct wording, and the figure follows the requested integrated logic: left hero ask card, right Build/Deploy/Validate milestone stack, and a bottom use-of-funds ribbon.",
+      "The main content visually surfaces the ask first with '$1.25M', 'Post-money SAFE', and supporting stats for hires, pilot sites, and runway, matching the brief's figure burden.",
+      "Multiple text blocks are visibly broken or overlapping: the subheader collides with the title, and body copy inside milestone cards shows duplicated/overprinted text, making sections hard to read.",
+      "The Designer shell contract is not fully preserved: the official footer logo is missing/replaced by a broken image placeholder at bottom right, even though the footer rule remains.",
+      "The slide feels less polished than adjacent official slides because of cramped spacing, oversized headline wrapping, and rendering artifacts that undermine the clinically serious tone."
+    ],
+    "nextPrompt": "Keep the current ask-slide concept, but fix all rendering and shell issues: preserve the official Designer footer logo, separate the title and subheader with proper spacing, remove all duplicate/overprinted text in the milestone cards, and tighten typography so the slide reads cleanly and presentation-ready in-family with adjacent official slides.",
+    "needsHuman": true
+  }
+}

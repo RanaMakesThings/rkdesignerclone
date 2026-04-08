@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slide 08 Provider Matrix</title>
+    <style>
+      :root {
+        --bg: #f4f0e8;
+        --panel: #fffdf8;
+        --ink: #1f242b;
+        --muted: #69727f;
+        --line: #d8d2c7;
+        --accent: #21465f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 28px;
+        background:
+          radial-gradient(circle at top left, rgba(33,70,95,0.08), transparent 24%),
+          linear-gradient(180deg, #f8f5ef 0%, var(--bg) 100%);
+        color: var(--ink);
+        font-family: "Iowan Old Style", Georgia, serif;
+      }
+      main { max-width: 1800px; margin: 0 auto; }
+      h1,h2,h3,p { margin: 0; }
+      .hero { margin-bottom: 24px; }
+      .eyebrow {
+        color: var(--accent);
+        font: 700 12px/1.2 "Helvetica Neue", Arial, sans-serif;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+      .hero h1 { font-size: 34px; letter-spacing: -0.03em; }
+      .hero p {
+        margin-top: 10px;
+        max-width: 980px;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.5;
+      }
+      .section { margin-top: 28px; }
+      .section h2 { margin-bottom: 14px; font-size: 24px; }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .card {
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--panel);
+        box-shadow: 0 12px 30px rgba(31,36,43,0.05);
+      }
+      .card-head {
+        margin-bottom: 12px;
+      }
+      .card-head h3 { font-size: 18px; }
+      .card-head p {
+        margin-top: 4px;
+        color: var(--muted);
+        font: 500 12px/1.3 "Helvetica Neue", Arial, sans-serif;
+      }
+      .thumb {
+        display: block;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: #f3f4f6;
+        aspect-ratio: 16 / 9;
+      }
+      .thumb img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .thumb.empty {
+        display: grid;
+        place-items: center;
+        color: var(--muted);
+        font: 500 13px/1.3 "Helvetica Neue", Arial, sans-serif;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .links a {
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        color: var(--accent);
+        text-decoration: none;
+        font: 600 12px/1.2 "Helvetica Neue", Arial, sans-serif;
+        background: rgba(255,255,255,0.75);
+      }
+      @media (max-width: 1400px) {
+        .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media (max-width: 800px) {
+        .grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Designer Health / Slide 08 / Provider Matrix</div>
+        <h1>Three Specs Across Four Generation Branches</h1>
+        <p>
+          This matrix runs the three detailed signal-report directions across Gemini image,
+          Gemini HTML, OpenAI HTML, and Anthropic HTML using the same screenshot family anchor.
+        </p>
+      </section>
+      
+        <section class="section">
+          <h2>Anthropic Vertical</h2>
+          <div class="grid">
+            
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>Anthropic Vertical</h3>
+          <p>Gemini Image</p>
+        </div>
+      </div>
+      <a class="thumb" href="./variants/anthropic-vertical/gemini-image/image-01.jpg"><img src="./variants/anthropic-vertical/gemini-image/image-01.jpg" alt="Anthropic Vertical Gemini Image preview" /></a>
+      <div class="links">
+        <a href="./variants/anthropic-vertical/gemini-image/prompt.txt">prompt</a>
+        <a href="./variants/anthropic-vertical/gemini-image/response.json">response.json</a>
+        
+        <a href="./variants/anthropic-vertical/gemini-image/meta.json">meta</a>
+      </div>
+    </article>
+  
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>Anthropic Vertical</h3>
+          <p>Gemini HTML</p>
+        </div>
+      </div>
+      <a class="thumb" href="./variants/anthropic-vertical/gemini-html/preview.png"><img src="./variants/anthropic-vertical/gemini-html/preview.png" alt="Anthropic Vertical Gemini HTML preview" /></a>
+      <div class="links">
+        <a href="./variants/anthropic-vertical/gemini-html/prompt.txt">prompt</a>
+        <a href="./variants/anthropic-vertical/gemini-html/response.txt">response.txt</a>
+        <a href="./variants/anthropic-vertical/gemini-html/generated.html">html</a>
+        <a href="./variants/anthropic-vertical/gemini-html/meta.json">meta</a>
+      </div>
+    </article>
+  
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>Anthropic Vertical</h3>
+          <p>OpenAI HTML</p>
+        </div>
+      </div>
+      <a class="thumb" href="./variants/anthropic-vertical/openai-html/preview.png"><img src="./variants/anthropic-vertical/openai-html/preview.png" alt="Anthropic Vertical OpenAI HTML preview" /></a>
+      <div class="links">
+        <a href="./variants/anthropic-vertical/openai-html/prompt.txt">prompt</a>
+        <a href="./variants/anthropic-vertical/openai-html/response.txt">response.txt</a>
+        <a href="./variants/anthropic-vertical/openai-html/generated.html">html</a>
+        <a href="./variants/anthropic-vertical/openai-html/meta.json">meta</a>
+      </div>
+    </article>
+  
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>Anthropic Vertical</h3>
+          <p>Anthropic HTML</p>
+        </div>
+      </div>
+      <a class="thumb" href="./variants/anthropic-vertical/anthropic-html/preview.png"><img src="./variants/anthropic-vertical/anthropic-html/preview.png" alt="Anthropic Vertical Anthropic HTML preview" /></a>
+      <div class="links">
+        <a href="./variants/anthropic-vertical/anthropic-html/prompt.txt">prompt</a>
+        <a href="./variants/anthropic-vertical/anthropic-html/response.txt">response.txt</a>
+        <a href="./variants/anthropic-vertical/anthropic-html/generated.html">html</a>
+        <a href="./variants/anthropic-vertical/anthropic-html/meta.json">meta</a>
+      </div>
+    </article>
+  
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Gemini Two-Column</h2>
+          <div class="grid">
+            
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>Gemini Two-Column</h3>
+          <p>Gemini Image</p>
+        </div>
+      </div>
+      <a class="thumb" href="./variants/gemini-two-column/gemini-image/image-01.jpg"><img src="./variants/gemini-two-column/gemini-image/image-01.jpg" alt="Gemini Two-Column Gemini Image preview" /></a>
+      <div class="links">
+        <a href="./variants/gemini-two-column/gemini-image/prompt.txt">prompt</a>
+        <a href="./variants/gemini-two-column/gemini-image/response.json">response.json</a>
+        
+        <a href="./variants/gemini-two-column/gemini-image/meta.json">meta</a>
+      </div>
+    </article>
+  
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>Gemini Two-Column</h3>
+          <p>Gemini HTML</p>
+        </div>
+      </div>
+      <a class="thumb" href="./variants/gemini-two-column/gemini-html/preview.png"><img src="./variants/gemini-two-column/gemini-html/preview.png" alt="Gemini Two-Column Gemini HTML preview" /></a>
+      <div class="links">
+        <a href="./variants/gemini-two-column/gemini-html/prompt.txt">prompt</a>
+        <a href="./variants/gemini-two-column/gemini-html/response.txt">response.txt</a>
+        <a href="./variants/gemini-two-column/gemini-html/generated.html">html</a>
+        <a href="./variants/gemini-two-column/gemini-html/meta.json">meta</a>
+      </div>
+    </article>
+  
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>Gemini Two-Column</h3>
+          <p>OpenAI HTML</p>
+        </div>
+      </div>
+      <a class="thumb" href="./variants/gemini-two-column/openai-html/preview.png"><img src="./variants/gemini-two-column/openai-html/preview.png" alt="Gemini Two-Column OpenAI HTML preview" /></a>
+      <div class="links">
+        <a href="./variants/gemini-two-column/openai-html/prompt.txt">prompt</a>
+        <a href="./variants/gemini-two-column/openai-html/response.txt">response.txt</a>
+        <a href="./variants/gemini-two-column/openai-html/generated.html">html</a>
+        <a href="./variants/gemini-two-column/openai-html/meta.json">meta</a>
+      </div>
+    </article>
+  
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>Gemini Two-Column</h3>
+          <p>Anthropic HTML</p>
+        </div>
+      </div>
+      <a class="thumb" href="./variants/gemini-two-column/anthropic-html/preview.png"><img src="./variants/gemini-two-column/anthropic-html/preview.png" alt="Gemini Two-Column Anthropic HTML preview" /></a>
+      <div class="links">
+        <a href="./variants/gemini-two-column/anthropic-html/prompt.txt">prompt</a>
+        <a href="./variants/gemini-two-column/anthropic-html/response.txt">response.txt</a>
+        <a href="./variants/gemini-two-column/anthropic-html/generated.html">html</a>
+        <a href="./variants/gemini-two-column/anthropic-html/meta.json">meta</a>
+      </div>
+    </article>
+  
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>GPT Hybrid</h2>
+          <div class="grid">
+            
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>GPT Hybrid</h3>
+          <p>Gemini Image</p>
+        </div>
+      </div>
+      <a class="thumb" href="./variants/gpt-hybrid/gemini-image/image-01.jpg"><img src="./variants/gpt-hybrid/gemini-image/image-01.jpg" alt="GPT Hybrid Gemini Image preview" /></a>
+      <div class="links">
+        <a href="./variants/gpt-hybrid/gemini-image/prompt.txt">prompt</a>
+        <a href="./variants/gpt-hybrid/gemini-image/response.json">response.json</a>
+        
+        <a href="./variants/gpt-hybrid/gemini-image/meta.json">meta</a>
+      </div>
+    </article>
+  
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>GPT Hybrid</h3>
+          <p>Gemini HTML</p>
+        </div>
+      </div>
+      <a class="thumb" href="./variants/gpt-hybrid/gemini-html/preview.png"><img src="./variants/gpt-hybrid/gemini-html/preview.png" alt="GPT Hybrid Gemini HTML preview" /></a>
+      <div class="links">
+        <a href="./variants/gpt-hybrid/gemini-html/prompt.txt">prompt</a>
+        <a href="./variants/gpt-hybrid/gemini-html/response.txt">response.txt</a>
+        <a href="./variants/gpt-hybrid/gemini-html/generated.html">html</a>
+        <a href="./variants/gpt-hybrid/gemini-html/meta.json">meta</a>
+      </div>
+    </article>
+  
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>GPT Hybrid</h3>
+          <p>OpenAI HTML</p>
+        </div>
+      </div>
+      <a class="thumb" href="./variants/gpt-hybrid/openai-html/preview.png"><img src="./variants/gpt-hybrid/openai-html/preview.png" alt="GPT Hybrid OpenAI HTML preview" /></a>
+      <div class="links">
+        <a href="./variants/gpt-hybrid/openai-html/prompt.txt">prompt</a>
+        <a href="./variants/gpt-hybrid/openai-html/response.txt">response.txt</a>
+        <a href="./variants/gpt-hybrid/openai-html/generated.html">html</a>
+        <a href="./variants/gpt-hybrid/openai-html/meta.json">meta</a>
+      </div>
+    </article>
+  
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h3>GPT Hybrid</h3>
+          <p>Anthropic HTML</p>
+        </div>
+      </div>
+      <a class="thumb" href="./variants/gpt-hybrid/anthropic-html/preview.png"><img src="./variants/gpt-hybrid/anthropic-html/preview.png" alt="GPT Hybrid Anthropic HTML preview" /></a>
+      <div class="links">
+        <a href="./variants/gpt-hybrid/anthropic-html/prompt.txt">prompt</a>
+        <a href="./variants/gpt-hybrid/anthropic-html/response.txt">response.txt</a>
+        <a href="./variants/gpt-hybrid/anthropic-html/generated.html">html</a>
+        <a href="./variants/gpt-hybrid/anthropic-html/meta.json">meta</a>
+      </div>
+    </article>
+  
+          </div>
+        </section>
+    </main>
+  </body>
+</html>

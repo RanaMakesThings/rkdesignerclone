@@ -1,0 +1,14 @@
+{
+  "id": "version-000049",
+  "slideId": "slide-11",
+  "slideDir": "projects/designer-health/slide-figures/slide-11",
+  "dir": "projects/designer-health/slide-figures/slide-11/versions/version-000049--claude-ideation",
+  "label": "claude-ideation",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:30.058Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-11/claude-ideation"
+  ]
+}

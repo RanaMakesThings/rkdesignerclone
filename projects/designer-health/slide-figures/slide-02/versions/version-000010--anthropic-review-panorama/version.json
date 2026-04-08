@@ -1,0 +1,14 @@
+{
+  "id": "version-000010",
+  "slideId": "slide-02",
+  "slideDir": "projects/designer-health/slide-figures/slide-02",
+  "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000010--anthropic-review-panorama",
+  "label": "anthropic-review-panorama",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.438Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-02/anthropic-review-panorama"
+  ]
+}

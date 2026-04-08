@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-03-30T02:25:18.702Z",
+  "slug": "slide-02-wait-times-shortage-banner",
+  "family": "trend_breakout_banner",
+  "deckId": "designer-health",
+  "theme": "vox",
+  "mode": "full-slide",
+  "title": "Demand is outpacing clinical capacity.",
+  "subtitle": "",
+  "specPath": "projects/designer-health/figures/specs/slide-02-wait-times-shortage-banner.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/figure.html",
+    "svg": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/figure.svg",
+    "png": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/render-assets.json"
+  },
+  "selectedMedia": []
+}

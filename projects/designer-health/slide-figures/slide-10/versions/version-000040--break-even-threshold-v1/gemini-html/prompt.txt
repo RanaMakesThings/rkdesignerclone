@@ -1,0 +1,40 @@
+Generate a single self-contained HTML document for a 16:9 investor-deck slide.
+
+Slide header:
+Recovered visit time creates real capacity.
+
+Slide subheader:
+When recovered minutes become completed visits, the impact is meaningful.
+
+Strategic job:
+Frame the economics around the practical monthly break-even threshold without
+losing the annual capacity story.
+
+Use these exact anchors:
+- ~$917 / month break-even spend / provider
+- +1 visit / provider / day
+- $11,000 / year
+- 220 clinic days
+- $125 / visit
+- 40% contribution margin
+
+Direction:
+- one dominant threshold object
+- the monthly break-even number should dominate first
+- the annual contribution and one-added-visit logic must still be clearly visible
+- assumptions should stay quiet
+- any range check must be tiny and subordinate
+
+Style:
+- premium investor-deck feel
+- quiet white background
+- restrained green accent
+- clean editorial composition
+
+Do not:
+- turn this into the pricing slide
+- hide the annual economics
+- use a spreadsheet table
+- use dashboard chrome
+
+Return only the HTML document with inline CSS and any inline SVG needed.

@@ -1,0 +1,14 @@
+{
+  "id": "version-000071",
+  "slideId": "slide-01",
+  "slideDir": "projects/designer-health/slide-figures/slide-01",
+  "dir": "projects/designer-health/slide-figures/slide-01/versions/version-000071--one-human-story-to-structure",
+  "label": "one-human-story-to-structure",
+  "status": "archived",
+  "createdAt": "2026-03-31T21:13:43.032Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/slide-01-one-human-story-to-structure"
+  ]
+}

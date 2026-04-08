@@ -1,0 +1,26 @@
+## 1. Verdict
+
+This figure is mostly working but the handoff brief addition creates unnecessary visual noise and semantic confusion that weakens the clean four-step narrative you're trying to establish.
+
+## 2. What works
+
+• The four-step horizontal flow reads clearly and feels appropriately clinical
+• Structure maintains visual prominence with the green highlight and detailed content breakdown
+• The overall restraint and spacing keeps it feeling premium rather than cluttered
+
+## 3. What is broken
+
+• The handoff brief duplicates "Brief prepared for handoff" that's already shown in the Structure step
+• Visual hierarchy is now confused—both Structure and the floating handoff card compete for attention
+• The handoff card breaks the clean four-column grid rhythm
+• "Brief prepared for handoff" and the actual brief preview show the same semantic object twice
+• The floating card positioning makes the flow feel less linear and more scattered
+• Text hierarchy within Verify section is now competing with the handoff card elements
+
+## 4. Is the handoff card necessary?
+
+No. The handoff is already clearly communicated by "Brief prepared for handoff" in the Structure step and "view handoff" in the Verify step. The floating card adds a redundant visual element that breaks your clean four-step flow without adding meaningful information.
+
+## 5. Best next move
+
+Remove the handoff brief card entirely and let the existing Structure → Verify transition carry the handoff concept. If you need to show brief content, save that reveal for slide 7. This keeps your four-step flow intact, maintains Structure as the visual anchor, and preserves the clean grid that makes this workflow feel credible and premium.

@@ -1,0 +1,14 @@
+{
+  "id": "version-000257",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000257--slide-06-right-payoff-gemini-structured-slate-a",
+  "label": "slide-06-right-payoff-gemini-structured-slate-a",
+  "status": "archived",
+  "createdAt": "2026-04-03T20:46:08.776Z",
+  "sourceKind": "right-payoff-ideation",
+  "baseVersionId": "version-000244",
+  "legacySourcePaths": [
+    "projects/designer-health/experiments/slide-06-right-payoff-ideation-2026-04-03/gemini/structured-slate-a"
+  ]
+}

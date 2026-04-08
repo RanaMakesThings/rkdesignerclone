@@ -1,0 +1,25 @@
+{
+  "id": "version-000187",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000187--slide-06-fresh-signal-gate-openai-editorial-baseline-graphic-000145",
+  "label": "slide-06-fresh-signal-gate-openai-editorial-baseline-graphic-000145",
+  "status": "archived",
+  "createdAt": "2026-04-03T04:37:04.385Z",
+  "sourceKind": "presentation-image-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/presentation-images/vox-slide6-fresh-signal-gate-synthesis-2026-04-03/openai/version-04--editorial-baseline",
+    "output/figures/presentation-images/vox-slide6-fresh-signal-gate-synthesis-2026-04-03/openai/version-04--editorial-baseline/image-01.png"
+  ],
+  "runId": "graphic-batch-000030",
+  "attempt": 4,
+  "sourceGraphicId": "graphic-000145",
+  "sourceBatchId": "graphic-batch-000030",
+  "sourceBatchSlug": "vox-slide6-fresh-signal-gate-synthesis-2026-04-03",
+  "sourceProvider": "openai",
+  "sourceVariantId": "v01-editorial",
+  "sourceVariantLabel": "Editorial Baseline",
+  "sourcePath": "output/figures/presentation-images/vox-slide6-fresh-signal-gate-synthesis-2026-04-03/openai/version-04--editorial-baseline",
+  "sourceImagePath": "output/figures/presentation-images/vox-slide6-fresh-signal-gate-synthesis-2026-04-03/openai/version-04--editorial-baseline/image-01.png"
+}

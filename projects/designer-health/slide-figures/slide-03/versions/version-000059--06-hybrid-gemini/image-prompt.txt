@@ -1,0 +1,30 @@
+Create a 16:9 healthcare investor pitch-deck slide mockup for Vox.
+
+Use the attached reference images for visual family and structure. One reference is the current official slide 03. The second is a tighter hybrid callback/payoff composition.
+
+Goal:
+Show that story reconstruction gets smaller, the saved piece remains visible, and repeated across the day it creates one additional visit.
+
+Composition:
+- Large anatomy bar at top as the main callback anchor
+- Bottom left: compact mechanism subset
+  - before visit and after visit
+  - only the blue story segment shrinks
+  - dashed “time saved” block to the right
+  - subtle inward arrows signaling compression
+- Bottom right: a clearer 5-visits-to-6-visits payoff block
+  - explicit before/after state labels
+  - top row is today
+  - bottom row is with Vox prep
+  - green new visit at the end
+
+Constraints:
+- Premium editorial slide, not UI
+- Calm off-white background
+- Restrained blue / gray / green palette
+- Strong typography, Montserrat feel
+- Avoid clutter
+- Make the mechanism and payoff legible in under 3 seconds
+- Do not imply reduced care quality
+
+This should feel like a sharper, more elegant evolution of the reference hybrid, not a generic redesign.

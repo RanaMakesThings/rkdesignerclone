@@ -1,0 +1,54 @@
+Generate a self-contained 1920x1080 HTML pitch-deck slide mockup for Vox.
+
+Use the attached reference image as the starting point. The current composition is directionally useful, but it is not yet matching the intended picture in the user’s head.
+
+What the user wants:
+- Keep the large anatomy bar on top as the main callback anchor.
+- Do NOT just recreate the whole previous slide smaller.
+- The bottom half should split into two distinct ideas:
+  1. Bottom-left: a subset callback showing one visit becoming more efficient.
+  2. Bottom-right: a compressed but clear before/after payoff where 5 visits becomes 6.
+
+Important intent:
+The bottom-left should feel like a reminder of the mechanism, not a second full explainer slide.
+The bottom-right should feel like the consequence of that mechanism.
+
+Exact composition target:
+- Top:
+  - headline: More efficient visits will increase supply.
+  - subheader: Small per-visit gains compound.
+  - one large visit anatomy bar, similar scale to the reference
+  - keep the bracketed “most variable minutes” logic under the blue story-reconstruction portion
+
+- Bottom-left (roughly one-third of the lower area):
+  - title can be something like “More efficient visit” or “Story time gets smaller”
+  - show one before visit and one after visit
+  - in the after version, the story reconstruction section should get even smaller than in the reference image
+  - add subtle inward arrows or shrink cues on the blue segment so it is obvious what changed
+  - place a dashed “Time saved” block to the right of the smaller after bar
+  - keep this compact and elegant; it should read like an extracted subset callback
+  - avoid too much explanatory text
+
+- Bottom-right:
+  - show the payoff as an explicit before/after state
+  - top row is “Today” or “Current day” with 5 visits
+  - bottom row is “With Vox prep” with 5 shorter visits plus one green “New visit”
+  - the whole payoff object should be horizontally tighter than the current reference image
+  - make it obvious that this is the same day, but now one extra slot fits
+  - labels should be stronger and clearer than the current reference image
+
+Key communication goals:
+- The viewer should immediately understand what changed, where the saved time came from, and how that becomes one extra visit.
+- Do not imply rushed care or lower-quality exam/counseling.
+- Keep physical exam and counseling visually protected.
+
+Design constraints:
+- Premium editorial healthcare investor deck
+- Calm off-white background
+- Restrained blue / gray / green palette
+- Montserrat-like typography feel
+- No dashboard UI
+- No cluttered legends
+- No generic card-grid design
+
+Please produce the strongest version of that exact hybrid structure, with excellent composition and hierarchy.

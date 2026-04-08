@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAEM CustomGPT Creation - Slide 02</title>
+    <style>
+      :root {
+        --navy: #0e2841;
+        --teal: #156082;
+        --orange: #e97132;
+        --ink: #143247;
+        --muted: #627c8e;
+        --line: #d9e4ea;
+        --paper: #f5f8fb;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 85% 15%, rgba(233, 113, 50, 0.08), transparent 22%),
+          linear-gradient(180deg, #fbfdff 0%, #eef4f8 100%);
+      }
+
+      body {
+        padding: 70px 82px 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .header {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 40px;
+        align-items: end;
+      }
+
+      .eyebrow {
+        margin-bottom: 16px;
+        font-size: 23px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--teal);
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 74px;
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+        color: var(--navy);
+      }
+
+      .subhead {
+        margin: 0;
+        max-width: 920px;
+        font-size: 31px;
+        line-height: 1.32;
+        color: #446275;
+      }
+
+      .takeaway {
+        padding: 22px 26px;
+        border-radius: 24px;
+        background: rgba(21, 96, 130, 0.08);
+        border: 1px solid rgba(21, 96, 130, 0.12);
+        font-size: 25px;
+        line-height: 1.35;
+        color: var(--navy);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 0.94fr 1.06fr;
+        gap: 30px;
+        flex: 1;
+      }
+
+      .roles {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .role-card {
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(14, 40, 65, 0.1);
+        box-shadow: 0 18px 44px rgba(14, 40, 65, 0.07);
+        padding: 24px 26px;
+        display: grid;
+        grid-template-columns: 124px 1fr;
+        gap: 18px;
+        align-items: center;
+      }
+
+      .role-badge {
+        width: 124px;
+        height: 124px;
+        border-radius: 28px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        font-size: 22px;
+        line-height: 1.15;
+        font-weight: 800;
+        color: var(--white);
+        background: var(--navy);
+      }
+
+      .role-card:nth-child(2) .role-badge {
+        background: var(--teal);
+      }
+
+      .role-card:nth-child(3) .role-badge {
+        background: var(--orange);
+      }
+
+      .role-card h2 {
+        margin: 0 0 6px;
+        font-size: 34px;
+        color: var(--navy);
+      }
+
+      .role-card p {
+        margin: 0 0 14px;
+        font-size: 22px;
+        line-height: 1.4;
+        color: #526d7e;
+      }
+
+      .mini-chips {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .mini-chips span {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        font-size: 18px;
+        color: #456274;
+      }
+
+      .problem-board {
+        border-radius: 34px;
+        padding: 30px 30px 24px;
+        background:
+          linear-gradient(180deg, rgba(14, 40, 65, 0.98), rgba(21, 96, 130, 0.96));
+        box-shadow: 0 28px 64px rgba(14, 40, 65, 0.18);
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        gap: 22px;
+        color: var(--white);
+      }
+
+      .problem-board h2 {
+        margin: 0;
+        font-size: 31px;
+        letter-spacing: 0.02em;
+      }
+
+      .question-cloud {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        align-content: start;
+      }
+
+      .question {
+        padding: 18px 20px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.11);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        backdrop-filter: blur(10px);
+      }
+
+      .question strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #bfe7fb;
+      }
+
+      .question p {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.35;
+      }
+
+      .bottom-strip {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 14px;
+      }
+
+      .metric {
+        padding: 18px 18px 16px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .metric .label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #bfe7fb;
+      }
+
+      .metric .value {
+        font-size: 30px;
+        line-height: 1.16;
+        font-weight: 800;
+      }
+
+      .footer {
+        font-size: 22px;
+        line-height: 1.4;
+        color: #4d6879;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="header">
+      <div>
+        <div class="eyebrow">Why this matters</div>
+        <h1>Policy questions keep landing on the same people.</h1>
+        <p class="subhead">
+          Residency leaders and chiefs repeatedly search static documents for
+          operational answers that should be fast, consistent, and source-bounded.
+        </p>
+      </div>
+      <div class="takeaway">
+        This is not a novelty demo. It is a repeated administrative workflow
+        problem that creates delay, inconsistency, and interruption.
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="roles">
+        <article class="role-card">
+          <div class="role-badge">Program<br />Director</div>
+          <div>
+            <h2>Decision bottleneck</h2>
+            <p>Policy interpretation requests arrive repeatedly instead of once.</p>
+            <div class="mini-chips">
+              <span>leave</span>
+              <span>jeopardy</span>
+              <span>moonlighting</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="role-card">
+          <div class="role-badge">Chief<br />Resident</div>
+          <div>
+            <h2>Operational interruption</h2>
+            <p>Chiefs keep translating policy PDFs into real-time coverage answers.</p>
+            <div class="mini-chips">
+              <span>schedule swaps</span>
+              <span>sick call</span>
+              <span>backup coverage</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="role-card">
+          <div class="role-badge">Program<br />Coordinator</div>
+          <div>
+            <h2>Repeated manual lookup</h2>
+            <p>Static documents are available, but fast retrieval still depends on people.</p>
+            <div class="mini-chips">
+              <span>handbook</span>
+              <span>rotation rules</span>
+              <span>forms</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <aside class="problem-board">
+        <h2>The same source files still generate the same question loop</h2>
+
+        <div class="question-cloud">
+          <div class="question">
+            <strong>Question 1</strong>
+            <p>Can I switch this shift if I am post-call the next morning?</p>
+          </div>
+          <div class="question">
+            <strong>Question 2</strong>
+            <p>Where is the moonlighting approval process written down?</p>
+          </div>
+          <div class="question">
+            <strong>Question 3</strong>
+            <p>How many vacation days can be used during an elective block?</p>
+          </div>
+          <div class="question">
+            <strong>Question 4</strong>
+            <p>What is the escalation path if jeopardy coverage falls through?</p>
+          </div>
+        </div>
+
+        <div class="bottom-strip">
+          <div class="metric">
+            <span class="label">Input</span>
+            <span class="value">Static PDFs and policy documents</span>
+          </div>
+          <div class="metric">
+            <span class="label">Current state</span>
+            <span class="value">Manual search and repeated interpretation</span>
+          </div>
+          <div class="metric">
+            <span class="label">Opportunity</span>
+            <span class="value">Faster first-pass answers with clear source boundaries</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      The core pain point is operational: the answer often already exists, but the
+      retrieval path is too slow and too person-dependent.
+    </footer>
+  </body>
+</html>

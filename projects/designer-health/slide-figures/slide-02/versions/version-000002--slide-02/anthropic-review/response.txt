@@ -1,0 +1,34 @@
+## 1. Overall Verdict
+The slide carries strong data and a clear thesis, but the layout fractures attention across three competing zones (trend line, specialty breakout, HPSA banner) without a clear reading order. A viewer reads the title, then stalls deciding where to look next. The urgency the data deserves is partially lost to visual fragmentation and underweight hierarchy.
+
+---
+
+## 2. Top Issues
+
+**1. The HPSA banner is visually orphaned (highest severity)**
+The "1 in 4+" stat is the most emotionally striking number on the slide, but it sits below the chart in a flat, low-contrast box with no visual weight to match its importance. It reads as a footnote rather than a co-equal proof point, breaking the "one fast read" goal.
+
+**2. The trend line and specialty breakout compete as equals (medium severity)**
+Both panels sit side-by-side at nearly identical size and tonal weight. Neither dominates. The eye has no instruction on which to read first, so the logical flow—"waits are growing → here's where it's worst"—never fires automatically.
+
+**3. "31 days" callout floats without anchoring to the line's endpoint (medium severity)**
+The pill badge and large numeral appear center-top, spatially detached from the 2025 data point they describe. A viewer must consciously connect them rather than reading the annotation as part of the chart.
+
+---
+
+## 3. Exact Fixes
+
+- **Anchor the HPSA banner visually:** Increase the box contrast (darker border or a tinted background one step stronger), enlarge "1 in 4+" to match or exceed the "31 days" type size, and add a thin top rule in the accent color to signal it is a headline stat, not supporting copy.
+
+- **Create explicit reading order between the two panels:** Make the trend chart clearly primary by giving it ~60% of the horizontal space; shrink the specialty breakout to ~40%. Add a small directional connector (arrow or label bridge: "Where waits are longest →") to explicitly link the two panels as cause → detail.
+
+- **Attach the "31 days" callout to the 2025 endpoint:** Move the badge directly adjacent to the terminal data point on the line, or run a short leader line from the numeral to the dot. Remove the floating center position so the annotation reads as part of the chart, not a separate element.
+
+---
+
+## 4. Do Not Change
+
+- The three-object family (trend line + specialty breakout + HPSA banner) is the right structure—it proves the thesis at three scales simultaneously.
+- The teal/dark-green color palette is cohesive and accessible; the bar chart colors in the breakout correctly rank without distraction.
+- The footnote sourcing at the bottom is appropriately small and complete; leave its position and size untouched.
+- The title copy is direct and punchy—do not soften or restructure it.

@@ -1,0 +1,61 @@
+Create one polished 16:9 investor-deck figure for Designer Health slide 8.
+
+This should be a single central clinician-facing artifact on a quiet,
+warm-neutral background. It should feel like a premium two-column clinical
+workspace, but still one unified report object.
+
+Use the attached screenshot as a strong visual-family reference:
+- preserve the left/right split
+- preserve the row-based extraction feel
+- preserve the ranked candidate-card feel
+- refine it into something calmer and more premium
+
+Locked direction:
+- one shared white card
+- internal vertical divider
+- left = patient history and status
+- right = considerations to confirm
+
+Visual requirements:
+- no browser chrome
+- no raw trace panels
+- no giant tabs
+- no bright consumer-app colors
+- no noisy borders around every row
+
+Left side should show:
+- social context
+- reported symptoms
+- key negatives
+- evidence tokens
+- soft state pills
+
+Right side should show:
+- `Considerations to Confirm`
+- three candidate blocks
+- small confidence pills
+- small typographic reasoning glyphs:
+  - green up arrow
+  - red down arrow
+  - amber hollow circle
+- one highest-yield next-question block
+
+Use the cough case:
+- care seeking prompted by spouse
+- cough
+- cough pattern with intermittent bursts
+- worse at night
+- worse when lying down
+- scratchy throat
+- sputum mostly yellow
+- hemoptysis absent
+
+Use three considerations:
+- acute bronchitis
+- community-acquired pneumonia
+- GERD-induced cough or post-viral cough as the third contrast
+
+Important for image generation:
+- focus on artifact hierarchy, clean typography, and realistic UI geometry
+- if body text becomes unreliable, prioritize section labels, pills, card
+  structure, and visible reasoning glyphs

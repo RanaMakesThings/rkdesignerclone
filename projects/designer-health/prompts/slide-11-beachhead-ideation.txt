@@ -1,0 +1,67 @@
+You are helping refine one investor-deck slide concept.
+
+This slide is not a TAM slide and not a specialty-selection slide.
+
+Its job is to define the beachhead as an operating profile:
+
+- visible visit pressure
+- simple buying
+- low deployment friction
+
+The key strategic point:
+
+- the wedge is not "primary care"
+- the wedge is any setting where Vox can prove throughput impact quickly
+- example settings may appear, but only as examples of the profile
+
+Current on-slide copy:
+
+Header:
+Start where throughput proof is fastest.
+
+Subheader:
+The best first market is any setting with visible visit pressure, simple
+buying, and low deployment friction.
+
+Potential hero label:
+High-throughput groups with simple deployment
+
+Potential small support line:
+A profile, not a specialty
+
+The slide also needs a compact panel titled:
+What the first pilot must prove
+
+With rows like:
+- patient completion before visit
+- clinician verification time
+- re-asking reduction in the room
+- visit throughput or schedule lift
+
+Please answer these questions:
+
+1. What are the best 3 visual concept families for this slide?
+2. How should the slide make the "profile, not specialty" point obvious
+   without becoming abstract?
+3. Should example settings appear as:
+   - a faint row
+   - quiet satellites around the hero
+   - a small labeled footer group
+   - something else?
+4. For each concept family, say:
+   - what the hero object is
+   - where the three qualifying conditions go
+   - where the proof panel goes
+   - why it works
+   - main risk
+5. Which single concept family would you choose first for an investor deck,
+   and why?
+
+Priorities:
+
+- premium, sparse, investor-deck appropriate
+- obvious at a glance
+- no funnel or filter clichés
+- no consulting matrix
+- no market-size clutter
+- cross-specialty point must stay intact

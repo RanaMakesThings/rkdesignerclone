@@ -1,0 +1,804 @@
+## 1. Locked Direction
+
+We should lock this into **one report-like clinical brief** with **three coordinated zones inside a single artifact**:
+
+1. **Primary structured brief** on the left: what the system thinks it knows, in clinician-readable language.
+2. **Restrained reasoning rail** on the right: top differentials, why they are being considered, what weakens them, and the next best question.
+3. **Timeline strip** at the bottom: a compact chronology that anchors the story and prevents the artifact from feeling like a static extraction dump.
+
+So: **not three separate concepts**, and also **not a dashboard**.  
+This should feel like **one page handed to a clinician before they walk into the room**.
+
+The user’s screenshot is directionally right because it already has:
+
+- a “what we know” brief
+- a reasoning area with differential logic
+- evidence trace references
+
+But we need to make it **more report-like, more clinically legible, and less UI-widget-y**.
+
+The key product idea remains:
+
+> **Scan, verify, decide.**  
+> The artifact scans quickly, allows verification through evidence pointers, and supports a decision without pretending the machine has made it.
+
+---
+
+## 2. What Survives From The Screenshot
+
+Several things in the screenshot are strong and should stay because they already support the “structured brief” idea.
+
+### A. The two-column logic survives
+Not as a dashboard split, but as a **primary brief + secondary reasoning rail**.  
+The asymmetry matters:
+
+- left = larger, calmer, more narrative-structured
+- right = narrower, more analytical, clearly subordinate
+
+The screenshot already implies that hierarchy, and we should preserve it.
+
+### B. The “What We Know” framing survives
+That phrase is very good. It is plain-English, clinician-safe, and appropriately humble.  
+It implies these are **current structured findings**, not truth.
+
+I would keep a header like:
+
+- **What We Know**
+- microcopy: **Structured feature state with source evidence**
+
+That’s better than more technical labels like “Extracted findings” or “Parsed symptom matrix.”
+
+### C. Category grouping survives
+The small uppercase category headers are useful because they give the left side a clinical charting feel.
+
+Those headers should stay, but become more clinically intentional. Specifically:
+
+- Social context
+- Symptoms
+- Key negatives
+- Timeline
+- Workup
+- Uncertainties
+
+The screenshot currently has social context and symptoms; we should extend the system consistently.
+
+### D. Row-level structure survives
+The row model in the screenshot is fundamentally good:
+
+- label
+- optional value line
+- evidence line
+- status pill
+
+That anatomy is worth keeping because it gives consistent scan behavior.
+
+### E. Differential card anatomy survives
+The screenshot’s candidate cards already contain the right ingredients:
+
+- rank
+- diagnosis title
+- confidence
+- movement
+- supports / against / unknowns
+
+We should keep that anatomy, but tighten the semantics and visual language.
+
+### F. Evidence trace survives
+The screenshot’s “Evidence: turn-002” idea should stay, because it reinforces clinician verification.  
+But it needs to be softened and made less visually noisy.
+
+### G. Confidence survives
+A compact confidence label like **high / medium / low** is useful, so long as it is visually de-emphasized and clearly subordinate to the diagnosis title.
+
+---
+
+## 3. What Gets Softened Or Deleted
+
+This is where the screenshot needs the most refinement.
+
+### A. The artifact should be softened away from “product dashboard”
+Right now the screenshot reads a bit like:
+
+- left pane widget
+- right pane widget
+- repeated bordered boxes
+
+That risks making the slide feel like a software control surface instead of a clinical brief.
+
+So we should soften:
+
+- hard card boundaries
+- too many repeated boxes
+- strong panel chrome
+- symmetric layout weight
+
+### B. Over-boxing should be reduced
+Not every row needs to feel like its own card.  
+Rows can still be bordered, but more lightly, with:
+
+- subtle separators
+- low-contrast outlines
+- occasional grouped containers instead of a box around every single item
+
+If every unit is boxed heavily, the page looks mechanical and busy.
+
+### C. Movement chips in their current form should change
+`SAME 1→1` is too product-y and too ranking-engine-ish for this artifact.  
+It exposes internal ranking mechanics rather than clinician-facing meaning.
+
+The concept of movement is useful, but the presentation needs to change.
+
+Instead of:
+- `SAME 1→1`
+- `UP 3→2`
+- `DOWN 2→4`
+
+Use something like:
+- **unchanged**
+- **rose**
+- **fell**
+
+Optionally with a tiny glyph if needed.  
+If rank history is shown at all, it should be secondary: `rose from #3`.
+
+This keeps the clinical artifact readable without looking like an algorithm leaderboard.
+
+### D. Exact evidence IDs should not dominate
+“turn-002” is useful for traceability, but if every row loudly repeats machine references, the page starts to feel like an annotation console.
+
+Evidence should remain visible, but in a lighter treatment:
+
+- `Source: spouse encouraged evaluation`
+- `Trace: turn 2`
+or
+- `Evidence: patient interview, turn 2`
+
+The machine ID should be there for verification, but not be the main thing the eye sees.
+
+### E. Too many bullets per differential should be constrained
+The screenshot’s differential cards risk becoming dense mini-essays.  
+For this artifact, each diagnosis block needs strict discipline.
+
+Supports / Against / Unknowns should be concise, ideally:
+
+- 2–3 bullets in Supports
+- 1–2 bullets in Against
+- 1–3 bullets in Unknowns
+
+Anything more and the artifact stops scanning well.
+
+### F. Do not add loud red/green traffic-light styling
+The user asked about green up arrows and red down arrows. We should absolutely define a signal language, but it must be **restrained**.
+
+This is not a stock chart and not triage severity coloring.  
+We should avoid:
+
+- saturated green and red blocks
+- large arrows
+- big directional icons
+- gamified movement semantics
+
+The artifact should feel clinical, not like a performance dashboard.
+
+---
+
+## 4. Detailed Artifact Spec
+
+## Overall frame and section order
+
+The full artifact should read top-to-bottom as a single report with internal structure.
+
+### Top header band
+At the top of the sheet:
+
+- **Title:** `The clinician starts from a structured brief`
+- **Subheader:** `Scan, verify, decide.`
+- Optional right-aligned microtext:
+  - `Example case: cough`
+  - `Auto-structured from patient conversation`
+
+This top band is not part of the product UI per se; on the slide it can be the framing device.  
+Inside the artifact itself, the report header should be simpler:
+
+- **Structured Brief**
+- `Current clinical picture with evidence trace`
+
+### Main body layout
+Use a **two-column body** with a strong hierarchy:
+
+- **Left column: 62–68% width**
+- **Right column: 32–38% width**
+
+The left column is the main story.  
+The right column is a reasoning rail, clearly secondary.
+
+### Bottom strip
+A **full-width bottom timeline strip** spans both columns.  
+This is important enough that I would include it as a dedicated section, not just implied in a row.
+
+### Section order inside the artifact
+
+1. Report header
+2. Main two-column body
+   - left: What We Know
+   - right: Differential + Next Question
+3. Bottom full-width timeline strip
+4. Optional footer microcopy:
+   - `Clinician verifies findings before action`
+   - `All items link to source trace`
+
+---
+
+## Left content, right rail, and bottom timeline relationship
+
+### Left content: the canonical summary
+The left side is the **primary clinical brief**. It should be what a clinician could almost treat as a pre-charted intake synthesis.
+
+It should answer:
+- what symptoms are present
+- how they behave
+- what is absent
+- what context matters
+- what workup is missing
+- what remains uncertain
+
+### Right rail: not a second product, but interpretation
+The right side is **not another information surface**.  
+It is the system’s current reasoning view over the brief.
+
+It should feel like:
+- “given the left-side facts, here are the leading considerations”
+- “here is what is strengthening or weakening them”
+- “here is the next question most likely to change management”
+
+### Bottom timeline: grounding layer
+The bottom strip does one thing the screenshot currently does not do strongly enough: it anchors symptoms in time.
+
+This is crucial because in cough cases, chronology changes interpretation:
+- URI prodrome before cough
+- night worsening
+- exertional dyspnea
+- positional worsening
+- sputum evolution
+- progression vs plateau
+
+Without time, the differential logic feels flatter and more speculative.
+
+### Internal timeline block vs bottom strip
+Use **both**, but differently:
+
+- **Internal “Timeline” category on the left:** one or two structured rows summarizing chronology in words
+- **Bottom strip:** visual chronological anchor, compact and low-height
+
+So the left-side timeline rows provide textual clinical meaning.  
+The bottom strip provides rapid orientation.
+
+That dual representation is worth it because chronology is too important in this case.
+
+---
+
+## Left-side row anatomy
+
+Each left-side row should have a consistent four-part anatomy, but not all parts need equal prominence.
+
+### 1. Title line
+Always present.
+
+Format:
+- left-aligned label
+- right-aligned state pill
+
+Examples:
+- `Cough`
+- `Cough worse at night`
+- `Hemoptysis`
+- `Care seeking prompted by spouse`
+
+The title line should be the strongest text in the row.
+
+### 2. Value line
+Optional but preferred where nuance matters.
+
+Use it when the row benefits from a normalized interpretation rather than just the label.
+
+Examples:
+- `Occurs in bursts with periods of relative calm`
+- `Mostly yellow; possibly green once, color uncertain due to lighting`
+- `Spouse encouraged evaluation`
+- `No blood reported in sputum`
+
+This line should not simply repeat the title. It should add interpretive structure.
+
+### 3. Evidence line
+Visible, but visually quiet.
+
+I would **keep evidence visible by default** because the whole point of the artifact is “scan, verify, decide.”  
+If evidence only appears on hover, the slide loses the verification story.
+
+But evidence should be treated as microtext:
+- small
+- muted color
+- one line max when possible
+
+Preferred pattern:
+- `Evidence: “My wife told me I should get this checked out” · turn 2`
+or shorter:
+- `Trace: turn 2`
+
+For the slide, I would favor the shorter style to reduce clutter:
+- `Trace: turn 2`
+
+If needed in real product, hovering could reveal the quote.
+
+### 4. State pill
+Always present.  
+States should be finite and semantically meaningful.
+
+Recommended set:
+- `present`
+- `absent`
+- `unresolved`
+- `reported`
+- `not yet assessed`
+
+But for this slide, to stay coherent, I would mostly use:
+- `present`
+- `absent`
+- `unresolved`
+
+`reported` can be reserved for contextual rows if we want extra precision.
+
+---
+
+## Left-side category structure
+
+Use these exact categories, in this order:
+
+### A. Social Context
+High-value context that influences interpretation or care-seeking but is not itself a symptom.
+
+Examples:
+- Care seeking prompted by spouse
+- Sick contacts if known
+- Home context if relevant
+
+This section should be small: 1–2 rows only.
+
+### B. Symptoms
+The largest category. This is where the active picture lives.
+
+Include:
+- core symptom
+- symptom qualities
+- modifiers
+- associated features
+- sputum detail if present
+
+This section should carry 4–6 rows.
+
+### C. Key Negatives
+This deserves its own category, not just absent rows mixed in with symptoms.  
+Clinicians scan for ruling-out signals quickly.
+
+Examples:
+- Hemoptysis absent
+- No chest pain reported
+- No fever reported, if actually known
+
+The row anatomy is the same, but this grouping makes clinical use faster.
+
+### D. Timeline
+A compact structured chronology block on the left, even though there is also a bottom timeline strip.
+
+Examples:
+- URI-like symptoms preceded cough by a few days
+- Worse at night / worse when lying down
+- Productive sputum mostly in mornings
+
+This section should usually have 2 rows max.
+
+### E. Workup
+A category explicitly showing what objective data exists vs does not.
+
+Examples:
+- Vitals not yet documented
+- O2 saturation not yet documented
+- Lung exam not yet documented
+- Chest imaging not yet obtained
+
+This is critical because it tells the clinician what kind of uncertainty they are dealing with.
+
+### F. Uncertainties
+A short list of meaningfully unresolved clinical points.
+
+Examples:
+- Whether dyspnea is worsening
+- Whether sputum is truly green vs yellow
+- Whether fever/chills are present
+
+This keeps ambiguity explicit rather than hidden.
+
+---
+
+## Density and row count guidance for the left side
+
+Target **8 to 12 total rows** across all categories for the slide version.
+
+Ideal breakdown:
+- Social context: 1
+- Symptoms: 5
+- Key negatives: 2
+- Timeline: 1–2
+- Workup: 2
+- Uncertainties: 1
+
+This keeps the artifact feeling complete but still scannable.
+
+---
+
+## Right-side candidate anatomy
+
+Each candidate block should feel like a **reasoned note**, not an expandable software card.
+
+### Header row anatomy
+Each candidate starts with a single-line header:
+
+- rank marker: `#1`
+- diagnosis title: `Acute bronchitis (viral or post-infectious cough)`
+- confidence chip: `high`
+- movement label: `unchanged` or `rose from #2`
+
+Order:
+`#1 Acute bronchitis (viral or post-infectious cough)`  
+then chips aligned right.
+
+### Confidence
+Keep:
+- high
+- medium
+- low
+
+But de-emphasize visually.  
+Confidence should not be more prominent than the diagnosis.
+
+### Movement
+Movement should **stay conceptually but change format**.
+
+Recommended labels:
+- `unchanged`
+- `rose`
+- `fell`
+
+Optional detailed variant:
+- `rose from #3`
+- `fell from #1`
+- `unchanged`
+
+For the slide, I would use:
+- `unchanged`
+- `rose from #3`
+- `fell from #2`
+
+Do **not** use `SAME 1→1`.  
+That reads like an internal model rank trace, not a clinician-oriented brief.
+
+### Three reasoning sections
+Each candidate contains exactly these:
+
+- **Supports**
+- **Against**
+- **Unknowns**
+
+Each section should use a compact list with strict bullet limits.
+
+#### Supports
+2–3 bullets max  
+These are facts from the left side that actively fit the diagnosis.
+
+#### Against
+1–2 bullets max  
+These are features making the diagnosis less satisfying or requiring caution.
+
+#### Unknowns
+1–3 bullets max  
+These are missing data points likely to change confidence or management.
+
+### Suggested next question
+Every candidate block should end with **one suggested next question**, but visually this should be subtle and standardized.
+
+Format:
+- `Next question: Any fever, chills, or measured temperature?`
+
+However, only the **top-ranked candidate** should have its next question fully emphasized.  
+For candidates #2 and #3, the next question can be present in lighter treatment.
+
+Reason: the artifact should imply a prioritization of information gathering, not a barrage of simultaneous asks.
+
+### Candidate count
+Show **3 candidates only**.  
+Not 5, not 7. More than 3 turns the right rail into a mini differential engine.
+
+---
+
+## Timeline implementation: bottom strip, internal block, or both?
+
+Use **both**.
+
+### Internal left-side timeline block
+Purpose:
+- textual interpretation
+- supports the brief
+- shows that chronology is part of structured understanding
+
+### Bottom strip
+Purpose:
+- rapid scan
+- story coherence
+- “the model understood the sequence”
+
+### Bottom strip structure
+A horizontal strip with 4–6 event nodes connected by a line.
+
+Example nodes:
+- `URI-like scratchy throat`
+- `Cough begins`
+- `Burst pattern noted`
+- `Night / lying down worse`
+- `Yellow sputum in mornings`
+- `Exertional dyspnea reported`
+
+This should be compact and mostly monochrome, with one accent color for the current concern or latest event.
+
+---
+
+## 5. Visual Language For State And Reasoning
+
+This is where we need to be very precise.
+
+## Overall design principle
+The visual language should be **quietly semantic**, not loud.  
+It must support scanability without making the sheet look like a warning dashboard.
+
+Think:
+- low-saturation
+- mostly grayscale
+- one accent family for positive support
+- one muted caution family for unknowns
+- only very restrained negative color
+
+---
+
+## Should there be a green up arrow for support?
+
+### Yes, but tiny and restrained
+For **Supports**, use a **small upward-leaning support glyph**, but not a large arrow icon.
+
+Best option:
+- a tiny **green upward chevron or arrowlet** before each support bullet
+- size around 10–12px
+- muted green, not saturated
+
+Why:
+- It gives the user the directional semantics they asked for
+- It makes the support/against distinction instantly legible
+- It stays subtle enough to fit a clinical artifact
+
+Alternative if even more restrained:
+- use a green-tinted bullet dot rather than an arrow
+
+My recommendation:
+- **Supports = tiny muted green up-arrow glyph**
+- only inside the right-side reasoning rail
+- not on the left-side structured rows
+
+This distinction matters. The left side is fact capture; the right side is reasoning.
+
+---
+
+## Should there be a red down arrow for against?
+
+### Yes, but even more restrained than support
+Use a **small muted red or oxblood down-arrow glyph** for **Against** bullets.
+
+Important:
+- not bright red
+- not alarm red
+- not large
+- not triangle warning icon
+
+Why:
+- “Against” is not necessarily danger; it is diagnostic counterweight
+- loud red would imply risk/severity rather than evidentiary friction
+
+Recommended treatment:
+- icon size same as support glyph
+- color slightly desaturated brick/rose
+- text remains neutral dark gray
+
+So yes, use it—but keep it quiet.
+
+---
+
+## Should unknowns use amber question marks or something else?
+
+### Yes, but use an outlined amber question marker, not a filled warning symbol
+For **Unknowns**, use:
+- a tiny outlined circle or rounded square with a `?`
+- muted amber stroke
+- very pale amber tint if any fill is used
+
+Do **not** use:
+- warning triangle
+- exclamation mark
+- bright yellow badge
+
+Unknowns are not warnings; they are unresolved inputs.
+
+Recommended:
+- `?` glyph in muted amber, 10–12px
+- followed by text in neutral gray
+
+This creates a three-part logic:
+- support = upward/fit
+- against = downward/friction
+- unknown = unresolved/question
+
+That is exactly the kind of detailed symptom/differential semantics the user is asking for.
+
+---
+
+## Should these be arrows, bullets, left borders, pills, or tiny glyphs?
+
+### Use tiny glyphs plus section labels; avoid extra pills
+The best system is:
+
+- **tiny glyphs for list items**
+- **plain section headers** (`Supports`, `Against`, `Unknowns`)
+- **no pills for every bullet**
+- **no thick left borders per subsection**
+
+Why:
+- bullets need directional semantics
+- section headers already tell the bucket
+- additional pills or borders would make the rail heavy and widget-like
+
+### Specific recommendation
+- Supports: tiny muted green up arrow
+- Against: tiny muted red down arrow
+- Unknowns: tiny outlined amber question glyph
+
+And that’s it.  
+No additional iconography.
+
+---
+
+## Exactly how restrained or prominent should they be?
+
+### Restraint rules
+- icons should never be larger than the first text line
+- icons should not be the highest-contrast element
+- diagnosis title stays visually dominant
+- confidence and movement are secondary
+- support/against/unknown glyphs are tertiary cues
+
+In practical terms:
+- title text: strongest
+- body text: medium
+- pills/chips: medium-light
+- evidence/trace: light
+- glyphs: light-medium
+
+The user should feel the semantics immediately, but not feel “designed at.”
+
+---
+
+## How should `present`, `absent`, and `unresolved` look?
+
+These states apply to the **left-side fact rows**, so they need a different visual language than the right-side reasoning glyphs.
+
+### `present`
+- pill shape
+- dark text on very light neutral fill, or white text on charcoal fill
+- if using the screenshot’s black pill, soften slightly to deep charcoal rather than pure black
+- no green here
+
+Reason: presence is not “good.” It is simply present.
+
+### `absent`
+- pill shape
+- medium gray text on light gray fill
+- lower visual weight than present
+
+Reason: absent should still be legible but visually quieter.
+
+### `unresolved`
+- pill shape
+- warm gray or very pale amber-tinted fill
+- dark gray text
+- subtle dotted or dashed border optional
+
+Reason: unresolved should stand apart from absent without looking like a warning.
+
+### State hierarchy
+- `present` = strongest
+- `unresolved` = medium
+- `absent` = lighter
+
+This gives a clean reading order.
+
+---
+
+## Additional row-level visual semantics
+
+### Key negatives on the left
+Do not add red down arrows in the left-side rows.  
+Just let the category label **Key Negatives** do the semantic work.
+
+Why:
+- otherwise the left side becomes symbol-heavy
+- the left side should feel like structured charting, not argumentative logic
+
+### Workup rows
+For missing objective data, use `unresolved` or `not yet assessed` rather than `absent`.
+
+Important distinction:
+- `absent` = symptom/feature denied
+- `not yet assessed` = objective data missing
+
+This is clinically and visually important.
+
+---
+
+## 6. Filled Example Content
+
+Below is a concrete filled version of the artifact using the cough case.
+
+## Left-side rows
+
+### SOCIAL CONTEXT
+
+**Care seeking prompted by spouse** — `present`  
+Value: Spouse encouraged evaluation  
+Trace: turn 2
+
+---
+
+### SYMPTOMS
+
+**Cough** — `present`  
+Value: Persistent cough reported  
+Trace: turn 2
+
+**Cough pattern / frequency** — `present`  
+Value: Occurs in bursts with periods of relative calm  
+Trace: turn 14
+
+**Cough worse at night** — `present`  
+Value: More noticeable overnight  
+Trace: turn 16
+
+**Cough worsens when lying down** — `present`  
+Value: Positional worsening reported  
+Trace: turn 16
+
+**Scratchy throat** — `present`  
+Value: URI-like throat irritation preceded cough  
+Trace: turn 4
+
+**Sputum color** — `present`  
+Value: Mostly yellow; possibly green once, color uncertain due to lighting  
+Trace: turn 10
+
+**Dyspnea with exertion** — `present`  
+Value: Shortness of breath with activity reported  
+Trace: turn 12
+
+---
+
+### KEY NEGATIVES
+
+**Hemoptysis (blood in sputum)** — `absent`  
+Value: No blood reported in sputum  
+Trace: turn 12
+
+**

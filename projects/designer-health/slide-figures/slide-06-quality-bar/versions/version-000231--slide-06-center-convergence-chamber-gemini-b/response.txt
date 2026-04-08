@@ -1,0 +1,444 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox - Adaptive Interviewing System</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #F8F9FA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1920px;
+            height: 1080px;
+            position: relative;
+            background-color: #F8F9FA;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(0,0,0,0.1); /* Just for preview isolation */
+        }
+
+        /* --- Header --- */
+        .header {
+            position: absolute;
+            top: 80px;
+            left: 100px;
+            width: 1500px;
+        }
+
+        .header h1 {
+            font-size: 46px;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            max-width: 1450px;
+        }
+
+        .header h1 .teal {
+            color: #2A8F8A;
+        }
+
+        .header p {
+            font-size: 20px;
+            font-weight: 400;
+            color: #4B5563;
+            line-height: 1.5;
+            max-width: 1350px;
+        }
+
+        /* --- Global SVG for Connecting Lines --- */
+        .connections {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* --- Left Ribbons --- */
+        .ribbon-container {
+            position: absolute;
+            left: 100px;
+            width: 340px;
+            height: 60px;
+            z-index: 2;
+        }
+
+        .ribbon-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+        }
+
+        /* --- Center Chamber (The Convergence Chamber) --- */
+        .chamber {
+            position: absolute;
+            left: 500px;
+            top: 260px;
+            width: 920px;
+            height: 600px;
+            background: #FFFFFF;
+            border-radius: 32px;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.04);
+            border: 1px solid #E5E7EB;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        /* Internal Chamber Background Graphic (The Flow) */
+        .chamber-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Top Left Text */
+        .chamber-header {
+            position: absolute;
+            top: 40px;
+            left: 48px;
+            z-index: 10;
+        }
+
+        .chamber-title-vox {
+            font-size: 36px;
+            font-weight: 800;
+            color: #2A8F8A;
+            letter-spacing: -0.02em;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .chamber-subtitle {
+            font-size: 16px;
+            font-weight: 500;
+            color: #4B5563;
+        }
+
+        /* Adaptive Interview Loop Badge */
+        .loop-badge {
+            position: absolute;
+            left: 140px;
+            top: 220px;
+            width: 160px;
+            height: 160px;
+            background: #FFFFFF;
+            border-radius: 50%;
+            box-shadow: 0 12px 32px rgba(42, 143, 138, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .loop-badge-inner {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            border-radius: 50%;
+            border: 2px solid #E6F3F2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loop-badge-ring {
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            right: -12px;
+            bottom: -12px;
+            border-radius: 50%;
+            border: 2px dashed #88C3BE;
+            opacity: 0.6;
+        }
+
+        .loop-badge-text {
+            color: #111827;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.2;
+            z-index: 2;
+        }
+
+        /* Reasoning Zone (Right Side of Chamber) */
+        .reasoning-zone {
+            position: absolute;
+            left: 460px;
+            top: 24px;
+            width: 436px;
+            height: 552px;
+            background: #F8FAFC;
+            border-radius: 24px;
+            z-index: 1;
+            border: 1px solid #F1F5F9;
+        }
+
+        .reasoning-title {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #2A8F8A;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            z-index: 10;
+        }
+
+        /* Rails */
+        .rail-container {
+            position: absolute;
+            left: 520px;
+            width: 320px;
+            height: 60px;
+            z-index: 10;
+        }
+
+        /* --- Right Card --- */
+        .right-card-wrapper {
+            position: absolute;
+            left: 1520px;
+            top: 360px;
+            width: 320px;
+            z-index: 2;
+        }
+
+        .right-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .right-card {
+            width: 100%;
+            height: 380px;
+            background: #FFFFFF;
+            border-radius: 16px;
+            box-shadow: 0 24px 48px rgba(0,0,0,0.06);
+            border: 1px solid #E5E7EB;
+            border-left: 8px solid #2A8F8A;
+            padding: 32px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Card Skeleton Lines */
+        .skel-line { background: #F3F4F6; border-radius: 4px; margin-bottom: 16px; }
+        .skel-header { background: #E5E7EB; height: 12px; width: 70%; border-radius: 6px; margin-bottom: 24px; }
+        .skel-1 { height: 8px; width: 90%; }
+        .skel-2 { height: 8px; width: 85%; }
+        .skel-3 { height: 8px; width: 60%; margin-bottom: 32px; }
+        .skel-4 { height: 8px; width: 95%; }
+        .skel-5 { height: 8px; width: 80%; }
+        .skel-6 { height: 8px; width: 40%; margin-bottom: 32px; }
+        .skel-7 { height: 8px; width: 85%; }
+        .skel-8 { height: 8px; width: 75%; }
+
+        /* Card Background Accent */
+        .card-accent {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle at top right, rgba(42, 143, 138, 0.05), transparent 70%);
+            border-radius: 0 16px 0 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1><span class="teal">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.</h1>
+        <p>Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.</p>
+    </div>
+
+    <!-- Global Connecting Lines -->
+    <svg class="connections" viewBox="0 0 1920 1080">
+        <defs>
+            <linearGradient id="patientLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#CBD5E1" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#CBD5E1" stop-opacity="0.3"/>
+            </linearGradient>
+            <linearGradient id="voxLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#88C3BE" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#88C3BE" stop-opacity="0.3"/>
+            </linearGradient>
+            <linearGradient id="railLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#A7D0CD" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#A7D0CD" stop-opacity="0.3"/>
+            </linearGradient>
+        </defs>
+
+        <!-- Ribbons to Chamber (Loop Badge Left Edge x=640) -->
+        <!-- Patient 1 -->
+        <path d="M 440,400 C 540,400 540,510 640,510" fill="none" stroke="url(#patientLine)" stroke-width="3" stroke-linecap="round"/>
+        <!-- Vox 1 -->
+        <path d="M 440,480 C 540,480 540,535 640,535" fill="none" stroke="url(#voxLine)" stroke-width="3" stroke-linecap="round"/>
+        <!-- Patient 2 -->
+        <path d="M 440,560 C 540,560 540,560 640,560" fill="none" stroke="url(#patientLine)" stroke-width="3" stroke-linecap="round"/>
+        <!-- Vox 2 -->
+        <path d="M 440,640 C 540,640 540,585 640,585" fill="none" stroke="url(#voxLine)" stroke-width="3" stroke-linecap="round"/>
+        <!-- Patient 3 -->
+        <path d="M 440,720 C 540,720 540,610 640,610" fill="none" stroke="url(#patientLine)" stroke-width="3" stroke-linecap="round"/>
+
+        <!-- Rails to Right Card (Rails Right Edge x=1340, Card Left Edge x=1520) -->
+        <!-- Rail 1 -->
+        <path d="M 1340,440 C 1430,440 1430,540 1520,540" fill="none" stroke="url(#railLine)" stroke-width="3" stroke-linecap="round"/>
+        <!-- Rail 2 -->
+        <path d="M 1340,560 C 1430,560 1430,560 1520,560" fill="none" stroke="url(#railLine)" stroke-width="3" stroke-linecap="round"/>
+        <!-- Rail 3 -->
+        <path d="M 1340,680 C 1430,680 1430,580 1520,580" fill="none" stroke="url(#railLine)" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Left Ribbons -->
+    <div class="ribbon-container" style="top: 370px;">
+        <svg width="340" height="60" viewBox="0 0 340 60">
+            <path d="M 0,0 L 310,0 L 330,30 L 310,60 L 0,60 L 20,30 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            <text x="40" y="35" fill="#4B5563" class="ribbon-text" font-weight="500">My back has been hurting...</text>
+        </svg>
+    </div>
+    <div class="ribbon-container" style="top: 450px;">
+        <svg width="340" height="60" viewBox="0 0 340 60">
+            <path d="M 0,0 L 310,0 L 330,30 L 310,60 L 0,60 L 20,30 Z" fill="#E6F3F2" stroke="#88C3BE" stroke-width="2"/>
+            <text x="40" y="35" fill="#2A8F8A" class="ribbon-text" font-weight="600">Vox: What makes it worse?</text>
+        </svg>
+    </div>
+    <div class="ribbon-container" style="top: 530px;">
+        <svg width="340" height="60" viewBox="0 0 340 60">
+            <path d="M 0,0 L 310,0 L 330,30 L 310,60 L 0,60 L 20,30 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            <text x="40" y="35" fill="#4B5563" class="ribbon-text" font-weight="500">It's worse in the morning.</text>
+        </svg>
+    </div>
+    <div class="ribbon-container" style="top: 610px;">
+        <svg width="340" height="60" viewBox="0 0 340 60">
+            <path d="M 0,0 L 310,0 L 330,30 L 310,60 L 0,60 L 20,30 Z" fill="#E6F3F2" stroke="#88C3BE" stroke-width="2"/>
+            <text x="40" y="35" fill="#2A8F8A" class="ribbon-text" font-weight="600">Vox: When did this start?</text>
+        </svg>
+    </div>
+    <div class="ribbon-container" style="top: 690px;">
+        <svg width="340" height="60" viewBox="0 0 340 60">
+            <path d="M 0,0 L 310,0 L 330,30 L 310,60 L 0,60 L 20,30 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            <text x="40" y="35" fill="#4B5563" class="ribbon-text" font-weight="500">Started last Tuesday.</text>
+        </svg>
+    </div>
+
+    <!-- Center Chamber -->
+    <div class="chamber">
+        <!-- Internal Flow Graphic (Transformation) -->
+        <svg class="chamber-bg" viewBox="0 0 920 600">
+            <defs>
+                <linearGradient id="streamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#2A8F8A" stop-opacity="0.1"/>
+                    <stop offset="50%" stop-color="#2A8F8A" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#2A8F8A" stop-opacity="0.8"/>
+                </linearGradient>
+            </defs>
+            
+            <!-- The Thick Stream (Reconciliation) -->
+            <path d="M 300,300 C 380,300 420,300 460,300" fill="none" stroke="url(#streamGrad)" stroke-width="8" stroke-linecap="round"/>
+            
+            <!-- The Judgment Gate / Split Node -->
+            <rect x="456" y="270" width="8" height="60" rx="4" fill="#2A8F8A" opacity="0.9"/>
+            
+            <!-- Branching Lines to Rails -->
+            <path d="M 464,300 C 490,300 490,180 520,180" fill="none" stroke="#A7D0CD" stroke-width="3" stroke-linecap="round"/>
+            <path d="M 464,300 L 520,300" fill="none" stroke="#A7D0CD" stroke-width="3" stroke-linecap="round"/>
+            <path d="M 464,300 C 490,300 490,420 520,420" fill="none" stroke="#A7D0CD" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Top Left Text -->
+        <div class="chamber-header">
+            <div class="chamber-title-vox">Vox</div>
+            <div class="chamber-subtitle">Adaptive clinical interviewer</div>
+        </div>
+
+        <!-- Adaptive Interview Loop Node -->
+        <div class="loop-badge">
+            <div class="loop-badge-ring"></div>
+            <div class="loop-badge-inner">
+                <div class="loop-badge-text">Adaptive<br>interview<br>loop</div>
+            </div>
+        </div>
+
+        <!-- Reasoning Zone -->
+        <div class="reasoning-zone"></div>
+        <div class="reasoning-title">Clinical reasoning + medical knowledge</div>
+
+        <!-- Rails -->
+        <div class="rail-container" style="top: 150px;">
+            <svg width="320" height="60" viewBox="0 0 320 60">
+                <rect x="0" y="0" width="320" height="60" rx="30" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+                <circle cx="30" cy="30" r="6" fill="#2A8F8A"/>
+                <text x="55" y="35" fill="#111827" font-family="'Inter', sans-serif" font-size="16" font-weight="500">What matters</text>
+            </svg>
+        </div>
+        <div class="rail-container" style="top: 270px;">
+            <svg width="320" height="60" viewBox="0 0 320 60">
+                <rect x="0" y="0" width="320" height="60" rx="30" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+                <circle cx="30" cy="30" r="6" fill="#2A8F8A"/>
+                <text x="55" y="35" fill="#111827" font-family="'Inter', sans-serif" font-size="16" font-weight="500">What connects</text>
+            </svg>
+        </div>
+        <div class="rail-container" style="top: 390px;">
+            <svg width="320" height="60" viewBox="0 0 320 60">
+                <rect x="0" y="0" width="320" height="60" rx="30" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+                <circle cx="30" cy="30" r="6" fill="#2A8F8A"/>
+                <text x="55" y="35" fill="#111827" font-family="'Inter', sans-serif" font-size="16" font-weight="500">What still needs verification</text>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Right Card -->
+    <div class="right-card-wrapper">
+        <div class="right-card-title">Clinician-grade starting point</div>
+        <div class="right-card">
+            <div class="card-accent"></div>
+            <div class="skel-header"></div>
+            <div class="skel-line skel-1"></div>
+            <div class="skel-line skel-2"></div>
+            <div class="skel-line skel-3"></div>
+            <div class="skel-line skel-4"></div>
+            <div class="skel-line skel-5"></div>
+            <div class="skel-line skel-6"></div>
+            <div class="skel-line skel-7"></div>
+            <div class="skel-line skel-8"></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+```

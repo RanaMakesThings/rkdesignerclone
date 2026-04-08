@@ -1,0 +1,12 @@
+{
+  "id": "version-000205",
+  "slideId": "slide-07",
+  "slideDir": "projects/designer-health/slide-figures/slide-06",
+  "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000205--slide-07-native-shell-v2",
+  "label": "slide-07-native-shell-v2",
+  "status": "draft",
+  "createdAt": "2026-04-03T17:18:13.000Z",
+  "sourceKind": "fine-tune-draft",
+  "baseVersionId": "version-000108",
+  "legacySourcePaths": []
+}

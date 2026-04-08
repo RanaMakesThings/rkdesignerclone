@@ -1,0 +1,23 @@
+Generate a self-contained 1920x1080 HTML pitch-deck slide mockup for Vox.
+
+Goal:
+Make the message unmistakable that if story reconstruction gets shorter on each visit, capacity is created and one additional visit fits into the same clinic day.
+
+Requirements:
+- Single-file HTML with inline CSS and inline SVG only
+- No external assets except safe web fonts if needed
+- Editorial pitch-deck quality, not product UI
+- Off-white background, restrained healthcare palette, crisp typography
+- Headline: More efficient visits will increase supply.
+- Subheader: Small per-visit gains compound.
+
+This variant should use a strict before/after structure:
+- Top section: Current schedule (5 visits)
+- Bottom section: AI-assisted schedule (6 visits)
+- Rows must have the same total width to imply same day length
+- Only the blue story-reconstruction segment should shrink in the bottom row
+- Physical exam and decisions/counseling should remain protected and visually unchanged
+- The sixth visit should be a full visit block, not a CTA-style button
+- Include one short, concrete transition line explaining the mechanism
+
+The visual should make the before/after state and the source of capacity obvious immediately, while still feeling tactful and credible in a healthcare investor deck.

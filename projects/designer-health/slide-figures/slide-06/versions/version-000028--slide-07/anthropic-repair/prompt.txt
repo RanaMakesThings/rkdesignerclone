@@ -1,0 +1,54 @@
+You are advising on ONE pitch-deck figure that has already failed review.
+
+This is not a general critique prompt.
+The pass is already known to be broken.
+Your job is to say what to do next.
+
+Context:
+- Deck: Designer Health
+- Slide: current slide 6
+- Slide role: workflow explanation
+- Lead-in: slide 5 says the output must be clinician-grade
+- Follow-on: slide 7 will show the structured brief itself
+
+What this slide needs to do:
+- explain that Vox prepares the visit before it starts
+- show a calm four-step flow: Invite -> Interview -> Structure -> Verify
+- make the workflow feel credible without looking like fake software UI
+- keep Structure as the visual star
+- stay clean, premium, restrained, and obvious at a glance
+
+Known failure from the first review round:
+- the floating handoff brief between Structure and Verify is breaking the slide
+- it covers Verify content
+- it duplicates the structured brief semantically
+- it makes the strip read like five objects instead of four clean steps
+
+Your job now:
+- decide whether we should stay in the current workflow-strip family or reopen composition
+- decide whether the next move should be one targeted fix or a broader redesign
+- say exactly what the next render should change
+
+Please answer in exactly these sections:
+
+1. Failure class
+Choose from: polish, layout, semantic, family.
+You may choose more than one if needed. Keep this to one short paragraph.
+
+2. Stay in current family?
+Answer yes or no, then explain in 2 to 4 sentences.
+
+3. Exact next move
+One short paragraph. Be concrete.
+
+4. What the next render must change
+Up to 5 flat bullets. These should be specific visual changes.
+
+5. What not to do
+Up to 4 flat bullets. These should prevent the next pass from drifting.
+
+Important:
+- do not spend time re-critiquing the whole slide from scratch
+- do not propose a brand-new deck strategy unless the family is actually wrong
+- if one targeted fix is enough, say so clearly
+- if the family is wrong, say that explicitly

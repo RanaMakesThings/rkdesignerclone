@@ -1,0 +1,32 @@
+Based on the goal of clearly linking the operational mechanism (Slide 3) to the financial payoff (Slide 10) while maintaining a clean investor-deck aesthetic, here is the evaluation of your options.
+
+### The Verdict: Option 2 is the Strongest
+**Option 2 (Callback Embedded Inside the Hero Card)** is the best choice. 
+
+By placing a compact version of the visual motif inside the white card on the far left, you create a perfect, unbroken left-to-right causal narrative: **[Visual Mechanism] → [+1 Visit] → [Assumptions] → [$11,000]**. 
+
+It keeps the viewer's eye focused on a single "hero" container rather than forcing them to bounce between different zones on the slide. It explicitly defines *where* the "+1 visit" came from right at the moment they start reading the equation.
+
+### Addressing Your Specific Questions
+
+**Which option most clearly communicates that one added visit creates meaningful annual value?**
+**Option 2.** It physically connects the cause (the shortened bars and green block) to the effect (the $11,000) within the same visual grouping. The white card acts as a logical wrapper that says, "This whole sequence is one continuous thought."
+
+**Which option best preserves continuity with slide 3 without becoming a replay of slide 3?**
+**Option 2.** By forcing the motif to fit inside the card, you are forced to distill it down to its absolute essence (an icon-sized representation). Option 1 risks taking up too much space and feeling like a literal copy-paste of Slide 3's bottom half, which slows down the deck's momentum.
+
+**What is the main failure mode for each option?**
+*   **Option 1 (Left Motif + Right Equation):** *Split Attention.* The slide loses its punchy, centered "hero" feel. The viewer doesn't know whether to study the diagram on the left or read the math on the right, diluting the impact of the $11,000 figure.
+*   **Option 2 (Embedded):** *Overcrowding.* If the callback object is too large or detailed, the white card will feel cramped, and the clean, airy math equation will become messy and hard to read.
+*   **Option 3 (Bottom Strip):** *Disconnection.* (Strongly recommend rejecting this option). Placing the causal mechanism at the bottom of the slide turns it into a footer. Viewers read top-to-bottom, left-to-right. They will see the $11,000 before they see *how* it was generated, breaking the logical flow.
+
+### Concrete Recommendation for Depicting the Callback Object
+
+To make Option 2 work without overcrowding the card, treat the callback object as a **large, horizontal icon** rather than a chart. 
+
+1.  **Simplify:** Create a single, minimalist row consisting of three shortened visit blocks (using the exact blue/grey color ratio from Slide 3) followed immediately by the green "New visit" block. 
+2.  **Remove Text:** Do not include any labels, axes, or brackets on these mini-bars. The shapes and colors alone will trigger the callback.
+3.  **Placement:** Place this mini-strip inside the white card, on the far left. Have a subtle arrow pointing from the green "New visit" block directly to the text "+1 visit". 
+
+**Visual Flow inside the card:**
+`[🟦⬜️] [🟦⬜️] [🟦⬜️] [🟩]  ➔  +1 visit  ➔  [Assumptions]  =  $11,000`

@@ -1,0 +1,13 @@
+{
+  "provider": "claude",
+  "verdict": "ok",
+  "rationale": "The candidate replaces the baseline's broad upward arc with a straighter diagonal line that still connects the Story reconstruction wedge to the blue hero box and terminates in a clean arrowhead. No text is clipped, no artifacts are visible, no other elements have moved or changed, and the arrowhead remains unambiguous. The arc is simpler and less hooky than the baseline, which matches the requested intent. All other slide content (title, bar chart, bullet panel) is intact and properly composed.",
+  "blockers": [],
+  "nextMove": "Ship as-is; no further arrow changes needed.",
+  "raw": {
+    "verdict": "ok",
+    "rationale": "The candidate replaces the baseline's broad upward arc with a straighter diagonal line that still connects the Story reconstruction wedge to the blue hero box and terminates in a clean arrowhead. No text is clipped, no artifacts are visible, no other elements have moved or changed, and the arrowhead remains unambiguous. The arc is simpler and less hooky than the baseline, which matches the requested intent. All other slide content (title, bar chart, bullet panel) is intact and properly composed.",
+    "blockers": [],
+    "nextMove": "Ship as-is; no further arrow changes needed."
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-04-story-streams-v1",
+    "family": "story_to_structure_membrane",
+    "deckId": "pitch-deck-lab",
+    "theme": "pd-template-1",
+    "mode": "body-only"
+  },
+  "chrome": {
+    "title": "",
+    "subtitle": "",
+    "chips": [],
+    "footnote": ""
+  },
+  "constraints": {
+    "figureJob": "Show that patient story begins as natural language and valuable visit time is spent turning it into usable structure that can begin before the visit.",
+    "focalPoint": "The central reordering membrane.",
+    "layout": "One centered horizontal hero figure with a left narrative field, a dominant middle membrane chamber, a quiet right structure card, and one thin callout below the middle.",
+    "big": [
+      "The middle chamber",
+      "The left story field",
+      "The right structure card"
+    ],
+    "quiet": [
+      "The left paragraph copy",
+      "The right card border",
+      "The section dividers"
+    ],
+    "accentTargets": [
+      "The middle chamber border and fill",
+      "The callout text",
+      "The left highlight sweeps"
+    ],
+    "forbidden": [
+      "table",
+      "workflow diagram",
+      "software ui",
+      "funnel",
+      "thick arrows"
+    ],
+    "semanticGuards": [
+      "no_ui"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Patient story",
+      "Turn story into structure",
+      "Essential work that can start before the visit",
+      "Decision-ready structure"
+    ],
+    "preferred": [
+      "Relevant positives / negatives",
+      "Timeline",
+      "What to verify"
+    ],
+    "optional": [],
+    "forbidden": [
+      "dashboard",
+      "workflow"
+    ]
+  },
+  "body": {
+    "left": {
+      "label": "Patient story",
+      "storyText": "This started maybe three days ago. It’s worse when I’m walking around. I was up a lot last night because of it. I don’t think I’ve had a fever. I’ve had something kind of like this before.",
+      "highlightSweeps": [
+        {
+          "x": 138,
+          "y": 58,
+          "w": 142,
+          "h": 16
+        },
+        {
+          "x": 44,
+          "y": 112,
+          "w": 176,
+          "h": 16
+        },
+        {
+          "x": 126,
+          "y": 164,
+          "w": 158,
+          "h": 16
+        }
+      ]
+    },
+    "middle": {
+      "label": "Turn story into structure",
+      "accentColor": "#4A89C8",
+      "accentTint": "#EEF4FB",
+      "streams": [
+        {
+          "label": "Relevant positives / negatives",
+          "items": [
+            "Worse w/ walking",
+            "No fever"
+          ]
+        },
+        {
+          "label": "Timeline",
+          "items": [
+            "3-day course",
+            "Worse overnight"
+          ]
+        },
+        {
+          "label": "What to verify",
+          "items": [
+            "Prior episode?",
+            "Trigger / severity?"
+          ]
+        }
+      ],
+      "callout": "Essential work that can start before the visit"
+    },
+    "right": {
+      "label": "Decision-ready structure",
+      "sections": [
+        {
+          "title": "Relevant positives / negatives",
+          "items": [
+            "Worse with walking",
+            "No fever"
+          ]
+        },
+        {
+          "title": "Timeline",
+          "items": [
+            "3-day course",
+            "Worse overnight"
+          ]
+        },
+        {
+          "title": "What to verify",
+          "items": [
+            "Prior similar episode?",
+            "Trigger / severity?"
+          ]
+        }
+      ]
+    }
+  },
+  "trace": [
+    {
+      "excerpt": "same design family as the current slide 3 figure: one dominant horizontal hero graphic, one highlighted middle zone, one restrained callout below, grayscale base, one accent color, calm editorial design",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Keep the composition centered, editorial, and slide-3-adjacent."
+    },
+    {
+      "excerpt": "On the left, show a soft rounded narrative panel labeled Patient story, containing one compact paragraph of natural patient language, not bullets.",
+      "targetPath": "body.left",
+      "ruleType": "body",
+      "note": "Keep the story field human and low-contrast."
+    },
+    {
+      "excerpt": "Within that paragraph, subtly emphasize three idea-clusters with very light highlight sweeps.",
+      "targetPath": "body.left.highlightSweeps",
+      "ruleType": "body",
+      "note": "Seed the three streams without over-structuring the paragraph."
+    },
+    {
+      "excerpt": "In the center, place a rounded accent-outlined chamber labeled Turn story into structure. Inside it, show exactly three soft horizontal streams.",
+      "targetPath": "body.middle",
+      "ruleType": "body",
+      "note": "Use the chamber as a reordering membrane rather than a table."
+    },
+    {
+      "excerpt": "Beneath it, attach a thin callout reading Essential work that can start before the visit.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Lock the short interpretive callout."
+    },
+    {
+      "excerpt": "On the right, place a clean rounded card labeled Decision-ready structure, with three sections.",
+      "targetPath": "body.right",
+      "ruleType": "body",
+      "note": "Keep the right side sparse and clinically useful."
+    },
+    {
+      "excerpt": "The figure should show: one human patient story on the left, the middle step where story gets organized into usable categories, one clean decision-ready structure card on the right.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Anchor the mechanism around categorization and pre-visit work."
+    },
+    {
+      "excerpt": "The middle region should be the visual star.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "Keep the strongest contrast and the callout attached to the chamber."
+    }
+  ]
+}

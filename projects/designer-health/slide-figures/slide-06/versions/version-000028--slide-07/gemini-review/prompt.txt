@@ -1,0 +1,46 @@
+You are reviewing ONE static investor pitch-deck figure.
+
+Context:
+- Deck: Designer Health
+- Slide: current slide 6
+- Slide role: workflow explanation
+- Lead-in: slide 5 says the output must be clinician-grade
+- Follow-on: slide 7 will show the structured brief itself
+
+What this slide needs to do:
+- explain that Vox prepares the visit before it starts
+- show a calm four-step flow: Invite -> Interview -> Structure -> Verify
+- make the workflow feel credible without looking like fake software UI
+- keep Structure as the visual star
+- stay clean, premium, restrained, and obvious at a glance
+
+Specific concern:
+The previous version added a floating handoff brief and failed. This version
+removes that floating object entirely. I want a blunt critique of whether the
+slide now works and whether the Structure -> Verify handoff is still clear
+enough without a separate bridge object.
+
+Please answer in exactly these sections:
+
+1. Verdict
+One short paragraph. Say whether this figure is working or not.
+
+2. What works
+3 flat bullets max.
+
+3. What is still broken
+Up to 6 flat bullets. Be specific about hierarchy, readability, weak handoff,
+or anything that still makes the slide worse.
+
+4. Is the handoff now too implicit?
+Answer yes or no, then explain in 2 to 4 sentences.
+
+5. Best next move
+One short paragraph telling me what to change next. Prefer concrete design
+direction over generic advice.
+
+Important:
+- prioritize visual reasoning over generic design commentary
+- say explicitly if the four-step strip is now clean enough
+- say explicitly if the Structure -> Verify relationship is now clear enough
+- do not rewrite the whole slide strategy unless the family is actually wrong

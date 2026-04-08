@@ -1,0 +1,20 @@
+**1. Failure class**
+Layout and semantic. The floating element physically obscures necessary text in the Verify step (layout) and confuses the four-step narrative by introducing a fifth visual object that duplicates the core concept of the Structure step (semantic).
+
+**2. Stay in current family?**
+Yes. The horizontal four-card strip perfectly serves the goal of a calm, obvious workflow. The visual hierarchy successfully makes "Structure" the star through its subtle color fill. The core architecture is sound; it just needs the disruptive element removed.
+
+**3. Exact next move**
+Execute a targeted fix to remove the floating "Structured Brief" card entirely. Once removed, restore the obscured text in the Verify card so the four steps read cleanly from left to right without interruption. 
+
+**4. What the next render must change**
+* Delete the floating "Structured Brief" card completely.
+* Restore the obscured text in the Verify card so "CLINICIAN REVIEW", "Review handoff", "Verify unknowns", and "Decide" are fully legible.
+* Verify that the horizontal gap between the Structure and Verify cards matches the standard gap used between the other cards.
+* Retain the light green background fill on the Structure card to keep it the focal point.
+
+**5. What not to do**
+* Do not redesign the four-card layout or change the overall visual family.
+* Do not attempt to cram the contents of the deleted floating card into the Structure or Verify cards (Slide 7 will handle the brief).
+* Do not add heavy arrows or new connecting graphics between Structure and Verify to compensate for the removed card.
+* Do not make the cards look more like actual software UI; keep the current abstract, premium feel.

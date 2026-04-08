@@ -1,0 +1,324 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox Pitch Deck Slide</title>
+    <style>
+        /* Base Reset & Typography */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #F5F5F0;
+            color: #1A2E29;
+            width: 1920px;
+            height: 1080px;
+            display: flex;
+            flex-direction: column;
+            padding: 100px 120px;
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        header {
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 64px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: #112A24;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 500;
+            color: #6B7280;
+            letter-spacing: -0.01em;
+        }
+
+        /* Main Diagram Container */
+        .diagram-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Shared Colors */
+        .bg-blue { background-color: #5A8FC4; }
+        .bg-light { background-color: #D9E0E5; }
+        .bg-dark { background-color: #9CA8B4; }
+
+        /* Legend Bar */
+        .legend-container {
+            width: 1420px;
+            position: relative;
+            margin-bottom: 100px;
+        }
+
+        .legend-bar {
+            display: flex;
+            width: 100%;
+            height: 64px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .legend-item.bg-blue { width: 40%; color: white; }
+        .legend-item.bg-light { width: 20%; color: #112A24; }
+        .legend-item.bg-dark { width: 40%; color: white; }
+
+        /* Annotation under Legend */
+        .annotation {
+            position: absolute;
+            top: 64px;
+            left: 0;
+            width: 40%; /* Matches blue segment width */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 8px;
+        }
+
+        .annotation-text {
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #4B5563;
+            margin-top: 12px;
+        }
+
+        .annotation-text strong {
+            color: #112A24;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 18px;
+        }
+
+        /* Schedule Rows */
+        .schedule-wrapper {
+            width: 1420px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .schedule-row {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            height: 72px;
+            position: relative;
+        }
+
+        .visit-block {
+            display: flex;
+            height: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        /* 
+         * Math for exact widths to keep total width constant (1420px)
+         * Gap = 20px
+         * 
+         * Top Row (5 blocks): 4 gaps = 80px. Remaining = 1340px. Block = 268px.
+         * Protected segments: Exam = 60px, Counsel = 100px.
+         * Top Blue segment = 268 - 60 - 100 = 108px.
+         * 
+         * Bottom Row (6 blocks): 5 gaps = 100px. Remaining = 1320px. Block = 220px.
+         * Protected segments: Exam = 60px, Counsel = 100px.
+         * Bottom Blue segment = 220 - 60 - 100 = 60px.
+         */
+
+        .top-row .visit-block { width: 268px; }
+        .top-row .seg-blue { width: 108px; }
+        
+        .bottom-row .visit-block { width: 220px; }
+        .bottom-row .seg-blue { width: 60px; }
+
+        /* Protected segments remain constant */
+        .seg-light { width: 60px; }
+        .seg-dark { width: 100px; }
+
+        /* Transition Area */
+        .transition-area {
+            position: relative;
+            width: 100%;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .transition-line {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: #D1D5DB;
+            z-index: 1;
+        }
+
+        .transition-text {
+            background-color: #F5F5F0;
+            padding: 0 24px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #6B7280;
+            z-index: 2;
+        }
+
+        /* New Visit Label */
+        .new-visit-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .new-visit-label {
+            position: absolute;
+            top: -32px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: #5A8FC4;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>More efficient visits will increase supply.</h1>
+        <h2>Small per-visit gains compound.</h2>
+    </header>
+
+    <div class="diagram-container">
+
+        <!-- Legend & Annotation -->
+        <div class="legend-container">
+            <div class="legend-bar">
+                <div class="legend-item bg-blue">Story reconstruction</div>
+                <div class="legend-item bg-light">Physical exam</div>
+                <div class="legend-item bg-dark">Decisions + counseling</div>
+            </div>
+            
+            <div class="annotation">
+                <svg width="568" height="20" viewBox="0 0 568 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0V10H567V0" stroke="#9CA8B4" stroke-width="1.5"/>
+                    <path d="M284 10V20" stroke="#9CA8B4" stroke-width="1.5"/>
+                </svg>
+                <div class="annotation-text">
+                    <strong>Most variable minutes of the visit</strong>
+                    Best target for upstream prep without losing quality<br>
+                    The part AI can help most
+                </div>
+            </div>
+        </div>
+
+        <div class="schedule-wrapper">
+            
+            <!-- Top Row: Current State (5 visits) -->
+            <div class="schedule-row top-row">
+                <div class="visit-block">
+                    <div class="bg-blue seg-blue"></div>
+                    <div class="bg-light seg-light"></div>
+                    <div class="bg-dark seg-dark"></div>
+                </div>
+                <div class="visit-block">
+                    <div class="bg-blue seg-blue"></div>
+                    <div class="bg-light seg-light"></div>
+                    <div class="bg-dark seg-dark"></div>
+                </div>
+                <div class="visit-block">
+                    <div class="bg-blue seg-blue"></div>
+                    <div class="bg-light seg-light"></div>
+                    <div class="bg-dark seg-dark"></div>
+                </div>
+                <div class="visit-block">
+                    <div class="bg-blue seg-blue"></div>
+                    <div class="bg-light seg-light"></div>
+                    <div class="bg-dark seg-dark"></div>
+                </div>
+                <div class="visit-block">
+                    <div class="bg-blue seg-blue"></div>
+                    <div class="bg-light seg-light"></div>
+                    <div class="bg-dark seg-dark"></div>
+                </div>
+            </div>
+
+            <!-- Transition -->
+            <div class="transition-area">
+                <div class="transition-line"></div>
+                <div class="transition-text">Efficiency repeated across visits creates capacity</div>
+            </div>
+
+            <!-- Bottom Row: AI-Assisted State (6 visits) -->
+            <div class="schedule-row bottom-row">
+                <div class="visit-block">
+                    <div class="bg-blue seg-blue"></div>
+                    <div class="bg-light seg-light"></div>
+                    <div class="bg-dark seg-dark"></div>
+                </div>
+                <div class="visit-block">
+                    <div class="bg-blue seg-blue"></div>
+                    <div class="bg-light seg-light"></div>
+                    <div class="bg-dark seg-dark"></div>
+                </div>
+                <div class="visit-block">
+                    <div class="bg-blue seg-blue"></div>
+                    <div class="bg-light seg-light"></div>
+                    <div class="bg-dark seg-dark"></div>
+                </div>
+                <div class="visit-block">
+                    <div class="bg-blue seg-blue"></div>
+                    <div class="bg-light seg-light"></div>
+                    <div class="bg-dark seg-dark"></div>
+                </div>
+                <div class="visit-block">
+                    <div class="bg-blue seg-blue"></div>
+                    <div class="bg-light seg-light"></div>
+                    <div class="bg-dark seg-dark"></div>
+                </div>
+                <!-- 6th Visit (Full Block) -->
+                <div class="new-visit-container">
+                    <div class="new-visit-label">New Visit</div>
+                    <div class="visit-block">
+                        <div class="bg-blue seg-blue"></div>
+                        <div class="bg-light seg-light"></div>
+                        <div class="bg-dark seg-dark"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox Pitch Deck Slide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --vox-teal: #2A8B8B;
+            --vox-teal-light: #E6F2F2;
+            --vox-teal-medium: #81C3C3;
+            --text-dark: #111827;
+            --text-gray: #4B5563;
+            --text-light: #9CA3AF;
+            --bg-gray: #F9FAFB;
+            --border-gray: #E5E7EB;
+            --patient-bg: #F3F4F6;
+            --patient-border: #D1D5DB;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: #E5E5E5; /* Darker background to show slide boundaries if needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .slide-container {
+            width: 1920px;
+            height: 1080px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section */
+        .header-section {
+            position: absolute;
+            top: 80px;
+            left: 100px;
+            width: 1500px;
+        }
+
+        .main-headline {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+
+        .main-headline span {
+            color: var(--vox-teal);
+        }
+
+        .sub-headline {
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--text-gray);
+            line-height: 1.5;
+            max-width: 1400px;
+        }
+
+        /* Diagram Area */
+        .diagram-area {
+            position: absolute;
+            top: 380px;
+            left: 0;
+            width: 1920px;
+            height: 700px;
+        }
+
+        /* SVG Connections */
+        .connections {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Left Bubbles */
+        .bubble {
+            position: absolute;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            font-size: 18px;
+            font-weight: 500;
+            z-index: 2;
+            width: 380px;
+        }
+
+        .bubble-patient {
+            background-color: var(--patient-bg);
+            color: var(--text-gray);
+            left: 100px;
+            clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+            border-left: 2px solid var(--patient-border);
+            border-top: 2px solid var(--patient-border);
+            border-bottom: 2px solid var(--patient-border);
+        }
+        /* Faux border for clip-path */
+        .bubble-patient::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--patient-border); z-index: -1;
+            clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+        }
+        .bubble-patient::after {
+            content: ''; position: absolute; top: 2px; left: 2px; right: 2px; bottom: 2px;
+            background: var(--patient-bg); z-index: -1;
+            clip-path: polygon(0% 0%, 93.5% 0%, 99.5% 50%, 93.5% 100%, 0% 100%);
+        }
+
+        .bubble-vox {
+            background-color: var(--vox-teal-light);
+            color: var(--vox-teal);
+            left: 120px;
+            font-weight: 600;
+            clip-path: polygon(6% 0%, 100% 0%, 100% 100%, 6% 100%, 0% 50%);
+            padding-left: 40px;
+        }
+        .bubble-vox::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--vox-teal); z-index: -1;
+            clip-path: polygon(6% 0%, 100% 0%, 100% 100%, 6% 100%, 0% 50%);
+        }
+        .bubble-vox::after {
+            content: ''; position: absolute; top: 2px; left: 2px; right: 2px; bottom: 2px;
+            background: var(--vox-teal-light); z-index: -1;
+            clip-path: polygon(6.5% 0%, 100% 0%, 100% 100%, 6.5% 100%, 0.5% 50%);
+        }
+
+        .b1 { top: 40px; }
+        .b2 { top: 130px; }
+        .b3 { top: 220px; }
+        .b4 { top: 310px; }
+        .b5 { top: 400px; }
+
+        /* Center Chamber */
+        .chamber {
+            position: absolute;
+            left: 540px;
+            top: -10px;
+            width: 760px;
+            height: 540px;
+            background: #FFFFFF;
+            border-radius: 32px;
+            border: 1px solid var(--border-gray);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .chamber-header {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .chamber-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--vox-teal);
+            letter-spacing: -0.03em;
+        }
+
+        .chamber-subtitle {
+            font-size: 16px;
+            color: var(--text-gray);
+            margin-top: 4px;
+        }
+
+        /* Adaptive Circle */
+        .adaptive-circle-container {
+            position: absolute;
+            left: 160px;
+            top: 200px;
+            width: 160px;
+            height: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #FFFFFF;
+            box-shadow: 0 0 0 10px rgba(255,255,255,0.8);
+        }
+
+        .adaptive-text {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.2;
+            z-index: 10;
+        }
+
+        .circle-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        /* Lane Pills */
+        .lane-pills {
+            position: absolute;
+            left: 420px;
+            top: 160px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .pill {
+            height: 48px;
+            width: 260px;
+            background: #FFFFFF;
+            border: 1px solid var(--border-gray);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pill::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            background: linear-gradient(90deg, var(--vox-teal-light) 0%, rgba(255,255,255,0) 100%);
+            z-index: 0;
+        }
+
+        .pill-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--vox-teal);
+            border-radius: 50%;
+            margin-right: 12px;
+            z-index: 1;
+        }
+
+        .pill span {
+            z-index: 1;
+        }
+
+        /* Right Side Redesign - Handoff Capsule */
+        .right-label {
+            position: absolute;
+            left: 1430px;
+            top: 100px;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            z-index: 10;
+        }
+
+        .handoff-capsule {
+            position: absolute;
+            left: 1430px;
+            top: 140px;
+            width: 420px;
+            height: 340px;
+            background: #FFFFFF;
+            border-radius: 16px;
+            box-shadow: 0 24px 48px rgba(0,0,0,0.08), 0 8px 16px rgba(0,0,0,0.04);
+            border: 1px solid #E5E7EB;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        /* Capsule Interior Hierarchy */
+        .capsule-header {
+            height: 64px;
+            border-bottom: 1px solid #F3F4F6;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            background: #FAFAFA;
+        }
+
+        .placeholder-title {
+            height: 16px;
+            width: 60%;
+            background: var(--text-gray);
+            border-radius: 8px;
+        }
+
+        .placeholder-badge {
+            margin-left: auto;
+            height: 20px;
+            width: 60px;
+            background: var(--vox-teal-light);
+            border-radius: 10px;
+        }
+
+        .capsule-body {
+            flex: 1;
+            padding: 24px;
+            display: flex;
+            gap: 24px;
+        }
+
+        .body-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .placeholder-line {
+            height: 10px;
+            background: #E5E7EB;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .placeholder-line.short { width: 70%; }
+        .placeholder-line.medium { width: 85%; }
+
+        .placeholder-block {
+            height: 80px;
+            background: #F9FAFB;
+            border: 1px solid #F3F4F6;
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .capsule-footer {
+            height: 88px;
+            background: #F8FAFC;
+            border-top: 1px solid #E2E8F0;
+            padding: 16px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .capsule-footer::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--vox-teal);
+        }
+
+        .footer-label {
+            height: 12px;
+            width: 40%;
+            background: var(--vox-teal-medium);
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        .footer-content {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-pill {
+            height: 24px;
+            width: 80px;
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    <!-- Header -->
+    <div class="header-section">
+        <h1 class="main-headline">
+            <span>Vox</span> is the adaptive interviewing system that takes on the<br>
+            hard clinical reasoning work needed to turn patient story<br>
+            into a clinician-grade starting point.
+        </h1>
+        <p class="sub-headline">
+            Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+            By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>
+            what still needs verification before the visit begins.
+        </p>
+    </div>
+
+    <!-- Main Diagram -->
+    <div class="diagram-area">
+        
+        <!-- SVG Connections -->
+        <svg class="connections">
+            <defs>
+                <!-- Flared Connector Gradient -->
+                <linearGradient id="flareGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#2A8B8B" stop-opacity="0.05"/>
+                    <stop offset="100%" stop-color="#2A8B8B" stop-opacity="0.25"/>
+                </linearGradient>
+            </defs>
+
+            <!-- Left Side Lines (Patient - Gray) -->
+            <path d="M 480 72 C 600 72, 620 280, 700 280" fill="none" stroke="#CBD5E1" stroke-width="4" />
+            <path d="M 480 252 C 600 252, 620 280, 700 280" fill="none" stroke="#CBD5E1" stroke-width="4" />
+            <path d="M 480 432 C 600 432, 620 280, 700 280" fill="none" stroke="#CBD5E1" stroke-width="4" />
+
+            <!-- Left Side Lines (Vox - Teal) -->
+            <path d="M 500 162 C 600 162, 620 280, 700 280" fill="none" stroke="#81C3C3" stroke-width="4" />
+            <path d="M 500 342 C 600 342, 620 280, 700 280" fill="none" stroke="#81C3C3" stroke-width="4" />
+
+            <!-- Right Side Flared Connector (The Redesign) -->
+            <!-- Starts at chamber right edge, flares out to meet the capsule perfectly -->
+            <path d="M 1300 280 C 1380 280, 1380 140, 1430 140 L 1430 480 C 1380 480, 1380 280, 1300 280 Z" fill="url(#flareGrad)" />
+            
+            <!-- Subtle edge lines for the flare to give it definition -->
+            <path d="M 1300 280 C 1380 280, 1380 140, 1430 140" fill="none" stroke="#81C3C3" stroke-width="1.5" stroke-opacity="0.5"/>
+            <path d="M 1300 280 C 1380 280, 1380 480, 1430 480" fill="none" stroke="#81C3C3" stroke-width="1.5" stroke-opacity="0.5"/>
+
+        </svg>
+
+        <!-- Left Bubbles -->
+        <div class="bubble bubble-patient b1">My back has been hurting...</div>
+        <div class="bubble bubble-vox b2">Vox: What makes it worse?</div>
+        <div class="bubble bubble-patient b3">It's worse in the morning.</div>
+        <div class="bubble bubble-vox b4">Vox: When did this start?</div>
+        <div class="bubble bubble-patient b5">Started last Tuesday.</div>
+
+        <!-- Center Chamber -->
+        <div class="chamber">
+            <div class="chamber-header">
+                <div class="chamber-title">Vox</div>
+                <div class="chamber-subtitle">Adaptive clinical interviewer</div>
+            </div>
+
+            <!-- Adaptive Circle -->
+            <div class="adaptive-circle-container">
+                <svg class="circle-svg" viewBox="0 0 160 160">
+                    <!-- Gray background ring -->
+                    <circle cx="80" cy="80" r="70" fill="none" stroke="#E5E7EB" stroke-width="12" />
+                    <!-- Teal segmented ring -->
+                    <circle cx="80" cy="80" r="70" fill="none" stroke="#2A8B8B" stroke-width="12" stroke-dasharray="120 40 80 200" stroke-linecap="round" />
+                </svg>
+                <div class="adaptive-text">Adaptive<br>clinical<br>interviewer</div>
+            </div>
+
+            <!-- Lane Pills -->
+            <div class="lane-pills">
+                <div class="pill">
+                    <div class="pill-dot"></div>
+                    <span>What matters</span>
+                </div>
+                <div class="pill">
+                    <div class="pill-dot"></div>
+                    <span>What connects</span>
+                </div>
+                <div class="pill">
+                    <div class="pill-dot"></div>
+                    <span>What still needs<br>verification</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side Redesign -->
+        <div class="right-label">Clinician-grade starting point</div>
+        
+        <div class="handoff-capsule">
+            <!-- Headline Row -->
+            <div class="capsule-header">
+                <div class="placeholder-title"></div>
+                <div class="placeholder-badge"></div>
+            </div>
+            
+            <!-- Structured Content Region -->
+            <div class="capsule-body">
+                <div class="body-col">
+                    <div class="placeholder-line"></div>
+                    <div class="placeholder-line medium"></div>
+                    <div class="placeholder-line short"></div>
+                    <div class="placeholder-line" style="margin-top: 12px;"></div>
+                    <div class="placeholder-line medium"></div>
+                </div>
+                <div class="body-col">
+                    <div class="placeholder-block">
+                        <div class="placeholder-line short"></div>
+                        <div class="placeholder-line"></div>
+                        <div class="placeholder-line medium"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explicit Unresolved / Verify Cue -->
+            <div class="capsule-footer">
+                <div class="footer-label"></div>
+                <div class="footer-content">
+                    <div class="footer-pill"></div>
+                    <div class="footer-pill" style="width: 110px;"></div>
+                    <div class="footer-pill" style="width: 90px;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

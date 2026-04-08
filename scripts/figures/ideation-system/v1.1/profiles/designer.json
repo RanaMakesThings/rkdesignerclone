@@ -1,0 +1,34 @@
+{
+  "profile_id": "designer",
+  "project_id": "designer-health",
+  "guardrails": [
+    "Do not let the deck become a documentation story.",
+    "Do not let Slides 4, 5, and 6 do each other's jobs.",
+    "Keep Slide 9 as category defense.",
+    "Sparse slides should stay sparse.",
+    "Tone should remain serious, clinically literate, premium, restrained, and high-signal."
+  ],
+  "acceptance_tests": {
+    "04": [
+      "turns Slide 4 into Slide 5 mechanism language",
+      "uses generic story-to-structure phrasing",
+      "loses wedge-selection clarity"
+    ],
+    "05": [
+      "blob -> arrow -> neat card transform",
+      "over-polished output artifact",
+      "reasoning reduced to cleanup"
+    ],
+    "06": [
+      "feature cloud",
+      "airy marketing placard",
+      "workflow strip pretending to be product concept"
+    ],
+    "09": [
+      "competitor matrix",
+      "generic before/during/after lifecycle strip",
+      "anti-scribe attack framing",
+      "semantic difference claim without visual proof"
+    ]
+  }
+}

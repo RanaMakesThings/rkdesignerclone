@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designer slide-07 report</title>
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --panel: #ffffff;
+        --text: #12202f;
+        --muted: #617286;
+        --line: #dbe3ec;
+        --accent: #4a89c8;
+        --accent-soft: #eef5fc;
+        --shadow: 0 16px 40px rgba(18, 32, 47, 0.08);
+        --radius: 22px;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 32px;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+      .page {
+        max-width: 1380px;
+        margin: 0 auto;
+      }
+      .hero {
+        padding: 30px 32px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: radial-gradient(circle at top right, rgba(74, 137, 200, 0.09), transparent 32%), var(--panel);
+        box-shadow: var(--shadow);
+      }
+      .eyebrow {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 12px 0 0;
+        font-size: 48px;
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+      .summary {
+        margin-top: 14px;
+        max-width: 940px;
+        font-size: 19px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .file-chip, .mini-chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 9px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .file-chip:hover { border-color: var(--accent); color: var(--accent); }
+      .grid {
+        display: grid;
+        gap: 20px;
+        margin-top: 24px;
+      }
+      .grid.context {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .grid.visuals {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .grid.summary {
+        grid-template-columns: 1.2fr 1fr 1fr;
+      }
+      .card, .step {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+      .card {
+        padding: 22px 24px;
+      }
+      .step {
+        margin-top: 22px;
+        overflow: hidden;
+      }
+      .step-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 20px 24px;
+        border-bottom: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(238, 245, 252, 0.68), rgba(255,255,255,0.98));
+      }
+      .step-index {
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .step-title {
+        margin-top: 6px;
+        font-size: 26px;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+      }
+      .step-body {
+        padding: 24px;
+      }
+      .markdown h1, .markdown h2, .markdown h3, .markdown h4 {
+        margin: 1.1em 0 0.45em;
+        line-height: 1.15;
+      }
+      .markdown h1 { font-size: 30px; }
+      .markdown h2 { font-size: 24px; }
+      .markdown h3 { font-size: 18px; text-transform: none; }
+      .markdown p, .markdown li {
+        font-size: 16px;
+        line-height: 1.55;
+        color: #243344;
+      }
+      .markdown ul, .markdown ol {
+        padding-left: 22px;
+      }
+      .markdown code {
+        padding: 1px 6px;
+        border-radius: 8px;
+        background: #f2f6fa;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.92em;
+      }
+      .markdown pre {
+        padding: 14px 16px;
+        border-radius: 16px;
+        background: #0f1720;
+        color: #eff6ff;
+        overflow: auto;
+      }
+      .artifact-shot {
+        margin: 0;
+        overflow: hidden;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+      .artifact-shot img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .artifact-shot figcaption {
+        padding: 12px 14px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.4;
+      }
+      .missing {
+        padding: 18px;
+        border-radius: 16px;
+        border: 1px dashed var(--line);
+        color: var(--muted);
+        background: #fbfcfe;
+      }
+      .shortlist {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .note {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      .summary-list {
+        display: grid;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .summary-item {
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: #f8fbfe;
+        border: 1px solid var(--line);
+      }
+      .summary-item strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .review-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .review-card {
+        padding: 18px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: #fbfdff;
+      }
+      .review-card h3 {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.1;
+      }
+      .review-card p {
+        margin: 12px 0 0;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #243344;
+      }
+      @media (max-width: 1100px) {
+        .grid.context, .grid.visuals, .grid.summary, .review-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <section class="hero">
+        <div class="eyebrow">Designer Health Slide Report</div>
+        <h1>Slide 6 report</h1>
+        <div class="summary">
+          This report captures the full working pass for slide-07, but it leads with the decision: what happened, what was made, what
+          the three reviewers said, and what happens next.
+        </div>
+        <div class="chips"><span class="mini-chip">Current version: version-000113</span></div>
+        <div class="chips"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/workflow.md">Workflow doc</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/master-slide-specs.md">Master slide specs</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/manifest.json">Slide manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-06/README.md">Slide note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-06/fine-tune-request.md">Fine-tune request</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/versions/version-000113--slide-07-v108-native-2k-gemini-v2">Current version dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-06-workflow-strip.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/briefs/slide-07-storyboard-threshold-v1.md">Figure brief</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/ideation/slide-06-workflow-strip-v1.md">Ideation note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/compositions/slide-06-workflow-strip-v3.md">Composition note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/render-briefs/slide-06-workflow-strip-v3.md">Render brief</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-06-workflow-strip-v3.json">Native spec</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/process-review-slide-06-pass.md">Process review</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/versions/version-000113--slide-07-v108-native-2k-gemini-v2/meta.json">Meta</a></div>
+      </section>
+
+      <section class="grid summary">
+        <article class="card">
+          <div class="eyebrow">Executive Summary</div>
+          <div class="markdown"><p>_No assessment synthesis found._</p></div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">What Was Made</div>
+          <div class="summary-list">
+            <div class="summary-item"><strong>Visual branches</strong></div>
+            <div class="summary-item"><strong>Reviews run</strong></div>
+            <div class="summary-item"><strong>Repair consults</strong></div>
+            <div class="summary-item"><strong>Latest micro-pass</strong>No micro-pass recorded</div>
+            <div class="summary-item"><strong>Approval state</strong>No approved micro-pass yet</div>
+            <div class="summary-item"><strong>Current native spec</strong>slide-06-workflow-strip-v3.json</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">What Happens Next</div>
+          <div class="markdown"><p>_No next-pass plan found._</p></div>
+        </article>
+      </section>
+
+      <section class="step" id="assessments">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Assessments</div>
+            <div class="step-title">Three-review readout</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="review-grid">
+            <article class="review-card">
+              <h3>Codex</h3>
+              <p>No Codex review summary found.</p>
+              
+            </article>
+            <article class="review-card">
+              <h3>Gemini</h3>
+              <p>No Gemini review summary found.</p>
+              
+            </article>
+            <article class="review-card">
+              <h3>Anthropic</h3>
+              <p>No Anthropic review summary found.</p>
+              
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="step" id="repair">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Repair</div>
+            <div class="step-title">What the three tools said to do next</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="review-grid">
+            <article class="review-card">
+              <h3>Codex repair</h3>
+              <p>No Codex repair summary found.</p>
+              
+            </article>
+            <article class="review-card">
+              <h3>Gemini repair</h3>
+              <p>No Gemini repair summary found.</p>
+              
+            </article>
+            <article class="review-card">
+              <h3>Anthropic repair</h3>
+              <p>No Anthropic repair summary found.</p>
+              
+            </article>
+          </div>
+          <div class="card" style="margin-top:16px;">
+            <div class="eyebrow">Repair synthesis</div>
+            <div class="markdown"><p>_No repair synthesis found._</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid context">
+        <article class="card">
+          <div class="eyebrow">Lead In</div>
+          <div class="markdown"><h2>Slide 5 — Vox blends adaptive interviewing, clinical reasoning, and medical knowledge to produce a clinician-grade starting point</h2>
+<h3>Slide job</h3>
+<p>Introduce Vox as the answer and define the success standard.</p>
+<h3>Core claim</h3>
+<p>**The value is not in gathering more information. The value is in producing a clinician-grade starting point. Vox is the system built to do that work.**</p>
+<h3>What the audience should believe after this slide</h3>
+<p>**Vox is not a form, not a transcript, and not intake automation. It is the product built to turn raw patient story into a verification-ready history clinicians can actually start from.**</p>
+<h3>Strategic role in deck</h3>
+<p>This is the hinge between the conceptual half of the deck and the product half. It is now the first full answer slide after Slide 4 establishes both why history is the wedge and why reclaiming it is nontrivial.</p>
+<p>It must do three things:</p>
+<ol><li>name the answer</li><li>show why it is not generic intake or summarization</li><li>make the standard feel concrete enough to matter</li></ol>
+<h3>Current running copy plan</h3>
+<p>**Header** Vox blends adaptive interviewing, clinical reasoning, and medical knowledge to produce a clinician-grade starting point.</p>
+<p>**Subheader** Not a form. Not a transcript. A verification-ready history clinicians can start from.</p>
+<h3>Current running figure plan</h3>
+<p>The right direction is no longer a standards placard or adjective card.</p>
+<p>The current preferred figure family is:</p>
+<ul><li>one strong central Vox hero object</li><li>raw narrative entering from the left</li><li>adaptive follow-up + reasoning visibly happening inside Vox</li><li>compact emerging clinician-grade starting point on the right</li></ul>
+<p>The key internal labels are minimal and strong:</p>
+<ul><li>Vox</li><li>Adaptive clinical interviewer</li><li>What matters</li><li>What connects</li><li>What still needs verification</li><li>Clinician-grade starting point</li></ul>
+<h3>Why this is the right answer for Slide 5</h3>
+<p>Because this slide should feel like the named system built to do the hard work that Slide 4 only lightly introduced.</p>
+<p>It should not feel like:</p>
+<ul><li>a workflow strip</li><li>an architecture diagram</li><li>a feature cloud</li><li>an adjective row</li></ul>
+<p>It should feel like:</p>
+<ul><li>one substantial system</li><li>visibly doing the heavy lift</li><li>producing a clinician-grade starting point</li></ul>
+<h3>Assessment</h3>
+<p>This is one of the most strategically important slides in the deck. It has improved a lot, but it is still an execution-sensitive slide. The main risk is drift toward either airy marketing language or technical architecture language.</p>
+<h3>What to avoid</h3>
+<ul><li>workflow-strip look</li><li>floating capability chips</li><li>database / brain icon clusters</li><li>a giant funnel</li><li>a generic pipeline that replays the old standalone Slide 5</li><li>a full polished report artifact</li><li>architecture plumbing language</li></ul>
+<h3>Current status</h3>
+<p>**Conceptually strong and close; visual execution still matters.**</p>
+<p>---</p></div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">Current Slide</div>
+          <div class="markdown"><h2>Slide 6 — Vox prepares the visit before it starts</h2>
+<h3>Slide job</h3>
+<p>Make the workflow believable.</p>
+<h3>Core claim</h3>
+<p>**Vox is not a loose AI assistant. It is a structured pre-visit workflow.**</p>
+<h3>What the audience should believe after this slide</h3>
+<p>**There is a credible pre-visit workflow by which Vox could produce a clinician-usable starting point.**</p>
+<h3>Strategic role in deck</h3>
+<p>This is the procedural-credibility slide. It comes after the concept/product slide and before the artifact slide.</p>
+<p>That means its job is not to prove the artifact. Its job is to make the artifact believable.</p>
+<h3>Current running copy plan</h3>
+<p>**Header** Vox prepares the visit before it starts.</p>
+<p>Supporting idea:</p>
+<ul><li>interviews</li><li>structures</li><li>hands off a brief the clinician verifies and uses</li></ul>
+<h3>Current running figure plan</h3>
+<p>One calm four-step strip:</p>
+<ul><li>invite</li><li>interview</li><li>structure</li><li>verify</li></ul>
+<h3>Why this works</h3>
+<p>This is the right level of workflow detail. It shows operational shape without turning into systems architecture. It also keeps the clinician visibly in the loop.</p>
+<h3>Assessment</h3>
+<p>The slide is in a good conceptual place. Its main risk is overcomplication.</p>
+<h3>What to avoid</h3>
+<ul><li>full UI screenshots</li><li>swimlanes</li><li>architecture boxes</li><li>too much product copy</li><li>fully autonomous vibe</li><li>artifact proof that should belong to Slide 7</li></ul>
+<h3>Current status</h3>
+<p>**Near locked.**</p>
+<p>---</p></div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">What Comes Next</div>
+          <div class="markdown"><h2>Slide 7 — The clinician starts from a structured brief</h2>
+<h3>Slide job</h3>
+<p>Make the product tangible. Show the actual object the clinician starts from.</p>
+<h3>Core claim</h3>
+<p>**The product is a structured clinical brief the clinician can actually start from.**</p>
+<h3>What the audience should believe after this slide</h3>
+<p>**This is a real clinician-facing artifact, not a transcript, not an intake form, and not a generic summary.**</p>
+<h3>Strategic role in deck</h3>
+<p>This is the product payoff slide. Everything before it has been building toward seeing the object itself.</p>
+<h3>Current running copy plan</h3>
+<p>**Header** The clinician starts from a structured brief.</p>
+<p>**Subheader** Scan, verify, decide.</p>
+<p>**Optional framing line** Not a transcript. Not a note. A starting point.</p>
+<p>**Artifact labels**</p>
+<ul><li>What matters</li><li>What happened when</li><li>What still needs confirmation</li></ul>
+<h3>Current running figure plan</h3>
+<p>One central structured brief with zoomed or pulled-out callouts highlighting the three functions above.</p>
+<h3>Why this works</h3>
+<p>The triad is strong because it communicates:</p>
+<ul><li>prioritization</li><li>temporal structure</li><li>uncertainty handling</li></ul>
+<p>That is exactly what the deck has been teaching the audience to care about.</p>
+<h3>Assessment</h3>
+<p>This slide is conceptually in a good place. It is one of the anchor slides in the deck. The remaining job is making the artifact feel like a real clinical starting point rather than a generic summary document.</p>
+<h3>What to avoid</h3>
+<ul><li>too many product states</li><li>too much workflow explanation again</li><li>dense unreadable artifact text</li><li>EHR mimicry</li><li>note-template energy</li></ul>
+<h3>Current status</h3>
+<p>**Strong and near locked conceptually.**</p>
+<p>---</p></div>
+        </article>
+      </section>
+
+      <section class="step" id="workflow">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Workflow</div>
+            <div class="step-title">Current project methodology</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="markdown"><h1>Designer Deck Workflow</h1>
+<p>Current working methodology for building Designer slide figures inside this repo.</p>
+<p>This is the project-local source of truth for how we actually run the process. The imported manual at <code>inputs/pitch_deck_figure_workflow_manual.md</code> remains the upstream reference, but this file reflects the hardened process after real deck passes in this repo.</p>
+<h2>Purpose</h2>
+<p>Use a repeatable loop that keeps strategy, figure decisions, model comparison, and review artifacts organized under one project root.</p>
+<p>The goal is not just to make a figure. The goal is to preserve:</p>
+<ul><li>why the slide exists</li><li>what the figure is trying to prove</li><li>what was tried</li><li>what won</li><li>how to understand the full pass later without reconstructing context</li></ul>
+<p>Current execution policy:</p>
+<p>challenge branches</p>
+<p><code>Gemini image + Gemini HTML</code></p>
+<p>HTML/SVG/PNG artifact set</p>
+<ul><li>use multiple models for high-level idea generation, critique, and occasional</li><li>once a visual direction is locked, the main execution lane becomes:</li><li>use other model-generation branches only when:</li><li>the Gemini lane is stuck</li><li>we need a deliberate challenge branch</li><li>we want a one-off sanity check on a hard slide</li><li>after the Gemini lane is stable, promote the winner into the canonical native</li></ul>
+<h2>Project-first rule</h2>
+<p>All active deck work should live under <code>projects/designer-health/</code>.</p>
+<p>The key folders are:</p>
+<ul><li><code>deck-spec.json</code></li><li><code>master-slide-specs.md</code></li><li><code>figure-companion.md</code></li><li><code>slide-packets/</code></li><li><code>figures/briefs/</code></li><li><code>figures/ideation/</code></li><li><code>figures/compositions/</code></li><li><code>figures/render-briefs/</code></li><li><code>figures/specs/</code></li><li><code>prompts/</code></li><li><code>slide-figures/</code></li></ul>
+<p>Generated runtime artifacts may still land in <code>output/</code>, but stamped slide-review artifacts should resolve through the manifest-backed <code>slide-figures/slide-XX/</code> tree.</p>
+<p>Each stamped slide directory is manifest-backed. The root stays intentionally clean and keeps only the current selected figure projection plus version history:</p>
+<ul><li><code>manifest.json</code></li><li><code>versions/</code></li><li><code>slide-XX--version-YYYYYY.html</code></li><li><code>slide-XX--version-YYYYYY.svg</code></li><li><code>slide-XX--version-YYYYYY.png</code></li><li>optional alternate raster like <code>slide-XX--version-YYYYYY.jpg</code> or <code>.webp</code></li></ul>
+<p>The current selected version is projected into the slide root for compatibility and fast browsing. Historical and draft candidates live under <code>versions/version-*--&lt;slug&gt;/</code>. Slide-level notes and change requests live under <code>slide-notes/&lt;slide-dir&gt;/</code>, and one-slide HTML reports live under <code>slide-reports/&lt;slide-dir&gt;.html</code>.</p>
+<p>Use canonical stamped review directories inside the current selected version bundle:</p>
+<ul><li><code>gemini-review/</code></li><li><code>anthropic-review/</code></li><li><code>gemini-repair/</code></li><li><code>anthropic-repair/</code></li></ul>
+<p>When re-running a review or repair consult for the same current pass, overwrite the canonical directory instead of inventing a new suffixed folder name.</p>
+<h2>Standard artifact chain per slide</h2>
+<p>Every fully worked slide should have:</p>
+<ol><li>slide packet</li><li>figure brief</li><li>ideation note</li><li>composition note</li><li>render brief</li><li>Gemini image branch for active visual iteration</li><li>Gemini HTML branch for active editable iteration</li><li>optional side branches from other providers only when justified</li><li>three-review assessment set</li><li>assessment synthesis</li><li>repair consultation set when the pass fails</li><li>repair synthesis and next-pass plan when the pass fails</li><li>final native figure spec</li><li>stamped native export</li><li>final HTML slide report</li></ol>
+<h2>Slide fine-tuning mode</h2>
+<p>After a slide is stamped, later chats may enter a slide-local fine-tuning mode instead of replaying the full concept workflow.</p>
+<p>Use this mode only when the requested change is polish-level and the current selected direction is still valid.</p>
+<p>The handoff contract for that mode lives in:</p>
+<ul><li><code>projects/designer-health/slide-fine-tuning.md</code></li></ul>
+<p>In fine-tuning mode:</p>
+<p>version</p>
+<p><code>slide-reports/&lt;slide-dir&gt;.html</code>, and the stamped slide note in <code>slide-notes/&lt;slide-dir&gt;/README.md</code></p>
+<ol><li>resolve the official slide through <code>deck-spec.json</code></li><li>read <code>manifest.json</code> inside <code>paths.stampedDir</code> to find the current selected</li><li>inspect <code>deck-report.html</code>, the stamped slide report in</li><li>make the smallest possible change on the correct edit surface:</li></ol>
+<p>a contained HTML delta</p>
+<ul><li>a draft <code>versions/version-*--&lt;slug&gt;/gemini-html/generated.html</code> branch for</li><li>canonical <code>figures/specs/*.json</code> when the slide is spec-driven</li></ul>
+<p>draft is promoted</p>
+<ol><li>refresh the draft bundle&#39;s preview and the mirrored <code>figure.*</code> assets if the</li><li>regenerate the slide report</li><li>regenerate the deck report if the visible official state changed</li></ol>
+<p>Do not reopen ideation, packet writing, or direction selection unless the requested change exposes a structural problem.</p>
+<h2>Slide creation bootstrap</h2>
+<p>When a slide needs a new first draft from the locked Designer shell rather than polish on an existing HTML surface, use the create bootstrap instead of <code>html:edit:run</code> or <code>gemini:html:tune</code>.</p>
+<p>In create mode:</p>
+<p><code>templates/designer-deck-template-v1/template.html</code></p>
+<p>under <code>versions/version-*/create/</code></p>
+<p>against the seeded shell</p>
+<p>it with <code>slide:versions promote</code></p>
+<ol><li>resolve the slide through <code>deck-spec.json</code></li><li>allocate a draft <code>create-draft</code> version bundle under <code>versions/</code></li><li>seed the version root from</li><li>write <code>slide-notes/&lt;slide&gt;/create-request.md</code> plus a version-local snapshot</li><li>run <code>slide:create:run</code> to fan out the first-pass multimodal HTML search</li><li>leave the winning draft in <code>draft</code> state until a human explicitly promotes</li></ol>
+<p>Lane policy in v1:</p>
+<ul><li><code>html</code>: default first-draft path</li><li><code>hybrid</code>: same HTML bootstrap plus extra reference images/files</li><li><code>native</code>: scaffold-only handoff to the existing native/spec workflow</li></ul>
+<h2>Standard loop</h2>
+<p>Pull the current slide, the lead-in slide, and the next slide from <code>deck-spec.json</code> and sanity-check the human copy in <code>master-slide-specs.md</code>.</p>
+<p>Lock the slide thesis, non-goals, figure job, and figure-specific copy.</p>
+<p>Keep this short and execution-facing.</p>
+<p>Start with <code>figures:ideate</code> against the checked-in brief. For essential slides or when the wrapper is brittle, also gather direct concept sets from GPT-5.4, Claude, and Gemini.</p>
+<p>Do not leave the raw model artifact as the only record. The ideation note should make the distinct concept families obvious and name the current lead direction.</p>
+<p>Compare materially different visual families and choose one.</p>
+<p>Lock the chosen direction before native rendering.</p>
+<p>Use it as the main taste / composition iteration lane.</p>
+<p>Use it as the main editable / structural iteration lane.</p>
+<p>Run <code>html:screenshot</code> on <code>gemini-html/generated.html</code>.</p>
+<p>before broader review or repair. Use it for moves like spacing, position, visibility, size, or one contained structural tweak. Every micro-pass now has two checks:</p>
+<ol><li>Confirm slide context.</li><li>Make or update the slide packet.</li><li>Write the figure brief.</li><li>Run model-backed ideation.</li><li>Synthesize ideation into a checked-in ideation note.</li><li>Write the composition note.</li><li>Write the render brief.</li><li>Build the Gemini image branch.</li><li>Build the Gemini HTML branch.</li><li>Preview Gemini HTML with a PNG.</li><li>If the next move is one concrete local HTML delta, run <code>gemini:html:tune</code></li></ol>
+<p>Do not use it for family changes, semantic rewrites, or broader layout redesigns. The micro-pass draft should live in <code>slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/</code>.</p>
+<ul><li>delta check: did the requested change happen?</li><li>regression check: did anything else break?</li></ul>
+<p>OpenAI or Anthropic generation branches are no longer default per-slide requirements. Use them only for high-level ideas, challenge passes, or blocked Gemini cases.</p>
+<p>Ask for:</p>
+<ol><li>Run side-branch generations only when justified.</li><li>Run the three-review assessment set.</li></ol>
+<p>Save those under the current selected version bundle.</p>
+<ul><li>Codex visual assessment</li><li>Gemini visual assessment</li><li>Anthropic visual assessment</li></ul>
+<p>Summarize:</p>
+<ol><li>Write the assessment synthesis.</li></ol>
+<ul><li>what happened</li><li>what was made</li><li>what each reviewer said</li><li>the consensus</li><li>the final operator decision</li></ul>
+<p>Decide whether the current winner has only polish issues or still has a structural problem. If the issue is structural, reopen the loop and do a deliberate revision pass before promotion.</p>
+<p>Ask Codex, Gemini, and Anthropic what to do next now that the failure class is known.</p>
+<p>Classify the failure and state the exact next move before touching the next revision.</p>
+<p>Native remains the canonical editable asset set: <code>figure.html</code>, <code>figure.svg</code>, and <code>figure.png</code>. Those artifacts stay inside the selected version bundle and are projected to the slide root as <code>slide-XX--version-YYYYYY.html</code>, <code>.svg</code>, and <code>.png</code> when the version is promoted.</p>
+<p>If the pass changed the slide thesis, header, subheader, takeaway, figure role, family recommendation, numbering status, or current build status, update <code>deck-spec.json</code>, <code>master-slide-specs.md</code>, <code>deck-matrix.md</code>, and <code>figure-companion.md</code> in the same turn.</p>
+<p>Write a clean HTML report into <code>slide-reports/slide-XX.html</code> so the whole pass is reviewable in one click.</p>
+<ol><li>Run the loop gate.</li><li>If the pass failed, run the three-tool repair consultation.</li><li>Write the next-pass plan.</li><li>Build and stamp the final native branch after the Gemini lane is stable.</li><li>Sync the deck-level source docs if the slide understanding changed.</li><li>Generate the final slide report.</li></ol>
+<h2>Required decisions during the loop</h2>
+<p>direction is locked</p>
+<p>delta before the pass goes back through broader review</p>
+<p>break</p>
+<p>until the regression gate runs again</p>
+<p>Gemini lane is stable</p>
+<p>defaults</p>
+<p>Codex, Gemini, and Anthropic</p>
+<p>understanding</p>
+<ul><li>packet first, not prompt-first wandering</li><li>slide packet before prompt iteration</li><li>one stamped slide folder per slide</li><li>Gemini image + Gemini HTML are now the default active execution lane once a</li><li><code>gemini:html:tune</code> is now the default micro-loop for one concrete Gemini HTML</li><li>a micro-pass can promote only when:</li><li>both delta judges say the requested change was applied</li><li>GPT and Claude regression reviews both clear it</li><li>a checked-in Codex/operator micro-review note clears it</li><li>any single reviewer can block promotion if they identify a concrete visual</li><li>any manual edit to <code>generated.html</code> invalidates prior micro-pass approval</li><li>native is still the canonical final asset, but it is promoted after the</li><li>non-Gemini generation branches are optional challenge branches, not routine</li><li>every mature pass gets three visual reviews:</li><li>every mature pass gets an explicit assessment synthesis</li><li>every pass must go through a loop gate before promotion</li><li>deck-level docs must be updated when a hardened pass changes the slide</li><li>report generation at the end of the pass</li></ul>
+<h2>Loop gate</h2>
+<p>Ask this after the first comparison pass:</p>
+<p>now stale?</p>
+<ul><li>is the winner missing a required object or relationship?</li><li>is the figure still unclear in its 3-second read?</li><li>is the hierarchy still wrong?</li><li>does the winner still disagree with the slide job in a meaningful way?</li><li>did the pass change the slide meaning or family enough that the deck docs are</li></ul>
+<p>If the answer is yes to any of those, loop again.</p>
+<p>If the answer is no and the remaining issues are polish only, promote.</p>
+<p>For figure-essential slides, prefer at least one critique and one deliberate revision unless the first pass is already clearly stable.</p>
+<p>Also run this visual sanity check before promotion:</p>
+<p>visibly justified</p>
+<p>ambiguous</p>
+<p><code>xml</code></p>
+<p>composition rather than a cropped fragment</p>
+<ul><li>no new object should cover key copy or structure underneath it</li><li>no semantic object should appear twice unless duplication is intentional and</li><li>no directional marker or arrowhead should disappear or become visually</li><li>no text should be clipped, cropped, or partially missing</li><li>no stray rendering artifact should be visible, including leaked text like</li><li>if a section was removed, the slide must still read as a resolved standalone</li></ul>
+<p>Also ask:</p>
+<p>noise?</p>
+<p>first, or has it crossed into a broader layout / family / semantic problem?</p>
+<ul><li>is a side-model generation branch actually helping, or is it just creating</li><li>is this a concrete HTML delta that should go through <code>gemini:html:tune</code></li></ul>
+<p>If a branch is not meaningfully helping, archive it out of the primary comparison set.</p>
+<h2>Formal assessment method</h2>
+<p>Use this exact order:</p>
+<p>Write a blunt local assessment based on the actual rendered image.</p>
+<p>Use <code>gemini:review</code> with the stamped image and the checked-in critique prompt.</p>
+<p>Use <code>anthropic review</code> with the same stamped image and prompt.</p>
+<p>Write one checked-in synthesis note that captures:</p>
+<ol><li>Codex visual assessment</li><li>Gemini visual assessment</li><li>Anthropic visual assessment</li><li>Assessment synthesis</li></ol>
+<ul><li>what happened</li><li>what was made</li><li>each reviewer verdict</li><li>unique blocker findings</li><li>the consensus</li><li>the final operator decision</li></ul>
+<p>The operator decision is not a vote count. It is a synthesis. But the point of the three-review set is to make weak self-approval much harder.</p>
+<p>Unique blocker findings must be preserved even when only one reviewer catches them. Do not omit a concrete severe finding just because the other reviewers missed it.</p>
+<h2>Formal next-step method when a pass fails</h2>
+<p>When the slide does not clear the loop gate, classify the failure before revising:</p>
+<p>Small spacing, sizing, or emphasis issues. Same concept, same family.</p>
+<p>The right ingredients exist, but their arrangement or hierarchy is wrong.</p>
+<p>The slide is readable but the figure is proving the wrong thing or duplicating meaning badly.</p>
+<p>The chosen visual family is wrong for the slide job.</p>
+<ul><li><code>polish</code></li><li><code>layout</code></li><li><code>semantic</code></li><li><code>family</code></li></ul>
+<p>Then run a separate repair consultation.</p>
+<p>This is not the same thing as the review prompt.</p>
+<p>The review prompt asks:</p>
+<ul><li>what is wrong</li><li>whether it is working</li></ul>
+<p>The repair prompt asks:</p>
+<ul><li>what to do next</li><li>whether to stay in the same family</li><li>whether to do one targeted fix or reopen composition</li><li>which exact change should happen before the next render</li></ul>
+<p>Then choose the next move:</p>
+<p>run <code>gemini:html:tune</code> first and only reopen the broader loop if that fails</p>
+<p>do one targeted revision pass</p>
+<p>write 2 to 3 concrete revision options in the composition note and choose one</p>
+<p>update the slide packet before rendering again</p>
+<p>stop iterating inside the same family and reopen composition</p>
+<ul><li>if the request is one contained HTML delta inside the current family:</li><li>if all three reviewers agree on one concrete fix:</li><li>if all three agree the slide is broken, but disagree on the fix:</li><li>if the reviews expose slide-strategy confusion:</li><li>if the reviews show the family is wrong:</li></ul>
+<p>Do not jump straight from “broken” to “new render” without writing the next move down.</p>
+<h2>How the repair consultation becomes a decision</h2>
+<p>Do not synthesize the repair round loosely. Compare the three repair responses across the same four axes:</p>
+<p>stay in the current family or reopen composition</p>
+<p>targeted revision or broader redesign</p>
+<ul><li>failure class</li><li>family decision:</li><li>fix scope:</li><li>exact next render change</li></ul>
+<p>Then apply this rule:</p>
+<p>take the shared path and write it into <code>next-pass.md</code></p>
+<p>of the same move: take the majority path and note the dissent in <code>repair-synthesis.md</code></p>
+<p>do not render yet; reopen composition</p>
+<p>update the slide packet before choosing a figure move</p>
+<ul><li>if 3 of 3 agree on family and fix scope:</li><li>if 2 of 3 agree on family and fix scope, and the third is a narrower variant</li><li>if the tools split on family choice:</li><li>if the tools split because the slide thesis itself is unclear:</li></ul>
+<p>The operator decision is still a synthesis, not a vote count. But the synthesis must be traceable to those four axes.</p>
+<h2>Commands</h2>
+<p><code>projects/designer-health/figures/briefs/&lt;brief&gt;.md</code></p>
+<p><code>projects/designer-health/figures/specs/&lt;spec&gt;.json</code></p>
+<p><code>projects/designer-health/figures/specs/&lt;spec&gt;.json --project-root</code> <code>projects/designer-health --slide slide-XX --version-id version-000123 --no-images</code></p>
+<p><code>projects/designer-health/prompts/&lt;prompt&gt;.txt --out</code> <code>projects/designer-health/slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/gemini-image</code></p>
+<p><code>projects/designer-health/prompts/&lt;prompt&gt;.txt --out</code> <code>projects/designer-health/slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/gemini-html</code></p>
+<p><code>projects/designer-health/slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/gemini-html/generated.html</code> <code>--output</code> <code>projects/designer-health/slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/gemini-html/preview.png</code></p>
+<p><code>projects/designer-health/slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/gemini-html</code> <code>--change-file</code> <code>projects/designer-health/slide-notes/slide-XX/fine-tune-request.md</code> <code>--codex-review-file</code> <code>projects/designer-health/slide-figures/slide-XX/versions/version-*--&lt;slug&gt;/gemini-html/tune/&lt;run-id&gt;/&lt;attempt&gt;/codex-micro-review.md</code></p>
+<p><code>--slide slide-XX</code></p>
+<p>requires the checked-in <code>codex-repair.md</code> as the Codex / GPT-5.4 input and writes <code>repair-synthesis.generated.md</code> as a scaffold</p>
+<ul><li>native ideation:</li><li><code>npm run figures:ideate -- --brief</code></li><li>native render:</li><li><code>npm run figures:render -- --spec</code></li><li>native export direct to stamped slide folder:</li><li><code>npm run figures:export -- --spec</code></li><li>versioned slide management:</li><li><code>npm run slide:versions -- create</code></li><li><code>npm run slide:versions -- promote</code></li><li><code>npm run slide:versions -- migrate</code></li><li>Gemini image:</li><li><code>npm run gemini:image -- --prompt-file</code></li><li>Gemini HTML:</li><li><code>npm run gemini:html -- --prompt-file</code></li><li>Gemini HTML preview:</li><li><code>npm run html:screenshot -- --input</code></li><li>finalize a pending micro-pass after writing the Codex/operator note:</li><li><code>npm run gemini:html:tune -- --dir</code></li><li>final slide report:</li><li><code>npm run figures:report -- --project-root projects/designer-health --slide slide-XX</code></li><li>repair loop wrapper:</li><li><code>npm run figures:repair-loop -- --project-root projects/designer-health</code></li><li>notes:</li></ul>
+<h2>Review rules</h2>
+<p>loop gate says the remaining issues are polish-level</p>
+<p>considering the pass complete</p>
+<p>and the relevant tooling docs before moving on</p>
+<ul><li>title and figure should work together, not duplicate badly</li><li>the native branch should always exist before comparison branches</li><li>keep the winner as a canonical spec, not just a stamped image</li><li>do not stop after one pass just because artifacts exist; stop only after the</li><li>if the slide-level pass changes deck-level truth, sync the deck docs before</li><li>if a process improvement appears during a slide pass, update this workflow doc</li></ul>
+<h2>Current known improvements after slide 6</h2>
+<p><code>versions/version-*</code> bundle is better than copying later</p>
+<p>no outer frame, no browser-like margins, full-slide scale</p>
+<p>defer it just to keep the first pass cleaner; that should trigger a reopened loop, not a promotion</p>
+<ul><li>direct export into the current selected version bundle or a draft</li><li>Gemini HTML should be constrained harder:</li><li>final reports should be part of the default loop, not an optional afterthought</li><li>if the brief names a required object or relationship, do not intentionally</li></ul></div>
+        </div>
+      </section>
+
+      <section class="step" id="packet">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 1</div>
+            <div class="step-title">Slide packet</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="markdown"><h1>Slide 6 — Workflow Strip</h1>
+<h2>Status</h2>
+<ul><li>current deck numbering: slide 6</li><li>legacy source mapping: old slide 7</li><li>decision state: third native pass underway after aligned repair consultation</li></ul>
+<h2>Why this slide exists</h2>
+<p>diagram</p>
+<ul><li>explain how Vox moves work before the encounter</li><li>make the workflow feel operationally credible without becoming a systems</li><li>bridge the conceptual slides into the product artifact slide that follows</li></ul>
+<h2>Locked slide thesis</h2>
+<p>Vox prepares the visit before it starts by interviewing, structuring, and handing off a brief the clinician can verify and use.</p>
+<h2>Slide purpose brief</h2>
+<p>Vox moves history-building work earlier in a credible four-step flow</p>
+<p>the output is not raw transcript; it is a structured brief with explicit trust cues</p>
+<ul><li>top claim:</li><li>support claim:</li><li>non-goals:</li><li>do not show swimlanes</li><li>do not show enterprise workflow chrome</li><li>do not show fake product UI</li><li>do not overload the slide with technical detail</li></ul>
+<h2>Figure job</h2>
+<p><code>Invite → Interview → Structure → Verify</code></p>
+<ul><li>show one calm four-step operational strip:</li><li>keep the verbs equal in weight</li><li>give <code>Structure</code> the most visual emphasis</li><li>make the <code>Structure → Verify</code> handoff feel clear enough to trust</li><li>keep trust cues small and attached to later stages</li></ul>
+<h2>Locked copy</h2>
+<p><code>Vox prepares the visit before it starts.</code></p>
+<p><code>Vox interviews, structures, and hands off a brief the clinician can</code> <code>verify and use.</code></p>
+<ul><li>header:</li><li>subheader:</li><li>stage labels:</li><li><code>Invite</code></li><li><code>Interview</code></li><li><code>Structure</code></li><li><code>Verify</code></li><li>trust tags:</li><li><code>provenance</code></li><li><code>explicit unknowns</code></li><li><code>verification queue</code></li></ul>
+<h2>Visual rules</h2>
+<ul><li>white background</li><li>grayscale base</li><li>one restrained blue accent</li><li>four evenly weighted rounded stages across one horizontal strip</li><li>subtle connectors only; no thick arrows</li><li><code>Structure</code> is the visual star, but not a billboard</li><li>keep the overall feel calm, editorial, and obvious at a glance</li></ul>
+<h2>Reference logic</h2>
+<p>whitespace, rounded geometry, restrained accent, and clean typography</p>
+<p>avoid dashboard or software-screen energy</p>
+<ul><li>use the same premium deck grammar as the stronger conceptual slides:</li><li>this slide can be more operational than slides 3 to 4, but it should still</li></ul>
+<h2>Comparison plan</h2>
+<p>reusable <code>workflow_strip</code> family</p>
+<p>compositional taste check</p>
+<p>editable alternative structure</p>
+<ul><li>native pass:</li><li>Gemini image pass:</li><li>Gemini HTML pass:</li></ul>
+<h2>Immediate question for this pass</h2>
+<p>the strip does not need a separate shared brief object between <code>Structure</code> and <code>Verify</code>; the handoff should stay inside the four-step strip</p>
+<ul><li>resolved:</li></ul></div>
+        </div>
+      </section>
+
+      <section class="step" id="brief">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 2</div>
+            <div class="step-title">Figure brief</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="markdown"><h1>Slide 7 Figure Brief</h1>
+<p>Header:</p>
+<ul><li><code>Vox prepares the visit before it starts.</code></li></ul>
+<p>Subheader:</p>
+<p><code>and use.</code></p>
+<ul><li><code>Vox interviews, structures, and hands off a brief the clinician can verify</code></li></ul>
+<p>Scope:</p>
+<p>process strip to a left-to-right storyboard with explicit temporal rhythm.</p>
+<ul><li>Design the full slide figure area for slide 7.</li><li>Keep the existing slide thesis, but shift the composition from an equal-step</li></ul>
+<p>Must-keep logic:</p>
+<p><code>Visit begins</code></p>
+<p>beat 2</p>
+<ul><li>one shared horizontal flow with four unequal beats:</li><li><code>Invite sent</code></li><li><code>Adaptive interview</code></li><li><code>Brief prepared</code></li><li><code>Clinician starts prepared</code></li><li>beats 1 to 3 are grouped under <code>Before visit</code></li><li>a vertical threshold marker appears before beat 4 with the label</li><li>beat 3 is the visual hero and larger than the others</li><li>beat 4 is the payoff and should sit closer to beat 3 than beat 1 sits to</li></ul>
+<p>Exact beat copy:</p>
+<ul><li><code>Invite sent</code></li><li><code>Patient receives secure pre-visit link.</code></li><li><code>Adaptive interview</code></li><li><code>Vox asks follow-up questions and captures the story.</code></li><li><code>Brief prepared</code></li><li><code>Patient story becomes a clinician-ready handoff.</code></li><li><code>Clinician starts prepared</code></li><li><code>Sets up a more efficient visit.</code></li></ul>
+<p>Desired effect:</p>
+<ul><li>read in one left-to-right pass</li><li>feel temporal and product-specific rather than generic-process</li><li>make the handoff into the visit spatially obvious</li><li>keep the slide calm, premium, and editorial</li></ul>
+<p>Helpful directions:</p>
+<p><code>Before visit</code></p>
+<p>arrows</p>
+<p>phone plus secure-link cue</p>
+<p>phone or patient-with-phone, short exchange, one follow-up</p>
+<p>but not duplicate slide 8&#39;s full artifact</p>
+<p>packet</p>
+<ul><li>use one thin bracket or hairline band above beats 1 to 3 labeled</li><li>use hairline connectors, tiny arrowheads, or motion ticks rather than big</li><li>beat 1 should resolve almost instantly:</li><li>beat 2 should make the product feel active:</li><li>beat 3 should show compression from story fragments into a structured brief,</li><li>beat 4 should show a calm clinician review moment with only a glimpse of the</li></ul>
+<p>Visual rules:</p>
+<ul><li>white background</li><li>grayscale base</li><li>one restrained accent color</li><li>crisp rounded forms</li><li>subtle shadows</li><li>controlled overlays</li><li>readable text rendered directly in the slide, not baked into noisy imagery</li><li>accent should cluster around beat 3, with lighter support in beats 2 and 4</li></ul>
+<p>Avoid:</p>
+<ul><li>2x2 grids</li><li>four equal boxes</li><li>giant arrows or chevrons</li><li>thick flowchart styling</li><li>photoreal stock scenes</li><li>dashboard or enterprise workflow chrome</li><li>making beat 1 visually as important as beats 2 to 4</li></ul></div>
+        </div>
+      </section>
+
+      <section class="step" id="ideation">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 3</div>
+            <div class="step-title">Ideation synthesis</div>
+          </div>
+        </div>
+        <div class="step-body">
+          
+          <div class="markdown"><h1>Slide 6 Ideation</h1>
+<ul><li><code>slug</code>: <code>slide-06-workflow-strip-v1</code></li><li><code>slide</code>: <code>6</code></li><li><code>deck</code>: <code>designer-health</code></li><li><code>status</code>: <code>shortlisted</code></li></ul>
+<h2>Inputs</h2>
+<ul><li>brief path:</li><li>[slide-06-workflow-strip-v1.md](../briefs/slide-06-workflow-strip-v1.md)</li><li>raw model ideation artifact:</li><li>[/Users/kabeer/Code/rkdesignerclone/output/figures/ideation/slide-06-workflow-strip-v1/ideas.json](/Users/kabeer/Code/rkdesignerclone/output/figures/ideation/slide-06-workflow-strip-v1/ideas.json)</li></ul>
+<h2>Codex read on the figure problem</h2>
+<p>and trust layer</p>
+<ul><li>the slide needs to feel operationally credible in one glance</li><li>the workflow must stay calm and premium, not diagrammatic</li><li><code>Structure</code> has to feel like the pivotal stage because it carries the brief</li></ul>
+<h2>Model-backed shortlist</h2>
+<ul><li><code>Rounded Strip with Micro-Structure</code></li><li>strongest native direction</li><li>matches the clean-pack most directly</li><li><code>Photo: Clinician at Desk with Brief (overlay)</code></li><li>strongest hybrid direction for human credibility</li><li>worth testing for taste, but riskier to control</li><li><code>Right-side Verification Panel with Left Pre-Visit Strip</code></li><li>useful if the deck needs a more explicit queue / handoff logic</li><li>riskier because it can drift toward UI</li></ul>
+<h2>Synthesis</h2>
+<p>object in the first pass</p>
+<p>improves the composition</p>
+<ul><li>keep the first canonical pass native</li><li>use the even strip as the base family</li><li>keep the handoff artifact implied inside <code>Structure</code>, not floating as a second</li><li>let Gemini image and Gemini HTML test whether a more explicit handoff object</li></ul>
+<h2>Chosen starting direction</h2>
+<h3>Rounded Strip with Micro-Structure</h3>
+<ul><li>equal-width stages</li><li>subtle connectors</li><li>restrained accent on <code>Structure</code></li><li>trust tags only on the later stages</li><li>enough internal rows to feel tangible, but not enough to become fake UI</li></ul></div>
+        </div>
+      </section>
+
+      <section class="step" id="composition">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 4</div>
+            <div class="step-title">Composition choice</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="markdown"><h1>Slide 6 Composition Study</h1>
+<ul><li><code>slug</code>: <code>slide-06-workflow-strip-v3</code></li><li><code>slide</code>: <code>6</code></li><li><code>deck</code>: <code>designer-health</code></li><li><code>status</code>: <code>repair-pass</code></li></ul>
+<h2>Inputs</h2>
+<ul><li>slide packet path:</li><li>[slide-06-workflow-strip.md](../../slide-packets/slide-06-workflow-strip.md)</li><li>brief path:</li><li>[slide-06-workflow-strip-v1.md](../briefs/slide-06-workflow-strip-v1.md)</li><li>prior composition path:</li><li>[slide-06-workflow-strip-v2.md](./slide-06-workflow-strip-v2.md)</li><li>repair synthesis path:</li><li>[repair-synthesis.md](../../slide-figures/slide-06/repair-synthesis.md)</li></ul>
+<h2>Repair Consultation Outcome</h2>
+<p>The repair consultation aligned 3 of 3 on the same call:</p>
+<ul><li>stay in the <code>workflow_strip</code> family</li><li>do one targeted revision, not a redesign</li><li>delete the floating handoff brief entirely</li></ul>
+<h2>Revision Direction</h2>
+<h3>Even Workflow Strip Without Bridge Object</h3>
+<p>continuity, copy, and stage interiors only</p>
+<ul><li>keep the same four-stage strip</li><li>keep <code>Structure</code> as the visual star</li><li>remove the floating handoff brief completely</li><li>make the <code>Structure → Verify</code> relationship readable through connector</li></ul>
+<h2>Why this is the right revision</h2>
+<ul><li>it fixes the occlusion and duplication failure directly</li><li>it restores the clean four-object rhythm</li><li>it keeps slide 6 focused on workflow rather than previewing slide 7</li><li>it preserves the correct family instead of reopening composition</li></ul>
+<h2>Design Rules for v3</h2>
+<ul><li>no separate bridge object between <code>Structure</code> and <code>Verify</code></li><li><code>Structure</code> should still imply a prepared brief through its internal rows</li><li><code>Verify</code> should stay fully visible and read as acting on that output</li><li>connectors should be clean and subordinate, but not invisible</li><li>keep trust cues attached to the later stages only</li></ul>
+<h2>Selected Direction</h2>
+<h3>Even Workflow Strip + Clean Handoff</h3>
+<ul><li>promote the strip concept again</li><li>remove the connector-level handoff artifact</li><li>let <code>Structure</code> and <code>Verify</code> do the semantic work inside the existing strip</li></ul></div>
+        </div>
+      </section>
+
+      <section class="step" id="render-brief">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 5</div>
+            <div class="step-title">Render brief</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="markdown"><h1>Slide 6 Render Brief</h1>
+<ul><li><code>slug</code>: <code>slide-06-workflow-strip-v3</code></li><li><code>slide</code>: <code>6</code></li><li><code>deck</code>: <code>designer-health</code></li><li><code>status</code>: <code>ready-for-spec</code></li></ul>
+<h2>Inputs</h2>
+<ul><li>slide packet path:</li><li>[slide-06-workflow-strip.md](../../slide-packets/slide-06-workflow-strip.md)</li><li>brief path:</li><li>[slide-06-workflow-strip-v1.md](../briefs/slide-06-workflow-strip-v1.md)</li><li>composition path:</li><li>[slide-06-workflow-strip-v3.md](../compositions/slide-06-workflow-strip-v3.md)</li><li>repair synthesis path:</li><li>[repair-synthesis.md](../../slide-figures/slide-06/repair-synthesis.md)</li></ul>
+<h2>Figure Job</h2>
+<p>and ends with a clinician-verifiable brief</p>
+<p>object</p>
+<ul><li>show one credible pre-visit operating strip that starts before the encounter</li><li>keep the <code>Structure → Verify</code> handoff clear without introducing a fifth</li></ul>
+<h2>Final Direction</h2>
+<h3>Even Workflow Strip Without Bridge Object</h3>
+<p>handoff stay inside the existing strip.</p>
+<ul><li>one-sentence promise:</li><li>Keep the calm four-step workflow, remove the floating brief, and let the</li><li>figure family:</li><li><code>workflow_strip</code></li><li>design stance:</li><li><code>targeted repair</code></li><li>spatial map:</li><li>top:</li><li>normal slide chrome with title and subtitle</li><li>middle:</li><li>four evenly weighted rounded stages across the slide</li><li>clean connectors only, no bridge artifact</li><li>bottom:</li><li>no extra footer copy unless it materially improves clarity</li><li>stage map:</li><li><code>Invite</code></li><li>secure pre-visit prompt</li><li><code>Interview</code></li><li>adaptive patient-story capture</li><li><code>Structure</code></li><li>Vox assembles the structured brief</li><li><code>Verify</code></li><li>clinician reviews and uses that same brief</li><li>artifact texture:</li><li>keep tiny internal rows inside each stage</li><li>let <code>Structure</code> imply the prepared brief</li><li>keep trust tags small and attached to the later stages</li><li>hierarchy:</li><li>dominates first:</li><li>the four stage verbs</li><li>reads second:</li><li>the <code>Structure</code> stage interior</li><li>the <code>Verify</code> stage interior</li><li>stays quiet:</li><li>connectors</li><li>trust tags</li><li>support copy</li><li>palette:</li><li>grayscale base</li><li>restrained blue accent primarily on <code>Structure</code></li><li>anti-patterns:</li><li>swimlanes</li><li>fake app cards</li><li>giant arrows</li><li>any fifth object between <code>Structure</code> and <code>Verify</code></li></ul></div>
+        </div>
+      </section>
+
+      
+
+      <section class="step" id="outputs">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 6</div>
+            <div class="step-title">Visual branches</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="grid visuals">
+            <article class="card">
+              <div class="eyebrow">Native preferred branch</div>
+              <div class="missing">Missing artifact: figure.png</div>
+            </article>
+            <article class="card">
+              <div class="eyebrow">Gemini image branch</div>
+              <div class="missing">Missing artifact: image-01.jpg</div>
+            </article>
+            <article class="card">
+              <div class="eyebrow">Gemini HTML branch</div>
+              <div class="missing">Missing artifact: preview.png</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="step" id="review">
+        <div class="step-head">
+          <div>
+            <div class="step-index">Step 7</div>
+            <div class="step-title">Process review and decision</div>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="markdown"><h1>Slide 6 Process Review</h1>
+<p>Review of the full native + Gemini run for slide 6, including the reopened loop that produced the promoted <code>v3</code> native winner.</p>
+<h2>What worked</h2>
+<p>repeatable native source of truth instead of ad hoc HTML</p>
+<p><code>slide-figures/slide-06/</code> removed a whole manual stamping step</p>
+<p>preview</p>
+<ul><li>project-first organization is materially better than the old split layout</li><li>the new <code>workflow_strip</code> family was the right move; slide 6 now has a</li><li>exporting native artifacts directly into</li><li>Gemini image is useful as a taste check even when it misses on exact copy</li><li>Gemini HTML is useful as an editable structural branch when paired with a PNG</li><li>the new <code>html:screenshot</code> command closes a real workflow gap</li></ul>
+<h2>What was weak</h2>
+<p>it eventually wrote artifacts correctly</p>
+<p>slide, which means the prompt needs stronger constraints around full-slide scale and zero outer frame</p>
+<p>the brief because the handoff artifact between <code>Structure</code> and <code>Verify</code> was still implicit</p>
+<p>underlying content and makes the brief feel duplicated</p>
+<p>from repair consultation and added the repair wrapper</p>
+<ul><li>the raw <code>figures:ideate</code> run was opaque and felt hung for a while even though</li><li>Gemini image drifted on exact wording and invented awkward copy</li><li>Gemini HTML returned a smaller framed composition than we want for a final</li><li>the first native pass kept the workflow calm, but it did not fully satisfy</li><li>the second native pass over-corrected by adding a bridge object that covers</li><li>the repair round itself was previously underformalized until we split review</li></ul>
+<h2>Recommended process updates</h2>
+<p>brief, ideation, composition, render brief.</p>
+<p>taste exploration.</p>
+<p><code>--out</code>.</p>
+<p><code>gemini-image/</code> and <code>gemini-html/</code>.</p>
+<p>reviewable without opening files manually.</p>
+<p>no outer card, no browser-like margin, full 1920x1080 slide, and no extra background frame.</p>
+<ol><li>Treat the slide packet plus four figure docs as standard:</li><li>Always run native first so the deck has one deterministic branch before</li><li>Always send native export directly to <code>slide-figures/slide-XX/</code> using</li><li>Always keep Gemini branches inside that same slide folder:</li><li>Always run <code>html:screenshot</code> after <code>gemini:html</code> so the HTML branch is</li><li>Tighten Gemini HTML prompts with these rules:</li></ol>
+<h2>Decision after this pass</h2>
+<ul><li>keep the workflow concept</li><li>treat <code>v1</code> as a structurally incomplete first pass</li><li>treat <code>v2</code> as a failed over-correction</li><li>promote <code>v3</code> as the current native winner</li><li>keep using Gemini as a comparison layer, not as the canonical source of truth</li><li>treat any future slide-6 work as polish-only unless the slide thesis changes</li></ul></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Deck Slide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 1920px;
+            height: 1080px;
+            background-color: #FCFBF9; /* Warm white background */
+            font-family: 'Montserrat', sans-serif;
+            color: #1A1A1A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 100%;
+            height: 100%;
+            padding: 100px 120px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide-header {
+            margin-bottom: 70px;
+        }
+
+        .slide-header h1 {
+            font-size: 54px;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #111827;
+            letter-spacing: -0.02em;
+            max-width: 1500px;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 60px;
+            flex: 1;
+        }
+
+        .card {
+            flex: 1;
+            background-color: #FFFFFF;
+            border-radius: 32px;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+            border: 1px solid #F3F4F6;
+        }
+
+        .kicker {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #6B7280;
+            margin-bottom: 32px;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 380px;
+            border-radius: 16px;
+            overflow: hidden;
+            background-color: #F9FAFB;
+            margin-bottom: 40px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center center;
+            display: block;
+        }
+
+        .support-line {
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 1.45;
+            color: #1F2937;
+            margin-bottom: 36px;
+            min-height: 76px; /* Ensures alignment if text wraps differently */
+        }
+
+        .chip-field {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: auto; /* Pushes chips to the bottom of the available space */
+        }
+
+        .chip {
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-size: 15px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Left Card Specifics */
+        .left-card .chip {
+            background-color: #F3F4F6;
+            color: #374151;
+        }
+
+        /* Right Card Specifics */
+        .right-card .chip-field {
+            /* Right card feels more open with less dense chips */
+            padding-right: 20%; 
+        }
+
+        .vox-chip {
+            background-color: #2563EB; /* Single blue accent */
+            color: #FFFFFF;
+            letter-spacing: 0.05em;
+        }
+
+        .outline-chip {
+            background-color: transparent;
+            border: 1px dashed #D1D5DB;
+            color: #9CA3AF;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <header class="slide-header">
+            <h1>AI has traction after the visit. The visit itself is still thinly served.</h1>
+        </header>
+        
+        <main class="cards-container">
+            <!-- Left Card -->
+            <div class="card left-card">
+                <div class="kicker">AI impact after the visit</div>
+                <div class="image-container">
+                    <img src="/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-doc-admin-slide7-v113-batch-b/openai/version-06--minimal-restraint/image-01.png" alt="Clinician working on documentation after a visit">
+                </div>
+                <div class="support-line">Ambient scribes validate clinician buy-in for AI assistance.</div>
+                <div class="chip-field">
+                    <span class="chip">ambient scribe</span>
+                    <span class="chip">note generation</span>
+                    <span class="chip">clerical relief</span>
+                    <span class="chip">documentation support</span>
+                </div>
+            </div>
+
+            <!-- Right Card -->
+            <div class="card right-card">
+                <div class="kicker">AI impact during the visit</div>
+                <div class="image-container">
+                    <img src="/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-encounter-slide7-v113-batch/openai/version-05--bold-contrast/image-01.png" alt="Clinician interacting with a patient during a visit">
+                </div>
+                <div class="support-line">Few tools actually change how the encounter is conducted. Vox does.</div>
+                <div class="chip-field">
+                    <span class="chip vox-chip">VOX</span>
+                    <span class="chip outline-chip">untapped space</span>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

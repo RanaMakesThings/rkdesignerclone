@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Vox – Quality Bar Slide</title>
+<style>
+  :root{
+    --bg:#f7f8f6;
+    --ink:#141c2d;
+    --sub:#5d6b82;
+    --line:#a8b8ca;
+    --line2:#6ec2c4;
+    --teal:#2d98a0;
+    --teal-dark:#1f6f7a;
+    --teal-soft:#dff3f1;
+    --panel:#fbfcfb;
+    --panel-line:#cfd7df;
+    --glow: rgba(70,164,168,.16);
+    --shadow: 0 20px 50px rgba(62,86,120,.10);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+  .slide{
+    position:relative;
+    width:1920px;
+    height:1080px;
+    overflow:hidden;
+    background:
+      radial-gradient(900px 520px at 32% 61%, rgba(67,164,167,.09), transparent 58%),
+      radial-gradient(680px 380px at 88% 72%, rgba(67,164,167,.08), transparent 52%),
+      radial-gradient(720px 360px at 7% 10%, rgba(67,164,167,.05), transparent 60%),
+      var(--bg);
+  }
+  .title{
+    position:absolute; left:108px; top:68px; width:1500px;
+    font-size:47px; line-height:1.04; letter-spacing:-0.04em; font-weight:700; color:var(--ink);
+  }
+  .title .teal{color:var(--teal)}
+  .subtitle{
+    position:absolute; left:108px; top:292px; width:1435px;
+    font-size:24px; line-height:1.35; color:var(--sub); letter-spacing:-0.03em; font-weight:400;
+  }
+
+  .ribbon{
+    position:absolute; height:68px; display:flex; align-items:center;
+    padding:0 28px 0 46px; color:#4b5970; font-size:18px; font-weight:500;
+    filter: drop-shadow(0 10px 22px rgba(76,102,133,.06));
+  }
+  .ribbon svg{position:absolute; inset:0}
+  .ribbon .txt{position:relative; z-index:2}
+  .ribbon.ask{color:var(--teal-dark); font-weight:600}
+  .ribbon.gray path{fill:#f8fafb; stroke:var(--line); stroke-width:2.6}
+  .ribbon.ask path{fill:#eef9f7; stroke:#58b6ba; stroke-width:2.8}
+
+  .panel{
+    position:absolute; left:558px; top:410px; width:720px; height:526px;
+    border-radius:38px;
+    background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(252,253,252,.93));
+    border:1.5px solid rgba(191,203,213,.9);
+    box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.9);
+  }
+  .panel h2{
+    position:absolute; margin:0; left:168px; top:42px;
+    font-size:55px; line-height:1; letter-spacing:-0.05em; color:var(--teal); font-weight:700;
+  }
+  .panel .subhead{
+    position:absolute; left:104px; top:108px;
+    font-size:18px; color:#33445b; letter-spacing:-0.02em; font-weight:500;
+  }
+  .reasoning-title{
+    position:absolute; left:366px; top:154px;
+    font-size:22px; color:#2a3547; letter-spacing:-0.03em; font-weight:650;
+  }
+
+  .loop-wrap{
+    position:absolute; left:108px; top:176px; width:250px; height:250px;
+  }
+  .loop-label{
+    position:absolute; left:34px; top:66px; width:182px;
+    text-align:center; font-size:19px; line-height:1.05; color:#223144; font-weight:650; letter-spacing:-0.03em;
+  }
+  .loop-caption{
+    position:absolute; left:66px; top:16px;
+    font-size:16px; color:#4d6178; letter-spacing:-0.02em; font-weight:600;
+  }
+  .check{
+    position:absolute; display:flex; align-items:center; gap:10px;
+    width:74px; height:28px; border-radius:18px; padding:0 10px;
+    background:linear-gradient(180deg,#fbffff,#eff8f7);
+    border:1.3px solid rgba(94,183,187,.35);
+    color:#4f667c; font-size:12.5px; font-weight:650; letter-spacing:-0.02em;
+    box-shadow:0 6px 16px rgba(60,145,150,.10);
+  }
+  .dot{
+    width:10px;height:10px;border-radius:50%;background:#57babd;box-shadow:0 0 0 4px rgba(87,186,189,.12);
+    flex:0 0 auto;
+  }
+
+  .rail{
+    position:absolute; height:46px; border-radius:24px;
+    background:rgba(255,255,255,.84);
+    border:1.5px solid rgba(206,216,224,.95);
+    box-shadow:0 10px 24px rgba(75,95,120,.07);
+    display:flex; align-items:center; padding:0 18px 0 16px; gap:12px;
+    color:#28364a; font-size:18px; font-weight:600; letter-spacing:-0.03em;
+  }
+  .rail .bullet{
+    width:10px; height:10px; border-radius:50%;
+    background:#3baeb2; box-shadow:0 0 0 6px rgba(59,174,178,.10);
+    flex:0 0 auto;
+  }
+  .right-title{
+    position:absolute; left:1458px; top:550px;
+    font-size:24px; color:#202b3d; font-weight:700; letter-spacing:-0.03em;
+  }
+
+  .card-shadow{
+    position:absolute; left:1458px; top:650px; width:128px; height:78px;
+    background:radial-gradient(circle at 50% 50%, rgba(52,166,168,.28), rgba(52,166,168,.12) 52%, rgba(52,166,168,0) 74%);
+    filter:blur(18px);
+  }
+  .binder{
+    position:absolute; left:1494px; top:620px; width:38px; height:210px;
+    border-radius:18px; background:linear-gradient(180deg,#2e8891,#1d6e78);
+    box-shadow:inset -7px 0 0 rgba(255,255,255,.18), 0 12px 26px rgba(54,83,110,.14);
+  }
+  .binder:after{
+    content:""; position:absolute; left:14px; top:18px; width:8px; height:174px; border-radius:8px;
+    background:rgba(255,255,255,.23);
+  }
+  .card{
+    position:absolute; left:1520px; top:602px; width:280px; height:320px; border-radius:18px;
+    background:linear-gradient(180deg,#ffffff,#f6f8f9);
+    border:1.5px solid rgba(208,217,226,.95);
+    box-shadow:0 20px 40px rgba(79,100,124,.11);
+    overflow:hidden;
+  }
+  .card .topbar{
+    position:absolute; left:0; top:0; width:100%; height:12px;
+    background:linear-gradient(90deg, rgba(168,226,224,.72), rgba(113,195,197,.62));
+  }
+  .line{position:absolute; left:24px; height:13px; border-radius:7px; background:#e8edf2}
+  .line.dark{background:#dfe6ee}
+  .divider{position:absolute; left:24px; width:232px; height:1px; background:#d5dde6}
+
+  .small-note{
+    position:absolute; right:160px; top:986px; font-size:13px; color:rgba(78,96,120,.55)
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="title">
+    <span class="teal">Vox</span> is the adaptive interviewing system that takes on the<br>
+    hard clinical reasoning work needed to turn patient story<br>
+    into a clinician-grade starting point.
+  </div>
+
+  <div class="subtitle">
+    Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+    By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>
+    what still needs verification before the visit begins.
+  </div>
+
+  <!-- Left ribbons -->
+  <div class="ribbon gray" style="left:118px; top:464px; width:430px;">
+    <svg viewBox="0 0 430 68" preserveAspectRatio="none">
+      <path d="M1 34 L32 1 L360 1 L408 34 L360 67 L1 67 L34 34 Z"></path>
+    </svg>
+    <div class="txt">My back has been hurting...</div>
+  </div>
+
+  <div class="ribbon ask" style="left:136px; top:552px; width:386px;">
+    <svg viewBox="0 0 386 68" preserveAspectRatio="none">
+      <path d="M1 34 L45 1 L333 1 L385 1 L385 67 L46 67 L1 34 Z"></path>
+    </svg>
+    <div class="txt">Vox: What makes it worse?</div>
+  </div>
+
+  <div class="ribbon gray" style="left:118px; top:640px; width:430px;">
+    <svg viewBox="0 0 430 68" preserveAspectRatio="none">
+      <path d="M1 34 L32 1 L360 1 L408 34 L360 67 L1 67 L34 34 Z"></path>
+    </svg>
+    <div class="txt">It's worse in the morning.</div>
+  </div>
+
+  <div class="ribbon ask" style="left:136px; top:727px; width:386px;">
+    <svg viewBox="0 0 386 68" preserveAspectRatio="none">
+      <path d="M1 34 L45 1 L333 1 L385 1 L385 67 L46 67 L1 34 Z"></path>
+    </svg>
+    <div class="txt">Vox: When did this start?</div>
+  </div>
+
+  <div class="ribbon gray" style="left:118px; top:816px; width:430px;">
+    <svg viewBox="0 0 430 68" preserveAspectRatio="none">
+      <path d="M1 34 L32 1 L360 1 L408 34 L360 67 L1 67 L34 34 Z"></path>
+    </svg>
+    <div class="txt">Started last Tuesday.</div>
+  </div>
+
+  <!-- connective scene -->
+  <svg width="1920" height="1080" style="position:absolute;left:0;top:0">
+    <defs>
+      <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+        <feGaussianBlur stdDeviation="10" result="b"/>
+        <feMerge>
+          <feMergeNode in="b"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+      <linearGradient id="storyGray" x1="0" x2="1">
+        <stop offset="0%" stop-color="#a8b8ca" stop-opacity=".95"/>
+        <stop offset="100%" stop-color="#a8b8ca" stop-opacity=".62"/>
+      </linearGradient>
+      <linearGradient id="storyTeal" x1="0" x2="1">
+        <stop offset="0%" stop-color="#5ab9bc"/>
+        <stop offset="100%" stop-color="#4aa9ae"/>
+      </linearGradient>
+      <linearGradient id="tealRail" x1="0" x2="1">
+        <stop offset="0%" stop-color="#bfe9e8"/>
+        <stop offset="100%" stop-color="#89d2d4"/>
+      </linearGradient>
+      <linearGradient id="rightFlow" x1="0" x2="1">
+        <stop offset="0%" stop-color="#8fd3d4" stop-opacity=".6"/>
+        <stop offset="100%" stop-color="#8fd3d4" stop-opacity=".08"/>
+      </linearGradient>
+    </defs>
+
+    <!-- left-to-chamber strands -->
+    <path d="M523 497 C590 500, 623 645, 681 651" fill="none" stroke="url(#storyGray)" stroke-width="14" stroke-linecap="round" opacity=".38"/>
+    <path d="M523 585 C600 586, 630 667, 681 678" fill="none" stroke="url(#storyTeal)" stroke-width="16" stroke-linecap="round" opacity=".42"/>
+    <path d="M523 673 C603 673, 625 670, 681 679" fill="none" stroke="url(#storyGray)" stroke-width="14" stroke-linecap="round" opacity=".38"/>
+    <path d="M523 761 C597 760, 629 690, 681 705" fill="none" stroke="url(#storyTeal)" stroke-width="16" stroke-linecap="round" opacity=".42"/>
+    <path d="M523 850 C590 850, 622 738, 681 706" fill="none" stroke="url(#storyGray)" stroke-width="14" stroke-linecap="round" opacity=".38"/>
+
+    <path d="M523 497 C590 500, 623 645, 681 651" fill="none" stroke="url(#storyGray)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M523 585 C600 586, 630 667, 681 678" fill="none" stroke="url(#storyTeal)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M523 673 C603 673, 625 670, 681 679" fill="none" stroke="url(#storyGray)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M523 761 C597 760, 629 690, 681 705" fill="none" stroke="url(#storyTeal)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M523 850 C590 850, 622 738, 681 706" fill="none" stroke="url(#storyGray)" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- right-side flows -->
+    <path d="M1196 592 C1298 594, 1334 664, 1498 678" fill="none" stroke="url(#rightFlow)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M1196 678 C1292 678, 1368 678, 1498 678" fill="none" stroke="url(#rightFlow)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M1196 767 C1292 756, 1356 686, 1498 678" fill="none" stroke="url(#rightFlow)" stroke-width="10" stroke-linecap="round"/>
+
+    <path d="M1498 678 L1428 678 L1406 702 L1436 752 L1498 752" fill="url(#tealRail)" opacity=".42" filter="url(#softGlow)"/>
+    <path d="M1498 678 L1428 678 L1406 702 L1436 752 L1498 752" fill="url(#tealRail)" opacity=".48"/>
+  </svg>
+
+  <!-- Main panel -->
+  <div class="panel">
+    <h2>Vox</h2>
+    <div class="subhead">Adaptive clinical interviewer</div>
+    <div class="reasoning-title">Clinical reasoning + medical knowledge</div>
+
+    <div class="loop-wrap">
+      <div class="loop-caption">Adaptive interview loop</div>
+      <svg width="250" height="250" viewBox="0 0 250 250" style="position:absolute;left:0;top:0">
+        <defs>
+          <radialGradient id="coreGlow" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="62%" stop-color="#f7fbfb"/>
+            <stop offset="100%" stop-color="#e9f6f5"/>
+          </radialGradient>
+          <linearGradient id="ringGrad" x1="0" x2="1">
+            <stop offset="0%" stop-color="#71c5c7"/>
+            <stop offset="100%" stop-color="#2e98a0"/>
+          </linearGradient>
+          <filter id="ringShadow" x="-40%" y="-40%" width="180%" height="180%">
+            <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#4ba8ac" flood-opacity=".16"/>
+          </filter>
+        </defs>
+
+        <!-- chamber outer glow -->
+        <circle cx="125" cy="125" r="88" fill="rgba(83,186,190,.07)" filter="url(#ringShadow)"/>
+        <!-- convergence chamber -->
+        <circle cx="125" cy="125" r="78" fill="url(#coreGlow)" stroke="#d5e8e8" stroke-width="2"/>
+
+        <!-- segmented outer standard ring -->
+        <g transform="translate(125 125) rotate(-50)">
+          <circle r="82" fill="none" stroke="#d8eceb" stroke-width="14"/>
+          <path d="M0 -82 A82 82 0 0 1 45 -68" fill="none" stroke="url(#ringGrad)" stroke-width="14" stroke-linecap="butt"/>
+          <path d="M76 -31 A82 82 0 0 1 82 5" fill="none" stroke="url(#ringGrad)" stroke-width="14"/>
+          <path d="M62 53 A82 82 0 0 1 26 78" fill="none" stroke="url(#ringGrad)" stroke-width="14"/>
+          <path d="M-42 71 A82 82 0 0 1 -69 43" fill="none" stroke="url(#ringGrad)" stroke-width="14"/>
+          <path d="M-80 -18 A82 82 0 0 1 -73 -42" fill="none" stroke="url(#ringGrad)" stroke-width="14"/>
+        </g>
+
+        <!-- internal structure / checkpoints -->
+        <g opacity=".95">
+          <path d="M58 104 C78 104, 90 97, 102 88" fill="none" stroke="#d7e8e9" stroke-width="3" stroke-linecap="round"/>
+          <path d="M58 125 C78 125, 94 121, 108 114" fill="none" stroke="#d7e8e9" stroke-width="3" stroke-linecap="round"/>
+          <path d="M58 146 C82 146, 96 144, 110 140" fill="none" stroke="#d7e8e9" stroke-width="3" stroke-linecap="round"/>
+
+          <path d="M141 88 C154 97, 168 104, 193 104" fill="none" stroke="#d7e8e9" stroke-width="3" stroke-linecap="round"/>
+          <path d="M144 114 C160 121, 173 125, 193 125" fill="none" stroke="#d7e8e9" stroke-width="3" stroke-linecap="round"/>
+          <path d="M141 140 C155 144, 170 146, 193 146" fill="none" stroke="#d7e8e9" stroke-width="3" stroke-linecap="round"/>
+
+          <circle cx="116" cy="95" r="4" fill="#6ec2c4"/>
+          <circle cx="120" cy="125" r="4" fill="#6ec2c4"/>
+          <circle cx="118" cy="145" r="4" fill="#6ec2c4"/>
+
+          <circle cx="137" cy="95" r="4" fill="#6ec2c4"/>
+          <circle cx="141" cy="125" r="4" fill="#6ec2c4"/>
+          <circle cx="138" cy="145" r="4" fill="#6ec2c4"/>
+        </g>
+
+        <!-- narrowing gate -->
+        <path d="M108 78 L126 98 L144 78" fill="none" stroke="#cfe4e5" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+        <path d="M109 173 L126 153 L143 173" fill="none" stroke="#cfe4e5" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+      </svg>
+      <div class="loop-label">Adaptive<br>interview loop</div>
+
+      <div class="check" style="left:6px; top:96px;"><span class="dot"></span>prioritize</div>
+      <div class="check" style="left:12px; top:128px;"><span class="dot"></span>reconcile</div>
+      <div class="check" style="left:164px; top:96px;"><span class="dot"></span>judge</div>
+      <div class="check" style="left:160px; top:128px;"><span class="dot"></span>verify</div>
+    </div>
+
+    <!-- rails -->
+    <div class="rail" style="left:380px; top:156px; width:260px;">
+      <span class="bullet"></span> What matters
+    </div>
+    <div class="rail" style="left:380px; top:246px; width:260px;">
+      <span class="bullet"></span> What connects
+    </div>
+    <div class="rail" style="left:380px; top:336px; width:260px;">
+      <span class="bullet"></span> What still needs<br>&nbsp;&nbsp;&nbsp;&nbsp;verification
+    </div>
+
+    <svg width="720" height="526" viewBox="0 0 720 526" style="position:absolute;left:0;top:0">
+      <defs>
+        <linearGradient id="outRail" x1="0" x2="1">
+          <stop offset="0%" stop-color="#a8e0df"/>
+          <stop offset="100%" stop-color="#7bcacc"/>
+        </linearGradient>
+      </defs>
+
+      <!-- chamber to right-side rails -->
+      <path d="M294 179 C328 179, 332 179, 380 179" fill="none" stroke="url(#outRail)" stroke-width="24" stroke-linecap="round" opacity=".62"/>
+      <path d="M294 269 C328 269, 332 269, 380 269" fill="none" stroke="url(#outRail)" stroke-width="24" stroke-linecap="round" opacity=".62"/>
+      <path d="M294 359 C328 359, 332 359, 380 359" fill="none" stroke="url(#outRail)" stroke-width="24" stroke-linecap="round" opacity=".62"/>
+
+      <!-- slight convergence lip -->
+      <path d="M246 239 C268 245, 276 254, 294 269" fill="none" stroke="#8ad0d1" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+      <path d="M246 299 C268 294, 276 284, 294 269" fill="none" stroke="#8ad0d1" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+    </svg>
+  </div>
+
+  <div class="right-title">Clinician-grade starting point</div>
+  <div class="card-shadow"></div>
+  <div class="binder"></div>
+  <div class="card">
+    <div class="topbar"></div>
+    <div class="line dark" style="top:30px;width:106px;"></div>
+    <div class="line" style="top:58px;width:214px;"></div>
+    <div class="line" style="top:80px;width:148px;"></div>
+    <div class="divider" style="top:110px;"></div>
+
+    <div class="line dark" style="top:124px;width:106px;"></div>
+    <div class="line" style="top:152px;width:180px;"></div>
+    <div class="line" style="top:174px;width:214px;"></div>
+    <div class="line" style="top:196px;width:130px;"></div>
+    <div class="divider" style="top:222px;"></div>
+
+    <div class="line dark" style="top:236px;width:106px;"></div>
+    <div class="line" style="top:264px;width:136px;"></div>
+    <div class="line" style="top:286px;width:180px;"></div>
+  </div>
+
+</div>
+</body>
+</html>

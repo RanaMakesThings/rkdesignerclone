@@ -1,0 +1,156 @@
+We are making a single image graphic for a pitch deck or presentation.
+Treat the following input as a design spec, not as a conversational prompt.
+Return one polished 16:9 image concept that feels premium, intentional, and presentation-ready.
+Do not generate browser chrome, UI screenshots, device mockups, or a slide-within-a-slide.
+Do not add on-image text unless the spec explicitly asks for it.
+Avoid generic stock-photo energy, generic SaaS dashboard imagery, and weak filler composition.
+
+Variant direction: Minimal Restraint. Bias toward minimalism, whitespace, and reduction. Keep the image confident and resolved without becoming empty or generic.
+
+Design spec:
+You are acting as a world-class pitch deck strategist, information designer, and visual creative director.
+
+Create ONE figure for a healthcare startup investor pitch deck.
+
+This is NOT:
+- a product demo
+- a software mockup
+- a technical architecture diagram
+- a dense explainer
+- a literal flowchart
+- a busy infographic
+
+This IS:
+- a premium investor-deck concept image
+- elegant
+- restrained
+- clinically serious
+- modern
+- easy to understand at a glance
+
+Use:
+- white background
+- grayscale / off-white base
+- restrained teal / blue accent color
+- rounded geometry
+- soft shadows
+- editorial / vector feel
+- premium industrial-design aesthetic
+
+The slide copy this figure supports is:
+
+Header:
+Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.
+
+Subheader:
+By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.
+
+Core message:
+Vox takes messy patient narrative, asks a better next question, gets a cleaner signal through back-and-forth conversation, then structures that signal into a clinician-grade starting point.
+
+Overall composition:
+- header and subheader at top
+- left side = conversational text ribbons
+- center = one premium monolithic Vox object
+- right side = compact clinician-grade starting-point card emerging from the object
+
+Important:
+The left-side conversational ribbons must be SIMPLE and LEGIBLE.
+Do not make them weird, heavily warped, tightly curved, overlapping, or squeezed.
+Do not create many ribbons.
+Use exactly FIVE text ribbons total.
+
+RIBBON GEOMETRY RULES:
+- ribbons should be mostly straight or only gently curved
+- text must remain horizontal and clearly readable
+- no text wrapped around circles
+- no text bent sharply along paths
+- no text squeezed into tapered ribbon tips
+- no overlapping ribbons
+- generous spacing between ribbons
+- one short phrase per ribbon only
+- large, legible type
+
+LEFT-SIDE RIBBONS:
+Use exactly these five ribbons and this exact conversational sequence:
+
+Top incoming patient ribbons:
+1. My stomach hurts, especially after I eat...
+2. It started maybe two weeks ago...
+
+Middle outbound Vox ribbon:
+3. Vox: What makes it worse?
+
+Bottom returning patient ribbons:
+4. Worse after meals.
+5. Started two weeks ago.
+
+Color-code the ribbons semantically:
+- patient raw narrative ribbons = neutral gray
+- Vox follow-up ribbon = restrained teal / blue accent
+- clarified patient response ribbons = slightly cooler gray or light blue-gray
+
+Make the flow visually clear:
+- the top two patient ribbons flow INTO Vox
+- the middle Vox ribbon flows OUT from Vox toward the left
+- the bottom two clarified patient ribbons flow BACK INTO Vox
+
+The viewer must immediately understand:
+patient speaks → Vox asks something back → patient clarifies
+
+Center object:
+Create one premium monolithic Vox object.
+
+Important:
+This should be more interesting than a plain rounded rectangle, but not weird or over-stylized.
+Do NOT make a maze of channels.
+Do NOT make carved contour spaghetti.
+Do NOT split it into obvious software panels.
+
+The Vox object should feel:
+- sculpted
+- dimensional
+- calm
+- premium
+- like one integrated product machine
+
+Top-left inside the object:
+Vox
+Adaptive clinical interviewer
+
+Do not place the wordmark in the middle.
+
+Inside the object:
+- on the left-inside, show a small elegant adaptive interview cycler / conversational refinement chamber
+- on the right-inside, show a cleaner clinical reasoning / structuring core
+
+The right-inside core should show only these quiet labels:
+- What matters
+- What connects
+- What still needs verification
+
+Do not add extra filler labels.
+
+Medical knowledge should be implied through the intelligence of the machine, not through icons.
+Do NOT use:
+- brain icons
+- database icons
+- tech-stack symbols
+- knowledge graph cartoons
+
+Right side:
+Keep the compact card emerging from the right edge.
+Do NOT use a simple arrow.
+The card should feel extruded / generated from the machine.
+Label:
+Clinician-grade starting point
+
+The card should stay compact and secondary.
+
+Important quality bar:
+The figure should feel elegant first, readable second, intelligent third.
+Do not sacrifice readability of the left-side ribbons for visual cleverness.
+
+Success condition:
+When someone sees the figure for 2 seconds, they should think:
+Vox is interviewing adaptively, not just processing text.

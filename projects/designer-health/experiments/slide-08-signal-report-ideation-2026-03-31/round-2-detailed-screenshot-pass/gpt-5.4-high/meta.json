@@ -1,0 +1,12 @@
+{
+  "model": "gpt-5.4",
+  "reasoning": {
+    "effort": "low"
+  },
+  "text": {
+    "verbosity": "medium"
+  },
+  "max_output_tokens": 5000,
+  "image": "/Users/kabeer/Desktop/Screenshot 2026-03-31 at 5.24.45 PM.png",
+  "note": "Readable fallback after high-reasoning screenshot pass returned incomplete."
+}

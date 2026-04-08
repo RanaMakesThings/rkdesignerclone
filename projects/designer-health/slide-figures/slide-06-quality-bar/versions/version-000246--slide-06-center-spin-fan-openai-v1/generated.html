@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Designer Health - Vox Quality Bar Slide</title>
+<style>
+  :root{
+    --bg:#f6f8fa;
+    --ink:#1f2738;
+    --muted:#5d6b82;
+    --teal:#2f97a0;
+    --teal-dark:#1f6f7a;
+    --teal-soft:#d9eff0;
+    --teal-pale:#eef8f8;
+    --line:#b8c4d3;
+    --line2:#d5dde7;
+    --panel:#ffffff;
+    --shadow: 0 24px 70px rgba(31,39,56,.10), 0 4px 18px rgba(31,39,56,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;}
+  .slide{
+    width:1920px;height:1080px;position:relative;overflow:hidden;background:
+      radial-gradient(900px 600px at 12% 18%, rgba(47,151,160,.08), transparent 62%),
+      radial-gradient(1000px 700px at 88% 85%, rgba(47,151,160,.06), transparent 64%),
+      linear-gradient(180deg, #fbfcfd 0%, #f5f7fa 100%);
+  }
+  .title{
+    position:absolute;left:108px;top:70px;width:1410px;
+    font-size:64px;line-height:1.04;font-weight:800;letter-spacing:-.04em;color:#1c2435;
+  }
+  .title .brand{color:var(--teal)}
+  .subtitle{
+    position:absolute;left:108px;top:290px;width:1360px;
+    color:var(--muted);font-size:24px;line-height:1.35;font-weight:400;letter-spacing:-.02em;
+  }
+  .chamber{
+    position:absolute;left:532px;top:410px;width:782px;height:525px;
+    background:rgba(255,255,255,.84);
+    border:1.5px solid rgba(184,196,211,.8);
+    border-radius:40px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 18px 50px rgba(31,39,56,.06);
+    backdrop-filter: blur(1px);
+  }
+  .vox-word{
+    position:absolute;left:0;right:0;top:42px;text-align:center;
+    font-size:54px;line-height:1;font-weight:700;color:var(--teal);
+    letter-spacing:-.04em;
+  }
+  .vox-sub{
+    position:absolute;left:0;right:0;top:102px;text-align:center;
+    font-size:16px;color:#2b384d;font-weight:500;letter-spacing:-.01em;
+  }
+  .lane{
+    position:absolute;left:975px;width:258px;height:46px;background:#fff;
+    border:1.5px solid #d8e0e8;border-radius:24px;
+    display:flex;align-items:center;padding:0 22px 0 34px;
+    color:#2d3a4d;font-size:19px;font-weight:600;letter-spacing:-.02em;
+    box-shadow:0 5px 14px rgba(31,39,56,.04);
+  }
+  .lane:before{
+    content:"";position:absolute;left:15px;top:50%;transform:translateY(-50%);
+    width:10px;height:10px;border-radius:50%;background:var(--teal);
+    box-shadow:0 0 0 4px rgba(47,151,160,.10);
+  }
+  .lane1{top:566px}
+  .lane2{top:656px}
+  .lane3{top:746px}
+  .rail-fill{
+    position:absolute;left:884px;width:120px;height:24px;border-radius:14px;
+    background:linear-gradient(90deg, rgba(47,151,160,.28) 0%, rgba(47,151,160,.14) 55%, rgba(47,151,160,0) 100%);
+  }
+  .rf1{top:578px}
+  .rf2{top:668px}
+  .rf3{top:758px}
+  .right-label{
+    position:absolute;left:1460px;top:551px;color:#212a3a;font-size:24px;font-weight:700;letter-spacing:-.03em;
+  }
+  .report{
+    position:absolute;left:1520px;top:601px;width:280px;height:320px;
+    background:linear-gradient(180deg, rgba(255,255,255,.95) 0%, rgba(248,250,252,.96) 100%);
+    border:1.2px solid #d8e0e8;border-radius:20px;
+    box-shadow: var(--shadow);
+  }
+  .clip{
+    position:absolute;left:1494px;top:620px;width:38px;height:210px;border-radius:18px;
+    background:linear-gradient(180deg, #2e8793 0%, #1f6f7a 100%);
+    box-shadow:0 10px 24px rgba(31,111,122,.24);
+  }
+  .clip:before{
+    content:"";position:absolute;left:13px;top:18px;width:12px;height:174px;border-radius:10px;
+    border:4px solid rgba(255,255,255,.25);
+  }
+  .small{
+    position:absolute;color:#46556a;font-size:18px;font-weight:500;letter-spacing:-.02em;
+  }
+  .ribbonTextTeal{fill:var(--teal-dark);font-size:19px;font-weight:700;letter-spacing:-.02em}
+  .ribbonTextGray{fill:#4a586f;font-size:18px;font-weight:500;letter-spacing:-.02em}
+  .captionCenter{
+    font-size:19px;font-weight:700;fill:#253142;letter-spacing:-.02em;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="title"><span class="brand">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.</div>
+  <div class="subtitle">
+    Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+    By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>
+    what still needs verification before the visit begins.
+  </div>
+
+  <div class="chamber"></div>
+  <div class="vox-word">Vox</div>
+  <div class="vox-sub">Adaptive clinical interviewer</div>
+
+  <div class="rail-fill rf1"></div>
+  <div class="rail-fill rf2"></div>
+  <div class="rail-fill rf3"></div>
+
+  <div class="lane lane1">What matters</div>
+  <div class="lane lane2">What connects</div>
+  <div class="lane lane3">What still needs verification</div>
+
+  <div class="right-label">Clinician-grade starting point</div>
+  <div class="clip"></div>
+  <div class="report">
+    <svg width="280" height="320" viewBox="0 0 280 320">
+      <defs>
+        <linearGradient id="topRule" x1="0" x2="1">
+          <stop offset="0" stop-color="#9fd4d8"/>
+          <stop offset="1" stop-color="#7bbec4"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="280" height="320" rx="20" fill="transparent"/>
+      <rect x="132" y="0" width="122" height="9" rx="4.5" fill="url(#topRule)"/>
+      <g fill="#dfe6ef">
+        <rect x="24" y="32" width="105" height="18" rx="9"/>
+        <rect x="24" y="61" width="214" height="14" rx="7"/>
+        <rect x="24" y="84" width="148" height="12" rx="6"/>
+        <rect x="24" y="124" width="231" height="1.5" fill="#d3dce6"/>
+        <rect x="24" y="138" width="104" height="18" rx="9"/>
+        <rect x="24" y="165" width="181" height="13" rx="6.5"/>
+        <rect x="24" y="187" width="214" height="12" rx="6"/>
+        <rect x="24" y="210" width="130" height="12" rx="6"/>
+        <rect x="24" y="236" width="231" height="1.5" fill="#d3dce6"/>
+        <rect x="24" y="250" width="104" height="18" rx="9"/>
+        <rect x="24" y="278" width="148" height="12" rx="6"/>
+        <rect x="24" y="299" width="179" height="12" rx="6"/>
+      </g>
+    </svg>
+  </div>
+
+  <svg width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute;left:0;top:0">
+    <defs>
+      <linearGradient id="tealStroke" x1="0" x2="1">
+        <stop offset="0" stop-color="#5db6bd"/>
+        <stop offset="1" stop-color="#2f97a0"/>
+      </linearGradient>
+      <linearGradient id="grayStroke" x1="0" x2="1">
+        <stop offset="0" stop-color="#aeb9c8"/>
+        <stop offset="1" stop-color="#c7d1dc"/>
+      </linearGradient>
+      <linearGradient id="fanTeal1" x1="0" x2="1">
+        <stop offset="0" stop-color="rgba(47,151,160,.26)"/>
+        <stop offset=".5" stop-color="rgba(47,151,160,.18)"/>
+        <stop offset="1" stop-color="rgba(47,151,160,0)"/>
+      </linearGradient>
+      <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3"/>
+      </filter>
+      <marker id="arrowTeal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#2f97a0"/>
+      </marker>
+    </defs>
+
+    <!-- Left ribbons -->
+    <g transform="translate(102 465)">
+      <path d="M0 0 H337 L383 32 L337 65 H0 L33 32 Z" fill="rgba(255,255,255,.35)" stroke="#a8b5c6" stroke-width="3"/>
+      <text x="40" y="38" class="ribbonTextGray">My back has been hurting...</text>
+    </g>
+    <g transform="translate(121 553)">
+      <path d="M0 32 L45 0 H347 V65 H45 Z" fill="rgba(47,151,160,.08)" stroke="#5aaeb5" stroke-width="3"/>
+      <text x="56" y="39" class="ribbonTextTeal">Vox: What makes it worse?</text>
+    </g>
+    <g transform="translate(102 641)">
+      <path d="M0 0 H337 L383 32 L337 65 H0 L33 32 Z" fill="rgba(255,255,255,.35)" stroke="#a8b5c6" stroke-width="3"/>
+      <text x="40" y="40" class="ribbonTextGray">It's worse in the morning.</text>
+    </g>
+    <g transform="translate(121 728)">
+      <path d="M0 32 L45 0 H347 V65 H45 Z" fill="rgba(47,151,160,.08)" stroke="#5aaeb5" stroke-width="3"/>
+      <text x="62" y="40" class="ribbonTextTeal">Vox: When did this start?</text>
+    </g>
+    <g transform="translate(102 816)">
+      <path d="M0 0 H337 L383 32 L337 65 H0 L33 32 Z" fill="rgba(255,255,255,.35)" stroke="#a8b5c6" stroke-width="3"/>
+      <text x="40" y="41" class="ribbonTextGray">Started last Tuesday.</text>
+    </g>
+
+    <!-- Left-to-center connectors -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M486 497 C582 495, 611 626, 699 648" stroke="url(#grayStroke)" stroke-width="8"/>
+      <path d="M487 585 C578 584, 609 650, 699 677" stroke="url(#tealStroke)" stroke-width="8"/>
+      <path d="M486 673 C581 673, 614 678, 699 678" stroke="url(#grayStroke)" stroke-width="8"/>
+      <path d="M487 760 C578 760, 611 712, 699 696" stroke="url(#tealStroke)" stroke-width="8"/>
+      <path d="M486 848 C585 852, 617 694, 699 707" stroke="url(#grayStroke)" stroke-width="8"/>
+
+      <path d="M486 497 C582 495, 611 626, 699 648" stroke="#ffffff" stroke-opacity=".45" stroke-width="16"/>
+      <path d="M487 585 C578 584, 609 650, 699 677" stroke="#ffffff" stroke-opacity=".45" stroke-width="16"/>
+      <path d="M486 673 C581 673, 614 678, 699 678" stroke="#ffffff" stroke-opacity=".45" stroke-width="16"/>
+      <path d="M487 760 C578 760, 611 712, 699 696" stroke="#ffffff" stroke-opacity=".45" stroke-width="16"/>
+      <path d="M486 848 C585 852, 617 694, 699 707" stroke="#ffffff" stroke-opacity=".45" stroke-width="16"/>
+    </g>
+
+    <!-- Center circular adaptive reasoning object -->
+    <g transform="translate(787 678)">
+      <!-- subtle base -->
+      <circle cx="0" cy="0" r="88" fill="#f7fbfb" stroke="#e0ebed" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="78" fill="#ffffff" stroke="#dce7ea" stroke-width="2"/>
+
+      <!-- rotating ring arcs -->
+      <g fill="none" stroke="url(#tealStroke)" stroke-width="10" stroke-linecap="round">
+        <path d="M 42.5,-63.7 A 76.5,76.5 0 0 1 77.5,-9.5" marker-end="url(#arrowTeal)"/>
+        <path d="M 35.8,67.6 A 76.5,76.5 0 0 1 -37.5,66.6" marker-end="url(#arrowTeal)"/>
+        <path d="M -64.2,41.7 A 76.5,76.5 0 0 1 -70.7,-27.2" marker-end="url(#arrowTeal)"/>
+      </g>
+
+      <!-- outer directional sweep marks -->
+      <g stroke="#7fc1c7" stroke-width="4" stroke-linecap="round" fill="none" opacity=".9">
+        <path d="M65 -62 Q81 -48 84 -28"/>
+        <path d="M-57 63 Q-73 52 -81 34"/>
+        <path d="M-73 -10 Q-76 -31 -65 -49"/>
+      </g>
+
+      <!-- inner center -->
+      <circle cx="0" cy="0" r="60" fill="#ffffff"/>
+      <text x="0" y="-12" text-anchor="middle" class="captionCenter">Adaptive</text>
+      <text x="0" y="9" text-anchor="middle" class="captionCenter">clinical</text>
+      <text x="0" y="30" text-anchor="middle" class="captionCenter">reasoning</text>
+    </g>
+
+    <!-- Immediate right-side ordered release / fan into rails -->
+    <g>
+      <!-- fan sheets -->
+      <path d="M874 628 C942 630, 962 606, 1001 591 C1038 577, 1062 578, 1085 579"
+            stroke="#d9eff0" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <path d="M876 678 C952 678, 980 678, 1018 678 C1045 678, 1065 678, 1084 678"
+            stroke="#cfe8ea" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <path d="M874 728 C942 726, 962 750, 1001 765 C1038 779, 1062 778, 1085 777"
+            stroke="#d9eff0" stroke-width="10" fill="none" stroke-linecap="round"/>
+
+      <!-- premium fan body -->
+      <path d="M870 648 C933 645, 971 621, 1020 603 C1045 594, 1064 591, 1084 590 L1084 610
+               C1066 611, 1046 616, 1024 625 C972 646, 938 665, 872 669 Z"
+            fill="rgba(47,151,160,.10)"/>
+      <path d="M872 669 C939 672, 977 672, 1028 672 C1049 672, 1066 672, 1084 672 L1084 684
+               C1066 684, 1048 684, 1027 684 C977 684, 940 684, 872 687 Z"
+            fill="rgba(47,151,160,.13)"/>
+      <path d="M872 687 C938 691, 972 710, 1024 731 C1046 740, 1066 745, 1084 746 L1084 766
+               C1064 765, 1045 761, 1020 752 C971 734, 933 710, 870 708 Z"
+            fill="rgba(47,151,160,.10)"/>
+
+      <!-- center join notch -->
+      <path d="M860 645 C875 652, 881 664, 883 678 C881 692, 875 704, 860 711"
+            stroke="#2f97a0" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+      <!-- long handoff to report -->
+      <g opacity=".95">
+        <path d="M1314 627 C1385 664, 1414 675, 1490 678" stroke="#d9eff0" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M1314 678 C1390 678, 1420 678, 1490 678" stroke="#cfe8ea" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M1314 729 C1385 692, 1414 681, 1490 678" stroke="#d9eff0" stroke-width="8" fill="none" stroke-linecap="round"/>
+      </g>
+
+      <path d="M1435 678 L1462 703 L1494 703 L1518 678 L1494 653 L1462 653 Z"
+            fill="rgba(47,151,160,.18)"/>
+    </g>
+  </svg>
+</div>
+</body>
+</html>

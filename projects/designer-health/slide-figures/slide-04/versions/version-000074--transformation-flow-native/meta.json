@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-03-24T16:59:49.537Z",
+  "slug": "slide-04-transformation-flow",
+  "family": "transformation_flow",
+  "deckId": "vox-pd-v1",
+  "theme": "vox",
+  "mode": "full-slide",
+  "title": "Visits start with story, not structure.",
+  "subtitle": "Clinicians spend valuable minutes turning patient story into decision-ready structure.",
+  "specPath": "projects/figures/specs/slide-04-transformation-flow.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-transformation-flow",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-transformation-flow/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-transformation-flow/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-transformation-flow/figure.html",
+    "png": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-transformation-flow/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-transformation-flow/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-transformation-flow/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-transformation-flow/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-transformation-flow/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-transformation-flow/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-transformation-flow/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-transformation-flow/render-assets.json"
+  },
+  "selectedMedia": []
+}

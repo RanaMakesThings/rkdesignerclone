@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Vox prepares the visit before it starts.</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#183331;
+    --muted:#647574;
+    --line:#d9e2e1;
+    --line2:#e9efee;
+    --panel:#f7faf9;
+    --panel2:#fbfcfc;
+    --accent:#7ec8bf;
+    --accent-deep:#2d8f86;
+    --accent-soft:#e8f7f4;
+    --shadow:0 14px 40px rgba(22,44,42,.08), 0 2px 8px rgba(22,44,42,.05);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif}
+  .slide{
+    width:1920px;height:1080px;position:relative;background:#fff;overflow:hidden;
+  }
+  .header{
+    position:absolute;left:110px;top:94px;width:1180px;
+  }
+  .title{
+    margin:0;color:var(--ink);font-size:58px;line-height:1.02;font-weight:800;letter-spacing:-0.03em;
+  }
+  .subtitle{
+    margin-top:14px;color:var(--muted);font-size:25px;line-height:1.32;font-weight:450;letter-spacing:-0.015em;
+  }
+
+  .figure{
+    position:absolute;left:88px;right:88px;top:248px;bottom:90px;
+  }
+
+  .top-bracket{
+    position:absolute;left:34px;top:14px;width:1242px;height:44px;
+    color:#6e7f7d;font-size:18px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  }
+  .top-bracket .label{
+    position:absolute;left:540px;top:-4px;transform:translateX(-50%);
+    background:#fff;padding:0 12px;
+  }
+
+  .threshold{
+    position:absolute;left:1316px;top:70px;width:110px;height:460px;
+    display:flex;align-items:flex-start;justify-content:center;
+  }
+  .threshold .vline{
+    position:absolute;left:54px;top:4px;bottom:0;width:2px;background:linear-gradient(to bottom,#bfd8d4,#d9e6e3 35%,#d9e6e3 70%,transparent);
+  }
+  .threshold .marker{
+    position:absolute;left:44px;top:0;width:22px;height:22px;border-radius:50%;
+    background:#fff;border:2px solid #b8d4cf;box-shadow:0 2px 6px rgba(18,39,37,.06);
+  }
+  .threshold .txt{
+    position:absolute;top:138px;left:-4px;transform:rotate(-90deg);
+    color:#6d807e;font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    background:#fff;padding:6px 10px;
+  }
+
+  .beat{
+    position:absolute;border:1px solid var(--line);border-radius:28px;background:linear-gradient(180deg,#fff 0%, #fbfdfc 100%);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .beat .cap{
+    position:absolute;left:24px;top:18px;width:68%;height:4px;border-radius:3px;background:#dfe7e6;
+  }
+  .beat .h{
+    position:absolute;left:24px;top:38px;font-size:22px;line-height:1.08;font-weight:800;color:var(--ink);letter-spacing:-.03em;
+  }
+  .beat .d{
+    position:absolute;left:24px;right:24px;top:92px;font-size:16px;line-height:1.35;font-weight:520;color:var(--muted);
+  }
+
+  .small{width:246px;height:260px;left:22px;top:248px}
+  .mediumA{width:356px;height:336px;left:330px;top:184px}
+  .hero{width:442px;height:458px;left:770px;top:118px;border-color:#b8d9d3;background:
+      radial-gradient(circle at 20% 25%, rgba(126,200,191,.20), transparent 42%),
+      linear-gradient(180deg,#f8fcfb 0%, #f1faf8 100%);
+  }
+  .mediumB{width:344px;height:322px;left:1342px;top:214px}
+
+  .tag{
+    position:absolute;display:inline-flex;align-items:center;gap:6px;
+    height:30px;padding:0 12px;border-radius:999px;border:1px solid #dbe7e5;background:#fff;
+    color:#6b7f7d;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  }
+  .vox-badge{
+    display:inline-flex;align-items:center;gap:6px;padding:0 10px;height:28px;border-radius:999px;
+    background:#fff;border:1px solid #cfe3df;color:#2a7f77;font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  }
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent-deep)}
+
+  .connector{
+    position:absolute;height:2px;background:#d2dddb;border-radius:2px;
+  }
+  .connector:after{
+    content:"";position:absolute;right:-1px;top:-4px;border-left:8px solid #d2dddb;border-top:5px solid transparent;border-bottom:5px solid transparent;
+  }
+  .tick{
+    position:absolute;width:8px;height:8px;border-radius:50%;background:#cfd9d7;border:1px solid #c4d1cf;
+  }
+
+  .phone{
+    position:absolute;border-radius:24px;background:linear-gradient(180deg,#f3f7f6 0%, #edf3f2 100%);
+    border:1px solid #dbe5e3;box-shadow:inset 0 1px 0 rgba(255,255,255,.8);
+  }
+  .phone .screen{
+    position:absolute;left:12px;right:12px;top:18px;bottom:16px;border-radius:18px;background:#fff;border:1px solid #e7efed;
+  }
+  .bubble{
+    position:absolute;background:#f3f7f6;border:1px solid #e4edeb;color:#314847;border-radius:15px;padding:10px 12px;font-size:12px;font-weight:650;
+  }
+  .bubble.accent{background:var(--accent-soft);border-color:#d4ebe6;color:#216a63}
+  .chip{
+    position:absolute;height:28px;padding:0 12px;border-radius:999px;background:#eef5f4;border:1px solid #e0ebe9;color:#46625f;
+    display:flex;align-items:center;font-size:12px;font-weight:700;
+  }
+
+  .brief-card{
+    position:absolute;left:26px;right:22px;bottom:32px;height:188px;border-radius:24px;background:#fff;border:1px solid #d7e5e2;box-shadow:0 8px 20px rgba(35,76,72,.07);
+    padding:18px 18px 16px 18px;
+  }
+  .brief-title{
+    color:#8b9b99;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;
+  }
+  .brief-row{
+    height:38px;border-radius:14px;background:linear-gradient(180deg,#eef6f4 0%, #e8f2f0 100%);margin-top:8px;
+    display:flex;align-items:center;padding:0 14px;color:#225f59;font-size:13px;font-weight:750;
+  }
+  .frag{
+    position:absolute;height:24px;padding:0 11px;border-radius:999px;background:#fff;border:1px solid #dce8e5;color:#5e7471;
+    display:flex;align-items:center;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+    box-shadow:0 6px 14px rgba(17,39,37,.05);
+  }
+
+  .desk{
+    position:absolute;left:26px;right:26px;bottom:26px;height:138px;border-radius:22px;background:linear-gradient(180deg,#fafcfc 0%, #f4f8f7 100%);
+    border:1px solid #e3ecea;
+  }
+  .person-head{
+    position:absolute;border-radius:50%;background:#dfe9e7;
+  }
+  .person-body{
+    position:absolute;border-radius:24px 24px 18px 18px;background:#eef4f3;border:1px solid #e0e9e7;
+  }
+  .tablet{
+    position:absolute;border-radius:14px;background:#fefefe;border:1px solid #dae6e3;box-shadow:0 6px 16px rgba(20,45,43,.05);
+  }
+  .glimpse{
+    position:absolute;height:10px;border-radius:999px;background:#e7f4f1;
+  }
+
+  .footer-hint{
+    position:absolute;color:#8ea09d;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header">
+    <h1 class="title">Vox prepares the visit before it starts.</h1>
+    <div class="subtitle">Vox interviews, structures, and hands off a brief the clinician can verify and use.</div>
+  </div>
+
+  <div class="figure">
+    <div class="top-bracket">
+      <div class="label">Before visit</div>
+      <svg width="1242" height="44" viewBox="0 0 1242 44" style="position:absolute;left:0;top:0">
+        <path d="M4 34 L4 14 L1218 14 L1218 34" fill="none" stroke="#d7e3e1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="threshold">
+      <div class="marker"></div>
+      <div class="vline"></div>
+      <div class="txt">Visit begins</div>
+    </div>
+
+    <div class="connector" style="left:270px;top:376px;width:56px;"></div>
+    <div class="tick" style="left:264px;top:372px;"></div>
+
+    <div class="connector" style="left:690px;top:376px;width:76px;"></div>
+    <div class="tick" style="left:684px;top:372px;"></div>
+
+    <div class="connector" style="left:1216px;top:376px;width:118px;"></div>
+    <div class="tick" style="left:1210px;top:372px;"></div>
+
+    <div class="beat small">
+      <div class="cap"></div>
+      <div class="h">Invite sent</div>
+      <div class="d">Patient receives secure pre-visit link.</div>
+
+      <div class="phone" style="left:38px;top:126px;width:104px;height:106px;">
+        <div class="screen"></div>
+        <div style="position:absolute;left:45px;top:9px;width:14px;height:4px;border-radius:4px;background:#d0dcda;"></div>
+      </div>
+
+      <div class="bubble accent" style="left:122px;top:146px;">Secure link</div>
+      <div class="chip" style="left:122px;top:186px;">Private + one tap</div>
+
+      <svg width="246" height="260" viewBox="0 0 246 260" style="position:absolute;left:0;top:0">
+        <path d="M50 210 C78 202, 98 196, 123 184" fill="none" stroke="#dce7e5" stroke-width="2"/>
+        <path d="M121 184 l7 -1 l-3 6" fill="none" stroke="#dce7e5" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="beat mediumA">
+      <div class="cap" style="width:76%"></div>
+      <div class="h">Adaptive interview</div>
+      <div class="d">Vox asks follow-up questions and captures the story.</div>
+
+      <div class="phone" style="left:30px;top:136px;width:134px;height:164px;">
+        <div class="screen"></div>
+        <div style="position:absolute;left:58px;top:9px;width:18px;height:4px;border-radius:4px;background:#d0dcda;"></div>
+      </div>
+
+      <div class="bubble" style="left:154px;top:150px;width:158px;">What changed in the last 24 hours?</div>
+      <div class="bubble accent" style="left:174px;top:203px;width:128px;">More cough at night</div>
+      <div class="bubble" style="left:148px;top:246px;width:148px;">Any fever or wheeze?</div>
+      <div class="chip" style="left:206px;top:287px;">Yellow sputum</div>
+
+      <svg width="356" height="336" viewBox="0 0 356 336" style="position:absolute;left:0;top:0">
+        <circle cx="301" cy="98" r="34" fill="rgba(126,200,191,.10)"/>
+        <circle cx="319" cy="88" r="8" fill="rgba(126,200,191,.18)"/>
+        <circle cx="286" cy="120" r="6" fill="rgba(126,200,191,.15)"/>
+        <path d="M112 220 C128 212, 144 202, 160 186" fill="none" stroke="#d8e5e2" stroke-width="2"/>
+        <path d="M156 187 l7 -1 l-3 6" fill="none" stroke="#d8e5e2" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="beat hero">
+      <div class="cap" style="width:78%;background:#8dbdb7"></div>
+      <div class="h" style="font-size:26px;color:#195d57;">Brief prepared</div>
+      <div class="d" style="color:#5e6f6d;right:28px;">Patient story becomes a clinician-ready handoff.</div>
+
+      <div class="frag" style="left:42px;top:150px;">night cough</div>
+      <div class="frag" style="left:164px;top:164px;">wheeze</div>
+      <div class="frag" style="left:108px;top:204px;">5 days</div>
+      <div class="frag" style="left:244px;top:146px;">yellow sputum</div>
+      <div class="frag" style="left:280px;top:198px;">fever</div>
+      <div class="frag" style="left:48px;top:238px;">history of asthma</div>
+
+      <svg width="442" height="458" viewBox="0 0 442 458" style="position:absolute;left:0;top:0">
+        <path d="M146 173 C175 178, 194 186, 220 230" fill="none" stroke="#cae4df" stroke-width="2.2" stroke-dasharray="4 6"/>
+        <path d="M298 156 C280 180, 261 197, 224 232" fill="none" stroke="#cae4df" stroke-width="2.2" stroke-dasharray="4 6"/>
+        <path d="M120 245 C156 248, 182 244, 220 234" fill="none" stroke="#cae4df" stroke-width="2.2" stroke-dasharray="4 6"/>
+      </svg>
+
+      <div class="brief-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+          <div class="brief-title">Structured handoff</div>
+          <div class="vox-badge"><span class="dot"></span> Vox</div>
+        </div>
+        <div class="brief-row">Chief complaint grouped</div>
+        <div class="brief-row">Timeline assembled</div>
+        <div class="brief-row">Open questions made explicit</div>
+      </div>
+
+      <div class="tag" style="left:26px;bottom:22px;">Provenance</div>
+      <div class="tag" style="left:146px;bottom:22px;">Unknowns highlighted</div>
+    </div>
+
+    <div class="beat mediumB">
+      <div class="cap" style="width:72%"></div>
+      <div class="h">Clinician starts prepared</div>
+      <div class="d">Sets up a more efficient visit.</div>
+
+      <div class="desk">
+        <div class="person-head" style="left:38px;top:26px;width:46px;height:46px;"></div>
+        <div class="person-body" style="left:20px;top:62px;width:106px;height:50px;"></div>
+
+        <div class="tablet" style="left:120px;top:28px;width:112px;height:72px;transform:rotate(-8deg);">
+          <div class="glimpse" style="left:14px;top:14px;width:68px;"></div>
+          <div class="glimpse" style="left:14px;top:32px;width:80px;"></div>
+          <div class="glimpse" style="left:14px;top:50px;width:54px;"></div>
+        </div>
+
+        <div style="position:absolute;right:28px;top:34px;width:92px;height:12px;border-radius:999px;background:#edf3f2;"></div>
+        <div style="position:absolute;right:28px;top:56px;width:112px;height:12px;border-radius:999px;background:#edf3f2;"></div>
+        <div style="position:absolute;right:28px;top:78px;width:72px;height:12px;border-radius:999px;background:#edf3f2;"></div>
+      </div>
+
+      <div class="footer-hint" style="left:28px;bottom:20px;">Calm review, faster start</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

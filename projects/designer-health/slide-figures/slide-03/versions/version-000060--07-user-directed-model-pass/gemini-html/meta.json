@@ -1,0 +1,8 @@
+{
+  "model": "gemini-3.1-pro-preview",
+  "temperature": 0.4,
+  "images": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/figure.png",
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/variants/05-hybrid-callout-payoff/codex-html/preview.png"
+  ]
+}

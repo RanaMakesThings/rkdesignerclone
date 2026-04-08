@@ -1,0 +1,236 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 9: Care Journey Gap</title>
+    <style>
+        /* CSS Reset & Base Setup */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 120px 140px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography - Header & Subheader */
+        .header-group {
+            max-width: 1400px;
+            margin-bottom: 160px;
+        }
+
+        h1 {
+            font-size: 72px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            color: #000000;
+        }
+
+        .subheader {
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 1.4;
+            color: #555555;
+            max-width: 1200px;
+        }
+
+        /* Main Figure - Timeline */
+        .timeline-section {
+            position: relative;
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* The continuous horizontal line */
+        .timeline-track {
+            position: absolute;
+            top: 150px; /* Aligns with the center of the nodes */
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background-color: #d1d5db; /* Grayscale base line */
+            z-index: 1;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Individual Anchor Columns */
+        .anchor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Top Labels */
+        .anchor-label {
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #111111;
+            margin-bottom: 48px;
+            height: 24px; /* Fixed height for alignment */
+        }
+
+        .anchor.center .anchor-label {
+            color: #1d4ed8; /* Restrained blue accent */
+        }
+
+        /* Nodes */
+        .node-container {
+            height: 100px; /* Fixed height to center nodes vertically on the track */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 48px;
+            background-color: #ffffff; /* Masks the track line behind it */
+            padding: 0 24px; /* Padding to clear the line cleanly */
+        }
+
+        .node-settled {
+            width: 24px;
+            height: 24px;
+            background-color: #111111;
+            border-radius: 50%;
+        }
+
+        .node-unresolved {
+            width: 88px;
+            height: 88px;
+            border: 4px solid #1d4ed8; /* Restrained blue accent */
+            border-radius: 50%;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        /* Inner detail for unresolved node to emphasize emptiness */
+        .node-unresolved::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #eff6ff;
+        }
+
+        /* Bottom Tags & Cues */
+        .tag-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            text-align: center;
+        }
+
+        .tag-support {
+            font-size: 20px;
+            color: #737373;
+            font-weight: 400;
+        }
+
+        .tag-cue {
+            font-size: 22px;
+            color: #1d4ed8;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Subtle bullet for center cues */
+        .tag-cue::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-color: #1d4ed8;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header-group">
+        <h1>The visit still starts from zero.</h1>
+        <p class="subheader">Clinicians have shown they will adopt assistive tools. The open problem is starting the visit with better structure.</p>
+    </div>
+
+    <div class="timeline-section">
+        <div class="timeline-track"></div>
+        
+        <div class="timeline-grid">
+            
+            <!-- Left Anchor: Before Visit -->
+            <div class="anchor left">
+                <div class="anchor-label">Before visit</div>
+                <div class="node-container">
+                    <div class="node-settled"></div>
+                </div>
+                <div class="tag-list">
+                    <div class="tag-support">Data aggregation</div>
+                    <div class="tag-support">Patient intake</div>
+                </div>
+            </div>
+
+            <!-- Center Anchor: Start of Visit (The Gap) -->
+            <div class="anchor center">
+                <div class="anchor-label">Start of visit</div>
+                <div class="node-container">
+                    <div class="node-unresolved"></div>
+                </div>
+                <div class="tag-list">
+                    <div class="tag-cue">structured starting point</div>
+                    <div class="tag-cue">pre-decision signal</div>
+                    <div class="tag-cue">recovered decision time</div>
+                </div>
+            </div>
+
+            <!-- Right Anchor: During / After -->
+            <div class="anchor right">
+                <div class="anchor-label">During / after</div>
+                <div class="node-container">
+                    <div class="node-settled"></div>
+                </div>
+                <div class="tag-list">
+                    <div class="tag-support">Ambient scribing</div>
+                    <div class="tag-support">Automated coding</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+```

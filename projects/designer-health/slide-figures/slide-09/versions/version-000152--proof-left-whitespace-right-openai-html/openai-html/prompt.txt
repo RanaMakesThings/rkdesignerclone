@@ -1,0 +1,76 @@
+Generate one self-contained HTML document for a premium 1920x1080 investor deck
+slide.
+
+Use the two provided raster images directly with normal `<img>` tags. Do not
+redraw, reinterpret, stylize, or replace them.
+Show each selected image in full.
+Do not crop, clip, zoom, or use `object-fit: cover`.
+Preserve the original framing exactly and use `contain`-style treatment.
+
+Left image path:
+/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-doc-admin-slide7-v113-batch-b/openai/version-06--minimal-restraint/image-01.png
+
+Right image path:
+/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-encounter-slide7-v113-batch/openai/version-05--bold-contrast/image-01.png
+
+This slide is asymmetric on purpose:
+- left = validation / proof
+- right = opportunity / whitespace
+
+Use this exact on-slide copy:
+
+Headline:
+AI has traction after the visit. The visit itself is still thinly served.
+
+Left kicker:
+AI impact after the visit
+
+Left statement:
+Ambient scribes validate clinician buy-in for AI assistance.
+
+Right kicker:
+AI impact during the visit
+
+Right statement:
+Few tools actually change how the encounter is conducted. Vox does.
+
+Layout rules:
+- top band is headline only
+- bottom area is an asymmetric two-column composition
+- left column is smaller and acts like the proof column
+- right column is larger and acts like the opportunity column
+- the right side should feel more important
+- images are supporting evidence, not the main story
+- do not fall back into equal product cards
+
+Left-side rules:
+- kicker
+- statement
+- small documentation proof image
+- compact crowded field beneath or beside it
+- the left side should feel validated and occupied
+
+Right-side rules:
+- kicker
+- statement
+- larger open field
+- one blue VOX marker in that field
+- optional very faint encounter cue behind it
+- the right side should feel strategically open, not unfinished
+
+Style rules:
+- white or warm-white background
+- premium editorial investor-deck feel
+- restrained grayscale palette
+- one blue accent only for the VOX marker
+- subtle hierarchy, not generic cards
+
+Do not add:
+- subheader
+- arrows
+- workflow map
+- center explainer
+- oversized blue brief inside the image
+- image captions doing the real work
+
+Return only the HTML document with inline CSS and any inline SVG needed.

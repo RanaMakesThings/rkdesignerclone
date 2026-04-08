@@ -1,0 +1,199 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-06-workflow-strip-v2",
+    "family": "workflow_strip",
+    "deckId": "vox-pd-v1",
+    "theme": "vox",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Vox prepares the visit before it starts.",
+    "subtitle": "Vox interviews, structures, and hands off a brief the clinician can verify and use.",
+    "chips": [],
+    "footnote": ""
+  },
+  "constraints": {
+    "figureJob": "Show a credible pre-visit operational flow in one calm four-step strip.",
+    "focalPoint": "The Structure stage, the shared brief handoff, and the Verify stage.",
+    "layout": "One horizontal four-stage workflow strip with subtle connectors, one small handoff brief between Structure and Verify, and small trust tags attached to the later stages.",
+    "big": [
+      "Invite / Interview / Structure / Verify stage labels",
+      "Structure stage",
+      "Shared brief handoff"
+    ],
+    "quiet": [
+      "Connectors",
+      "Support lines",
+      "Trust tags"
+    ],
+    "accentTargets": [
+      "Structure stage",
+      "Structure micro-surface",
+      "Shared brief handoff"
+    ],
+    "forbidden": [
+      "swimlanes",
+      "enterprise process diagram",
+      "fake product UI",
+      "dense captions"
+    ],
+    "semanticGuards": [
+      "no_ui"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Vox prepares the visit before it starts.",
+      "Vox interviews, structures, and hands off a brief the clinician can verify and use.",
+      "Invite",
+      "Interview",
+      "Structure",
+      "Verify",
+      "provenance",
+      "explicit unknowns",
+      "verification queue"
+    ],
+    "preferred": [
+      "structured brief",
+      "pre-visit workflow",
+      "clinician-verifiable"
+    ],
+    "optional": [],
+    "forbidden": [
+      "dashboard",
+      "integration architecture",
+      "encounter boundary"
+    ]
+  },
+  "body": {
+    "stages": [
+      {
+        "label": "Invite",
+        "detail": "Patient receives a secure pre-visit prompt before the encounter.",
+        "role": "neutral",
+        "artifactLabel": "Invitation",
+        "items": [
+          "Secure link",
+          "Right patient",
+          "Starts before the visit"
+        ],
+        "tags": []
+      },
+      {
+        "label": "Interview",
+        "detail": "Adaptive interview captures the story in natural language.",
+        "role": "neutral",
+        "artifactLabel": "Interview",
+        "items": [
+          "Patient story",
+          "Follow-up questions",
+          "Missing details surfaced"
+        ],
+        "tags": []
+      },
+      {
+        "label": "Structure",
+        "detail": "Vox turns the story into a structured brief clinicians can start from.",
+        "role": "focus",
+        "artifactLabel": "Assembly",
+        "items": [
+          "Key details grouped",
+          "Timeline assembled",
+          "Brief prepared for handoff"
+        ],
+        "tags": [
+          "provenance",
+          "explicit unknowns"
+        ]
+      },
+      {
+        "label": "Verify",
+        "detail": "Clinician receives the brief, verifies key points, and uses it in the room.",
+        "role": "output",
+        "artifactLabel": "Clinician review",
+        "items": [
+          "Review handoff",
+          "Verify unknowns",
+          "Decide"
+        ],
+        "tags": [
+          "verification queue"
+        ]
+      }
+    ],
+    "handoff": {
+      "afterStageIndex": 2,
+      "label": "Structured brief",
+      "items": [
+        "Reason for visit",
+        "Timeline",
+        "Relevant positives / negatives"
+      ],
+      "tags": []
+    },
+    "footerNote": ""
+  },
+  "trace": [
+    {
+      "excerpt": "Show a credible pre-visit operational flow.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Lock the slide to one calm four-step workflow instead of a conceptual abstraction."
+    },
+    {
+      "excerpt": "The Structure stage and the handoff into Verify should carry the figure.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "Keep the pivotal handoff visible and explicit."
+    },
+    {
+      "excerpt": "One credible handoff artifact between Structure and Verify.",
+      "targetPath": "body.handoff",
+      "ruleType": "body",
+      "note": "The reopened loop adds the shared brief artifact the first pass deferred."
+    },
+    {
+      "excerpt": "One horizontal four-stage workflow strip with subtle connectors and small trust tags attached to the later stages.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Preserve the clean-pack strip logic while making the handoff more explicit."
+    },
+    {
+      "excerpt": "Crisp four-step strip: Invite → Interview → Structure → Verify.",
+      "targetPath": "body.stages",
+      "ruleType": "body",
+      "note": "Encode the clean-pack stage sequence directly in the body payload."
+    },
+    {
+      "excerpt": "Reserve small trust tags under later steps if needed: provenance, explicit unknowns, verification queue.",
+      "targetPath": "body.stages[2].tags",
+      "ruleType": "body",
+      "note": "Attach the trust cues to the later stages rather than creating a second rail."
+    },
+    {
+      "excerpt": "No enterprise process-diagram energy.",
+      "targetPath": "constraints.forbidden",
+      "ruleType": "constraint",
+      "note": "Keep the workflow premium and editorial instead of technical."
+    },
+    {
+      "excerpt": "Vox prepares the visit before it starts.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Use the locked slide header from the deck source."
+    },
+    {
+      "excerpt": "Vox interviews, structures, and hands off a brief the clinician can verify and use.",
+      "targetPath": "chrome.subtitle",
+      "ruleType": "chrome",
+      "note": "Use the locked subheader from the deck source."
+    },
+    {
+      "excerpt": "Invite, Interview, Structure, Verify, provenance, explicit unknowns, verification queue.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "The stage verbs and trust tags are all mandatory rendered copy for this workflow slide."
+    }
+  ]
+}

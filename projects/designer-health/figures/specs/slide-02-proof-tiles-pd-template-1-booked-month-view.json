@@ -1,0 +1,88 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-proof-tiles-pd-template-1-booked-month-view",
+    "family": "proof_tiles",
+    "deckId": "pd-template-1",
+    "theme": "pd-template-1",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Demand is outpacing clinical capacity.",
+    "subtitle": "",
+    "chips": [],
+    "footnote": "[1] AMN/Merritt Hawkins physician appointment wait-time survey. [2] CDC/NCHS delayed-care measure."
+  },
+  "constraints": {
+    "figureJob": "Use a booked-out month view to make delayed access feel concrete while keeping the two proof numbers dominant.",
+    "focalPoint": "The booked-out month view first, then the two proof metrics.",
+    "layout": "Header top left, one clean month-view schedule object centered above two proof tiles, footnote quiet at bottom.",
+    "big": [
+      "The month-view schedule object",
+      "The two proof metrics"
+    ],
+    "quiet": [
+      "Tile eyebrows",
+      "Support copy",
+      "Footnote"
+    ],
+    "accentTargets": [
+      "none"
+    ],
+    "forbidden": [
+      "dashboard styling",
+      "decorative placeholder blocks"
+    ],
+    "semanticGuards": []
+  },
+  "copyPolicy": {
+    "locked": [
+      "Demand is outpacing clinical capacity.",
+      "~1 month",
+      "10.6%"
+    ],
+    "preferred": [
+      "Average wait for a new doctor appointment",
+      "Adults delayed or did not get care because no appointment was available when needed"
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "motif": "booked-month-view",
+    "tiles": [
+      {
+        "eyebrow": "Access",
+        "metric": "~1 month",
+        "detail": "Average wait for a new doctor appointment",
+        "kicker": "Up 19% in three years [1]",
+        "graphic": {
+          "kind": ""
+        }
+      },
+      {
+        "eyebrow": "Deferred care",
+        "metric": "10.6%",
+        "detail": "Adults delayed or did not get care because no appointment was available when needed [2]",
+        "kicker": "",
+        "graphic": {
+          "kind": ""
+        }
+      }
+    ]
+  },
+  "trace": [
+    {
+      "excerpt": "Booked-Out Month View",
+      "targetPath": "body.motif",
+      "ruleType": "body",
+      "note": "Use the calendar-month concept as the central object."
+    },
+    {
+      "excerpt": "Make constrained clinical access feel real.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Treat the month view as proof, not decoration."
+    }
+  ]
+}

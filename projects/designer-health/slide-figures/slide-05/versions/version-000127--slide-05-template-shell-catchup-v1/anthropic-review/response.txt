@@ -1,0 +1,34 @@
+## 1. Verdict
+
+This slide does not land in under 3 seconds. The headline is strong and the three-part card is calm, but the segmented pill bar at the top competes with the card below it rather than feeding into it, and the visual hierarchy never collapses into a single clean beat. The eye does not know whether to read the bar first, the card label first, or the bullet list first.
+
+---
+
+## 2. What Works
+
+- The headline is blunt and ownable — "cleanest place to reclaim minutes" is the right register
+- The three-item list is correctly sparse and non-mechanistic
+- The blue card panel isolates the wedge term without over-decorating it
+
+---
+
+## 3. What Is Still Broken
+
+- The pill bar and the card below are not visually linked — they read as two separate slides stacked, not one argument with a source and a payoff
+- "History reconstruction" appears twice at the same weight (bar tab + card label), which splits attention instead of compressing it
+- The three bullets are bold but orphaned — there is no visual cue that they answer "why this wedge first," so they read as random properties
+- "Can begin before the encounter" is larger/bolder than the other two bullets with no hierarchy reason given — it implies a mechanism distinction the slide is not ready to make
+- The card floats in excess white space below the bar; the spatial gap breaks the implied slide-3 → slide-5 continuation
+- The pill bar shows all three segments at near-equal weight; nothing visually marks history as the extracted wedge versus the others as deferred
+
+---
+
+## 4. Is This Slide Still Leaking Slide-4 Work?
+
+**No**, but it is close. "Can begin before the encounter" is the sentence most at risk — it nudges toward the async/pre-visit mechanism that belongs one slide later. The other two bullets ("repeated across visits," "time-variable") stay safely at the wedge-argument level and do not open the mechanism door.
+
+---
+
+## 5. Best Next Move
+
+Drop the pill bar entirely or replace it with a single thin source line that shows the history segment already extracted and grayed-out from a minimal three-part strip — one visual object, not two stacked ones. Then let the card fill the slide as the primary object, with the three bullets sitting inside it at uniform weight. Demote "Can begin before the encounter" to the same size as the other two bullets so no single property reads as a mechanism claim. That single compositional change — bar feeds card, card contains reasons, all at one weight — is what gets this to three seconds.

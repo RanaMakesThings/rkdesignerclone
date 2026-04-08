@@ -1,0 +1,111 @@
+{
+  "manifestVersion": 1,
+  "projectId": "designer-health",
+  "kind": "slide-assets",
+  "slideId": "slide-11",
+  "deckAssetIds": [
+    "designer-logo-pack"
+  ],
+  "assets": [
+    {
+      "assetId": "asset-000020",
+      "id": "yashar-niknafs-headshot",
+      "label": "Yashar Niknafs Headshot",
+      "status": "approved",
+      "kind": "image",
+      "role": "headshot",
+      "summary": "Canonical founder headshot restored from the original Slide 11 import and used on the refreshed founder grid.",
+      "previewPath": "projects/designer-health/slide-assets/slide-11/yashar-niknafs-headshot/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-11/yashar-niknafs-headshot/preview.png"
+        }
+      ],
+      "tags": [
+        "slide-11",
+        "founder",
+        "headshot",
+        "yashar-niknafs"
+      ],
+      "notes": [
+        "Restored from the original Slide 11 PPTX import so the current HTML matches the archived baseline portrait."
+      ]
+    },
+    {
+      "assetId": "asset-000021",
+      "id": "balaji-pandian-headshot",
+      "label": "Balaji Pandian Headshot",
+      "status": "approved",
+      "kind": "image",
+      "role": "headshot",
+      "summary": "Canonical founder headshot restored from the original Slide 11 import and used on the refreshed founder grid.",
+      "previewPath": "projects/designer-health/slide-assets/slide-11/balaji-pandian-headshot/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-11/balaji-pandian-headshot/preview.png"
+        }
+      ],
+      "tags": [
+        "slide-11",
+        "founder",
+        "headshot",
+        "balaji-pandian"
+      ],
+      "notes": [
+        "Restored from the original Slide 11 PPTX import so the current HTML matches the archived baseline portrait."
+      ]
+    },
+    {
+      "assetId": "asset-000022",
+      "id": "rana-kabeer-headshot",
+      "label": "Rana Kabeer Headshot",
+      "status": "approved",
+      "kind": "image",
+      "role": "headshot",
+      "summary": "Canonical founder headshot restored from the original Slide 11 import and used on the refreshed founder grid.",
+      "previewPath": "projects/designer-health/slide-assets/slide-11/rana-kabeer-headshot/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-11/rana-kabeer-headshot/preview.png"
+        }
+      ],
+      "tags": [
+        "slide-11",
+        "founder",
+        "headshot",
+        "rana-kabeer"
+      ],
+      "notes": [
+        "Restored from the original Slide 11 PPTX import so the current HTML matches the archived baseline portrait."
+      ]
+    },
+    {
+      "assetId": "asset-000023",
+      "id": "kristian-black-headshot",
+      "label": "Kristian Black Headshot",
+      "status": "approved",
+      "kind": "image",
+      "role": "headshot",
+      "summary": "Canonical founder headshot restored from the original Slide 11 import and used on the refreshed founder grid.",
+      "previewPath": "projects/designer-health/slide-assets/slide-11/kristian-black-headshot/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-11/kristian-black-headshot/preview.png"
+        }
+      ],
+      "tags": [
+        "slide-11",
+        "founder",
+        "headshot",
+        "kristian-black"
+      ],
+      "notes": [
+        "Restored from the original Slide 11 PPTX import so the current HTML matches the archived baseline portrait."
+      ]
+    }
+  ]
+}

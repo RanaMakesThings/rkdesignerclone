@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAEM CustomGPT Creation - Slide 01</title>
+    <style>
+      :root {
+        --navy: #0e2841;
+        --teal: #156082;
+        --orange: #e97132;
+        --ink: #143247;
+        --muted: #61798b;
+        --line: #d9e2e8;
+        --paper: #f5f8fa;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top right, rgba(21, 96, 130, 0.16), transparent 28%),
+          linear-gradient(180deg, #f8fbfd 0%, #eef4f8 100%);
+      }
+
+      body {
+        padding: 72px 84px 58px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--teal);
+      }
+
+      .kicker::before {
+        content: "";
+        width: 84px;
+        height: 6px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--orange), var(--teal));
+      }
+
+      .badge {
+        padding: 10px 18px;
+        border-radius: 999px;
+        background: rgba(14, 40, 65, 0.08);
+        color: var(--navy);
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.22fr 0.78fr;
+        gap: 46px;
+        align-items: stretch;
+        flex: 1;
+      }
+
+      .title-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      h1 {
+        margin: 0 0 20px;
+        font-size: 88px;
+        line-height: 0.98;
+        letter-spacing: -0.045em;
+        color: var(--navy);
+        max-width: 980px;
+      }
+
+      .subtitle {
+        margin: 0 0 30px;
+        max-width: 980px;
+        font-size: 34px;
+        line-height: 1.28;
+        color: #305166;
+      }
+
+      .presenters {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 28px;
+      }
+
+      .presenter {
+        padding: 18px 22px;
+        min-width: 250px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.88);
+        border: 1px solid rgba(14, 40, 65, 0.1);
+        box-shadow: 0 18px 40px rgba(14, 40, 65, 0.08);
+      }
+
+      .presenter .name {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 27px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+
+      .presenter .role {
+        font-size: 19px;
+        color: var(--muted);
+      }
+
+      .audience-note {
+        max-width: 900px;
+        font-size: 24px;
+        line-height: 1.45;
+        color: #436174;
+      }
+
+      .promise {
+        border-radius: 34px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 248, 251, 0.95));
+        border: 1px solid rgba(14, 40, 65, 0.1);
+        box-shadow: 0 24px 60px rgba(14, 40, 65, 0.11);
+        padding: 34px 34px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      .promise h2 {
+        margin: 0;
+        font-size: 28px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--teal);
+      }
+
+      .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        flex: 1;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: 72px 1fr;
+        gap: 18px;
+        padding: 22px;
+        border-radius: 24px;
+        background: var(--white);
+        border: 1px solid var(--line);
+      }
+
+      .step-num {
+        width: 72px;
+        height: 72px;
+        border-radius: 20px;
+        display: grid;
+        place-items: center;
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--white);
+        background: var(--navy);
+      }
+
+      .step:nth-child(2) .step-num {
+        background: var(--teal);
+      }
+
+      .step:nth-child(3) .step-num {
+        background: var(--orange);
+      }
+
+      .step-title {
+        margin: 2px 0 6px;
+        font-size: 28px;
+        font-weight: 800;
+        color: var(--navy);
+      }
+
+      .step-copy {
+        margin: 0;
+        font-size: 21px;
+        line-height: 1.4;
+        color: #4e6879;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        padding-top: 24px;
+        border-top: 2px solid rgba(14, 40, 65, 0.08);
+      }
+
+      .footer strong {
+        font-size: 25px;
+        color: var(--navy);
+      }
+
+      .footer span {
+        font-size: 20px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="kicker">SAEM Annual Meeting Workshop</div>
+      <div class="badge">40-minute session</div>
+    </div>
+
+    <section class="hero">
+      <div class="title-block">
+        <h1>From PDF to Policy Assistant</h1>
+        <p class="subtitle">
+          Designing a practical custom GPT for residency administration support.
+        </p>
+
+        <div class="presenters">
+          <div class="presenter">
+            <span class="name">Connor Grant, MD</span>
+            <span class="role">Resident presenter</span>
+          </div>
+          <div class="presenter">
+            <span class="name">Rana Kabeer, MD</span>
+            <span class="role">Faculty presenter</span>
+          </div>
+          <div class="presenter">
+            <span class="name">Eddie Garcia, MD</span>
+            <span class="role">Faculty presenter</span>
+          </div>
+        </div>
+
+        <div class="audience-note">
+          For program directors, chief residents, coordinators, and faculty who
+          need fast, source-bounded answers from residency policy documents.
+        </div>
+      </div>
+
+      <aside class="promise">
+        <h2>Workshop Promise</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <div class="step-title">What this is</div>
+              <p class="step-copy">
+                A custom GPT that answers policy questions from your uploaded
+                documents.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <div class="step-title">Why it works</div>
+              <p class="step-copy">
+                Instructions, knowledge files, and careful testing drive the quality.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <div class="step-title">How to build it live</div>
+              <p class="step-copy">
+                We will create, test, and refine one in the current ChatGPT workflow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <strong>Goal: less searching, better operational answers, safer usage.</strong>
+      <span>CustomGPT Creation</span>
+    </footer>
+  </body>
+</html>

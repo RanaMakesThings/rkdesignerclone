@@ -1,0 +1,12 @@
+{
+  "id": "version-000124",
+  "slideId": "slide-07",
+  "slideDir": "projects/designer-health/slide-figures/slide-06",
+  "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000124--slide-07-v113-beat1-gemini-clean-v1",
+  "label": "slide-07-v113-beat1-gemini-clean-v1",
+  "status": "archived",
+  "createdAt": "2026-04-01T23:16:02.462Z",
+  "sourceKind": "fine-tune-draft",
+  "baseVersionId": "version-000113",
+  "legacySourcePaths": []
+}

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Investor Deck Slide</title>
+<style>
+  :root{
+    --bg:#f6f3ee;
+    --paper:#fbfaf7;
+    --paper-2:#f8f6f1;
+    --ink:#161616;
+    --muted:#6f6b66;
+    --muted-2:#9c968f;
+    --line:#ded8cf;
+    --line-2:#e8e2da;
+    --chip:#efebe5;
+    --chip-border:#d8d1c7;
+    --blue:#2e6bff;
+    --shadow:0 18px 50px rgba(19,18,16,.05), 0 3px 10px rgba(19,18,16,.04);
+  }
+
+  *{box-sizing:border-box}
+  html,body{
+    margin:0;
+    width:1920px;
+    height:1080px;
+    overflow:hidden;
+    background:var(--bg);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color:var(--ink);
+  }
+
+  .slide{
+    position:relative;
+    width:1920px;
+    height:1080px;
+    background:
+      radial-gradient(1200px 500px at 15% 0%, rgba(255,255,255,.75), transparent 60%),
+      radial-gradient(900px 420px at 85% 8%, rgba(255,255,255,.68), transparent 60%),
+      linear-gradient(180deg, #f9f7f3 0%, #f6f3ee 100%);
+  }
+
+  .grain{
+    position:absolute; inset:0; pointer-events:none; opacity:.05;
+    background-image:
+      linear-gradient(rgba(0,0,0,.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,.08) 1px, transparent 1px);
+    background-size: 4px 4px, 4px 4px;
+    mix-blend-mode:multiply;
+  }
+
+  .header{
+    position:absolute;
+    left:108px;
+    top:78px;
+    width:1220px;
+    z-index:2;
+  }
+
+  .title{
+    margin:0;
+    font-size:64px;
+    line-height:1.04;
+    font-weight:600;
+    letter-spacing:-0.04em;
+    color:#111111;
+    max-width:1160px;
+  }
+
+  .deckline{
+    position:absolute;
+    left:108px;
+    right:108px;
+    top:234px;
+    height:1px;
+    background:linear-gradient(90deg, rgba(182,173,160,.42), rgba(182,173,160,.16) 62%, rgba(182,173,160,0));
+  }
+
+  .cards{
+    position:absolute;
+    left:92px;
+    right:92px;
+    top:282px;
+    bottom:72px;
+    display:flex;
+    gap:30px;
+    align-items:stretch;
+  }
+
+  .card{
+    position:relative;
+    border-radius:34px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.78) 0%, rgba(255,255,255,.6) 100%);
+    border:1px solid rgba(203,195,184,.58);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+
+  .card:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:34px;
+    padding:1px;
+    background:linear-gradient(180deg, rgba(255,255,255,.8), rgba(210,202,191,.25));
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+            mask-composite:exclude;
+    pointer-events:none;
+  }
+
+  .card.left{
+    flex:0 0 42.8%;
+    background:
+      radial-gradient(800px 260px at 20% 0%, rgba(255,255,255,.75), transparent 60%),
+      linear-gradient(180deg, #fbfaf7 0%, #f7f4ef 100%);
+  }
+
+  .card.right{
+    flex:1;
+    background:
+      radial-gradient(900px 320px at 18% 0%, rgba(255,255,255,.82), transparent 58%),
+      linear-gradient(180deg, #fcfbf8 0%, #f6f3ee 100%);
+  }
+
+  .card-inner{
+    position:absolute;
+    inset:30px 30px 26px 30px;
+    display:flex;
+    flex-direction:column;
+    height:calc(100% - 56px);
+  }
+
+  .kicker{
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:.01em;
+    color:#202020;
+    margin-bottom:18px;
+  }
+
+  .image-wrap{
+    position:relative;
+    width:100%;
+    background:
+      linear-gradient(180deg, rgba(249,247,243,.92), rgba(245,241,235,.95));
+    border:1px solid rgba(212,204,194,.65);
+    border-radius:24px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .left .image-wrap{
+    height:420px;
+  }
+
+  .right .image-wrap{
+    height:470px;
+  }
+
+  .image-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+    background:#f7f4ef;
+  }
+
+  .support{
+    margin-top:22px;
+    font-size:28px;
+    line-height:1.22;
+    font-weight:500;
+    letter-spacing:-0.025em;
+    color:#171717;
+    max-width:92%;
+  }
+
+  .density{
+    margin-top:22px;
+    font-size:13px;
+    line-height:1;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--muted-2);
+    font-weight:700;
+  }
+
+  .chips{
+    margin-top:16px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px 12px;
+    align-items:flex-start;
+  }
+
+  .chip{
+    display:inline-flex;
+    align-items:center;
+    height:38px;
+    padding:0 16px;
+    border-radius:999px;
+    font-size:16px;
+    line-height:1;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:#4a4640;
+    background:var(--chip);
+    border:1px solid var(--chip-border);
+    white-space:nowrap;
+  }
+
+  .chip.outline{
+    background:transparent;
+    color:rgba(86,81,75,.28);
+    border-color:rgba(155,146,136,.22);
+  }
+
+  .chip.blue{
+    background:var(--blue);
+    color:white;
+    border-color:rgba(46,107,255,.9);
+    box-shadow:0 8px 18px rgba(46,107,255,.18);
+  }
+
+  .left .chips{
+    max-width:520px;
+  }
+
+  .right .chips{
+    max-width:540px;
+    gap:14px;
+  }
+
+  .right .lower-space{
+    flex:1;
+  }
+
+  .left-accent, .right-accent{
+    position:absolute;
+    pointer-events:none;
+  }
+
+  .left-accent{
+    width:220px; height:220px;
+    left:-60px; bottom:-72px;
+    background:radial-gradient(circle at 55% 45%, rgba(186,177,166,.12), rgba(186,177,166,0) 68%);
+  }
+
+  .right-accent{
+    width:380px; height:380px;
+    right:-110px; bottom:-140px;
+    background:radial-gradient(circle at 40% 40%, rgba(186,177,166,.1), rgba(186,177,166,0) 70%);
+  }
+
+  .card-rule{
+    position:absolute;
+    left:30px;
+    right:30px;
+    bottom:112px;
+    height:1px;
+    background:linear-gradient(90deg, rgba(203,196,186,.24), rgba(203,196,186,.08));
+    pointer-events:none;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="grain"></div>
+
+    <div class="header">
+      <h1 class="title">AI has traction after the visit. The visit itself is still thinly served.</h1>
+    </div>
+
+    <div class="deckline"></div>
+
+    <div class="cards">
+      <section class="card left">
+        <div class="left-accent"></div>
+        <div class="card-inner">
+          <div class="kicker">AI impact after the visit</div>
+
+          <div class="image-wrap">
+            <img
+              src="file:///Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-doc-admin-slide7-v113-batch-b/openai/version-06--minimal-restraint/image-01.png"
+              alt="Clinician working at dual monitors with documentation interfaces"
+            />
+          </div>
+
+          <div class="support">Ambient scribes have already established clinician buy-in.</div>
+
+          <div class="density">More crowded</div>
+
+          <div class="chips">
+            <div class="chip">ambient scribe</div>
+            <div class="chip">note generation</div>
+            <div class="chip">clerical relief</div>
+            <div class="chip">documentation support</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card right">
+        <div class="right-accent"></div>
+        <div class="card-inner">
+          <div class="kicker">AI impact during the visit</div>
+
+          <div class="image-wrap">
+            <img
+              src="file:///Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-encounter-slide7-v113-batch/openai/version-05--bold-contrast/image-01.png"
+              alt="Clinician speaking with patient while holding a tablet"
+            />
+          </div>
+
+          <div class="support">Few tools change the encounter itself. Vox does.</div>
+
+          <div class="density">Still thin</div>
+
+          <div class="chips">
+            <div class="chip blue">VOX</div>
+            <div class="chip outline">intake assistance</div>
+            <div class="chip outline">in-room guidance</div>
+            <div class="chip outline">shared understanding</div>
+          </div>
+
+          <div class="lower-space"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

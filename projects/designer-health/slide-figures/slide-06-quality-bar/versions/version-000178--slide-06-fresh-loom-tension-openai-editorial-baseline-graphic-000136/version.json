@@ -1,0 +1,25 @@
+{
+  "id": "version-000178",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000178--slide-06-fresh-loom-tension-openai-editorial-baseline-graphic-000136",
+  "label": "slide-06-fresh-loom-tension-openai-editorial-baseline-graphic-000136",
+  "status": "archived",
+  "createdAt": "2026-04-03T04:34:50.052Z",
+  "sourceKind": "presentation-image-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/presentation-images/vox-slide6-fresh-loom-tension-2026-04-03/openai/version-03--editorial-baseline",
+    "output/figures/presentation-images/vox-slide6-fresh-loom-tension-2026-04-03/openai/version-03--editorial-baseline/image-01.png"
+  ],
+  "runId": "graphic-batch-000028",
+  "attempt": 3,
+  "sourceGraphicId": "graphic-000136",
+  "sourceBatchId": "graphic-batch-000028",
+  "sourceBatchSlug": "vox-slide6-fresh-loom-tension-2026-04-03",
+  "sourceProvider": "openai",
+  "sourceVariantId": "v01-editorial",
+  "sourceVariantLabel": "Editorial Baseline",
+  "sourcePath": "output/figures/presentation-images/vox-slide6-fresh-loom-tension-2026-04-03/openai/version-03--editorial-baseline",
+  "sourceImagePath": "output/figures/presentation-images/vox-slide6-fresh-loom-tension-2026-04-03/openai/version-03--editorial-baseline/image-01.png"
+}

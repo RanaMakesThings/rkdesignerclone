@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designer.health/schemas/run-manifest.schema.json",
+  "title": "Run Manifest",
+  "type": "object",
+  "required": [
+    "run_id",
+    "slide_number",
+    "working_title",
+    "run_mode",
+    "source_artifacts",
+    "state_transitions",
+    "emitted_artifacts",
+    "exit_state",
+    "stage_attempts"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "parent_run_id": {
+      "type": "string"
+    },
+    "timestamp_start": {
+      "type": "string"
+    },
+    "timestamp_end": {
+      "type": "string"
+    },
+    "slide_number": {
+      "type": "string"
+    },
+    "working_title": {
+      "type": "string"
+    },
+    "run_mode": {
+      "type": "string"
+    },
+    "source_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "model_routing": {
+      "type": "object"
+    },
+    "thresholds": {
+      "type": "object"
+    },
+    "state_transitions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "emitted_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "selected_candidate_id": {
+      "type": "string"
+    },
+    "selected_thumbnail_id": {
+      "type": "string"
+    },
+    "winner_lineage": {
+      "type": "object",
+      "properties": {
+        "thumbnail_id": {
+          "type": "string"
+        },
+        "spatial_spec_id": {
+          "type": "string"
+        },
+        "candidate_id": {
+          "type": "string"
+        },
+        "family": {
+          "type": "string"
+        }
+      }
+    },
+    "exit_state": {
+      "type": "string"
+    },
+    "human_review_required": {
+      "type": "boolean"
+    },
+    "reopen_upstream_truth": {
+      "type": "boolean"
+    },
+    "retry_counts": {
+      "type": "object"
+    },
+    "stage_attempts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "full_run_attempt",
+          "stage",
+          "provider_family",
+          "provider_alias",
+          "attempt",
+          "outcome"
+        ],
+        "properties": {
+          "full_run_attempt": {
+            "type": "integer"
+          },
+          "stage": {
+            "type": "string"
+          },
+          "provider_family": {
+            "type": "string"
+          },
+          "provider_alias": {
+            "type": "string"
+          },
+          "attempt": {
+            "type": "integer"
+          },
+          "outcome": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "deprecation_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

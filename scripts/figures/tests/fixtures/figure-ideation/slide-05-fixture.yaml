@@ -1,0 +1,77 @@
+artifact_type: figure-ideation-input
+version: v0.1
+run_mode: standard
+authoring_context:
+  project: Designer / Vox Investor Deck
+  source_artifacts:
+    - slide-05-concept-spec-v0.1.md
+slide_metadata:
+  slide_number: "05"
+  working_title: Hidden labor
+  status: Strategic lock
+  adjacent_slides:
+    - "04"
+    - "06"
+locked_meaning:
+  slide_job: Make the hidden clinical reconstruction work visible without turning it into a neat cleanup animation.
+  audience_should_leave_believing: The clinician is reconstructing fragmented history, not simply cleaning paperwork.
+  core_claim: The hidden labor is reasoning-heavy reconstruction, not cosmetic cleanup.
+slide_copy:
+  text_first:
+    header: The hidden labor is reconstructing the story.
+    support_line: Clinicians piece together fragmented context before care can move.
+  compressed:
+    header: The hidden work is reconstruction.
+    subheader: Not cleanup.
+figure_requirements:
+  figure_burden:
+    - show fragmented evidence inputs
+    - show reconstruction effort
+  figure_logic: The visual should make reconstruction feel cognitively heavy and clinically real.
+  must_not_become:
+    - blob arrow neat card transform
+    - over-polished artifact
+    - reasoning reduced to cleanup
+starting_hypothesis:
+  proposed_figure_direction: A fragmented evidence field converging into a clinician reasoning surface.
+  treat_as: starting hypothesis
+  explore_alternatives: true
+current_visual_context:
+  keep:
+    - clinical seriousness
+  change:
+    - remove cleanup metaphors
+design_constraints:
+  tone:
+    - serious
+    - clinically literate
+    - restrained
+  density_target: sparse
+  template: template.html
+  max_candidates: 8
+  shortlist_count: 3
+  thumbnail_count: 4
+  allow_high_risk_candidate: false
+assets:
+  template_file: template.html
+provider_preferences:
+  text_ideators:
+    - openai
+    - anthropic
+  image_generators:
+    - openai
+    - google
+  vision_critics:
+    - openai
+    - anthropic
+    - google
+requested_outputs:
+  - normalized_brief
+  - figure_brief
+  - figure_move_candidates
+  - ranked_shortlist
+  - spatial_spec
+  - thumbnail_manifest
+  - critique_report
+  - build_spec
+  - run_manifest

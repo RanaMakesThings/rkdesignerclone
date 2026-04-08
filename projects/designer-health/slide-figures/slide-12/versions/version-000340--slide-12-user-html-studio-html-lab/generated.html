@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slide 12 — Ask Redraft</title>
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --slide: #ffffff;
+      --ink: #0f172a;
+      --text: #1f2937;
+      --muted: #64748b;
+      --muted-2: #94a3b8;
+      --border: #e2e8f0;
+      --border-2: #cbd5e1;
+      --blue: #2563eb;
+      --blue-soft: #eff6ff;
+      --blue-line: rgba(37, 99, 235, 0.18);
+      --shadow: 0 20px 44px -18px rgba(15, 23, 42, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: var(--ink);
+    }
+
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background: var(--slide);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      padding: 44px 68px 84px 68px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(15, 23, 42, 0.04);
+    }
+
+    .glow {
+      position: absolute;
+      right: -180px;
+      top: -180px;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, rgba(37, 99, 235, 0.02) 34%, rgba(255,255,255,0) 72%);
+      pointer-events: none;
+      border-radius: 50%;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px 0;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 1020px;
+      font-size: 40px;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .subheader {
+      margin: 12px 0 0 0;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .main {
+      margin-top: 20px;
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card {
+      width: 100%;
+      height: 100%;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+      box-shadow: 0 12px 30px -18px rgba(15, 23, 42, 0.12);
+      padding: 26px 34px 14px 34px;
+      display: grid;
+      grid-template-columns: 286px 1px 1fr;
+      column-gap: 26px;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .round-label {
+      margin: 0 0 14px 0;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .amount {
+      margin: 0;
+      font-size: 82px;
+      line-height: 0.92;
+      letter-spacing: -0.06em;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .instrument {
+      margin: 12px 0 0 0;
+      font-size: 24px;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .hero-note {
+      margin: 12px 0 0 0;
+      font-size: 16px;
+      line-height: 1.4;
+      color: var(--muted);
+      max-width: 240px;
+    }
+
+    .divider {
+      background: linear-gradient(180deg, rgba(203, 213, 225, 0) 0%, rgba(203, 213, 225, 1) 14%, rgba(203, 213, 225, 1) 86%, rgba(203, 213, 225, 0) 100%);
+      border-radius: 999px;
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .stat {
+      border: 1px solid var(--border);
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 12px 14px 10px 14px;
+      min-height: 70px;
+    }
+
+    .stat-value {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .stat-label {
+      margin: 6px 0 0 0;
+      font-size: 13px;
+      line-height: 1.2;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .unlock-label {
+      margin: 0 0 8px 0;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .milestones {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      flex: 1;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      column-gap: 14px;
+      align-items: start;
+      padding: 10px 0 10px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .row:first-of-type { border-top: 1px solid var(--border-2); }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      padding: 7px 10px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      border: 1px solid var(--blue-line);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .row-text {
+      font-size: 17px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      font-weight: 500;
+      max-width: 600px;
+    }
+
+    .row-text strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .funds {
+      margin-top: 8px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      display: block;
+    }
+
+    .funds-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-right: 8px;
+    }
+
+    .funds-line {
+      display: inline;
+      font-size: 13px;
+      line-height: 1.35;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .footer-rule {
+      position: absolute;
+      left: 80px;
+      right: 80px;
+      bottom: 34px;
+      height: 1px;
+      background: rgba(15, 23, 42, 0.92);
+    }
+
+    .footer-logo {
+      position: absolute;
+      right: 78px;
+      bottom: 17px;
+      font-size: 22px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="glow"></div>
+
+    <p class="eyebrow">The Ask</p>
+    <h1>Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.</h1>
+    <p class="subheader">Post-money SAFE • ~18–20 months of runway</p>
+
+    <div class="main">
+      <div class="hero-card">
+        <div class="hero-left">
+          <p class="round-label">Pre-seed round</p>
+          <p class="amount">$1.25M</p>
+          <p class="instrument">Post-money SAFE</p>
+          <p class="hero-note">Funds the next proof stage.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="hero-right">
+          <div class="stats">
+            <div class="stat">
+              <p class="stat-value">2</p>
+              <p class="stat-label">key hires</p>
+            </div>
+            <div class="stat">
+              <p class="stat-value">3</p>
+              <p class="stat-label">pilot sites</p>
+            </div>
+            <div class="stat">
+              <p class="stat-value">18–20</p>
+              <p class="stat-label">months runway</p>
+            </div>
+          </div>
+
+          <p class="unlock-label">What this round unlocks</p>
+
+          <div class="milestones">
+            <div class="row">
+              <div><span class="tag">Build</span></div>
+              <div class="row-text"><strong>Founding engineer hired</strong>; clinician-grade product loop live.</div>
+            </div>
+            <div class="row">
+              <div><span class="tag">Deploy</span></div>
+              <div class="row-text"><strong>Implementation lead hired</strong>; 3 pilot sites live.</div>
+            </div>
+            <div class="row">
+              <div><span class="tag">Validate</span></div>
+              <div class="row-text"><strong>Measured pilot outcomes</strong>; seed-ready proof package.</div>
+            </div>
+          </div>
+
+          <div class="funds">
+            <span class="funds-label">Use of funds</span>
+            <span class="funds-line">Build • Deploy • Validate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-rule"></div>
+    <div class="footer-logo">designer</div>
+  </div>
+</body>
+</html>

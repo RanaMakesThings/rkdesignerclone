@@ -1,0 +1,57 @@
+Create one polished 16:9 investor-deck figure for Designer Health slide 8.
+
+This should be a single central clinician-facing report artifact on a quiet,
+warm-neutral background. It should feel like a premium clinical brief page, not
+a dashboard and not a fake EHR.
+
+Use the attached screenshot only as visual-family reference:
+- quote its calm white clinical UI feel
+- quote its row-based extraction logic
+- quote its ranked reasoning logic
+- do not copy the two-card split literally
+
+Locked direction:
+- one vertical document
+- top-to-bottom reading order
+- one outer frame
+- no equal left/right cards
+
+Visual requirements:
+- one substantial white or eggshell report page
+- subtle border, subtle shadow
+- internal horizontal rules
+- dense but legible clinical information
+- lower section for working considerations
+- final block for open questions / next step
+
+Content to depict:
+- social context
+- symptoms
+- key negatives
+- uncertainties / workup
+- timeline
+- working considerations
+- open questions
+
+Use the cough case:
+- care seeking prompted by spouse
+- cough
+- cough pattern
+- cough worse at night
+- cough worsens when lying down
+- scratchy throat
+- yellow sputum
+- hemoptysis absent
+- fever unresolved
+- breathing impact unresolved
+
+Use three considerations:
+- community-acquired pneumonia
+- acute bronchitis
+- post-viral cough
+
+Important for image generation:
+- prioritize strong artifact geometry, hierarchy, and section headers
+- if long text becomes unreliable, preserve the overall structure and the key
+  labels rather than stuffing too much copy
+- the result should look like a believable product mock, not abstract design

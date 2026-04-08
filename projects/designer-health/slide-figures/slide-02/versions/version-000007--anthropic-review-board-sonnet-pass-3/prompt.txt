@@ -1,0 +1,30 @@
+Review this investor-deck slide as if it were about to be presented to a board of investors.
+
+Question:
+Does this slide look clean enough and professional enough for a board presentation, or are there still things that feel screwy, under-resolved, or aesthetically off?
+
+Context:
+- This is slide 2 in the Designer Health deck.
+- The thesis is: demand is outpacing clinical capacity.
+- The slide uses three proof zones:
+  - a benchmark wait-time trend ending at 31 days in 2025
+  - a specialty breakout card on the right
+  - a shortage banner using the wording “More than 1 in 4 Americans live in federally designated primary care shortage areas.”
+- The current branch is the official HTML winner.
+
+Assess specifically:
+- whether it feels board-clean and premium
+- whether any spacing, alignment, sizing, or hierarchy choices still feel off
+- whether the slide still feels too busy or widget-like
+- whether the specialty card belongs stylistically
+- whether the color and typography treatment feels coherent with a serious healthcare / investor deck
+- whether any copy on the slide still feels clunky or visually awkward
+
+Return exactly these sections:
+1. Verdict: one sentence only.
+2. Top issues: 5 bullets ordered by severity.
+3. Board-read risk: 3 bullets on what might reduce confidence in a live investor setting.
+4. Aesthetic upgrades: 5 concrete design improvements.
+5. Keep as-is: 3 things that are already strong and should not be disturbed.
+
+Be blunt. Prefer high-signal visual critique over generic praise.

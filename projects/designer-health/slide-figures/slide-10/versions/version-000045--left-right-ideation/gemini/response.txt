@@ -1,0 +1,48 @@
+Here are the answers to your questions to help refine Slide 10 into a premium, left/right layout that clearly connects unlocked capacity to economic value.
+
+### 1. Best reduced callback object for the left
+The best reduced callback object is an **"Equation" motif**: a visual grouping of just 2 or 3 shortened visit bars that visually "sum" or point to a single, prominent green `New visit` block. 
+
+Instead of a timeline, treat it as a formula: `[Shortened Visit] + [Shortened Visit] = [New Visit]`. This abstracts the concept from Slide 3 perfectly without requiring the audience to re-read a complex timeline.
+
+### 2. What exactly should the left side show?
+It should show **a couple of shortened bars plus the green `New visit` block**, but arranged to show causality rather than a strict timeline. 
+
+A full before/after comparison (showing the long bars again) adds unnecessary cognitive load. A single unlocked slot (just the green block) lacks the "efficiency" context. 
+
+**The ideal visual:** Two shortened visit blocks (the blue/grey/grey from Slide 3) with a subtle bracket underneath them labeled "Accumulated saved minutes," with an arrow pointing to the solid green `New visit` block. This perfectly cues the memory of Slide 3 while keeping the slide sparse.
+
+### 3. Should the right side include a secondary `+2` upside check?
+**Yes, but it must be extremely quiet.** The base case (`+1 -> $11,000`) needs to be the undeniable hero of the slide. Investors will naturally ask "what if they save more time?", so having the answer ready is smart, but it shouldn't compete for attention.
+
+Instead of a toggle (which looks like dashboard chrome), use a simple, muted text line directly below the main `$11,000` figure. For example: 
+*(Upside: +2 visits/day = $22,000/year)* in a smaller, lighter grey font.
+
+---
+
+### 4 & 5. Best 3 Concrete Layout Ideas
+
+Here are three ways to execute this left/right layout, keeping it premium and sparse.
+
+#### Layout Idea 1: The "Visual Equation" (Recommended)
+*   **What goes on the left:** Two shortened visit blocks (blue/grey) side-by-side. A subtle grey bracket spans beneath them, with a short arrow pointing right to a single, vibrant green `New visit` block. 
+*   **What goes on the right:** A clean, left-aligned text stack. 
+    *   Top: `+1 visit / provider / day` (in green to match the block).
+    *   Middle: The three bulleted assumptions in small, light text.
+    *   Bottom: A massive, bold `$11,000 / year`.
+*   **Why it works:** It creates a perfect left-to-right reading narrative: *These shortened visits create this new visit, which equals this much money.* It is highly intuitive and requires almost no reading.
+*   **Main risk:** If the bracket/arrow styling is too heavy, it might look like a textbook diagram rather than a premium investor slide. The connecting elements must be whisper-thin.
+
+#### Layout Idea 2: The "Mini Before/After Stack"
+*   **What goes on the left:** Two vertical rows. 
+    *   Row 1 (faded/muted): Two standard-length visit blocks.
+    *   Row 2 (full color): Two shortened visit blocks, followed immediately by the green `New visit` block.
+*   **What goes on the right:** The economics proof, centered within its own subtle bounding box or card on the right half of the slide, identical to the current Slide 10 but scaled to fit the half-width.
+*   **Why it works:** It relies on the strongest visual cue from Slide 3 (the shrinking blue bar). Seeing the "before" and "after" stacked directly on top of each other instantly communicates the mechanism of unlocked capacity without needing explanatory text.
+*   **Main risk:** It borders on violating the "fewer bars" constraint. Even with only two visits shown, having two rows means drawing 5-6 blocks total, which might feel slightly heavier than desired.
+
+#### Layout Idea 3: The "Hero Block" (Ultra-Minimal)
+*   **What goes on the left:** The green `New visit` block is scaled up to be quite large and acts as the hero image for the left side. Trailing off to its left are just the *ghosted outlines* (no fill, just thin strokes) of two shortened visit blocks. 
+*   **What goes on the right:** The economics proof, but the `+1 visit` text is visually anchored to the green block on the left (perhaps by horizontal alignment or a very subtle connecting line).
+*   **Why it works:** This is the most premium and sparse option. It focuses 90% of the visual weight on the *result* (the new capacity) while providing just enough of a ghosted callback to Slide 3 to remind them where it came from.
+*   **Main risk:** It might be *too* abstract. If the ghosted outlines aren't immediately recognizable as the visit blocks from Slide 3, the logical bridge between the two slides might break for a fast-skimming investor.

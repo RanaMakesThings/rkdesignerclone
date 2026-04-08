@@ -1,0 +1,14 @@
+{
+  "note": "Deterministic coverage is not available for this local exploration artifact.",
+  "references": {
+    "candidateFigure": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/variants/10-closer-current-style/codex-html/preview.png",
+    "officialSlide": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/figure.png"
+  },
+  "focusAreas": [
+    "spacing rhythm",
+    "left-right balance",
+    "object grouping",
+    "readability at slide scale",
+    "continuity with current slide language"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "slides": {
+    "slide-04-05": {
+      "current": null,
+      "versions": [
+        {
+          "label": "gemini-html",
+          "source": "gemini-html"
+        },
+        {
+          "label": "gemini-image",
+          "source": "gemini-image"
+        },
+        {
+          "label": "openai-html",
+          "source": "openai-html"
+        },
+        {
+          "label": "openai-image",
+          "source": "openai-image"
+        },
+        {
+          "label": "anthropic-html",
+          "source": "anthropic-html"
+        },
+        {
+          "label": "anthropic-html-sonnet",
+          "source": "anthropic-html-sonnet"
+        },
+        {
+          "label": "anthropic-html-opus",
+          "source": "anthropic-html-opus"
+        },
+        {
+          "label": "anthropic-html-v2",
+          "source": "anthropic-html-v2"
+        },
+        {
+          "label": "anthropic-html-v3",
+          "source": "anthropic-html-v3"
+        }
+      ]
+    },
+    "slide-10": {
+      "current": {
+        "label": "equation-hero-v1",
+        "source": "equation-hero-v1",
+        "extraSources": [
+          "callback-review",
+          "callback-reference-board.png",
+          "left-right-variants-board.png"
+        ]
+      },
+      "versions": [
+        {
+          "label": "power-of-one-v1",
+          "source": "power-of-one-v1"
+        },
+        {
+          "label": "break-even-threshold-v1",
+          "source": "break-even-threshold-v1"
+        },
+        {
+          "label": "capacity-waterfall-v1",
+          "source": "capacity-waterfall-v1"
+        },
+        {
+          "label": "left-right-capacity-tile-v1",
+          "source": "left-right-capacity-tile-v1"
+        },
+        {
+          "label": "left-right-micro-journey-v1",
+          "source": "left-right-micro-journey-v1"
+        },
+        {
+          "label": "left-right-motif-card-v1",
+          "source": "left-right-motif-card-v1"
+        },
+        {
+          "label": "left-right-ideation",
+          "source": "left-right-ideation"
+        },
+        {
+          "label": "slide-10-legacy",
+          "source": "../slide-10-legacy"
+        }
+      ]
+    },
+    "slide-10-legacy": {
+      "skip": true
+    },
+    "slide-11": {
+      "current": null,
+      "versions": [
+        {
+          "label": "beachhead-profile-hero-v1",
+          "source": "beachhead-profile-hero-v1"
+        },
+        {
+          "label": "proof-column-v1",
+          "source": "proof-column-v1"
+        },
+        {
+          "label": "claude-ideation",
+          "source": "claude-ideation"
+        }
+      ]
+    }
+  }
+}

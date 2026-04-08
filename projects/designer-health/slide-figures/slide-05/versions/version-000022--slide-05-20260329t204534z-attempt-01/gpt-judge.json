@@ -1,0 +1,27 @@
+{
+  "provider": "gpt",
+  "status": "not_applied",
+  "summary": "The requested Designer/pd-template-1 style pass did not land; the after image collapses the original visual structure into mostly plain text and removes the key themed elements rather than restyling them in place.",
+  "evidence": [
+    "The blue source bar with segmented slide-3 family styling is gone in the after image, replaced by plain text lines ('0 5 10 15 20', 'Story reconstruction', etc.).",
+    "The extracted blue wedge/block is no longer present as a styled shape; 'History reconstruction' appears only as text.",
+    "The single simple arced arrow/connector is missing entirely in the after image.",
+    "The grouped support block is not made lighter/flatter in place; the whole light-gray rounded panel disappears instead of being restyled.",
+    "The slide no longer preserves the original one-beat visual composition of header + source bar + extracted wedge + grouped reasons; it becomes a left-aligned text list with large empty space."
+  ],
+  "nextPrompt": "Recreate the original slide structure exactly, then apply only a style pass: import/use Montserrat for all text, keep the white background, keep one simple gray arced arrow, preserve the blue segmented source bar and blue extracted wedge in the slide-3 blue family, and restyle the reasons panel into a lighter, flatter template card without changing copy or layout.",
+  "needsHuman": true,
+  "raw": {
+    "status": "not_applied",
+    "summary": "The requested Designer/pd-template-1 style pass did not land; the after image collapses the original visual structure into mostly plain text and removes the key themed elements rather than restyling them in place.",
+    "evidence": [
+      "The blue source bar with segmented slide-3 family styling is gone in the after image, replaced by plain text lines ('0 5 10 15 20', 'Story reconstruction', etc.).",
+      "The extracted blue wedge/block is no longer present as a styled shape; 'History reconstruction' appears only as text.",
+      "The single simple arced arrow/connector is missing entirely in the after image.",
+      "The grouped support block is not made lighter/flatter in place; the whole light-gray rounded panel disappears instead of being restyled.",
+      "The slide no longer preserves the original one-beat visual composition of header + source bar + extracted wedge + grouped reasons; it becomes a left-aligned text list with large empty space."
+    ],
+    "nextPrompt": "Recreate the original slide structure exactly, then apply only a style pass: import/use Montserrat for all text, keep the white background, keep one simple gray arced arrow, preserve the blue segmented source bar and blue extracted wedge in the slide-3 blue family, and restyle the reasons panel into a lighter, flatter template card without changing copy or layout.",
+    "needsHuman": true
+  }
+}

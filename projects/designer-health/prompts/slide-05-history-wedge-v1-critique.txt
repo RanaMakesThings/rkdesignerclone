@@ -1,0 +1,46 @@
+You are reviewing ONE static investor pitch-deck figure.
+
+Context:
+- Deck: Designer Health
+- Slide: current slide 5
+- Slide role: intervention-point argument
+- Lead-in: slide 3 already showed where the visit time is
+- Follow-on: slide 4 will explain the mechanism in more detail
+
+What this slide needs to do:
+- show why history is the wedge to pull first
+- feel like a direct continuation of the slide-3 source bar
+- stay sparse and conceptual rather than explanatory
+- group the three reasons into one calm support block
+- avoid leaking lower mechanism detail from the old merged slide 4/5
+
+Specific concern:
+This pass promotes a cleaner native version of the reopened slide-5 wedge.
+I want a blunt critique of whether it now lands in under 3 seconds and whether
+it stays sufficiently distinct from the old merged mechanism slide.
+
+Please answer in exactly these sections:
+
+1. Verdict
+One short paragraph. Say whether this figure is working or not.
+
+2. What works
+3 flat bullets max.
+
+3. What is still broken
+Up to 6 flat bullets. Be specific about hierarchy, spacing, over-explanation,
+or anything that keeps the wedge argument from landing fast.
+
+4. Is this slide still leaking slide-4 work?
+Answer yes or no, then explain in 2 to 4 sentences.
+
+5. Best next move
+One short paragraph telling me what to change next. Prefer concrete design
+direction over generic advice.
+
+Important:
+- prioritize visual reasoning over generic design commentary
+- say explicitly if the slide lands in under 3 seconds
+- say explicitly if the source bar, extracted wedge, and grouped reasons feel
+  like one coherent beat
+- do not reopen the full deck strategy unless the family is actually wrong

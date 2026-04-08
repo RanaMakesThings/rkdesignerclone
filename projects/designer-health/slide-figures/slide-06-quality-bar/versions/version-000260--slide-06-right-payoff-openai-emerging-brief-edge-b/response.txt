@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Vox Investor Deck Slide</title>
+<style>
+  html, body {
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: #ffffff;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    color: #182033;
+  }
+  .slide {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background:
+      radial-gradient(900px 520px at 7% 8%, rgba(76,133,155,0.11), rgba(255,255,255,0) 55%),
+      radial-gradient(700px 420px at 86% 76%, rgba(79,169,179,0.08), rgba(255,255,255,0) 50%),
+      linear-gradient(#ffffff, #ffffff);
+  }
+  .title {
+    position: absolute;
+    left: 108px;
+    top: 69px;
+    width: 1450px;
+    font-weight: 700;
+    font-size: 63px;
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+    color: #1a2234;
+  }
+  .title .vox {
+    color: #2f919c;
+  }
+  .sub {
+    position: absolute;
+    left: 108px;
+    top: 291px;
+    width: 1370px;
+    font-size: 21px;
+    line-height: 1.52;
+    letter-spacing: -0.03em;
+    color: #596983;
+    font-weight: 400;
+  }
+  .chamber {
+    position: absolute;
+    left: 533px;
+    top: 410px;
+    width: 780px;
+    height: 524px;
+    border-radius: 40px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.94), rgba(249,251,253,0.95));
+    border: 1.5px solid rgba(184,194,209,0.72);
+    box-shadow:
+      0 32px 80px rgba(54,77,111,0.08),
+      inset 0 1px 0 rgba(255,255,255,0.88);
+  }
+  .voxmark {
+    position: absolute;
+    left: 881px;
+    top: 444px;
+    font-size: 54px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: #2f919c;
+  }
+  .voxsub {
+    position: absolute;
+    left: 818px;
+    top: 513px;
+    width: 220px;
+    text-align: center;
+    font-size: 18px;
+    color: #2e3b50;
+    letter-spacing: -0.03em;
+  }
+  .lane {
+    position: absolute;
+    width: 260px;
+    height: 46px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #ffffff, #fbfcfd);
+    border: 1px solid rgba(213,220,231,0.95);
+    box-shadow:
+      0 10px 24px rgba(63,82,112,0.06),
+      inset 0 1px 0 rgba(255,255,255,0.95);
+    display: flex;
+    align-items: center;
+    padding-left: 34px;
+    font-size: 19px;
+    line-height: 1.1;
+    color: #243246;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+  .lane::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #49a8af;
+    box-shadow: 0 0 0 5px rgba(73,168,175,0.10);
+  }
+  .title-right {
+    position: absolute;
+    right: 190px;
+    top: 552px;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.04em;
+    color: #1e2737;
+  }
+
+  /* Right-side emerging brief object */
+  .artifact-wrap {
+    position: absolute;
+    left: 1410px;
+    top: 599px;
+    width: 410px;
+    height: 335px;
+  }
+  .artifact-shadow {
+    position: absolute;
+    left: 72px;
+    top: 40px;
+    width: 260px;
+    height: 230px;
+    border-radius: 18px 18px 22px 18px;
+    background: rgba(22,43,67,0.08);
+    filter: blur(26px);
+    transform: translateY(16px);
+  }
+  .artifact-spine {
+    position: absolute;
+    left: 84px;
+    top: 21px;
+    width: 30px;
+    height: 210px;
+    border-radius: 16px 0 0 16px;
+    background: linear-gradient(180deg, #2b7f89, #1d5d67);
+    box-shadow:
+      0 14px 36px rgba(28,102,113,0.22),
+      inset -1px 0 0 rgba(255,255,255,0.08),
+      inset 0 1px 0 rgba(255,255,255,0.12);
+  }
+  .artifact-spine::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 18px;
+    width: 6px;
+    height: 172px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
+  }
+  .artifact-sheet {
+    position: absolute;
+    left: 110px;
+    top: 2px;
+    width: 280px;
+    height: 320px;
+    border-radius: 18px 18px 20px 18px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,249,251,0.96));
+    border: 1px solid rgba(212,220,230,0.95);
+    box-shadow:
+      0 20px 44px rgba(57,78,108,0.10),
+      inset 0 1px 0 rgba(255,255,255,0.95);
+    overflow: hidden;
+  }
+  .artifact-tab {
+    position: absolute;
+    left: 134px;
+    top: 2px;
+    width: 220px;
+    height: 12px;
+    border-radius: 0 0 8px 8px;
+    background: linear-gradient(90deg, #cbeef0, #8fd2d6);
+  }
+  .sheet-rule {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    height: 1px;
+    background: rgba(189,199,212,0.85);
+  }
+  .bar {
+    position: absolute;
+    left: 24px;
+    height: 13px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #dfe6ef, #e8edf4);
+  }
+  .beam-svg {
+    position: absolute;
+    left: 1260px;
+    top: 598px;
+    width: 270px;
+    height: 170px;
+    overflow: visible;
+  }
+
+  /* SVG text rendering consistency */
+  svg { shape-rendering: geometricPrecision; text-rendering: geometricPrecision; }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="title">
+      <span class="vox">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.
+    </div>
+
+    <div class="sub">
+      Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+      By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.
+    </div>
+
+    <!-- Left + center shell -->
+    <svg width="1920" height="1080" style="position:absolute;left:0;top:0;">
+      <defs>
+        <linearGradient id="tealLine" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#68b9bf"/>
+          <stop offset="100%" stop-color="#2f9aa3"/>
+        </linearGradient>
+        <linearGradient id="grayLine" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#b7c5d6"/>
+          <stop offset="100%" stop-color="#90a4bb"/>
+        </linearGradient>
+        <linearGradient id="laneFade" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#d8f0f1"/>
+          <stop offset="65%" stop-color="#bce3e5"/>
+          <stop offset="100%" stop-color="#f6fbfb"/>
+        </linearGradient>
+        <filter id="softBlur" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="12"/>
+        </filter>
+        <filter id="drop" x="-30%" y="-30%" width="160%" height="160%">
+          <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#56738e" flood-opacity="0.14"/>
+        </filter>
+      </defs>
+
+      <!-- Left ribbon stack -->
+      <g transform="translate(102,465)">
+        <polygon points="0,0 336,0 384,32 336,65 0,65 34,32" fill="#ffffff" stroke="#a9b8c9" stroke-width="3"/>
+        <text x="42" y="39" font-size="21" fill="#47556b" font-weight="500" letter-spacing="-0.03em">My back has been hurting...</text>
+      </g>
+
+      <g transform="translate(120,553)">
+        <polygon points="0,32 46,0 348,0 348,65 46,65" fill="#e8f6f6" stroke="#58adb5" stroke-width="3"/>
+        <polygon points="0,32 46,0 46,65" fill="#f7fbfb" stroke="#58adb5" stroke-width="3"/>
+        <text x="56" y="39" font-size="21" fill="#1a6974" font-weight="700" letter-spacing="-0.03em">Vox: What makes it worse?</text>
+      </g>
+
+      <g transform="translate(102,641)">
+        <polygon points="0,0 336,0 384,32 336,65 0,65 34,32" fill="#ffffff" stroke="#a9b8c9" stroke-width="3"/>
+        <text x="42" y="40" font-size="21" fill="#47556b" font-weight="500" letter-spacing="-0.03em">It’s worse in the morning.</text>
+      </g>
+
+      <g transform="translate(120,728)">
+        <polygon points="0,32 46,0 348,0 348,65 46,65" fill="#e8f6f6" stroke="#58adb5" stroke-width="3"/>
+        <polygon points="0,32 46,0 46,65" fill="#f7fbfb" stroke="#58adb5" stroke-width="3"/>
+        <text x="62" y="39" font-size="21" fill="#1a6974" font-weight="700" letter-spacing="-0.03em">Vox: When did this start?</text>
+      </g>
+
+      <g transform="translate(102,817)">
+        <polygon points="0,0 336,0 384,32 336,65 0,65 34,32" fill="#ffffff" stroke="#a9b8c9" stroke-width="3"/>
+        <text x="42" y="40" font-size="21" fill="#47556b" font-weight="500" letter-spacing="-0.03em">Started last Tuesday.</text>
+      </g>
+
+      <!-- Inbound lines -->
+      <path d="M485 497 C570 495, 611 591, 701 650" fill="none" stroke="url(#grayLine)" stroke-width="6" stroke-linecap="round"/>
+      <path d="M469 585 C577 582, 600 632, 701 675" fill="none" stroke="url(#tealLine)" stroke-width="6" stroke-linecap="round"/>
+      <path d="M485 673 C582 673, 611 674, 701 679" fill="none" stroke="url(#grayLine)" stroke-width="6" stroke-linecap="round"/>
+      <path d="M468 760 C574 761, 601 719, 701 692" fill="none" stroke="url(#tealLine)" stroke-width="6" stroke-linecap="round"/>
+      <path d="M485 849 C566 851, 610 737, 701 706" fill="none" stroke="url(#grayLine)" stroke-width="6" stroke-linecap="round"/>
+
+      <!-- Outer glow around center -->
+      <circle cx="787" cy="677" r="84" fill="rgba(104,185,191,0.08)" filter="url(#softBlur)"/>
+
+      <!-- Central cycle -->
+      <g filter="url(#drop)">
+        <circle cx="787" cy="677" r="86" fill="#f3fbfb" stroke="#d7ecee" stroke-width="4"/>
+        <circle cx="787" cy="677" r="78" fill="#ffffff"/>
+        <circle cx="787" cy="677" r="70" fill="none" stroke="#dff1f3" stroke-width="12"/>
+        <path d="M739 643 A70 70 0 0 1 794 608" fill="none" stroke="#58b1b8" stroke-width="12" stroke-linecap="butt"/>
+        <path d="M833 606 A70 70 0 0 1 860 670" fill="none" stroke="#58b1b8" stroke-width="12" stroke-linecap="butt"/>
+        <path d="M804 742 A70 70 0 0 1 733 730" fill="none" stroke="#58b1b8" stroke-width="12" stroke-linecap="butt"/>
+
+        <path d="M854 629 l10 12 l-18 1" fill="none" stroke="#2f9aa3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M718 734 l-11 11 l1 -18" fill="none" stroke="#2f9aa3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <text x="787" y="666" text-anchor="middle" font-size="19" fill="#243246" font-weight="700" letter-spacing="-0.03em">Adaptive</text>
+      <text x="787" y="686" text-anchor="middle" font-size="19" fill="#243246" font-weight="700" letter-spacing="-0.03em">clinical</text>
+      <text x="787" y="706" text-anchor="middle" font-size="19" fill="#243246" font-weight="700" letter-spacing="-0.03em">interviewer</text>
+
+      <!-- Outbound lane stems -->
+      <rect x="884" y="577" width="120" height="24" rx="12" fill="url(#laneFade)"/>
+      <rect x="884" y="670" width="120" height="24" rx="12" fill="url(#laneFade)"/>
+      <rect x="884" y="757" width="120" height="24" rx="12" fill="url(#laneFade)"/>
+    </svg>
+
+    <div class="chamber"></div>
+    <div class="voxmark">Vox</div>
+    <div class="voxsub">Adaptive clinical interviewer</div>
+
+    <div class="lane" style="left:974px; top:566px;">What matters</div>
+    <div class="lane" style="left:974px; top:656px;">What connects</div>
+    <div class="lane" style="left:974px; top:746px;">What still needs<br>verification</div>
+
+    <!-- Redesigned handoff beam + emerging artifact -->
+    <div class="title-right">Clinician-grade starting point</div>
+
+    <svg class="beam-svg" viewBox="0 0 270 170">
+      <defs>
+        <linearGradient id="beamStrokeA" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#d9f2f3" stop-opacity="0.9"/>
+          <stop offset="55%" stop-color="#9fd7db" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#2b7f89" stop-opacity="0.95"/>
+        </linearGradient>
+        <linearGradient id="beamFill" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#def4f5" stop-opacity="0.14"/>
+          <stop offset="55%" stop-color="#83c9cf" stop-opacity="0.34"/>
+          <stop offset="100%" stop-color="#2b7f89" stop-opacity="0.70"/>
+        </linearGradient>
+        <filter id="beamBlur" x="-20%" y="-40%" width="160%" height="180%">
+          <feGaussianBlur stdDeviation="10"/>
+        </filter>
+      </defs>
+
+      <!-- soft atmospheric beam -->
+      <path d="M0 80 C65 80, 98 80, 138 80 C175 80, 203 80, 234 80" fill="none" stroke="url(#beamStrokeA)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M2 28 C56 54, 95 74, 145 79 C185 83, 214 82, 234 82" fill="none" stroke="#d9f4f5" stroke-opacity="0.8" stroke-width="7" stroke-linecap="round"/>
+      <path d="M2 132 C56 106, 95 86, 145 81 C185 77, 214 78, 234 78" fill="none" stroke="#d9f4f5" stroke-opacity="0.8" stroke-width="7" stroke-linecap="round"/>
+
+      <!-- taper into sculptural edge -->
+      <path d="M154 57 L228 57 L252 80 L228 103 L154 103 L136 80 Z" fill="url(#beamFill)"/>
+      <path d="M154 57 L228 57 L252 80 L228 103 L154 103 L136 80 Z" fill="none" stroke="#cceef0" stroke-opacity="0.7" stroke-width="1.5"/>
+
+      <path d="M168 57 L228 57 L252 80 L228 103 L168 103 L150 80 Z" fill="#2b7f89" opacity="0.14" filter="url(#beamBlur)"/>
+    </svg>
+
+    <div class="artifact-wrap">
+      <div class="artifact-shadow"></div>
+      <div class="artifact-spine"></div>
+      <div class="artifact-sheet">
+        <div class="artifact-tab"></div>
+
+        <div class="bar" style="top:30px; width:104px;"></div>
+        <div class="bar" style="top:58px; width:214px;"></div>
+        <div class="bar" style="top:81px; width:148px;"></div>
+
+        <div class="sheet-rule" style="top:111px;"></div>
+
+        <div class="bar" style="top:124px; width:104px;"></div>
+        <div class="bar" style="top:151px; width:180px;"></div>
+        <div class="bar" style="top:173px; width:214px;"></div>
+        <div class="bar" style="top:196px; width:130px;"></div>
+
+        <div class="sheet-rule" style="top:223px;"></div>
+
+        <div class="bar" style="top:236px; width:104px;"></div>
+        <div class="bar" style="top:264px; width:148px;"></div>
+        <div class="bar" style="top:286px; width:180px;"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

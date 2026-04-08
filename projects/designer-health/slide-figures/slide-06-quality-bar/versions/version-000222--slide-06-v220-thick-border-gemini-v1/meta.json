@@ -1,0 +1,7 @@
+{
+  "model": "gemini-3.1-pro-preview",
+  "temperature": 0.4,
+  "images": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000220--slide-06-v216-smaller-bordered-ribbons-v1/preview.png"
+  ]
+}

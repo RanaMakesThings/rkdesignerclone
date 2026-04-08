@@ -1,0 +1,7 @@
+{
+  "model": "gpt-5.4",
+  "images": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/figure.png"
+  ],
+  "maxOutputTokens": 6000
+}

@@ -1,0 +1,25 @@
+{
+  "id": "version-000161",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000161--slide-06-seed-starting-point-openai-minimal-restraint-graphic-000119",
+  "label": "slide-06-seed-starting-point-openai-minimal-restraint-graphic-000119",
+  "status": "archived",
+  "createdAt": "2026-04-03T03:58:30.365Z",
+  "sourceKind": "presentation-image-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/presentation-images/vox-adaptive-interviewer-clinician-grade-starting-point-2026-04-02/openai/version-06--minimal-restraint",
+    "output/figures/presentation-images/vox-adaptive-interviewer-clinician-grade-starting-point-2026-04-02/openai/version-06--minimal-restraint/image-01.png"
+  ],
+  "runId": "graphic-batch-000024",
+  "attempt": 6,
+  "sourceGraphicId": "graphic-000119",
+  "sourceBatchId": "graphic-batch-000024",
+  "sourceBatchSlug": "vox-adaptive-interviewer-clinician-grade-starting-point-2026-04-02",
+  "sourceProvider": "openai",
+  "sourceVariantId": "v03-minimal",
+  "sourceVariantLabel": "Minimal Restraint",
+  "sourcePath": "output/figures/presentation-images/vox-adaptive-interviewer-clinician-grade-starting-point-2026-04-02/openai/version-06--minimal-restraint",
+  "sourceImagePath": "output/figures/presentation-images/vox-adaptive-interviewer-clinician-grade-starting-point-2026-04-02/openai/version-06--minimal-restraint/image-01.png"
+}

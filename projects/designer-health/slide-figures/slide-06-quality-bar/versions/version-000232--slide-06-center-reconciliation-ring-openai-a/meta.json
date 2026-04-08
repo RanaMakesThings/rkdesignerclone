@@ -1,0 +1,7 @@
+{
+  "model": "gpt-5.4",
+  "images": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000222--slide-06-v220-thick-border-gemini-v1/preview.png"
+  ],
+  "maxOutputTokens": 6000
+}

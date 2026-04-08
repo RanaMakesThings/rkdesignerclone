@@ -1,0 +1,42 @@
+Create one premium 16:9 investor pitch-deck slide.
+
+Use a white or very light overall treatment and a quiet documentary-style
+clinical hallway or reception-corridor image as the context layer.
+
+Use this exact on-slide copy:
+
+Header:
+Current AI helps around the visit. Vox changes how the visit starts.
+
+Subheader:
+Most assistive AI reduces operational or documentation work. Vox gives the clinician a structured brief at the beginning of the visit.
+
+Main figure:
+Keep the photo calm and spacious. In the center, overlay one clear blue object
+labeled:
+Vox-prepared brief
+
+Inside that brief, imply these three short rows:
+- What matters
+- What happened when
+- What still needs confirmation
+
+At the left and right edges, add only a few quiet gray support labels such as:
+- scheduling
+- reminders
+- documentation support
+- note generation
+
+Optional small line near the center:
+Where clinical reasoning begins
+
+Visual rules:
+- no busy waiting room crowd
+- no dramatic lighting
+- no hero-photo energy
+- grayscale base with one restrained blue accent
+- the photo must support the brief object, not compete with it
+- no fake software overlay
+
+Overall feel:
+quiet, clinical, premium, and centered on the Vox brief as the decisive layer.

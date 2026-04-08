@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide 7 Hybrid Strip HTML v2</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
+
+      :root {
+        --bg: #ffffff;
+        --text: #121821;
+        --muted: #5d6876;
+        --line: rgba(24, 31, 40, 0.9);
+        --soft-line: rgba(24, 31, 40, 0.68);
+        --accent: #6c9490;
+        --chip: #5f6670;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Manrope", system-ui, sans-serif;
+        color: var(--text);
+      }
+
+      .figure {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 50% 4%, rgba(108, 148, 144, 0.08), transparent 33%),
+          linear-gradient(180deg, #ffffff 0%, #fafaf8 100%);
+      }
+
+      .storyboard {
+        position: absolute;
+        inset: 114px 122px 96px;
+      }
+
+      .guide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 74px;
+        pointer-events: none;
+      }
+
+      .before-visit {
+        position: absolute;
+        top: 18px;
+        left: 10px;
+        width: 1128px;
+        height: 34px;
+      }
+
+      .before-visit::before,
+      .before-visit::after {
+        content: "";
+        position: absolute;
+        top: 17px;
+        height: 2px;
+        background: var(--soft-line);
+      }
+
+      .before-visit::before {
+        left: 0;
+        right: calc(50% + 94px);
+        border-top-left-radius: 16px;
+      }
+
+      .before-visit::after {
+        left: calc(50% + 94px);
+        right: 0;
+        border-top-right-radius: 16px;
+      }
+
+      .before-visit span {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        padding: 0 18px;
+        background: rgba(255, 255, 255, 0.98);
+        font-family: "Space Grotesk", "Manrope", system-ui, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .visit-begins {
+        position: absolute;
+        top: 6px;
+        left: 1190px;
+        width: 220px;
+        text-align: center;
+        font-family: "Space Grotesk", "Manrope", system-ui, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .threshold {
+        position: absolute;
+        top: 4px;
+        left: 1182px;
+        width: 4px;
+        height: 338px;
+        border-radius: 999px;
+        background: rgba(108, 148, 144, 0.95);
+      }
+
+      .art-stage {
+        position: absolute;
+        top: 118px;
+        left: 0;
+        right: 0;
+        height: 360px;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .art-stage img {
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: saturate(0.99) contrast(1.01);
+      }
+
+      .baseline {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 350px;
+        height: 2px;
+        background: var(--line);
+      }
+
+      .beats {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: 15fr 22fr 33fr 20fr;
+        column-gap: 34px;
+      }
+
+      .beat {
+        position: relative;
+        padding-top: 38px;
+      }
+
+      .beat-number {
+        position: absolute;
+        top: -66px;
+        left: 0;
+        width: 56px;
+        height: 56px;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--chip);
+        color: #ffffff;
+        font-family: "Space Grotesk", "Manrope", system-ui, sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+      }
+
+      .beat h2 {
+        margin: 0 0 10px;
+        font-family: "Space Grotesk", "Manrope", system-ui, sans-serif;
+        font-size: 30px;
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+      }
+
+      .beat p {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.32;
+        color: var(--muted);
+      }
+
+      .beat--hero h2 {
+        color: #224144;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="figure">
+      <section class="storyboard">
+        <div class="guide">
+          <div class="before-visit"><span>Before visit</span></div>
+          <div class="threshold"></div>
+          <div class="visit-begins">Visit begins</div>
+        </div>
+
+        <div class="art-stage">
+          <img src="./strip-clean.png" alt="Slide 7 cleaned storyboard strip" />
+        </div>
+
+        <div class="baseline"></div>
+
+        <div class="beats">
+          <article class="beat">
+            <div class="beat-number">1</div>
+            <h2>Invite sent</h2>
+            <p>Patient receives secure pre-visit link.</p>
+          </article>
+          <article class="beat">
+            <div class="beat-number">2</div>
+            <h2>Adaptive interview</h2>
+            <p>Vox asks follow-up questions and captures the story.</p>
+          </article>
+          <article class="beat beat--hero">
+            <div class="beat-number">3</div>
+            <h2>Brief prepared</h2>
+            <p>Patient story becomes a clinician-ready handoff.</p>
+          </article>
+          <article class="beat">
+            <div class="beat-number">4</div>
+            <h2>Clinician starts prepared</h2>
+            <p>Sets up a more efficient visit.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

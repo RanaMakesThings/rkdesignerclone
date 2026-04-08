@@ -1,0 +1,20 @@
+{
+  "class": "blocked",
+  "numeric": 0.05,
+  "status": "blocked",
+  "outcome": "block",
+  "reason": "Regression review found a concrete blocker.",
+  "blockers": [
+    "Locked header/subheader rendering is visibly broken with overlapping duplicate text at the top",
+    "Body copy in the Build / Deploy / Validate cards is overlapped/clipped, making required content obviously wrong and hard to read",
+    "A visible broken-image placeholder appears in the bottom-right footer area, indicating an unresolved stub/object",
+    "Footer shell drifts from the baseline due to the stray bottom-right object disrupting the clean aligned footer/logo treatment",
+    "Locked subheader text is overprinted and partially hidden beneath the oversized header, making it unreadable on first scan",
+    "All three right-column milestone card body descriptions are clipped mid-sentence — content is visibly truncated",
+    "Use-of-funds ribbon text is merged/colliding — 'integratValidation' is a visible broken concatenation artifact",
+    "Footer Designer Health logo is a broken image placeholder, not the resolved lockup"
+  ],
+  "warnings": [
+    "Footer Logo drifted beyond semantic-stable threshold."
+  ]
+}

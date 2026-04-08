@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Vox – Quality Bar Slide</title>
+<style>
+  html, body {
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: #f7f9fc;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #162033;
+  }
+  .slide {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background:
+      radial-gradient(900px 520px at 18% 15%, rgba(96,166,175,0.12), rgba(96,166,175,0.00) 58%),
+      radial-gradient(700px 420px at 74% 72%, rgba(91,183,191,0.10), rgba(91,183,191,0.00) 55%),
+      linear-gradient(180deg, #fbfcfe 0%, #f7f9fc 100%);
+  }
+
+  .title {
+    position: absolute;
+    left: 108px;
+    top: 70px;
+    width: 1450px;
+    font-size: 63px;
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+    color: #161f31;
+  }
+  .title .accent { color: #2e99a3; }
+
+  .subtitle {
+    position: absolute;
+    left: 108px;
+    top: 292px;
+    width: 1440px;
+    font-size: 22px;
+    line-height: 1.46;
+    letter-spacing: -0.03em;
+    color: #5f6f87;
+    font-weight: 400;
+  }
+
+  .input-ribbon {
+    position: absolute;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    padding-left: 56px;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    color: #48556c;
+    font-weight: 500;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.76);
+    backdrop-filter: blur(2px);
+  }
+  .input-ribbon svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: visible;
+  }
+
+  .teal {
+    color: #166d78;
+    font-weight: 700;
+    background: rgba(228,247,247,0.82);
+  }
+
+  .chamber {
+    position: absolute;
+    left: 558px;
+    top: 409px;
+    width: 720px;
+    height: 525px;
+    border-radius: 39px;
+    background:
+      radial-gradient(360px 220px at 45% 58%, rgba(106,198,204,0.05), rgba(255,255,255,0) 72%),
+      linear-gradient(180deg, rgba(255,255,255,0.84), rgba(255,255,255,0.72));
+    border: 1.5px solid rgba(184,196,214,0.85);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.78),
+      0 26px 60px rgba(196,207,224,0.18);
+  }
+
+  .chamber-label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .vox-brand {
+    top: 40px;
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    color: #2f98a2;
+  }
+  .vox-sub {
+    top: 109px;
+    font-size: 18px;
+    color: #23314a;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+  }
+  .right-title {
+    position: absolute;
+    left: 446px;
+    top: 154px;
+    font-size: 26px;
+    letter-spacing: -0.04em;
+    color: #1f2a3d;
+    font-weight: 700;
+  }
+
+  .center-label {
+    position: absolute;
+    left: 153px;
+    top: 240px;
+    width: 130px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+    color: #23314a;
+    font-weight: 700;
+  }
+
+  .rail {
+    position: absolute;
+    left: 380px;
+    width: 260px;
+    height: 44px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.92);
+    border: 1px solid rgba(217,225,237,0.95);
+    box-shadow: 0 10px 20px rgba(201,212,226,0.16);
+    display: flex;
+    align-items: center;
+    padding-left: 34px;
+    box-sizing: border-box;
+    font-size: 18px;
+    line-height: 1.05;
+    color: #263245;
+    letter-spacing: -0.035em;
+    font-weight: 650;
+  }
+  .rail::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    width: 9px;
+    height: 9px;
+    background: #49aeb3;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(73,174,179,0.10);
+  }
+
+  .right-caption {
+    position: absolute;
+    left: 1459px;
+    top: 550px;
+    width: 320px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    color: #1a2436;
+    font-weight: 700;
+  }
+
+  .card-wrap {
+    position: absolute;
+    left: 1494px;
+    top: 601px;
+    width: 315px;
+    height: 322px;
+  }
+
+  .doc-card {
+    position: absolute;
+    right: 9px;
+    top: 0;
+    width: 280px;
+    height: 320px;
+    border-radius: 19px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(248,250,253,0.94));
+    border: 1px solid rgba(217,225,236,0.9);
+    box-shadow: 0 16px 40px rgba(173,184,200,0.18);
+  }
+
+  .binder {
+    position: absolute;
+    left: 0;
+    top: 19px;
+    width: 36px;
+    height: 210px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #2b8f98 0%, #246b75 100%);
+    box-shadow: 10px 16px 26px rgba(73,174,179,0.28);
+  }
+  .binder::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 18px;
+    width: 6px;
+    height: 174px;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.28);
+  }
+
+  .line {
+    position: absolute;
+    left: 24px;
+    height: 13px;
+    border-radius: 9px;
+    background: linear-gradient(90deg, #dfe5ee, #e7ebf2);
+  }
+  .divider {
+    position: absolute;
+    left: 24px;
+    width: 232px;
+    height: 1px;
+    background: #d2dbe7;
+  }
+
+  .soft-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="title">
+    <span class="accent">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.
+  </div>
+
+  <div class="subtitle">
+    Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br/>
+    By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br/>
+    what still needs verification before the visit begins.
+  </div>
+
+  <!-- Left ribbons -->
+  <div class="input-ribbon" style="left:118px; top:464px; width:408px;">
+    <svg width="408" height="62" viewBox="0 0 408 62" aria-hidden="true">
+      <path d="M2 1 H360 L406 32 L360 61 H2 L34 32 Z" fill="rgba(255,255,255,0.72)" stroke="#9fb1c7" stroke-width="2.5"/>
+    </svg>
+    My back has been hurting...
+  </div>
+
+  <div class="input-ribbon teal" style="left:136px; top:552px; width:386px;">
+    <svg width="386" height="62" viewBox="0 0 386 62" aria-hidden="true">
+      <path d="M2 1 H344 L384 32 L344 61 H2 L46 32 Z" fill="rgba(228,247,247,0.88)" stroke="#54afb4" stroke-width="2.5"/>
+    </svg>
+    Vox: What makes it worse?
+  </div>
+
+  <div class="input-ribbon" style="left:118px; top:640px; width:408px;">
+    <svg width="408" height="62" viewBox="0 0 408 62" aria-hidden="true">
+      <path d="M2 1 H360 L406 32 L360 61 H2 L34 32 Z" fill="rgba(255,255,255,0.72)" stroke="#9fb1c7" stroke-width="2.5"/>
+    </svg>
+    It's worse in the morning.
+  </div>
+
+  <div class="input-ribbon teal" style="left:136px; top:728px; width:386px;">
+    <svg width="386" height="62" viewBox="0 0 386 62" aria-hidden="true">
+      <path d="M2 1 H344 L384 32 L344 61 H2 L46 32 Z" fill="rgba(228,247,247,0.88)" stroke="#54afb4" stroke-width="2.5"/>
+    </svg>
+    Vox: When did this start?
+  </div>
+
+  <div class="input-ribbon" style="left:118px; top:816px; width:408px;">
+    <svg width="408" height="62" viewBox="0 0 408 62" aria-hidden="true">
+      <path d="M2 1 H360 L406 32 L360 61 H2 L34 32 Z" fill="rgba(255,255,255,0.72)" stroke="#9fb1c7" stroke-width="2.5"/>
+    </svg>
+    Started last Tuesday.
+  </div>
+
+  <!-- Main chamber -->
+  <div class="chamber">
+    <div class="chamber-label vox-brand">Vox</div>
+    <div class="chamber-label vox-sub">Adaptive clinical interviewer</div>
+    <div class="right-title">Clinical reasoning + medical knowledge</div>
+    <div class="center-label">Adaptive<br/>interview loop</div>
+
+    <!-- Prism / refractor object + internal rails + right-side outputs -->
+    <svg width="720" height="525" viewBox="0 0 720 525" style="position:absolute; left:0; top:0;">
+      <defs>
+        <linearGradient id="tealRail" x1="0" x2="1">
+          <stop offset="0%" stop-color="#bcebef" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#65bcc2" stop-opacity="0.92"/>
+        </linearGradient>
+        <linearGradient id="mutedRail" x1="0" x2="1">
+          <stop offset="0%" stop-color="#d4dee9" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#a4b7cb" stop-opacity="0.95"/>
+        </linearGradient>
+        <linearGradient id="prismFace" x1="0" x2="1">
+          <stop offset="0%" stop-color="#fbfeff"/>
+          <stop offset="100%" stop-color="#eef7f8"/>
+        </linearGradient>
+        <linearGradient id="prismEdge" x1="0" x2="1">
+          <stop offset="0%" stop-color="#79c3c8"/>
+          <stop offset="100%" stop-color="#2e98a3"/>
+        </linearGradient>
+        <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="12" result="b"/>
+          <feColorMatrix in="b" type="matrix"
+            values="1 0 0 0 0
+                    0 1 0 0 0.68
+                    0 0 1 0 0.72
+                    0 0 0 0.24 0"/>
+        </filter>
+        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#b7c8da" flood-opacity="0.28"/>
+        </filter>
+      </defs>
+
+      <!-- incoming story lines -->
+      <path d="M-28 89 C18 89, 52 163, 121 241" stroke="url(#mutedRail)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-38 88 C10 88, 52 163, 119 240" stroke="rgba(186,198,214,0.28)" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+      <path d="M-28 173 C27 173, 60 204, 122 250" stroke="url(#tealRail)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-38 173 C18 173, 58 206, 119 249" stroke="rgba(78,179,184,0.22)" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+      <path d="M-28 265 C30 265, 63 264, 121 266" stroke="url(#mutedRail)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-38 265 C17 265, 60 264, 119 266" stroke="rgba(186,198,214,0.28)" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+      <path d="M-28 352 C28 352, 64 312, 122 276" stroke="url(#tealRail)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-38 352 C20 352, 63 311, 119 277" stroke="rgba(78,179,184,0.22)" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+      <path d="M-28 440 C18 440, 54 361, 121 284" stroke="url(#mutedRail)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-38 440 C10 440, 52 361, 119 285" stroke="rgba(186,198,214,0.28)" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+      <!-- subtle convergence field -->
+      <ellipse cx="205" cy="263" rx="88" ry="88" fill="rgba(121,195,200,0.08)" filter="url(#glow)"/>
+
+      <!-- refractor prism -->
+      <g filter="url(#shadow)">
+        <path d="M173 226 L225 197 Q233 193 240 198 L278 225 Q286 231 286 240 L286 286 Q286 295 278 301 L240 328 Q233 333 225 329 L173 300 Q164 295 164 286 L164 240 Q164 231 173 226 Z"
+              fill="url(#prismFace)" stroke="rgba(139,162,181,0.18)" stroke-width="1.5"/>
+        <path d="M225 197 L240 198 L278 225 Q286 231 286 240 L286 286 Q286 295 278 301 L240 328 L225 329"
+              fill="rgba(111,197,202,0.16)"/>
+        <path d="M173 226 L225 197 Q233 193 240 198 L278 225 Q286 231 286 240 L286 286 Q286 295 278 301 L240 328 Q233 333 225 329 L173 300 Q164 295 164 286 L164 240 Q164 231 173 226 Z"
+              fill="none" stroke="url(#prismEdge)" stroke-width="3"/>
+        <path d="M225 197 L225 329" stroke="rgba(70,166,173,0.38)" stroke-width="2"/>
+        <path d="M240 198 L240 328" stroke="rgba(70,166,173,0.20)" stroke-width="1.5"/>
+      </g>
+
+      <!-- prism input notch -->
+      <path d="M164 250 L136 250" stroke="#4baeb4" stroke-width="10" stroke-linecap="round"/>
+      <path d="M164 276 L136 276" stroke="#4baeb4" stroke-width="10" stroke-linecap="round"/>
+
+      <!-- emerging disciplined rails -->
+      <path d="M286 248 C316 248, 329 190, 381 190" stroke="url(#tealRail)" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M286 263 C319 263, 333 263, 381 263" stroke="url(#tealRail)" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M286 278 C316 278, 329 338, 381 351" stroke="url(#tealRail)" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+      <path d="M286 248 C317 248, 332 190, 382 190" stroke="rgba(95,191,196,0.14)" stroke-width="16" fill="none" stroke-linecap="round"/>
+      <path d="M286 263 C318 263, 333 263, 382 263" stroke="rgba(95,191,196,0.12)" stroke-width="16" fill="none" stroke-linecap="round"/>
+      <path d="M286 278 C317 278, 332 338, 382 351" stroke="rgba(95,191,196,0.14)" stroke-width="16" fill="none" stroke-linecap="round"/>
+
+      <!-- faint wedge implying transformation -->
+      <path d="M304 232 L430 232" stroke="rgba(73,174,179,0.08)" stroke-width="3"/>
+      <path d="M304 264 L430 264" stroke="rgba(73,174,179,0.08)" stroke-width="3"/>
+      <path d="M304 296 L430 296" stroke="rgba(73,174,179,0.08)" stroke-width="3"/>
+    </svg>
+
+    <div class="rail" style="top:156px;">What matters</div>
+    <div class="rail" style="top:246px;">What connects</div>
+    <div class="rail" style="top:336px;">What still needs<br/>verification</div>
+  </div>
+
+  <!-- Right caption and card -->
+  <div class="right-caption">Clinician-grade starting point</div>
+
+  <div class="card-wrap">
+    <div class="binder"></div>
+    <div class="doc-card">
+      <div class="line" style="top:32px; width:105px;"></div>
+      <div class="line" style="top:61px; width:214px;"></div>
+      <div class="line" style="top:84px; width:150px;"></div>
+
+      <div class="divider" style="top:110px;"></div>
+
+      <div class="line" style="top:123px; width:105px;"></div>
+      <div class="line" style="top:151px; width:182px;"></div>
+      <div class="line" style="top:173px; width:214px;"></div>
+      <div class="line" style="top:196px; width:134px;"></div>
+
+      <div class="divider" style="top:223px;"></div>
+
+      <div class="line" style="top:236px; width:105px;"></div>
+      <div class="line" style="top:265px; width:147px;"></div>
+      <div class="line" style="top:286px; width:180px;"></div>
+    </div>
+  </div>
+
+  <!-- Full-slide connective lines -->
+  <svg class="soft-glow" width="1920" height="1080" viewBox="0 0 1920 1080" aria-hidden="true">
+    <defs>
+      <linearGradient id="flowTeal" x1="0" x2="1">
+        <stop offset="0%" stop-color="#8bd3d7" stop-opacity="0.48"/>
+        <stop offset="100%" stop-color="#5bb7bd" stop-opacity="0.62"/>
+      </linearGradient>
+      <filter id="softBlur" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="9"/>
+      </filter>
+      <linearGradient id="wedgeFill" x1="0" x2="1">
+        <stop offset="0%" stop-color="#6cc0c5" stop-opacity="0.30"/>
+        <stop offset="100%" stop-color="#2f99a3" stop-opacity="0.20"/>
+      </linearGradient>
+    </defs>
+
+    <!-- left-to-chamber connectors -->
+    <path d="M523 495 C574 495, 624 634, 680 648" stroke="#a8b9cc" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M523 585 C577 585, 621 631, 680 652" stroke="#4fb1b6" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M523 673 C579 673, 622 674, 680 672" stroke="#a8b9cc" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M523 761 C576 761, 620 714, 680 683" stroke="#4fb1b6" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M523 848 C574 848, 623 713, 680 706" stroke="#a8b9cc" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+    <path d="M523 495 C574 495, 624 634, 680 648" stroke="rgba(173,186,201,0.22)" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <path d="M523 585 C577 585, 621 631, 680 652" stroke="rgba(79,177,182,0.18)" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <path d="M523 673 C579 673, 622 674, 680 672" stroke="rgba(173,186,201,0.22)" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <path d="M523 761 C576 761, 620 714, 680 683" stroke="rgba(79,177,182,0.18)" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <path d="M523 848 C574 848, 623 713, 680 706" stroke="rgba(173,186,201,0.22)" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+    <!-- chamber to final card -->
+    <path d="M1277 602 C1354 623, 1377 676, 1498 678" stroke="url(#flowTeal)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M1277 680 C1354 680, 1395 680, 1498 678" stroke="url(#flowTeal)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M1277 758 C1354 738, 1390 689, 1498 678" stroke="url(#flowTeal)" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+    <path d="M1277 602 C1354 623, 1377 676, 1498 678" stroke="rgba(100,192,198,0.16)" stroke-width="16" fill="none" stroke-linecap="round" filter="url(#softBlur)"/>
+    <path d="M1277 680 C1354 680, 1395 680, 1498 678" stroke="rgba(100,192,198,0.15)" stroke-width="16" fill="none" stroke-linecap="round" filter="url(#softBlur)"/>
+    <path d="M

@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "blockers": [],
+  "warnings": [
+    "Footer Logo drifted beyond semantic-stable threshold."
+  ],
+  "summary": "Prefilter passed with warnings. Footer Logo drifted beyond semantic-stable threshold.",
+  "staticSanity": {
+    "ok": true,
+    "summary": "No static sanity issues detected before render.",
+    "blockers": []
+  },
+  "contract": {
+    "hasHtml": true,
+    "hasRenderableHtml": true,
+    "htmlExists": true,
+    "previewExists": true
+  },
+  "lockedRegions": {
+    "ok": true,
+    "violations": [],
+    "warnings": [
+      {
+        "id": "footer-logo",
+        "label": "Footer Logo",
+        "freezeLevel": "semantic-stable",
+        "x": 1692,
+        "y": 962,
+        "width": 114,
+        "height": 59,
+        "mismatchedPixels": 1536,
+        "totalPixels": 6726,
+        "diffRatio": 0.22836752899197146,
+        "threshold": 0.05,
+        "outcome": "warn",
+        "note": "Keep the official Designer footer logo aligned to the shell."
+      }
+    ],
+    "summary": "Footer Logo: warn (22.84% changed, threshold 5.00%)"
+  }
+}

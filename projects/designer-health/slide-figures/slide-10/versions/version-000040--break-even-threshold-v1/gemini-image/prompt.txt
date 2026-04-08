@@ -1,0 +1,42 @@
+You are designing ONE investor-deck slide figure.
+
+This is Slide 10 in the Designer Health deck.
+
+Header:
+Recovered visit time creates real capacity.
+
+Subheader:
+When recovered minutes become completed visits, the impact is meaningful.
+
+Strategic job:
+Frame the economics around the practical monthly break-even threshold without
+losing the annual capacity story.
+
+Use these exact anchors:
+- ~$917 / month break-even spend / provider
+- +1 visit / provider / day
+- $11,000 / year
+- 220 clinic days
+- $125 / visit
+- 40% contribution margin
+
+Direction:
+- one dominant threshold object
+- the monthly break-even number should dominate first
+- the annual contribution and one-added-visit logic must still be clearly visible
+- assumptions should stay quiet
+- any range check must be tiny and subordinate
+
+Style:
+- premium investor-deck feel
+- quiet white background
+- restrained green accent
+- clean editorial composition
+
+Do not:
+- turn this into the pricing slide
+- hide the annual economics
+- use a spreadsheet table
+- use dashboard chrome
+
+Produce ONE strong static slide concept.

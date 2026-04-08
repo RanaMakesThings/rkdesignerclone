@@ -1,0 +1,36 @@
+{
+  "requestedChange": "Create a finished Designer deck slide from the seeded blank template.\n\nSlide id: slide-13\nLane: html\nSlide title: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment\nLocked header: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment\nLocked subheader: Post-money SAFE • ~18–20 months of runway\nAudience should leave believing: This is a finite, milestone-based raise tied to proof-stage deployment.\nCore claim: This is a finite, milestone-based raise tied to proof-stage deployment.\nSlide job: close with a disciplined proof-stage ask\nFigure burden: surface the ask first, then show what the round unlocks\nFigure logic: Use one integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.\nBuild status: create workflow underway from the April 5, 2026 ask build spec\n\nLocked spec guidance:\n### Current official read\n\n**Slide job**\nThis is the closing ask slide. It should turn the deck into a finite proof-stage financing plan rather than a generic raise page.\n\n**Core claim**\n**The ask is disciplined, milestone-based, and sized to prove the next stage of deployment.**\n\n**What this slide must make the audience believe**\n**$1.25M on a post-money SAFE funds the hires, pilots, runway, and validation needed to establish repeatable deployment.**\n\n**Current preferred header**\n**Raising $1.25M to launch pilots, prove value, and establish repeatable deployment**\n\n**Current preferred subheader**\n**Post-money SAFE • ~18–20 months of runway**\n\n**Current preferred figure logic**\nA single integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.\n\n### Preserved strategic discussion\n\nThe slide should surface the ask on first scan, then show exactly what the round unlocks. It should feel like a clean conversion slide: thesis translated into financing logic.\n\nKeep the left side focused on the amount, instrument, and support stats (`2 core hires`, `3 pilot sites`, `18–20 months`). Keep the right side focused on outcome-first milestone cards, not generic startup activity. Keep the bottom ribbon quieter than the milestone logic.\n\nThis slide must avoid:\n- spreadsheet or payroll memo energy\n- generic build / scale / go-to-market language\n- decorative icons or illustration\n- use-of-funds detail that overpowers the milestones\n\nPreferred visual treatment:\n- soft gray field with calm white card surfaces\n- restrained shadow and rounded corners\n- one muted blue accent family only\n- premium, clinically serious late-deck tone\n\nFallback only if needed: convert the right column into a horizontal three-card strip if the stacked milestone column becomes crowded.\n\n**One-line test**\n**This feels like funding a concrete proof plan, not funding hope.**\n\n---\n\nExisting slide note excerpt:\n# Slide 13 — The Ask",
+  "successChecks": "- The slide is fully resolved and presentation-ready.\n- No template placeholders remain.\n- The header reads: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment\n- The subheader reads: Post-money SAFE • ~18–20 months of runway\n- The figure visibly carries the specified burden.\n- The slide stays inside the locked Designer shell contract.\n- The footer rule and footer logo remain aligned with the shell.\n- The slide feels in-family with the adjacent official slides.",
+  "guardrails": "- preserve the white Designer shell\n- preserve the footer rule and footer logo\n- do not leave the figure stub or placeholder copy visible\n- do not turn the slide into a browser page, app UI, or card grid unless the brief explicitly requires it\n- do not weaken the locked slide claim",
+  "approvedRegions": [
+    {
+      "id": "footer-rule",
+      "label": "Footer Rule",
+      "shape": "rect",
+      "x": 112,
+      "y": 992,
+      "width": 1536,
+      "height": 4,
+      "freezeLevel": "pixel-strict",
+      "note": "Preserve the thin footer divider rule from the locked Designer shell."
+    },
+    {
+      "id": "footer-logo",
+      "label": "Footer Logo",
+      "shape": "rect",
+      "x": 1692,
+      "y": 962,
+      "width": 114,
+      "height": 59,
+      "freezeLevel": "semantic-stable",
+      "note": "Keep the official Designer footer logo aligned to the shell."
+    }
+  ],
+  "approvedRegionsPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/create/shell-regions.json",
+  "referenceIntent": "- Adjacent slide previews are for deck continuity only.\n- Optional reference images are for style or composition cues, not for literal copying unless explicitly stated.\n- Supplemental reference files are summarized above and may clarify slide intent.",
+  "stopIf": "- the request actually needs a new slide concept rather than execution\n- the brief is missing core copy needed to build the slide\n- the best candidate still conflicts with the locked slide job after repeated rounds",
+  "requiredTextSnippets": [
+    "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+    "Post-money SAFE • ~18–20 months of runway"
+  ]
+}

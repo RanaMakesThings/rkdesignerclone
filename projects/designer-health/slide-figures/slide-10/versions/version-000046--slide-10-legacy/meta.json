@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-03-29T22:21:09.056Z",
+  "slug": "slide-10-hero-metrics",
+  "family": "hero_metric_with_scenarios",
+  "deckId": "vox-pd-v1",
+  "theme": "vox",
+  "mode": "full-slide",
+  "title": "Recovered visit time creates real capacity.",
+  "subtitle": "When recovered minutes become completed visits, the impact is meaningful.",
+  "specPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-10-hero-metrics.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy/figure.html",
+    "svg": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy/figure.svg",
+    "png": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10-legacy/render-assets.json"
+  },
+  "selectedMedia": []
+}

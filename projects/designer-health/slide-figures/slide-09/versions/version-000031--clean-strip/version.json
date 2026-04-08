@@ -1,0 +1,14 @@
+{
+  "id": "version-000031",
+  "slideId": "slide-09",
+  "slideDir": "projects/designer-health/slide-figures/slide-09",
+  "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000031--clean-strip",
+  "label": "clean-strip",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.690Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-09/clean-strip"
+  ]
+}

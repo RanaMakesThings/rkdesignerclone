@@ -1,0 +1,190 @@
+.graphicsSection {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 28px;
+  border: 1px solid rgba(21, 44, 39, 0.12);
+  background: rgba(250, 251, 247, 0.82);
+  box-shadow: 0 24px 60px rgba(17, 32, 29, 0.08);
+}
+
+.graphicsCardGrid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+.graphicsCard {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 24px;
+  border: 1px solid rgba(21, 44, 39, 0.1);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(246, 248, 243, 0.92));
+  content-visibility: auto;
+  contain-intrinsic-size: 420px;
+}
+
+.graphicsGraphicCard {
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.graphicsCardCurrent {
+  border-color: rgba(83, 156, 140, 0.28);
+  background: linear-gradient(180deg, rgba(245, 250, 248, 0.96), rgba(242, 247, 245, 0.92));
+}
+
+.graphicsCardPreview {
+  min-height: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(21, 44, 39, 0.1);
+  background: var(--paper-strong);
+}
+
+.graphicsGraphicCard .graphicsCardPreview {
+  min-height: 280px;
+  border: 0;
+  border-radius: 0;
+  background: #0f1417;
+}
+
+.graphicsCardPreview :global(.lightbox-trigger) {
+  display: block;
+  height: 100%;
+}
+
+.graphicsCardPreview :global(img) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+}
+
+.graphicsGraphicCardFooter {
+  display: grid;
+  gap: 8px;
+  padding: 16px 18px 18px;
+}
+
+.graphicsGraphicCardMeta {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.graphicsGraphicCardMeta h3 {
+  line-height: 1;
+}
+
+.graphicsGraphicCardCreated {
+  display: grid;
+  gap: 4px;
+  justify-items: end;
+  text-align: right;
+  color: rgba(21, 44, 39, 0.84);
+}
+
+.graphicsCardCopy,
+.graphicsCardHead,
+.graphicsAssetStack {
+  display: grid;
+  gap: 12px;
+}
+
+.graphicsCardHead {
+  align-items: start;
+}
+
+.graphicsCardHead h3 {
+  line-height: 1.08;
+}
+
+.graphicsMetaRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 2px;
+  color: rgba(21, 44, 39, 0.86);
+}
+
+.graphicsMetaLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(21, 44, 39, 0.52);
+}
+
+.graphicsDetails {
+  margin-top: 2px;
+  border-top: 1px solid rgba(21, 44, 39, 0.08);
+  padding-top: 12px;
+}
+
+.graphicsDetailsSummary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(21, 44, 39, 0.68);
+}
+
+.graphicsDetailsSummary::-webkit-details-marker {
+  display: none;
+}
+
+.graphicsDetailsSummary::after {
+  content: "+";
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+.graphicsDetails[open] .graphicsDetailsSummary::after {
+  content: "−";
+}
+
+.graphicsDetailsBody {
+  display: grid;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.graphicsAssetContext {
+  display: grid;
+  gap: 4px;
+  padding: 0 4px;
+}
+
+.graphicsAssetContext strong {
+  color: var(--ink);
+}
+
+@media (max-width: 1100px) {
+  .graphicsCardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .graphicsSection {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .graphicsGraphicCardMeta {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .graphicsGraphicCardCreated {
+    justify-items: start;
+    text-align: left;
+  }
+}

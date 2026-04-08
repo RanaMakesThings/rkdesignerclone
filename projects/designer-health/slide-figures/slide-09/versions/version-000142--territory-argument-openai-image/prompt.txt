@@ -1,0 +1,64 @@
+Generate a premium 16:9 investor-deck slide image.
+
+Use the two provided reference images as the required evidence images for the
+slide.
+Preserve their composition and framing as much as the image model allows.
+Do not invent a new concept family.
+
+The slide should feel like headline plus two territory arguments, with images
+as supporting evidence.
+
+Right image path:
+/Users/kabeer/Desktop/757B1C3E-6121-4432-8524-C7BDE4EE6722.png
+
+Left image path:
+/Users/kabeer/Desktop/4FAA88B9-3C54-4321-B182-C8DB4ED0A963.png
+
+Exact copy:
+- headline:
+  `AI has traction after the visit. The visit itself is still thinly served.`
+- left kicker:
+  `AI impact after the visit`
+- left statement:
+  `Ambient scribes validate clinician buy-in for AI assistance.`
+- right kicker:
+  `AI impact during the visit`
+- right statement:
+  `Few tools actually change how the encounter is conducted. Vox does.`
+- left density caption:
+  `More crowded`
+- right density caption:
+  `Still thin`
+
+Composition:
+- top band for headline only
+- lower band is two columns
+- left column about 43 percent
+- right column about 57 percent
+- right column slightly more important
+- each panel is:
+  kicker, statement, smaller image, density caption, tiny density marker
+- the statements should visually dominate the images
+- the images should feel smaller and subordinate
+- avoid big white cards or obvious modules
+
+Density markers:
+- left:
+  compact gray cluster of 6 to 8 tiny nodes or bars
+- right:
+  one blue VOX marker plus one or two faint ghost markers, with lots of space
+- do not use chip tags or text pills
+
+Style:
+- premium editorial slide
+- white or warm-white background
+- restrained grayscale
+- one blue accent only
+- images can be softened slightly to push the eye toward the words
+
+Avoid:
+- cropping the reference images
+- subheaders
+- center diagrams
+- workflow arrows
+- giant card modules

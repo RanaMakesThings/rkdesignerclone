@@ -1,0 +1,22 @@
+Generate a self-contained 1920x1080 HTML pitch-deck slide mockup for Vox.
+
+Purpose:
+Show that the story-reconstruction portion of each visit becomes smaller with AI-assisted prep, and the recovered time accumulates into one additional visit.
+
+Constraints:
+- Inline CSS and inline SVG only
+- Premium editorial deck design, not app UI
+- No cluttered legend
+- Avoid implying rushed care; preserve physical exam and counseling widths
+- Headline: More efficient visits will increase supply.
+- Subheader: Small per-visit gains compound.
+
+This variant should focus on banked time:
+- Show a current row of five visits
+- Show an optimized row with smaller blue story-reconstruction segments
+- Represent the removed blue time as dashed outlines, extracted slivers, or pooled fragments
+- Make those saved fragments visibly combine into one full additional visit block
+- Use minimal arrows or connectors only if necessary for clarity
+- Keep the slide elegant and high-end
+
+Prioritize showing where the time comes from and where it goes.

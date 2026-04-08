@@ -1,0 +1,23 @@
+{
+  "provider": "gpt",
+  "verdict": "blocker",
+  "rationale": "The candidate is not clean: the locked header/subheader are visibly broken by overlap, the bottom-right footer/logo shell is corrupted with a missing-image placeholder, and the content appears clipped/stacked in ways that make required copy unreadable. These are concrete visible regressions versus the baseline/family cues.",
+  "blockers": [
+    "Locked subheader overlaps the headline and is not cleanly readable/aligned.",
+    "Bottom-right footer/logo shell is broken and replaced by a visible missing-image placeholder.",
+    "Lower content is clipped/stacked into the bottom ribbon area, causing required copy in the Validate/use-of-funds region to be cut off.",
+    "Slide reads as a malformed render rather than a resolved in-family closing ask slide."
+  ],
+  "nextMove": "Fix the layout/render constraints first: restore a working footer/logo asset, separate header and subheader with proper spacing, and reflow the master card so the bottom ribbon and Validate section fit fully within the slide without clipping.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate is not clean: the locked header/subheader are visibly broken by overlap, the bottom-right footer/logo shell is corrupted with a missing-image placeholder, and the content appears clipped/stacked in ways that make required copy unreadable. These are concrete visible regressions versus the baseline/family cues.",
+    "blockers": [
+      "Locked subheader overlaps the headline and is not cleanly readable/aligned.",
+      "Bottom-right footer/logo shell is broken and replaced by a visible missing-image placeholder.",
+      "Lower content is clipped/stacked into the bottom ribbon area, causing required copy in the Validate/use-of-funds region to be cut off.",
+      "Slide reads as a malformed render rather than a resolved in-family closing ask slide."
+    ],
+    "nextMove": "Fix the layout/render constraints first: restore a working footer/logo asset, separate header and subheader with proper spacing, and reflow the master card so the bottom ribbon and Validate section fit fully within the slide without clipping."
+  }
+}

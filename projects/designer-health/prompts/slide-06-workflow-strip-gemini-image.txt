@@ -1,0 +1,48 @@
+Create one premium 16:9 investor pitch-deck slide on a white background.
+
+Use this exact on-slide copy:
+
+Header:
+Vox prepares the visit before it starts.
+
+Subheader:
+Vox interviews, structures, and hands off a brief the clinician can verify and use.
+
+Main figure:
+Show one calm horizontal four-step workflow strip across the middle of the
+slide with evenly weighted rounded stages:
+Invite → Interview → Structure → Verify
+
+The figure should feel operationally credible, but not like enterprise process
+software.
+
+Visual rules:
+- white background
+- grayscale base
+- one restrained blue accent
+- rounded geometry
+- clean sans typography
+- subtle connectors only
+- no swimlanes
+- no thick arrows
+- no fake UI chrome
+- no dense captions
+
+What each stage should imply:
+- Invite: patient receives a secure pre-visit prompt
+- Interview: adaptive interview captures the story in natural language
+- Structure: Vox turns the story into a structured brief
+- Verify: clinician scans, verifies, and uses the brief
+
+Make `Structure` the visual star, but do not make it huge or billboard-like.
+Inside the later stages, include only a small amount of micro-structure so the
+workflow feels tangible.
+
+Include these small trust tags only near the later stages:
+- provenance
+- explicit unknowns
+- verification queue
+
+Overall feel:
+calm, editorial, premium, obvious at a glance, and consistent with a modern
+pitch deck rather than a product mockup.

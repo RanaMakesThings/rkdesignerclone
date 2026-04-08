@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "figures/assessment.schema.json",
+  "title": "Figure Assessment",
+  "type": "object",
+  "$defs": {
+    "nullableScore": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 10
+    },
+    "scoreCategories": {
+      "type": "object",
+      "required": [
+        "specFidelity",
+        "focalHierarchy",
+        "conceptualClarity",
+        "deckConsistency",
+        "restraintPolish",
+        "readabilityAtSlideScale"
+      ],
+      "properties": {
+        "specFidelity": {
+          "$ref": "#/$defs/nullableScore"
+        },
+        "focalHierarchy": {
+          "$ref": "#/$defs/nullableScore"
+        },
+        "conceptualClarity": {
+          "$ref": "#/$defs/nullableScore"
+        },
+        "deckConsistency": {
+          "$ref": "#/$defs/nullableScore"
+        },
+        "restraintPolish": {
+          "$ref": "#/$defs/nullableScore"
+        },
+        "readabilityAtSlideScale": {
+          "$ref": "#/$defs/nullableScore"
+        }
+      },
+      "additionalProperties": true
+    },
+    "scoreBlock": {
+      "type": "object",
+      "required": ["overall", "categories"],
+      "properties": {
+        "overall": {
+          "$ref": "#/$defs/nullableScore"
+        },
+        "categories": {
+          "$ref": "#/$defs/scoreCategories"
+        }
+      },
+      "additionalProperties": true
+    },
+    "issueObject": {
+      "type": "object",
+      "required": ["message"],
+      "properties": {
+        "severity": {
+          "type": "string",
+          "enum": ["critical", "major", "minor", "info"]
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recommendation": {
+          "type": "string"
+        },
+        "blocking": {
+          "type": "boolean"
+        },
+        "evidencePaths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "issueEntry": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/issueObject"
+        }
+      ]
+    }
+  },
+  "required": [
+    "timestamp",
+    "slug",
+    "family",
+    "summary",
+    "issues",
+    "scores",
+    "suggestedUpgrades",
+    "pass"
+  ],
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "family": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provider": {
+      "type": "string"
+    },
+    "policyPath": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/issueEntry"
+      }
+    },
+    "scores": {
+      "$ref": "#/$defs/scoreBlock"
+    },
+    "suggestedUpgrades": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "pass": {
+      "type": ["boolean", "null"]
+    }
+  },
+  "additionalProperties": true
+}

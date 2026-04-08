@@ -1,0 +1,14 @@
+{
+  "id": "version-000073",
+  "slideId": "slide-03",
+  "slideDir": "projects/designer-health/slide-figures/slide-03",
+  "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000073--segmented-focus-bar-native",
+  "label": "segmented-focus-bar-native",
+  "status": "archived",
+  "createdAt": "2026-03-31T21:13:43.049Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/slide-03-segmented-focus-bar"
+  ]
+}

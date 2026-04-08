@@ -1,0 +1,18 @@
+{
+  "class": "blocked",
+  "numeric": 0.05,
+  "status": "blocked",
+  "outcome": "block",
+  "reason": "Regression review found a concrete blocker.",
+  "blockers": [
+    "Locked header and subheader are visibly overlapping, making the top copy look broken and partially unreadable",
+    "A broken image/placeholder box is visible at the bottom-right instead of a resolved asset or clean footer area",
+    "Lower-left stat tiles/body copy are clipped/truncated inside the main card, so required support stats are not cleanly readable",
+    "Subheader 'Post-money SAFE • ~18–20 months of runway' is clipped and partially hidden behind the oversized header text block",
+    "Footer Designer Health logo is a broken image placeholder — lockup has not resolved",
+    "Left hero stat-row label text (core hires, pilot sites, months of runway descriptors) is clipped at the bottom of the card and not fully visible"
+  ],
+  "warnings": [
+    "Footer Logo drifted beyond semantic-stable threshold."
+  ]
+}

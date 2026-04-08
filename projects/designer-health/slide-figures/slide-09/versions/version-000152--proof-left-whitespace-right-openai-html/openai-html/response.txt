@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Investor Deck Slide</title>
+<style>
+  :root{
+    --bg:#f7f4ee;
+    --paper:#fbfaf7;
+    --ink:#171717;
+    --muted:#6c6a66;
+    --soft:#bdb8b0;
+    --line:#ddd7ce;
+    --line2:#e9e4dc;
+    --blue:#2f6df6;
+  }
+  *{box-sizing:border-box}
+  html,body{
+    width:1920px;
+    height:1080px;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background:var(--bg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    color:var(--ink);
+  }
+  .slide{
+    position:relative;
+    width:1920px;
+    height:1080px;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(255,255,255,.75), rgba(255,255,255,0) 28%),
+      radial-gradient(circle at 82% 16%, rgba(255,255,255,.5), rgba(255,255,255,0) 26%),
+      linear-gradient(180deg, #faf8f3 0%, #f6f3ed 100%);
+  }
+
+  .top{
+    position:absolute;
+    left:92px;
+    right:92px;
+    top:56px;
+    height:174px;
+    border-top:1px solid rgba(23,23,23,.05);
+    padding-top:34px;
+  }
+  .headline{
+    max-width:1280px;
+    font-size:58px;
+    line-height:1.08;
+    font-weight:500;
+    letter-spacing:-0.03em;
+    color:#111;
+  }
+
+  .content{
+    position:absolute;
+    left:92px;
+    right:92px;
+    top:250px;
+    bottom:70px;
+    display:grid;
+    grid-template-columns: 0.9fr 1.5fr;
+    column-gap:68px;
+  }
+
+  .leftCol,.rightCol{
+    position:relative;
+    height:100%;
+  }
+
+  .kicker{
+    font-size:16px;
+    line-height:1;
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    color:var(--muted);
+    margin-bottom:18px;
+    font-weight:600;
+  }
+  .statement{
+    font-size:33px;
+    line-height:1.2;
+    letter-spacing:-0.025em;
+    color:#171717;
+    font-weight:450;
+  }
+
+  .leftText{
+    width:520px;
+    margin-bottom:30px;
+  }
+
+  .rightText{
+    width:760px;
+    margin-bottom:36px;
+  }
+
+  .proofWrap{
+    position:relative;
+    width:540px;
+    height:410px;
+    border-radius:22px;
+    background:rgba(255,255,255,.5);
+    border:1px solid rgba(23,23,23,.06);
+    box-shadow:
+      0 12px 30px rgba(0,0,0,.04),
+      inset 0 1px 0 rgba(255,255,255,.7);
+    padding:18px;
+  }
+
+  .proofImg{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:contain;
+    border-radius:14px;
+    background:#f5f2ec;
+  }
+
+  .crowdedField{
+    position:absolute;
+    left:0;
+    right:24px;
+    bottom:0;
+    height:180px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:14px;
+    align-items:end;
+  }
+  .mini{
+    position:relative;
+    height:150px;
+    border-radius:16px;
+    background:rgba(255,255,255,.4);
+    border:1px solid rgba(23,23,23,.055);
+    overflow:hidden;
+  }
+  .mini.tall{height:172px}
+  .mini.short{height:132px}
+  .mini svg{width:100%;height:100%;display:block}
+
+  .rightPanel{
+    position:relative;
+    width:100%;
+    height:100%;
+  }
+
+  .openField{
+    position:absolute;
+    left:0;
+    right:0;
+    top:132px;
+    bottom:0;
+    border-radius:34px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,.08)),
+      radial-gradient(circle at 72% 36%, rgba(255,255,255,.72), rgba(255,255,255,0) 30%);
+    border:1px solid rgba(23,23,23,.05);
+    overflow:hidden;
+  }
+
+  .encounterCue{
+    position:absolute;
+    right:120px;
+    top:120px;
+    width:700px;
+    height:500px;
+    opacity:.15;
+    filter:grayscale(1);
+  }
+
+  .voxMarker{
+    position:absolute;
+    left:160px;
+    top:310px;
+    width:370px;
+    height:180px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+  }
+
+  .voxDot{
+    width:16px;
+    height:16px;
+    background:var(--blue);
+    border-radius:50%;
+    box-shadow:0 0 0 8px rgba(47,109,246,.09);
+    margin-right:18px;
+    flex:0 0 auto;
+  }
+
+  .voxLabel{
+    font-size:72px;
+    line-height:1;
+    font-weight:650;
+    letter-spacing:-0.05em;
+    color:var(--blue);
+  }
+
+  .softGrid{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+  }
+
+  .rightNote{
+    position:absolute;
+    left:160px;
+    top:408px;
+    width:470px;
+    font-size:18px;
+    line-height:1.45;
+    color:rgba(23,23,23,.42);
+    letter-spacing:-0.01em;
+  }
+
+  .leftUnderline,
+  .rightUnderline{
+    width:72px;
+    height:2px;
+    background:#1e1e1e;
+    opacity:.18;
+    margin-top:24px;
+  }
+
+  .cornerWash{
+    position:absolute;
+    right:-40px;
+    bottom:-40px;
+    width:520px;
+    height:320px;
+    background:radial-gradient(circle at 40% 40%, rgba(47,109,246,.04), rgba(47,109,246,0) 62%);
+    pointer-events:none;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="top">
+      <div class="headline">AI has traction after the visit. The visit itself is still thinly served.</div>
+    </div>
+
+    <div class="content">
+      <div class="leftCol">
+        <div class="leftText">
+          <div class="kicker">AI impact after the visit</div>
+          <div class="statement">Ambient scribes validate clinician buy-in for AI assistance.</div>
+          <div class="leftUnderline"></div>
+        </div>
+
+        <div class="proofWrap">
+          <img class="proofImg" src="/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-doc-admin-slide7-v113-batch-b/openai/version-06--minimal-restraint/image-01.png" alt="Clinician working at dual monitors documenting care" />
+        </div>
+
+        <div class="crowdedField">
+          <div class="mini tall">
+            <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+              <rect x="16" y="18" width="168" height="224" rx="14" fill="#fbfaf7"/>
+              <circle cx="48" cy="52" r="18" fill="#d2cdc5"/>
+              <rect x="78" y="37" width="74" height="10" rx="5" fill="#c9c3bb"/>
+              <rect x="78" y="57" width="92" height="8" rx="4" fill="#d6d1ca"/>
+              <rect x="34" y="92" width="132" height="8" rx="4" fill="#cdc7c0"/>
+              <rect x="34" y="112" width="110" height="8" rx="4" fill="#dbd6cf"/>
+              <rect x="34" y="142" width="132" height="56" rx="8" fill="#f1eee8" stroke="#d9d4cc"/>
+              <rect x="48" y="156" width="36" height="8" rx="4" fill="#bfc8d5"/>
+              <rect x="92" y="156" width="48" height="8" rx="4" fill="#d4cfc7"/>
+              <rect x="48" y="174" width="92" height="8" rx="4" fill="#cbc5bd"/>
+              <rect x="34" y="212" width="132" height="16" rx="6" fill="#e8e3db"/>
+            </svg>
+          </div>
+          <div class="mini short">
+            <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="24" width="160" height="44" rx="10" fill="#d9d4cc"/>
+              <rect x="20" y="82" width="160" height="16" rx="6" fill="#e7e2da"/>
+              <rect x="20" y="110" width="140" height="16" rx="6" fill="#d0cac2"/>
+              <rect x="20" y="138" width="150" height="16" rx="6" fill="#c4beb6"/>
+              <rect x="20" y="172" width="54" height="54" rx="10" fill="#d8d2ca"/>
+              <rect x="84" y="172" width="96" height="14" rx="6" fill="#c8c1b9"/>
+              <rect x="84" y="194" width="80" height="12" rx="6" fill="#d7d1c9"/>
+            </svg>
+          </div>
+          <div class="mini">
+            <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+              <rect x="18" y="22" width="164" height="216" rx="14" fill="#fbfaf7"/>
+              <rect x="34" y="42" width="132" height="12" rx="6" fill="#cbc5bd"/>
+              <rect x="34" y="72" width="132" height="86" rx="12" fill="#efebe4" stroke="#d8d3cb"/>
+              <rect x="50" y="90" width="38" height="10" rx="5" fill="#c7c1b9"/>
+              <rect x="96" y="90" width="52" height="10" rx="5" fill="#bfc8d5"/>
+              <rect x="50" y="110" width="84" height="10" rx="5" fill="#d2ccc4"/>
+              <rect x="34" y="174" width="56" height="16" rx="6" fill="#d7d1c9"/>
+              <rect x="98" y="174" width="68" height="16" rx="6" fill="#c9c3bb"/>
+              <rect x="34" y="202" width="132" height="16" rx="6" fill="#e8e3db"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="rightCol">
+        <div class="rightText">
+          <div class="kicker">AI impact during the visit</div>
+          <div class="statement">Few tools actually change how the encounter is conducted. Vox does.</div>
+          <div class="rightUnderline"></div>
+        </div>
+
+        <div class="rightPanel">
+          <div class="openField">
+            <img class="encounterCue" src="/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-encounter-slide7-v113-batch/openai/version-05--bold-contrast/image-01.png" alt="Clinician speaking with patient during encounter" />
+            <div class="softGrid">
+              <svg viewBox="0 0 1100 650" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="80" y1="170" x2="1020" y2="170" stroke="#e6e0d7" stroke-width="1"/>
+                <line x1="80" y1="470" x2="1020" y2="470" stroke="#ece7df" stroke-width="1"/>
+                <line x1="780" y1="110" x2="780" y2="560" stroke="#eee9e1" stroke-width="1"/>
+              </svg>
+            </div>
+
+            <div class="voxMarker">
+              <div class="voxDot"></div>
+              <div class="voxLabel">VOX</div>
+            </div>
+
+            <div class="rightNote">A large whitespace remains inside the live encounter itself—where workflow, attention, and conversation are still largely unchanged.</div>
+            <div class="cornerWash"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

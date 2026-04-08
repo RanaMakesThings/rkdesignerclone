@@ -1,0 +1,249 @@
+{
+  "slideId": "slide-03",
+  "slideDir": "projects/designer-health/slide-figures/slide-03",
+  "currentVersionId": "version-000069",
+  "versions": [
+    {
+      "id": "version-000050",
+      "label": "slide-03",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.240Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000050--slide-03",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000051",
+      "label": "claude-opus-capacity-review",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.247Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000051--claude-opus-capacity-review",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000052",
+      "label": "claude-sonnet-capacity-review",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.250Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000052--claude-sonnet-capacity-review",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000053",
+      "label": "gemini-pro-capacity-review",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.253Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000053--gemini-pro-capacity-review",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000054",
+      "label": "01-fixed-before-after",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.256Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000054--01-fixed-before-after",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000055",
+      "label": "02-banked-time",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.269Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000055--02-banked-time",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000056",
+      "label": "03-single-visit-scale",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.283Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000056--03-single-visit-scale",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000057",
+      "label": "04-calendar-schedule",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.296Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000057--04-calendar-schedule",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000058",
+      "label": "05-hybrid-callout-payoff",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.309Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000058--05-hybrid-callout-payoff",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000059",
+      "label": "06-hybrid-gemini",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.312Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000059--06-hybrid-gemini",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000060",
+      "label": "07-user-directed-model-pass",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.325Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000060--07-user-directed-model-pass",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000061",
+      "label": "08-gemini-modular-followup",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.341Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000061--08-gemini-modular-followup",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000062",
+      "label": "09-simplified-subset-payoff",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.356Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000062--09-simplified-subset-payoff",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000063",
+      "label": "10-closer-current-style",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.359Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000063--10-closer-current-style",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000064",
+      "label": "11-two-bar-shrink-explainer",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.370Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000064--11-two-bar-shrink-explainer",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000065",
+      "label": "12-clean-flat-style",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.373Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000065--12-clean-flat-style",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000066",
+      "label": "13-white-sleek",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.376Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000066--13-white-sleek",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000067",
+      "label": "14-white-sleek-polish",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.385Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000067--14-white-sleek-polish",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000068",
+      "label": "15-bottom-left-cleanup",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:05:30.387Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000068--15-bottom-left-cleanup",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000069",
+      "label": "restored-pre-migration-slide-03",
+      "status": "current",
+      "sourceKind": "legacy-recovery",
+      "createdAt": "2026-03-31T19:56:21.731Z",
+      "baseVersionId": "version-000050",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000069--restored-pre-migration-slide-03",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000072",
+      "label": "compound-ribbon-before-after-native",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T21:13:43.039Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000072--compound-ribbon-before-after-native",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000073",
+      "label": "segmented-focus-bar-native",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T21:13:43.049Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000073--segmented-focus-bar-native",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "provider": "claude",
+  "verdict": "blocker",
+  "rationale": "The candidate slide has resolved the core content correctly — locked header, subheader, hero ask block, milestone cards, and use-of-funds ribbon are all present and readable. However, two concrete regressions are visible against the baseline and spec: (1) the Designer Health footer logo has drifted — the candidate renders a plain lowercase wordmark 'designer' without the official Designer Health logomark/icon that appears in the baseline and slot-parent shells, meaning the locked brand asset is missing or substituted; (2) the subheader line 'Post-money SAFE • ~18–20 months of runway' is visually overlapping or colliding with the large bold header text in the candidate, creating a legibility regression where the subheader is partially obscured behind the header block rather than sitting cleanly below it as in the reference versions.",
+  "blockers": [
+    "Footer logo regressed: official Designer Health logomark (icon + wordmark lockup) replaced by plain lowercase 'designer' text — locked brand asset missing",
+    "Subheader 'Post-money SAFE • ~18–20 months of runway' collides with / is clipped behind the header text block, breaking the required header/subheader separation"
+  ],
+  "nextMove": "Restore the official Designer Health logo lockup (icon + 'DESIGNER HEALTH' wordmark) in the bottom-right footer position matching the baseline shell, and fix the header/subheader vertical spacing so the subheader sits cleanly below the header with no overlap or clipping.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate slide has resolved the core content correctly — locked header, subheader, hero ask block, milestone cards, and use-of-funds ribbon are all present and readable. However, two concrete regressions are visible against the baseline and spec: (1) the Designer Health footer logo has drifted — the candidate renders a plain lowercase wordmark 'designer' without the official Designer Health logomark/icon that appears in the baseline and slot-parent shells, meaning the locked brand asset is missing or substituted; (2) the subheader line 'Post-money SAFE • ~18–20 months of runway' is visually overlapping or colliding with the large bold header text in the candidate, creating a legibility regression where the subheader is partially obscured behind the header block rather than sitting cleanly below it as in the reference versions.",
+    "blockers": [
+      "Footer logo regressed: official Designer Health logomark (icon + wordmark lockup) replaced by plain lowercase 'designer' text — locked brand asset missing",
+      "Subheader 'Post-money SAFE • ~18–20 months of runway' collides with / is clipped behind the header text block, breaking the required header/subheader separation"
+    ],
+    "nextMove": "Restore the official Designer Health logo lockup (icon + 'DESIGNER HEALTH' wordmark) in the bottom-right footer position matching the baseline shell, and fix the header/subheader vertical spacing so the subheader sits cleanly below the header with no overlap or clipping."
+  }
+}

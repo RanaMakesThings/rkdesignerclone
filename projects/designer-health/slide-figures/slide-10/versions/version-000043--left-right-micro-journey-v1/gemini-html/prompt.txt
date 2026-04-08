@@ -1,0 +1,39 @@
+Generate a single 16:9 investor-deck figure.
+
+Use the attached board image as reference context.
+
+Goal:
+Create a left/right version of slide 10 where the left side feels like a tiny
+causal journey from recovered minutes to one new visit, and the right side is
+the economics proof.
+
+Header:
+Recovered visit time creates real capacity.
+
+Subheader:
+When recovered minutes become completed visits, the impact is meaningful.
+
+Left side:
+- two shortened visit bars
+- one very light accumulation cue or whisper-thin arrow
+- one green `New visit` block
+- still clearly derived from slide 3
+- do not replay all the bars from slide 3
+- do not make it into a workflow diagram
+
+Right side:
+- `+1 visit / provider / day`
+- `220 clinic days`
+- `$125 / visit`
+- `40% contribution margin`
+- `$11,000 / year`
+- optional tiny muted upside line for `+2`
+
+Style:
+- premium investor deck
+- white or warm-light background
+- restrained green accent
+- clean, sparse, calm
+- no table
+
+Return only the requested artifact.

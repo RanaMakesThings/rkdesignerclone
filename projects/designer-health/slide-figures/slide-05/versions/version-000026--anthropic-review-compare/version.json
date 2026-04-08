@@ -1,0 +1,14 @@
+{
+  "id": "version-000026",
+  "slideId": "slide-05",
+  "slideDir": "projects/designer-health/slide-figures/slide-05",
+  "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000026--anthropic-review-compare",
+  "label": "anthropic-review-compare",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.571Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-05/anthropic-review-compare"
+  ]
+}

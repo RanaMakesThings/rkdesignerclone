@@ -1,0 +1,18 @@
+{
+  "class": "blocked",
+  "numeric": 0.05,
+  "status": "blocked",
+  "outcome": "block",
+  "reason": "Regression review found a concrete blocker.",
+  "blockers": [
+    "Locked subheader overlaps the headline and is not cleanly readable/aligned.",
+    "Bottom-right footer/logo shell is broken and replaced by a visible missing-image placeholder.",
+    "Lower content is clipped/stacked into the bottom ribbon area, causing required copy in the Validate/use-of-funds region to be cut off.",
+    "Slide reads as a malformed render rather than a resolved in-family closing ask slide.",
+    "Footer logo regressed: official Designer Health logomark (icon + wordmark lockup) replaced by plain lowercase 'designer' text — locked brand asset missing",
+    "Subheader 'Post-money SAFE • ~18–20 months of runway' collides with / is clipped behind the header text block, breaking the required header/subheader separation"
+  ],
+  "warnings": [
+    "Footer Logo drifted beyond semantic-stable threshold."
+  ]
+}

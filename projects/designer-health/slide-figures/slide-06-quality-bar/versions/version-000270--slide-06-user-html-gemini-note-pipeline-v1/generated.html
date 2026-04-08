@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vox Slide 6 Cycle Variant 212 - Centered Ribbons</title>
+  <style>
+    :root {
+      --bg: #fdfdfc;
+      --bg-soft: #f4f6f4;
+      --ink: #121826;
+      --muted: #5b6678;
+      --line: #d9dee6;
+      --line-soft: rgba(181, 191, 204, 0.55);
+      --teal: #2c8e91;
+      --teal-deep: #176b75;
+      --teal-soft: #dff2f2;
+      --panel: #f7f8f8;
+      --panel-stroke: rgba(86, 101, 119, 0.32);
+      --shadow-lg: 0 34px 70px rgba(34, 44, 58, 0.12);
+      --shadow-md: 0 18px 38px rgba(34, 44, 58, 0.08);
+      --shadow-sm: 0 10px 22px rgba(34, 44, 58, 0.06);
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --blue: #3b82f6;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(54, 153, 157, 0.08), transparent 22%),
+        radial-gradient(circle at 88% 78%, rgba(54, 153, 157, 0.05), transparent 18%),
+        linear-gradient(180deg, #fcfcfb 0%, #ffffff 100%);
+      font-family: var(--font);
+    }
+
+    .slide {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      color: var(--ink);
+    }
+
+    .header {
+      position: absolute;
+      top: 68px;
+      left: 108px;
+      width: 1688px;
+    }
+
+    .header h1 {
+      margin: 0;
+      max-width: 1540px;
+      font-size: 64px;
+      line-height: 1.04;
+      font-weight: 620;
+      letter-spacing: -0.045em;
+    }
+
+    .header h1 .accent { color: var(--teal); font-weight: 640; }
+
+    .header p {
+      margin: 24px 0 0;
+      max-width: 1380px;
+      font-size: 23px;
+      line-height: 1.42;
+      color: var(--muted);
+      letter-spacing: -0.02em;
+    }
+
+    .figure {
+      position: absolute;
+      left: 78px;
+      top: 390px;
+      width: 1762px;
+      height: 610px;
+    }
+
+    .wires { position: absolute; inset: 0; pointer-events: none; }
+    .wires-fg { z-index: 4; }
+    .wires-bg { z-index: 1; }
+
+    /* ------------------------------------------------ */
+    /* RIBBONS (POINTED & INDENTED)                     */
+    /* ------------------------------------------------ */
+    .ribbons {
+      position: absolute;
+      left: 40px;
+      top: 73px;
+      width: 320px;
+      display: grid;
+      gap: 20px;
+      z-index: 4;
+    }
+
+    .ribbon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 68px;
+      width: 320px;
+      font-size: 21px;
+      line-height: 1.16;
+      letter-spacing: -0.025em;
+      filter: drop-shadow(0 10px 22px rgba(34, 44, 58, 0.06));
+      white-space: nowrap;
+      isolation: isolate;
+    }
+
+    .ribbon-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+    .ribbon span { position: relative; z-index: 2; }
+
+    .ribbon.patient {
+      padding-left: 20px;
+      padding-right: 48px;
+      justify-content: flex-end;
+      color: #495161;
+    }
+
+    .ribbon.vox {
+      padding-left: 48px;
+      padding-right: 48px;
+      justify-content: flex-start;
+      color: var(--teal-deep);
+      font-weight: 550;
+    }
+
+    /* ------------------------------------------------ */
+    /* CHAMBER (THE VOX CARD)                           */
+    /* ------------------------------------------------ */
+    .chamber {
+      position: absolute;
+      left: 455px;
+      top: 20px;
+      width: 780px;
+      height: 526px;
+      border-radius: 42px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(247, 249, 249, 1) 100%);
+      border: 1px solid var(--panel-stroke);
+      box-shadow: var(--shadow-lg);
+      z-index: 2;
+    }
+
+    .chamber::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 22% 18%, rgba(255,255,255,0.94), transparent 34%),
+        radial-gradient(circle at 82% 74%, rgba(255,255,255,0.74), transparent 28%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+
+    .wordmark {
+      position: absolute;
+      left: 390px;
+      top: 44px;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 4;
+    }
+
+    .wordmark .vox {
+      font-size: 56px;
+      line-height: 0.95;
+      font-weight: 500;
+      color: var(--teal);
+      letter-spacing: -0.05em;
+    }
+
+    .wordmark .sub {
+      margin-top: 10px;
+      font-size: 18px;
+      line-height: 1.2;
+      color: #2b3544;
+      letter-spacing: -0.02em;
+      max-width: 220px;
+    }
+
+    /* ------------------------------------------------ */
+    /* CENTRAL ENGINE                                   */
+    /* ------------------------------------------------ */
+    .cycle {
+      position: absolute;
+      left: 580px; /* Slightly adjusted for larger size */
+      top: 158px; /* Slightly adjusted for larger size */
+      width: 260px;
+      height: 260px;
+      z-index: 5;
+    }
+
+    .cycle::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 45%, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.72) 52%, rgba(218, 236, 237, 0.52) 72%, rgba(218, 236, 237, 0) 100%);
+      box-shadow: inset 0 0 0 1px rgba(120, 136, 156, 0.12), 0 14px 28px rgba(35, 47, 60, 0.08);
+    }
+
+    .cycle-spinner {
+      position: absolute;
+      inset: 0;
+      transform: rotate(45deg);
+      filter: drop-shadow(0 10px 20px rgba(39, 95, 102, 0.15));
+    }
+
+    .cycle-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, rgba(44, 142, 145, 0) 0deg, rgba(23, 107, 117, 0.95) 180deg, rgba(44, 142, 145, 0) 180deg, rgba(23, 107, 117, 0.95) 360deg);
+      -webkit-mask: radial-gradient(circle, transparent 0, transparent 104px, #000 105px, #000 122px, transparent 123px, transparent 100%);
+      mask: radial-gradient(circle, transparent 0, transparent 104px, #000 105px, #000 122px, transparent 123px, transparent 100%);
+    }
+
+    .cycle-cap {
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: rgba(23, 107, 117, 0.95);
+      z-index: 2;
+    }
+    .cycle-cap.a { left: 121.5px; top: 8px; }
+    .cycle-cap.b { left: 121.5px; top: 235px; }
+
+    .cycle-label {
+      position: absolute;
+      inset: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 18px; /* Slightly bigger text */
+      line-height: 1.25;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #1a232e;
+      padding: 0 20px;
+    }
+
+    /* ------------------------------------------------ */
+    /* VERTICAL INPUT CHIPS                             */
+    /* ------------------------------------------------ */
+    .vertical-chip {
+      position: absolute;
+      left: 710px; /* Center of engine (580 + 260/2) is 710 */
+      transform: translateX(-50%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 38px;
+      padding: 0 18px;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 8px 20px rgba(32, 41, 55, 0.08);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      z-index: 10;
+      border: 1.5px solid var(--blue);
+    }
+    
+    .vertical-chip.top {
+      top: 65px;
+      color: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .vertical-chip.bottom {
+      top: 480px;
+      color: var(--muted);
+      border-color: #cbd5e1;
+    }
+
+    /* ------------------------------------------------ */
+    /* RIGHT SIDE PIPELINE & DATA TAGS                  */
+    /* ------------------------------------------------ */
+
+    .data-tag {
+      position: absolute;
+      left: 1120px;
+      transform: translateX(-50%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      padding: 0 16px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid rgba(44, 142, 145, 0.3);
+      box-shadow: 0 4px 10px rgba(32, 41, 55, 0.04);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      z-index: 5;
+    }
+
+    .data-tag::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      box-shadow: 0 0 0 3px rgba(44, 142, 145, 0.1);
+    }
+
+    .data-tag.n1 { top: 208px; margin-top: -16px; }
+    .data-tag.n2 { top: 288px; margin-top: -16px; }
+    .data-tag.n3 { top: 368px; margin-top: -16px; }
+
+    /* ------------------------------------------------ */
+    /* STRUCTURED CLINICAL NOTE UI                      */
+    /* ------------------------------------------------ */
+
+    .output {
+      position: absolute;
+      right: 60px;
+      top: 100px;
+      width: 400px;
+      z-index: 5;
+    }
+
+    .clinical-note {
+      position: relative;
+      padding: 32px;
+      min-height: 380px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid rgba(213, 219, 228, 0.88);
+      box-shadow: 0 24px 48px rgba(34, 44, 58, 0.08), 0 4px 12px rgba(34, 44, 58, 0.03);
+    }
+
+    .note-port {
+      position: absolute;
+      left: -5px;
+      width: 9px;
+      height: 16px;
+      border-radius: 4px;
+      background: #ffffff;
+      border: 2px solid var(--teal);
+      z-index: 10;
+    }
+
+    .note-port.p1 { top: 100px; }
+    .note-port.p2 { top: 180px; }
+    .note-port.p3 { top: 260px; }
+
+    .note-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f0f4f8;
+    }
+
+    .note-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      background: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+    }
+
+    .section {
+      margin-bottom: 26px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--teal-deep);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .skel-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .skel-line {
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 3px;
+    }
+    
+    .skel-line.teal {
+      background: rgba(44, 142, 145, 0.2);
+    }
+
+    .bullet-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .bullet {
+      width: 6px;
+      height: 6px;
+      background: var(--teal);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .note-footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid #f0f4f8;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #cbd5e1;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .w-100 { width: 100%; }
+    .w-85 { width: 85%; }
+    .w-70 { width: 70%; }
+    .w-60 { width: 60%; }
+
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="header">
+      <h1><span class="accent">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.</h1>
+      <p>Vox identifies what matters, organizes clinical connections, and surfaces remaining gaps—automating documentation before the clinician enters the room.</p>
+    </div>
+
+    <div class="figure">
+      
+      <!-- Blue Vertical Arrows and Background Wires -->
+      <svg class="wires wires-bg" viewBox="0 0 1762 636" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="var(--blue)" />
+          </marker>
+          <marker id="arrowhead-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#cbd5e1" />
+          </marker>
+          <linearGradient id="streamGrad" x1="840" y1="0" x2="1300" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#176b75" stop-opacity="1"/>
+            <stop offset="50%" stop-color="#2c8e91" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#2c8e91" stop-opacity="0.3"/>
+          </linearGradient>
+          <linearGradient id="emitterGrad" x1="840" y1="288" x2="980" y2="288" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#176b75" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#176b75" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Vertical Input Arrows -->
+        <path d="M 710 105 L 710 165" stroke="var(--blue)" stroke-width="2.5" marker-end="url(#arrowhead-blue)" fill="none" />
+        <path d="M 710 475 L 710 415" stroke="#cbd5e1" stroke-width="2.5" marker-end="url(#arrowhead-gray)" fill="none" />
+
+        <!-- Data emission funnel (Right Side) -->
+        <path d="M 840 288 C 890 288, 910 208, 990 208 L 990 368 C 910 368, 890 288, 840 288 Z" fill="url(#emitterGrad)"></path>
+
+        <!-- Main output lines (Right Side) -->
+        <g fill="none" stroke="url(#streamGrad)" stroke-width="4.5" stroke-linecap="round">
+          <path d="M 840 288 C 900 288, 930 208, 1000 208 L 1297 208"></path>
+          <path d="M 840 288 L 1297 288"></path>
+          <path d="M 840 288 C 900 288, 930 368, 1000 368 L 1297 368"></path>
+        </g>
+      </svg>
+
+      <!-- Left side Conversational Input -->
+      <svg class="wires wires-fg" viewBox="0 0 1762 636" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="none" stroke-linecap="round" opacity="0.35">
+          <path d="M 360 107 C 480 107, 540 260, 592 260" stroke="#a1b0c0" stroke-width="12"></path>
+          <path d="M 322 195 C 440 195, 540 274, 589 274" stroke="#4ea9ac" stroke-width="12"></path>
+          <path d="M 360 283 C 480 283, 540 288, 588 288" stroke="#a1b0c0" stroke-width="12"></path>
+          <path d="M 322 371 C 440 371, 540 302, 589 302" stroke="#4ea9ac" stroke-width="12"></path>
+          <path d="M 360 459 C 480 459, 540 316, 592 316" stroke="#a1b0c0" stroke-width="12"></path>
+        </g>
+        <g fill="none" stroke-linecap="round">
+          <path d="M 360 107 C 480 107, 540 260, 592 260" stroke="#a1b0c0" stroke-width="4.5"></path>
+          <path d="M 322 195 C 440 195, 540 274, 589 274" stroke="#4ea9ac" stroke-width="4.5"></path>
+          <path d="M 360 283 C 480 283, 540 288, 588 288" stroke="#a1b0c0" stroke-width="4.5"></path>
+          <path d="M 322 371 C 440 371, 540 302, 589 302" stroke="#4ea9ac" stroke-width="4.5"></path>
+          <path d="M 360 459 C 480 459, 540 316, 592 316" stroke="#a1b0c0" stroke-width="4.5"></path>
+        </g>
+        <circle cx="592" cy="260" r="3.5" fill="#a1b0c0"></circle>
+        <circle cx="589" cy="274" r="3.5" fill="#4ea9ac"></circle>
+        <circle cx="588" cy="288" r="3.5" fill="#a1b0c0"></circle>
+        <circle cx="589" cy="302" r="3.5" fill="#4ea9ac"></circle>
+        <circle cx="592" cy="316" r="3.5" fill="#a1b0c0"></circle>
+      </svg>
+
+      <div class="ribbons">
+        <div class="ribbon patient">
+          <svg class="ribbon-bg" viewBox="0 0 320 68" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="pG" x1="0" y1="0" x2="0" y2="68" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#f5f6f7"/><stop offset="100%" stop-color="#eceff2"/></linearGradient></defs>
+            <path d="M 2 2 L 284 2 L 320 34 L 284 66 L 2 66 L 38 34 Z" fill="url(#pG)" stroke="#a1b0c0" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+          <span>My back has been hurting</span>
+        </div>
+        <div class="ribbon vox">
+          <svg class="ribbon-bg" viewBox="0 0 320 68" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="vG" x1="0" y1="0" x2="0" y2="68" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#d9f0f0"/><stop offset="100%" stop-color="#eaf7f6"/></linearGradient></defs>
+            <path d="M 38 2 L 318 2 L 282 34 L 318 66 L 38 66 L 2 34 Z" fill="url(#vG)" stroke="#4ea9ac" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+          <span>What makes it worse?</span>
+        </div>
+        <div class="ribbon patient">
+          <svg class="ribbon-bg" viewBox="0 0 320 68" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 2 2 L 284 2 L 320 34 L 284 66 L 2 66 L 38 34 Z" fill="url(#pG)" stroke="#a1b0c0" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+          <span>It’s worse in the morning.</span>
+        </div>
+        <div class="ribbon vox">
+          <svg class="ribbon-bg" viewBox="0 0 320 68" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 38 2 L 318 2 L 282 34 L 318 66 L 38 66 L 2 34 Z" fill="url(#vG)" stroke="#4ea9ac" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+          <span>When did this start?</span>
+        </div>
+        <div class="ribbon patient">
+          <svg class="ribbon-bg" viewBox="0 0 320 68" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 2 2 L 284 2 L 320 34 L 284 66 L 2 66 L 38 34 Z" fill="url(#pG)" stroke="#a1b0c0" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+          <span>Started last Tuesday.</span>
+        </div>
+      </div>
+
+      <!-- Vertical Input Chips -->
+      <div class="vertical-chip top">Medical knowledge</div>
+      <div class="vertical-chip bottom">Clinical reasoning</div>
+
+      <!-- Engine Core sitting above wires -->
+      <div class="cycle">
+        <div class="cycle-spinner">
+          <div class="cycle-ring"></div>
+          <div class="cycle-cap a"></div>
+          <div class="cycle-cap b"></div>
+        </div>
+        <div class="cycle-label">
+          Adaptive clinical interviewer
+        </div>
+      </div>
+
+      <div class="chamber">
+        <div class="wordmark">
+          <div class="vox">Vox</div>
+          <div class="sub">Clinical Interviewing Engine</div>
+        </div>
+      </div>
+
+      <!-- Processing Chips sitting on data streams -->
+      <div class="data-tag n1">Key findings</div>
+      <div class="data-tag n2">Relevant context</div>
+      <div class="data-tag n3">Questions to verify</div>
+
+      <div class="output">
+        <div class="clinical-note">
+          <div class="note-socket s1"></div><div class="note-socket s2"></div><div class="note-socket s3"></div>
+          <div class="note-header"><div class="note-title">Clinician-Grade Summary</div><div class="status-dot"></div></div>
+          <div class="section"><div class="section-title">History of Present Illness</div><div class="skel-row"><div class="skel-line w-100"></div><div class="skel-line w-85"></div><div class="skel-line w-60 teal"></div></div></div>
+          <div class="section"><div class="section-title">Pertinent Positives</div><div class="bullet-row"><div class="bullet"></div><div class="skel-line w-85"></div></div><div class="bullet-row"><div class="bullet"></div><div class="skel-line w-60"></div></div></div>
+          <div class="section"><div class="section-title">Red Flag Screening</div><div class="skel-row"><div class="skel-line w-100"></div><div class="skel-line w-70"></div></div></div>
+          <div class="note-footer">Ready for clinician review</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

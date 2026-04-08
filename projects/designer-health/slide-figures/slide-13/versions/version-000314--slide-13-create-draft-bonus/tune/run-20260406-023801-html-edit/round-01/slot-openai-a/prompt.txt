@@ -1,0 +1,265 @@
+You are authoring a fresh self-contained HTML deck slide from a seeded blank shell.
+The current HTML is only a seeded shell. Fully resolve it into a finished slide and return one complete replacement HTML document only.
+Use inline CSS only. Inline SVG is allowed and preferred for lines, connectors, rulers, and geometry.
+Do not return markdown, commentary, code fences, patches, or explanations.
+Preserve the locked Designer shell, footer rule, footer logo, and deck-family continuity while building the actual slide content.
+The output must remain a finished 1920x1080 presentation graphic, not a browser page or fragment.
+Remove placeholder copy and figure-stub elements. Do not leave Header, Subheader, or Graphic / Figure placeholders behind.
+
+## Requested change
+Create a finished Designer deck slide from the seeded blank template.
+
+Slide id: slide-13
+Lane: html
+Slide title: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment
+Locked header: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment
+Locked subheader: Post-money SAFE • ~18–20 months of runway
+Audience should leave believing: This is a finite, milestone-based raise tied to proof-stage deployment.
+Core claim: This is a finite, milestone-based raise tied to proof-stage deployment.
+Slide job: close with a disciplined proof-stage ask
+Figure burden: surface the ask first, then show what the round unlocks
+Figure logic: Use one integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.
+Build status: create workflow underway from the April 5, 2026 ask build spec
+
+Locked spec guidance:
+### Current official read
+
+**Slide job**
+This is the closing ask slide. It should turn the deck into a finite proof-stage financing plan rather than a generic raise page.
+
+**Core claim**
+**The ask is disciplined, milestone-based, and sized to prove the next stage of deployment.**
+
+**What this slide must make the audience believe**
+**$1.25M on a post-money SAFE funds the hires, pilots, runway, and validation needed to establish repeatable deployment.**
+
+**Current preferred header**
+**Raising $1.25M to launch pilots, prove value, and establish repeatable deployment**
+
+**Current preferred subheader**
+**Post-money SAFE • ~18–20 months of runway**
+
+**Current preferred figure logic**
+A single integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.
+
+### Preserved strategic discussion
+
+The slide should surface the ask on first scan, then show exactly what the round unlocks. It should feel like a clean conversion slide: thesis translated into financing logic.
+
+Keep the left side focused on the amount, instrument, and support stats (`2 core hires`, `3 pilot sites`, `18–20 months`). Keep the right side focused on outcome-first milestone cards, not generic startup activity. Keep the bottom ribbon quieter than the milestone logic.
+
+This slide must avoid:
+- spreadsheet or payroll memo energy
+- generic build / scale / go-to-market language
+- decorative icons or illustration
+- use-of-funds detail that overpowers the milestones
+
+Preferred visual treatment:
+- soft gray field with calm white card surfaces
+- restrained shadow and rounded corners
+- one muted blue accent family only
+- premium, clinically serious late-deck tone
+
+Fallback only if needed: convert the right column into a horizontal three-card strip if the stacked milestone column becomes crowded.
+
+**One-line test**
+**This feels like funding a concrete proof plan, not funding hope.**
+
+---
+
+Existing slide note excerpt:
+# Slide 13 — The Ask
+
+## Success checks
+- The slide is fully resolved and presentation-ready.
+- No template placeholders remain.
+- The header reads: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment
+- The subheader reads: Post-money SAFE • ~18–20 months of runway
+- The figure visibly carries the specified burden.
+- The slide stays inside the locked Designer shell contract.
+- The footer rule and footer logo remain aligned with the shell.
+- The slide feels in-family with the adjacent official slides.
+
+## Guardrails
+- preserve the white Designer shell
+- preserve the footer rule and footer logo
+- do not leave the figure stub or placeholder copy visible
+- do not turn the slide into a browser page, app UI, or card grid unless the brief explicitly requires it
+- do not weaken the locked slide claim
+
+## Approved regions
+- Footer Rule | freeze=pixel-strict | rect=(112,992,1536,4) | note=Preserve the thin footer divider rule from the locked Designer shell.
+- Footer Logo | freeze=semantic-stable | rect=(1692,962,114,59) | note=Keep the official Designer footer logo aligned to the shell.
+
+## Slot variation
+Preserve the locked shell and realize the slide brief with the narrowest valid composition.
+
+## Retry brief
+None.
+
+## Stop if
+- the request actually needs a new slide concept rather than execution
+- the brief is missing core copy needed to build the slide
+- the best candidate still conflicts with the locked slide job after repeated rounds
+
+## Reference intent
+- Adjacent slide previews are for deck continuity only.
+- Optional reference images are for style or composition cues, not for literal copying unless explicitly stated.
+- Supplemental reference files are summarized above and may clarify slide intent.
+
+## Attached image order
+Image 1: official baseline preview (/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/official-preview.png)
+Image 2: parent preview to edit from (/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/tune/run-20260406-023801-html-edit/baseline/parent-preview.png)
+Image 3: additional reference (/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/slide-12--version-000291.png)
+
+## Current editable HTML
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designer Deck Template v1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --ink: #111111;
+        --muted: #6f7785;
+        --line: rgba(0, 0, 0, 0.9);
+        --stub-line: rgba(17, 17, 17, 0.12);
+        --stub-fill: rgba(17, 17, 17, 0.03);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+      }
+
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+      }
+
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 62px;
+        margin: 0;
+        font-size: 64px;
+        line-height: 1.04;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+      }
+
+      .subheader {
+        position: absolute;
+        left: 92px;
+        top: 154px;
+        margin: 0;
+        font-size: 27px;
+        line-height: 1.28;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: var(--muted);
+      }
+
+      .figure-stub {
+        position: absolute;
+        left: 182px;
+        top: 250px;
+        width: 1296px;
+        height: 566px;
+        border: 3px dashed var(--stub-line);
+        border-radius: 28px;
+        background:
+          linear-gradient(180deg, rgba(17, 17, 17, 0.015) 0%, rgba(17, 17, 17, 0.04) 100%);
+      }
+
+      .figure-stub::before,
+      .figure-stub::after {
+        content: "";
+        position: absolute;
+        background: var(--stub-line);
+      }
+
+      .figure-stub::before {
+        left: 50%;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        transform: translateX(-0.5px);
+      }
+
+      .figure-stub::after {
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        transform: translateY(-0.5px);
+      }
+
+      .stub-label {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 14px 22px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(17, 17, 17, 0.08);
+        font-size: 21px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="Designer blank slide template">
+      <h1 class="header">Header</h1>
+      <p class="subheader">Subheader</p>
+      <div class="figure-stub" aria-label="Graphic placeholder">
+        <div class="stub-label">Graphic / Figure</div>
+      </div>
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../../../../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>
+```

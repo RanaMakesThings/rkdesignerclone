@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designer shared CSS preview</title>
+    <link rel="stylesheet" href="vox-shared.css" data-designer-shared-css="true" />
+    <style>
+      .slide-header {
+        right: 408px;
+      }
+
+      .preview-shell {
+        position: absolute;
+        inset: 0;
+        padding: 192px 64px 120px;
+      }
+
+      .panoramic-field {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 344px;
+        gap: 36px;
+        align-items: start;
+      }
+
+      .chart-title,
+      .panel-title {
+        margin-top: 10px;
+        font-size: 19px;
+        line-height: 1.18;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .chart-wrapper {
+        margin-top: 14px;
+        padding-top: 10px;
+        position: relative;
+      }
+
+      .specialty-section {
+        margin-top: 48px;
+        padding-left: 6px;
+      }
+
+      .specialty-section .panel-title {
+        font-size: 18px;
+        max-width: 300px;
+      }
+
+      .specialty-note {
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(15, 23, 42, 0.42);
+      }
+
+      .bar-group {
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .bar-row {
+        display: grid;
+        grid-template-columns: 136px minmax(0, 1fr) 42px;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .bar-label {
+        font-size: 14px;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+        color: rgba(15, 23, 42, 0.78);
+      }
+
+      .bar-track {
+        height: var(--bar-track-height);
+        border-radius: var(--bar-track-radius);
+        background: var(--bar-track-bg);
+        overflow: hidden;
+      }
+
+      .bar-fill {
+        height: 100%;
+        border-radius: var(--bar-track-radius);
+        background: var(--bar-fill);
+      }
+
+      .bar-fill.is-emphasis {
+        background: var(--bar-fill-emphasis);
+      }
+
+      .bar-value {
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(15, 23, 42, 0.42);
+        text-align: right;
+      }
+
+      .shortage-band {
+        margin-top: 42px;
+        padding-top: 22px;
+        border-top: 1px solid rgba(15, 23, 42, 0.06);
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr);
+        gap: 26px;
+        align-items: start;
+      }
+
+      .shortage-meta {
+        padding-top: 6px;
+      }
+
+      .shortage-kicker {
+        font-size: 12px;
+        line-height: 1.2;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: rgba(15, 23, 42, 0.45);
+      }
+
+      .shortage-date {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        font-weight: 600;
+        color: rgba(15, 23, 42, 0.58);
+      }
+
+      .shortage-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .shortage-headline {
+        font-size: 28px;
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .shortage-ratio {
+        color: var(--accent);
+      }
+
+      .shortage-support {
+        font-size: 16px;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+        color: rgba(15, 23, 42, 0.68);
+        font-weight: 500;
+        max-width: 1180px;
+      }
+
+      .shortage-support strong {
+        color: var(--accent);
+      }
+
+      .slide-footer {
+        position: absolute;
+        left: 64px;
+        right: 180px;
+        bottom: 58px;
+        font-size: var(--footnote-size);
+        line-height: 1.45;
+        letter-spacing: -0.01em;
+        color: var(--footnote-color);
+      }
+
+      text {
+        font-family: var(--font-display);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="Designer shared CSS preview">
+      <header class="slide-header">
+        <p class="label label--accent">Seeded From Slide 02</p>
+        <h1 class="slide-headline">Demand is outpacing <span class="accent">clinical capacity.</span></h1>
+        <p class="slide-subtitle">
+          This preview HTML is codified from the user-supplied slide sample and exists to make the
+          shared CSS file easy to inspect, edit, and evolve in one place.
+        </p>
+      </header>
+
+      <div class="preview-shell">
+        <div class="panoramic-field">
+          <section class="chart-section">
+            <div class="label">AMN benchmark survey years</div>
+            <div class="chart-title">Average new-patient physician wait time</div>
+
+            <div class="chart-wrapper">
+              <svg
+                viewBox="0 0 1220 430"
+                width="100%"
+                height="430"
+                aria-label="Average new-patient physician wait time benchmark chart"
+              >
+                <line x1="62" y1="394" x2="1112" y2="394" stroke="rgba(15,23,42,0.14)" stroke-width="2.5" />
+                <path
+                  d="M 120 322 L 344 332 L 568 370 L 702 250 L 926 214 L 1052 143 L 1052 394 L 120 394 Z"
+                  fill="rgba(15,118,110,0.05)"
+                />
+                <path
+                  d="M 120 322 L 344 332 L 568 370 L 702 250 L 926 214 L 1052 143"
+                  fill="none"
+                  stroke="var(--accent)"
+                  stroke-width="5.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle cx="120" cy="322" r="8" fill="#fff" stroke="var(--accent)" stroke-width="4" />
+                <circle cx="344" cy="332" r="8" fill="#fff" stroke="var(--accent)" stroke-width="4" />
+                <circle cx="568" cy="370" r="8" fill="#fff" stroke="var(--accent)" stroke-width="4" />
+                <circle cx="702" cy="250" r="8" fill="#fff" stroke="var(--accent)" stroke-width="4" />
+                <circle cx="926" cy="214" r="8" fill="#fff" stroke="var(--accent)" stroke-width="4" />
+                <circle cx="1052" cy="143" r="9" fill="var(--accent)" stroke="#fff" stroke-width="4" />
+
+                <text x="120" y="296" font-size="22" font-weight="700" fill="rgba(15,23,42,0.62)" text-anchor="middle">21</text>
+                <text x="344" y="309" font-size="19" font-weight="600" fill="rgba(15,23,42,0.4)" text-anchor="middle">20.5</text>
+                <text x="568" y="347" font-size="22" font-weight="700" fill="rgba(15,23,42,0.62)" text-anchor="middle">18.5</text>
+                <text x="702" y="229" font-size="19" font-weight="600" fill="rgba(15,23,42,0.4)" text-anchor="middle">24.1</text>
+                <text x="926" y="189" font-size="20" font-weight="700" fill="rgba(15,23,42,0.5)" text-anchor="middle">26</text>
+
+                <text x="120" y="420" font-size="18" font-weight="600" fill="rgba(15,23,42,0.42)" text-anchor="middle">2004</text>
+                <text x="344" y="420" font-size="18" font-weight="600" fill="rgba(15,23,42,0.42)" text-anchor="middle">2009</text>
+                <text x="568" y="420" font-size="18" font-weight="600" fill="rgba(15,23,42,0.42)" text-anchor="middle">2014</text>
+                <text x="702" y="420" font-size="18" font-weight="600" fill="rgba(15,23,42,0.42)" text-anchor="middle">2017</text>
+                <text x="926" y="420" font-size="18" font-weight="600" fill="rgba(15,23,42,0.42)" text-anchor="middle">2022</text>
+                <text x="1052" y="420" font-size="18" font-weight="600" fill="rgba(15,23,42,0.42)" text-anchor="middle">2025</text>
+
+                <text x="838" y="114" fill="var(--accent)">
+                  <tspan font-size="34" font-weight="700">31</tspan>
+                  <tspan dx="8" font-size="23" font-weight="700">days</tspan>
+                </text>
+                <text x="838" y="138" font-size="14" font-weight="700" fill="rgba(17,94,89,0.76)">+19% since 2022</text>
+                <line x1="930" y1="127" x2="1038" y2="141" stroke="var(--accent)" stroke-width="2.25" stroke-linecap="round" />
+              </svg>
+            </div>
+          </section>
+
+          <aside class="specialty-section">
+            <div class="panel-title">
+              Selected 2025 specialty waits
+              <span class="specialty-note">(days)</span>
+            </div>
+
+            <div class="bar-group">
+              <div class="bar-row">
+                <div class="bar-label">OB/GYN</div>
+                <div class="bar-track"><div class="bar-fill is-emphasis" style="width: 100%"></div></div>
+                <div class="bar-value">41.8</div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-label">Gastroenterology</div>
+                <div class="bar-track"><div class="bar-fill is-emphasis" style="width: 95.7%"></div></div>
+                <div class="bar-value">40.0</div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-label">Dermatology</div>
+                <div class="bar-track"><div class="bar-fill" style="width: 87.3%"></div></div>
+                <div class="bar-value">36.5</div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-label">Cardiology</div>
+                <div class="bar-track"><div class="bar-fill" style="width: 78.2%"></div></div>
+                <div class="bar-value">32.7</div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-label">Family medicine</div>
+                <div class="bar-track"><div class="bar-fill" style="width: 56.2%"></div></div>
+                <div class="bar-value">23.5</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <section class="shortage-band">
+          <div class="shortage-meta">
+            <div class="shortage-kicker">Primary care HPSA</div>
+            <div class="shortage-date">December 31, 2025</div>
+          </div>
+          <div class="shortage-copy">
+            <div class="shortage-headline">
+              <span class="shortage-ratio">More than 1 in 4 Americans</span> live in federally designated primary care shortage areas.
+            </div>
+            <div class="shortage-support">
+              In those areas, <strong>only 48%</strong> of primary care need is currently met.
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="slide-footer">
+        [1] AMN Healthcare physician appointment wait-time benchmark surveys: 2004, 2009, 2014,
+        2017, 2022, and 2025. [2] HRSA primary care HPSA quarterly report, December 31, 2025.
+        [3] U.S. Census Bureau July 1, 2025 resident population estimate used to calculate the
+        more-than-1-in-4 ratio.
+      </footer>
+
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>

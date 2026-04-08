@@ -1,0 +1,61 @@
+Create a premium 16:9 investor-deck slide figure for Designer Health.
+
+Use the attached slide-07 version-89 image as the composition anchor. Stay very
+close to that layout and visual rhythm.
+
+Keep these exact on-image labels and copy:
+- `Before visit`
+- `Visit begins`
+- `1`
+- `Invite sent`
+- `Patient receives secure pre-visit link.`
+- `2`
+- `Adaptive interview`
+- `Vox asks follow-up questions and captures the story.`
+- `3`
+- `Brief prepared`
+- `Patient story becomes a clinician-ready handoff.`
+- `4`
+- `Clinician starts prepared`
+- `Sets up a more efficient visit.`
+
+What to preserve from version 89:
+- the phone with secure-link treatment in beat 1
+- the overall four-beat storyboard layout
+- the strong `VOX` brief object in beat 3
+- the bracket / threshold structure
+- the clean white background and restrained teal accent
+
+What to change:
+- update the human figure style so the people match the attached reference
+  images more closely
+- beat 2 should use actual speech bubbles, not thought bubbles
+- make the follow-up question a real spoken question, for example:
+  `How long has this been going on?`
+- make the patient reply a real spoken answer, for example:
+  `About five days.`
+- optional small second response bubble:
+  `Yellow sputum.`
+- beat 4 should show one clinician holding one tablet only, looking at it
+- the tablet in beat 4 should imply the Vox brief without adding extra clutter
+
+Style target:
+- bespoke editorial healthcare illustration
+- grayscale base with one restrained teal accent
+- human figures should feel more like the references: softer shading, cleaner
+  faces and hands, less icon-like
+- premium, calm, clinically credible
+
+Important:
+- do not remove the labels or numbers
+- do not convert beat 3 into a clipboard
+- do not turn beat 3 into a dashboard
+- do not drop the threshold text
+- keep all text legible and intentional
+
+Avoid:
+- thought bubbles
+- multiple devices in beat 4
+- photorealism
+- cartoonish styling
+- heavy room detail

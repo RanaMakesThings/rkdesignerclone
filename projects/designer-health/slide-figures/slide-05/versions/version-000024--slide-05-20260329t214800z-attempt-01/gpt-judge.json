@@ -1,0 +1,25 @@
+{
+  "provider": "gpt",
+  "status": "partial",
+  "summary": "The connector arrow was changed to a single smoother arc with a cleaner arrowhead, but the slide was not kept otherwise identical: the overall layout appears scaled/repositioned and the hero/support block differ in size and placement from the before image.",
+  "evidence": [
+    "The after image shows one continuous curved connector from the timeline area to the blue hero, replacing the previous more hook-like line ending.",
+    "The arrowhead in the after image points cleanly into the top-left edge of the blue hero without an obvious extra bend near the tip.",
+    "However, the entire composition is reduced and inset within a large white canvas in the after image, unlike the full-bleed layout before.",
+    "The blue hero card is smaller and positioned differently relative to the page and support block, and the support block is also smaller/repositioned."
+  ],
+  "nextPrompt": "Change only the connector arrow path: redraw it as one smooth broad arc with even curvature and a clean arrowhead pointing to the blue hero. Do not move, resize, scale, or restyle any other element; keep the slide framing, hero card, support block, timeline, and text in exactly the same positions and sizes as the original.",
+  "needsHuman": true,
+  "raw": {
+    "status": "partial",
+    "summary": "The connector arrow was changed to a single smoother arc with a cleaner arrowhead, but the slide was not kept otherwise identical: the overall layout appears scaled/repositioned and the hero/support block differ in size and placement from the before image.",
+    "evidence": [
+      "The after image shows one continuous curved connector from the timeline area to the blue hero, replacing the previous more hook-like line ending.",
+      "The arrowhead in the after image points cleanly into the top-left edge of the blue hero without an obvious extra bend near the tip.",
+      "However, the entire composition is reduced and inset within a large white canvas in the after image, unlike the full-bleed layout before.",
+      "The blue hero card is smaller and positioned differently relative to the page and support block, and the support block is also smaller/repositioned."
+    ],
+    "nextPrompt": "Change only the connector arrow path: redraw it as one smooth broad arc with even curvature and a clean arrowhead pointing to the blue hero. Do not move, resize, scale, or restyle any other element; keep the slide framing, hero card, support block, timeline, and text in exactly the same positions and sizes as the original.",
+    "needsHuman": true
+  }
+}

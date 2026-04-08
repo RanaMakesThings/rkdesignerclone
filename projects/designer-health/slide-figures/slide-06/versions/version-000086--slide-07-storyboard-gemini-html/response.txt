@@ -1,0 +1,377 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox Pitch Deck Slide</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text-main: #0f172a;
+            --text-sub: #475569;
+            --accent: #0f766e; /* Restrained Teal 700 */
+            --accent-light: #ccfbf1; /* Teal 100 */
+            --accent-bg: #f0fdfa; /* Teal 50 */
+            --border: #cbd5e1; /* Gray 300 */
+            --border-light: #e2e8f0; /* Gray 200 */
+            --fill-light: #f8fafc; /* Gray 50 */
+            --fill-mid: #e2e8f0; /* Gray 200 */
+            --fill-dark: #94a3b8; /* Gray 400 */
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .slide {
+            width: 1920px;
+            height: 1080px;
+            background-color: var(--bg);
+            position: relative;
+            overflow: hidden;
+            padding: 100px 155px; /* 1920 - 1610 (grid) = 310 / 2 = 155 */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        header {
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+            margin: 0 0 16px 0;
+        }
+
+        .subheader {
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--text-sub);
+            margin: 0;
+            max-width: 1200px;
+        }
+
+        .storyboard {
+            display: grid;
+            /* 220 (B1) + 120 (G1) + 320 (B2) + 80 (G2) + 460 (B3) + 70 (G3) + 340 (B4) = 1610px */
+            grid-template-columns: 220px 120px 320px 80px 460px 70px 340px;
+            grid-template-rows: 60px 480px 160px;
+            position: relative;
+        }
+
+        /* Structural Overlays */
+        .overlays {
+            grid-column: 1 / 8;
+            grid-row: 1 / 4;
+            position: relative;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Bracket */
+        .bracket-line {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 1200px; /* Spans B1 to B3: 220+120+320+80+460 = 1200 */
+            height: 20px;
+            border: 2px solid var(--border);
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .bracket-label {
+            position: absolute;
+            left: 600px;
+            top: 10px;
+            transform: translateX(-50%);
+            background: var(--bg);
+            padding: 0 16px;
+            color: var(--text-sub);
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        /* Threshold */
+        .threshold-line {
+            position: absolute;
+            left: 1235px; /* 1200 + 35 (half of 70px gap) */
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            border-left: 2px dashed var(--accent);
+            opacity: 0.4;
+        }
+
+        .threshold-label {
+            position: absolute;
+            left: 1235px;
+            top: 20px;
+            transform: translateX(-50%);
+            background: var(--bg);
+            padding: 0 12px;
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            white-space: nowrap;
+        }
+
+        /* Connectors */
+        .connectors-layer {
+            grid-column: 1 / 8;
+            grid-row: 2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Graphics */
+        .gfx {
+            align-self: end;
+            position: relative;
+            z-index: 5;
+        }
+        .b1-gfx { grid-column: 1; grid-row: 2; }
+        .b2-gfx { grid-column: 3; grid-row: 2; }
+        .b3-gfx { grid-column: 5; grid-row: 2; }
+        .b4-gfx { grid-column: 7; grid-row: 2; }
+
+        /* Text Blocks */
+        .txt {
+            padding-top: 32px;
+            grid-row: 3;
+        }
+        .b1-txt { grid-column: 1; }
+        .b2-txt { grid-column: 3; }
+        .b3-txt { grid-column: 5; }
+        .b4-txt { grid-column: 7; }
+
+        .beat-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0 0 12px 0;
+            letter-spacing: -0.01em;
+        }
+
+        .beat-desc {
+            font-size: 17px;
+            color: var(--text-sub);
+            line-height: 1.5;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slide">
+    <header>
+        <h1>Vox prepares the visit before it starts.</h1>
+        <p class="subheader">Vox interviews, structures, and hands off a brief the clinician can verify and use.</p>
+    </header>
+
+    <main class="storyboard">
+        
+        <!-- Overlays: Bracket & Threshold -->
+        <div class="overlays">
+            <div class="bracket-line"></div>
+            <div class="bracket-label">Before visit</div>
+            
+            <div class="threshold-line"></div>
+            <div class="threshold-label">Visit begins</div>
+        </div>
+
+        <!-- Connectors Layer -->
+        <svg class="connectors-layer" viewBox="0 0 1610 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 2 L 8 5 L 0 8 z" fill="var(--border)" />
+                </marker>
+                <!-- Shared SVG Filters for Shadows -->
+                <filter id="shadow-sm" x="-10%" y="-10%" width="120%" height="120%">
+                    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.05"/>
+                </filter>
+                <filter id="shadow-md" x="-10%" y="-10%" width="120%" height="120%">
+                    <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.08"/>
+                    <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.04"/>
+                </filter>
+                <filter id="shadow-hero" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="24" stdDeviation="32" flood-color="#000000" flood-opacity="0.12"/>
+                    <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.06"/>
+                </filter>
+            </defs>
+            
+            <!-- Hairline connectors with tiny arrowheads -->
+            <!-- B1 to B2 -->
+            <line x1="230" y1="340" x2="330" y2="340" stroke="var(--border)" stroke-width="2" marker-end="url(#arrow)"/>
+            <!-- B2 to B3 -->
+            <line x1="670" y1="340" x2="730" y2="340" stroke="var(--border)" stroke-width="2" marker-end="url(#arrow)"/>
+            <!-- B3 to B4 -->
+            <line x1="1210" y1="340" x2="1260" y2="340" stroke="var(--border)" stroke-width="2" marker-end="url(#arrow)"/>
+        </svg>
+
+        <!-- Beat 1: Invite sent (Small) -->
+        <div class="gfx b1-gfx">
+            <svg width="220" height="480" viewBox="0 0 220 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Phone Base -->
+                <rect x="50" y="240" width="120" height="240" rx="20" fill="white" stroke="var(--border-light)" stroke-width="3" filter="url(#shadow-sm)"/>
+                <rect x="56" y="246" width="108" height="228" rx="14" fill="var(--fill-light)"/>
+                <rect x="90" y="256" width="40" height="4" rx="2" fill="var(--border-light)"/>
+                
+                <!-- Notification Bubble -->
+                <rect x="30" y="300" width="160" height="56" rx="16" fill="white" filter="url(#shadow-md)"/>
+                <circle cx="58" cy="328" r="8" fill="var(--accent)"/>
+                <rect x="80" y="318" width="80" height="6" rx="3" fill="var(--border)"/>
+                <rect x="80" y="332" width="50" height="6" rx="3" fill="var(--fill-mid)"/>
+            </svg>
+        </div>
+        <div class="txt b1-txt">
+            <h3 class="beat-title">Invite sent</h3>
+            <p class="beat-desc">Patient receives secure pre-visit link.</p>
+        </div>
+
+        <!-- Beat 2: Adaptive interview (Medium) -->
+        <div class="gfx b2-gfx">
+            <svg width="320" height="480" viewBox="0 0 320 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Phone Base -->
+                <rect x="40" y="120" width="240" height="360" rx="28" fill="white" stroke="var(--border-light)" stroke-width="3" filter="url(#shadow-md)"/>
+                <rect x="48" y="128" width="224" height="344" rx="20" fill="var(--fill-light)"/>
+                
+                <!-- Header -->
+                <path d="M 48 148 Q 48 128 68 128 L 252 128 Q 272 128 272 148 L 272 180 L 48 180 Z" fill="white"/>
+                <rect x="140" y="138" width="40" height="4" rx="2" fill="var(--border-light)"/>
+                <circle cx="160" cy="160" r="12" fill="var(--fill-mid)"/>
+                
+                <!-- Chat Bubbles -->
+                <!-- Patient 1 -->
+                <rect x="64" y="200" width="140" height="40" rx="12" fill="var(--fill-mid)"/>
+                <rect x="80" y="217" width="108" height="6" rx="3" fill="var(--fill-dark)" opacity="0.3"/>
+                
+                <!-- Vox (Accent) -->
+                <rect x="106" y="256" width="150" height="60" rx="14" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.5"/>
+                <rect x="122" y="274" width="118" height="6" rx="3" fill="var(--accent)"/>
+                <rect x="122" y="292" width="80" height="6" rx="3" fill="var(--accent)" opacity="0.6"/>
+                
+                <!-- Patient 2 -->
+                <rect x="64" y="332" width="110" height="40" rx="12" fill="var(--fill-mid)"/>
+                <rect x="80" y="349" width="78" height="6" rx="3" fill="var(--fill-dark)" opacity="0.3"/>
+                
+                <!-- Response Chips -->
+                <rect x="64" y="400" width="80" height="28" rx="14" fill="white" stroke="var(--border)" stroke-width="1.5"/>
+                <rect x="152" y="400" width="60" height="28" rx="14" fill="white" stroke="var(--border)" stroke-width="1.5"/>
+            </svg>
+        </div>
+        <div class="txt b2-txt">
+            <h3 class="beat-title">Adaptive interview</h3>
+            <p class="beat-desc">Vox asks follow-up questions and captures the story.</p>
+        </div>
+
+        <!-- Beat 3: Brief prepared (Largest/Hero) -->
+        <div class="gfx b3-gfx">
+            <svg width="460" height="480" viewBox="0 0 460 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Main Card -->
+                <rect x="20" y="20" width="420" height="460" rx="20" fill="white" filter="url(#shadow-hero)" stroke="var(--border-light)" stroke-width="1"/>
+                
+                <!-- Card Header -->
+                <path d="M 20 40 Q 20 20 40 20 L 420 20 Q 440 20 440 40 L 440 80 L 20 80 Z" fill="var(--fill-light)"/>
+                
+                <!-- Vox Badge -->
+                <rect x="44" y="36" width="70" height="28" rx="8" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.5"/>
+                <circle cx="58" cy="50" r="5" fill="var(--accent)"/>
+                <rect x="72" y="47" width="30" height="6" rx="3" fill="var(--accent)"/>
+                
+                <!-- Title Line -->
+                <rect x="130" y="42" width="180" height="16" rx="8" fill="var(--border)"/>
+                
+                <!-- Section 1: Story -->
+                <rect x="44" y="104" width="372" height="110" rx="12" fill="var(--fill-light)" stroke="#f1f5f9" stroke-width="2"/>
+                <rect x="68" y="128" width="324" height="8" rx="4" fill="var(--border)"/>
+                <rect x="68" y="152" width="280" height="8" rx="4" fill="var(--border)"/>
+                <rect x="68" y="176" width="190" height="8" rx="4" fill="var(--border)"/>
+                
+                <!-- Section 2: Structured Data Grid -->
+                <rect x="44" y="238" width="176" height="130" rx="12" fill="var(--fill-light)" stroke="#f1f5f9" stroke-width="2"/>
+                <rect x="64" y="262" width="80" height="8" rx="4" fill="var(--fill-dark)"/>
+                <rect x="64" y="290" width="136" height="8" rx="4" fill="var(--border)"/>
+                <rect x="64" y="314" width="100" height="8" rx="4" fill="var(--border)"/>
+                
+                <rect x="240" y="238" width="176" height="130" rx="12" fill="var(--fill-light)" stroke="#f1f5f9" stroke-width="2"/>
+                <rect x="260" y="262" width="90" height="8" rx="4" fill="var(--fill-dark)"/>
+                <rect x="260" y="290" width="120" height="8" rx="4" fill="var(--border)"/>
+                <rect x="260" y="314" width="140" height="8" rx="4" fill="var(--border)"/>
+                
+                <!-- Section 3: Tags -->
+                <rect x="44" y="392" width="372" height="56" rx="12" fill="var(--fill-light)" stroke="#f1f5f9" stroke-width="2"/>
+                <rect x="64" y="408" width="70" height="24" rx="12" fill="var(--accent-light)"/>
+                <rect x="146" y="408" width="90" height="24" rx="12" fill="var(--fill-mid)"/>
+                <rect x="248" y="408" width="80" height="24" rx="12" fill="var(--fill-mid)"/>
+            </svg>
+        </div>
+        <div class="txt b3-txt">
+            <h3 class="beat-title">Brief prepared</h3>
+            <p class="beat-desc">Patient story becomes a clinician-ready handoff.</p>
+        </div>
+
+        <!-- Beat 4: Clinician starts prepared (Medium) -->
+        <div class="gfx b4-gfx">
+            <svg width="340" height="480" viewBox="0 0 340 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Desk Line -->
+                <line x1="10" y1="460" x2="330" y2="460" stroke="var(--border-light)" stroke-width="6" stroke-linecap="round"/>
+                
+                <!-- Calm Clinician Silhouette -->
+                <path d="M 20 460 C 20 310, 140 310, 140 460" fill="none" stroke="var(--border)" stroke-width="4"/>
+                <circle cx="80" cy="250" r="40" fill="none" stroke="var(--border)" stroke-width="4"/>
+                
+                <!-- Tablet Stand -->
+                <path d="M 260 460 L 230 380 L 280 380 Z" fill="var(--border)"/>
+                
+                <!-- Tablet -->
+                <g transform="rotate(-12 240 300)">
+                    <rect x="160" y="220" width="160" height="160" rx="16" fill="white" stroke="var(--fill-dark)" stroke-width="4" filter="url(#shadow-md)"/>
+                    <rect x="168" y="228" width="144" height="144" rx="8" fill="var(--fill-light)"/>
+                    
+                    <!-- Mini Brief Content -->
+                    <rect x="178" y="238" width="50" height="10" rx="5" fill="var(--accent)"/>
+                    <rect x="178" y="258" width="120" height="6" rx="3" fill="var(--border)"/>
+                    <rect x="178" y="270" width="90" height="6" rx="3" fill="var(--border)"/>
+                    
+                    <rect x="178" y="286" width="60" height="40" rx="6" fill="var(--fill-mid)"/>
+                    <rect x="246" y="286" width="56" height="40" rx="6" fill="var(--fill-mid)"/>
+                </g>
+            </svg>
+        </div>
+        <div class="txt b4-txt">
+            <h3 class="beat-title">Clinician starts prepared</h3>
+            <p class="beat-desc">Sets up a more efficient visit.</p>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>
+```

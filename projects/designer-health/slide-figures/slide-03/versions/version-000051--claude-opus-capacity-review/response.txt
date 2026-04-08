@@ -1,0 +1,53 @@
+## Five Concrete Redesign Directions
+
+### 1. **Before/After Split with Time Savings Counter**
+**Visual change:** Split the slide into clear "Before" (top) and "After" (bottom) sections. Add a time indicator showing "X minutes saved per visit" with a multiplication visual (× 5 visits = enough time for 1 new visit). Keep the blue segments visibly shrinking between the two states.
+
+**Why it clarifies:** Makes the transformation explicit and quantifies the savings mathematically, showing exactly how 5 compressed visits create room for a 6th.
+
+**Tradeoff:** Might feel too mechanical/calculated for healthcare context; could imply a factory-line mentality.
+
+### 2. **Animated Compression with Reallocation**
+**Visual change:** Show the blue "Story reconstruction" segment with dotted lines indicating compression, with the "saved" blue pieces visually flowing/accumulating into the green "New visit" box. Add small clock icons showing time saved (e.g., "-8 min" on each visit).
+
+**Why it clarifies:** Directly shows where the time comes from and where it goes, making the reallocation of resources visual rather than abstract.
+
+**Tradeoff:** Requires animation to work well; static version might look cluttered with arrows and movement indicators.
+
+### 3. **Day Timeline Comparison**
+**Visual change:** Represent visits on a horizontal timeline of a workday (8am-5pm). Show "Current state" with 5 visits filling the day, then "Optimized state" with 6 visits in the same timeframe, with visible gaps closing.
+
+**Why it clarifies:** Shows the finite resource (time in a day) and how efficiency creates space within existing constraints.
+
+**Tradeoff:** Shifts focus from per-visit efficiency to daily scheduling; might lose emphasis on AI's role in story reconstruction.
+
+### 4. **Stacked Bar with Efficiency Percentage**
+**Visual change:** Use stacked horizontal bars. Top bar shows 5 current visits. Bottom bar shows 6 optimized visits with "20% more efficient story reconstruction" label. Add a subtle highlight or glow around the compressed blue sections and a "=" sign leading to "+1 patient served."
+
+**Why it clarifies:** Percentage gives credibility and shows the gain is reasonable, not extreme. The equation format makes the math clear.
+
+**Tradeoff:** Percentages might prompt questions about data/evidence that you're not ready to address.
+
+### 5. **Progressive Reveal with Cumulative Savings**
+**Visual change:** Show visits 1-5 in sequence with a running tally of "Time saved" building up ("+7 min... +14 min... +21 min...") until it equals "= 1 additional visit capacity." Keep the middle text but add "without compromising quality" explicitly.
+
+**Why it clarifies:** Shows the compounding effect mentioned in the subtitle and makes clear this is about cumulative gains, not dramatic changes.
+
+**Tradeoff:** More complex visual that takes longer to process; might feel too detailed for a pitch deck.
+
+## Reaction to Specific Ideas
+
+- **Two new visits:** Too aggressive; undermines credibility and suggests unrealistic efficiency gains
+- **Key/legend:** Helpful but insufficient alone; won't solve the core comprehension problem
+- **Arrows showing shrinking:** Good supporting element but needs context about where the time goes
+- **Efficiency arrow:** Could work if combined with other changes but risks being too abstract
+- **Changing middle text:** Should definitely emphasize "quality maintained" or "upstream prep enables efficiency"
+- **Before/after explicit:** Strong direction - addresses the main confusion directly
+
+## Recommendation
+
+**Preferred direction: #2 (Animated Compression with Reallocation) in static form**
+
+Create a two-row layout where the top row shows 5 current visits with normal-sized blue segments, and the bottom row shows the same 5 visits with compressed blue segments PLUS the 6th green visit. Connect them with subtle dotted lines or a "freed capacity" indicator showing the blue time savings accumulating into the new visit. Add text: "AI-assisted prep reduces story reconstruction by ~8 minutes per visit without sacrificing quality."
+
+This solution directly addresses why 5 becomes 6, shows where the capacity comes from, maintains focus on the AI value proposition, and can work as a static slide while implying the transformation clearly.

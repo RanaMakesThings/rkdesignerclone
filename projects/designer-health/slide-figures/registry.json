@@ -1,0 +1,1209 @@
+{
+  "nextVersionNumber": 350,
+  "versions": {
+    "version-000002": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000002--slide-02"
+    },
+    "version-000003": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000003--anthropic-review-board-opus"
+    },
+    "version-000004": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000004--anthropic-review-board-opus-pass-2"
+    },
+    "version-000005": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000005--anthropic-review-board-sonnet"
+    },
+    "version-000006": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000006--anthropic-review-board-sonnet-pass-2"
+    },
+    "version-000007": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000007--anthropic-review-board-sonnet-pass-3"
+    },
+    "version-000008": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000008--anthropic-review-diptych-candidate"
+    },
+    "version-000009": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000009--anthropic-review-micro-pass-v2"
+    },
+    "version-000010": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000010--anthropic-review-panorama"
+    },
+    "version-000011": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000011--gemini-html-diptych-v3"
+    },
+    "version-000012": {
+      "slideId": "slide-04-05",
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000012--gemini-html"
+    },
+    "version-000013": {
+      "slideId": "slide-04-05",
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000013--gemini-image"
+    },
+    "version-000014": {
+      "slideId": "slide-04-05",
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000014--openai-html"
+    },
+    "version-000015": {
+      "slideId": "slide-04-05",
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000015--openai-image"
+    },
+    "version-000016": {
+      "slideId": "slide-04-05",
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000016--anthropic-html"
+    },
+    "version-000017": {
+      "slideId": "slide-04-05",
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000017--anthropic-html-sonnet"
+    },
+    "version-000018": {
+      "slideId": "slide-04-05",
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000018--anthropic-html-opus"
+    },
+    "version-000019": {
+      "slideId": "slide-04-05",
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000019--anthropic-html-v2"
+    },
+    "version-000020": {
+      "slideId": "slide-04-05",
+      "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000020--anthropic-html-v3"
+    },
+    "version-000021": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05"
+    },
+    "version-000022": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000022--slide-05-20260329t204534z-attempt-01"
+    },
+    "version-000023": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000023--slide-05-20260329t205755z-attempt-01"
+    },
+    "version-000024": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01"
+    },
+    "version-000025": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000025--slide-05-20260329t215206z-attempt-01"
+    },
+    "version-000026": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000026--anthropic-review-compare"
+    },
+    "version-000027": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000027--openai-review-compare"
+    },
+    "version-000028": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000028--slide-07"
+    },
+    "version-000029": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000029--anthropic-review-ops-dev"
+    },
+    "version-000030": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09"
+    },
+    "version-000031": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000031--clean-strip"
+    },
+    "version-000032": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000032--hallway-overlay"
+    },
+    "version-000033": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000033--hands-clipboard"
+    },
+    "version-000034": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000034--v2-clipboard"
+    },
+    "version-000035": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000035--v2-hallway"
+    },
+    "version-000036": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000036--v2-strip"
+    },
+    "version-000037": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000037--v2-threshold"
+    },
+    "version-000038": {
+      "slideId": "slide-10",
+      "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1"
+    },
+    "version-000039": {
+      "slideId": "slide-10",
+      "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000039--power-of-one-v1"
+    },
+    "version-000040": {
+      "slideId": "slide-10",
+      "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000040--break-even-threshold-v1"
+    },
+    "version-000041": {
+      "slideId": "slide-10",
+      "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000041--capacity-waterfall-v1"
+    },
+    "version-000042": {
+      "slideId": "slide-10",
+      "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000042--left-right-capacity-tile-v1"
+    },
+    "version-000043": {
+      "slideId": "slide-10",
+      "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000043--left-right-micro-journey-v1"
+    },
+    "version-000044": {
+      "slideId": "slide-10",
+      "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000044--left-right-motif-card-v1"
+    },
+    "version-000045": {
+      "slideId": "slide-10",
+      "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000045--left-right-ideation"
+    },
+    "version-000046": {
+      "slideId": "slide-10",
+      "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000046--slide-10-legacy"
+    },
+    "version-000047": {
+      "slideId": "slide-11",
+      "dir": "projects/designer-health/slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1"
+    },
+    "version-000048": {
+      "slideId": "slide-11",
+      "dir": "projects/designer-health/slide-figures/slide-11/versions/version-000048--proof-column-v1"
+    },
+    "version-000049": {
+      "slideId": "slide-11",
+      "dir": "projects/designer-health/slide-figures/slide-11/versions/version-000049--claude-ideation"
+    },
+    "version-000050": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000050--slide-03"
+    },
+    "version-000051": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000051--claude-opus-capacity-review"
+    },
+    "version-000052": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000052--claude-sonnet-capacity-review"
+    },
+    "version-000053": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000053--gemini-pro-capacity-review"
+    },
+    "version-000054": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000054--01-fixed-before-after"
+    },
+    "version-000055": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000055--02-banked-time"
+    },
+    "version-000056": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000056--03-single-visit-scale"
+    },
+    "version-000057": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000057--04-calendar-schedule"
+    },
+    "version-000058": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000058--05-hybrid-callout-payoff"
+    },
+    "version-000059": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000059--06-hybrid-gemini"
+    },
+    "version-000060": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000060--07-user-directed-model-pass"
+    },
+    "version-000061": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000061--08-gemini-modular-followup"
+    },
+    "version-000062": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000062--09-simplified-subset-payoff"
+    },
+    "version-000063": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000063--10-closer-current-style"
+    },
+    "version-000064": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000064--11-two-bar-shrink-explainer"
+    },
+    "version-000065": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000065--12-clean-flat-style"
+    },
+    "version-000066": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000066--13-white-sleek"
+    },
+    "version-000067": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000067--14-white-sleek-polish"
+    },
+    "version-000068": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000068--15-bottom-left-cleanup"
+    },
+    "version-000069": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000069--restored-pre-migration-slide-03"
+    },
+    "version-000070": {
+      "slideId": "slide-01",
+      "dir": "projects/designer-health/slide-figures/slide-01/versions/version-000070--one-human-story-to-structure-membrane"
+    },
+    "version-000071": {
+      "slideId": "slide-01",
+      "dir": "projects/designer-health/slide-figures/slide-01/versions/version-000071--one-human-story-to-structure"
+    },
+    "version-000072": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000072--compound-ribbon-before-after-native"
+    },
+    "version-000073": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000073--segmented-focus-bar-native"
+    },
+    "version-000074": {
+      "slideId": "slide-04",
+      "dir": "projects/designer-health/slide-figures/slide-04/versions/version-000074--transformation-flow-native"
+    },
+    "version-000075": {
+      "slideId": "slide-04",
+      "dir": "projects/designer-health/slide-figures/slide-04/versions/version-000075--story-streams-v1-native"
+    },
+    "version-000076": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000076--workflow-strip-v1-native"
+    },
+    "version-000077": {
+      "slideId": "slide-08",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000077--artifact-callouts-native"
+    },
+    "version-000078": {
+      "slideId": "slide-08",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000078--clinician-brief-attempt-a-v1"
+    },
+    "version-000079": {
+      "slideId": "slide-08",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000079--clinician-brief-attempt-a-v2-slide-chrome"
+    },
+    "version-000080": {
+      "slideId": "slide-08",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000080--clinician-brief-attempt-a-v3-legibility-pass"
+    },
+    "version-000081": {
+      "slideId": "slide-08",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000081--clinician-brief-attempt-a-v4-locked-graphic"
+    },
+    "version-000082": {
+      "slideId": "slide-08",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000082--clinician-brief-attempt-a-v5-locked-width"
+    },
+    "version-000083": {
+      "slideId": "slide-08",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000083--clinician-brief-attempt-a-v6-fixed-layout-scale"
+    },
+    "version-000084": {
+      "slideId": "slide-08",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000084--clinician-brief-attempt-a-v7-bigger-type-and-clean-frame"
+    },
+    "version-000085": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000085--slide-07-storyboard-openai-html"
+    },
+    "version-000086": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000086--slide-07-storyboard-gemini-html"
+    },
+    "version-000087": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000087--slide-07-storyboard-anthropic-html"
+    },
+    "version-000088": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000088--slide-07-storyboard-openai-image"
+    },
+    "version-000089": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000089--slide-07-storyboard-gemini-image"
+    },
+    "version-000090": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000090--slide-07-style-openai-editorial-balance"
+    },
+    "version-000091": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000091--slide-07-style-openai-minimal-restraint"
+    },
+    "version-000092": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000092--slide-07-style-openai-encounter-led"
+    },
+    "version-000093": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000093--slide-07-style-openai-brief-led"
+    },
+    "version-000094": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000094--slide-07-style-gemini-editorial-balance"
+    },
+    "version-000095": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000095--slide-07-style-gemini-minimal-restraint"
+    },
+    "version-000096": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000096--slide-07-style-gemini-encounter-led"
+    },
+    "version-000097": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000097--slide-07-style-gemini-brief-led"
+    },
+    "version-000098": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000098--slide-07-v89-refine-openai-v1"
+    },
+    "version-000099": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000099--slide-07-v89-refine-openai-v2"
+    },
+    "version-000100": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000100--slide-07-v89-refine-gemini-v1"
+    },
+    "version-000101": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000101--slide-07-v89-refine-gemini-v2"
+    },
+    "version-000102": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000102--slide-07-v89-v99-merge-openai-minimal-v1"
+    },
+    "version-000103": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000103--slide-07-v89-v99-merge-openai-shortlabels-v1"
+    },
+    "version-000104": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000104--slide-07-v89-v99-merge-gemini-minimal-v1"
+    },
+    "version-000105": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000105--slide-07-v89-v99-merge-gemini-shortlabels-v1"
+    },
+    "version-000106": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000106--slide-07-v89-surgical-openai-v1"
+    },
+    "version-000107": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000107--slide-07-v89-surgical-gemini-v1"
+    },
+    "version-000108": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000108--slide-07-v107-remove-five-days-gemini-v1"
+    },
+    "version-000109": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000109--slide-07-v108-frozen-hires-v1"
+    },
+    "version-000110": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000110--slide-07-v108-hybrid-html-v1"
+    },
+    "version-000111": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000111--slide-07-v108-hybrid-html-v2"
+    },
+    "version-000112": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000112--slide-07-v108-native-2k-gemini-v1"
+    },
+    "version-000113": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000113--slide-07-v108-native-2k-gemini-v2"
+    },
+    "version-000114": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000114--slide-07-v113-hybrid-strip-html-v1"
+    },
+    "version-000115": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000115--slide-07-v113-hybrid-beat-assets-html-v1"
+    },
+    "version-000116": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000116--slide-07-v113-hybrid-strip-html-v2"
+    },
+    "version-000117": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000117--slide-07-v113-panel-assets-html-v2"
+    },
+    "version-000118": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000118--slide-07-v113-manual-strip-html-v1"
+    },
+    "version-000119": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000119--slide-07-v113-manual-panels-html-v1"
+    },
+    "version-000120": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000120--slide-07-v113-beat1-transparent-v1"
+    },
+    "version-000121": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000121--slide-07-v113-beat1-transparent-v2"
+    },
+    "version-000122": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000122--slide-07-v113-beat1-transparent-v3"
+    },
+    "version-000123": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000123--slide-02-template-shell-catchup-v1"
+    },
+    "version-000124": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000124--slide-07-v113-beat1-gemini-clean-v1"
+    },
+    "version-000125": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000125--slide-07-v113-beat1-gemini-clean-v2"
+    },
+    "version-000126": {
+      "slideId": "slide-01",
+      "dir": "projects/designer-health/slide-figures/slide-01/versions/version-000126--slide-01-template-shell-catchup-v1"
+    },
+    "version-000127": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000127--slide-05-template-shell-catchup-v1"
+    },
+    "version-000128": {
+      "slideId": "slide-04",
+      "dir": "projects/designer-health/slide-figures/slide-04/versions/version-000128--slide-04-template-shell-catchup-v1"
+    },
+    "version-000129": {
+      "slideId": "slide-08",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000129--slide-08-template-shell-catchup-v1"
+    },
+    "version-000130": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000130--slide-09-template-shell-catchup-v1"
+    },
+    "version-000131": {
+      "slideId": "slide-10",
+      "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000131--slide-10-template-shell-catchup-v1"
+    },
+    "version-000132": {
+      "slideId": "slide-11",
+      "dir": "projects/designer-health/slide-figures/slide-11/versions/version-000132--slide-11-template-shell-catchup-v1"
+    },
+    "version-000133": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000133--slide-07-template-shell-catchup-v1"
+    },
+    "version-000134": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000134--starting-point-strip-v1-fine-tune"
+    },
+    "version-000135": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000135--density-panels-v3"
+    },
+    "version-000136": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000136--density-panels-asymmetric-gemini-image"
+    },
+    "version-000137": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000137--density-panels-asymmetric-gemini-html"
+    },
+    "version-000138": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000138--density-panels-asymmetric-openai-image"
+    },
+    "version-000139": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000139--density-panels-asymmetric-openai-html"
+    },
+    "version-000140": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000140--density-panels-asymmetric-anthropic-opus-html"
+    },
+    "version-000141": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000141--territory-argument-gemini-image"
+    },
+    "version-000142": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000142--territory-argument-openai-image"
+    },
+    "version-000143": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000143--territory-argument-anthropic-opus-html"
+    },
+    "version-000144": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000144--territory-argument-openai-html"
+    },
+    "version-000145": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000145--territory-argument-gemini-html"
+    },
+    "version-000146": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000146--market-field-map-gemini-image"
+    },
+    "version-000147": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000147--market-field-map-gemini-html"
+    },
+    "version-000148": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000148--market-field-map-openai-html"
+    },
+    "version-000149": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000149--proof-left-whitespace-right-gemini-image"
+    },
+    "version-000150": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000150--market-field-map-anthropic-sonnet-html"
+    },
+    "version-000151": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000151--proof-left-whitespace-right-gemini-html"
+    },
+    "version-000152": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000152--proof-left-whitespace-right-openai-html"
+    },
+    "version-000153": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000153--proof-left-whitespace-right-anthropic-sonnet-html"
+    },
+    "version-000154": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000154--proof-left-whitespace-right-openai-image"
+    },
+    "version-000155": {
+      "slideId": "slide-09",
+      "dir": "projects/designer-health/slide-figures/slide-09/versions/version-000155--market-field-map-openai-image"
+    },
+    "version-000156": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000156--slide-06-seed-starting-point-gemini-editorial-baseline-graphic-000114"
+    },
+    "version-000157": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000157--slide-06-seed-starting-point-gemini-bold-contrast-graphic-000115"
+    },
+    "version-000158": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000158--slide-06-seed-starting-point-gemini-minimal-restraint-graphic-000116"
+    },
+    "version-000159": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000159--slide-06-seed-starting-point-openai-editorial-baseline-graphic-000117"
+    },
+    "version-000160": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000160--slide-06-seed-starting-point-openai-bold-contrast-graphic-000118"
+    },
+    "version-000161": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000161--slide-06-seed-starting-point-openai-minimal-restraint-graphic-000119"
+    },
+    "version-000162": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000162--slide-06-seeded-iter-gemini-editorial-baseline-graphic-000120"
+    },
+    "version-000163": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000163--slide-06-seeded-iter-gemini-bold-contrast-graphic-000121"
+    },
+    "version-000164": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000164--slide-06-seeded-iter-openai-editorial-baseline-graphic-000122"
+    },
+    "version-000165": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000165--slide-06-seeded-iter-openai-bold-contrast-graphic-000123"
+    },
+    "version-000166": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000166--slide-06-seeded-iter-v2-gemini-editorial-baseline-graphic-000124"
+    },
+    "version-000167": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000167--slide-06-seeded-iter-v2-gemini-bold-contrast-graphic-000125"
+    },
+    "version-000168": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000168--slide-06-seeded-iter-v2-gemini-minimal-restraint-graphic-000126"
+    },
+    "version-000169": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000169--slide-06-seeded-iter-v2-openai-editorial-baseline-graphic-000127"
+    },
+    "version-000170": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000170--slide-06-seeded-iter-v2-openai-bold-contrast-graphic-000128"
+    },
+    "version-000171": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000171--slide-06-seeded-iter-v2-openai-minimal-restraint-graphic-000129"
+    },
+    "version-000172": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000172--slide-06-fresh-signal-strata-gemini-editorial-baseline-graphic-000130"
+    },
+    "version-000173": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000173--slide-06-fresh-signal-strata-gemini-bold-contrast-graphic-000131"
+    },
+    "version-000174": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000174--slide-06-fresh-signal-strata-openai-editorial-baseline-graphic-000132"
+    },
+    "version-000175": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000175--slide-06-fresh-signal-strata-openai-bold-contrast-graphic-000133"
+    },
+    "version-000176": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000176--slide-06-fresh-loom-tension-gemini-editorial-baseline-graphic-000134"
+    },
+    "version-000177": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000177--slide-06-fresh-loom-tension-gemini-bold-contrast-graphic-000135"
+    },
+    "version-000178": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000178--slide-06-fresh-loom-tension-openai-editorial-baseline-graphic-000136"
+    },
+    "version-000179": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000179--slide-06-fresh-loom-tension-openai-bold-contrast-graphic-000137"
+    },
+    "version-000180": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000180--slide-06-fresh-magnetic-field-gemini-editorial-baseline-graphic-000138"
+    },
+    "version-000181": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000181--slide-06-fresh-magnetic-field-gemini-bold-contrast-graphic-000139"
+    },
+    "version-000182": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000182--slide-06-fresh-magnetic-field-openai-editorial-baseline-graphic-000140"
+    },
+    "version-000183": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000183--slide-06-fresh-magnetic-field-openai-bold-contrast-graphic-000141"
+    },
+    "version-000184": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000184--slide-06-fresh-signal-gate-gemini-editorial-baseline-graphic-000142"
+    },
+    "version-000185": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000185--slide-06-fresh-signal-gate-gemini-bold-contrast-graphic-000143"
+    },
+    "version-000186": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000186--slide-06-fresh-signal-gate-gemini-minimal-restraint-graphic-000144"
+    },
+    "version-000187": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000187--slide-06-fresh-signal-gate-openai-editorial-baseline-graphic-000145"
+    },
+    "version-000188": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000188--slide-06-fresh-signal-gate-openai-bold-contrast-graphic-000146"
+    },
+    "version-000189": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000189--slide-06-fresh-signal-gate-openai-minimal-restraint-graphic-000147"
+    },
+    "version-000190": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000190--slide-06-followup-sketch-gemini-editorial-baseline-graphic-000148"
+    },
+    "version-000191": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000191--slide-06-followup-sketch-gemini-bold-contrast-graphic-000149"
+    },
+    "version-000192": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000192--slide-06-followup-sketch-gemini-minimal-restraint-graphic-000150"
+    },
+    "version-000193": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000193--slide-06-followup-sketch-gemini-atmospheric-context-graphic-000151"
+    },
+    "version-000194": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000194--slide-06-followup-sketch-openai-editorial-baseline-graphic-000152"
+    },
+    "version-000195": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000195--slide-06-followup-sketch-openai-bold-contrast-graphic-000153"
+    },
+    "version-000196": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000196--slide-06-followup-sketch-openai-minimal-restraint-graphic-000154"
+    },
+    "version-000197": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000197--slide-06-followup-sketch-openai-atmospheric-context-graphic-000155"
+    },
+    "version-000198": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000198--slide-06-html-clean-gate-gemini"
+    },
+    "version-000199": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000199--slide-06-html-refined-chamber-gemini"
+    },
+    "version-000200": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000200--slide-06-html-clean-gate-openai"
+    },
+    "version-000201": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000201--slide-06-html-refined-chamber-openai"
+    },
+    "version-000202": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000202--slide-06-html-polish-v1-codex"
+    },
+    "version-000203": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000203--slide-07-native-shell-v1"
+    },
+    "version-000204": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000204--slide-06-v202-handoff-thicker-v1"
+    },
+    "version-000205": {
+      "slideId": "slide-07",
+      "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000205--slide-07-native-shell-v2"
+    },
+    "version-000206": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000206--slide-06-v202-left-connector-direct-v1"
+    },
+    "version-000207": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000207--slide-06-cycle-variant-207"
+    },
+    "version-000208": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000208--slide-06-cycle-variant-208"
+    },
+    "version-000210": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000210--slide-06-v207-center-forward-v1"
+    },
+    "version-000211": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000211--slide-06-v208-center-forward-v1"
+    },
+    "version-000212": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000212--slide-06-v208-user-markup-gemini-v1"
+    },
+    "version-000213": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000213--slide-06-v208-user-markup-openai-v1"
+    },
+    "version-000214": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000214--slide-06-v212-centered-underlay-gemini-v1"
+    },
+    "version-000215": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000215--slide-06-v212-centered-underlay-openai-v1"
+    },
+    "version-000216": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000216--slide-06-v212-centered-overlap-gemini-v1"
+    },
+    "version-000217": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000217--slide-06-v212-centered-overlap-openai-v1"
+    },
+    "version-000218": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000218--slide-06-v214-line-labels-v1"
+    },
+    "version-000219": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000219--slide-06-v214-tight-pills-v1"
+    },
+    "version-000220": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000220--slide-06-v216-smaller-bordered-ribbons-v1"
+    },
+    "version-000221": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000221--slide-06-exact-html-snippet-v1"
+    },
+    "version-000222": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000222--slide-06-v220-thick-border-gemini-v1"
+    },
+    "version-000223": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000223--slide-06-v220-thick-border-openai-v1"
+    },
+    "version-000224": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000224--slide-06-exact-html-snippet-left-ribbons-v1"
+    },
+    "version-000225": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000225--slide-06-left-ribbons-border-openai-v1"
+    },
+    "version-000226": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000226--slide-06-left-ribbons-border-gemini-v1"
+    },
+    "version-000227": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000227--slide-06-v222-more-runway-v1"
+    },
+    "version-000228": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000228--slide-06-center-convergence-chamber-openai-a"
+    },
+    "version-000229": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000229--slide-06-center-convergence-chamber-openai-b"
+    },
+    "version-000230": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000230--slide-06-center-convergence-chamber-gemini-a"
+    },
+    "version-000231": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000231--slide-06-center-convergence-chamber-gemini-b"
+    },
+    "version-000232": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000232--slide-06-center-reconciliation-ring-openai-a"
+    },
+    "version-000233": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000233--slide-06-center-reconciliation-ring-openai-b"
+    },
+    "version-000234": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000234--slide-06-center-reconciliation-ring-gemini-a"
+    },
+    "version-000235": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000235--slide-06-center-reconciliation-ring-gemini-b"
+    },
+    "version-000236": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000236--slide-06-center-case-frame-openai-a"
+    },
+    "version-000237": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000237--slide-06-center-case-frame-openai-b"
+    },
+    "version-000238": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000238--slide-06-center-case-frame-gemini-a"
+    },
+    "version-000239": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000239--slide-06-center-case-frame-gemini-b"
+    },
+    "version-000240": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000240--slide-06-center-prism-refractor-openai-a"
+    },
+    "version-000241": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000241--slide-06-center-prism-refractor-openai-b"
+    },
+    "version-000242": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000242--slide-06-center-prism-refractor-gemini-a"
+    },
+    "version-000243": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000243--slide-06-center-prism-refractor-gemini-b"
+    },
+    "version-000244": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000244--slide-06-v227-ribbon-tail-trim-v1"
+    },
+    "version-000245": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000245--slide-06-center-spin-braid-openai-v1"
+    },
+    "version-000246": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000246--slide-06-center-spin-fan-openai-v1"
+    },
+    "version-000247": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000247--slide-06-center-spin-braid-gemini-v1"
+    },
+    "version-000248": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000248--slide-06-center-spin-fan-gemini-v1"
+    },
+    "version-000249": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000249--slide-06-center-rotor-trunk-codex-v1"
+    },
+    "version-000250": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000250--slide-06-center-rotor-split-codex-v1"
+    },
+    "version-000251": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000251--slide-06-center-ring-style-openai-v1"
+    },
+    "version-000252": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000252--slide-06-center-ring-style-gemini-v1"
+    },
+    "version-000253": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000253--test-import-probe"
+    },
+    "version-000265": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000265--slide-06-right-payoff-v257-clean-rows-openai-v2"
+    },
+    "version-000266": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000266--slide-06-right-payoff-v257-clean-rows-gemini-v2"
+    },
+    "version-000269": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000269--slide-06-user-html-comet-ring-v1"
+    },
+    "version-000270": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000270--slide-06-user-html-gemini-note-pipeline-v1"
+    },
+    "version-000271": {
+      "slideId": "slide-06",
+      "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000271--slide-06-user-html-final-official-v1"
+    },
+    "version-000290": {
+      "slideId": "slide-08",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000290--slide-08-user-html-market-opportunity-v1"
+    },
+    "version-000291": {
+      "slideId": "slide-11",
+      "dir": "projects/designer-health/slide-figures/slide-11-team/versions/version-000291--slide-11-team-figma-import-v1"
+    },
+    "version-000292": {
+      "slideId": "slide-10",
+      "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000292--slide-10-user-html-studio-html-lab"
+    },
+    "version-000293": {
+      "slideId": "slide-10",
+      "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000293--slide-10-user-html-studio-html-lab"
+    },
+    "version-000299": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft"
+    },
+    "version-000308": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000308--slide-05-branch-c-structural-alt-openai-a"
+    },
+    "version-000309": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000309--slide-05-branch-c-structural-alt-openai-b"
+    },
+    "version-000310": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000310--slide-05-branch-c-structural-alt-openai-c"
+    },
+    "version-000311": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000311--slide-05-branch-c-structural-alt-gemini-a"
+    },
+    "version-000312": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000312--slide-05-branch-c-structural-alt-gemini-b"
+    },
+    "version-000313": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000313--slide-05-branch-c-structural-alt-openai-extra"
+    },
+    "version-000321": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000321--slide-02-user-html-studio-html-lab"
+    },
+    "version-000322": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000322--slide-02-user-html-studio-html-lab"
+    },
+    "version-000323": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000323--slide-02-user-html-studio-html-lab"
+    },
+    "version-000324": {
+      "slideId": "slide-02",
+      "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000324--slide-02-user-html-studio-html-lab"
+    },
+    "version-000325": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000325--slide-03-user-html-studio-html-lab"
+    },
+    "version-000326": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000326--slide-05-user-html-slide-04-attempt-history-vignette-1"
+    },
+    "version-000327": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000327--slide-03-user-html-slide-03-upstream-capacity-draft"
+    },
+    "version-000328": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000328--slide-03-user-html-slide-03-upstream-capacity-draft"
+    },
+    "version-000329": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000329--slide-03-user-html-studio-html-lab"
+    },
+    "version-000330": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000330--slide-03-user-html-studio-html-lab"
+    },
+    "version-000331": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000331--slide-03-user-html-studio-html-lab"
+    },
+    "version-000332": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000332--slide-03-user-html-studio-html-lab"
+    },
+    "version-000333": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000333--slide-05-user-html-studio-html-lab"
+    },
+    "version-000334": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000334--slide-03-user-html-studio-html-lab"
+    },
+    "version-000335": {
+      "slideId": "slide-03",
+      "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000335--slide-03-user-html-studio-html-lab"
+    },
+    "version-000336": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000336--slide-05-user-html-studio-html-lab"
+    },
+    "version-000337": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000337--slide-05-user-html-studio-html-lab"
+    },
+    "version-000338": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000338--slide-05-user-html-studio-html-lab"
+    },
+    "version-000339": {
+      "slideId": "slide-05",
+      "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000339--slide-05-user-html-studio-html-lab"
+    },
+    "version-000340": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000340--slide-12-user-html-studio-html-lab"
+    },
+    "version-000315": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000315--slide-12-create-openai-a"
+    },
+    "version-000316": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000316--slide-12-create-openai-b"
+    },
+    "version-000317": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000317--slide-12-create-openai-c"
+    },
+    "version-000318": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000318--slide-12-create-gemini-a"
+    },
+    "version-000319": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000319--slide-12-create-gemini-c"
+    },
+    "version-000320": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000320--slide-12-create-openai-bonus"
+    },
+    "version-000341": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft"
+    },
+    "version-000342": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000342--slide-12-create-apr06-openai-a"
+    },
+    "version-000343": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000343--slide-12-create-apr06-openai-b"
+    },
+    "version-000344": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000344--slide-12-create-apr06-openai-c"
+    },
+    "version-000345": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000345--slide-12-create-apr06-openai-d"
+    },
+    "version-000346": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000346--slide-12-create-apr06-openai-e"
+    },
+    "version-000347": {
+      "slideId": "slide-12",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000347--slide-12-create-apr06-openai-f"
+    },
+    "version-000349": {
+      "slideId": "slide-11",
+      "dir": "projects/designer-health/slide-figures/slide-11-team/versions/version-000349--slide-11-user-html-founder-grid-refresh-v1"
+    }
+  }
+}

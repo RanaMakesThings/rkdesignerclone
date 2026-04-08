@@ -1,0 +1,7 @@
+{
+  "model": "gemini-3.1-pro-preview",
+  "temperature": 0.4,
+  "images": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/callback-reference-board.png"
+  ]
+}

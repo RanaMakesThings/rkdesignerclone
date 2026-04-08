@@ -1,0 +1,23 @@
+{
+  "provider": "claude",
+  "verdict": "blocker",
+  "rationale": "The candidate slide has real content replacing the shell placeholders in the header and body, but it suffers from multiple visible layout regressions: the left hero ask block and the use-of-funds ribbon are both clipped/overflowing — stat numbers ('18', '20', 'months of') and the ribbon copy are visibly cut off by the card boundary, making required locked copy illegible. The Designer Health footer logo has been replaced by a broken image placeholder (white box with a small unresolved image stub in the bottom-right corner), which is a direct footer regression. The overall card height exceeds the slide canvas, causing the Validate milestone card and bottom ribbon to bleed below the visible frame.",
+  "blockers": [
+    "Left hero card stat row ('18 / 20 / months of') is clipped and overlaps with the use-of-funds ribbon, making required copy illegible",
+    "Use-of-funds ribbon text is cut off at the bottom of the card and not fully readable",
+    "Footer Designer Health logo is broken — replaced by an unresolved image stub/placeholder box",
+    "Master card overflows the slide canvas — Validate milestone card and bottom ribbon are partially outside the visible slide area"
+  ],
+  "nextMove": "Fix the master card height so all three milestone cards and the use-of-funds ribbon fit within the slide canvas; repair the clipped stat row in the left hero block; restore the correct Designer Health SVG/PNG logo in the footer position.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate slide has real content replacing the shell placeholders in the header and body, but it suffers from multiple visible layout regressions: the left hero ask block and the use-of-funds ribbon are both clipped/overflowing — stat numbers ('18', '20', 'months of') and the ribbon copy are visibly cut off by the card boundary, making required locked copy illegible. The Designer Health footer logo has been replaced by a broken image placeholder (white box with a small unresolved image stub in the bottom-right corner), which is a direct footer regression. The overall card height exceeds the slide canvas, causing the Validate milestone card and bottom ribbon to bleed below the visible frame.",
+    "blockers": [
+      "Left hero card stat row ('18 / 20 / months of') is clipped and overlaps with the use-of-funds ribbon, making required copy illegible",
+      "Use-of-funds ribbon text is cut off at the bottom of the card and not fully readable",
+      "Footer Designer Health logo is broken — replaced by an unresolved image stub/placeholder box",
+      "Master card overflows the slide canvas — Validate milestone card and bottom ribbon are partially outside the visible slide area"
+    ],
+    "nextMove": "Fix the master card height so all three milestone cards and the use-of-funds ribbon fit within the slide canvas; repair the clipped stat row in the left hero block; restore the correct Designer Health SVG/PNG logo in the footer position."
+  }
+}

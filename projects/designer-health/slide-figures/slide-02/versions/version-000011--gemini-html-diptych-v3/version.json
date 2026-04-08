@@ -1,0 +1,14 @@
+{
+  "id": "version-000011",
+  "slideId": "slide-02",
+  "slideDir": "projects/designer-health/slide-figures/slide-02",
+  "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000011--gemini-html-diptych-v3",
+  "label": "gemini-html-diptych-v3",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.440Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-02/gemini-html-diptych-v3"
+  ]
+}

@@ -1,0 +1,45 @@
+Generate a self-contained HTML document for one premium 16:9 investor pitch
+deck slide. Use inline CSS only. Do not use external scripts. If you use SVG,
+keep it inline inside the HTML.
+
+Use this exact copy:
+
+Header:
+Vox prepares the visit before it starts.
+
+Subheader:
+Vox interviews, structures, and hands off a brief the clinician can verify and use.
+
+Main figure:
+Build one centered horizontal four-step workflow strip across the middle of the
+slide with evenly weighted rounded stages:
+Invite, Interview, Structure, Verify
+
+Design constraints:
+- white background
+- grayscale base
+- one restrained blue accent
+- clean sans typography
+- rounded geometry
+- subtle connectors only
+- no swimlanes
+- no thick arrows
+- no fake software UI
+- no dense captions
+- no decorative infographic clutter
+
+Stage intent:
+- Invite: patient receives a secure pre-visit prompt
+- Interview: adaptive interview captures the story in natural language
+- Structure: Vox turns the story into a structured brief
+- Verify: clinician scans, verifies, and uses the brief
+
+Important:
+- `Structure` should be the visual star, but not oversized
+- include a little micro-structure inside the stage cards so the workflow feels
+  concrete
+- use these small trust tags only near the later stages:
+  provenance, explicit unknowns, verification queue
+- the result should feel like a calm editorial deck figure, not a dashboard
+
+Return HTML only.

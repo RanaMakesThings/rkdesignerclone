@@ -1,0 +1,106 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-proof-tiles-pd-template-1-reception-window-photo",
+    "family": "proof_tiles",
+    "deckId": "pd-template-1",
+    "theme": "pd-template-1",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Demand is outpacing clinical capacity.",
+    "subtitle": "",
+    "chips": [],
+    "footnote": "[1] AMN/Merritt Hawkins physician appointment wait-time survey. [2] CDC/NCHS delayed-care measure."
+  },
+  "constraints": {
+    "figureJob": "Use one restrained reception-desk image as a realistic substrate so the two stats feel attached to real scheduling work.",
+    "focalPoint": "The quiet reception image first, then the two proof metrics.",
+    "layout": "Header top left, one full-width monochrome reception image centered above two proof tiles.",
+    "big": [
+      "The reception image band",
+      "The two proof metrics"
+    ],
+    "quiet": [
+      "Eyebrows",
+      "Support copy",
+      "Footnote"
+    ],
+    "accentTargets": [
+      "none"
+    ],
+    "forbidden": [
+      "cheerful lifestyle stock",
+      "colorful photo treatment"
+    ],
+    "semanticGuards": []
+  },
+  "copyPolicy": {
+    "locked": [
+      "Demand is outpacing clinical capacity.",
+      "~1 month",
+      "10.6%"
+    ],
+    "preferred": [],
+    "optional": [],
+    "forbidden": []
+  },
+  "media": {
+    "slots": [
+      {
+        "id": "hero-photo",
+        "label": "Reception scheduling photo",
+        "query": "clinic front desk scheduling appointment healthcare",
+        "orientation": "landscape",
+        "maxCandidates": 4,
+        "placementNote": "Use as a quiet realistic substrate."
+      }
+    ],
+    "selection": [
+      {
+        "slotId": "hero-photo",
+        "candidateId": "7108318",
+        "placement": "background",
+        "treatment": "soft",
+        "objectPosition": "center center"
+      }
+    ]
+  },
+  "body": {
+    "motif": "reception-window-photo",
+    "tiles": [
+      {
+        "eyebrow": "Access",
+        "metric": "~1 month",
+        "detail": "Average wait for a new doctor appointment",
+        "kicker": "Up 19% in three years [1]",
+        "graphic": {
+          "kind": ""
+        }
+      },
+      {
+        "eyebrow": "Deferred care",
+        "metric": "10.6%",
+        "detail": "Adults delayed or did not get care because no appointment was available when needed [2]",
+        "kicker": "",
+        "graphic": {
+          "kind": ""
+        }
+      }
+    ]
+  },
+  "trace": [
+    {
+      "excerpt": "Reception Window Photo",
+      "targetPath": "body.motif",
+      "ruleType": "body",
+      "note": "Use the reception-desk photo as a quiet full-width substrate."
+    },
+    {
+      "excerpt": "clinic front desk scheduling appointment healthcare",
+      "targetPath": "media.slots[0].query",
+      "ruleType": "constraint",
+      "note": "Search around scheduling and reception rather than generic clinic imagery."
+    }
+  ]
+}

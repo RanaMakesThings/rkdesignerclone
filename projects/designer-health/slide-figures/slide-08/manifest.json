@@ -1,0 +1,117 @@
+{
+  "slideId": "slide-08",
+  "slideDir": "projects/designer-health/slide-figures/slide-08",
+  "currentVersionId": "version-000082",
+  "versions": [
+    {
+      "id": "version-000077",
+      "label": "artifact-callouts-native",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T21:13:43.177Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000077--artifact-callouts-native",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000078",
+      "label": "clinician-brief-attempt-a-v1",
+      "status": "archived",
+      "sourceKind": "user-html",
+      "createdAt": "2026-03-31T23:18:19.811Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000078--clinician-brief-attempt-a-v1",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000079",
+      "label": "clinician-brief-attempt-a-v2-slide-chrome",
+      "status": "archived",
+      "sourceKind": "fine-tune",
+      "createdAt": "2026-03-31T23:25:28.206Z",
+      "baseVersionId": "version-000078",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000079--clinician-brief-attempt-a-v2-slide-chrome",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000080",
+      "label": "clinician-brief-attempt-a-v3-legibility-pass",
+      "status": "archived",
+      "sourceKind": "fine-tune",
+      "createdAt": "2026-04-01T04:52:57.250Z",
+      "baseVersionId": "version-000079",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000080--clinician-brief-attempt-a-v3-legibility-pass",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000081",
+      "label": "clinician-brief-attempt-a-v4-locked-graphic",
+      "status": "archived",
+      "sourceKind": "fine-tune",
+      "createdAt": "2026-04-01T14:36:34.642Z",
+      "baseVersionId": "version-000080",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000081--clinician-brief-attempt-a-v4-locked-graphic",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000082",
+      "label": "clinician-brief-attempt-a-v5-locked-width",
+      "status": "current",
+      "sourceKind": "fine-tune",
+      "createdAt": "2026-04-01T15:04:51.379Z",
+      "baseVersionId": "version-000081",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000082--clinician-brief-attempt-a-v5-locked-width",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000083",
+      "label": "clinician-brief-attempt-a-v6-fixed-layout-scale",
+      "status": "archived",
+      "sourceKind": "fine-tune",
+      "createdAt": "2026-04-01T15:16:14.235Z",
+      "baseVersionId": "version-000082",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000083--clinician-brief-attempt-a-v6-fixed-layout-scale",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000084",
+      "label": "clinician-brief-attempt-a-v7-bigger-type-and-clean-frame",
+      "status": "archived",
+      "sourceKind": "fine-tune",
+      "createdAt": "2026-04-01T15:23:31.288Z",
+      "baseVersionId": "version-000082",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000084--clinician-brief-attempt-a-v7-bigger-type-and-clean-frame",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000129",
+      "label": "slide-08-template-shell-catchup-v1",
+      "status": "draft",
+      "sourceKind": "fine-tune-draft",
+      "createdAt": "2026-04-01T23:21:18.292Z",
+      "baseVersionId": "version-000082",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000129--slide-08-template-shell-catchup-v1",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000290",
+      "label": "slide-08-user-html-market-opportunity-v1",
+      "status": "draft",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-05T14:33:10.167Z",
+      "baseVersionId": "version-000082",
+      "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000290--slide-08-user-html-market-opportunity-v1",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

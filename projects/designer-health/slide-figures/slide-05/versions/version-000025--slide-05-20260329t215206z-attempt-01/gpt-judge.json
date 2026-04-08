@@ -1,0 +1,27 @@
+{
+  "provider": "gpt",
+  "status": "not_applied",
+  "summary": "The connector arrow did change, but the requested delta was not satisfied because the slide layout and multiple non-arrow elements also changed significantly, violating the 'change only the connector arrow' requirement.",
+  "evidence": [
+    "The arrow direction/location changed from a rightward arc ending near the top bar area to a downward-left arrow pointing into the blue hero box.",
+    "The overall slide framing changed substantially: the AFTER image is zoomed out with much more white space and all content appears smaller and repositioned.",
+    "The title block moved and scaled down relative to the canvas compared with BEFORE.",
+    "The blue hero box changed size/position and gained a stronger shadow treatment compared with BEFORE.",
+    "The support block moved and resized, so the layout is not unchanged."
+  ],
+  "nextPrompt": "Keep the entire slide pixel-identical to the current version and edit only the connector path: replace it with one smooth broad arc from the source-bar history wedge to the blue hero, with even curvature and no extra bend near the arrowhead. Do not move, resize, restyle, or reframe any other element.",
+  "needsHuman": true,
+  "raw": {
+    "status": "not_applied",
+    "summary": "The connector arrow did change, but the requested delta was not satisfied because the slide layout and multiple non-arrow elements also changed significantly, violating the 'change only the connector arrow' requirement.",
+    "evidence": [
+      "The arrow direction/location changed from a rightward arc ending near the top bar area to a downward-left arrow pointing into the blue hero box.",
+      "The overall slide framing changed substantially: the AFTER image is zoomed out with much more white space and all content appears smaller and repositioned.",
+      "The title block moved and scaled down relative to the canvas compared with BEFORE.",
+      "The blue hero box changed size/position and gained a stronger shadow treatment compared with BEFORE.",
+      "The support block moved and resized, so the layout is not unchanged."
+    ],
+    "nextPrompt": "Keep the entire slide pixel-identical to the current version and edit only the connector path: replace it with one smooth broad arc from the source-bar history wedge to the blue hero, with even curvature and no extra bend near the arrowhead. Do not move, resize, restyle, or reframe any other element.",
+    "needsHuman": true
+  }
+}

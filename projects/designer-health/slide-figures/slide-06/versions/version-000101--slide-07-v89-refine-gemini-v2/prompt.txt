@@ -1,0 +1,43 @@
+Create a premium 16:9 investor-deck slide figure for Designer Health.
+
+Use the attached slide-07 version-89 image as the main composition reference.
+Preserve the full storyboard logic.
+
+Keep this exact text visible and legible:
+- `Before visit`
+- `Visit begins`
+- `1`
+- `Invite sent`
+- `Patient receives secure pre-visit link.`
+- `2`
+- `Adaptive interview`
+- `Vox asks follow-up questions and captures the story.`
+- `3`
+- `Brief prepared`
+- `Patient story becomes a clinician-ready handoff.`
+- `4`
+- `Clinician starts prepared`
+- `Sets up a more efficient visit.`
+
+Refinement goals:
+- keep beat 1 almost unchanged
+- keep beat 3 as the hero object with `VOX`
+- in beat 2, replace meta bubbles with actual spoken question/answer bubbles
+- in beat 4, simplify to one clinician and one tablet
+- match the human figure style to the attached references more closely
+
+Suggested beat-2 bubble text:
+- `How long has this been going on?`
+- `About five days.`
+
+Style target:
+- premium editorial deck graphic
+- grayscale base, restrained teal accents
+- people should feel more like the reference family and less generic
+
+Important:
+- no thought bubbles
+- no missing labels
+- no clipboard
+- no extra second device for the clinician
+- keep everything clean and deck-readable

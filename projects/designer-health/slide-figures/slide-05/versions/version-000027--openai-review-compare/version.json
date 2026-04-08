@@ -1,0 +1,14 @@
+{
+  "id": "version-000027",
+  "slideId": "slide-05",
+  "slideDir": "projects/designer-health/slide-figures/slide-05",
+  "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000027--openai-review-compare",
+  "label": "openai-review-compare",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.574Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-05/openai-review-compare"
+  ]
+}

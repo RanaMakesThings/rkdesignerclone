@@ -1,0 +1,185 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investor Deck – Slide 09</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: #F7F6F3;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 64px 96px 56px;
+  }
+
+  /* ── HEADER ─────────────────────────────────────────────── */
+  .header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 52px;
+  }
+
+  .header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: #1A1A1A;
+    letter-spacing: -0.4px;
+    line-height: 1.25;
+  }
+
+  /* ── CARD GRID ───────────────────────────────────────────── */
+  .card-grid {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    flex: 1;
+    align-items: stretch;
+  }
+
+  /* ── CARD BASE ───────────────────────────────────────────── */
+  .card {
+    flex: 1;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #E4E2DC;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 44px 44px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.045);
+  }
+
+  /* ── KICKER ──────────────────────────────────────────────── */
+  .kicker {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #8A8580;
+    margin-bottom: 28px;
+  }
+
+  /* ── IMAGE WRAPPER ───────────────────────────────────────── */
+  .image-wrap {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #F0EEE9;
+    flex-shrink: 0;
+    height: 360px;
+  }
+
+  .image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  /* ── SUPPORT LINE ────────────────────────────────────────── */
+  .support {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3A3835;
+    line-height: 1.6;
+    margin-top: 28px;
+  }
+
+  /* ── CHIP FIELD ──────────────────────────────────────────── */
+  .chip-field {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    height: 34px;
+    padding: 0 16px;
+    border-radius: 100px;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+  }
+
+  /* left card chips – filled gray */
+  .chip-gray {
+    background: #ECEAE5;
+    color: #4A4845;
+    border: 1px solid #DEDAD3;
+  }
+
+  /* right card – vox chip blue */
+  .chip-blue {
+    background: #1B4FD8;
+    color: #FFFFFF;
+    border: 1px solid #1B4FD8;
+  }
+
+  /* right card – faint ghost chip */
+  .chip-ghost {
+    background: transparent;
+    color: #C8C5BF;
+    border: 1.5px dashed #DEDAD3;
+  }
+
+  /* ── RIGHT CARD SPACER (airiness) ───────────────────────── */
+  .card-right .support {
+    margin-top: 32px;
+  }
+
+  .card-right .chip-field {
+    margin-top: 28px;
+  }
+
+  /* ── DIVIDER LINE BETWEEN HEADER AND CARDS ───────────────── */
+  .header-rule {
+    width: 100%;
+    height: 1px;
+    background: #E4E2DC;
+    margin-bottom: 44px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>AI has traction after the visit. The visit itself is still thinly served.</h1>
+  </header>
+
+  <div class="header-rule"></div>
+
+  <!-- CARD GRID -->
+  <div class="card-grid">
+
+    <!-- LEFT CARD -->
+    <div class="card card-left">
+      <div class="kicker">AI impact after the visit</div>
+
+      <div class="image-wrap">
+        <img
+          src="/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-doc-admin-slide7-v113-batch-b/openai/version-06--minimal-restraint/image-01.png"
+          alt="Clinician reviewing documentation on dual monitors"
+        >
+      </div>
+
+      <p class="support">Ambient scribes validate clinician buy-in for AI assistance.</p>
+
+      <div class="chip

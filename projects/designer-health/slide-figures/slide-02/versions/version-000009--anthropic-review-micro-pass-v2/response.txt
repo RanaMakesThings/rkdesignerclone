@@ -1,0 +1,25 @@
+## Diagnosis (ordered by importance)
+
+1. **`31 days` dominates at the wrong scale.** At roughly 4× the body text size, it pulls all visual gravity to the upper-right corner and competes with the trend line rather than annotating it. The number should punctuate the chart, not eclipse it.
+2. **The shortage banner reads out of sequence.** `1 in 4+` appears before the explanatory sentence, but the eye lands on the fraction, jumps to "Americans live in…," then backtracks to `92.3 million` — three cognitive stops before the point lands. The logical order is: scope → fraction → consequence.
+3. **`1 in 4+` is ambiguous and typographically weak.** The `+` modifier is doing work a symbol can't cleanly do. `More than 1 in 4` is unambiguous and scans in a single pass. The current form also creates an orphaned label problem — the left column (`1 in 4+`) and the right column (the sentence) feel like two separate elements rather than one integrated stat.
+4. **`92.3 million` is a distraction, not a proof.** The HPSA fraction already implies scale. Adding the raw count forces the reader to do arithmetic (`92.3M ÷ 341.8M ≈ 27%`) to confirm what the fraction already states. It adds density without adding argument.
+5. **Vertical spacing is uneven across three zones.** The chart area, the specialty panel, and the shortage banner each have different internal padding, and the gap between the chart zone and the banner is noticeably tighter than the gap between the headline and the chart. The slide feels assembled rather than composed.
+
+---
+
+## Action List (concrete fixes)
+
+1. **Reduce `31 days` by ~40% and reposition it as a callout label pinned to the 2025 data point** — same teal pill treatment, but sized closer to 2× body text rather than 4×. Let the trend line carry the drama; let the number confirm it.
+2. **Rewrite and reorder the shortage banner** as: leading label → fraction → single explanatory clause. See wording recommendation below. Remove `92.3 million` entirely from the visible slide; retain it in a footnote if sourcing requires it.
+3. **Replace `1 in 4+` with `More than 1 in 4`** set at a large but not oversized display weight (roughly the same visual mass as `26` on the trend line), so it reads as a peer data point rather than a competing hero number.
+4. **Normalize vertical rhythm** by setting a single baseline grid unit (suggest 8px or 12px) and snapping the chart bottom, the divider line, and the banner top to consistent multiples of it. Specifically: increase the gap between the chart zone and the banner by at least one grid unit, and add equal internal top/bottom padding inside the banner box.
+5. **Trim the specialty panel label.** `WHERE WAITS ARE LONGEST` is accurate but adds a second sub-headline competing with the chart's implicit story. Replace it with a single quiet label — e.g., `2025 wait times by specialty (days)` — and let the bars speak. This also frees horizontal space to widen the bars slightly, improving readability of the length differences between OB/GYN (41.8) and Family medicine (23.5).
+
+---
+
+## Shortage Banner — Recommended Wording
+
+> **More than 1 in 4 Americans** lives in a federally designated primary care shortage area — where only **48%** of primary care need is currently being met.
+
+This version leads with the ratio (the most memorable unit), names the designation without requiring the reader to parse an acronym or a raw population count, and closes with the consequence that makes the ratio meaningful. The two bolded elements — the fraction and the unmet-need percentage — give a designer two natural anchor points for typographic emphasis without requiring a third number (`92.3 million`) to validate either claim. It also fits comfortably in two lines at a reasonable banner text size, which resolves the current layout tension between the left stat block and the right explanatory sentence.

@@ -1,0 +1,113 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-proof-tiles-pd-template-1",
+    "family": "proof_tiles",
+    "deckId": "pd-template-1",
+    "theme": "pd-template-1",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Demand is outpacing clinical capacity.",
+    "subtitle": "",
+    "chips": [],
+    "footnote": "[1] AMN/Merritt Hawkins physician appointment wait-time survey. [2] CDC/NCHS delayed-care measure."
+  },
+  "constraints": {
+    "figureJob": "State the system problem with two external proof points about access and deferred care.",
+    "focalPoint": "The two dominant proof metrics.",
+    "layout": "Simple title at top left, two large proof tiles centered below, faint calendar grid behind the tiles only.",
+    "big": [
+      "The two main numbers",
+      "The accent blocks"
+    ],
+    "quiet": [
+      "Tile eyebrows",
+      "The citation footnote"
+    ],
+    "accentTargets": [
+      "The two proof blocks"
+    ],
+    "forbidden": [
+      "over-designed infographic",
+      "ornament around the tiles"
+    ],
+    "semanticGuards": []
+  },
+  "copyPolicy": {
+    "locked": [
+      "Demand is outpacing clinical capacity.",
+      "~1 month",
+      "10.6%"
+    ],
+    "preferred": [
+      "Average wait for a new doctor appointment",
+      "Adults delayed or did not get care because no appointment was available when needed"
+    ],
+    "optional": [
+      "Keep the calendar motif extremely faint."
+    ],
+    "forbidden": []
+  },
+  "body": {
+    "motif": "calendar",
+    "tiles": [
+      {
+        "eyebrow": "Access",
+        "metric": "~1 month",
+        "detail": "Average wait for a new doctor appointment",
+        "kicker": "Up 19% in three years [1]",
+        "graphic": {
+          "kind": "calendar-delay"
+        }
+      },
+      {
+        "eyebrow": "Deferred care",
+        "metric": "10.6%",
+        "detail": "Adults delayed or did not get care because no appointment was available when needed [2]",
+        "kicker": "",
+        "graphic": {
+          "kind": "one-in-ten"
+        }
+      }
+    ]
+  },
+  "trace": [
+    {
+      "excerpt": "Demand is outpacing clinical capacity.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the slide header directly."
+    },
+    {
+      "excerpt": "State the system problem clearly: the issue is constrained clinical capacity, not just healthcare is hard.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Lock the proof-of-problem purpose."
+    },
+    {
+      "excerpt": "Two large proof tiles showing worsening access and delayed care.",
+      "targetPath": "body.tiles",
+      "ruleType": "body",
+      "note": "Use the proof-tiles family."
+    },
+    {
+      "excerpt": "Main numbers should dominate visually.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "Push the metrics above the support copy."
+    },
+    {
+      "excerpt": "If you use a motif, make it extremely faint and keep it behind the tiles, not around them.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Constrain the calendar motif to the background layer."
+    },
+    {
+      "excerpt": "These are the first true external-fact citations in the deck.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Keep the two cited proof numbers intact."
+    }
+  ]
+}

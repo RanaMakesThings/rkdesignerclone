@@ -1,0 +1,7 @@
+{
+  "model": "gpt-5.4",
+  "images": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000244--slide-06-v227-ribbon-tail-trim-v1/preview.png"
+  ],
+  "maxOutputTokens": 6000
+}

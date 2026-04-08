@@ -1,0 +1,93 @@
+Generate one self-contained HTML document for a premium 1920x1080 investor deck
+slide.
+
+Use the two provided raster images directly with normal `<img>` tags. Do not
+redraw, reinterpret, stylize, or replace them.
+Show each selected image in full.
+Do not crop, clip, zoom, or use `object-fit: cover`.
+Preserve the original framing exactly and use `contain`-style treatment.
+
+Right image path:
+/Users/kabeer/Desktop/757B1C3E-6121-4432-8524-C7BDE4EE6722.png
+
+Left image path:
+/Users/kabeer/Desktop/4FAA88B9-3C54-4321-B182-C8DB4ED0A963.png
+
+This slide should not feel like two cards with image plus caption plus chips.
+It should feel like headline plus two territory arguments, with the images as
+supporting evidence.
+
+Use this exact on-slide copy:
+
+Headline:
+AI has traction after the visit. The visit itself is still thinly served.
+
+Left kicker:
+AI impact after the visit
+
+Left statement:
+Ambient scribes validate clinician buy-in for AI assistance.
+
+Right kicker:
+AI impact during the visit
+
+Right statement:
+Few tools actually change how the encounter is conducted. Vox does.
+
+Left density caption:
+More crowded
+
+Right density caption:
+Still thin
+
+Layout rules:
+- top 20 to 22 percent of the slide is headline only
+- bottom area is a two-column layout
+- left column about 43 percent
+- right column about 57 percent
+- right side should feel slightly more important
+- do not use big white rounded cards
+- do not use lots of padding or obvious module boxes
+- each panel stacks:
+  - kicker
+  - strong statement
+  - smaller supporting image
+  - tiny density caption
+  - tiny density marker
+- statement should be the dominant element in each panel
+- image should be smaller than in the current slide-9 compare rounds
+- image is evidence, not the main event
+
+Image treatment:
+- preserve the full source framing
+- keep the images cool gray or lightly warmed
+- a very subtle wash or reduced contrast is acceptable
+- do not add a giant blue brief or any large object inside the image
+
+Density marker rules:
+- left side:
+  compact cluster of 6 to 8 small gray nodes or bars
+- right side:
+  one blue VOX marker plus one or two faint outline markers with lots of
+  whitespace
+- do not use text chips, pill tags, or labeled chip rows
+
+Style rules:
+- white or warm-white background
+- premium editorial investor-deck feel
+- restrained grayscale palette
+- one blue accent only for the VOX marker
+- subtle hierarchy, not generic SaaS cards
+
+Do not add:
+- subheader
+- arrows
+- center explainer
+- workflow map
+- extra body copy
+
+Design rule:
+If someone squints from far away, they should read the two claims first and
+only then register the images as supporting evidence.
+
+Return only the HTML document with inline CSS and any inline SVG needed.

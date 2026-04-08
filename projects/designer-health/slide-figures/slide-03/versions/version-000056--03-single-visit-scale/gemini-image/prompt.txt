@@ -1,0 +1,22 @@
+Create a 16:9 pitch-deck slide mockup for Vox.
+
+Objective:
+Explain one mechanism first, then scale it up: AI-assisted prep shortens story reconstruction on a single visit, and repeated across five visits this creates enough room for one extra patient.
+
+Style:
+- Premium editorial healthcare deck
+- Off-white background, blue/green/gray palette
+- Modern typography with a Montserrat feel
+- Very clear hierarchy
+- No dashboard UI and no cartoon arrows everywhere
+
+Variant concept:
+Single-visit explainer plus scale-up result.
+- Upper portion of slide: one large visit bar shown before and after, with only story reconstruction getting shorter
+- Small label or subtle inward arrows indicate that AI-assisted prep shortens story reconstruction
+- Lower portion of slide: a simplified result statement like 5 visits becomes 6 visits in the same day
+- Could use a clean equation or row transformation, but keep it elegant
+- Headline: More efficient visits will increase supply.
+- Subheader: Small per-visit gains compound.
+
+This should feel like the clearest explanatory version, with minimal cognitive load.

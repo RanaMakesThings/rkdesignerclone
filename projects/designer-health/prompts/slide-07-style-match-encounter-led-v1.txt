@@ -1,0 +1,40 @@
+Create a figure-only 16:9 investor-deck illustration for Designer Health.
+
+Do not include any slide title, captions, beat labels, UI text, or decorative
+words in the image.
+
+Composition:
+- one left-to-right four-beat storyboard on a shared baseline
+- beat 1 small: secure-link phone
+- beat 2 medium: adaptive interview with the strongest human-presence beat
+- beat 3 largest: brief prepared
+- beat 4 medium: clinician starts prepared
+- a light before-visit bracket over beats 1 to 3
+- a clear threshold marker before beat 4
+- retain open space above the figure for live deck copy
+
+Style target:
+- use the references to match the people: softer grayscale, more natural face
+  proportions, cleaner hands, less icon-like
+- editorial medical illustration
+- premium grayscale with a restrained teal accent
+- white background with soft atmosphere, not a boxed card
+
+Scene intent:
+- beat 2 should feel like a real adaptive conversation, but still simplified
+  enough for a deck figure
+- beat 4 should also feel human and prepared, not clerical
+- beat 3 remains the structural hero, but the people in beats 2 and 4 should
+  feel most aligned with the reference family
+
+Important:
+- preserve the storyboard cadence
+- keep the visual language consistent across all four beats
+- do not let the interview beat turn into a full room illustration
+
+Avoid:
+- any text in the image
+- comic or mascot style
+- exaggerated expressions
+- cluttered interiors
+- photoreal rendering

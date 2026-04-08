@@ -1,0 +1,340 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920">
+<title>Investor Deck – Slide</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1920px;
+    height: 1080px;
+    background: #f0ece4;
+    font-family: 'Georgia', serif;
+    overflow: hidden;
+  }
+  .canvas {
+    width: 1920px;
+    height: 1080px;
+    background: #ffffff;
+    position: relative;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+
+<!-- ============================================================
+     HEADER — top-left
+     ============================================================ -->
+<div style="
+  position: absolute;
+  top: 72px;
+  left: 110px;
+  font-family: 'Georgia', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #5a7a9a;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+">History is the cleanest place to reclaim minutes</div>
+
+<!-- ============================================================
+     OBJECT 1 — SOURCE BAR (upper-right, quoted from Slide 3)
+     ============================================================ -->
+<div style="position:absolute; top:60px; right:110px; width:780px;">
+  <!-- Ruler -->
+  <svg width="780" height="32" style="display:block; margin-bottom:4px;">
+    <!-- ruler line -->
+    <line x1="0" y1="28" x2="780" y2="28" stroke="#c8c8c8" stroke-width="1"/>
+    <!-- tick marks at 0,5,10,15,20 mapped to 0,195,390,585,780 -->
+    <line x1="0" y1="20" x2="0" y2="28" stroke="#aaa" stroke-width="1.5"/>
+    <line x1="195" y1="22" x2="195" y2="28" stroke="#aaa" stroke-width="1.5"/>
+    <line x1="390" y1="20" x2="390" y2="28" stroke="#aaa" stroke-width="1.5"/>
+    <line x1="585" y1="22" x2="585" y2="28" stroke="#aaa" stroke-width="1.5"/>
+    <line x1="780" y1="20" x2="780" y2="28" stroke="#aaa" stroke-width="1.5"/>
+    <!-- minor ticks -->
+    <line x1="39" y1="24" x2="39" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="78" y1="24" x2="78" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="117" y1="24" x2="117" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="156" y1="24" x2="156" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="234" y1="24" x2="234" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="273" y1="24" x2="273" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="312" y1="24" x2="312" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="351" y1="24" x2="351" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="429" y1="24" x2="429" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="468" y1="24" x2="468" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="507" y1="24" x2="507" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="546" y1="24" x2="546" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="624" y1="24" x2="624" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="663" y1="24" x2="663" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="702" y1="24" x2="702" y2="28" stroke="#ccc" stroke-width="1"/>
+    <line x1="741" y1="24" x2="741" y2="28" stroke="#ccc" stroke-width="1"/>
+    <!-- labels -->
+    <text x="0" y="16" text-anchor="middle" fill="#999" font-size="12" font-family="Arial, sans-serif">0</text>
+    <text x="195" y="16" text-anchor="middle" fill="#999" font-size="12" font-family="Arial, sans-serif">5</text>
+    <text x="390" y="16" text-anchor="middle" fill="#999" font-size="12" font-family="Arial, sans-serif">10</text>
+    <text x="585" y="16" text-anchor="middle" fill="#999" font-size="12" font-family="Arial, sans-serif">15</text>
+    <text x="780" y="16" text-anchor="middle" fill="#999" font-size="12" font-family="Arial, sans-serif">20</text>
+  </svg>
+
+  <!-- Bar segments -->
+  <div style="display:flex; width:780px; height:56px; border-radius:10px; overflow:hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
+    <!-- Story reconstruction ~5 units = 195px -->
+    <div style="
+      width:195px;
+      background:#4a7ca8;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+    ">
+      <!-- subtle highlight ring to indicate "this is the extracted piece" -->
+      <div style="
+        position:absolute;
+        inset:3px;
+        border:2px solid rgba(255,255,255,0.35);
+        border-radius:7px;
+        pointer-events:none;
+      "></div>
+      <span style="font-family:'Georgia',serif; font-size:13.5px; color:#fff; font-weight:600; letter-spacing:0.02em; text-align:center; padding:0 8px;">Story reconstruction</span>
+    </div>
+    <!-- Decisions + counseling ~5 units = 195px -->
+    <div style="
+      width:195px;
+      background:#8a9aaa;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    ">
+      <span style="font-family:'Georgia',serif; font-size:13.5px; color:#fff; font-weight:400; text-align:center; padding:0 8px;">Decisions + counseling</span>
+    </div>
+    <!-- Exam + workflow ~10 units = 390px -->
+    <div style="
+      width:390px;
+      background:#d6d8da;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    ">
+      <span style="font-family:'Georgia',serif; font-size:13.5px; color:#666; font-weight:400;">Exam + workflow</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     OBJECT 2 — CURVED PEEL-BACK ARROW (SVG overlay)
+     Arrow from source bar blue segment (~right:110+195/2=~1417,~top:60+32+28=120)
+     to hero module (center-left, ~left:110+380/2=300, ~top:240+42=282)
+     ============================================================ -->
+<svg style="position:absolute;top:0;left:0;width:1920px;height:1080px;pointer-events:none;" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4a7ca8" opacity="0.7"/>
+    </marker>
+  </defs>
+  <!-- Path: start near the left edge of the source bar blue segment, curve down-left to the hero -->
+  <!-- Source bar: right:110px from right edge = left:1920-110=1810, bar starts at 1810-780=1030
+       Blue segment right edge: 1030+195=1225, center x=1030+97=1127, y=60+32+28=120 -->
+  <!-- Hero center: ~left:110, width:440, center x=330, top:~235, height:58, center y=264 -->
+  <path
+    d="M 1127 148 C 1000 200 600 180 440 264"
+    fill="none"
+    stroke="#4a7ca8"
+    stroke-width="1.8"
+    stroke-dasharray="6,4"
+    opacity="0.55"
+    marker-end="url(#arrowhead)"
+  />
+</svg>
+
+<!-- ============================================================
+     OBJECT 3 — HERO MODULE (center-left, band-like)
+     ============================================================ -->
+<div style="
+  position:absolute;
+  top:215px;
+  left:110px;
+  width:440px;
+  height:90px;
+  background:#4a7ca8;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  padding:0 28px;
+  box-shadow: 0 2px 12px rgba(74,124,168,0.18);
+">
+  <div style="font-family:'Georgia',serif; font-size:21px; font-weight:700; color:#ffffff; letter-spacing:0.01em; line-height:1.2;">History reconstruction</div>
+  <div style="font-family:'Georgia',serif; font-size:13px; font-weight:400; color:rgba(255,255,255,0.78); margin-top:5px; letter-spacing:0.02em;">Patient story → decision-ready structure</div>
+</div>
+
+<!-- ============================================================
+     OBJECT 4 — GROUPED SUPPORT BLOCK (right of hero)
+     ============================================================ -->
+<div style="
+  position:absolute;
+  top:190px;
+  left:590px;
+  width:420px;
+">
+  <!-- Block heading -->
+  <div style="
+    font-family:'Georgia',serif;
+    font-size:13px;
+    font-weight:400;
+    color:#8a9aaa;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    margin-bottom:16px;
+    padding-left:18px;
+    border-left:2px solid #4a7ca8;
+  ">Why this wedge</div>
+
+  <!-- Reason rows -->
+  <!-- Row 1 -->
+  <div style="margin-bottom:18px; padding-left:18px;">
+    <div style="font-family:'Georgia',serif; font-size:15px; font-weight:600; color:#2c3e50; margin-bottom:3px;">Repeated across visits</div>
+    <div style="font-family:'Georgia',serif; font-size:13px; font-weight:400; color:#8a9090; line-height:1.5;">The same story gets repeated across encounters</div>
+  </div>
+
+  <!-- Row 2 -->
+  <div style="margin-bottom:18px; padding-left:18px;">
+    <div style="font-family:'Georgia',serif; font-size:15px; font-weight:600; color:#2c3e50; margin-bottom:3px;">Time-variable</div>
+    <div style="font-family:'Georgia',serif; font-size:13px; font-weight:400; color:#8a9090; line-height:1.5;">Time required depends on complexity and communication</div>
+  </div>
+
+  <!-- Row 3 -->
+  <div style="padding-left:18px;">
+    <div style="font-family:'Georgia',serif; font-size:15px; font-weight:600; color:#2c3e50; margin-bottom:3px;">Can begin before the encounter</div>
+    <div style="font-family:'Georgia',serif; font-size:13px; font-weight:400; color:#8a9090; line-height:1.5;">Much of it can happen before the clinician is on the clock</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     DIVIDER LINE between beats
+     ============================================================ -->
+<div style="
+  position:absolute;
+  top:430px;
+  left:110px;
+  right:110px;
+  height:1px;
+  background:linear-gradient(to right, transparent, #ddd 15%, #ddd 85%, transparent);
+"></div>
+
+<!-- ============================================================
+     BEAT 2 LABEL — subtle beat indicator
+     ============================================================ -->
+<!-- (omitted — the layout itself conveys the two beats) -->
+
+<!-- ============================================================
+     OBJECT 5 — LOWER EXPLANATORY HEADING
+     ============================================================ -->
+<div style="
+  position:absolute;
+  top:464px;
+  left:110px;
+  right:110px;
+  text-align:center;
+  font-family:'Georgia',serif;
+  font-size:19px;
+  font-weight:400;
+  color:#3a4a5a;
+  letter-spacing:0.01em;
+  line-height:1.4;
+">Valuable visit time is spent turning patient story into decision-ready structure</div>
+
+<!-- ============================================================
+     OBJECT 6 — ZOOM PANEL
+     ============================================================ -->
+<div style="
+  position:absolute;
+  top:530px;
+  left:340px;
+  right:340px;
+  height:330px;
+  background:#f7f8f9;
+  border-radius:14px;
+  border:1px solid #e2e4e6;
+  display:flex;
+  align-items:stretch;
+  overflow:hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+">
+
+  <!-- LEFT: Patient story -->
+  <div style="
+    flex:1;
+    padding:38px 36px 38px 44px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    border-right:1px solid #e0e2e4;
+    background:#ffffff;
+  ">
+    <div style="font-family:'Georgia',serif; font-size:11px; text-transform:uppercase; letter-spacing:0.12em; color:#8a9090; margin-bottom:22px;">Patient story</div>
+
+    <!-- Story fragments — freeform text lines -->
+    <div style="margin-bottom:10px;">
+      <div style="font-family:'Georgia',serif; font-size:14px; color:#4a5a6a; line-height:1.7; font-style:italic;">"The pain started maybe… three weeks ago? Or maybe a month. Hard to say."</div>
+    </div>
+    <div style="height:1px; background:#ebebeb; margin:8px 0 12px 0;"></div>
+    <div style="font-family:'Georgia',serif; font-size:14px; color:#4a5a6a; line-height:1.7; font-style:italic;">"It comes and goes. Worse after eating, sometimes."</div>
+    <div style="height:1px; background:#ebebeb; margin:8px 0 12px 0;"></div>
+    <div style="font-family:'Georgia',serif; font-size:14px; color:#4a5a6a; line-height:1.7; font-style:italic;">"My mother had something similar — I think."</div>
+    <div style="height:1px; background:#ebebeb; margin:8px 0 12px 0;"></div>
+    <div style="font-family:'Georgia',serif; font-size:14px; color:#b0b8be; line-height:1.7; font-style:italic;">"No other symptoms that I can remember…"</div>
+
+    <!-- Noise indicators -->
+    <div style="margin-top:24px; display:flex; gap:6px; flex-wrap:wrap;">
+      <div style="height:7px; width:54px; background:#e0e2e4; border-radius:3px;"></div>
+      <div style="height:7px; width:38px; background:#ebebed; border-radius:3px;"></div>
+      <div style="height:7px; width:66px; background:#e4e6e8; border-radius:3px;"></div>
+      <div style="height:7px; width:28px; background:#ecedef; border-radius:3px;"></div>
+    </div>
+  </div>
+
+  <!-- MIDDLE: Bridge -->
+  <div style="
+    width:100px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:#f0f2f4;
+    flex-shrink:0;
+    position:relative;
+  ">
+    <svg width="100" height="100" viewBox="0 0 100 100" style="display:block;">
+      <!-- subtle funnel / bridge -->
+      <path d="M 10 20 L 90 38 L 90 62 L 10 80 Z" fill="#e0e8f0" opacity="0.6"/>
+      <line x1="10" y1="20" x2="90" y2="38" stroke="#4a7ca8" stroke-width="1" opacity="0.4"/>
+      <line x1="10" y1="80" x2="90" y2="62" stroke="#4a7ca8" stroke-width="1" opacity="0.4"/>
+      <!-- arrow -->
+      <path d="M 30 50 L 70 50" stroke="#4a7ca8" stroke-width="1.5" marker-end="url(#arrowMid)" opacity="0.7"/>
+    </svg>
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <marker id="arrowMid" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#4a7ca8"/>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- RIGHT: Decision-ready structure -->
+  <div style="
+    flex:1;
+    padding:38px 44px 38px 36px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    background:#ffffff;
+    border-left:1px solid #e0e2e4;
+  ">
+    <div style="font-family:'Georgia',serif; font-size:11px; text-transform:uppercase; letter-spacing:0.12em; color:#8a9090; margin-bottom:22px;">Decision-ready structure</div>
+
+    <!--

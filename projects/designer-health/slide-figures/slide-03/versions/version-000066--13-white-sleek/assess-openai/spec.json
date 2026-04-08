@@ -1,0 +1,10 @@
+{
+  "objective": "Assess whether the slide-03 white-sleek variant actually matches the clean reference feel the user wants.",
+  "message": "Shrink story reconstruction time and show that recovered time creates one additional visit slot.",
+  "constraints": [
+    "Stay in the same slide family and composition direction.",
+    "Judge polish, finish, spacing, and sleekness rather than concept changes.",
+    "Focus especially on the flat white background, the left-side two-bar mechanism, the dotted guide lines, and the dashed time-saved box."
+  ],
+  "reviewAsk": "Does this feel sleek and clean in the way the user's preferred screenshot does?"
+}

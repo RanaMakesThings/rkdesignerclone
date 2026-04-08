@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Vox adaptive interviewing system</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#17191c;
+    --muted:#5f646b;
+    --line:#d8dde2;
+    --line2:#e8ebef;
+    --grayA:#f4f5f6;
+    --grayB:#eceff1;
+    --grayC:#d9dde1;
+    --teal:#4aa5a3;
+    --teal2:#2f8f8c;
+    --tealSoft:#dff2f0;
+    --tealFog:#eef8f7;
+    --shadow:0 20px 55px rgba(22,26,31,.08), 0 5px 16px rgba(22,26,31,.06);
+    --softShadow:0 10px 30px rgba(22,26,31,.07), 0 2px 8px rgba(22,26,31,.05);
+  }
+  *{box-sizing:border-box}
+  html,body{
+    margin:0;
+    width:1920px;
+    height:1080px;
+    overflow:hidden;
+    background:var(--bg);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color:var(--ink);
+  }
+  .slide{
+    position:relative;
+    width:1920px;
+    height:1080px;
+    background:
+      radial-gradient(1200px 500px at 72% 73%, rgba(74,165,163,.06), transparent 60%),
+      radial-gradient(900px 380px at 20% 70%, rgba(45,58,72,.035), transparent 55%),
+      linear-gradient(180deg, #fff, #fff);
+  }
+  .header{
+    position:absolute;
+    left:112px;
+    top:74px;
+    width:1620px;
+  }
+  .header h1{
+    margin:0;
+    font-size:44px;
+    line-height:1.18;
+    font-weight:500;
+    letter-spacing:-0.03em;
+    max-width:1560px;
+  }
+  .header .accent{ color:var(--teal2); font-weight:600; }
+  .support{
+    margin-top:20px;
+    width:1180px;
+    font-size:23px;
+    line-height:1.48;
+    color:var(--muted);
+    letter-spacing:-0.01em;
+  }
+
+  .canvas{
+    position:absolute;
+    left:88px;
+    top:255px;
+    width:1744px;
+    height:735px;
+  }
+
+  .ribbon{
+    position:absolute;
+    left:0;
+    height:82px;
+    display:flex;
+    align-items:center;
+    padding:0 44px;
+    font-size:31px;
+    letter-spacing:-0.02em;
+    line-height:1;
+    filter: drop-shadow(0 6px 14px rgba(14,22,28,.05));
+  }
+  .ribbon.patient{
+    color:#40444a;
+    background:linear-gradient(180deg,#f5f6f7 0%, #eceef0 100%);
+    clip-path:polygon(0 0, calc(100% - 58px) 0, 100% 50%, calc(100% - 58px) 100%, 0 100%);
+  }
+  .ribbon.vox{
+    color:#183434;
+    background:linear-gradient(180deg,#dff3f1 0%, #d2ece9 100%);
+    clip-path:polygon(58px 0, 100% 0, 100% 100%, 58px 100%, 0 50%);
+  }
+  .r1{ top:74px; width:510px;}
+  .r2{ top:166px; width:560px; padding-left:78px;}
+  .r3{ top:258px; width:540px;}
+  .r4{ top:350px; width:555px; padding-left:78px;}
+  .r5{ top:442px; width:550px;}
+
+  .chamber{
+    position:absolute;
+    left:580px;
+    top:10px;
+    width:1004px;
+    height:650px;
+    border-radius:78px;
+    background:
+      radial-gradient(1200px 600px at 72% 50%, rgba(74,165,163,.03), transparent 55%),
+      linear-gradient(180deg, #ffffff 0%, #fbfcfc 100%);
+    border:2px solid rgba(32,36,41,.28);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.9),
+      0 30px 70px rgba(17,23,29,.06),
+      0 10px 24px rgba(17,23,29,.05);
+  }
+  .chamber:before{
+    content:"";
+    position:absolute;
+    inset:14px;
+    border-radius:66px;
+    border:1px solid rgba(120,130,140,.08);
+    pointer-events:none;
+  }
+
+  .vox-lockup{
+    position:absolute;
+    left:84px;
+    top:255px;
+  }
+  .vox-lockup .name{
+    font-size:92px;
+    line-height:.92;
+    color:var(--teal2);
+    font-weight:400;
+    letter-spacing:-0.045em;
+  }
+  .vox-lockup .sub{
+    margin-top:14px;
+    font-size:31px;
+    line-height:1.12;
+    letter-spacing:-0.025em;
+    color:#1d2024;
+    width:340px;
+    font-weight:400;
+  }
+
+  .logic-label{
+    position:absolute;
+    font-size:16px;
+    color:#8b9097;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .chip{
+    position:absolute;
+    display:inline-flex;
+    align-items:center;
+    white-space:nowrap;
+    min-height:42px;
+    padding:0 16px;
+    border-radius:13px;
+    background:linear-gradient(180deg,#f4f5f6,#eceff1);
+    color:#2e3338;
+    font-size:23px;
+    letter-spacing:-0.025em;
+    box-shadow:0 2px 8px rgba(20,24,29,.06);
+  }
+  .chip.small{ font-size:21px; min-height:38px; padding:0 14px; }
+  .chip.emph{ background:linear-gradient(180deg,#f8f9fa,#eef1f3); }
+  .tag{
+    position:absolute;
+    font-size:20px;
+    line-height:1.15;
+    color:#22272c;
+    letter-spacing:-0.02em;
+    font-weight:500;
+  }
+  .tag.muted{ color:#4f555c; font-weight:400; }
+  .mini-flag{
+    position:absolute;
+    width:10px;
+    height:12px;
+    background:var(--teal2);
+    border-radius:1px 1px 0 0;
+  }
+  .mini-flag:after{
+    content:"";
+    position:absolute;
+    right:-8px;
+    top:0;
+    width:0;height:0;
+    border-top:6px solid transparent;
+    border-bottom:6px solid transparent;
+    border-left:8px solid var(--teal2);
+  }
+  .qmark{
+    position:absolute;
+    width:28px;height:28px;
+    border-radius:50%;
+    background:var(--tealFog);
+    color:var(--teal2);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;
+    font-size:18px;
+    box-shadow:0 2px 6px rgba(40,90,95,.08);
+  }
+  .verify-num{
+    position:absolute;
+    width:22px;height:22px;border-radius:7px;
+    background:var(--teal2);
+    color:#fff;
+    font-size:13px;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;
+  }
+
+  .right-title{
+    position:absolute;
+    left:1612px;
+    top:78px;
+    width:220px;
+    font-size:30px;
+    line-height:1.18;
+    letter-spacing:-0.03em;
+    color:#202327;
+    font-weight:500;
+  }
+
+  .clin-card{
+    position:absolute;
+    left:1500px;
+    top:178px;
+    width:328px;
+    height:250px;
+    border-radius:24px;
+    background:linear-gradient(180deg,#ffffff 0%, #fcfcfd 100%);
+    border:2px solid rgba(64,72,80,.14);
+    box-shadow:var(--softShadow);
+    overflow:hidden;
+  }
+  .clin-card:before{
+    content:"";
+    position:absolute;
+    left:-34px;
+    top:-30px;
+    width:120px;
+    height:310px;
+    background:radial-gradient(circle at 80% 50%, rgba(74,165,163,.9) 0 35%, rgba(74,165,163,.18) 36% 52%, transparent 53%);
+    opacity:.95;
+    filter:blur(.2px);
+  }
+  .clin-card .inner{
+    position:absolute;
+    inset:18px 18px 18px 26px;
+    border-radius:16px;
+  }
+  .row{
+    display:grid;
+    grid-template-columns:108px 1fr;
+    align-items:start;
+    column-gap:18px;
+    margin-bottom:18px;
+  }
+  .row .k{
+    font-size:14px;
+    color:#5a6068;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  .row .v{
+    min-height:26px;
+  }
+  .line{
+    height:10px;
+    border-radius:6px;
+    background:linear-gradient(180deg,#eff2f4,#e6eaee);
+    margin:5px 0;
+  }
+  .line.dark{ background:linear-gradient(180deg,#f3f5f7,#edf1f3); width:92px; height:34px; border-radius:10px; display:flex; align-items:center; padding:0 12px; color:#2d3238; font-size:16px; font-weight:500; }
+  .dots{
+    display:flex; gap:8px; padding-top:6px;
+  }
+  .dot{
+    width:6px;height:6px;border-radius:50%;background:#d3d8dd;
+  }
+
+  .foot-glow{
+    position:absolute;
+    left:590px;
+    top:618px;
+    width:1000px;
+    height:54px;
+    background:radial-gradient(ellipse at center, rgba(32,40,48,.10), rgba(32,40,48,0) 68%);
+    filter:blur(14px);
+    opacity:.35;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="header">
+      <h1><span class="accent">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.</h1>
+      <div class="support">
+        Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+        By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.
+      </div>
+    </div>
+
+    <div class="canvas">
+      <div class="ribbon patient r1">My back has been hurting...</div>
+      <div class="ribbon vox r2">Vox: What makes it worse?</div>
+      <div class="ribbon patient r3">It’s worse in the morning.</div>
+      <div class="ribbon vox r4">Vox: When did this start?</div>
+      <div class="ribbon patient r5">Started last Tuesday.</div>
+
+      <div class="foot-glow"></div>
+
+      <div class="chamber">
+        <div class="vox-lockup">
+          <div class="name">Vox</div>
+          <div class="sub">Adaptive clinical interviewer</div>
+        </div>
+
+        <div class="tag muted" style="left:428px; top:82px; font-size:20px;">Live adaptive interview &amp;<br>clinical reasoning in process</div>
+
+        <div class="logic-label" style="left:675px; top:160px;">What matters</div>
+        <div class="logic-label" style="left:690px; top:392px;">What connects</div>
+        <div class="logic-label" style="left:648px; top:506px;">What still needs verification</div>
+
+        <div class="chip" style="left:438px; top:176px;">onset: last week</div>
+        <div class="chip" style="left:438px; top:220px;">worse in morning</div>
+
+        <div class="chip small emph" style="left:440px; top:366px;">onset: last week</div>
+        <div class="chip small emph" style="left:440px; top:405px;">worse in morning</div>
+        <div class="chip small" style="left:678px; top:357px;">replied forward</div>
+        <div class="chip small" style="left:676px; top:397px;">onset: last week</div>
+
+        <div class="chip" style="left:498px; top:521px;">sharp pain</div>
+        <div class="chip" style="left:510px; top:564px;">dull ache</div>
+        <div class="mini-flag" style="left:641px; top:520px;"></div>
+        <div class="verify-num" style="left:644px; top:558px;">2</div>
+        <div class="qmark" style="left:455px; top:550px;">?</div>
+
+        <svg width="1004" height="650" viewBox="0 0 1004 650" style="position:absolute; inset:0;">
+          <defs>
+            <linearGradient id="flowA" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#dfe4e8"/>
+              <stop offset="100%" stop-color="#c9d0d6"/>
+            </linearGradient>
+            <linearGradient id="flowB" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#dde2e7"/>
+              <stop offset="100%" stop-color="#cfd6dc"/>
+            </linearGradient>
+          </defs>
+
+          <path d="M360 205 C395 183, 390 175, 430 177" fill="none" stroke="url(#flowA)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M364 231 C392 225, 401 223, 430 220" fill="none" stroke="url(#flowA)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M366 256 C397 267, 409 282, 439 365" fill="none" stroke="url(#flowA)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M358 317 C388 338, 420 357, 440 384" fill="none" stroke="url(#flowA)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M350 375 C390 404, 425 445, 488 534" fill="none" stroke="url(#flowA)" stroke-width="3" stroke-linecap="round"/>
+
+          <path d="M560 236 C620 238, 651 269, 684 356" fill="none" stroke="url(#flowB)" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M554 392 C605 392, 630 391, 676 392" fill="none" stroke="url(#flowB)" stroke-width="3.5" stroke-linecap="round"/>
+
+          <path d="M563 541 C596 536, 613 534, 642 531" fill="none" stroke="#cfd6dc" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M574 581 C613 581, 632 580, 654 574" fill="none" stroke="#d4dbe0" stroke-width="3.5" stroke-linecap="round"/>
+
+          <path d="M823 196 C883 196, 903 196, 932 196 C964 196, 980 178, 986 164" fill="none" stroke="#d7dde2" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="right-title">Clinician-grade starting point</div>
+
+      <div class="clin-card">
+        <div class="inner">
+          <div class="row">
+            <div class="k">Chief Complaint</div>
+            <div class="v">
+              <div class="line dark">sharp pain</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="k">History</div>
+            <div class="v">
+              <div class="line" style="width:138px;"></div>
+              <div class="line" style="width:118px;"></div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-bottom:0;">
+            <div class="k">Symptoms</div>
+            <div class="v">
+              <div class="line" style="width:92px;"></div>
+              <div class="line" style="width:78px;"></div>
+              <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <svg width="1744" height="735" viewBox="0 0 1744 735" style="position:absolute; left:0; top:0; pointer-events:none;">
+        <defs>
+          <linearGradient id="softLink" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#d5dade" stop-opacity=".65"/>
+            <stop offset="100%" stop-color="#d5dade" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path d="M510 114 C557 114, 573 112, 580 111" fill="none" stroke="url(#softLink)" stroke-width="3"/>
+        <path d="M560 298 C575 298, 577 299, 580 299" fill="none" stroke="url(#softLink)" stroke-width="3"/>
+        <path d="M555 482 C573 482, 577 482, 580 482" fill="none" stroke="url(#softLink)" stroke-width="3"/>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

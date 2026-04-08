@@ -1,0 +1,78 @@
+artifact_type: figure-ideation-input
+version: v0.1
+run_mode: standard
+authoring_context:
+  project: Designer / Vox Investor Deck
+  source_artifacts:
+    - slide-04-concept-spec-v0.1.md
+slide_metadata:
+  slide_number: "04"
+  working_title: Why this wedge
+  status: Strategic lock
+  adjacent_slides:
+    - "03"
+    - "05"
+locked_meaning:
+  slide_job: Show why the opening clinical wedge is strategically under-served and worth attacking first.
+  audience_should_leave_believing: The wedge is urgent, distinct, and strategically worth entering before broader encounter tooling.
+  core_claim: The opening clinical work is meaningfully under-served and forms the strongest point of entry.
+slide_copy:
+  text_first:
+    header: The opening clinical wedge is still under-served.
+    support_line: Vox starts where the clinician still lacks a strong AI starting point.
+  compressed:
+    header: The wedge is real.
+    subheader: The opening clinical work is the best entry point.
+figure_requirements:
+  figure_burden:
+    - show an under-served wedge worth attacking first
+    - keep the slide as wedge selection, not mechanism explanation
+  figure_logic: The visual should isolate the opening wedge as the best first market entry.
+  must_not_become:
+    - slide 5 mechanism language
+    - generic story-to-structure phrasing
+    - wedge blur
+starting_hypothesis:
+  proposed_figure_direction: A restrained wedge isolation visual with one clearly highlighted opening zone.
+  treat_as: starting hypothesis
+  explore_alternatives: true
+current_visual_context:
+  keep:
+    - restraint
+    - one focal wedge
+  change:
+    - increase strategic specificity
+design_constraints:
+  tone:
+    - serious
+    - premium
+    - restrained
+  density_target: sparse
+  template: template.html
+  max_candidates: 8
+  shortlist_count: 3
+  thumbnail_count: 4
+  allow_high_risk_candidate: false
+assets:
+  template_file: template.html
+provider_preferences:
+  text_ideators:
+    - openai
+    - anthropic
+  image_generators:
+    - openai
+    - google
+  vision_critics:
+    - openai
+    - anthropic
+    - google
+requested_outputs:
+  - normalized_brief
+  - figure_brief
+  - figure_move_candidates
+  - ranked_shortlist
+  - spatial_spec
+  - thumbnail_manifest
+  - critique_report
+  - build_spec
+  - run_manifest

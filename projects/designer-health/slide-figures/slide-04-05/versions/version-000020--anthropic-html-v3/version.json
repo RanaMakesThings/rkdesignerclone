@@ -1,0 +1,14 @@
+{
+  "id": "version-000020",
+  "slideId": "slide-04-05",
+  "slideDir": "projects/designer-health/slide-figures/slide-04-05",
+  "dir": "projects/designer-health/slide-figures/slide-04-05/versions/version-000020--anthropic-html-v3",
+  "label": "anthropic-html-v3",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.512Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-04-05/anthropic-html-v3"
+  ]
+}

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designer Deck Template v1</title>
+    <link rel="stylesheet" href="../../references/vox-design-system.css" />
+    <style>
+      :root {
+        --muted: var(--ink-secondary);
+        --quiet: var(--ink-tertiary);
+        --line: rgba(15, 23, 42, 0.9);
+        --soft-line: rgba(15, 23, 42, 0.08);
+        --stub-line: rgba(15, 23, 42, 0.12);
+        --stub-fill:
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(248, 250, 252, 0.96) 100%
+          );
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--surface);
+        font-family: var(--font);
+        color: var(--ink);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+      }
+
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 62px;
+        margin: 0;
+        font-size: 64px;
+        line-height: 1.04;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        width: 1736px;
+      }
+
+      .subheader {
+        position: absolute;
+        left: 92px;
+        top: 154px;
+        margin: 0;
+        font-size: 27px;
+        line-height: 1.28;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        max-width: 1450px;
+        color: var(--ink-secondary);
+      }
+
+      .figure-stub {
+        position: absolute;
+        left: 182px;
+        top: 250px;
+        width: 1296px;
+        height: 566px;
+        border: 2.5px dashed var(--border);
+        border-radius: 28px;
+        background: var(--stub-fill);
+      }
+
+      .figure-stub::before,
+      .figure-stub::after {
+        content: "";
+        position: absolute;
+        background: rgba(15, 23, 42, 0.08);
+      }
+
+      .figure-stub::before {
+        left: 50%;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        transform: translateX(-0.5px);
+      }
+
+      .figure-stub::after {
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        transform: translateY(-0.5px);
+      }
+
+      .stub-label {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 14px 22px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow-soft);
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: var(--ink-secondary);
+      }
+
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="Designer blank slide template">
+      <h1 class="header">Header</h1>
+      <p class="subheader">Subheader</p>
+      <div class="figure-stub" aria-label="Graphic placeholder">
+        <div class="stub-label">Graphic / Figure</div>
+      </div>
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>

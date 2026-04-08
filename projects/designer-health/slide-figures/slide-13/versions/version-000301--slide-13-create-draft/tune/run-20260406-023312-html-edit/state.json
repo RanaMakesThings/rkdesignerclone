@@ -1,0 +1,1345 @@
+{
+  "runId": "run-20260406-023312-html-edit",
+  "status": "failed",
+  "runType": "create",
+  "mode": "create",
+  "artifactDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft",
+  "projectRoot": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health",
+  "slideId": "slide-13",
+  "versionId": "version-000301",
+  "surface": "current-html",
+  "createdAt": "2026-04-06T02:33:12.017Z",
+  "updatedAt": "2026-04-06T02:38:09.010Z",
+  "config": {
+    "providers": [
+      "openai",
+      "gemini"
+    ],
+    "slotsPerProvider": 3,
+    "targetPassCount": 1,
+    "maxRounds": 1,
+    "maxSlotAttempts": 1,
+    "renderConcurrency": 2,
+    "judgeConcurrency": 6,
+    "generationConcurrency": 4,
+    "perProviderInFlightCap": 2
+  },
+  "baseline": {
+    "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+    "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+    "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html",
+    "officialHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-html.html",
+    "approvedRegionsPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/approved-regions.json"
+  },
+  "request": {
+    "requestedChange": "Create a finished Designer deck slide from the seeded blank template.\n\nSlide id: slide-13\nLane: html\nSlide title: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment\nLocked header: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment\nLocked subheader: Post-money SAFE • ~18–20 months of runway\nAudience should leave believing: This is a finite, milestone-based raise tied to proof-stage deployment.\nCore claim: This is a finite, milestone-based raise tied to proof-stage deployment.\nSlide job: close with a disciplined proof-stage ask\nFigure burden: surface the ask first, then show what the round unlocks\nFigure logic: Use one integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.\nBuild status: create workflow underway from the April 5, 2026 ask build spec\n\nLocked spec guidance:\n### Current official read\n\n**Slide job**\nThis is the closing ask slide. It should turn the deck into a finite proof-stage financing plan rather than a generic raise page.\n\n**Core claim**\n**The ask is disciplined, milestone-based, and sized to prove the next stage of deployment.**\n\n**What this slide must make the audience believe**\n**$1.25M on a post-money SAFE funds the hires, pilots, runway, and validation needed to establish repeatable deployment.**\n\n**Current preferred header**\n**Raising $1.25M to launch pilots, prove value, and establish repeatable deployment**\n\n**Current preferred subheader**\n**Post-money SAFE • ~18–20 months of runway**\n\n**Current preferred figure logic**\nA single integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.\n\n### Preserved strategic discussion\n\nThe slide should surface the ask on first scan, then show exactly what the round unlocks. It should feel like a clean conversion slide: thesis translated into financing logic.\n\nKeep the left side focused on the amount, instrument, and support stats (`2 core hires`, `3 pilot sites`, `18–20 months`). Keep the right side focused on outcome-first milestone cards, not generic startup activity. Keep the bottom ribbon quieter than the milestone logic.\n\nThis slide must avoid:\n- spreadsheet or payroll memo energy\n- generic build / scale / go-to-market language\n- decorative icons or illustration\n- use-of-funds detail that overpowers the milestones\n\nPreferred visual treatment:\n- soft gray field with calm white card surfaces\n- restrained shadow and rounded corners\n- one muted blue accent family only\n- premium, clinically serious late-deck tone\n\nFallback only if needed: convert the right column into a horizontal three-card strip if the stacked milestone column becomes crowded.\n\n**One-line test**\n**This feels like funding a concrete proof plan, not funding hope.**\n\n---\n\nExisting slide note excerpt:\n# Slide 13 — The Ask",
+    "successChecks": "- The slide is fully resolved and presentation-ready.\n- No template placeholders remain.\n- The header reads: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment\n- The subheader reads: Post-money SAFE • ~18–20 months of runway\n- The figure visibly carries the specified burden.\n- The slide stays inside the locked Designer shell contract.\n- The footer rule and footer logo remain aligned with the shell.\n- The slide feels in-family with the adjacent official slides.",
+    "guardrails": "- preserve the white Designer shell\n- preserve the footer rule and footer logo\n- do not leave the figure stub or placeholder copy visible\n- do not turn the slide into a browser page, app UI, or card grid unless the brief explicitly requires it\n- do not weaken the locked slide claim",
+    "approvedRegions": [
+      {
+        "id": "footer-rule",
+        "label": "Footer Rule",
+        "shape": "rect",
+        "x": 112,
+        "y": 992,
+        "width": 1536,
+        "height": 4,
+        "freezeLevel": "pixel-strict",
+        "note": "Preserve the thin footer divider rule from the locked Designer shell."
+      },
+      {
+        "id": "footer-logo",
+        "label": "Footer Logo",
+        "shape": "rect",
+        "x": 1692,
+        "y": 962,
+        "width": 114,
+        "height": 59,
+        "freezeLevel": "semantic-stable",
+        "note": "Keep the official Designer footer logo aligned to the shell."
+      }
+    ],
+    "approvedRegionsPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/create/shell-regions.json",
+    "referenceIntent": "- Adjacent slide previews are for deck continuity only.\n- Optional reference images are for style or composition cues, not for literal copying unless explicitly stated.\n- Supplemental reference files are summarized above and may clarify slide intent.",
+    "stopIf": "- the request actually needs a new slide concept rather than execution\n- the brief is missing core copy needed to build the slide\n- the best candidate still conflicts with the locked slide job after repeated rounds",
+    "requiredTextSnippets": [
+      "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+      "Post-money SAFE • ~18–20 months of runway"
+    ]
+  },
+  "rounds": [
+    {
+      "roundNumber": 1,
+      "status": "completed",
+      "startedAt": "2026-04-06T02:33:12.423Z",
+      "completedAt": "2026-04-06T02:38:09.007Z",
+      "slots": [
+        {
+          "slotId": "openai-a",
+          "provider": "openai",
+          "status": "blocked",
+          "attemptNumber": 1,
+          "parentSlotId": null,
+          "parentAttemptRef": "baseline",
+          "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-a",
+          "before": {
+            "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+            "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+            "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html"
+          },
+          "after": {
+            "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-a/generated.html",
+            "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-a/preview.png"
+          },
+          "prefilter": {
+            "ok": true,
+            "blockers": [],
+            "warnings": [
+              "Footer Logo drifted beyond semantic-stable threshold."
+            ],
+            "summary": "Prefilter passed with warnings. Footer Logo drifted beyond semantic-stable threshold.",
+            "staticSanity": {
+              "ok": true,
+              "summary": "No static sanity issues detected before render.",
+              "blockers": []
+            },
+            "contract": {
+              "hasHtml": true,
+              "hasRenderableHtml": true,
+              "htmlExists": true,
+              "previewExists": true
+            },
+            "lockedRegions": {
+              "ok": true,
+              "violations": [],
+              "warnings": [
+                {
+                  "id": "footer-logo",
+                  "label": "Footer Logo",
+                  "freezeLevel": "semantic-stable",
+                  "x": 1692,
+                  "y": 962,
+                  "width": 114,
+                  "height": 59,
+                  "mismatchedPixels": 1074,
+                  "totalPixels": 6726,
+                  "diffRatio": 0.15967885816235505,
+                  "threshold": 0.05,
+                  "outcome": "warn",
+                  "note": "Keep the official Designer footer logo aligned to the shell."
+                }
+              ],
+              "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+            }
+          },
+          "judges": {
+            "gptDelta": {
+              "provider": "gpt",
+              "status": "partial",
+              "summary": "The candidate did replace the blank stub with the intended ask-slide structure and the locked headline/subheader, but the execution is not presentation-ready: there are major text overlap/rendering issues, the shell/footer contract is broken, and the slide does not yet meet the clean in-family finish required for a Designer close slide.",
+              "evidence": [
+                "The locked header and subheader are present with the correct wording, and the figure follows the requested integrated logic: left hero ask card, right Build/Deploy/Validate milestone stack, and a bottom use-of-funds ribbon.",
+                "The main content visually surfaces the ask first with '$1.25M', 'Post-money SAFE', and supporting stats for hires, pilot sites, and runway, matching the brief's figure burden.",
+                "Multiple text blocks are visibly broken or overlapping: the subheader collides with the title, and body copy inside milestone cards shows duplicated/overprinted text, making sections hard to read.",
+                "The Designer shell contract is not fully preserved: the official footer logo is missing/replaced by a broken image placeholder at bottom right, even though the footer rule remains.",
+                "The slide feels less polished than adjacent official slides because of cramped spacing, oversized headline wrapping, and rendering artifacts that undermine the clinically serious tone."
+              ],
+              "nextPrompt": "Keep the current ask-slide concept, but fix all rendering and shell issues: preserve the official Designer footer logo, separate the title and subheader with proper spacing, remove all duplicate/overprinted text in the milestone cards, and tighten typography so the slide reads cleanly and presentation-ready in-family with adjacent official slides.",
+              "needsHuman": true
+            },
+            "claudeDelta": {
+              "provider": "claude",
+              "status": "partial",
+              "summary": "The candidate has successfully replaced the blank template stub with substantive content — the $1.25M ask, Post-money SAFE instrument, three milestone cards (Build/Deploy/Validate), stat chips (2 core hires, 3 pilot sites, 18–20 months), and a use-of-funds ribbon are all present and structurally correct. However, several execution problems prevent a full 'applied' rating: (1) the header text is oversized and overflows, obscuring the subheader 'Post-money SAFE • ~18–20 months of runway' which is barely legible behind the header block; (2) the milestone card body copy is visibly clipped/truncated mid-sentence in all three right-column cards; (3) the footer logo area renders as a broken image placeholder rather than the Designer Health logo; (4) the use-of-funds ribbon has unstyled/merged text with no visual separation between the four categories, creating a run-on appearance; and (5) the overall vertical scale of the slide appears compressed, causing the left hero block description text to be cut off.",
+              "evidence": [
+                "Header 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' renders at an oversized scale that pushes into and obscures the subheader line",
+                "Subheader 'Post-money SAFE • ~18–20 months of runway' is partially visible but overlapped by the large header block",
+                "BUILD milestone card body text ends mid-sentence: '...and tighten the' — content is clipped",
+                "DEPLOY milestone card body text ends mid-sentence: '...site learning loops, and' — content is clipped",
+                "VALIDATE milestone card body text ends mid-sentence: '...to support follow-on expansion and' — content is clipped",
+                "Footer logo area shows a broken/missing image box instead of the Designer Health logo",
+                "Use-of-funds ribbon shows 'Team build implementation + productPilot launch site onboardingDeployment support workflow integratValidation usage, outcomes, ROI' with merged/unstyled text and a truncated word 'integrat'",
+                "Left hero block descriptive paragraph text is cut off mid-sentence before the stat chips",
+                "The integrated master card layout (left hero + right stacked milestones + bottom ribbon) is structurally present and matches the brief's figure logic"
+              ],
+              "nextPrompt": "Fix the following rendering issues: (1) Reduce header font size so it fits on 1–2 lines without overlapping the subheader — subheader must be fully legible below the header. (2) Ensure all three milestone card body text blocks are fully visible and not clipped — reduce font size or card padding if needed. (3) Restore the Designer Health footer logo (the img src is broken — use the correct path or inline SVG from the shell). (4) Style the use-of-funds ribbon so each of the four categories (Team build, Pilot launch, Deployment support, Validation) is visually separated with a pill or divider, and fix the truncated word 'integrat' to read 'workflow integration'. (5) Ensure the left hero block description paragraph is fully visible above the stat chips. Do not change the layout structure or content — only fix the overflow, clipping, logo, and ribbon formatting issues.",
+              "needsHuman": false
+            },
+            "gptRegression": {
+              "provider": "gpt",
+              "verdict": "blocker",
+              "rationale": "The candidate is no longer a blank shell, but it contains clear visible regressions that make it feel unresolved: multiple text layers are overlapping in the header and milestone cards, and the footer/logo area is broken by a stray missing-image placeholder. These are concrete visual blockers versus a finished official slide.",
+              "blockers": [
+                "Locked header/subheader rendering is visibly broken with overlapping duplicate text at the top",
+                "Body copy in the Build / Deploy / Validate cards is overlapped/clipped, making required content obviously wrong and hard to read",
+                "A visible broken-image placeholder appears in the bottom-right footer area, indicating an unresolved stub/object",
+                "Footer shell drifts from the baseline due to the stray bottom-right object disrupting the clean aligned footer/logo treatment"
+              ],
+              "nextMove": "Fix the text-layer duplication/overflow and remove or correctly load the bottom-right image object so the footer returns to the clean official shell."
+            },
+            "claudeRegression": {
+              "provider": "claude",
+              "verdict": "blocker",
+              "rationale": "The candidate slide has real content but contains multiple visible regressions: the locked subheader ('Post-money SAFE • ~18–20 months of runway') is partially obscured/overprinted by the oversized header text bleeding into its zone; the milestone card body copy is visibly clipped mid-sentence on all three right-column cards (BUILD, DEPLOY, VALIDATE descriptions cut off); the use-of-funds ribbon at the bottom has collapsed typographic spacing causing label and descriptor text to run together without clear separation (e.g., 'integratValidation' is a visible merge artifact); and the footer logo has failed to render — the Designer Health lockup in the bottom-right shows a broken image placeholder box instead of the resolved logo asset.",
+              "blockers": [
+                "Locked subheader text is overprinted and partially hidden beneath the oversized header, making it unreadable on first scan",
+                "All three right-column milestone card body descriptions are clipped mid-sentence — content is visibly truncated",
+                "Use-of-funds ribbon text is merged/colliding — 'integratValidation' is a visible broken concatenation artifact",
+                "Footer Designer Health logo is a broken image placeholder, not the resolved lockup"
+              ],
+              "nextMove": "Fix the header/subheader vertical spacing so the subheader is fully legible; expand or scroll-clip the milestone card containers so body copy is not truncated; repair the use-of-funds ribbon with proper gutters between each label-descriptor pair; and resolve the footer logo asset path so the Designer Health lockup renders correctly."
+            }
+          },
+          "lockedRegions": {
+            "ok": true,
+            "violations": [],
+            "warnings": [
+              {
+                "id": "footer-logo",
+                "label": "Footer Logo",
+                "freezeLevel": "semantic-stable",
+                "x": 1692,
+                "y": 962,
+                "width": 114,
+                "height": 59,
+                "mismatchedPixels": 1074,
+                "totalPixels": 6726,
+                "diffRatio": 0.15967885816235505,
+                "threshold": 0.05,
+                "outcome": "warn",
+                "note": "Keep the official Designer footer logo aligned to the shell."
+              }
+            ],
+            "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+          },
+          "score": {
+            "class": "blocked",
+            "numeric": 0.05,
+            "status": "blocked",
+            "outcome": "block",
+            "reason": "Regression review found a concrete blocker.",
+            "blockers": [
+              "Locked header/subheader rendering is visibly broken with overlapping duplicate text at the top",
+              "Body copy in the Build / Deploy / Validate cards is overlapped/clipped, making required content obviously wrong and hard to read",
+              "A visible broken-image placeholder appears in the bottom-right footer area, indicating an unresolved stub/object",
+              "Footer shell drifts from the baseline due to the stray bottom-right object disrupting the clean aligned footer/logo treatment",
+              "Locked subheader text is overprinted and partially hidden beneath the oversized header, making it unreadable on first scan",
+              "All three right-column milestone card body descriptions are clipped mid-sentence — content is visibly truncated",
+              "Use-of-funds ribbon text is merged/colliding — 'integratValidation' is a visible broken concatenation artifact",
+              "Footer Designer Health logo is a broken image placeholder, not the resolved lockup"
+            ],
+            "warnings": [
+              "Footer Logo drifted beyond semantic-stable threshold."
+            ]
+          },
+          "decision": {
+            "outcome": "block",
+            "reason": "Regression review found a concrete blocker."
+          },
+          "model": "gpt-5.4",
+          "settings": {}
+        },
+        {
+          "slotId": "openai-b",
+          "provider": "openai",
+          "status": "blocked",
+          "attemptNumber": 1,
+          "parentSlotId": null,
+          "parentAttemptRef": "baseline",
+          "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-b",
+          "before": {
+            "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+            "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+            "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html"
+          },
+          "after": {
+            "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-b/generated.html",
+            "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-b/preview.png"
+          },
+          "prefilter": {
+            "ok": true,
+            "blockers": [],
+            "warnings": [
+              "Footer Logo drifted beyond semantic-stable threshold."
+            ],
+            "summary": "Prefilter passed with warnings. Footer Logo drifted beyond semantic-stable threshold.",
+            "staticSanity": {
+              "ok": true,
+              "summary": "No static sanity issues detected before render.",
+              "blockers": []
+            },
+            "contract": {
+              "hasHtml": true,
+              "hasRenderableHtml": true,
+              "htmlExists": true,
+              "previewExists": true
+            },
+            "lockedRegions": {
+              "ok": true,
+              "violations": [],
+              "warnings": [
+                {
+                  "id": "footer-logo",
+                  "label": "Footer Logo",
+                  "freezeLevel": "semantic-stable",
+                  "x": 1692,
+                  "y": 962,
+                  "width": 114,
+                  "height": 59,
+                  "mismatchedPixels": 1074,
+                  "totalPixels": 6726,
+                  "diffRatio": 0.15967885816235505,
+                  "threshold": 0.05,
+                  "outcome": "warn",
+                  "note": "Keep the official Designer footer logo aligned to the shell."
+                }
+              ],
+              "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+            }
+          },
+          "judges": {
+            "gptDelta": {
+              "provider": "gpt",
+              "status": "partial",
+              "summary": "The candidate clearly attempts the intended ask-slide structure with a left hero ask block, right milestone stack, and bottom use-of-funds ribbon inside the Designer shell, but the slide is not presentation-ready because the layout is visibly broken, content overlaps heavily, and the footer/logo contract is violated by an extra broken image replacing the standard shell logo treatment.",
+              "evidence": [
+                "The locked header and subheader are present and use the requested wording: “Raising $1.25M…” and “Post-money SAFE • ~18–20 months of runway.”",
+                "The main figure follows the requested high-level logic: one integrated master card with a left ask panel, three right-side milestone cards labeled Build / Deploy / Validate, and a bottom use-of-funds ribbon with percentages.",
+                "The left hero block surfaces the ask first with “$1.25M,” “Post-money SAFE,” and support stats including “2 hires” and “3 pilots,” matching the proof-stage financing intent.",
+                "However, the header area is crowded and overlapping: the long title wraps into multiple lines and the subheader sits on top of the title descenders, reducing legibility.",
+                "The lower portion is severely broken: the ‘2 hires’ and ‘3 pilots’ stats collide with body copy and the bottom ribbon cards, and the closing sentence overlaps the ribbon content.",
+                "The right milestone cards are also clipped/overstuffed, with bullet text cut off at the bottom of at least the Deploy and Validate cards.",
+                "A broken image placeholder appears in the bottom-right corner, while the official Designer footer logo position is not preserved cleanly, violating the locked shell/footer requirement.",
+                "The slide no longer feels clinically polished or fully resolved because of visible overflow, clipping, and stacking errors."
+              ],
+              "nextPrompt": "Keep the same overall concept, but rebuild slide 13 so it is presentation-ready within the locked Designer shell: preserve the exact header/subheader, keep one integrated master card, reduce type sizes and rebalance spacing so no text overlaps or clips, keep the left ask block to amount/instrument/3 stats only, keep the right Build/Deploy/Validate cards to concise outcome-first copy, make the bottom use-of-funds ribbon quieter and fully readable, and restore the standard footer rule and Designer logo with no extra/broken image element.",
+              "needsHuman": true
+            },
+            "claudeDelta": {
+              "provider": "claude",
+              "status": "partial",
+              "summary": "The candidate has successfully replaced the blank template stub with substantive content — the locked header, subheader, left hero ask block ($1.25M, Post-money SAFE, 2 hires, 3 pilots), right stacked Build/Deploy/Validate milestone cards, and a use-of-funds ribbon (45% Team build, 25% Pilot delivery, 20% Product/data readiness, 10% Operating buffer) are all visibly present and structurally correct. However, several execution issues prevent a full 'applied' rating: (1) the master card is overflowing its container — the bottom ribbon and left stat block are clipping outside the card boundary and overlapping the footer zone; (2) the Designer Health logo in the footer is broken/missing (renders as a blank box instead of the wordmark); (3) the subheader is partially obscured by the oversized header text wrapping into it; (4) the left column stat rows ('2 hires', '3 pilots', '18–20 months') are partially cut off or overlapping with the ribbon layer; (5) the overall card height exceeds the slide canvas, pushing content into the footer rule area. The structural logic and content are correct but the layout needs height/overflow correction and the footer logo needs to be restored.",
+              "evidence": [
+                "Header text 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' is present and correct but wraps into the subheader zone, partially obscuring 'Post-money SAFE • ~18–20 months of runway'",
+                "Left hero block shows '$1.25M', 'Post-money SAFE', and descriptive copy — correctly surfacing the ask first",
+                "Right column shows three stacked milestone cards labeled 01 Build, 02 Deploy, 03 Validate with outcome-first language — matches the brief",
+                "Use-of-funds ribbon is present with four segments (45% Team build, 25% Pilot delivery, 20% Product/data readiness, 10% Operating buffer) — matches the restrained ribbon spec",
+                "Master card container is visibly overflowing: the ribbon and left stat rows clip below the card boundary and overlap the footer rule area",
+                "Footer logo renders as a broken/blank image box rather than the Designer Health wordmark",
+                "Left stat block ('2 hires', '3 pilots') text is partially cut off where the ribbon overlaps",
+                "The 'USE OF FUNDS' label and ribbon text overlap with the left column stat copy, creating a legibility collision"
+              ],
+              "nextPrompt": "Fix the layout overflow: reduce the master card's internal padding and font sizes so the entire card — including the use-of-funds ribbon — fits within the slide canvas above the footer rule. Restore the Designer Health footer logo (use the same SVG/PNG path as the shell). Ensure the subheader 'Post-money SAFE • ~18–20 months of runway' is fully visible below the header without overlap. The left stat block (2 hires, 3 pilots, 18–20 months) must not be clipped by the ribbon. Keep all content, structure, and copy unchanged — this is a sizing and overflow fix only.",
+              "needsHuman": false
+            },
+            "gptRegression": {
+              "provider": "gpt",
+              "verdict": "blocker",
+              "rationale": "The candidate is no longer a blank shell, but it has multiple visible regressions that make it feel unfinished: key locked copy is overlapping, several text blocks are clipped or colliding, a broken image/placeholder remains at bottom right, and the footer/logo area has drifted from the official shell.",
+              "blockers": [
+                "Locked subheader overlaps the header and is visibly mispositioned",
+                "Multiple body text areas are clipped/colliding in the milestone cards and bottom ribbon, making required content unreadable",
+                "A broken image/placeholder box is visible at the bottom right of the slide",
+                "Footer shell drift: the official Designer footer/logo treatment is misaligned/replaced and no longer matches the baseline family"
+              ],
+              "nextMove": "Fix the layout pass before styling tweaks: restore the official footer/logo shell, remove the broken bottom-right placeholder, then reflow the header/subheader and all card/ribbon text so nothing overlaps or clips."
+            },
+            "claudeRegression": {
+              "provider": "claude",
+              "verdict": "blocker",
+              "rationale": "The candidate slide has resolved the header and body content correctly but contains multiple visible regressions: the footer logo has failed to render (showing a broken image placeholder instead of the Designer Health lockup), the subheader is being visually overrun by the large bold header text causing overlap and clipping, content inside the master card is overflowing its bounds (the '3 pilots' stat row and the use-of-funds ribbon text are colliding and partially obscured), and the Build milestone card's bullet list is clipped at the bottom edge. Taken together, the footer shell is broken and internal layout overflow is visible on first scan.",
+              "blockers": [
+                "Footer logo is a broken image placeholder — Designer Health lockup is missing entirely",
+                "Subheader text ('Post-money SAFE • ~18–20 months of runway') is overlapped and partially hidden beneath the oversized two-line header",
+                "Left hero block overflow: '3 pilots' stat row and its descriptor text collide with the use-of-funds ribbon layer below, producing illegible stacked text",
+                "Build milestone card bullet list is clipped at the card's bottom edge — at least one bullet is cut off",
+                "Use-of-funds ribbon text strings overlap each other and the milestone card boundary, making the ribbon unreadable"
+              ],
+              "nextMove": "Fix the footer logo src path so the Designer Health lockup renders correctly, reduce header font size or tighten line-height so the subheader clears below it without overlap, constrain the left hero block height and enforce overflow-hidden with proper spacing so the stats and ribbon do not collide, and increase the master card's minimum height or reduce internal padding so the Build card bullets are fully visible before the ribbon begins."
+            }
+          },
+          "lockedRegions": {
+            "ok": true,
+            "violations": [],
+            "warnings": [
+              {
+                "id": "footer-logo",
+                "label": "Footer Logo",
+                "freezeLevel": "semantic-stable",
+                "x": 1692,
+                "y": 962,
+                "width": 114,
+                "height": 59,
+                "mismatchedPixels": 1074,
+                "totalPixels": 6726,
+                "diffRatio": 0.15967885816235505,
+                "threshold": 0.05,
+                "outcome": "warn",
+                "note": "Keep the official Designer footer logo aligned to the shell."
+              }
+            ],
+            "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+          },
+          "score": {
+            "class": "blocked",
+            "numeric": 0.05,
+            "status": "blocked",
+            "outcome": "block",
+            "reason": "Regression review found a concrete blocker.",
+            "blockers": [
+              "Locked subheader overlaps the header and is visibly mispositioned",
+              "Multiple body text areas are clipped/colliding in the milestone cards and bottom ribbon, making required content unreadable",
+              "A broken image/placeholder box is visible at the bottom right of the slide",
+              "Footer shell drift: the official Designer footer/logo treatment is misaligned/replaced and no longer matches the baseline family",
+              "Footer logo is a broken image placeholder — Designer Health lockup is missing entirely",
+              "Subheader text ('Post-money SAFE • ~18–20 months of runway') is overlapped and partially hidden beneath the oversized two-line header",
+              "Left hero block overflow: '3 pilots' stat row and its descriptor text collide with the use-of-funds ribbon layer below, producing illegible stacked text",
+              "Build milestone card bullet list is clipped at the card's bottom edge — at least one bullet is cut off",
+              "Use-of-funds ribbon text strings overlap each other and the milestone card boundary, making the ribbon unreadable"
+            ],
+            "warnings": [
+              "Footer Logo drifted beyond semantic-stable threshold."
+            ]
+          },
+          "decision": {
+            "outcome": "block",
+            "reason": "Regression review found a concrete blocker."
+          },
+          "model": "gpt-5.4",
+          "settings": {}
+        },
+        {
+          "slotId": "openai-c",
+          "provider": "openai",
+          "status": "blocked",
+          "attemptNumber": 1,
+          "parentSlotId": null,
+          "parentAttemptRef": "baseline",
+          "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-c",
+          "before": {
+            "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+            "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+            "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html"
+          },
+          "after": {
+            "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-c/generated.html",
+            "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-c/preview.png"
+          },
+          "prefilter": {
+            "ok": true,
+            "blockers": [],
+            "warnings": [
+              "Footer Logo drifted beyond semantic-stable threshold."
+            ],
+            "summary": "Prefilter passed with warnings. Footer Logo drifted beyond semantic-stable threshold.",
+            "staticSanity": {
+              "ok": true,
+              "summary": "No static sanity issues detected before render.",
+              "blockers": []
+            },
+            "contract": {
+              "hasHtml": true,
+              "hasRenderableHtml": true,
+              "htmlExists": true,
+              "previewExists": true
+            },
+            "lockedRegions": {
+              "ok": true,
+              "violations": [],
+              "warnings": [
+                {
+                  "id": "footer-logo",
+                  "label": "Footer Logo",
+                  "freezeLevel": "semantic-stable",
+                  "x": 1692,
+                  "y": 962,
+                  "width": 114,
+                  "height": 59,
+                  "mismatchedPixels": 1074,
+                  "totalPixels": 6726,
+                  "diffRatio": 0.15967885816235505,
+                  "threshold": 0.05,
+                  "outcome": "warn",
+                  "note": "Keep the official Designer footer logo aligned to the shell."
+                }
+              ],
+              "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+            }
+          },
+          "judges": {
+            "gptDelta": {
+              "provider": "gpt",
+              "status": "partial",
+              "summary": "The candidate clearly attempts the intended ask slide and gets the locked title, subheader, integrated ask-plus-milestones structure, and restrained blue-accent Designer feel mostly right, but the execution is not fully presentation-ready because the composition is overcrowded, key footer shell elements are compromised by an extra broken image artifact, and the bottom ribbon intrudes into the main milestone area.",
+              "evidence": [
+                "The header matches the locked claim: 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.'",
+                "The subheader matches the locked text: 'Post-money SAFE · ~18–20 months of runway.'",
+                "The figure uses the requested integrated master card with a left hero ask panel showing '$1.25M' and support stats for '2', '3', and '18–20'.",
+                "The right side contains stacked milestone cards labeled 'Build', 'Deploy', and 'Validate', aligning with the required proof-stage milestone logic.",
+                "A muted blue accent family, soft gray field, white cards, rounded corners, and restrained shadows keep it broadly in-family with the Designer aesthetic.",
+                "The bottom use-of-funds ribbon is present, but it is too tall and visually collides with the lower content, partially covering the Validate section rather than staying quiet and secondary.",
+                "There is an obvious broken/empty image placeholder artifact near the bottom-right above the logo, which makes the slide look unfinished and violates the no-placeholder/presentation-ready requirement.",
+                "The footer rule remains, but the extra artifact near the footer area disrupts the locked shell cleanliness and undermines the polished late-deck tone."
+              ],
+              "nextPrompt": "Keep the current structure and copy, but make the slide fully presentation-ready: remove the broken image/placeholder artifact at bottom right, reduce the height of the use-of-funds ribbon so it stays secondary, and ensure the Build/Deploy/Validate stack is fully visible without overlap while preserving the footer rule and Designer logo alignment.",
+              "needsHuman": false
+            },
+            "claudeDelta": {
+              "provider": "claude",
+              "status": "partial",
+              "summary": "The candidate slide successfully replaces the blank template with real content — the locked header and subheader are present, the $1.25M hero ask is prominent on the left, and the three Build / Deploy / Validate milestone cards appear on the right with outcome-oriented copy. However, the layout is overflowing its container: the Validate card is cut off at the bottom, the left hero block has overlapping stat elements (the '18–20 months' counter visually collides with the core-hires and pilot-sites stats), the use-of-funds ribbon is partially obscured behind the left card rather than sitting cleanly below the master card, and the Designer footer logo appears broken (blank white box). The slide is not presentation-ready in its current state.",
+              "evidence": [
+                "Locked header 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' is correctly rendered in bold at top left",
+                "Locked subheader 'Post-money SAFE • ~18–20 months of runway' is present beneath the header",
+                "$1.25M hero figure is large and dominant in the left block with 'Finite proof-stage raise' label",
+                "Three milestone cards labeled Build, Deploy, and Validate are present on the right with FOUNDATION / PILOTS phase tags",
+                "Each milestone card contains three sub-bullets with specific outcome language (not generic startup copy)",
+                "Use-of-funds ribbon with four percentage allocations (38%, 27%, 18%, 17%) is visible at the bottom",
+                "Validate card body text and bullet points are cut off below the visible slide boundary — slide content overflows the frame",
+                "Left hero block stat row ('core hires', 'pilot sites', '18–20 months') has overlapping/colliding number elements making it illegible",
+                "Use-of-funds ribbon is partially hidden behind the left card overlay rather than sitting in a clean bottom ribbon position",
+                "Footer Designer logo renders as a blank white rectangle — logo asset is broken or missing"
+              ],
+              "nextPrompt": "Fix four layout issues: (1) Constrain the entire master card and milestone column to fit within the slide viewport — reduce font sizes or card padding so the Validate card is fully visible without scrolling. (2) Repair the left hero stat row so '2 core hires', '3 pilot sites', and '18–20 months' display as three clean side-by-side stat chips without number overlap. (3) Move the use-of-funds ribbon fully below the master card as a quiet bottom strip, not overlapping the left card. (4) Fix the Designer footer logo so the SVG or PNG renders correctly in the bottom-right corner matching the shell contract.",
+              "needsHuman": false
+            },
+            "gptRegression": {
+              "provider": "gpt",
+              "verdict": "blocker",
+              "rationale": "The candidate is largely resolved, but it still contains concrete visible regressions that would block signoff: a stray broken-image/placeholder box remains at bottom right, the use-of-funds ribbon text is clipped/overflowing, and the footer area no longer matches the clean official shell because the logo is missing and replaced by the artifact.",
+              "blockers": [
+                "A visible broken-image/placeholder box remains in the bottom-right corner.",
+                "The bottom use-of-funds ribbon is clipped/overflowing, with copy cut off and intruding into other content.",
+                "The footer shell has drifted: the official Designer logo/footer treatment is missing and the bottom-right area is broken."
+              ],
+              "nextMove": "Remove the bottom-right artifact, restore the official footer/logo placement, and resize/reflow the use-of-funds ribbon so all locked copy fits cleanly within the slide bounds."
+            },
+            "claudeRegression": {
+              "provider": "claude",
+              "verdict": "blocker",
+              "rationale": "The candidate slide has real content replacing the shell placeholders in the header and body, but it suffers from multiple visible layout regressions: the left hero ask block and the use-of-funds ribbon are both clipped/overflowing — stat numbers ('18', '20', 'months of') and the ribbon copy are visibly cut off by the card boundary, making required locked copy illegible. The Designer Health footer logo has been replaced by a broken image placeholder (white box with a small unresolved image stub in the bottom-right corner), which is a direct footer regression. The overall card height exceeds the slide canvas, causing the Validate milestone card and bottom ribbon to bleed below the visible frame.",
+              "blockers": [
+                "Left hero card stat row ('18 / 20 / months of') is clipped and overlaps with the use-of-funds ribbon, making required copy illegible",
+                "Use-of-funds ribbon text is cut off at the bottom of the card and not fully readable",
+                "Footer Designer Health logo is broken — replaced by an unresolved image stub/placeholder box",
+                "Master card overflows the slide canvas — Validate milestone card and bottom ribbon are partially outside the visible slide area"
+              ],
+              "nextMove": "Fix the master card height so all three milestone cards and the use-of-funds ribbon fit within the slide canvas; repair the clipped stat row in the left hero block; restore the correct Designer Health SVG/PNG logo in the footer position."
+            }
+          },
+          "lockedRegions": {
+            "ok": true,
+            "violations": [],
+            "warnings": [
+              {
+                "id": "footer-logo",
+                "label": "Footer Logo",
+                "freezeLevel": "semantic-stable",
+                "x": 1692,
+                "y": 962,
+                "width": 114,
+                "height": 59,
+                "mismatchedPixels": 1074,
+                "totalPixels": 6726,
+                "diffRatio": 0.15967885816235505,
+                "threshold": 0.05,
+                "outcome": "warn",
+                "note": "Keep the official Designer footer logo aligned to the shell."
+              }
+            ],
+            "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+          },
+          "score": {
+            "class": "blocked",
+            "numeric": 0.05,
+            "status": "blocked",
+            "outcome": "block",
+            "reason": "Regression review found a concrete blocker.",
+            "blockers": [
+              "A visible broken-image/placeholder box remains in the bottom-right corner.",
+              "The bottom use-of-funds ribbon is clipped/overflowing, with copy cut off and intruding into other content.",
+              "The footer shell has drifted: the official Designer logo/footer treatment is missing and the bottom-right area is broken.",
+              "Left hero card stat row ('18 / 20 / months of') is clipped and overlaps with the use-of-funds ribbon, making required copy illegible",
+              "Use-of-funds ribbon text is cut off at the bottom of the card and not fully readable",
+              "Footer Designer Health logo is broken — replaced by an unresolved image stub/placeholder box",
+              "Master card overflows the slide canvas — Validate milestone card and bottom ribbon are partially outside the visible slide area"
+            ],
+            "warnings": [
+              "Footer Logo drifted beyond semantic-stable threshold."
+            ]
+          },
+          "decision": {
+            "outcome": "block",
+            "reason": "Regression review found a concrete blocker."
+          },
+          "model": "gpt-5.4",
+          "settings": {}
+        },
+        {
+          "slotId": "gemini-a",
+          "provider": "gemini",
+          "status": "render_failed",
+          "attemptNumber": 1,
+          "parentSlotId": null,
+          "parentAttemptRef": "baseline",
+          "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-gemini-a",
+          "before": {
+            "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+            "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+            "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html"
+          },
+          "after": {
+            "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-gemini-a/generated.html",
+            "previewPath": null
+          },
+          "prefilter": null,
+          "judges": null,
+          "lockedRegions": {
+            "violations": []
+          },
+          "score": {
+            "class": "escalated",
+            "numeric": 0,
+            "status": "render_failed",
+            "outcome": "escalate",
+            "reason": "Render failed: page.setViewportSize: Target page, context or browser has been closed"
+          },
+          "decision": {
+            "outcome": "escalate",
+            "reason": "Render failed: page.setViewportSize: Target page, context or browser has been closed"
+          },
+          "model": "gemini-3.1-pro-preview",
+          "settings": {
+            "temperature": 0.4,
+            "thinkingLevel": "high"
+          }
+        },
+        {
+          "slotId": "gemini-b",
+          "provider": "gemini",
+          "status": "render_failed",
+          "attemptNumber": 1,
+          "parentSlotId": null,
+          "parentAttemptRef": "baseline",
+          "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-gemini-b",
+          "before": {
+            "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+            "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+            "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html"
+          },
+          "after": {
+            "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-gemini-b/generated.html",
+            "previewPath": null
+          },
+          "prefilter": null,
+          "judges": null,
+          "lockedRegions": {
+            "violations": []
+          },
+          "score": {
+            "class": "escalated",
+            "numeric": 0,
+            "status": "render_failed",
+            "outcome": "escalate",
+            "reason": "Render failed: browser.newPage: Target page, context or browser has been closed"
+          },
+          "decision": {
+            "outcome": "escalate",
+            "reason": "Render failed: browser.newPage: Target page, context or browser has been closed"
+          },
+          "model": "gemini-3.1-pro-preview",
+          "settings": {
+            "temperature": 0.4,
+            "thinkingLevel": "high"
+          }
+        },
+        {
+          "slotId": "gemini-c",
+          "provider": "gemini",
+          "status": "render_failed",
+          "attemptNumber": 1,
+          "parentSlotId": null,
+          "parentAttemptRef": "baseline",
+          "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-gemini-c",
+          "before": {
+            "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+            "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+            "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html"
+          },
+          "after": {
+            "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-gemini-c/generated.html",
+            "previewPath": null
+          },
+          "prefilter": null,
+          "judges": null,
+          "lockedRegions": {
+            "violations": []
+          },
+          "score": {
+            "class": "escalated",
+            "numeric": 0,
+            "status": "render_failed",
+            "outcome": "escalate",
+            "reason": "Render failed: browser.newPage: Target page, context or browser has been closed"
+          },
+          "decision": {
+            "outcome": "escalate",
+            "reason": "Render failed: browser.newPage: Target page, context or browser has been closed"
+          },
+          "model": "gemini-3.1-pro-preview",
+          "settings": {
+            "temperature": 0.4,
+            "thinkingLevel": "high"
+          }
+        }
+      ],
+      "summary": {
+        "passCount": 0,
+        "retryCount": 0,
+        "blockedCount": 3,
+        "escalatedCount": 3
+      },
+      "retrySynthesis": {
+        "global": "# Round 01 retry synthesis\n\n## preserve\n- Preserve stable parts of the current slide family.\n\n## still_missing\n- Keep pushing the requested change.\n\n## avoid\n- Avoid unrelated regressions.\n\n## next_move\n- Make the delta clearer in the next round.\n",
+        "slotLocal": {}
+      }
+    }
+  ],
+  "slots": [
+    {
+      "slotId": "openai-a",
+      "provider": "openai",
+      "status": "blocked",
+      "attemptNumber": 1,
+      "parentSlotId": null,
+      "parentAttemptRef": "baseline",
+      "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-a",
+      "before": {
+        "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+        "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+        "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html"
+      },
+      "after": {
+        "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-a/generated.html",
+        "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-a/preview.png"
+      },
+      "prefilter": {
+        "ok": true,
+        "blockers": [],
+        "warnings": [
+          "Footer Logo drifted beyond semantic-stable threshold."
+        ],
+        "summary": "Prefilter passed with warnings. Footer Logo drifted beyond semantic-stable threshold.",
+        "staticSanity": {
+          "ok": true,
+          "summary": "No static sanity issues detected before render.",
+          "blockers": []
+        },
+        "contract": {
+          "hasHtml": true,
+          "hasRenderableHtml": true,
+          "htmlExists": true,
+          "previewExists": true
+        },
+        "lockedRegions": {
+          "ok": true,
+          "violations": [],
+          "warnings": [
+            {
+              "id": "footer-logo",
+              "label": "Footer Logo",
+              "freezeLevel": "semantic-stable",
+              "x": 1692,
+              "y": 962,
+              "width": 114,
+              "height": 59,
+              "mismatchedPixels": 1074,
+              "totalPixels": 6726,
+              "diffRatio": 0.15967885816235505,
+              "threshold": 0.05,
+              "outcome": "warn",
+              "note": "Keep the official Designer footer logo aligned to the shell."
+            }
+          ],
+          "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+        }
+      },
+      "judges": {
+        "gptDelta": {
+          "provider": "gpt",
+          "status": "partial",
+          "summary": "The candidate did replace the blank stub with the intended ask-slide structure and the locked headline/subheader, but the execution is not presentation-ready: there are major text overlap/rendering issues, the shell/footer contract is broken, and the slide does not yet meet the clean in-family finish required for a Designer close slide.",
+          "evidence": [
+            "The locked header and subheader are present with the correct wording, and the figure follows the requested integrated logic: left hero ask card, right Build/Deploy/Validate milestone stack, and a bottom use-of-funds ribbon.",
+            "The main content visually surfaces the ask first with '$1.25M', 'Post-money SAFE', and supporting stats for hires, pilot sites, and runway, matching the brief's figure burden.",
+            "Multiple text blocks are visibly broken or overlapping: the subheader collides with the title, and body copy inside milestone cards shows duplicated/overprinted text, making sections hard to read.",
+            "The Designer shell contract is not fully preserved: the official footer logo is missing/replaced by a broken image placeholder at bottom right, even though the footer rule remains.",
+            "The slide feels less polished than adjacent official slides because of cramped spacing, oversized headline wrapping, and rendering artifacts that undermine the clinically serious tone."
+          ],
+          "nextPrompt": "Keep the current ask-slide concept, but fix all rendering and shell issues: preserve the official Designer footer logo, separate the title and subheader with proper spacing, remove all duplicate/overprinted text in the milestone cards, and tighten typography so the slide reads cleanly and presentation-ready in-family with adjacent official slides.",
+          "needsHuman": true
+        },
+        "claudeDelta": {
+          "provider": "claude",
+          "status": "partial",
+          "summary": "The candidate has successfully replaced the blank template stub with substantive content — the $1.25M ask, Post-money SAFE instrument, three milestone cards (Build/Deploy/Validate), stat chips (2 core hires, 3 pilot sites, 18–20 months), and a use-of-funds ribbon are all present and structurally correct. However, several execution problems prevent a full 'applied' rating: (1) the header text is oversized and overflows, obscuring the subheader 'Post-money SAFE • ~18–20 months of runway' which is barely legible behind the header block; (2) the milestone card body copy is visibly clipped/truncated mid-sentence in all three right-column cards; (3) the footer logo area renders as a broken image placeholder rather than the Designer Health logo; (4) the use-of-funds ribbon has unstyled/merged text with no visual separation between the four categories, creating a run-on appearance; and (5) the overall vertical scale of the slide appears compressed, causing the left hero block description text to be cut off.",
+          "evidence": [
+            "Header 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' renders at an oversized scale that pushes into and obscures the subheader line",
+            "Subheader 'Post-money SAFE • ~18–20 months of runway' is partially visible but overlapped by the large header block",
+            "BUILD milestone card body text ends mid-sentence: '...and tighten the' — content is clipped",
+            "DEPLOY milestone card body text ends mid-sentence: '...site learning loops, and' — content is clipped",
+            "VALIDATE milestone card body text ends mid-sentence: '...to support follow-on expansion and' — content is clipped",
+            "Footer logo area shows a broken/missing image box instead of the Designer Health logo",
+            "Use-of-funds ribbon shows 'Team build implementation + productPilot launch site onboardingDeployment support workflow integratValidation usage, outcomes, ROI' with merged/unstyled text and a truncated word 'integrat'",
+            "Left hero block descriptive paragraph text is cut off mid-sentence before the stat chips",
+            "The integrated master card layout (left hero + right stacked milestones + bottom ribbon) is structurally present and matches the brief's figure logic"
+          ],
+          "nextPrompt": "Fix the following rendering issues: (1) Reduce header font size so it fits on 1–2 lines without overlapping the subheader — subheader must be fully legible below the header. (2) Ensure all three milestone card body text blocks are fully visible and not clipped — reduce font size or card padding if needed. (3) Restore the Designer Health footer logo (the img src is broken — use the correct path or inline SVG from the shell). (4) Style the use-of-funds ribbon so each of the four categories (Team build, Pilot launch, Deployment support, Validation) is visually separated with a pill or divider, and fix the truncated word 'integrat' to read 'workflow integration'. (5) Ensure the left hero block description paragraph is fully visible above the stat chips. Do not change the layout structure or content — only fix the overflow, clipping, logo, and ribbon formatting issues.",
+          "needsHuman": false
+        },
+        "gptRegression": {
+          "provider": "gpt",
+          "verdict": "blocker",
+          "rationale": "The candidate is no longer a blank shell, but it contains clear visible regressions that make it feel unresolved: multiple text layers are overlapping in the header and milestone cards, and the footer/logo area is broken by a stray missing-image placeholder. These are concrete visual blockers versus a finished official slide.",
+          "blockers": [
+            "Locked header/subheader rendering is visibly broken with overlapping duplicate text at the top",
+            "Body copy in the Build / Deploy / Validate cards is overlapped/clipped, making required content obviously wrong and hard to read",
+            "A visible broken-image placeholder appears in the bottom-right footer area, indicating an unresolved stub/object",
+            "Footer shell drifts from the baseline due to the stray bottom-right object disrupting the clean aligned footer/logo treatment"
+          ],
+          "nextMove": "Fix the text-layer duplication/overflow and remove or correctly load the bottom-right image object so the footer returns to the clean official shell."
+        },
+        "claudeRegression": {
+          "provider": "claude",
+          "verdict": "blocker",
+          "rationale": "The candidate slide has real content but contains multiple visible regressions: the locked subheader ('Post-money SAFE • ~18–20 months of runway') is partially obscured/overprinted by the oversized header text bleeding into its zone; the milestone card body copy is visibly clipped mid-sentence on all three right-column cards (BUILD, DEPLOY, VALIDATE descriptions cut off); the use-of-funds ribbon at the bottom has collapsed typographic spacing causing label and descriptor text to run together without clear separation (e.g., 'integratValidation' is a visible merge artifact); and the footer logo has failed to render — the Designer Health lockup in the bottom-right shows a broken image placeholder box instead of the resolved logo asset.",
+          "blockers": [
+            "Locked subheader text is overprinted and partially hidden beneath the oversized header, making it unreadable on first scan",
+            "All three right-column milestone card body descriptions are clipped mid-sentence — content is visibly truncated",
+            "Use-of-funds ribbon text is merged/colliding — 'integratValidation' is a visible broken concatenation artifact",
+            "Footer Designer Health logo is a broken image placeholder, not the resolved lockup"
+          ],
+          "nextMove": "Fix the header/subheader vertical spacing so the subheader is fully legible; expand or scroll-clip the milestone card containers so body copy is not truncated; repair the use-of-funds ribbon with proper gutters between each label-descriptor pair; and resolve the footer logo asset path so the Designer Health lockup renders correctly."
+        }
+      },
+      "lockedRegions": {
+        "ok": true,
+        "violations": [],
+        "warnings": [
+          {
+            "id": "footer-logo",
+            "label": "Footer Logo",
+            "freezeLevel": "semantic-stable",
+            "x": 1692,
+            "y": 962,
+            "width": 114,
+            "height": 59,
+            "mismatchedPixels": 1074,
+            "totalPixels": 6726,
+            "diffRatio": 0.15967885816235505,
+            "threshold": 0.05,
+            "outcome": "warn",
+            "note": "Keep the official Designer footer logo aligned to the shell."
+          }
+        ],
+        "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+      },
+      "score": {
+        "class": "blocked",
+        "numeric": 0.05,
+        "status": "blocked",
+        "outcome": "block",
+        "reason": "Regression review found a concrete blocker.",
+        "blockers": [
+          "Locked header/subheader rendering is visibly broken with overlapping duplicate text at the top",
+          "Body copy in the Build / Deploy / Validate cards is overlapped/clipped, making required content obviously wrong and hard to read",
+          "A visible broken-image placeholder appears in the bottom-right footer area, indicating an unresolved stub/object",
+          "Footer shell drifts from the baseline due to the stray bottom-right object disrupting the clean aligned footer/logo treatment",
+          "Locked subheader text is overprinted and partially hidden beneath the oversized header, making it unreadable on first scan",
+          "All three right-column milestone card body descriptions are clipped mid-sentence — content is visibly truncated",
+          "Use-of-funds ribbon text is merged/colliding — 'integratValidation' is a visible broken concatenation artifact",
+          "Footer Designer Health logo is a broken image placeholder, not the resolved lockup"
+        ],
+        "warnings": [
+          "Footer Logo drifted beyond semantic-stable threshold."
+        ]
+      },
+      "decision": {
+        "outcome": "block",
+        "reason": "Regression review found a concrete blocker."
+      },
+      "model": "gpt-5.4",
+      "settings": {}
+    },
+    {
+      "slotId": "openai-b",
+      "provider": "openai",
+      "status": "blocked",
+      "attemptNumber": 1,
+      "parentSlotId": null,
+      "parentAttemptRef": "baseline",
+      "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-b",
+      "before": {
+        "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+        "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+        "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html"
+      },
+      "after": {
+        "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-b/generated.html",
+        "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-b/preview.png"
+      },
+      "prefilter": {
+        "ok": true,
+        "blockers": [],
+        "warnings": [
+          "Footer Logo drifted beyond semantic-stable threshold."
+        ],
+        "summary": "Prefilter passed with warnings. Footer Logo drifted beyond semantic-stable threshold.",
+        "staticSanity": {
+          "ok": true,
+          "summary": "No static sanity issues detected before render.",
+          "blockers": []
+        },
+        "contract": {
+          "hasHtml": true,
+          "hasRenderableHtml": true,
+          "htmlExists": true,
+          "previewExists": true
+        },
+        "lockedRegions": {
+          "ok": true,
+          "violations": [],
+          "warnings": [
+            {
+              "id": "footer-logo",
+              "label": "Footer Logo",
+              "freezeLevel": "semantic-stable",
+              "x": 1692,
+              "y": 962,
+              "width": 114,
+              "height": 59,
+              "mismatchedPixels": 1074,
+              "totalPixels": 6726,
+              "diffRatio": 0.15967885816235505,
+              "threshold": 0.05,
+              "outcome": "warn",
+              "note": "Keep the official Designer footer logo aligned to the shell."
+            }
+          ],
+          "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+        }
+      },
+      "judges": {
+        "gptDelta": {
+          "provider": "gpt",
+          "status": "partial",
+          "summary": "The candidate clearly attempts the intended ask-slide structure with a left hero ask block, right milestone stack, and bottom use-of-funds ribbon inside the Designer shell, but the slide is not presentation-ready because the layout is visibly broken, content overlaps heavily, and the footer/logo contract is violated by an extra broken image replacing the standard shell logo treatment.",
+          "evidence": [
+            "The locked header and subheader are present and use the requested wording: “Raising $1.25M…” and “Post-money SAFE • ~18–20 months of runway.”",
+            "The main figure follows the requested high-level logic: one integrated master card with a left ask panel, three right-side milestone cards labeled Build / Deploy / Validate, and a bottom use-of-funds ribbon with percentages.",
+            "The left hero block surfaces the ask first with “$1.25M,” “Post-money SAFE,” and support stats including “2 hires” and “3 pilots,” matching the proof-stage financing intent.",
+            "However, the header area is crowded and overlapping: the long title wraps into multiple lines and the subheader sits on top of the title descenders, reducing legibility.",
+            "The lower portion is severely broken: the ‘2 hires’ and ‘3 pilots’ stats collide with body copy and the bottom ribbon cards, and the closing sentence overlaps the ribbon content.",
+            "The right milestone cards are also clipped/overstuffed, with bullet text cut off at the bottom of at least the Deploy and Validate cards.",
+            "A broken image placeholder appears in the bottom-right corner, while the official Designer footer logo position is not preserved cleanly, violating the locked shell/footer requirement.",
+            "The slide no longer feels clinically polished or fully resolved because of visible overflow, clipping, and stacking errors."
+          ],
+          "nextPrompt": "Keep the same overall concept, but rebuild slide 13 so it is presentation-ready within the locked Designer shell: preserve the exact header/subheader, keep one integrated master card, reduce type sizes and rebalance spacing so no text overlaps or clips, keep the left ask block to amount/instrument/3 stats only, keep the right Build/Deploy/Validate cards to concise outcome-first copy, make the bottom use-of-funds ribbon quieter and fully readable, and restore the standard footer rule and Designer logo with no extra/broken image element.",
+          "needsHuman": true
+        },
+        "claudeDelta": {
+          "provider": "claude",
+          "status": "partial",
+          "summary": "The candidate has successfully replaced the blank template stub with substantive content — the locked header, subheader, left hero ask block ($1.25M, Post-money SAFE, 2 hires, 3 pilots), right stacked Build/Deploy/Validate milestone cards, and a use-of-funds ribbon (45% Team build, 25% Pilot delivery, 20% Product/data readiness, 10% Operating buffer) are all visibly present and structurally correct. However, several execution issues prevent a full 'applied' rating: (1) the master card is overflowing its container — the bottom ribbon and left stat block are clipping outside the card boundary and overlapping the footer zone; (2) the Designer Health logo in the footer is broken/missing (renders as a blank box instead of the wordmark); (3) the subheader is partially obscured by the oversized header text wrapping into it; (4) the left column stat rows ('2 hires', '3 pilots', '18–20 months') are partially cut off or overlapping with the ribbon layer; (5) the overall card height exceeds the slide canvas, pushing content into the footer rule area. The structural logic and content are correct but the layout needs height/overflow correction and the footer logo needs to be restored.",
+          "evidence": [
+            "Header text 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' is present and correct but wraps into the subheader zone, partially obscuring 'Post-money SAFE • ~18–20 months of runway'",
+            "Left hero block shows '$1.25M', 'Post-money SAFE', and descriptive copy — correctly surfacing the ask first",
+            "Right column shows three stacked milestone cards labeled 01 Build, 02 Deploy, 03 Validate with outcome-first language — matches the brief",
+            "Use-of-funds ribbon is present with four segments (45% Team build, 25% Pilot delivery, 20% Product/data readiness, 10% Operating buffer) — matches the restrained ribbon spec",
+            "Master card container is visibly overflowing: the ribbon and left stat rows clip below the card boundary and overlap the footer rule area",
+            "Footer logo renders as a broken/blank image box rather than the Designer Health wordmark",
+            "Left stat block ('2 hires', '3 pilots') text is partially cut off where the ribbon overlaps",
+            "The 'USE OF FUNDS' label and ribbon text overlap with the left column stat copy, creating a legibility collision"
+          ],
+          "nextPrompt": "Fix the layout overflow: reduce the master card's internal padding and font sizes so the entire card — including the use-of-funds ribbon — fits within the slide canvas above the footer rule. Restore the Designer Health footer logo (use the same SVG/PNG path as the shell). Ensure the subheader 'Post-money SAFE • ~18–20 months of runway' is fully visible below the header without overlap. The left stat block (2 hires, 3 pilots, 18–20 months) must not be clipped by the ribbon. Keep all content, structure, and copy unchanged — this is a sizing and overflow fix only.",
+          "needsHuman": false
+        },
+        "gptRegression": {
+          "provider": "gpt",
+          "verdict": "blocker",
+          "rationale": "The candidate is no longer a blank shell, but it has multiple visible regressions that make it feel unfinished: key locked copy is overlapping, several text blocks are clipped or colliding, a broken image/placeholder remains at bottom right, and the footer/logo area has drifted from the official shell.",
+          "blockers": [
+            "Locked subheader overlaps the header and is visibly mispositioned",
+            "Multiple body text areas are clipped/colliding in the milestone cards and bottom ribbon, making required content unreadable",
+            "A broken image/placeholder box is visible at the bottom right of the slide",
+            "Footer shell drift: the official Designer footer/logo treatment is misaligned/replaced and no longer matches the baseline family"
+          ],
+          "nextMove": "Fix the layout pass before styling tweaks: restore the official footer/logo shell, remove the broken bottom-right placeholder, then reflow the header/subheader and all card/ribbon text so nothing overlaps or clips."
+        },
+        "claudeRegression": {
+          "provider": "claude",
+          "verdict": "blocker",
+          "rationale": "The candidate slide has resolved the header and body content correctly but contains multiple visible regressions: the footer logo has failed to render (showing a broken image placeholder instead of the Designer Health lockup), the subheader is being visually overrun by the large bold header text causing overlap and clipping, content inside the master card is overflowing its bounds (the '3 pilots' stat row and the use-of-funds ribbon text are colliding and partially obscured), and the Build milestone card's bullet list is clipped at the bottom edge. Taken together, the footer shell is broken and internal layout overflow is visible on first scan.",
+          "blockers": [
+            "Footer logo is a broken image placeholder — Designer Health lockup is missing entirely",
+            "Subheader text ('Post-money SAFE • ~18–20 months of runway') is overlapped and partially hidden beneath the oversized two-line header",
+            "Left hero block overflow: '3 pilots' stat row and its descriptor text collide with the use-of-funds ribbon layer below, producing illegible stacked text",
+            "Build milestone card bullet list is clipped at the card's bottom edge — at least one bullet is cut off",
+            "Use-of-funds ribbon text strings overlap each other and the milestone card boundary, making the ribbon unreadable"
+          ],
+          "nextMove": "Fix the footer logo src path so the Designer Health lockup renders correctly, reduce header font size or tighten line-height so the subheader clears below it without overlap, constrain the left hero block height and enforce overflow-hidden with proper spacing so the stats and ribbon do not collide, and increase the master card's minimum height or reduce internal padding so the Build card bullets are fully visible before the ribbon begins."
+        }
+      },
+      "lockedRegions": {
+        "ok": true,
+        "violations": [],
+        "warnings": [
+          {
+            "id": "footer-logo",
+            "label": "Footer Logo",
+            "freezeLevel": "semantic-stable",
+            "x": 1692,
+            "y": 962,
+            "width": 114,
+            "height": 59,
+            "mismatchedPixels": 1074,
+            "totalPixels": 6726,
+            "diffRatio": 0.15967885816235505,
+            "threshold": 0.05,
+            "outcome": "warn",
+            "note": "Keep the official Designer footer logo aligned to the shell."
+          }
+        ],
+        "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+      },
+      "score": {
+        "class": "blocked",
+        "numeric": 0.05,
+        "status": "blocked",
+        "outcome": "block",
+        "reason": "Regression review found a concrete blocker.",
+        "blockers": [
+          "Locked subheader overlaps the header and is visibly mispositioned",
+          "Multiple body text areas are clipped/colliding in the milestone cards and bottom ribbon, making required content unreadable",
+          "A broken image/placeholder box is visible at the bottom right of the slide",
+          "Footer shell drift: the official Designer footer/logo treatment is misaligned/replaced and no longer matches the baseline family",
+          "Footer logo is a broken image placeholder — Designer Health lockup is missing entirely",
+          "Subheader text ('Post-money SAFE • ~18–20 months of runway') is overlapped and partially hidden beneath the oversized two-line header",
+          "Left hero block overflow: '3 pilots' stat row and its descriptor text collide with the use-of-funds ribbon layer below, producing illegible stacked text",
+          "Build milestone card bullet list is clipped at the card's bottom edge — at least one bullet is cut off",
+          "Use-of-funds ribbon text strings overlap each other and the milestone card boundary, making the ribbon unreadable"
+        ],
+        "warnings": [
+          "Footer Logo drifted beyond semantic-stable threshold."
+        ]
+      },
+      "decision": {
+        "outcome": "block",
+        "reason": "Regression review found a concrete blocker."
+      },
+      "model": "gpt-5.4",
+      "settings": {}
+    },
+    {
+      "slotId": "openai-c",
+      "provider": "openai",
+      "status": "blocked",
+      "attemptNumber": 1,
+      "parentSlotId": null,
+      "parentAttemptRef": "baseline",
+      "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-c",
+      "before": {
+        "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+        "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+        "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html"
+      },
+      "after": {
+        "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-c/generated.html",
+        "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-openai-c/preview.png"
+      },
+      "prefilter": {
+        "ok": true,
+        "blockers": [],
+        "warnings": [
+          "Footer Logo drifted beyond semantic-stable threshold."
+        ],
+        "summary": "Prefilter passed with warnings. Footer Logo drifted beyond semantic-stable threshold.",
+        "staticSanity": {
+          "ok": true,
+          "summary": "No static sanity issues detected before render.",
+          "blockers": []
+        },
+        "contract": {
+          "hasHtml": true,
+          "hasRenderableHtml": true,
+          "htmlExists": true,
+          "previewExists": true
+        },
+        "lockedRegions": {
+          "ok": true,
+          "violations": [],
+          "warnings": [
+            {
+              "id": "footer-logo",
+              "label": "Footer Logo",
+              "freezeLevel": "semantic-stable",
+              "x": 1692,
+              "y": 962,
+              "width": 114,
+              "height": 59,
+              "mismatchedPixels": 1074,
+              "totalPixels": 6726,
+              "diffRatio": 0.15967885816235505,
+              "threshold": 0.05,
+              "outcome": "warn",
+              "note": "Keep the official Designer footer logo aligned to the shell."
+            }
+          ],
+          "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+        }
+      },
+      "judges": {
+        "gptDelta": {
+          "provider": "gpt",
+          "status": "partial",
+          "summary": "The candidate clearly attempts the intended ask slide and gets the locked title, subheader, integrated ask-plus-milestones structure, and restrained blue-accent Designer feel mostly right, but the execution is not fully presentation-ready because the composition is overcrowded, key footer shell elements are compromised by an extra broken image artifact, and the bottom ribbon intrudes into the main milestone area.",
+          "evidence": [
+            "The header matches the locked claim: 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.'",
+            "The subheader matches the locked text: 'Post-money SAFE · ~18–20 months of runway.'",
+            "The figure uses the requested integrated master card with a left hero ask panel showing '$1.25M' and support stats for '2', '3', and '18–20'.",
+            "The right side contains stacked milestone cards labeled 'Build', 'Deploy', and 'Validate', aligning with the required proof-stage milestone logic.",
+            "A muted blue accent family, soft gray field, white cards, rounded corners, and restrained shadows keep it broadly in-family with the Designer aesthetic.",
+            "The bottom use-of-funds ribbon is present, but it is too tall and visually collides with the lower content, partially covering the Validate section rather than staying quiet and secondary.",
+            "There is an obvious broken/empty image placeholder artifact near the bottom-right above the logo, which makes the slide look unfinished and violates the no-placeholder/presentation-ready requirement.",
+            "The footer rule remains, but the extra artifact near the footer area disrupts the locked shell cleanliness and undermines the polished late-deck tone."
+          ],
+          "nextPrompt": "Keep the current structure and copy, but make the slide fully presentation-ready: remove the broken image/placeholder artifact at bottom right, reduce the height of the use-of-funds ribbon so it stays secondary, and ensure the Build/Deploy/Validate stack is fully visible without overlap while preserving the footer rule and Designer logo alignment.",
+          "needsHuman": false
+        },
+        "claudeDelta": {
+          "provider": "claude",
+          "status": "partial",
+          "summary": "The candidate slide successfully replaces the blank template with real content — the locked header and subheader are present, the $1.25M hero ask is prominent on the left, and the three Build / Deploy / Validate milestone cards appear on the right with outcome-oriented copy. However, the layout is overflowing its container: the Validate card is cut off at the bottom, the left hero block has overlapping stat elements (the '18–20 months' counter visually collides with the core-hires and pilot-sites stats), the use-of-funds ribbon is partially obscured behind the left card rather than sitting cleanly below the master card, and the Designer footer logo appears broken (blank white box). The slide is not presentation-ready in its current state.",
+          "evidence": [
+            "Locked header 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' is correctly rendered in bold at top left",
+            "Locked subheader 'Post-money SAFE • ~18–20 months of runway' is present beneath the header",
+            "$1.25M hero figure is large and dominant in the left block with 'Finite proof-stage raise' label",
+            "Three milestone cards labeled Build, Deploy, and Validate are present on the right with FOUNDATION / PILOTS phase tags",
+            "Each milestone card contains three sub-bullets with specific outcome language (not generic startup copy)",
+            "Use-of-funds ribbon with four percentage allocations (38%, 27%, 18%, 17%) is visible at the bottom",
+            "Validate card body text and bullet points are cut off below the visible slide boundary — slide content overflows the frame",
+            "Left hero block stat row ('core hires', 'pilot sites', '18–20 months') has overlapping/colliding number elements making it illegible",
+            "Use-of-funds ribbon is partially hidden behind the left card overlay rather than sitting in a clean bottom ribbon position",
+            "Footer Designer logo renders as a blank white rectangle — logo asset is broken or missing"
+          ],
+          "nextPrompt": "Fix four layout issues: (1) Constrain the entire master card and milestone column to fit within the slide viewport — reduce font sizes or card padding so the Validate card is fully visible without scrolling. (2) Repair the left hero stat row so '2 core hires', '3 pilot sites', and '18–20 months' display as three clean side-by-side stat chips without number overlap. (3) Move the use-of-funds ribbon fully below the master card as a quiet bottom strip, not overlapping the left card. (4) Fix the Designer footer logo so the SVG or PNG renders correctly in the bottom-right corner matching the shell contract.",
+          "needsHuman": false
+        },
+        "gptRegression": {
+          "provider": "gpt",
+          "verdict": "blocker",
+          "rationale": "The candidate is largely resolved, but it still contains concrete visible regressions that would block signoff: a stray broken-image/placeholder box remains at bottom right, the use-of-funds ribbon text is clipped/overflowing, and the footer area no longer matches the clean official shell because the logo is missing and replaced by the artifact.",
+          "blockers": [
+            "A visible broken-image/placeholder box remains in the bottom-right corner.",
+            "The bottom use-of-funds ribbon is clipped/overflowing, with copy cut off and intruding into other content.",
+            "The footer shell has drifted: the official Designer logo/footer treatment is missing and the bottom-right area is broken."
+          ],
+          "nextMove": "Remove the bottom-right artifact, restore the official footer/logo placement, and resize/reflow the use-of-funds ribbon so all locked copy fits cleanly within the slide bounds."
+        },
+        "claudeRegression": {
+          "provider": "claude",
+          "verdict": "blocker",
+          "rationale": "The candidate slide has real content replacing the shell placeholders in the header and body, but it suffers from multiple visible layout regressions: the left hero ask block and the use-of-funds ribbon are both clipped/overflowing — stat numbers ('18', '20', 'months of') and the ribbon copy are visibly cut off by the card boundary, making required locked copy illegible. The Designer Health footer logo has been replaced by a broken image placeholder (white box with a small unresolved image stub in the bottom-right corner), which is a direct footer regression. The overall card height exceeds the slide canvas, causing the Validate milestone card and bottom ribbon to bleed below the visible frame.",
+          "blockers": [
+            "Left hero card stat row ('18 / 20 / months of') is clipped and overlaps with the use-of-funds ribbon, making required copy illegible",
+            "Use-of-funds ribbon text is cut off at the bottom of the card and not fully readable",
+            "Footer Designer Health logo is broken — replaced by an unresolved image stub/placeholder box",
+            "Master card overflows the slide canvas — Validate milestone card and bottom ribbon are partially outside the visible slide area"
+          ],
+          "nextMove": "Fix the master card height so all three milestone cards and the use-of-funds ribbon fit within the slide canvas; repair the clipped stat row in the left hero block; restore the correct Designer Health SVG/PNG logo in the footer position."
+        }
+      },
+      "lockedRegions": {
+        "ok": true,
+        "violations": [],
+        "warnings": [
+          {
+            "id": "footer-logo",
+            "label": "Footer Logo",
+            "freezeLevel": "semantic-stable",
+            "x": 1692,
+            "y": 962,
+            "width": 114,
+            "height": 59,
+            "mismatchedPixels": 1074,
+            "totalPixels": 6726,
+            "diffRatio": 0.15967885816235505,
+            "threshold": 0.05,
+            "outcome": "warn",
+            "note": "Keep the official Designer footer logo aligned to the shell."
+          }
+        ],
+        "summary": "Footer Logo: warn (15.97% changed, threshold 5.00%)"
+      },
+      "score": {
+        "class": "blocked",
+        "numeric": 0.05,
+        "status": "blocked",
+        "outcome": "block",
+        "reason": "Regression review found a concrete blocker.",
+        "blockers": [
+          "A visible broken-image/placeholder box remains in the bottom-right corner.",
+          "The bottom use-of-funds ribbon is clipped/overflowing, with copy cut off and intruding into other content.",
+          "The footer shell has drifted: the official Designer logo/footer treatment is missing and the bottom-right area is broken.",
+          "Left hero card stat row ('18 / 20 / months of') is clipped and overlaps with the use-of-funds ribbon, making required copy illegible",
+          "Use-of-funds ribbon text is cut off at the bottom of the card and not fully readable",
+          "Footer Designer Health logo is broken — replaced by an unresolved image stub/placeholder box",
+          "Master card overflows the slide canvas — Validate milestone card and bottom ribbon are partially outside the visible slide area"
+        ],
+        "warnings": [
+          "Footer Logo drifted beyond semantic-stable threshold."
+        ]
+      },
+      "decision": {
+        "outcome": "block",
+        "reason": "Regression review found a concrete blocker."
+      },
+      "model": "gpt-5.4",
+      "settings": {}
+    },
+    {
+      "slotId": "gemini-a",
+      "provider": "gemini",
+      "status": "render_failed",
+      "attemptNumber": 1,
+      "parentSlotId": null,
+      "parentAttemptRef": "baseline",
+      "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-gemini-a",
+      "before": {
+        "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+        "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+        "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html"
+      },
+      "after": {
+        "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-gemini-a/generated.html",
+        "previewPath": null
+      },
+      "prefilter": null,
+      "judges": null,
+      "lockedRegions": {
+        "violations": []
+      },
+      "score": {
+        "class": "escalated",
+        "numeric": 0,
+        "status": "render_failed",
+        "outcome": "escalate",
+        "reason": "Render failed: page.setViewportSize: Target page, context or browser has been closed"
+      },
+      "decision": {
+        "outcome": "escalate",
+        "reason": "Render failed: page.setViewportSize: Target page, context or browser has been closed"
+      },
+      "model": "gemini-3.1-pro-preview",
+      "settings": {
+        "temperature": 0.4,
+        "thinkingLevel": "high"
+      }
+    },
+    {
+      "slotId": "gemini-b",
+      "provider": "gemini",
+      "status": "render_failed",
+      "attemptNumber": 1,
+      "parentSlotId": null,
+      "parentAttemptRef": "baseline",
+      "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-gemini-b",
+      "before": {
+        "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+        "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+        "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html"
+      },
+      "after": {
+        "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-gemini-b/generated.html",
+        "previewPath": null
+      },
+      "prefilter": null,
+      "judges": null,
+      "lockedRegions": {
+        "violations": []
+      },
+      "score": {
+        "class": "escalated",
+        "numeric": 0,
+        "status": "render_failed",
+        "outcome": "escalate",
+        "reason": "Render failed: browser.newPage: Target page, context or browser has been closed"
+      },
+      "decision": {
+        "outcome": "escalate",
+        "reason": "Render failed: browser.newPage: Target page, context or browser has been closed"
+      },
+      "model": "gemini-3.1-pro-preview",
+      "settings": {
+        "temperature": 0.4,
+        "thinkingLevel": "high"
+      }
+    },
+    {
+      "slotId": "gemini-c",
+      "provider": "gemini",
+      "status": "render_failed",
+      "attemptNumber": 1,
+      "parentSlotId": null,
+      "parentAttemptRef": "baseline",
+      "attemptDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-gemini-c",
+      "before": {
+        "officialPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/official-preview.png",
+        "parentPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-preview.png",
+        "parentHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/baseline/parent-html.html"
+      },
+      "after": {
+        "htmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft/tune/run-20260406-023312-html-edit/round-01/slot-gemini-c/generated.html",
+        "previewPath": null
+      },
+      "prefilter": null,
+      "judges": null,
+      "lockedRegions": {
+        "violations": []
+      },
+      "score": {
+        "class": "escalated",
+        "numeric": 0,
+        "status": "render_failed",
+        "outcome": "escalate",
+        "reason": "Render failed: browser.newPage: Target page, context or browser has been closed"
+      },
+      "decision": {
+        "outcome": "escalate",
+        "reason": "Render failed: browser.newPage: Target page, context or browser has been closed"
+      },
+      "model": "gemini-3.1-pro-preview",
+      "settings": {
+        "temperature": 0.4,
+        "thinkingLevel": "high"
+      }
+    }
+  ],
+  "winner": null,
+  "pendingCodexReview": null,
+  "failureReason": "Reached stop conditions without a promotable winner.",
+  "metrics": {
+    "generationCalls": 6,
+    "judgeCalls": 12,
+    "renderCalls": 3,
+    "prefilterRejects": 0,
+    "timingsMs": {
+      "generation": 233612,
+      "render": 2079,
+      "judging": 60696,
+      "synthesis": 0
+    }
+  },
+  "promoteVersionAfterMaterialize": false,
+  "copyDebugFiles": false
+}

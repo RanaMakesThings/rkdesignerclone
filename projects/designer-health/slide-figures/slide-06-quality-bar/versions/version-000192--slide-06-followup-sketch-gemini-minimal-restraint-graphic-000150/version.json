@@ -1,0 +1,25 @@
+{
+  "id": "version-000192",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000192--slide-06-followup-sketch-gemini-minimal-restraint-graphic-000150",
+  "label": "slide-06-followup-sketch-gemini-minimal-restraint-graphic-000150",
+  "status": "archived",
+  "createdAt": "2026-04-03T16:52:45.680Z",
+  "sourceKind": "presentation-image-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/presentation-images/vox-slide6-followup-sketch-override-2026-04-03/gemini/version-03--minimal-restraint",
+    "output/figures/presentation-images/vox-slide6-followup-sketch-override-2026-04-03/gemini/version-03--minimal-restraint/image-01.jpg"
+  ],
+  "runId": "graphic-batch-000031",
+  "attempt": 3,
+  "sourceGraphicId": "graphic-000150",
+  "sourceBatchId": "graphic-batch-000031",
+  "sourceBatchSlug": "vox-slide6-followup-sketch-override-2026-04-03",
+  "sourceProvider": "gemini",
+  "sourceVariantId": "v03-minimal",
+  "sourceVariantLabel": "Minimal Restraint",
+  "sourcePath": "output/figures/presentation-images/vox-slide6-followup-sketch-override-2026-04-03/gemini/version-03--minimal-restraint",
+  "sourceImagePath": "output/figures/presentation-images/vox-slide6-followup-sketch-override-2026-04-03/gemini/version-03--minimal-restraint/image-01.jpg"
+}

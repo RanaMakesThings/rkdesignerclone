@@ -1,0 +1,34 @@
+## Verdict
+Getting closer, but not quite there yet. The slide still carries some visual weight and roughness that keeps it from feeling truly sleek. The left mechanism in particular needs refinement before it reads as clean and intentional.
+
+---
+
+## Visual Findings
+
+**1. The "Time saved" dashed box feels isolated, not integrated.**
+The dashed border reads more like a placeholder or UI wireframe artifact than a designed annotation. The label "Time saved" sits awkwardly inside the box with no typographic hierarchy — it needs to feel like a deliberate callout, not a forgotten label.
+
+**2. The dotted guide lines between the two bars are doing too much heavy lifting.**
+The connecting lines between the top and bottom left bars are barely visible yet still create visual clutter. They don't clearly communicate the compression story — a reader has to work to understand what they're pointing at. The intent is good but the execution is muddy.
+
+**3. The left bar pair feels proportionally off.**
+The bottom (compressed) bar's blue segment is too narrow relative to the arrow/indicator element next to it. The two-arrow icon (→←) inside the blue square feels like a UI button, not a diagram annotation. It breaks the visual language.
+
+**4. The overall background and tab treatment still adds weight.**
+The three-tab selector at the top uses filled colored backgrounds (solid blue, medium gray) that feel slightly heavy for a flat white slide. The active tab especially creates a boxy stage effect rather than a clean navigation moment.
+
+**5. The right-side visit grid is the strongest element but slightly misaligned.**
+The 5→6 visits illustration is conceptually clean, but the spacing between visit blocks is inconsistent, and the "New visit" green button feels like a UI component dropped in rather than a designed diagram element.
+
+---
+
+## Polish Tweaks
+
+**1. Replace the dashed box with a lightweight open-corner bracket or a single thin underline + label.**
+A fully closed dashed rectangle feels heavy and unresolved. Two small corner marks (like ⌐ and ¬) framing "Time saved" with a light italic or small-caps label would feel far more editorial and intentional.
+
+**2. Convert the →← button into a simple bidirectional arrow annotation on the bar itself.**
+Remove the filled blue square entirely. Draw a clean horizontal ↔ arrow directly beneath or above the compressed segment with a hairline stroke, matching the annotation style used elsewhere. This kills the "UI widget" feel immediately.
+
+**3. Reduce tab fill contrast — use a bottom-border active indicator instead of filled backgrounds.**
+Replace the filled tab backgrounds with a simple 2–3px bottom border in the brand blue for the active state, and plain text for inactive tabs. This drops visual weight at the top of the slide dramatically and keeps the white-flat feel consistent throughout.

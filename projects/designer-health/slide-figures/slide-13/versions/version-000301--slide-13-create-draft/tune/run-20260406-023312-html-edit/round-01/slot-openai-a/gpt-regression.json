@@ -1,0 +1,23 @@
+{
+  "provider": "gpt",
+  "verdict": "blocker",
+  "rationale": "The candidate is no longer a blank shell, but it contains clear visible regressions that make it feel unresolved: multiple text layers are overlapping in the header and milestone cards, and the footer/logo area is broken by a stray missing-image placeholder. These are concrete visual blockers versus a finished official slide.",
+  "blockers": [
+    "Locked header/subheader rendering is visibly broken with overlapping duplicate text at the top",
+    "Body copy in the Build / Deploy / Validate cards is overlapped/clipped, making required content obviously wrong and hard to read",
+    "A visible broken-image placeholder appears in the bottom-right footer area, indicating an unresolved stub/object",
+    "Footer shell drifts from the baseline due to the stray bottom-right object disrupting the clean aligned footer/logo treatment"
+  ],
+  "nextMove": "Fix the text-layer duplication/overflow and remove or correctly load the bottom-right image object so the footer returns to the clean official shell.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate is no longer a blank shell, but it contains clear visible regressions that make it feel unresolved: multiple text layers are overlapping in the header and milestone cards, and the footer/logo area is broken by a stray missing-image placeholder. These are concrete visual blockers versus a finished official slide.",
+    "blockers": [
+      "Locked header/subheader rendering is visibly broken with overlapping duplicate text at the top",
+      "Body copy in the Build / Deploy / Validate cards is overlapped/clipped, making required content obviously wrong and hard to read",
+      "A visible broken-image placeholder appears in the bottom-right footer area, indicating an unresolved stub/object",
+      "Footer shell drifts from the baseline due to the stray bottom-right object disrupting the clean aligned footer/logo treatment"
+    ],
+    "nextMove": "Fix the text-layer duplication/overflow and remove or correctly load the bottom-right image object so the footer returns to the clean official shell."
+  }
+}

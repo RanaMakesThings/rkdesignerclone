@@ -1,0 +1,28 @@
+{
+  "id": "version-000021",
+  "slideId": "slide-05",
+  "slideDir": "projects/designer-health/slide-figures/slide-05",
+  "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05",
+  "label": "slide-05",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.524Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-05/anthropic-review",
+    "projects/designer-health/slide-figures/slide-05/assessment-synthesis.md",
+    "projects/designer-health/slide-figures/slide-05/change-arrow-simple-arc.md",
+    "projects/designer-health/slide-figures/slide-05/change-theme-montserrat.md",
+    "projects/designer-health/slide-figures/slide-05/codex-review.md",
+    "projects/designer-health/slide-figures/slide-05/compare-to-shelved-merge-review.txt",
+    "projects/designer-health/slide-figures/slide-05/coverage.json",
+    "projects/designer-health/slide-figures/slide-05/figure.html",
+    "projects/designer-health/slide-figures/slide-05/figure.png",
+    "projects/designer-health/slide-figures/slide-05/figure.svg",
+    "projects/designer-health/slide-figures/slide-05/gemini-html",
+    "projects/designer-health/slide-figures/slide-05/gemini-image",
+    "projects/designer-health/slide-figures/slide-05/gemini-review",
+    "projects/designer-health/slide-figures/slide-05/meta.json",
+    "projects/designer-health/slide-figures/slide-05/spec.json"
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-01-one-human-story-to-structure-membrane",
+    "family": "story_to_structure_membrane",
+    "deckId": "pitch-deck-lab",
+    "theme": "pd-template-1",
+    "mode": "body-only"
+  },
+  "chrome": {
+    "title": "",
+    "subtitle": "",
+    "chips": [],
+    "footnote": ""
+  },
+  "constraints": {
+    "figureJob": "Show one human patient story being turned into grouped structure that decisions can use, without literalizing the transformation into a workflow table.",
+    "focalPoint": "The middle reordering chamber.",
+    "layout": "Centered three-part horizontal composition: soft patient story field on the left, sculptural membrane chamber in the middle, and quiet decision-ready structure card on the right.",
+    "big": [
+      "The middle membrane chamber",
+      "The patient story field",
+      "The decision-ready card"
+    ],
+    "quiet": [
+      "The left story copy",
+      "The right card border",
+      "The section dividers"
+    ],
+    "accentTargets": [
+      "The middle chamber",
+      "The callout text"
+    ],
+    "forbidden": [
+      "workflow diagram",
+      "software ui",
+      "thick arrows",
+      "funnel"
+    ],
+    "semanticGuards": [
+      "no_ui"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Patient story",
+      "Turn story into structure",
+      "Essential work that can start before the visit",
+      "Decision-ready structure"
+    ],
+    "preferred": [
+      "Relevant positives / negatives",
+      "Timeline",
+      "What to verify"
+    ],
+    "optional": [],
+    "forbidden": [
+      "dashboard",
+      "workflow"
+    ]
+  },
+  "body": {
+    "left": {
+      "label": "Patient story",
+      "storyText": "This started maybe three days ago. It’s worse when I’m walking around. I was up a lot last night because of it. I don’t think I’ve had a fever. I’ve had something kind of like this before."
+    },
+    "middle": {
+      "label": "Turn story into structure",
+      "streams": [
+        {
+          "label": "Relevant positives / negatives",
+          "items": [
+            "worse with walking",
+            "no fever"
+          ]
+        },
+        {
+          "label": "Timeline",
+          "items": [
+            "three days",
+            "worse overnight"
+          ]
+        },
+        {
+          "label": "What to verify",
+          "items": [
+            "prior episode?",
+            "trigger / severity?"
+          ]
+        }
+      ],
+      "callout": "Essential work that can start before the visit"
+    },
+    "right": {
+      "label": "Decision-ready structure",
+      "sections": [
+        {
+          "title": "Relevant positives / negatives",
+          "items": [
+            "Worse with walking",
+            "No fever"
+          ]
+        },
+        {
+          "title": "Timeline",
+          "items": [
+            "3-day course",
+            "Worse overnight"
+          ]
+        },
+        {
+          "title": "What to verify",
+          "items": [
+            "Prior similar episode?",
+            "Trigger / severity?"
+          ]
+        }
+      ]
+    }
+  },
+  "trace": [
+    {
+      "excerpt": "The left side should be human-readable. The middle is where it becomes category-readable. The right is where it becomes decision-readable.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Use the conceptual ladder as the governing mechanism."
+    },
+    {
+      "excerpt": "One compact, human-sounding paragraph block.",
+      "targetPath": "body.left",
+      "ruleType": "body",
+      "note": "Keep the patient story as one spoken field rather than extracted fragments."
+    },
+    {
+      "excerpt": "A sculptural reordering chamber with three soft horizontal streams.",
+      "targetPath": "body.middle",
+      "ruleType": "body",
+      "note": "Use grouped streams, not a table."
+    },
+    {
+      "excerpt": "A clean structured card with those three sections.",
+      "targetPath": "body.right",
+      "ruleType": "body",
+      "note": "Keep the right side sparse and decision-oriented."
+    },
+    {
+      "excerpt": "Centered horizontal figure across the middle of the slide.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Preserve whitespace and left-to-right spatial logic."
+    },
+    {
+      "excerpt": "The middle should still be the visual star.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "Concentrate accent and motion in the center."
+    },
+    {
+      "excerpt": "Use: Patient story, Turn story into structure, Decision-ready structure, Essential work that can start before the visit.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Lock the short framing copy."
+    }
+  ]
+}

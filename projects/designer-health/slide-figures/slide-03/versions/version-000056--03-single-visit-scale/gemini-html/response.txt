@@ -1,0 +1,308 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vox Pitch Deck Slide</title>
+<style>
+    /* Reset & Base Setup */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: #EAEBE8; /* Subtle off-white/gray background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Main Slide Container */
+    .slide-container {
+        width: 1920px;
+        height: 1080px;
+        background-color: #F8F9F8; /* Very light, clean card background */
+        border-radius: 24px;
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.04);
+        padding: 80px 120px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 64px;
+        font-weight: 800;
+        color: #162E2B; /* Dark teal/green */
+        letter-spacing: -1.5px;
+        margin-bottom: 16px;
+        line-height: 1.1;
+    }
+    .subheader {
+        font-size: 36px;
+        font-weight: 600;
+        color: #5A6B68; /* Muted teal/gray */
+        margin-bottom: 80px;
+        letter-spacing: -0.5px;
+    }
+
+    /* --- Beat 1: Single Visit Comparison --- */
+    .beat-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .b1-row {
+        display: flex;
+        width: 1000px; /* Fixed width for perfect alignment */
+        justify-content: flex-start;
+    }
+
+    .bar-wrapper {
+        display: flex;
+        height: 72px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .segment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 500;
+        color: #FFFFFF;
+    }
+
+    /* Top Bar Colors */
+    .color-story { background-color: #4A85C5; }
+    .color-exam { background-color: #E0E5E8; color: #162E2B; }
+    .color-counsel { background-color: #9BA5AE; }
+
+    /* Bracket & Annotation */
+    .bracket-row {
+        margin-top: 12px;
+        margin-bottom: 40px;
+    }
+    .bracket-container {
+        width: 500px; /* Matches Current Story width exactly */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bracket {
+        width: 100%;
+        height: 16px;
+        border-left: 1px solid #9BA5AE;
+        border-right: 1px solid #9BA5AE;
+        border-bottom: 1px solid #9BA5AE;
+        position: relative;
+    }
+    .bracket::after {
+        content: '';
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 16px;
+        background-color: #9BA5AE;
+    }
+    .annotation-text {
+        margin-top: 24px;
+        text-align: center;
+        color: #5A6B68;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .annotation-text strong {
+        color: #162E2B;
+        font-size: 20px;
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    /* Saved Time Block */
+    .saved-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 72px;
+        border: 2px dashed #9BA5AE;
+        border-radius: 8px;
+        color: #5A6B68;
+        font-size: 20px;
+        font-weight: 500;
+        background-color: transparent;
+    }
+
+    /* --- Divider --- */
+    .divider-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 60px 0;
+    }
+    .divider-line {
+        flex: 1;
+        height: 1px;
+        background-color: #D1D6D8;
+    }
+    .divider-text {
+        padding: 0 32px;
+        color: #5A6B68;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    /* --- Beat 2: Scale-up --- */
+    .beat-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .schedule-row {
+        display: flex;
+        width: 1500px;
+        justify-content: space-between;
+        margin-bottom: 32px;
+    }
+
+    .mini-visit {
+        display: flex;
+        height: 64px;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    /* Mini Bar Colors (Slightly lighter/muted to match reference) */
+    .m-story { background-color: #8CB2D8; height: 100%; }
+    .m-exam { background-color: #E0E5E8; height: 100%; }
+    .m-counsel { background-color: #BCC3C9; height: 100%; }
+
+    /* Row 1: Current Schedule (5 visits) */
+    .row-1 .mini-visit { width: 280px; }
+    .row-1 .m-story { width: 140px; } /* Variable */
+    .row-1 .m-exam { width: 56px; }   /* Protected */
+    .row-1 .m-counsel { width: 84px; } /* Protected */
+
+    /* Row 2: Efficient Schedule (5 short + 1 new) */
+    .row-2 .mini-visit { width: 230px; }
+    .row-2 .m-story { width: 90px; }  /* Shrunk */
+    .row-2 .m-exam { width: 56px; }   /* Protected */
+    .row-2 .m-counsel { width: 84px; } /* Protected */
+    
+    .new-visit-block {
+        width: 230px;
+        background-color: #4B7D75;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 6px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <header>
+        <h1>More efficient visits will increase supply.</h1>
+        <p class="subheader">Small per-visit gains compound.</p>
+    </header>
+
+    <!-- Beat 1: Single Visit Before/After -->
+    <div class="beat-1">
+        
+        <!-- Current Visit -->
+        <div class="b1-row">
+            <div class="bar-wrapper" style="width: 1000px;">
+                <div class="segment color-story" style="width: 500px;">Story reconstruction</div>
+                <div class="segment color-exam" style="width: 200px;">Physical exam</div>
+                <div class="segment color-counsel" style="width: 300px;">Decisions + counseling</div>
+            </div>
+        </div>
+
+        <!-- Annotation Bracket -->
+        <div class="b1-row bracket-row">
+            <div class="bracket-container">
+                <div class="bracket"></div>
+                <div class="annotation-text">
+                    <strong>Most variable minutes of the visit</strong>
+                    Best target for upstream prep without losing quality<br>
+                    The part AI can help most
+                </div>
+            </div>
+        </div>
+
+        <!-- Efficient Visit -->
+        <div class="b1-row">
+            <div style="display: flex; width: 1000px; gap: 12px;">
+                <div class="bar-wrapper" style="width: 820px;">
+                    <!-- Story shrinks from 500px to 320px -->
+                    <div class="segment color-story" style="width: 320px;">Story reconstruction</div>
+                    <!-- Exam and Counsel remain protected (200px, 300px) -->
+                    <div class="segment color-exam" style="width: 200px;">Physical exam</div>
+                    <div class="segment color-counsel" style="width: 300px;">Decisions + counseling</div>
+                </div>
+                <!-- Recovered time -->
+                <div class="saved-block" style="width: 168px;">Time saved</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="divider-container">
+        <div class="divider-line"></div>
+        <div class="divider-text">Efficiency repeated across visits creates capacity</div>
+        <div class="divider-line"></div>
+    </div>
+
+    <!-- Beat 2: Scale-up Result -->
+    <div class="beat-2">
+        
+        <!-- Current Schedule: 5 standard visits -->
+        <div class="schedule-row row-1">
+            <div class="mini-visit"><div class="m-story"></div><div class="m-exam"></div><div class="m-counsel"></div></div>
+            <div class="mini-visit"><div class="m-story"></div><div class="m-exam"></div><div class="m-counsel"></div></div>
+            <div class="mini-visit"><div class="m-story"></div><div class="m-exam"></div><div class="m-counsel"></div></div>
+            <div class="mini-visit"><div class="m-story"></div><div class="m-exam"></div><div class="m-counsel"></div></div>
+            <div class="mini-visit"><div class="m-story"></div><div class="m-exam"></div><div class="m-counsel"></div></div>
+        </div>
+
+        <!-- New Schedule: 5 efficient visits + 1 new visit -->
+        <div class="schedule-row row-2">
+            <div class="mini-visit"><div class="m-story"></div><div class="m-exam"></div><div class="m-counsel"></div></div>
+            <div class="mini-visit"><div class="m-story"></div><div class="m-exam"></div><div class="m-counsel"></div></div>
+            <div class="mini-visit"><div class="m-story"></div><div class="m-exam"></div><div class="m-counsel"></div></div>
+            <div class="mini-visit"><div class="m-story"></div><div class="m-exam"></div><div class="m-counsel"></div></div>
+            <div class="mini-visit"><div class="m-story"></div><div class="m-exam"></div><div class="m-counsel"></div></div>
+            <div class="new-visit-block">New visit</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+```

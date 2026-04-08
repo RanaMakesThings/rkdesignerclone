@@ -1,0 +1,16 @@
+{
+  "id": "version-000050",
+  "slideId": "slide-03",
+  "slideDir": "projects/designer-health/slide-figures/slide-03",
+  "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000050--slide-03",
+  "label": "slide-03",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:05:30.240Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-03/figure.html",
+    "projects/designer-health/slide-figures/slide-03/figure.png",
+    "projects/designer-health/slide-figures/slide-03/figure.svg"
+  ]
+}

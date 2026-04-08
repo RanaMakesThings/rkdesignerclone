@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox - Adaptive Interviewing System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal-main: #2A8E8A;
+            --teal-dark: #1F6B68;
+            --teal-light: #F0FDFA;
+            --teal-border: #99F6E4;
+            --navy: #111827;
+            --gray-text: #4B5563;
+            --gray-light: #F8FAFC;
+            --gray-border: #CBD5E1;
+            --bg-color: #FAFAFA;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #E5E5E5; /* Darker background to show the slide bounds if viewed on larger screen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1920px;
+            height: 1080px;
+            background-color: var(--bg-color);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        /* Typography & Header */
+        .header {
+            position: absolute;
+            top: 80px;
+            left: 110px;
+            width: 1500px;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        h1 span.brand {
+            color: var(--teal-main);
+        }
+
+        .subhead {
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--gray-text);
+            line-height: 1.5;
+            width: 1400px;
+        }
+
+        /* Main Chamber */
+        .chamber {
+            position: absolute;
+            top: 410px;
+            left: 560px;
+            width: 720px;
+            height: 520px;
+            background-color: var(--white);
+            border: 1px solid #E2E8F0;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+            z-index: 1;
+        }
+
+        .chamber-top-left {
+            position: absolute;
+            top: 40px;
+            left: 48px;
+            text-align: center;
+        }
+
+        .chamber-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--teal-main);
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .chamber-subtitle {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--navy);
+        }
+
+        .chamber-top-right {
+            position: absolute;
+            top: 48px;
+            right: 48px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--navy);
+            text-align: right;
+            opacity: 0.8;
+        }
+
+        /* Left Ribbons */
+        .ribbon {
+            position: absolute;
+            width: 380px;
+            height: 64px;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+        }
+
+        .ribbon svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .ribbon p {
+            font-size: 18px;
+            font-weight: 500;
+            padding-left: 48px;
+            padding-right: 48px;
+            width: 100%;
+        }
+
+        .ribbon.patient p {
+            color: var(--gray-text);
+        }
+
+        .ribbon.vox p {
+            color: #116B68;
+            font-weight: 600;
+        }
+
+        /* Ribbon Positions */
+        .r1 { top: 460px; left: 110px; }
+        .r2 { top: 545px; left: 130px; }
+        .r3 { top: 630px; left: 110px; }
+        .r4 { top: 715px; left: 130px; }
+        .r5 { top: 800px; left: 110px; }
+
+        /* Center Object: The Refractor */
+        .refractor-container {
+            position: absolute;
+            top: 545px; /* Center of chamber vertically */
+            left: 760px; /* Positioned inside chamber */
+            transform: translateY(-50%);
+            width: 160px;
+            height: 280px;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .refractor-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 16px;
+            white-space: nowrap;
+        }
+
+        .refractor-body {
+            width: 100%;
+            height: 240px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,253,250,0.6) 100%);
+            border: 2px solid var(--teal-main);
+            border-radius: 24px;
+            box-shadow: 
+                0 12px 24px rgba(42,142,138,0.15),
+                inset 0 0 20px rgba(255,255,255,0.8);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+        }
+
+        /* Internal Refractor Elements (The "Hidden Clinical Work") */
+        .refractor-glass-glare {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.6) 50%, transparent 55%);
+            transform: rotate(15deg);
+            pointer-events: none;
+        }
+
+        .refractor-core {
+            position: absolute;
+            top: 20px;
+            left: 76px;
+            width: 4px;
+            height: 200px;
+            background: var(--teal-main);
+            border-radius: 2px;
+            box-shadow: 0 0 12px var(--teal-main);
+        }
+
+        /* Right Rails */
+        .rail {
+            position: absolute;
+            width: 260px;
+            height: 48px;
+            background-color: var(--white);
+            border: 1px solid #E2E8F0;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            z-index: 3;
+        }
+
+        .rail-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--teal-main);
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        .rail-text {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--navy);
+        }
+
+        /* Rail Positions (relative to slide) */
+        .rail1 { top: 565px; left: 940px; }
+        .rail2 { top: 650px; left: 940px; }
+        .rail3 { top: 735px; left: 940px; }
+
+        /* Far-Right Card */
+        .card-container {
+            position: absolute;
+            top: 590px;
+            left: 1460px;
+            width: 340px;
+            z-index: 3;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card-stack {
+            position: relative;
+            width: 100%;
+            height: 380px;
+        }
+
+        .card-back {
+            position: absolute;
+            top: 16px;
+            left: -16px;
+            width: 100%;
+            height: 100%;
+            background-color: var(--teal-dark);
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-front {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--white);
+            border: 1px solid #E2E8F0;
+            border-radius: 16px;
+            box-shadow: 0 16px 32px rgba(0,0,0,0.06);
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .skeleton-line {
+            height: 10px;
+            background-color: #F1F5F9;
+            border-radius: 6px;
+        }
+
+        .skeleton-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* Connecting Lines SVG */
+        .connections {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        path.patient-line { stroke: var(--gray-border); stroke-width: 3; fill: none; }
+        path.vox-line { stroke: var(--teal-main); stroke-width: 3; fill: none; opacity: 0.7; }
+        
+        path.rail-flow-bg { stroke: var(--teal-light); stroke-width: 24; fill: none; stroke-linecap: round; }
+        path.rail-flow-fg { stroke: var(--teal-main); stroke-width: 2; fill: none; opacity: 0.5; }
+        
+        path.card-flow-bg { stroke: var(--teal-light); stroke-width: 16; fill: none; opacity: 0.6; }
+        path.card-flow-fg { stroke: var(--teal-main); stroke-width: 1.5; fill: none; opacity: 0.4; }
+
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Header -->
+    <div class="header">
+        <h1><span class="brand">Vox</span> is the adaptive interviewing system that takes on the<br>hard clinical reasoning work needed to turn patient story<br>into a clinician-grade starting point.</h1>
+        <p class="subhead">Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>what still needs verification before the visit begins.</p>
+    </div>
+
+    <!-- Main Chamber -->
+    <div class="chamber">
+        <div class="chamber-top-left">
+            <div class="chamber-title">Vox</div>
+            <div class="chamber-subtitle">Adaptive clinical interviewer</div>
+        </div>
+        <!-- Right side title as requested in prompt -->
+        <div class="chamber-top-right">
+            Clinical reasoning +<br>medical knowledge
+        </div>
+    </div>
+
+    <!-- Connection Lines (SVG) -->
+    <svg class="connections">
+        <!-- Ribbons to Refractor -->
+        <!-- Ribbon 1 (Patient) -->
+        <path class="patient-line" d="M 480 492 C 600 492, 650 585, 760 585" />
+        <!-- Ribbon 2 (Vox) -->
+        <path class="vox-line" d="M 500 577 C 600 577, 650 625, 760 625" />
+        <!-- Ribbon 3 (Patient) -->
+        <path class="patient-line" d="M 480 662 C 600 662, 650 665, 760 665" />
+        <!-- Ribbon 4 (Vox) -->
+        <path class="vox-line" d="M 500 747 C 600 747, 650 705, 760 705" />
+        <!-- Ribbon 5 (Patient) -->
+        <path class="patient-line" d="M 480 832 C 600 832, 650 745, 760 745" />
+
+        <!-- Refractor to Rails -->
+        <!-- Rail 1 -->
+        <path class="rail-flow-bg" d="M 920 605 C 930 605, 930 589, 940 589" />
+        <path class="rail-flow-fg" d="M 920 605 C 930 605, 930 589, 940 589" />
+        <!-- Rail 2 -->
+        <path class="rail-flow-bg" d="M 920 665 C 930 665, 930 674, 940 674" />
+        <path class="rail-flow-fg" d="M 920 665 C 930 665, 930 674, 940 674" />
+        <!-- Rail 3 -->
+        <path class="rail-flow-bg" d="M 920 725 C 930 725, 930 759, 940 759" />
+        <path class="rail-flow-fg" d="M 920 725 C 930 725, 930 759, 940 759" />
+
+        <!-- Rails to Card -->
+        <!-- From Rail 1 -->
+        <path class="card-flow-bg" d="M 1200 589 C 1320 589, 1350 680, 1444 680" />
+        <path class="card-flow-fg" d="M 1200 589 C 1320 589, 1350 680, 1444 680" />
+        <!-- From Rail 2 -->
+        <path class="card-flow-bg" d="M 1200 674 C 1320 674, 1350 710, 1444 710" />
+        <path class="card-flow-fg" d="M 1200 674 C 1320 674, 1350 710, 1444 710" />
+        <!-- From Rail 3 -->
+        <path class="card-flow-bg" d="M 1200 759 C 1320 759, 1350 740, 1444 740" />
+        <path class="card-flow-fg" d="M 1200 759 C 1320 759, 1350 740, 1444 740" />
+    </svg>
+
+    <!-- Left Ribbons -->
+    <div class="ribbon patient r1">
+        <svg viewBox="0 0 380 64" preserveAspectRatio="none">
+            <polygon points="0,0 350,0 370,32 350,64 0,64 20,32" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+        </svg>
+        <p>My back has been hurting...</p>
+    </div>
+    
+    <div class="ribbon vox r2">
+        <svg viewBox="0 0 380 64" preserveAspectRatio="none">
+            <polygon points="20,0 380,0 360,32 380,64 20,64 0,32" fill="#F0FDFA" stroke="#2A8E8A" stroke-width="2"/>
+        </svg>
+        <p>Vox: What makes it worse?</p>
+    </div>
+
+    <div class="ribbon patient r3">
+        <svg viewBox="0 0 380 64" preserveAspectRatio="none">
+            <polygon points="0,0 350,0 370,32 350,64 0,64 20,32" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+        </svg>
+        <p>It's worse in the morning.</p>
+    </div>
+
+    <div class="ribbon vox r4">
+        <svg viewBox="0 0 380 64" preserveAspectRatio="none">
+            <polygon points="20,0 380,0 360,32 380,64 20,64 0,32" fill="#F0FDFA" stroke="#2A8E8A" stroke-width="2"/>
+        </svg>
+        <p>Vox: When did this start?</p>
+    </div>
+
+    <div class="ribbon patient r5">
+        <svg viewBox="0 0 380 64" preserveAspectRatio="none">
+            <polygon points="0,0 350,0 370,32 350,64 0,64 20,32" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+        </svg>
+        <p>Started last Tuesday.</p>
+    </div>
+
+    <!-- Center Object: The Refractor -->
+    <div class="refractor-container">
+        <div class="refractor-label">Adaptive interview loop</div>
+        <div class="refractor-body">
+            <div class="refractor-glass-glare"></div>
+            <!-- Internal SVG for data transformation visualization -->
+            <svg width="100%" height="100%" style="position: absolute; top:0; left:0; z-index: 1;">
+                <!-- Messy Inputs converging to core -->
+                <path d="M -10 40 C 30 40, 40 120, 76 120" stroke="#CBD5E1" stroke-width="2" fill="none" />
+                <path d="M -10 80 C 30 80, 40 120, 76 120" stroke="#2A8E8A" stroke-width="2" fill="none" opacity="0.6"/>
+                <path d="M -10 120 C 30 120, 40 120, 76 120" stroke="#CBD5E1" stroke-width="2" fill="none" />
+                <path d="M -10 160 C 30 160, 40 120, 76 120" stroke="#2A8E8A" stroke-width="2" fill="none" opacity="0.6"/>
+                <path d="M -10 200 C 30 200, 40 120, 76 120" stroke="#CBD5E1" stroke-width="2" fill="none" />
+                
+                <!-- The Core (Judgment/Prioritization) -->
+                <rect x="74" y="40" width="8" height="160" rx="4" fill="#2A8E8A" />
+                
+                <!-- Disciplined Outputs diverging from core -->
+                <path d="M 82 120 C 110 120, 120 60, 170 60" stroke="#2A8E8A" stroke-width="3" fill="none" />
+                <path d="M 82 120 C 110 120, 120 120, 170 120" stroke="#2A8E8A" stroke-width="3" fill="none" />
+                <path d="M 82 120 C 110 120, 120 180, 170 180" stroke="#2A8E8A" stroke-width="3" fill="none" />
+                
+                <!-- Output Nodes -->
+                <circle cx="156" cy="60" r="4" fill="#2A8E8A" />
+                <circle cx="156" cy="120" r="4" fill="#2A8E8A" />
+                <circle cx="156" cy="180" r="4" fill="#2A8E8A" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Right Rails -->
+    <div class="rail rail1">
+        <div class="rail-dot"></div>
+        <div class="rail-text">What matters</div>
+    </div>
+    <div class="rail rail2">
+        <div class="rail-dot"></div>
+        <div class="rail-text">What connects</div>
+    </div>
+    <div class="rail rail3">
+        <div class="rail-dot"></div>
+        <div class="rail-text">What still needs<br>verification</div>
+    </div>
+
+    <!-- Far-Right Card -->
+    <div class="card-container">
+        <div class="card-title">Clinician-grade starting point</div>
+        <div class="card-stack">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <div class="skeleton-group">
+                    <div class="skeleton-line" style="width: 40%;"></div>
+                    <div class="skeleton-line" style="width: 85%;"></div>
+                    <div class="skeleton-line" style="width: 60%;"></div>
+                </div>
+                <div class="skeleton-group">
+                    <div class="skeleton-line" style="width: 45%;"></div>
+                    <div class="skeleton-line" style="width: 75%;"></div>
+                    <div class="skeleton-line" style="width: 90%;"></div>
+                    <div class="skeleton-line" style="width: 55%;"></div>
+                </div>
+                <div class="skeleton-group">
+                    <div class="skeleton-line" style="width: 35%;"></div>
+                    <div class="skeleton-line" style="width: 65%;"></div>
+                    <div class="skeleton-line" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "model": "gpt-5.4",
+  "reasoning": {
+    "effort": "high"
+  },
+  "text": {
+    "verbosity": "medium"
+  },
+  "max_output_tokens": 12000,
+  "mode": "background-poll",
+  "responseId": "resp_082bdeabad6f1c260069cc395384548193ab332dd843ad1cce"
+}

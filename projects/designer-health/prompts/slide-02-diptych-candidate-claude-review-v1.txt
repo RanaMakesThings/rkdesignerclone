@@ -1,0 +1,25 @@
+Review this candidate investor-deck slide as a presentation design critic.
+
+Context:
+- This is a challenge branch for slide 2 of the Designer Health deck.
+- The current official slide uses a chart + specialty breakout + shortage
+  banner composition.
+- This candidate instead uses a two-column diptych:
+  - left: rising wait-time proof
+  - right: primary care shortage proof
+  - lower-right: one specialty comparison bar
+
+Assess:
+- whether this candidate is stronger than a three-widget chart slide
+- whether the hierarchy is clearer
+- whether any important proof got lost
+- whether the typography and spacing feel premium enough
+- whether the slide now feels more editorial and memorable
+
+Return:
+1. Three strongest advantages of this candidate.
+2. Three concrete risks or weaknesses.
+3. A verdict line: `Stronger than current native` or `Not stronger than current native`.
+4. One short paragraph on what the next native rebuild should borrow from this candidate.
+
+Be direct and specific.

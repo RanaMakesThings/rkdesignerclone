@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Pitch Deck Slide</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e5e5e5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Slide Container - 16:9 Aspect Ratio */
+        .slide {
+            width: 1600px;
+            height: 900px;
+            background-color: #fdfdfd;
+            position: relative;
+            padding: 70px 80px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Typography & Colors */
+        :root {
+            --text-main: #111827;
+            --text-muted: #6b7280;
+            --text-light: #9ca3af;
+            --accent-dark: #0a4a4e; /* Deep blue-green */
+            --accent-light: #1a7a7f;
+            --line-color: #e5e7eb;
+            --bg-chip: rgba(10, 74, 78, 0.06);
+        }
+
+        /* Header */
+        .header {
+            font-size: 46px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+            margin-bottom: 60px;
+        }
+
+        /* Main Layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr;
+            gap: 70px;
+            flex-grow: 1;
+            margin-bottom: 40px; /* Space for footer */
+        }
+
+        .divider {
+            background-color: var(--line-color);
+            width: 100%;
+            height: 100%;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Common Elements */
+        .eyebrow {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        /* Left Column Specifics */
+        .left-title {
+            font-size: 28px;
+            font-weight: 500;
+            color: var(--text-main);
+            line-height: 1.3;
+            margin-bottom: 24px;
+            max-width: 90%;
+        }
+
+        .hero-group {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: auto; /* Pushes chart to bottom */
+        }
+
+        .left-hero {
+            font-size: 130px;
+            font-weight: 300;
+            letter-spacing: -0.04em;
+            color: var(--accent-dark);
+            line-height: 0.9;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .left-hero-unit {
+            font-size: 36px;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-left: 12px;
+            letter-spacing: normal;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: var(--bg-chip);
+            color: var(--accent-dark);
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            transform: translateY(-10px);
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 280px;
+            margin-top: 60px;
+        }
+
+        /* Right Column Specifics */
+        .right-hero {
+            font-size: 150px;
+            font-weight: 300;
+            letter-spacing: -0.05em;
+            color: var(--accent-dark);
+            line-height: 0.9;
+            margin-bottom: 24px;
+        }
+
+        .right-headline {
+            font-size: 34px;
+            font-weight: 400;
+            color: var(--text-main);
+            line-height: 1.25;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+            max-width: 95%;
+        }
+
+        .right-support {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--text-muted);
+            line-height: 1.5;
+            max-width: 90%;
+            margin-bottom: auto; /* Pushes comparison to bottom */
+        }
+
+        /* Comparison Bar */
+        .comparison-container {
+            margin-top: 60px;
+            width: 100%;
+            max-width: 480px;
+        }
+
+        .comp-label {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .comp-track {
+            width: 100%;
+            height: 8px;
+            background-color: var(--line-color);
+            border-radius: 4px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        .comp-fill-obgyn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: var(--accent-dark);
+            border-radius: 4px;
+        }
+
+        .comp-fill-fm {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 56.22%; /* 23.5 / 41.8 */
+            background-color: var(--text-light);
+            border-radius: 4px 0 0 4px;
+            border-right: 2px solid #fdfdfd;
+        }
+
+        .comp-support {
+            font-size: 15px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 80px;
+            right: 80px;
+            height: 50px;
+            border-top: 1px solid var(--line-color);
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+            color: var(--text-light);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide">
+        <div class="header">Demand is outpacing clinical capacity.</div>
+        
+        <div class="main-content">
+            <!-- Left Column: Wait Times -->
+            <div class="column">
+                <div>
+                    <div class="eyebrow">AMN benchmark survey years</div>
+                    <div class="left-title">Average new-patient physician wait time</div>
+                    <div class="hero-group">
+                        <div class="left-hero">31<span class="left-hero-unit">days</span></div>
+                        <div class="chip">+19% since 2022</div>
+                    </div>
+                </div>
+                
+                <!-- Stripped Line Chart -->
+                <div class="chart-container">
+                    <svg width="100%" height="100%" viewBox="0 0 690 280" preserveAspectRatio="xMidYMid meet">
+                        <defs>
+                            <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#0a4a4e" stop-opacity="0.12"/>
+                                <stop offset="100%" stop-color="#0a4a4e" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Baseline (21 days) -->
+                        <line x1="0" y1="174" x2="690" y2="174" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="4 4" />
+                        
+                        <!-- Shaded Area -->
+                        <path d="M 0,250 L 0,174 L 164.3,179.5 L 328.6,201.5 L 427.1,139.9 L 591.4,119 L 690,64 L 690,250 Z" fill="url(#areaGradient)"/>
+                        
+                        <!-- Data Line -->
+                        <path d="M 0,174 L 164.3,179.5 L 328.6,201.5 L 427.1,139.9 L 591.4,119 L 690,64" fill="none" stroke="#0a4a4e" stroke-width="4" stroke-linejoin="round"/>
+                        
+                        <!-- Data Points -->
+                        <circle cx="0" cy="174" r="5" fill="#0a4a4e"/>
+                        <circle cx="164.3" cy="179.5" r="5" fill="#0a4a4e"/>
+                        <circle cx="328.6" cy="201.5" r="5" fill="#0a4a4e"/>
+                        <circle cx="427.1" cy="139.9" r="5" fill="#0a4a4e"/>
+                        <circle cx="591.4" cy="119" r="5" fill="#0a4a4e"/>
+                        <circle cx="690" cy="64" r="8" fill="#fdfdfd" stroke="#0a4a4e" stroke-width="4"/>
+                        
+                        <!-- Value Labels -->
+                        <text x="0" y="156" font-size="16" fill="#4b5563" font-weight="600">21</text>
+                        <text x="164.3" y="161.5" font-size="14" fill="#6b7280" font-weight="500" text-anchor="middle">20.5</text>
+                        <text x="328.6" y="223.5" font-size="14" fill="#6b7280" font-weight="500" text-anchor="middle">18.5</text>
+                        <text x="427.1" y="121.9" font-size="14" fill="#6b7280" font-weight="500" text-anchor="middle">24.1</text>
+                        <text x="591.4" y="101" font-size="14" fill="#6b7280" font-weight="500" text-anchor="middle">26</text>
+                        <text x="690" y="44" font-size="24" fill="#0a4a4e" font-weight="700" text-anchor="end">31</text>
+                        
+                        <!-- X-Axis Labels (Years) -->
+                        <text x="0" y="276" font-size="14" fill="#9ca3af" font-weight="500">2004</text>
+                        <text x="164.3" y="276" font-size="14" fill="#9ca3af" font-weight="500" text-anchor="middle">2009</text>
+                        <text x="328.6" y="276" font-size="14" fill="#9ca3af" font-weight="500" text-anchor="middle">2014</text>
+                        <text x="427.1" y="276" font-size="14" fill="#9ca3af" font-weight="500" text-anchor="middle">2017</text>
+                        <text x="591.4" y="276" font-size="14" fill="#9ca3af" font-weight="500" text-anchor="middle">2022</text>
+                        <text x="690" y="276" font-size="14" fill="#9ca3af" font-weight="500" text-anchor="end">2025</text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Vertical Divider -->
+            <div class="divider"></div>
+
+            <!-- Right Column: Shortage -->
+            <div class="column">
+                <div>
+                    <div class="eyebrow">Primary care HPSA, December 31, 2025</div>
+                    <div class="right-hero">1 in 4+</div>
+                    <div class="right-headline">Americans live in federally designated primary care shortage areas.</div>
+                    <div class="right-support">92.3 million people. In those areas, only 48.18% of primary care need is currently met.</div>
+                </div>
+                
+                <!-- Compact Horizontal Comparison Bar -->
+                <div class="comparison-container">
+                    <div class="comp-label">OB/GYN patients wait 41.8 days</div>
+                    <div class="comp-track">
+                        <div class="comp-fill-obgyn"></div>
+                        <div class="comp-fill-fm"></div>
+                    </div>
+                    <div class="comp-support">vs 23.5 days in family medicine</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hairline Footer Strip -->
+        <div class="footer">
+            Sources: AMN Healthcare Benchmark Survey (2004-2025); HRSA Primary Care Health Professional Shortage Areas Data, Dec 31, 2025.
+        </div>
+    </div>
+
+</body>
+</html>

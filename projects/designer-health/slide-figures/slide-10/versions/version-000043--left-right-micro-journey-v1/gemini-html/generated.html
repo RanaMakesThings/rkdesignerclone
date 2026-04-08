@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Deck - Slide 10</title>
+    <style>
+        :root {
+            --bg-main: #F8F9F8;
+            --card-bg: #FFFFFF;
+            --text-dark: #1A2222;
+            --text-muted: #6B7275;
+            --text-light: #9CA3A6;
+            --accent-green: #407A6B;
+            --bar-blue: #6B9ECA;
+            --bar-lgrey: #D1D5D8;
+            --bar-dgrey: #A8B0B5;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: #E5E7EB; /* Darker background to frame the slide */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--bg-main);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            padding: 80px 100px;
+        }
+
+        /* Header Section */
+        .header-section {
+            margin-bottom: 80px;
+        }
+
+        .header-section h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+
+        .header-section h2 {
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--text-muted);
+            letter-spacing: -0.01em;
+        }
+
+        /* Main Content Split */
+        .content-split {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+            gap: 60px;
+        }
+
+        /* Left Side: Causal Journey */
+        .left-panel {
+            flex: 0 0 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-right: 40px;
+        }
+
+        .journey-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .bars-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .visit-bar {
+            display: flex;
+            gap: 6px;
+        }
+
+        .segment {
+            height: 20px;
+            border-radius: 3px;
+        }
+
+        .seg-blue { width: 60px; background-color: var(--bar-blue); }
+        .seg-lgrey { width: 30px; background-color: var(--bar-lgrey); }
+        .seg-dgrey { width: 40px; background-color: var(--bar-dgrey); }
+
+        .accumulation-cue {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+        }
+
+        .accumulation-cue svg {
+            stroke: var(--bar-lgrey);
+            stroke-width: 1.5;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .new-visit-block {
+            background-color: var(--accent-green);
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 10px 24px;
+            border-radius: 4px;
+            letter-spacing: 0.02em;
+            box-shadow: 0 2px 8px rgba(64, 122, 107, 0.2);
+        }
+
+        /* Right Side: Economics Proof */
+        .right-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .econ-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 50px 60px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03), 0 1px 4px rgba(0, 0, 0, 0.02);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .econ-col-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .econ-col-left .primary-metric {
+            color: var(--accent-green);
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .econ-col-left .sub-metric {
+            color: var(--text-light);
+            font-size: 13px;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .connector {
+            color: var(--bar-lgrey);
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .econ-col-mid ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .econ-col-mid li {
+            color: var(--text-muted);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .econ-col-mid li::before {
+            content: "";
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: var(--bar-lgrey);
+        }
+
+        .econ-col-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .econ-col-right .primary-metric {
+            color: var(--text-dark);
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1;
+        }
+
+        .econ-col-right .sub-metric {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        .upside-line {
+            text-align: right;
+            margin-top: 16px;
+            margin-right: 20px;
+            font-size: 11px;
+            color: var(--text-light);
+            letter-spacing: 0.02em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="slide-container">
+        
+        <div class="header-section">
+            <h1>Recovered visit time creates real capacity.</h1>
+            <h2>When recovered minutes become completed visits, the impact is meaningful.</h2>
+        </div>
+
+        <div class="content-split">
+            
+            <!-- Left Side: Tiny Causal Journey -->
+            <div class="left-panel">
+                <div class="journey-container">
+                    
+                    <div class="bars-stack">
+                        <div class="visit-bar">
+                            <div class="segment seg-blue"></div>
+                            <div class="segment seg-lgrey"></div>
+                            <div class="segment seg-dgrey"></div>
+                        </div>
+                        <div class="visit-bar">
+                            <div class="segment seg-blue"></div>
+                            <div class="segment seg-lgrey"></div>
+                            <div class="segment seg-dgrey"></div>
+                        </div>
+                    </div>
+
+                    <div class="accumulation-cue">
+                        <svg width="24" height="40" viewBox="0 0 24 40">
+                            <path d="M12 0 L12 30 M5 23 L12 30 L19 23" />
+                        </svg>
+                    </div>
+
+                    <div class="new-visit-block">
+                        New visit
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Side: Economics Proof -->
+            <div class="right-panel">
+                <div class="econ-card">
+                    
+                    <div class="econ-col-left">
+                        <div class="primary-metric">+1 visit</div>
+                        <div class="sub-metric">/ provider / day</div>
+                    </div>
+
+                    <div class="connector">→</div>
+
+                    <div class="econ-col-mid">
+                        <ul>
+                            <li>220 clinic days</li>
+                            <li>$125 / visit</li>
+                            <li>40% contribution margin</li>
+                        </ul>
+                    </div>
+
+                    <div class="connector">=</div>
+
+                    <div class="econ-col-right">
+                        <div class="primary-metric">$11,000</div>
+                        <div class="sub-metric">/ year</div>
+                    </div>
+
+                </div>
+                
+                <div class="upside-line">
+                    Upside: +2 visits/day ≈ $22,000 / year
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

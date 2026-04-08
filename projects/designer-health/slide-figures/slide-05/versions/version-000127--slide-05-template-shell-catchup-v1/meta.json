@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-03-29T21:26:34.909Z",
+  "slug": "slide-05-history-wedge-v1",
+  "family": "history_wedge",
+  "deckId": "vox-pd-v1",
+  "theme": "pd-template-1",
+  "mode": "full-slide",
+  "title": "History is the cleanest place to reclaim minutes.",
+  "subtitle": "",
+  "specPath": "projects/designer-health/figures/specs/slide-05-history-wedge-v1.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/figure.html",
+    "svg": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/figure.svg",
+    "png": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/render-assets.json"
+  },
+  "selectedMedia": []
+}

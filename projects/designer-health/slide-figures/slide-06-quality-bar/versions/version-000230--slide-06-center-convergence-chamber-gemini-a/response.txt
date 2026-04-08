@@ -1,0 +1,348 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox - Adaptive Clinical Interviewer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #FCFDFD;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            position: relative;
+            color: #1A202C;
+        }
+
+        /* Header Styles */
+        .header {
+            position: absolute;
+            top: 80px;
+            left: 100px;
+            width: 1500px;
+            z-index: 40;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            color: #111827;
+            max-width: 1450px;
+        }
+
+        .header h1 .teal {
+            color: #2B8C8C;
+        }
+
+        .header p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #4B5563;
+            margin-top: 24px;
+            max-width: 1400px;
+        }
+
+        /* Global SVG for Connecting Lines */
+        .connections {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1920px;
+            height: 1080px;
+            z-index: 20;
+            pointer-events: none;
+        }
+
+        /* Central Chamber */
+        .chamber {
+            position: absolute;
+            left: 500px;
+            top: 380px;
+            width: 800px;
+            height: 520px;
+            background-color: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+            z-index: 10;
+        }
+
+        .chamber-header {
+            position: absolute;
+            left: 540px;
+            top: 420px;
+            z-index: 30;
+        }
+
+        .chamber-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2B8C8C;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+
+        .chamber-header p {
+            font-size: 15px;
+            font-weight: 500;
+            color: #4B5563;
+            margin-top: 6px;
+        }
+
+        .chamber-right-title {
+            position: absolute;
+            left: 980px;
+            top: 490px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #64748B;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            z-index: 30;
+        }
+
+        /* Convergence Lens (New Center Object) */
+        .lens {
+            position: absolute;
+            left: 620px;
+            top: 507px;
+            width: 160px;
+            height: 200px;
+            border-radius: 80px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0FDFA 100%);
+            border: 2px solid #5EEAD4;
+            box-shadow: 0 12px 30px rgba(45, 212, 191, 0.15), inset 0 4px 15px rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 30;
+        }
+
+        .lens-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0F766E;
+            line-height: 1.25;
+        }
+
+        /* Left Ribbons */
+        .ribbon-container {
+            position: absolute;
+            left: 100px;
+            z-index: 30;
+        }
+
+        /* Right Rails */
+        .rail {
+            position: absolute;
+            left: 980px;
+            width: 260px;
+            height: 44px;
+            background-color: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
+            z-index: 30;
+        }
+
+        .rail-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #2B8C8C;
+            margin-right: 12px;
+        }
+
+        .rail-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: #111827;
+        }
+
+        /* Final Card */
+        .final-card-title {
+            position: absolute;
+            left: 1450px;
+            top: 400px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            z-index: 30;
+        }
+
+        .final-card-group {
+            position: absolute;
+            left: 1450px;
+            top: 447px;
+            width: 300px;
+            height: 320px;
+            z-index: 30;
+        }
+
+        .final-card-back {
+            position: absolute;
+            left: -12px;
+            top: 12px;
+            width: 100%;
+            height: 100%;
+            background-color: #1E4E4E;
+            border-radius: 16px;
+            z-index: 1;
+        }
+
+        .final-card-front {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 32px 28px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .placeholder-line {
+            background-color: #F1F5F9;
+            border-radius: 4px;
+            margin-bottom: 14px;
+        }
+        .placeholder-line.dark {
+            background-color: #E2E8F0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Text -->
+    <div class="header">
+        <h1><span class="teal">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.</h1>
+        <p>Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.</p>
+    </div>
+
+    <!-- Central Chamber Background -->
+    <div class="chamber"></div>
+
+    <!-- Chamber Internal Titles -->
+    <div class="chamber-header">
+        <h2>Vox</h2>
+        <p>Adaptive clinical interviewer</p>
+    </div>
+    <div class="chamber-right-title">Clinical reasoning + medical knowledge</div>
+
+    <!-- Global SVG for all connecting lines -->
+    <svg class="connections" viewBox="0 0 1920 1080">
+        <!-- Lines from Ribbons to Lens -->
+        <path d="M 420 467 C 520 467, 520 527, 620 527" fill="none" stroke="#CBD5E0" stroke-width="3" />
+        <path d="M 420 537 C 520 537, 520 567, 620 567" fill="none" stroke="#81E6D9" stroke-width="3" />
+        <path d="M 420 607 C 520 607, 520 607, 620 607" fill="none" stroke="#CBD5E0" stroke-width="3" />
+        <path d="M 420 677 C 520 677, 520 647, 620 647" fill="none" stroke="#81E6D9" stroke-width="3" />
+        <path d="M 420 747 C 520 747, 520 687, 620 687" fill="none" stroke="#CBD5E0" stroke-width="3" />
+
+        <!-- Lines from Lens to Rails -->
+        <path d="M 780 557 C 880 557, 880 549, 980 549" fill="none" stroke="#99F6E4" stroke-width="3" />
+        <path d="M 780 607 C 880 607, 880 607, 980 607" fill="none" stroke="#99F6E4" stroke-width="3" />
+        <path d="M 780 657 C 880 657, 880 665, 980 665" fill="none" stroke="#99F6E4" stroke-width="3" />
+
+        <!-- Lines from Rails to Final Card -->
+        <path d="M 1240 549 C 1340 549, 1340 607, 1450 607" fill="none" stroke="#CCFBF1" stroke-width="3" />
+        <path d="M 1240 607 C 1340 607, 1340 607, 1450 607" fill="none" stroke="#CCFBF1" stroke-width="3" />
+        <path d="M 1240 665 C 1340 665, 1340 607, 1450 607" fill="none" stroke="#CCFBF1" stroke-width="3" />
+    </svg>
+
+    <!-- Left Ribbons (Using inline SVG for perfect chevron borders) -->
+    <div class="ribbon-container" style="top: 440px;">
+        <svg width="320" height="54" viewBox="0 0 320 54">
+            <path d="M 0 0 L 295 0 L 320 27 L 295 54 L 0 54 L 25 27 Z" fill="#F8FAFC" stroke="#CBD5E0" stroke-width="2"/>
+            <text x="45" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" fill="#334155">My back has been hurting...</text>
+        </svg>
+    </div>
+    <div class="ribbon-container" style="top: 510px;">
+        <svg width="320" height="54" viewBox="0 0 320 54">
+            <path d="M 0 0 L 295 0 L 320 27 L 295 54 L 0 54 L 25 27 Z" fill="#E6FFFA" stroke="#4FD1C5" stroke-width="2"/>
+            <text x="45" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#0F766E">Vox: What makes it worse?</text>
+        </svg>
+    </div>
+    <div class="ribbon-container" style="top: 580px;">
+        <svg width="320" height="54" viewBox="0 0 320 54">
+            <path d="M 0 0 L 295 0 L 320 27 L 295 54 L 0 54 L 25 27 Z" fill="#F8FAFC" stroke="#CBD5E0" stroke-width="2"/>
+            <text x="45" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" fill="#334155">It's worse in the morning.</text>
+        </svg>
+    </div>
+    <div class="ribbon-container" style="top: 650px;">
+        <svg width="320" height="54" viewBox="0 0 320 54">
+            <path d="M 0 0 L 295 0 L 320 27 L 295 54 L 0 54 L 25 27 Z" fill="#E6FFFA" stroke="#4FD1C5" stroke-width="2"/>
+            <text x="45" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#0F766E">Vox: When did this start?</text>
+        </svg>
+    </div>
+    <div class="ribbon-container" style="top: 720px;">
+        <svg width="320" height="54" viewBox="0 0 320 54">
+            <path d="M 0 0 L 295 0 L 320 27 L 295 54 L 0 54 L 25 27 Z" fill="#F8FAFC" stroke="#CBD5E0" stroke-width="2"/>
+            <text x="45" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" fill="#334155">Started last Tuesday.</text>
+        </svg>
+    </div>
+
+    <!-- Convergence Lens (Replaces the generic circle) -->
+    <div class="lens">
+        <div class="lens-text">Adaptive<br>interview<br>loop</div>
+    </div>
+
+    <!-- Right Rails -->
+    <div class="rail" style="top: 527px;">
+        <div class="rail-dot"></div>
+        <div class="rail-text">What matters</div>
+    </div>
+    <div class="rail" style="top: 585px;">
+        <div class="rail-dot"></div>
+        <div class="rail-text">What connects</div>
+    </div>
+    <div class="rail" style="top: 643px;">
+        <div class="rail-dot"></div>
+        <div class="rail-text">What still needs verification</div>
+    </div>
+
+    <!-- Final Card -->
+    <div class="final-card-title">Clinician-grade starting point</div>
+    <div class="final-card-group">
+        <div class="final-card-back"></div>
+        <div class="final-card-front">
+            <div class="placeholder-line dark" style="width: 35%; height: 12px; margin-bottom: 24px;"></div>
+            <div class="placeholder-line" style="width: 100%; height: 8px;"></div>
+            <div class="placeholder-line" style="width: 90%; height: 8px;"></div>
+            <div class="placeholder-line" style="width: 95%; height: 8px; margin-bottom: 24px;"></div>
+            
+            <div class="placeholder-line dark" style="width: 45%; height: 12px; margin-bottom: 24px;"></div>
+            <div class="placeholder-line" style="width: 100%; height: 8px;"></div>
+            <div class="placeholder-line" style="width: 85%; height: 8px;"></div>
+            <div class="placeholder-line" style="width: 92%; height: 8px; margin-bottom: 24px;"></div>
+            
+            <div class="placeholder-line dark" style="width: 30%; height: 12px; margin-bottom: 24px;"></div>
+            <div class="placeholder-line" style="width: 100%; height: 8px;"></div>
+            <div class="placeholder-line" style="width: 75%; height: 8px;"></div>
+        </div>
+    </div>
+
+</body>
+</html>
+```

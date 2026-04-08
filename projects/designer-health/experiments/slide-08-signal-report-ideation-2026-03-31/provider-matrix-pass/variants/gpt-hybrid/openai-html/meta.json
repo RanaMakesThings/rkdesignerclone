@@ -1,0 +1,7 @@
+{
+  "model": "gpt-5.4",
+  "images": [
+    "/Users/kabeer/Desktop/Screenshot 2026-03-31 at 5.24.45 PM.png"
+  ],
+  "maxOutputTokens": 8000
+}

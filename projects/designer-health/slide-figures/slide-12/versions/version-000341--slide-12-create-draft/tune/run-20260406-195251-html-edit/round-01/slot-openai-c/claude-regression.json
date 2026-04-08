@@ -1,0 +1,19 @@
+{
+  "provider": "claude",
+  "verdict": "blocker",
+  "rationale": "The candidate slide is a resolved, content-filled attempt and is not a blank shell, but it carries two concrete regressions against the locked spec and baseline family. First, the footer logo renders as lowercase wordmark 'designer' without the Designer Health logomark/icon that appears in every other slide in the family (including the baseline shell and reference slides), representing a clear brand/family drift. Second, the left hero block is missing the locked 'Pre-Seed SAFE' label as a styled badge and instead uses a small all-caps 'PRE-SEED ROUND' eyebrow, which diverges from the spec's explicit hero block copy ('$1.25M' + 'Pre-Seed SAFE' as a paired unit); the support stats row (2 key hires / 3 pilot sites / 18–20 months runway) is present but floated to the right column rather than anchored under the hero ask block as specified. These are not style preferences — the logo regression is a visible family break and the hero copy structure deviates from locked spec.",
+  "blockers": [
+    "Footer logo renders as plain lowercase 'designer' wordmark only — the Designer Health logomark icon is missing, breaking family alignment with the baseline shell and all reference slides",
+    "Left hero block uses 'PRE-SEED ROUND' eyebrow instead of the locked 'Pre-Seed SAFE' badge label specified in the hero block copy plan"
+  ],
+  "nextMove": "Restore the full Designer Health logo lockup (icon + wordmark) in the footer to match the baseline shell, and update the left hero block label from 'PRE-SEED ROUND' to the locked 'Pre-Seed SAFE' treatment as specified.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate slide is a resolved, content-filled attempt and is not a blank shell, but it carries two concrete regressions against the locked spec and baseline family. First, the footer logo renders as lowercase wordmark 'designer' without the Designer Health logomark/icon that appears in every other slide in the family (including the baseline shell and reference slides), representing a clear brand/family drift. Second, the left hero block is missing the locked 'Pre-Seed SAFE' label as a styled badge and instead uses a small all-caps 'PRE-SEED ROUND' eyebrow, which diverges from the spec's explicit hero block copy ('$1.25M' + 'Pre-Seed SAFE' as a paired unit); the support stats row (2 key hires / 3 pilot sites / 18–20 months runway) is present but floated to the right column rather than anchored under the hero ask block as specified. These are not style preferences — the logo regression is a visible family break and the hero copy structure deviates from locked spec.",
+    "blockers": [
+      "Footer logo renders as plain lowercase 'designer' wordmark only — the Designer Health logomark icon is missing, breaking family alignment with the baseline shell and all reference slides",
+      "Left hero block uses 'PRE-SEED ROUND' eyebrow instead of the locked 'Pre-Seed SAFE' badge label specified in the hero block copy plan"
+    ],
+    "nextMove": "Restore the full Designer Health logo lockup (icon + wordmark) in the footer to match the baseline shell, and update the left hero block label from 'PRE-SEED ROUND' to the locked 'Pre-Seed SAFE' treatment as specified."
+  }
+}

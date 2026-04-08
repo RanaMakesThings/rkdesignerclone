@@ -1,0 +1,54 @@
+## Review: Designer Health Slide 2 — "Demand is outpacing clinical capacity"
+
+---
+
+### 1. Verdict
+The slide is 80% of the way to board-clean but is held back by a fragmented right-side card, inconsistent visual weight between the three proof zones, and a bottom banner that reads like a footnote rather than a third data pillar.
+
+---
+
+### 2. Top Issues (severity order)
+
+- **The specialty card feels like a widget dropped in from a different deck.** It sits in the upper-right with its own internal header system, its own axis, and its own label style — it doesn't share the same visual grammar as the trend chart. The result is two slides competing inside one frame.
+
+- **The bottom shortage banner is severely under-weighted for its importance.** The "1 in 4 Americans" stat is arguably the most emotionally powerful number on the slide, yet it's rendered at a smaller scale with a thin left-border treatment that reads as a callout box, not a headline claim. It gets visually demoted below the chart it should be equal to.
+
+- **The "31 days / +19% since 2022" annotation cluster is doing too much in one spot.** The large bold "31 days," the colored subtext, and the data point circle all compete. An investor eye will take a beat too long to resolve what's primary and what's contextual.
+
+- **Vertical rhythm between the three zones is uneven.** The chart takes roughly 55% of vertical real estate, the specialty card is anchored high-right, and the banner is compressed at the bottom — the slide has no clear horizontal band logic that lets the eye travel intentionally from proof point to proof point.
+
+- **The axis labels and data point callouts (21, 20.5, 18.5, 24.1, 26) are slightly too small and too uniform in weight.** They don't create a hierarchy that guides the eye toward the "31 days" conclusion — every label has the same visual authority, which dilutes the punchline.
+
+---
+
+### 3. Board-Read Risk
+
+- **The slide risks reading as "dashboard" rather than "argument."** Three discrete data zones without a connective visual thread means a board member may scan it as an information display rather than receive it as a single building thesis. The cognitive load is higher than it should be for a 90-second board moment.
+
+- **The specialty card has no visible connection to the slide's core claim.** Without a bridging sentence or visual link explaining why OB/GYN at 41.8 days matters to Designer's specific positioning, an investor may silently ask "so what?" — and that skepticism can persist into the next slide.
+
+- **The "only 48% of primary care need is currently met" subordinate line could be the headline.** Burying it as body copy under the 1-in-4 stat means the most operational, market-sizing-relevant number on the slide is the least visible. A board member who skims may miss it entirely.
+
+---
+
+### 4. Aesthetic Upgrades
+
+- **Unify the specialty card with the chart zone** by removing its internal header background and matching its typography scale, label style, and color weight exactly to the chart's annotation system. It should feel like a zoom-in on the chart, not a sidebar widget.
+
+- **Elevate the shortage banner to a full-width third panel** with the same visual authority as the chart — give it a larger type size, tighter copy, and no box/border treatment. Let it breathe as a standalone statement rather than an indented callout.
+
+- **Reduce the trend line callout labels to three: 2004 origin (21), the trough (18.5), and the 2025 terminus (31).** Remove the intermediate labels or drop them to a lighter gray. This creates a clear visual story arc — floor, dip, spike — rather than a connected scatter plot.
+
+- **Create an explicit two-column layout grid** where the left two-thirds is the temporal trend and the right one-third is the specialty context, with matching top and bottom alignment across both columns. Right now the card floats; it needs to be anchored to the same baseline as the chart.
+
+- **Increase the "31 days" numeral size by ~20% and tighten the "+19% since 2022" label to a single muted line beneath it.** The punchline number should be the largest typographic element on the slide outside the headline — currently the headline competes with it rather than setting it up.
+
+---
+
+### 5. Keep As-Is
+
+- **The headline "Demand is outpacing clinical capacity" is exactly right.** It's declarative, jargon-free, and frames the entire slide as an argument, not a topic. Do not dilute it with a subtitle.
+
+- **The trend line's upward arc from 2014–2025 is visually compelling and needs no redesign.** The shaded fill beneath the line, the clean dot markers, and the overall trajectory tell the story correctly. The chart structure is sound.
+
+- **The blue color system is coherent and appropriately restrained.** A single-hue palette with weight variation reads as serious and healthcare-appropriate. There is no impulse to add color that needs to be resisted here — hold the line on this discipline.

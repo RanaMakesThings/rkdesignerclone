@@ -1,0 +1,188 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-05-history-wedge-v1",
+    "family": "history_wedge",
+    "deckId": "vox-pd-v1",
+    "theme": "pd-template-1",
+    "mode": "full-slide",
+    "sourcePath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-05-history-wedge-v1.json"
+  },
+  "chrome": {
+    "title": "History is the cleanest place to reclaim minutes.",
+    "subtitle": "",
+    "chips": [],
+    "footnote": ""
+  },
+  "constraints": {
+    "figureJob": "Quote the slide-3 source bar, pull out the history wedge, and make three short warrants feel immediate in one sparse beat.",
+    "focalPoint": "The extracted history hero and the compressed warrant stack, with the quoted source bar staying visibly upstream.",
+    "layout": "Title top-left; quoted source bar beneath it; one clean extraction arc into a compact history hero; one compressed warrant card aligned to the right; no second panel and no explanatory subcopy.",
+    "big": [
+      "Extracted history hero",
+      "Compressed warrant stack",
+      "Quoted source bar"
+    ],
+    "quiet": [
+      "Connector arc",
+      "Panel borders"
+    ],
+    "accentTargets": [
+      "Extracted history hero",
+      "First source-bar segment"
+    ],
+    "forbidden": [
+      "lower mechanism panel",
+      "workflow timeline",
+      "software ui",
+      "icons",
+      "decorative infographic clutter"
+    ],
+    "semanticGuards": [
+      "no_ui"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "History is the cleanest place to reclaim minutes.",
+      "History reconstruction",
+      "Decisions + counseling",
+      "Exam + workflow",
+      "History reconstruction",
+      "Can begin before the encounter",
+      "Repeated across visits",
+      "Time-variable"
+    ],
+    "preferred": [
+      "quoted wedge",
+      "single arc",
+      "sparse intervention slide"
+    ],
+    "optional": [],
+    "forbidden": [
+      "Why this wedge",
+      "The same story gets repeated across encounters",
+      "Time required depends on complexity and communication",
+      "Much of it can happen before the clinician is on the clock",
+      "Invite",
+      "Verify",
+      "dashboard"
+    ]
+  },
+  "media": {
+    "strategy": "native",
+    "provider": "pexels",
+    "slots": [],
+    "selection": []
+  },
+  "body": {
+    "sourceBar": {
+      "rulerTicks": [
+        0,
+        5,
+        10,
+        15,
+        20
+      ],
+      "segments": [
+        {
+          "label": "History reconstruction",
+          "width": 33.33,
+          "role": "focus"
+        },
+        {
+          "label": "Decisions + counseling",
+          "width": 33.33,
+          "role": "neutral"
+        },
+        {
+          "label": "Exam + workflow",
+          "width": 33.34,
+          "role": "quiet"
+        }
+      ]
+    },
+    "hero": {
+      "label": "History reconstruction"
+    },
+    "support": {
+      "heading": "",
+      "reasons": [
+        {
+          "title": "Can begin before the encounter",
+          "detail": ""
+        },
+        {
+          "title": "Repeated across visits",
+          "detail": ""
+        },
+        {
+          "title": "Time-variable",
+          "detail": ""
+        }
+      ]
+    }
+  },
+  "trace": [
+    {
+      "excerpt": "Quote the slide-3 source bar as the family anchor.",
+      "targetPath": "body.sourceBar",
+      "ruleType": "body",
+      "note": "Carry the top bar directly from slide 3 so the slide reads as a continuation rather than a new family."
+    },
+    {
+      "excerpt": "Peel out the first wedge into one compact hero object.",
+      "targetPath": "body.hero.label",
+      "ruleType": "body",
+      "note": "Give the extracted history wedge its own single hero module without adding a second explanatory beat."
+    },
+    {
+      "excerpt": "Keep one grouped support block with exactly three reasons.",
+      "targetPath": "body.support.reasons",
+      "ruleType": "body",
+      "note": "The three warrants should read as one compressed cluster, not as scattered or explanatory annotations."
+    },
+    {
+      "excerpt": "Connect source wedge to hero with one clean broad arc.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "The connector should feel editorial and subordinate rather than infographic."
+    },
+    {
+      "excerpt": "Make the intervention point obvious in under 3 seconds.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Keep the slide to one visual beat so the wedge claim lands immediately."
+    },
+    {
+      "excerpt": "The extracted history hero and the compressed warrant stack should carry the slide while the quoted source bar stays visibly upstream.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "The hero and warrant stack must read first, with the source bar acting as provenance rather than competing for attention."
+    },
+    {
+      "excerpt": "Stay premium, editorial, and restrained rather than infographic, and avoid explanatory subcopy that starts doing slide-4 work.",
+      "targetPath": "constraints.quiet",
+      "ruleType": "constraint",
+      "note": "Keep the connector and border treatment subordinate, and let the support block stay compressed."
+    },
+    {
+      "excerpt": "Do not explain the mechanism yet, do not add a lower panel, and do not add explanatory support sentences.",
+      "targetPath": "copyPolicy.forbidden",
+      "ruleType": "copy-policy",
+      "note": "Explicitly block the old merged-slide leakage and early slide-4 semantics."
+    },
+    {
+      "excerpt": "History is the cleanest place to reclaim minutes.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Use the locked slide header from the active slide packet."
+    },
+    {
+      "excerpt": "History reconstruction, Decisions + counseling, Exam + workflow, History reconstruction, Can begin before the encounter, Repeated across visits, Time-variable.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Preserve the quoted source bar, hero label, and compressed warrant stack exactly."
+    }
+  ]
+}

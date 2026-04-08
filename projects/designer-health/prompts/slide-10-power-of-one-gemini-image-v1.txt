@@ -1,0 +1,43 @@
+You are designing ONE investor-deck slide figure.
+
+This is Slide 10 in the Designer Health deck.
+
+Header:
+Recovered visit time creates real capacity.
+
+Subheader:
+When recovered minutes become completed visits, the impact is meaningful.
+
+Strategic job:
+Make one added visit feel economically powerful in one glance.
+
+Use these exact anchors:
+- +1 visit / provider / day
+- $11,000 / year
+- ~$917 / month break-even spend / provider
+- 220 clinic days
+- $125 / visit
+- 40% contribution margin
+
+Direction:
+- one oversized hero card should dominate the slide
+- the card should make the conversion unmistakable:
+  +1 visit / provider / day = $11,000 / year
+- assumptions should live as small quiet pills
+- break-even spend should live as a distinct badge
+- any conservative/base/upside checks should be small and muted below
+
+Style:
+- premium investor-deck feel
+- clean white or warm-white background
+- restrained green accent
+- rounded cards
+- purposeful whitespace
+
+Do not:
+- make it feel like a SaaS pricing page
+- make all cards equal size
+- use dashboard chrome
+- use a full table
+
+Produce ONE strong static slide concept.

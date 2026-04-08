@@ -1,0 +1,115 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-proof-tiles-pd-template-1-phone-and-calendar-diptych",
+    "family": "proof_tiles",
+    "deckId": "pd-template-1",
+    "theme": "pd-template-1",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Demand is outpacing clinical capacity.",
+    "subtitle": "",
+    "chips": [],
+    "footnote": "[1] AMN/Merritt Hawkins physician appointment wait-time survey. [2] CDC/NCHS delayed-care measure."
+  },
+  "constraints": {
+    "figureJob": "Use one phone-side image and one calendar-side image so the slide feels anchored in the real scheduling surfaces patients encounter.",
+    "focalPoint": "The diptych first, then the proof metrics.",
+    "layout": "Header top left, two matching photo frames centered above two proof tiles.",
+    "big": [
+      "The photo diptych",
+      "The two proof metrics"
+    ],
+    "quiet": [
+      "Eyebrows",
+      "Support copy",
+      "Footnote"
+    ],
+    "accentTargets": [
+      "none"
+    ],
+    "forbidden": [
+      "glossy product marketing look",
+      "mismatched photo styles"
+    ],
+    "semanticGuards": []
+  },
+  "copyPolicy": {
+    "locked": [
+      "Demand is outpacing clinical capacity.",
+      "~1 month",
+      "10.6%"
+    ],
+    "preferred": [],
+    "optional": [],
+    "forbidden": []
+  },
+  "media": {
+    "slots": [
+      {
+        "id": "phone-photo",
+        "label": "Phone scheduling image",
+        "query": "smartphone medical app scheduling",
+        "orientation": "landscape",
+        "maxCandidates": 4,
+        "placementNote": "Use a phone and planner or scheduling context."
+      },
+      {
+        "id": "calendar-photo",
+        "label": "Calendar image",
+        "query": "medical appointment calendar desk clinic schedule",
+        "orientation": "portrait",
+        "maxCandidates": 4,
+        "placementNote": "Use a literal calendar or scheduling artifact."
+      }
+    ],
+    "selection": [
+      {
+        "slotId": "phone-photo",
+        "candidateId": "6823515",
+        "placement": "left",
+        "treatment": "soft",
+        "objectPosition": "center center"
+      },
+      {
+        "slotId": "calendar-photo",
+        "candidateId": "29509484",
+        "placement": "right",
+        "treatment": "soft",
+        "objectPosition": "right center"
+      }
+    ]
+  },
+  "body": {
+    "motif": "phone-and-calendar-diptych",
+    "tiles": [
+      {
+        "eyebrow": "Access",
+        "metric": "~1 month",
+        "detail": "Average wait for a new doctor appointment",
+        "kicker": "Up 19% in three years [1]",
+        "graphic": {
+          "kind": ""
+        }
+      },
+      {
+        "eyebrow": "Deferred care",
+        "metric": "10.6%",
+        "detail": "Adults delayed or did not get care because no appointment was available when needed [2]",
+        "kicker": "",
+        "graphic": {
+          "kind": ""
+        }
+      }
+    ]
+  },
+  "trace": [
+    {
+      "excerpt": "Phone and Calendar Diptych",
+      "targetPath": "body.motif",
+      "ruleType": "body",
+      "note": "Use paired scheduling surfaces rather than one generic photo."
+    }
+  ]
+}

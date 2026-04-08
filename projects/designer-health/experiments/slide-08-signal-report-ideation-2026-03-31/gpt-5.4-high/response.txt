@@ -1,0 +1,36 @@
+## 1. What the user is actually trying to get onto the slide
+
+They are **not** asking for a fake product screenshot.
+
+They’re trying to get **one believable clinician-facing artifact** onto the deck that proves, at a glance:
+
+1. the system captured the patient story,
+2. turned it into a **clean structured brief** instead of raw transcript sludge,
+3. surfaced a **reasoned working set of possibilities**, and
+4. made clear **what still needs confirmation** before the clinician decides what to do.
+
+In plain English: the slide needs to make someone say, **“Oh, I get it — the doctor opens this and immediately has the case organized, the open questions exposed, and the next move suggested.”**
+
+That’s the job.
+
+---
+
+## 2. My blunt design opinion on what the artifact should be
+
+Make **one page-like structured brief**.  
+Not a dashboard.  
+Not a browser screenshot with nav chrome.  
+Not a pile of cards pretending to be a product.  
+And definitely not a chat transcript.
+
+The hero should feel like a **real pre-visit clinical brief** a clinician could actually scan in 10 seconds.
+
+My strong opinion:
+
+- **The left side should tell the story**
+  - chief concern
+  - why today
+  - short timeline
+  - key findings
+
+- **The right

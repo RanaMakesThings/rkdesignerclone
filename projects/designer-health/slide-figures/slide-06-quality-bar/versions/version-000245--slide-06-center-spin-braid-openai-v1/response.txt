@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080, initial-scale=1.0" />
+<title>Designer Health - Vox Quality Bar Slide</title>
+<style>
+  :root{
+    --bg:#f6f7f5;
+    --ink:#182033;
+    --sub:#5f6e86;
+    --line:#c8d1dc;
+    --line2:#a9b7c8;
+    --teal:#2f8f99;
+    --teal2:#59b6bb;
+    --teal3:#d8eff0;
+    --soft:#eef4f6;
+    --panel:#ffffff;
+    --shadow:0 18px 48px rgba(25,40,64,.12);
+  }
+  *{box-sizing:border-box}
+  html,body{
+    margin:0;
+    width:1920px;
+    height:1080px;
+    overflow:hidden;
+    background:var(--bg);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color:var(--ink);
+  }
+  .slide{
+    position:relative;
+    width:1920px;
+    height:1080px;
+    background:
+      radial-gradient(900px 520px at 22% 70%, rgba(74,163,171,.12), rgba(74,163,171,0) 58%),
+      radial-gradient(760px 420px at 86% 72%, rgba(74,163,171,.10), rgba(74,163,171,0) 55%),
+      radial-gradient(760px 380px at 10% 10%, rgba(58,122,140,.08), rgba(58,122,140,0) 50%),
+      linear-gradient(180deg, #fbfbfa 0%, #f4f6f5 100%);
+  }
+  .title{
+    position:absolute;
+    left:108px;
+    top:68px;
+    width:1380px;
+    font-size:64px;
+    line-height:1.04;
+    font-weight:700;
+    letter-spacing:-0.035em;
+    color:#161d2f;
+  }
+  .title .teal{ color:var(--teal); }
+  .subtitle{
+    position:absolute;
+    left:108px;
+    top:292px;
+    width:1370px;
+    font-size:23px;
+    line-height:1.42;
+    color:#596982;
+    font-weight:400;
+    letter-spacing:-0.02em;
+  }
+  .panel{
+    position:absolute;
+    left:532px;
+    top:410px;
+    width:780px;
+    height:525px;
+    border-radius:40px;
+    background:rgba(255,255,255,.88);
+    border:1px solid rgba(169,183,200,.55);
+    box-shadow:0 14px 36px rgba(41,57,85,.08);
+    backdrop-filter: blur(2px);
+  }
+  .vox-label{
+    position:absolute;
+    left:882px;
+    top:443px;
+    font-size:54px;
+    line-height:1;
+    font-weight:700;
+    letter-spacing:-0.04em;
+    color:var(--teal);
+  }
+  .vox-sub{
+    position:absolute;
+    left:818px;
+    top:512px;
+    font-size:18px;
+    line-height:1;
+    color:#2e3b50;
+    font-weight:500;
+    letter-spacing:-0.02em;
+  }
+  .rail-label{
+    position:absolute;
+    width:260px;
+    height:46px;
+    background:#fff;
+    border:1px solid rgba(192,205,217,.8);
+    border-radius:23px;
+    display:flex;
+    align-items:center;
+    padding:0 20px 0 36px;
+    font-size:18px;
+    line-height:1.05;
+    color:#2a374a;
+    font-weight:600;
+    letter-spacing:-0.02em;
+    box-shadow:0 8px 20px rgba(38,55,84,.04);
+  }
+  .rail-label::before{
+    content:"";
+    position:absolute;
+    left:14px;
+    top:50%;
+    width:10px;
+    height:10px;
+    transform:translateY(-50%);
+    border-radius:50%;
+    background:var(--teal);
+    box-shadow:0 0 0 4px rgba(47,143,153,.10);
+  }
+  .rail1{ left:974px; top:566px; }
+  .rail2{ left:974px; top:656px; }
+  .rail3{ left:974px; top:746px; }
+  .right-head{
+    position:absolute;
+    left:1460px;
+    top:550px;
+    font-size:24px;
+    line-height:1.1;
+    font-weight:700;
+    color:#202a3c;
+    letter-spacing:-0.03em;
+  }
+  .card{
+    position:absolute;
+    left:1520px;
+    top:601px;
+    width:280px;
+    height:322px;
+    border-radius:22px;
+    background:linear-gradient(180deg,#ffffff 0%,#f6f8f8 100%);
+    border:1px solid rgba(198,209,220,.85);
+    box-shadow:0 24px 45px rgba(44,59,85,.12);
+  }
+  .clip{
+    position:absolute;
+    left:1494px;
+    top:620px;
+    width:38px;
+    height:210px;
+    border-radius:18px;
+    background:linear-gradient(180deg,#2d8693 0%, #1e6773 100%);
+    box-shadow:inset -4px 0 0 rgba(255,255,255,.12), 0 14px 24px rgba(40,89,101,.18);
+  }
+  .clip:after{
+    content:"";
+    position:absolute;
+    left:14px;
+    top:18px;
+    width:10px;
+    height:172px;
+    border-radius:6px;
+    background:rgba(255,255,255,.22);
+  }
+  .card-top{
+    position:absolute;
+    left:1556px;
+    top:601px;
+    width:220px;
+    height:16px;
+    border-radius:0 0 10px 10px;
+    background:linear-gradient(90deg, rgba(89,182,187,.55), rgba(89,182,187,.18));
+  }
+  .small{
+    font-size:16px;
+    line-height:1.15;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="title"><span class="teal">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.</div>
+  <div class="subtitle">Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.</div>
+
+  <div class="panel"></div>
+  <div class="vox-label">Vox</div>
+  <div class="vox-sub">Adaptive clinical interviewer</div>
+
+  <div class="rail-label rail1">What matters</div>
+  <div class="rail-label rail2">What connects</div>
+  <div class="rail-label rail3">What still needs<br>verification</div>
+
+  <div class="right-head">Clinician-grade starting point</div>
+  <div class="clip"></div>
+  <div class="card-top"></div>
+  <div class="card">
+    <svg width="280" height="322" viewBox="0 0 280 322" xmlns="http://www.w3.org/2000/svg">
+      <g opacity=".92">
+        <rect x="24" y="32" width="106" height="18" rx="9" fill="#d9e0ea"/>
+        <rect x="24" y="61" width="214" height="14" rx="7" fill="#dee5ee"/>
+        <rect x="24" y="84" width="148" height="14" rx="7" fill="#dee5ee"/>
+        <rect x="24" y="111" width="232" height="1.5" fill="#d5dde7"/>
+        <rect x="24" y="124" width="106" height="18" rx="9" fill="#d9e0ea"/>
+        <rect x="24" y="152" width="180" height="14" rx="7" fill="#dee5ee"/>
+        <rect x="24" y="175" width="214" height="14" rx="7" fill="#dee5ee"/>
+        <rect x="24" y="198" width="130" height="14" rx="7" fill="#dee5ee"/>
+        <rect x="24" y="223" width="232" height="1.5" fill="#d5dde7"/>
+        <rect x="24" y="236" width="106" height="18" rx="9" fill="#d9e0ea"/>
+        <rect x="24" y="264" width="148" height="14" rx="7" fill="#dee5ee"/>
+        <rect x="24" y="286" width="180" height="14" rx="7" fill="#dee5ee"/>
+      </g>
+    </svg>
+  </div>
+
+  <svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" style="position:absolute; inset:0;">
+    <defs>
+      <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3"/>
+      </filter>
+      <linearGradient id="tealBand" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#d8eff0"/>
+        <stop offset="65%" stop-color="#79c2c7"/>
+        <stop offset="100%" stop-color="#4ca6ad"/>
+      </linearGradient>
+      <linearGradient id="greyBand" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#e5ebf1"/>
+        <stop offset="60%" stop-color="#b5c2d0"/>
+        <stop offset="100%" stop-color="#8da0b6"/>
+      </linearGradient>
+      <linearGradient id="ringStroke" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#73c0c5"/>
+        <stop offset="100%" stop-color="#2c8b96"/>
+      </linearGradient>
+      <linearGradient id="fadeRail" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#d7eff0"/>
+        <stop offset="100%" stop-color="#8cc9cd"/>
+      </linearGradient>
+      <linearGradient id="fadeRail2" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#dce6ee"/>
+        <stop offset="100%" stop-color="#aebdca"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Left ribbons -->
+    <g transform="translate(0,0)" font-family="Inter, sans-serif">
+      <!-- 1 -->
+      <polygon points="102,465 438,465 486,497.5 438,530 102,530 136,497.5" fill="rgba(255,255,255,.30)" stroke="#a7b5c6" stroke-width="3"/>
+      <text x="144" y="503" font-size="19" fill="#516176" font-weight="500">My back has been hurting...</text>
+
+      <!-- 2 -->
+      <polygon points="121,553 468,553 507,585.5 468,618 121,618 166,585.5" fill="rgba(98,189,192,.10)" stroke="#57adb2" stroke-width="3"/>
+      <text x="176" y="593" font-size="21" fill="#1c6972" font-weight="700">Vox: What makes it worse?</text>
+
+      <!-- 3 -->
+      <polygon points="102,641 438,641 486,673.5 438,706 102,706 136,673.5" fill="rgba(255,255,255,.30)" stroke="#a7b5c6" stroke-width="3"/>
+      <text x="142" y="680" font-size="19" fill="#516176" font-weight="500">It's worse in the morning.</text>
+
+      <!-- 4 -->
+      <polygon points="121,728 468,728 507,760.5 468,793 121,793 166,760.5" fill="rgba(98,189,192,.10)" stroke="#57adb2" stroke-width="3"/>
+      <text x="184" y="769" font-size="21" fill="#1c6972" font-weight="700">Vox: When did this start?</text>
+
+      <!-- 5 -->
+      <polygon points="102,817 438,817 486,849.5 438,882 102,882 136,849.5" fill="rgba(255,255,255,.30)" stroke="#a7b5c6" stroke-width="3"/>
+      <text x="144" y="857" font-size="19" fill="#516176" font-weight="500">Started last Tuesday.</text>
+    </g>
+
+    <!-- Left flows into center -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M486 497.5 C565 497.5, 610 560, 672 635 C683 648, 694 651, 700 649" stroke="url(#greyBand)" stroke-width="10"/>
+      <path d="M486 585.5 C565 585.5, 620 610, 682 660 C691 667, 699 670, 704 669" stroke="url(#tealBand)" stroke-width="10"/>
+      <path d="M486 673.5 C585 673.5, 643 674, 700 678" stroke="url(#greyBand)" stroke-width="8"/>
+      <path d="M486 760.5 C565 760.5, 622 721, 683 694 C693 689, 701 688, 706 690" stroke="url(#tealBand)" stroke-width="10"/>
+      <path d="M486 849.5 C574 849.5, 630 794, 688 708 C694 699, 703 698, 710 700" stroke="url(#greyBand)" stroke-width="8"/>
+
+      <path d="M486 497.5 C565 497.5, 610 560, 672 635 C683 648, 694 651, 700 649" stroke="rgba(255,255,255,.55)" stroke-width="3"/>
+      <path d="M486 585.5 C565 585.5, 620 610, 682 660 C691 667, 699 670, 704 669" stroke="rgba(255,255,255,.45)" stroke-width="3"/>
+      <path d="M486 673.5 C585 673.5, 643 674, 700 678" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+      <path d="M486 760.5 C565 760.5, 622 721, 683 694 C693 689, 701 688, 706 690" stroke="rgba(255,255,255,.45)" stroke-width="3"/>
+      <path d="M486 849.5 C574 849.5, 630 794, 688 708 C694 699, 703 698, 710 700" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+    </g>
+
+    <!-- Center circular adaptive reasoning object -->
+    <g transform="translate(786 678)">
+      <circle cx="0" cy="0" r="85" fill="#f7fbfb" stroke="#e2eef0" stroke-width="10"/>
+      <circle cx="0" cy="0" r="77" fill="none" stroke="rgba(63,147,156,.12)" stroke-width="18"/>
+      <circle cx="0" cy="0" r="77" fill="none" stroke="url(#ringStroke)" stroke-width="18"
+              stroke-dasharray="72 30 42 34 58 28 40 40"
+              stroke-linecap="butt"
+              transform="rotate(-62)"/>
+      <!-- directional arrows embedded on ring -->
+      <g fill="#2f8f99" transform="rotate(-36)">
+        <path d="M0 -86 l18 10 l-12 4 l-2 13 l-10 -9 l-12 2 z"/>
+      </g>
+      <g fill="#2f8f99" transform="rotate(86)">
+        <path d="M0 -86 l18 10 l-12 4 l-2 13 l-10 -9 l-12 2 z"/>
+      </g>
+      <g fill="#2f8f99" transform="rotate(206)">
+        <path d="M0 -86 l18 10 l-12 4 l-2 13 l-10 -9 l-12 2 z"/>
+      </g>
+      <circle cx="0" cy="0" r="61" fill="#ffffff"/>
+      <text x="0" y="-12" text-anchor="middle" font-size="19" fill="#243247" font-weight="700">Adaptive</text>
+      <text x="0" y="8" text-anchor="middle" font-size="19" fill="#243247" font-weight="700">clinical</text>
+      <text x="0" y="28" text-anchor="middle" font-size="19" fill="#243247" font-weight="700">reasoning</text>
+    </g>
+
+    <!-- Right-side handoff: braided emergence resolving into rails -->
+    <g fill="none" stroke-linecap="round">
+      <!-- braid bundle -->
+      <path d="M872 620 C930 620, 952 631, 982 654 C1001 668, 1017 676, 1038 679" stroke="url(#fadeRail)" stroke-width="10"/>
+      <path d="M872 678 C930 678, 962 678, 1000 678 C1015 678, 1028 678, 1042 678" stroke="url(#fadeRail2)" stroke-width="10"/>
+      <path d="M872 736 C930 736, 952 725, 982 702 C1001 688, 1017 680, 1038 677" stroke="url(#fadeRail)" stroke-width="10"/>
+
+      <path d="M873 640 C922 640, 972 678, 1036 678" stroke="rgba(255,255,255,.55)" stroke-width="3"/>
+      <path d="M873 716 C922 716, 972 678, 1036 678" stroke="rgba(255,255,255,.45)" stroke-width="3"/>
+
+      <!-- resolve into three intentional rails -->
+      <path d="M1038 679 C1062 679, 1072 659, 1090 598 L1220 598" stroke="url(#fadeRail)" stroke-width="24"/>
+      <path d="M1042 678 L1090 678 L1220 678" stroke="url(#fadeRail2)" stroke-width="24"/>
+      <path d="M1038 677 C1062 677, 1072 697, 1090 768 L1220 768" stroke="url(#fadeRail)" stroke-width="24"/>
+
+      <path d="M1095 598 L1220 598" stroke="rgba(255,255,255,.35)" stroke-width="3"/>
+      <path d="M1090 678 L1220 678" stroke="rgba(255,255,255,.25)" stroke-width="3"/>
+      <path d="M1095 768 L1220 768" stroke="rgba(255,255,255,.35)" stroke-width="3"/>
+    </g>
+
+    <!-- Continuation to clinician-grade starting point -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M1312 624 C1380 660, 1412 675, 1490 678" stroke="url(#fadeRail)" stroke-width="8" opacity=".45"/>
+      <path d="M1312 678 C1385 678, 1425 678, 1498 678" stroke="url(#fadeRail)" stroke-width="6" opacity=".42"/>
+      <path d="M1312 732 C1380 696, 1412 681, 1490 678" stroke="url(#fadeRail)" stroke-width="8" opacity=".45"/>
+    </g>
+
+    <!-- Premium subtle connector wedge near clipboard -->
+    <g opacity=".75">
+      <path d="M1410 702 L1494 702 L1518 726 L1436 726 Z" fill="url(#tealBand)"/>
+    </g>
+  </svg>
+</div>
+</body>
+</html>

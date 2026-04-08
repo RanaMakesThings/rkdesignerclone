@@ -1,0 +1,297 @@
+{
+  "manifestVersion": 1,
+  "projectId": "designer-health",
+  "kind": "deck-references",
+  "references": [
+    {
+      "id": "amn-healthcare-2025-appointment-wait-times",
+      "label": "AMN Healthcare 2025 appointment wait times",
+      "status": "active",
+      "sourceType": "report",
+      "citationText": "AMN Healthcare. 2025 Survey of Physician Appointment Wait Times. 2025. Reported average physician appointment wait time of 31 days in 2025, up 19% from 2022.",
+      "url": "https://www.amnhealthcare.com/amn-insights/physician/whitepapers/2025-survey-of-physician-appointment-wait-times/?utm_source=chatgpt.com",
+      "files": [],
+      "summary": "National appointment wait-time benchmark and specialty breakout used on the access slide.",
+      "tags": [
+        "access",
+        "wait-times",
+        "specialty-access"
+      ],
+      "notes": [
+        "Supports both the benchmark wait-time trend and the 2025 specialty breakout on slide 2."
+      ],
+      "sourceKeys": [
+        "1"
+      ]
+    },
+    {
+      "id": "hrsa-2025-primary-care-hpsa-quarterly-report",
+      "label": "HRSA 2025 primary care HPSA quarterly report",
+      "status": "active",
+      "sourceType": "dataset",
+      "citationText": "Health Resources and Services Administration. Primary Care Health Professional Shortage Areas Quarterly Summary. December 31, 2025. Reported 92.3 million people living in designated primary care shortage areas and only 48.18% of primary care need met in those areas.",
+      "files": [],
+      "summary": "Supports the federally designated primary care shortage proof on slide 2.",
+      "tags": [
+        "access",
+        "primary-care-shortage",
+        "hpsa"
+      ],
+      "notes": [],
+      "sourceKeys": [
+        "2"
+      ]
+    },
+    {
+      "id": "census-2025-resident-population-estimate",
+      "label": "U.S. Census Bureau 2025 resident population estimate",
+      "status": "active",
+      "sourceType": "dataset",
+      "citationText": "U.S. Census Bureau. July 1, 2025 resident population estimate. Used as the national denominator to calculate that 92.3 million people in primary care HPSAs represent more than 1 in 4 Americans, or roughly 27.0% of the U.S. population.",
+      "files": [],
+      "summary": "Provides the denominator behind the more-than-1-in-4 slide 2 shortage ratio.",
+      "tags": [
+        "population",
+        "primary-care-shortage",
+        "denominator"
+      ],
+      "notes": [
+        "Visible on the stamped slide 2 footer as the calculation note behind the ratio.",
+        "Retained in the library as supporting denominator context, but not linked in the current running deck because slide 2 only carries two canonical proof markers."
+      ],
+      "sourceKeys": []
+    },
+    {
+      "id": "nchs-2024-nonfinancial-access-barriers",
+      "label": "NCHS 2024 nonfinancial access barriers",
+      "status": "active",
+      "sourceType": "report",
+      "citationText": "Santo L, Villarroel MA. Sociodemographic Differences in Nonfinancial Access Barriers to Health Care Among Adults: United States, 2022. National Health Statistics Reports, No. 207. National Center for Health Statistics, 2024. Reported 10.6% of adults delayed or did not get medical care because they could not find an available appointment when needed.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/n/nchsnhsr/NHSR207/?report=reader&utm_source=chatgpt.com",
+      "files": [],
+      "summary": "Supports the delayed-care and access-friction proof on slide 2.",
+      "tags": [
+        "access",
+        "delayed-care",
+        "primary-care-shortage"
+      ],
+      "notes": [
+        "Retained in the library from an earlier slide-2 access-friction concept; not linked in the current running deck."
+      ],
+      "sourceKeys": []
+    },
+    {
+      "id": "abbo-2008-clinical-items-primary-care-visits",
+      "label": "Abbo et al. 2008 crowded primary care visits",
+      "status": "active",
+      "sourceType": "paper",
+      "citationText": "Abbo ED, Zhang Q, Zelder M, Huang ES. The Increasing Number of Clinical Items Addressed During the Time of Adult Primary Care Visits. Journal of General Internal Medicine. 2008;23(12):2058-2065. Found visits increased from 18.0 to 20.9 minutes while clinical items increased from 5.4 to 7.1 per visit.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2596516/?utm_source=chatgpt.com",
+      "files": [],
+      "summary": "Grounds the argument that small per-visit gains compound because primary care visits are crowded.",
+      "tags": [
+        "visit-duration",
+        "primary-care",
+        "throughput"
+      ],
+      "notes": [],
+      "sourceKeys": [
+        "3"
+      ]
+    },
+    {
+      "id": "ma-2025-ambient-ai-scribes-jamia",
+      "label": "Ma et al. 2025 ambient AI scribes utilization study",
+      "status": "active",
+      "sourceType": "paper",
+      "citationText": "Ma SP, Liang AS, Shah SJ, et al. Ambient artificial intelligence scribes: utilization and impact on documentation time. Journal of the American Medical Informatics Association. 2025;32(2):381-385. Reported 55.25% utilization and reductions in documentation, after-hours, and total EHR time.",
+      "files": [],
+      "summary": "Supports the category-proof claim that AI adoption is already being proven in documentation.",
+      "tags": [
+        "ambient-ai",
+        "documentation",
+        "adoption"
+      ],
+      "notes": [],
+      "sourceKeys": [
+        "4"
+      ]
+    },
+    {
+      "id": "lukac-2025-ambient-ai-scribes-rct",
+      "label": "Lukac et al. 2025 ambient AI scribes randomized trial",
+      "status": "active",
+      "sourceType": "paper",
+      "citationText": "Lukac PJ, Turner W, Vangala S, et al. Ambient AI Scribes in Clinical Practice: A Randomized Trial. NEJM AI. 2025. Reported a 9.5% decrease in time-in-note and improvements in workload-related measures.",
+      "files": [],
+      "summary": "Reinforces that AI-driven documentation help is already showing real measured benefit.",
+      "tags": [
+        "ambient-ai",
+        "documentation",
+        "workload"
+      ],
+      "notes": [],
+      "sourceKeys": [
+        "5"
+      ]
+    },
+    {
+      "id": "aasm-2025-evaluation-management-payment-comparison",
+      "label": "AASM 2025 E/M payment comparison",
+      "status": "active",
+      "sourceType": "regulatory",
+      "citationText": "American Academy of Sleep Medicine. Evaluation and Management Services: 2024 vs 2025 National Payment Comparison. 2025. Reported 2025 national payments of $88.95 for CPT 99213, $125.18 for CPT 99214, and $15.53 for G2211.",
+      "url": "https://aasm.org/wp-content/uploads/2024/11/evaluation-management-comparison-2024-2025.pdf?utm_source=chatgpt.com",
+      "files": [],
+      "summary": "Provides the reimbursement anchors for the recovered-visit economics slide.",
+      "tags": [
+        "reimbursement",
+        "medicare",
+        "economics"
+      ],
+      "notes": [],
+      "sourceKeys": [
+        "6"
+      ]
+    },
+    {
+      "id": "appold-2016-practice-overhead",
+      "label": "Appold 2016 practice overhead survey",
+      "status": "active",
+      "sourceType": "article",
+      "citationText": "Appold K. Keeping Medical Practice Overhead Down. Physicians Practice. 2016. Reported that 40.4% of physician-survey respondents placed overhead in the 41%-60% of revenue range.",
+      "files": [],
+      "summary": "Supports the contribution-margin planning assumption used in the slide 10 model.",
+      "tags": [
+        "practice-overhead",
+        "economics",
+        "margin"
+      ],
+      "notes": [],
+      "sourceKeys": [
+        "7"
+      ]
+    },
+    {
+      "id": "weiss-2003-practice-expenses",
+      "label": "Weiss 2003 practice expenses survey",
+      "status": "active",
+      "sourceType": "article",
+      "citationText": "Weiss GG. Exclusive Survey: Practice Expenses. Medical Economics. 2003. Reported median practice expenses commonly around 50%-55% of revenue across regions and practice sizes.",
+      "files": [],
+      "summary": "Provides historical expense context for the slide 10 economics guardrails.",
+      "tags": [
+        "practice-expenses",
+        "economics",
+        "margin"
+      ],
+      "notes": [],
+      "sourceKeys": [
+        "8"
+      ]
+    },
+    {
+      "id": "cbo-specialty-physician-pricing-review",
+      "label": "CBO specialty physician pricing review",
+      "status": "active",
+      "sourceType": "report",
+      "citationText": "Congressional Budget Office. Prices for and Spending on Specialty Physician Services in Medicare and Commercial Insurance. Review of physician pricing literature. Reported commercial physician prices averaging roughly 1.29x Medicare overall in the literature reviewed.",
+      "files": [],
+      "summary": "Held in the library for pricing-context follow-ons and future appendix use.",
+      "tags": [
+        "pricing",
+        "commercial-vs-medicare",
+        "future-use"
+      ],
+      "notes": [
+        "Not currently linked into the running deck."
+      ],
+      "sourceKeys": [
+        "9"
+      ]
+    }
+  ],
+  "usages": [
+    {
+      "id": "usage-000001",
+      "referenceId": "amn-healthcare-2025-appointment-wait-times",
+      "slideId": "slide-02",
+      "claim": "Benchmark wait times continue to worsen and specialty waits are already stretched.",
+      "placement": "proof",
+      "status": "current",
+      "sortKey": 10
+    },
+    {
+      "id": "usage-000002",
+      "referenceId": "nchs-2024-nonfinancial-access-barriers",
+      "slideId": "slide-02",
+      "claim": "The access problem is visible to patients as delayed or foregone care because appointments are unavailable.",
+      "placement": "proof",
+      "status": "archived",
+      "sortKey": 20
+    },
+    {
+      "id": "usage-000003",
+      "referenceId": "abbo-2008-clinical-items-primary-care-visits",
+      "slideId": "slide-03",
+      "claim": "Primary care visits are crowded enough that small workflow gains can create meaningful capacity.",
+      "placement": "proof",
+      "status": "current",
+      "sortKey": 10
+    },
+    {
+      "id": "usage-000004",
+      "referenceId": "ma-2025-ambient-ai-scribes-jamia",
+      "slideId": "slide-09",
+      "claim": "AI adoption is already showing up in documentation workflows with real utilization and time savings.",
+      "placement": "speaker-notes",
+      "status": "current",
+      "sortKey": 10
+    },
+    {
+      "id": "usage-000005",
+      "referenceId": "lukac-2025-ambient-ai-scribes-rct",
+      "slideId": "slide-09",
+      "claim": "Randomized evidence reinforces that current ambient AI value is clustering around documentation work.",
+      "placement": "speaker-notes",
+      "status": "current",
+      "sortKey": 20
+    },
+    {
+      "id": "usage-000006",
+      "referenceId": "aasm-2025-evaluation-management-payment-comparison",
+      "slideId": "slide-10",
+      "claim": "2025 Medicare payment anchors ground the recovered-visit revenue scenario.",
+      "placement": "speaker-notes",
+      "status": "current",
+      "sortKey": 10
+    },
+    {
+      "id": "usage-000007",
+      "referenceId": "appold-2016-practice-overhead",
+      "slideId": "slide-10",
+      "claim": "Practice-overhead survey data supports using a conservative contribution-margin planning frame.",
+      "placement": "speaker-notes",
+      "status": "current",
+      "sortKey": 20
+    },
+    {
+      "id": "usage-000008",
+      "referenceId": "weiss-2003-practice-expenses",
+      "slideId": "slide-10",
+      "claim": "Historical practice-expense ranges provide a second guardrail for the contribution-margin assumption.",
+      "placement": "speaker-notes",
+      "status": "current",
+      "sortKey": 30
+    },
+    {
+      "id": "usage-000009",
+      "referenceId": "hrsa-2025-primary-care-hpsa-quarterly-report",
+      "slideId": "slide-02",
+      "claim": "The current shortage claim is grounded in federally designated primary care HPSA data and the associated unmet-need rate.",
+      "placement": "proof",
+      "status": "current",
+      "sortKey": 20
+    }
+  ]
+}

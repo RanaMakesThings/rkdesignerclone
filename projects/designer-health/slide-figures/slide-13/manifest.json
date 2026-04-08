@@ -1,0 +1,29 @@
+{
+  "slideId": "slide-13",
+  "slideDir": "projects/designer-health/slide-figures/slide-13",
+  "currentVersionId": "version-000314",
+  "versions": [
+    {
+      "id": "version-000301",
+      "label": "slide-13-create-draft",
+      "status": "draft",
+      "sourceKind": "create-draft",
+      "createdAt": "2026-04-06T02:30:45.472Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-13/versions/version-000301--slide-13-create-draft",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000314",
+      "label": "slide-13-create-draft-bonus",
+      "status": "current",
+      "sourceKind": "create-draft",
+      "createdAt": "2026-04-06T02:38:01.228Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

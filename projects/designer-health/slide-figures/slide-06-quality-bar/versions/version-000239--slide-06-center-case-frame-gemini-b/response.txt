@@ -1,0 +1,522 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox - Adaptive Clinical Interviewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal-dark: #1A6B63;
+            --teal-main: #207A70;
+            --teal-light: #2DD4BF;
+            --teal-bg: #F0FDFA;
+            --text-dark: #0F172A;
+            --text-gray: #475569;
+            --text-light: #94A3B8;
+            --bg-white: #FFFFFF;
+            --bg-gray: #F8FAFC;
+            --border-gray: #E2E8F0;
+            --border-light: #F1F5F9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #E5E7EB; /* Darker background to show slide boundaries if viewed outside 1920x1080 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1920px;
+            height: 1080px;
+            background-color: var(--bg-white);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section */
+        .header {
+            position: absolute;
+            top: 80px;
+            left: 100px;
+            width: 1500px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            max-width: 1450px;
+        }
+
+        .header h1 .teal-text {
+            color: var(--teal-main);
+        }
+
+        .header p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: var(--text-gray);
+            max-width: 1350px;
+        }
+
+        /* SVG Connections Canvas */
+        .connections-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .path-patient { fill: none; stroke: #CBD5E1; stroke-width: 3; }
+        .path-vox { fill: none; stroke: #99F6E4; stroke-width: 3; }
+        .path-neutral { fill: none; stroke: #CCFBF1; stroke-width: 3; }
+
+        /* Left Ribbons */
+        .ribbon {
+            position: absolute;
+            left: 150px;
+            width: 380px;
+            height: 60px;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            padding-left: 40px;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .ribbon.patient { color: var(--text-gray); }
+        .ribbon.vox { color: var(--teal-dark); font-weight: 600; }
+
+        /* Central Chamber */
+        .chamber-bg {
+            position: absolute;
+            left: 580px;
+            top: 350px;
+            width: 960px;
+            height: 560px;
+            background: var(--bg-white);
+            border: 1px solid var(--border-gray);
+            border-radius: 32px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            z-index: 1;
+        }
+
+        .chamber-header {
+            position: absolute;
+            left: 630px;
+            top: 390px;
+            z-index: 3;
+            text-align: center;
+            width: 440px; /* Centered over the Case Frame area */
+        }
+
+        .chamber-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--teal-main);
+            letter-spacing: -0.02em;
+        }
+
+        .chamber-subtitle {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-gray);
+            margin-top: 4px;
+        }
+
+        /* NEW Center Object: Case Frame */
+        .case-frame-wrapper {
+            position: absolute;
+            left: 750px;
+            top: 510px;
+            width: 200px;
+            height: 240px;
+            z-index: 4;
+        }
+
+        /* Subtle background glow */
+        .case-frame-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(45,212,191,0.1) 0%, rgba(255,255,255,0) 70%);
+            z-index: -2;
+            border-radius: 50%;
+        }
+
+        /* The Loop Track */
+        .cf-loop-svg {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 240px;
+            height: 280px;
+            z-index: -1;
+        }
+
+        /* The Structured Box */
+        .cf-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-white);
+            border-radius: 16px;
+            box-shadow: 0 12px 36px rgba(32, 122, 112, 0.12);
+            border: 1px solid var(--border-gray);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 24px 20px;
+            gap: 20px;
+        }
+
+        .cf-slot {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cf-indicator {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .cf-indicator.filled {
+            background: var(--teal-main);
+        }
+
+        .cf-indicator.processing {
+            border: 2px solid var(--teal-light);
+            position: relative;
+            box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.15);
+        }
+
+        .cf-indicator.processing::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 6px;
+            height: 6px;
+            background: var(--teal-light);
+            border-radius: 50%;
+        }
+
+        .cf-indicator.empty {
+            border: 2px dashed #CBD5E1;
+        }
+
+        .cf-skeleton-line {
+            height: 8px;
+            border-radius: 4px;
+            background: var(--border-gray);
+        }
+
+        .cf-skeleton-line.long {
+            width: 100%;
+            background: linear-gradient(90deg, var(--teal-main) 0%, var(--teal-light) 100%);
+        }
+
+        .cf-skeleton-line.medium {
+            width: 75%;
+            background: var(--teal-main);
+            opacity: 0.85;
+        }
+
+        .cf-skeleton-line.short {
+            width: 45%;
+            background: #94A3B8;
+        }
+
+        .cf-skeleton-line.none {
+            width: 85%;
+            background: transparent;
+            border: 1px dashed #CBD5E1;
+        }
+
+        .cf-label {
+            position: absolute;
+            bottom: -40px;
+            left: -50px;
+            width: 300px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Right Rails */
+        .rails-title {
+            position: absolute;
+            left: 1150px;
+            top: 490px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            z-index: 3;
+        }
+
+        .rail {
+            position: absolute;
+            left: 1150px;
+            width: 280px;
+            height: 48px;
+            background: var(--bg-white);
+            border: 1px solid var(--border-gray);
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 12px;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+            z-index: 3;
+        }
+
+        .rail .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--teal-main);
+        }
+
+        /* Final Card */
+        .final-card-title {
+            position: absolute;
+            left: 1580px;
+            top: 530px;
+            width: 300px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            z-index: 3;
+        }
+
+        .final-card {
+            position: absolute;
+            left: 1580px;
+            top: 566px;
+            width: 300px;
+            height: 320px;
+            background: var(--bg-white);
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(32, 122, 112, 0.08);
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            z-index: 3;
+            padding: 30px 24px 30px 32px;
+        }
+
+        .fc-accent {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background: var(--teal-main);
+        }
+
+        .fc-header-line {
+            width: 60%;
+            height: 12px;
+            background: #CBD5E1;
+            border-radius: 6px;
+            margin-bottom: 28px;
+        }
+
+        .fc-section {
+            margin-bottom: 20px;
+        }
+
+        .fc-title-line {
+            width: 35%;
+            height: 8px;
+            background: #94A3B8;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .fc-body-line {
+            width: 95%;
+            height: 6px;
+            background: var(--border-gray);
+            border-radius: 3px;
+            margin-bottom: 8px;
+        }
+
+        .fc-body-line.short {
+            width: 70%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="slide-container">
+        
+        <!-- Header -->
+        <div class="header">
+            <h1><span class="teal-text">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.</h1>
+            <p>Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.</p>
+        </div>
+
+        <!-- SVG Connections Canvas -->
+        <svg class="connections-canvas" viewBox="0 0 1920 1080">
+            <!-- Ribbons to Case Frame -->
+            <path class="path-patient" d="M 530 446 C 640 446, 640 526, 750 526" />
+            <path class="path-vox" d="M 530 526 C 640 526, 640 566, 750 566" />
+            <path class="path-patient" d="M 530 606 C 640 606, 640 606, 750 606" />
+            <path class="path-vox" d="M 530 686 C 640 686, 640 646, 750 646" />
+            <path class="path-patient" d="M 530 766 C 640 766, 640 686, 750 686" />
+
+            <!-- Case Frame to Rails -->
+            <path class="path-neutral" d="M 950 550 L 1150 550" />
+            <path class="path-neutral" d="M 950 630 L 1150 630" />
+            <path class="path-neutral" d="M 950 710 L 1150 710" />
+
+            <!-- Rails to Final Card -->
+            <path class="path-neutral" d="M 1430 550 C 1500 550, 1500 586, 1580 586" />
+            <path class="path-neutral" d="M 1430 630 C 1500 630, 1500 630, 1580 630" />
+            <path class="path-neutral" d="M 1430 710 C 1500 710, 1500 674, 1580 674" />
+        </svg>
+
+        <!-- Left Ribbons (Using inline SVG for perfect chevron shapes) -->
+        <div class="ribbon patient" style="top: 416px;">
+            <svg width="380" height="60" viewBox="0 0 380 60" style="position: absolute; left: 0; top: 0; z-index: -1;">
+                <path d="M 20 0 L 360 0 L 380 30 L 360 60 L 20 60 L 40 30 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            </svg>
+            My back has been hurting...
+        </div>
+        <div class="ribbon vox" style="top: 496px;">
+            <svg width="380" height="60" viewBox="0 0 380 60" style="position: absolute; left: 0; top: 0; z-index: -1;">
+                <path d="M 20 0 L 360 0 L 380 30 L 360 60 L 20 60 L 40 30 Z" fill="#F0FDFA" stroke="#2DD4BF" stroke-width="2"/>
+            </svg>
+            Vox: What makes it worse?
+        </div>
+        <div class="ribbon patient" style="top: 576px;">
+            <svg width="380" height="60" viewBox="0 0 380 60" style="position: absolute; left: 0; top: 0; z-index: -1;">
+                <path d="M 20 0 L 360 0 L 380 30 L 360 60 L 20 60 L 40 30 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            </svg>
+            It's worse in the morning.
+        </div>
+        <div class="ribbon vox" style="top: 656px;">
+            <svg width="380" height="60" viewBox="0 0 380 60" style="position: absolute; left: 0; top: 0; z-index: -1;">
+                <path d="M 20 0 L 360 0 L 380 30 L 360 60 L 20 60 L 40 30 Z" fill="#F0FDFA" stroke="#2DD4BF" stroke-width="2"/>
+            </svg>
+            Vox: When did this start?
+        </div>
+        <div class="ribbon patient" style="top: 736px;">
+            <svg width="380" height="60" viewBox="0 0 380 60" style="position: absolute; left: 0; top: 0; z-index: -1;">
+                <path d="M 20 0 L 360 0 L 380 30 L 360 60 L 20 60 L 40 30 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            </svg>
+            Started last Tuesday.
+        </div>
+
+        <!-- Central Chamber Background -->
+        <div class="chamber-bg"></div>
+
+        <!-- Chamber Header -->
+        <div class="chamber-header">
+            <div class="chamber-title">Vox</div>
+            <div class="chamber-subtitle">Adaptive clinical interviewer</div>
+        </div>
+
+        <!-- NEW Center Object: Case Frame -->
+        <div class="case-frame-wrapper">
+            <!-- Subtle Loop Track -->
+            <svg class="cf-loop-svg" viewBox="0 0 240 280">
+                <path d="M 120 10 A 110 130 0 1 1 119 10" fill="none" stroke="#CCFBF1" stroke-width="3" stroke-dasharray="6 6"/>
+                <polygon points="120,0 132,10 120,20" fill="#CCFBF1" transform="rotate(15 120 10)"/>
+                <polygon points="120,260 108,270 120,280" fill="#CCFBF1" transform="rotate(15 120 270)"/>
+            </svg>
+
+            <!-- Structured Box -->
+            <div class="cf-box">
+                <div class="cf-slot">
+                    <div class="cf-indicator filled"></div>
+                    <div class="cf-skeleton-line long"></div>
+                </div>
+                <div class="cf-slot">
+                    <div class="cf-indicator filled"></div>
+                    <div class="cf-skeleton-line medium"></div>
+                </div>
+                <div class="cf-slot">
+                    <div class="cf-indicator processing"></div>
+                    <div class="cf-skeleton-line short"></div>
+                </div>
+                <div class="cf-slot empty">
+                    <div class="cf-indicator empty"></div>
+                    <div class="cf-skeleton-line none"></div>
+                </div>
+            </div>
+
+            <div class="cf-label">Adaptive interview loop</div>
+        </div>
+
+        <!-- Right Rails -->
+        <div class="rails-title">Clinical reasoning + medical knowledge</div>
+        <div class="rail" style="top: 526px;"><span class="dot"></span>What matters</div>
+        <div class="rail" style="top: 606px;"><span class="dot"></span>What connects</div>
+        <div class="rail" style="top: 686px;"><span class="dot"></span>What still needs verification</div>
+
+        <!-- Final Card -->
+        <div class="final-card-title">Clinician-grade starting point</div>
+        <div class="final-card">
+            <div class="fc-accent"></div>
+            <div class="fc-header-line"></div>
+            
+            <div class="fc-section">
+                <div class="fc-title-line"></div>
+                <div class="fc-body-line"></div>
+                <div class="fc-body-line short"></div>
+            </div>
+            
+            <div class="fc-section">
+                <div class="fc-title-line"></div>
+                <div class="fc-body-line"></div>
+                <div class="fc-body-line"></div>
+                <div class="fc-body-line short"></div>
+            </div>
+
+            <div class="fc-section">
+                <div class="fc-title-line"></div>
+                <div class="fc-body-line"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

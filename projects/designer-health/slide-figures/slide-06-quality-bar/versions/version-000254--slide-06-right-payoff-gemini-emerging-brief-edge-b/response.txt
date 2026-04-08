@@ -1,0 +1,587 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox - Adaptive Interviewing System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #111827;
+            --teal-dark: #134E4A;
+            --teal-main: #2A8E8A;
+            --teal-light: #E0F2F1;
+            --gray-text: #4B5563;
+            --gray-light: #F3F4F6;
+            --gray-border: #E5E7EB;
+            --bg-color: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1920px;
+            height: 1080px;
+            background-color: var(--bg-color);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.05); /* Subtle boundary for viewing */
+        }
+
+        /* --- Header Section --- */
+        .header-section {
+            position: absolute;
+            top: 80px;
+            left: 110px;
+            width: 1500px;
+        }
+
+        .main-headline {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            max-width: 1450px;
+        }
+
+        .main-headline span.vox {
+            color: var(--teal-main);
+        }
+
+        .sub-headline {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--gray-text);
+            line-height: 1.5;
+            max-width: 1350px;
+        }
+
+        /* --- SVG Canvas for Connecting Lines --- */
+        .svg-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1920px;
+            height: 1080px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* --- Left Ribbons Section --- */
+        .ribbons-container {
+            position: absolute;
+            top: 450px;
+            left: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            z-index: 2;
+        }
+
+        .ribbon {
+            width: 340px;
+            height: 50px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .ribbon-patient {
+            color: var(--navy);
+        }
+
+        .ribbon-vox {
+            color: var(--teal-main);
+            font-weight: 600;
+        }
+
+        .ribbon-text {
+            position: relative;
+            z-index: 2;
+            padding: 0 30px 0 40px;
+        }
+
+        .ribbon-vox .ribbon-text {
+            padding: 0 40px 0 30px;
+        }
+
+        .ribbon-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* --- Center Chamber Section --- */
+        .chamber {
+            position: absolute;
+            top: 410px;
+            left: 530px;
+            width: 780px;
+            height: 520px;
+            background: #FFFFFF;
+            border: 1px solid var(--gray-border);
+            border-radius: 32px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.03);
+        }
+
+        .chamber-header {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .chamber-logo {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--teal-main);
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .chamber-subtitle {
+            font-size: 14px;
+            color: var(--navy);
+            font-weight: 500;
+        }
+
+        .chamber-core {
+            position: absolute;
+            top: 200px;
+            left: 170px;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 8px solid var(--gray-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .chamber-core-active {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 8px solid transparent;
+            border-left-color: var(--teal-main);
+            border-bottom-color: var(--teal-main);
+            transform: rotate(-15deg);
+        }
+
+        .chamber-core-arrow {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 12px solid var(--teal-main);
+            transform: rotate(-60deg);
+        }
+
+        .chamber-core-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+            max-width: 100px;
+        }
+
+        .chamber-pills {
+            position: absolute;
+            top: 190px;
+            left: 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        .chamber-pill {
+            display: flex;
+            align-items: center;
+            background: #FFFFFF;
+            border: 1px solid var(--gray-border);
+            border-radius: 20px;
+            padding: 12px 24px;
+            width: 260px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            position: relative;
+        }
+
+        .chamber-pill::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 16px;
+            background: var(--teal-light);
+            border-radius: 8px 0 0 8px;
+            z-index: -1;
+        }
+
+        .pill-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--teal-main);
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        .pill-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        /* --- Right Section: Emerging Brief Edge (Redesign) --- */
+        .right-section {
+            position: absolute;
+            top: 550px;
+            left: 1480px;
+            z-index: 3;
+        }
+
+        .right-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+            position: absolute;
+            top: -40px;
+            left: 0;
+            white-space: nowrap;
+        }
+
+        /* The sculptural artifact container */
+        .artifact-container {
+            display: flex;
+            height: 340px;
+            width: 320px; /* Cropped width */
+            border-radius: 12px 0 0 12px;
+            box-shadow: 
+                -10px 20px 40px rgba(0,0,0,0.08),
+                -4px 8px 16px rgba(0,0,0,0.04);
+            position: relative;
+            background: #FFFFFF;
+        }
+
+        /* Strong dark-teal spine */
+        .artifact-spine {
+            width: 20px;
+            background: linear-gradient(180deg, #0F3735 0%, var(--teal-dark) 100%);
+            border-radius: 12px 0 0 12px;
+            box-shadow: inset -2px 0 4px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 4;
+        }
+
+        /* Secondary accent layer for depth */
+        .artifact-accent {
+            width: 6px;
+            background: var(--teal-main);
+            box-shadow: inset -1px 0 2px rgba(0,0,0,0.1);
+            z-index: 3;
+        }
+
+        /* The document surface */
+        .artifact-surface {
+            flex: 1;
+            background: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            padding: 28px 24px;
+            border-top: 1px solid #F3F4F6;
+            border-bottom: 1px solid #F3F4F6;
+        }
+
+        /* Fade out on the right to imply it's just the edge */
+        .artifact-surface::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1) 90%);
+            z-index: 10;
+        }
+
+        /* Skeleton Content inside the artifact */
+        .skel-badge {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-size: 9px;
+            font-weight: 800;
+            color: #4F46E5; /* Blue tone from ref 2 */
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .skel-header {
+            width: 85%;
+            height: 22px;
+            background: var(--navy);
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        
+        .skel-header-sub {
+            width: 40%;
+            height: 22px;
+            background: var(--navy);
+            border-radius: 4px;
+            margin-bottom: 24px;
+        }
+
+        .skel-divider {
+            height: 1px;
+            background: var(--gray-border);
+            margin-bottom: 20px;
+            width: 120%; /* Extends past crop */
+        }
+
+        .skel-section-title {
+            font-size: 10px;
+            font-weight: 700;
+            color: #9CA3AF;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .skel-line {
+            height: 8px;
+            background: var(--gray-border);
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .skel-line.w-full { width: 110%; }
+        .skel-line.w-90 { width: 90%; }
+        .skel-line.w-75 { width: 75%; }
+
+        .skel-pills-container {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .skel-pill {
+            height: 20px;
+            width: 60px;
+            background: #D1FAE5; /* Light green */
+            border-radius: 10px;
+        }
+        .skel-pill.w-lg { width: 85px; }
+
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- SVG Canvas for all connecting lines and beams -->
+    <svg class="svg-canvas">
+        <defs>
+            <!-- Gradient for the handoff beam -->
+            <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#2A8E8A" stop-opacity="0" />
+                <stop offset="40%" stop-color="#2A8E8A" stop-opacity="0.08" />
+                <stop offset="100%" stop-color="#2A8E8A" stop-opacity="0.25" />
+            </linearGradient>
+            
+            <!-- Gradient for left side lines -->
+            <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#CBD5E1" stop-opacity="1" />
+                <stop offset="100%" stop-color="#94A3B8" stop-opacity="1" />
+            </linearGradient>
+        </defs>
+
+        <!-- Left Side Connecting Lines (Patient -> Chamber) -->
+        <!-- Ribbon 1 -->
+        <path d="M 430 475 C 550 475, 550 670, 700 670" stroke="url(#lineGrad)" stroke-width="4" fill="none" />
+        <!-- Ribbon 3 -->
+        <path d="M 430 665 C 550 665, 550 670, 700 670" stroke="url(#lineGrad)" stroke-width="4" fill="none" />
+        <!-- Ribbon 5 -->
+        <path d="M 430 855 C 550 855, 550 670, 700 670" stroke="url(#lineGrad)" stroke-width="4" fill="none" />
+
+        <!-- Left Side Connecting Lines (Vox -> Chamber) -->
+        <!-- Ribbon 2 -->
+        <path d="M 430 570 C 550 570, 550 670, 700 670" stroke="#2A8E8A" stroke-width="4" fill="none" stroke-opacity="0.6" />
+        <!-- Ribbon 4 -->
+        <path d="M 430 760 C 550 760, 550 670, 700 670" stroke="#2A8E8A" stroke-width="4" fill="none" stroke-opacity="0.6" />
+
+        <!-- Right Side Handoff Beam (Chamber -> Artifact) -->
+        <!-- Starts at chamber right edge (x=1310, y=670), expands to artifact left edge (x=1480, y=550 to 890) -->
+        <path d="M 1310 670 C 1390 670, 1420 560, 1480 560 L 1480 880 C 1420 880, 1390 670, 1310 670 Z" fill="url(#beamGrad)" />
+        
+        <!-- Subtle center line in the beam for structure -->
+        <path d="M 1310 670 C 1390 670, 1420 720, 1480 720" stroke="#2A8E8A" stroke-width="1" fill="none" stroke-opacity="0.3" />
+    </svg>
+
+    <!-- Header Section -->
+    <div class="header-section">
+        <h1 class="main-headline">
+            <span class="vox">Vox</span> is the adaptive interviewing system that takes on the<br>
+            hard clinical reasoning work needed to turn patient story<br>
+            into a clinician-grade starting point.
+        </h1>
+        <p class="sub-headline">
+            Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+            By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>
+            what still needs verification before the visit begins.
+        </p>
+    </div>
+
+    <!-- Left Ribbons -->
+    <div class="ribbons-container">
+        <!-- Ribbon 1: Patient -->
+        <div class="ribbon ribbon-patient">
+            <svg class="ribbon-bg" viewBox="0 0 340 50" preserveAspectRatio="none">
+                <path d="M 15 1 L 325 1 L 339 25 L 325 49 L 15 49 L 1 25 Z" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1.5"/>
+            </svg>
+            <span class="ribbon-text">My back has been hurting...</span>
+        </div>
+
+        <!-- Ribbon 2: Vox -->
+        <div class="ribbon ribbon-vox">
+            <svg class="ribbon-bg" viewBox="0 0 340 50" preserveAspectRatio="none">
+                <path d="M 1 25 L 15 1 L 339 1 L 339 49 L 15 49 Z" fill="#E0F2F1" stroke="#2A8E8A" stroke-width="1.5"/>
+            </svg>
+            <span class="ribbon-text">Vox: What makes it worse?</span>
+        </div>
+
+        <!-- Ribbon 3: Patient -->
+        <div class="ribbon ribbon-patient">
+            <svg class="ribbon-bg" viewBox="0 0 340 50" preserveAspectRatio="none">
+                <path d="M 15 1 L 325 1 L 339 25 L 325 49 L 15 49 L 1 25 Z" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1.5"/>
+            </svg>
+            <span class="ribbon-text">It's worse in the morning.</span>
+        </div>
+
+        <!-- Ribbon 4: Vox -->
+        <div class="ribbon ribbon-vox">
+            <svg class="ribbon-bg" viewBox="0 0 340 50" preserveAspectRatio="none">
+                <path d="M 1 25 L 15 1 L 339 1 L 339 49 L 15 49 Z" fill="#E0F2F1" stroke="#2A8E8A" stroke-width="1.5"/>
+            </svg>
+            <span class="ribbon-text">Vox: When did this start?</span>
+        </div>
+
+        <!-- Ribbon 5: Patient -->
+        <div class="ribbon ribbon-patient">
+            <svg class="ribbon-bg" viewBox="0 0 340 50" preserveAspectRatio="none">
+                <path d="M 15 1 L 325 1 L 339 25 L 325 49 L 15 49 L 1 25 Z" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1.5"/>
+            </svg>
+            <span class="ribbon-text">Started last Tuesday.</span>
+        </div>
+    </div>
+
+    <!-- Center Chamber -->
+    <div class="chamber">
+        <div class="chamber-header">
+            <div class="chamber-logo">Vox</div>
+            <div class="chamber-subtitle">Adaptive clinical interviewer</div>
+        </div>
+
+        <div class="chamber-core">
+            <div class="chamber-core-active"></div>
+            <div class="chamber-core-arrow"></div>
+            <div class="chamber-core-text">Adaptive<br>clinical<br>interviewer</div>
+        </div>
+
+        <div class="chamber-pills">
+            <div class="chamber-pill">
+                <div class="pill-dot"></div>
+                <div class="pill-text">What matters</div>
+            </div>
+            <div class="chamber-pill">
+                <div class="pill-dot"></div>
+                <div class="pill-text">What connects</div>
+            </div>
+            <div class="chamber-pill">
+                <div class="pill-dot"></div>
+                <div class="pill-text">What still needs<br>verification</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Section: Redesigned Artifact Edge -->
+    <div class="right-section">
+        <div class="right-title">Clinician-grade starting point</div>
+        
+        <div class="artifact-container">
+            <!-- Structural spine -->
+            <div class="artifact-spine"></div>
+            <div class="artifact-accent"></div>
+            
+            <!-- Document surface with skeleton content -->
+            <div class="artifact-surface">
+                <div class="skel-badge">VOX SUMMARY</div>
+                
+                <!-- Header Skeleton -->
+                <div class="skel-header"></div>
+                <div class="skel-header-sub"></div>
+                
+                <div class="skel-divider"></div>
+                
+                <!-- Section 1 -->
+                <div class="skel-section-title">CLINICAL STORY</div>
+                <div class="skel-line w-full"></div>
+                <div class="skel-line w-full"></div>
+                <div class="skel-line w-90"></div>
+                <div class="skel-line w-75"></div>
+                
+                <div style="margin-top: 24px;"></div>
+                
+                <!-- Section 2 -->
+                <div class="skel-section-title">PERTINENT POSITIVES</div>
+                <div class="skel-pills-container">
+                    <div class="skel-pill"></div>
+                    <div class="skel-pill w-lg"></div>
+                    <div class="skel-pill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+```

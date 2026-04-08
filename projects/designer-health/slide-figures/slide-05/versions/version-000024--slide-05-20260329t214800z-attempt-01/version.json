@@ -1,0 +1,16 @@
+{
+  "id": "version-000024",
+  "slideId": "slide-05",
+  "slideDir": "projects/designer-health/slide-figures/slide-05",
+  "dir": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01",
+  "label": "slide-05-20260329T214800Z-attempt-01",
+  "status": "current",
+  "createdAt": "2026-03-31T17:04:29.555Z",
+  "sourceKind": "gemini-html-tune",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-05/gemini-html/tune/20260329T214800Z/attempt-01"
+  ],
+  "runId": "20260329T214800Z",
+  "attempt": "attempt-01"
+}

@@ -1,0 +1,40 @@
+{
+  "slideId": "slide-01",
+  "slideDir": "projects/designer-health/slide-figures/slide-01",
+  "currentVersionId": "version-000070",
+  "versions": [
+    {
+      "id": "version-000070",
+      "label": "one-human-story-to-structure-membrane",
+      "status": "current",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T21:13:43.004Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-01/versions/version-000070--one-human-story-to-structure-membrane",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000071",
+      "label": "one-human-story-to-structure",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T21:13:43.032Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-01/versions/version-000071--one-human-story-to-structure",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000126",
+      "label": "slide-01-template-shell-catchup-v1",
+      "status": "draft",
+      "sourceKind": "fine-tune-draft",
+      "createdAt": "2026-04-01T23:21:08.826Z",
+      "baseVersionId": "version-000070",
+      "dir": "projects/designer-health/slide-figures/slide-01/versions/version-000126--slide-01-template-shell-catchup-v1",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

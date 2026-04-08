@@ -1,0 +1,29 @@
+{
+  "slideId": "slide-11",
+  "slideDir": "projects/designer-health/slide-figures/slide-11-team",
+  "currentVersionId": "version-000349",
+  "versions": [
+    {
+      "id": "version-000291",
+      "label": "slide-11-team-figma-import-v1",
+      "status": "archived",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-05T20:03:51.707Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-11-team/versions/version-000291--slide-11-team-figma-import-v1",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000349",
+      "label": "slide-11-user-html-founder-grid-refresh-v1",
+      "status": "current",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-08T14:52:54.923Z",
+      "baseVersionId": "version-000291",
+      "dir": "projects/designer-health/slide-figures/slide-11-team/versions/version-000349--slide-11-user-html-founder-grid-refresh-v1",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

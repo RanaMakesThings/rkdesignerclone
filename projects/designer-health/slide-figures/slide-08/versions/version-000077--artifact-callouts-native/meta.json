@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-03-31T21:12:11.027Z",
+  "slug": "slide-08-artifact-callouts",
+  "family": "artifact_with_zoom_callouts",
+  "deckId": "vox-pd-v1",
+  "theme": "vox",
+  "mode": "full-slide",
+  "title": "The clinician starts from a structured brief.",
+  "subtitle": "Scan, verify, decide.",
+  "specPath": "projects/designer-health/figures/specs/slide-08-artifact-callouts.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts/figure.html",
+    "svg": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts/figure.svg",
+    "png": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-08-artifact-callouts/render-assets.json"
+  },
+  "selectedMedia": []
+}

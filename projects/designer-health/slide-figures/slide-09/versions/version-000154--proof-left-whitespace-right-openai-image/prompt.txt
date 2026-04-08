@@ -1,0 +1,42 @@
+Create one polished 16:9 investor-deck figure image.
+
+Use the attached documentation and encounter reference images only to preserve
+family continuity and evidence cues.
+This should feel like an asymmetric market-positioning slide, not two equal
+cards.
+
+Use this exact on-slide copy:
+
+Headline:
+AI has traction after the visit. The visit itself is still thinly served.
+
+Left kicker:
+AI impact after the visit
+
+Left statement:
+Ambient scribes validate clinician buy-in for AI assistance.
+
+Right kicker:
+AI impact during the visit
+
+Right statement:
+Few tools actually change how the encounter is conducted. Vox does.
+
+Required composition:
+- smaller proof column on the left
+- larger opportunity column on the right
+- left side should contain a smaller proof vignette and a compact crowded field
+- right side should contain a much larger open field with one blue VOX marker
+- right side must feel more important and more open
+
+Required read:
+- left = proof that AI buy-in already exists
+- right = the encounter remains thinly served
+- the slide should feel cinematic, editorial, and decisive
+
+Style:
+- white or warm-white background
+- grayscale base
+- one restrained blue accent
+- premium investor-deck restraint
+- avoid equal cards, chip rows, and workflow-map logic

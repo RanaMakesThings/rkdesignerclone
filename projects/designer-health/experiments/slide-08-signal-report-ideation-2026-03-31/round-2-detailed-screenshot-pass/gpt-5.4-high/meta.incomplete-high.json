@@ -1,0 +1,11 @@
+{
+  "model": "gpt-5.4",
+  "reasoning": {
+    "effort": "high"
+  },
+  "text": {
+    "verbosity": "medium"
+  },
+  "max_output_tokens": 12000,
+  "image": "/Users/kabeer/Desktop/Screenshot 2026-03-31 at 5.24.45 PM.png"
+}

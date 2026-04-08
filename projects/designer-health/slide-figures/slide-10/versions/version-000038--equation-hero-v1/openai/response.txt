@@ -1,0 +1,221 @@
+## Recommendation
+
+**Option 2 — Callback Embedded Inside the Hero Card — is the strongest choice.**
+
+It best balances the three priorities you named:
+
+1. **clarity**
+2. **deck continuity**
+3. **causal readability**
+
+It lets slide 10 read as a single investor-grade proof object:
+
+**capacity gained** → **1 more visit** → **assumptions** → **annual dollar value**
+
+That is the cleanest narrative arc.
+
+---
+
+## Why Option 2 is strongest
+
+### 1) It keeps the slide as one argument, not two adjacent ideas
+Slide 10’s job is not just to remind people of slide 3. Its job is to show:
+
+**the operational capacity motif from slide 3 resolves into economics**
+
+If the callback sits **inside the same hero card** as the equation, the audience reads the whole thing as one continuous proof. That is exactly what you want in an investor deck.
+
+By contrast, if the callback is separated into its own left-side object, the slide risks becoming:
+
+- left: capacity picture
+- right: economics math
+
+That is logically related, but visually split.
+
+### 2) It creates the clearest causal bridge
+Embedding the callback on the far left of the white card allows a natural left-to-right progression:
+
+**shortened repeated visits + green new visit block**  
+→ **+1 visit / provider / day**  
+→ **220 days, $125/visit, 40% margin**  
+→ **$11,000 / year**
+
+That is much easier to understand than having viewers infer the bridge across two different zones of the slide.
+
+### 3) It preserves continuity without replaying slide 3
+A small embedded callback says, “this is the same mechanism you saw earlier,” without re-running the whole chart.
+
+That is exactly the right level of continuity:
+- recognizable enough to trigger memory
+- compressed enough to feel like progression, not repetition
+
+### 4) It fits investor-deck behavior
+Investors skim for the dominant claim. Right now, the dominant claim on slide 10 is the large **$11,000**. Good. You should preserve that.
+
+Option 2 supports the big number while making its source more believable. It adds proof without stealing the headline.
+
+---
+
+## Which option most clearly communicates that one added visit creates meaningful annual value?
+
+**Option 2**, again.
+
+Why:
+- It shows the **origin of the added visit** right next to the **economic conversion**
+- It avoids the cognitive jump between separate modules
+- It makes “+1 visit” feel earned, not asserted
+
+If your question is specifically “which best communicates that one added visit creates meaningful annual value,” the answer is the option where the callback is visually upstream of the math in the same card.
+
+---
+
+## Which option best preserves continuity with slide 3 without becoming a replay of slide 3?
+
+**Option 2** is also best on this criterion.
+
+It references the motif in miniature, but does not turn slide 10 into another capacity-layout slide.
+
+### Ranking on continuity without replay:
+1. **Option 2**
+2. **Option 3**
+3. **Option 1**
+
+Option 1 is most likely to feel like a partial rerun of slide 3 because it introduces a distinct callback object as a co-equal element.
+
+Option 3 preserves continuity lightly, but may be too subtle to do meaningful callback work.
+
+---
+
+## Main failure mode for each option
+
+## Option 1 — Left Capacity Motif + Right Equation
+
+### Main failure mode:
+**The slide splits into two unrelated objects instead of one causal argument.**
+
+Even if the content is correct, viewers may process it as:
+- “here is the capacity concept again”
+- “here is an economics equation”
+
+That weakens the feeling that the second emerges from the first.
+
+### Other risks:
+- The left callback object may become too visually important relative to the economics proof
+- It can make the slide feel more like a composite explainer than a sharp investor slide
+- It invites unnecessary detail in the callback object, because it has its own territory to fill
+
+### Verdict:
+**Not my first choice. Use only if the current hero card cannot structurally absorb the callback cleanly.**
+
+---
+
+## Option 2 — Callback Embedded Inside the Hero Card
+
+### Main failure mode:
+**Crowding and overcompression inside the white card.**
+
+If the callback strip is too detailed, the card becomes busy and the slide loses its clean investor-grade confidence.
+
+The challenge is not conceptual; it is executional:
+- too many mini-bars
+- too many labels
+- too much visual noise before the “+1 visit”
+
+### What must be controlled:
+- callback object must be highly reduced
+- no explanatory microcopy inside it
+- keep it as a cue, not a chart-within-a-chart
+
+### Verdict:
+**Best option, provided the callback is treated as a compact visual premise, not a full sub-graphic.**
+
+---
+
+## Option 3 — Bottom Capacity Strip Replaces the Quiet Range Rail
+
+### Main failure mode:
+**The callback becomes ornamental rather than causal.**
+
+Putting it at the bottom makes it feel like a footer or supporting decoration, not the driver of the economic logic.
+
+The audience may read:
+- headline
+- hero math
+- big $11,000
+
+…and never integrate the bottom strip into the core argument.
+
+### Other risks:
+- It competes with the sensitivity/range function if that footer currently has a role
+- It can feel disconnected from the “+1 visit” input
+- It may be too small to carry the slide-3 recognition motif effectively
+
+### Verdict:
+**Better than Option 1 only if you want a very light callback. But it is weaker for causal readability.**
+
+I would **not choose this** if the goal is to make capacity visibly turn into dollars.
+
+---
+
+# Recommended ranking
+
+1. **Option 2 — strongest overall**
+2. **Option 1 — acceptable fallback**
+3. **Option 3 — weakest for the stated goal**
+
+If you want a more decisive framing:
+
+- **Choose Option 2**
+- **Reject Option 3**
+- **Use Option 1 only as a fallback if layout constraints make Option 2 too cramped**
+
+---
+
+## One concrete recommendation for how to depict the callback object
+
+Use a **single compact horizontal strip** on the far left inside the white economics card:
+
+- **two shortened gray/blue mini visit bars**
+- followed immediately by a **green rectangular “New visit” block**
+- no axis, no bracket, no repeated rows, no explanatory caption
+- optional tiny label above or below: **“Recovered time”** or **“Capacity unlocked”**
+
+Then connect it directly into the existing math with a simple arrow:
+
+**[mini shortened visits + green New visit] → +1 visit / provider / day → assumptions → $11,000**
+
+### Important depiction guidance:
+- Make the callback object visually **smaller than the “+1 visit” statement**
+- Treat it as a **recognition cue**, not the hero
+- Keep the green block as the only saturated accent in that strip so the payoff reads instantly
+- Preserve the current large **$11,000** as the dominant endpoint
+
+### A good mental model:
+The callback should function like a **visual noun phrase**, not a standalone chart.
+
+Not:
+- “here is the whole slide 3 mechanism again”
+
+But:
+- “this recovered capacity creates the extra visit we monetize here”
+
+---
+
+## Suggested final design logic for slide 10
+
+If you implement Option 2 well, slide 10 becomes:
+
+**Recovered visit time creates real capacity.**  
+[mini slide-3 callback] → **+1 visit / provider / day** → [assumptions] → **$11,000 / year**
+
+That is investor-readable, continuous with slide 3, and clearly causal.
+
+---
+
+## Bottom line
+
+**Best option: Option 2.**  
+It most clearly shows that the slide-3 capacity gain turns into economic value, while preserving the clean, proof-like character of an investor deck.
+
+**Reject Option 3** for this purpose.  
+**Option 1** is workable but visually and conceptually less unified.

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080, initial-scale=1.0" />
+<title>Designer Health - Vox Slide</title>
+<style>
+  html, body {
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: #f8f9f7;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .slide {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background:
+      radial-gradient(900px 520px at 18% 7%, rgba(128,164,173,0.18), rgba(255,255,255,0) 60%),
+      radial-gradient(700px 420px at 75% 78%, rgba(137,177,182,0.12), rgba(255,255,255,0) 62%),
+      linear-gradient(180deg, #fbfbfa 0%, #f8f9f7 100%);
+    color: #152032;
+  }
+  .title {
+    position: absolute;
+    left: 108px;
+    top: 70px;
+    width: 1415px;
+    font-size: 64px;
+    line-height: 1.04;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: #141d2d;
+  }
+  .title .brand {
+    color: #2f8d98;
+    font-weight: 700;
+  }
+  .bodycopy {
+    position: absolute;
+    left: 108px;
+    top: 292px;
+    width: 1380px;
+    font-size: 23px;
+    line-height: 1.42;
+    color: #58677f;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  .chamber {
+    position: absolute;
+    left: 532px;
+    top: 409px;
+    width: 780px;
+    height: 525px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(252,253,252,0.9) 100%);
+    border: 1.5px solid rgba(148,164,178,0.45);
+    border-radius: 42px;
+    box-shadow:
+      0 28px 70px rgba(68,86,111,0.07),
+      inset 0 1px 0 rgba(255,255,255,0.85);
+  }
+
+  .vox-word {
+    position: absolute;
+    left: 0;
+    top: 34px;
+    width: 100%;
+    text-align: center;
+    font-size: 54px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: #2f8d98;
+  }
+  .vox-sub {
+    position: absolute;
+    left: 0;
+    top: 104px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #27364c;
+  }
+
+  .pill {
+    position: absolute;
+    height: 44px;
+    min-width: 230px;
+    padding: 0 22px 0 34px;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(202,210,221,0.9);
+    box-shadow: 0 8px 18px rgba(46,69,92,0.05), inset 0 1px 0 rgba(255,255,255,0.85);
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.05;
+    font-weight: 600;
+    color: #243244;
+    letter-spacing: -0.02em;
+  }
+  .pill .dot {
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #47a8ae;
+    box-shadow: 0 0 0 3px rgba(71,168,174,0.12);
+  }
+  .right-title {
+    position: absolute;
+    left: 1460px;
+    top: 550px;
+    font-size: 24px;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #141d2d;
+  }
+
+  .chat {
+    position: absolute;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    padding-left: 38px;
+    padding-right: 34px;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: #4b5a71;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(251,252,252,0.72));
+    clip-path: polygon(0 50%, 10% 0, 92% 0, 100% 50%, 92% 100%, 10% 100%);
+    border: 3px solid #a9b7c8;
+  }
+  .chat.teal {
+    color: #166676;
+    background: linear-gradient(180deg, rgba(232,246,245,0.98), rgba(225,242,241,0.98));
+    border-color: #57aeb2;
+    font-weight: 700;
+  }
+
+  .card-wrap {
+    position: absolute;
+    left: 1518px;
+    top: 600px;
+    width: 282px;
+    height: 320px;
+  }
+  .clip {
+    position: absolute;
+    left: -24px;
+    top: 20px;
+    width: 48px;
+    height: 210px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #307987 0%, #1d5f6f 100%);
+    box-shadow: 0 12px 30px rgba(42,89,104,0.22);
+  }
+  .clip:after {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 18px;
+    width: 8px;
+    height: 172px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.22);
+  }
+  .card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 320px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(246,248,248,0.95));
+    border: 1.5px solid rgba(206,214,224,0.88);
+    box-shadow: 0 18px 40px rgba(69,91,118,0.1);
+    overflow: hidden;
+  }
+  .card-top {
+    position: absolute;
+    top: 0;
+    left: 24px;
+    width: 228px;
+    height: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: #b6dde0;
+  }
+  .line {
+    position: absolute;
+    left: 24px;
+    height: 12px;
+    border-radius: 7px;
+    background: linear-gradient(90deg, #d8dfe8, #e5eaf0);
+  }
+  .rule {
+    position: absolute;
+    left: 24px;
+    width: 232px;
+    height: 1px;
+    background: #cfd8e2;
+  }
+
+  svg {
+    position: absolute;
+    inset: 0;
+  }
+  .small {
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="title">
+      <span class="brand">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.
+    </div>
+
+    <div class="bodycopy">
+      Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+      By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>
+      what still needs verification before the visit begins.
+    </div>
+
+    <div class="chat" style="left:100px; top:463px; width:388px;">My back has been hurting...</div>
+    <div class="chat teal" style="left:119px; top:552px; width:350px;">Vox: What makes it worse?</div>
+    <div class="chat" style="left:100px; top:640px; width:390px;">It's worse in the morning.</div>
+    <div class="chat teal" style="left:119px; top:727px; width:350px;">Vox: When did this start?</div>
+    <div class="chat" style="left:100px; top:816px; width:388px;">Started last Tuesday.</div>
+
+    <div class="chamber">
+      <div class="vox-word">Vox</div>
+      <div class="vox-sub">Adaptive clinical interviewer</div>
+
+      <div class="pill" style="left:442px; top:156px; width:202px;">
+        <span class="dot"></span>
+        What matters
+      </div>
+      <div class="pill" style="left:454px; top:246px; width:200px;">
+        <span class="dot"></span>
+        What connects
+      </div>
+      <div class="pill" style="left:442px; top:336px; width:202px; height:48px; align-items:flex-start; padding-top:8px;">
+        <span class="dot" style="top:21px;"></span>
+        <div>What still needs<br>verification</div>
+      </div>
+    </div>
+
+    <div class="right-title">Clinician-grade starting point</div>
+
+    <div class="card-wrap">
+      <div class="clip"></div>
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="line" style="top:32px; width:104px;"></div>
+        <div class="line" style="top:61px; width:214px;"></div>
+        <div class="line" style="top:83px; width:148px;"></div>
+        <div class="rule" style="top:112px;"></div>
+
+        <div class="line" style="top:126px; width:106px;"></div>
+        <div class="line" style="top:154px; width:180px;"></div>
+        <div class="line" style="top:176px; width:214px;"></div>
+        <div class="line" style="top:199px; width:130px;"></div>
+        <div class="rule" style="top:224px;"></div>
+
+        <div class="line" style="top:237px; width:106px;"></div>
+        <div class="line" style="top:266px; width:146px;"></div>
+        <div class="line" style="top:288px; width:180px;"></div>
+      </div>
+    </div>
+
+    <svg width="1920" height="1080" viewBox="0 0 1920 1080" aria-hidden="true">
+      <defs>
+        <linearGradient id="lineGrey" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#bec8d5" stop-opacity="0.95"/>
+          <stop offset="55%" stop-color="#98a9bc" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#d6dde7" stop-opacity="0.68"/>
+        </linearGradient>
+        <linearGradient id="lineTeal" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#6ec0c3" stop-opacity="0.92"/>
+          <stop offset="48%" stop-color="#3f9ca6" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#8bd0d1" stop-opacity="0.5"/>
+        </linearGradient>
+        <linearGradient id="handoff" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#79c6ca" stop-opacity="0.55"/>
+          <stop offset="55%" stop-color="#74c0c4" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#74c0c4" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="4"/>
+        </filter>
+        <filter id="softer" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="10"/>
+        </filter>
+
+        <linearGradient id="segA" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#dcecee"/>
+          <stop offset="42%" stop-color="#88c6c8"/>
+          <stop offset="100%" stop-color="#3d97a3"/>
+        </linearGradient>
+        <linearGradient id="segB" x1="1" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#dcecee"/>
+          <stop offset="40%" stop-color="#8fcacc"/>
+          <stop offset="100%" stop-color="#468e98"/>
+        </linearGradient>
+        <linearGradient id="segC" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#dcecee"/>
+          <stop offset="38%" stop-color="#8cc6c9"/>
+          <stop offset="100%" stop-color="#3b8f9d"/>
+        </linearGradient>
+        <linearGradient id="segD" x1="1" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#dcecee"/>
+          <stop offset="40%" stop-color="#8cc7ca"/>
+          <stop offset="100%" stop-color="#438f9b"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Left ribbons -->
+      <path d="M 486 497 C 560 494, 596 558, 655 628 C 675 652, 697 648, 710 652"
+            fill="none" stroke="url(#lineGrey)" stroke-width="10" stroke-linecap="round"/>
+      <path d="M 486 497 C 560 494, 596 558, 655 628 C 675 652, 697 648, 710 652"
+            fill="none" stroke="#eef3f7" stroke-opacity="0.65" stroke-width="3" stroke-linecap="round"/>
+
+      <path d="M 488 584 C 566 584, 598 606, 655 656 C 675 674, 696 674, 710 676"
+            fill="none" stroke="url(#lineTeal)" stroke-width="10" stroke-linecap="round"/>
+      <path d="M 488 584 C 566 584, 598 606, 655 656 C 675 674, 696 674, 710 676"
+            fill="none" stroke="#e8f7f7" stroke-opacity="0.75" stroke-width="3" stroke-linecap="round"/>
+
+      <path d="M 486 674 C 575 674, 614 674, 662 674 C 680 674, 698 674, 710 674"
+            fill="none" stroke="url(#lineGrey)" stroke-width="10" stroke-linecap="round"/>
+      <path d="M 486 674 C 575 674, 614 674, 662 674 C 680 674, 698 674, 710 674"
+            fill="none" stroke="#eef3f7" stroke-opacity="0.65" stroke-width="3" stroke-linecap="round"/>
+
+      <path d="M 486 762 C 565 762, 601 738, 655 700 C 674 687, 696 690, 710 688"
+            fill="none" stroke="url(#lineTeal)" stroke-width="10" stroke-linecap="round"/>
+      <path d="M 486 762 C 565 762, 601 738, 655 700 C 674 687, 696 690, 710 688"
+            fill="none" stroke="#e8f7f7" stroke-opacity="0.75" stroke-width="3" stroke-linecap="round"/>
+
+      <path d="M 486 850 C 557 850, 595 796, 656 716 C 676 690, 697 706, 710 700"
+            fill="none" stroke="url(#lineGrey)" stroke-width="10" stroke-linecap="round"/>
+      <path d="M 486 850 C 557 850, 595 796, 656 716 C 676 690, 697 706, 710 700"
+            fill="none" stroke="#eef3f7" stroke-opacity="0.65" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Center node and right branching -->
+      <path d="M 950 679 C 992 679, 1012 620, 1056 589"
+            fill="none" stroke="url(#lineTeal)" stroke-width="12" stroke-linecap="round"/>
+      <path d="M 950 679 C 992 679, 1012 620, 1056 589"
+            fill="none" stroke="#ecf8f8" stroke-opacity="0.75" stroke-width="3" stroke-linecap="round"/>
+
+      <path d="M 950 679 C 1000 679, 1018 679, 1061 679"
+            fill="none" stroke="url(#lineTeal)" stroke-width="12" stroke-linecap="round"/>
+      <path d="M 950 679 C 1000 679, 1018 679, 1061 679"
+            fill="none" stroke="#ecf8f8" stroke-opacity="0.75" stroke-width="3" stroke-linecap="round"/>
+
+      <path d="M 950 679 C 992 679, 1012 738, 1056 769"
+            fill="none" stroke="url(#lineTeal)" stroke-width="12" stroke-linecap="round"/>
+      <path d="M 950 679 C 992 679, 1012 738, 1056 769"
+            fill="none" stroke="#ecf8f8" stroke-opacity="0.75" stroke-width="3" stroke-linecap="round"/>
+
+      <circle cx="960" cy="679" r="10" fill="#ffffff" stroke="#59aeb3" stroke-width="4"/>
+      <circle cx="960" cy="679" r="3.8" fill="#59aeb3"/>
+
+      <!-- Updated central rotational ring -->
+      <g transform="translate(788 678)">
+        <circle cx="0" cy="0" r="82" fill="rgba(235,245,246,0.52)" filter="url(#softer)"/>
+        <circle cx="0" cy="0" r="74" fill="#ffffff" stroke="#dce5ea" stroke-width="2"/>
+        <g fill="none" stroke-linecap="butt">
+          <circle cx="0" cy="0" r="82" stroke="url(#segA)" stroke-width="12"
+                  stroke-dasharray="68 24 68 24 68 24 68 24"/>
+          <circle cx="0" cy="0" r="82" stroke="url(#segB)" stroke-width="12"
+                  stroke-dasharray="68 24 68 24 68 24 68 24" stroke-dashoffset="46"/>
+          <circle cx="0" cy="0" r="82" stroke="url(#segC)" stroke-width="12"
+                  stroke-dasharray="68 24 68 24 68 24 68 24" stroke-dashoffset="92" opacity="0.96"/>
+          <circle cx="0" cy="0" r="82" stroke="url(#segD)" stroke-width="12"
+                  stroke-dasharray="68 24 68 24 68 24 68 24" stroke-dashoffset="138" opacity="0.92"/>
+        </g>
+        <circle cx="0" cy="0" r="88" fill="none" stroke="rgba(122,178,184,0.10)" stroke-width="10"/>
+        <circle cx="0" cy="0" r="66" fill="#ffffff"/>
+        <text x="0" y="-11" text-anchor="middle" font-size="14" font-weight="500" fill="#2b384d" letter-spacing="-0.02em">Medical knowledge</text>
+        <text x="0" y="8" text-anchor="middle" font-size="14" font-weight="500" fill="#2b384d" letter-spacing="-0.02em">Clinical reasoning</text>
+        <text x="0" y="27" text-anchor="middle" font-size="14" font-weight="500" fill="#2b384d" letter-spacing="-0.02em">Guided follow-up</text>
+      </g>
+
+      <!-- right handoff untouched -->
+      <path d="M 1313 610 C 1365 640, 1402 667, 1450 678 C 1480 685, 1497 679, 1522 679"
+            fill="none" stroke="url(#handoff)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 1313 678 C 1380 678, 1452 678, 1518 678"
+            fill="none" stroke="url(#handoff)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 1313 744 C 1365 716, 1402 690, 1450 679 C 1482 672, 1497 678, 1522 678"
+            fill="none" stroke="url(#handoff)" stroke-width="8" stroke-linecap="round"/>
+
+      <path d="M 1412 603 L 1497 603 L 1516 678 L 1436 678 Z" fill="url(#handoff)" filter="url(#soft)" opacity="0.5"/>
+      <path d="M 1412 678 L 1499 678 L 1518 752 L 1435 752 Z" fill="url(#handoff)" filter="url(#soft)" opacity="0.5"/>
+    </svg>
+  </div>
+</body>
+</html>

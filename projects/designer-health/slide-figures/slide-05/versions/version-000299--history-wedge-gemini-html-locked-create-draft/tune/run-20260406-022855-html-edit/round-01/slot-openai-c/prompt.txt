@@ -1,0 +1,336 @@
+You are authoring a fresh self-contained HTML deck slide from a seeded blank shell.
+The current HTML is only a seeded shell. Fully resolve it into a finished slide and return one complete replacement HTML document only.
+Use inline CSS only. Inline SVG is allowed and preferred for lines, connectors, rulers, and geometry.
+Do not return markdown, commentary, code fences, patches, or explanations.
+Preserve the locked Designer shell, footer rule, footer logo, and deck-family continuity while building the actual slide content.
+The output must remain a finished 1920x1080 presentation graphic, not a browser page or fragment.
+Remove placeholder copy and figure-stub elements. Do not leave Header, Subheader, or Graphic / Figure placeholders behind.
+
+## Requested change
+Create a finished Designer deck slide from the seeded blank template.
+
+This is a new first-draft branch for public slide 4, resolved through logical `slide-05`.
+Use the standard white Designer shell and footer treatment from `designer-deck-template-v1`.
+Treat `/Users/kabeer/Downloads/slide-04-build-spec-C-clean-sheet-structural-alternative.md` as the governing spec for this pass.
+
+Slide id: slide-05
+Lane: html
+Slide title: History is the cleanest place to reclaim minutes
+Locked header: History is the cleanest place to reclaim minutes.
+Locked subheader: none
+Audience should leave believing: History is the right place to focus if the goal is to recover visit time in a meaningful, scalable way, and those minutes are not simple clerical collection.
+Core claim: History is the cleanest wedge because it is foundational to the encounter, time-variable, and can begin before the encounter, but reclaiming those minutes still requires clinical judgment.
+Slide job: Select the wedge and make the hidden difficulty legible with a fresh composition rather than refining the current merged-draft geometry.
+Figure burden: One enlarged visit bar, one lifted history segment, one open proof field with three reasons, and one large bottom truth statement.
+Figure logic: Rebuild the slide around the visit as the whole, history as the selected part, proof in open space, and the judgment truth stated directly. Do not use the current hero-card-and-tether composition as the main organizing device.
+Build status: blank-sheet structural alternative branch C from spec; keep locked truth, replace the composition family.
+
+Locked top headline:
+History is the cleanest place to reclaim minutes.
+
+Locked bottom statement:
+But reclaiming those minutes still requires clinical judgment.
+
+Small support line:
+Relevant details • Timeline • Next questions
+
+Read order:
+1. Top headline: where the wedge is.
+2. Enlarged visit bar: what part of the visit is being selected.
+3. Open proof field: why that part is attractive.
+4. Bottom large statement: why those minutes are still judgment-heavy.
+
+Composition and layout:
+- No top subheader.
+- Preserve the white Designer shell, generous margins, footer rule, and footer logo.
+- Start the figure with one wide visit bar in the upper-middle of the figure zone.
+- Pull the History segment slightly forward or downward from the bar so it becomes the selected object without requiring a separate hero card.
+- Keep the proof area open and lightly structured, not boxed into a large panel.
+- Put the large bottom statement near the bottom of the slide, outside the proof field.
+- Avoid a heavy lower ribbon.
+
+Figure family:
+- one oversized visit bar
+- history segment visually lifted from the bar
+- small support label attached to the lifted history segment
+- open right-side or lower-right proof field with three reasons
+- large bottom statement for the nontriviality beat
+
+Visit bar requirements:
+- Use one horizontal visit bar spanning a large portion of the figure width.
+- History remains the dominant selected segment.
+- Exam and Assessment / plan remain visible but clearly secondary.
+- The selection should feel like "this is the part we are pulling forward," not like a workflow strip.
+
+Selected history treatment:
+- Do not use a separate blue card connected by a tether as the main move.
+- Enlarge or vertically offset the History segment itself.
+- Add a subtle shadow or elevation cue.
+- Attach a short support line directly below or adjacent to it.
+
+Selected label:
+History
+
+Support line:
+A high-leverage target for pre-visit prep.
+
+Proof field:
+Use three short proof rows in open space, not enclosed in a large white card.
+
+Row 1:
+Foundational to the encounter
+Shapes the starting point for what follows in the visit.
+
+Row 2:
+Time-variable
+Time required depends on complexity, communication, and context.
+
+Row 3:
+Can begin before the encounter
+A meaningful portion can start before the clinician is on the clock.
+
+Hierarchy:
+- The top headline remains the largest text on the slide.
+- The lifted History segment is the most visually salient part of the figure.
+- The proof field is readable but quieter than the selected history segment.
+- The bottom statement reads as a second truth, slightly smaller than the top headline.
+- The small support line stays clearly tertiary.
+
+Tone:
+- fresh
+- sparse
+- structural
+- confident
+- less card-based
+
+Must not become:
+- diagrammatic
+- product-ish
+- boxy
+- UI-like
+- a lighter version of slide 5
+- a workflow strip
+- a product slide
+- a mini mechanism diagram
+- a floating feature cloud
+- a pseudo-precise time anatomy
+- a slide that starts describing Vox before slide 5
+- the current tethered hero-card composition in slightly altered form
+
+Keep from the current direction:
+- the locked headline
+- history as the wedge
+- the three proof reasons
+- the clinical-judgment second truth
+- the sparse premium shell
+
+Replace from the current direction:
+- remove the tethered hero card as the default organizing move
+- remove the enclosed right-side proof panel
+- avoid a full lower ribbon as the main way of expressing the second truth
+- use the lifted history segment itself as the main selected object
+
+## Success checks
+- The slide is fully resolved and presentation-ready.
+- No template placeholders remain.
+- The header reads exactly: History is the cleanest place to reclaim minutes.
+- No subheader is shown at the top of the slide.
+- The figure starts from the Designer white shell and not from an unrelated UI or browser-page structure.
+- The visit is legible as a whole and History is immediately legible as the selected wedge.
+- The proof field reads as argument, not as a feature list or boxed card stack.
+- The bottom line lands as a second truth: But reclaiming those minutes still requires clinical judgment.
+- The slide feels meaningfully fresher than the current merged draft geometry.
+- The slide stays inside the locked Designer shell contract.
+- The footer rule and footer logo remain aligned with the shell.
+- The result leaves slide 5 room to introduce Vox.
+
+## Guardrails
+- preserve the white Designer shell
+- preserve the footer rule and footer logo
+- do not leave the figure stub or placeholder copy visible
+- do not show a top subheader
+- do not turn the slide into a browser page, app UI, dashboard, or card grid
+- do not weaken the locked slide claim
+- do not let the proof field become a boxed panel
+- do not reintroduce the tethered hero card as the main organizing device
+- do not make the slide feel like product UI or mechanism detail
+
+## Approved regions
+- Footer Rule | freeze=pixel-strict | rect=(112,992,1536,4) | note=Preserve the thin footer divider rule from the locked Designer shell.
+- Footer Logo | freeze=semantic-stable | rect=(1692,962,114,59) | note=Keep the official Designer footer logo aligned to the shell.
+
+## Slot variation
+Preserve the shell and resolve the slide brief without unnecessary drift.
+
+## Retry brief
+None.
+
+## Stop if
+- the best candidate still relies on the tethered hero-card composition after repeated rounds
+- the proof field cannot stay open without becoming loose or underdesigned
+- the lifted segment is too subtle to read
+- the slide starts stealing mechanism or product explanation work from slide 5
+
+## Reference intent
+- Adjacent slide previews are for deck continuity only.
+- The external structural-alternative spec is the governing brief for this pass.
+- Existing slide-05 assets are historical context only; do not inherit their geometry by default.
+- This pass should use the locked shell while changing the composition family.
+
+## Attached image order
+Image 1: official baseline preview (/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft/tune/run-20260406-022855-html-edit/baseline/official-preview.png)
+Image 2: parent preview to edit from (/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft/tune/run-20260406-022855-html-edit/baseline/parent-preview.png)
+Image 3: additional reference (/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/slide-03--version-000069.png)
+Image 4: additional reference (/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06-quality-bar/slide-06-quality-bar--version-000271.png)
+
+## Current editable HTML
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designer Deck Template v1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --ink: #111111;
+        --muted: #6f7785;
+        --line: rgba(0, 0, 0, 0.9);
+        --stub-line: rgba(17, 17, 17, 0.12);
+        --stub-fill: rgba(17, 17, 17, 0.03);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+      }
+
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+      }
+
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 62px;
+        margin: 0;
+        font-size: 64px;
+        line-height: 1.04;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+      }
+
+      .subheader {
+        position: absolute;
+        left: 92px;
+        top: 154px;
+        margin: 0;
+        font-size: 27px;
+        line-height: 1.28;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: var(--muted);
+      }
+
+      .figure-stub {
+        position: absolute;
+        left: 182px;
+        top: 250px;
+        width: 1296px;
+        height: 566px;
+        border: 3px dashed var(--stub-line);
+        border-radius: 28px;
+        background:
+          linear-gradient(180deg, rgba(17, 17, 17, 0.015) 0%, rgba(17, 17, 17, 0.04) 100%);
+      }
+
+      .figure-stub::before,
+      .figure-stub::after {
+        content: "";
+        position: absolute;
+        background: var(--stub-line);
+      }
+
+      .figure-stub::before {
+        left: 50%;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        transform: translateX(-0.5px);
+      }
+
+      .figure-stub::after {
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        transform: translateY(-0.5px);
+      }
+
+      .stub-label {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 14px 22px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(17, 17, 17, 0.08);
+        font-size: 21px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="Designer blank slide template">
+      <h1 class="header">Header</h1>
+      <p class="subheader">Subheader</p>
+      <div class="figure-stub" aria-label="Graphic placeholder">
+        <div class="stub-label">Graphic / Figure</div>
+      </div>
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../../../../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>
+```

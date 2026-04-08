@@ -1,0 +1,502 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vox Investor Pitch Slide</title>
+<style>
+  /* Base & Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e2e8f0; /* Darker backdrop to make the white slide pop */
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Slide Container (16:9 Aspect Ratio) */
+  .slide {
+    width: 1280px;
+    height: 720px;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 100px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Typography */
+  header {
+    margin-bottom: 60px;
+  }
+  h1 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #0f172a;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #64748b;
+    letter-spacing: -0.01em;
+    max-width: 900px;
+    line-height: 1.5;
+  }
+
+  /* Workflow Layout */
+  .workflow-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Subtle Connector Track */
+  .connector-track {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    right: 2%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e2e8f0 5%, #e2e8f0 95%, transparent);
+    z-index: 1;
+  }
+
+  .stages {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+  }
+
+  /* Stage Cards */
+  .stage {
+    flex: 1;
+    height: 400px;
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 20px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  /* Chevrons between cards */
+  .chevron {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    color: #cbd5e1;
+    flex-shrink: 0;
+  }
+
+  /* Stage Header */
+  .stage-header {
+    margin-bottom: 32px;
+  }
+  .stage-num {
+    font-size: 13px;
+    font-weight: 600;
+    color: #94a3b8;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .stage-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #0f172a;
+    letter-spacing: -0.01em;
+  }
+
+  /* Micro-structure Container */
+  .micro-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Trust Tags */
+  .tags {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 24px;
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #64748b;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* ---------------------------------------------------
+     Visual Star: Structure Stage (Restrained Blue Accent)
+     --------------------------------------------------- */
+  .stage.structure {
+    border: 1px solid #bfdbfe;
+    box-shadow: 0 12px 24px -8px rgba(37, 99, 235, 0.12), 0 4px 8px -4px rgba(37, 99, 235, 0.08);
+  }
+  .stage.structure .stage-title {
+    color: #2563eb;
+  }
+  .stage.structure .tag {
+    color: #2563eb;
+    background: #eff6ff;
+    border-color: #bfdbfe;
+  }
+
+  /* ---------------------------------------------------
+     Micro-structures
+     --------------------------------------------------- */
+  
+  /* 1. Invite */
+  .m-invite {
+    width: 100%;
+    max-width: 140px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 16px;
+  }
+  .m-invite-icon {
+    width: 24px;
+    height: 24px;
+    color: #94a3b8;
+    margin-bottom: 16px;
+  }
+  .m-line {
+    height: 4px;
+    background: #cbd5e1;
+    border-radius: 2px;
+    margin-bottom: 8px;
+  }
+  .m-line.w-full { width: 100%; }
+  .m-line.w-half { width: 60%; }
+  .m-btn {
+    height: 28px;
+    background: #e2e8f0;
+    border-radius: 6px;
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  /* 2. Interview */
+  .m-chat {
+    width: 100%;
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .m-bubble {
+    padding: 10px 14px;
+    border-radius: 12px;
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .m-bubble.left {
+    background: #f1f5f9;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .m-bubble.right {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  .m-b-line {
+    height: 3px;
+    background: #cbd5e1;
+    border-radius: 2px;
+  }
+  .m-b-line.w-full { width: 100%; }
+  .m-b-line.w-short { width: 40%; }
+
+  /* 3. Structure (Blue Accent) */
+  .m-struct {
+    width: 100%;
+    max-width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .m-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: #ffffff;
+    border: 1px solid #bfdbfe;
+    padding: 10px 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.04);
+  }
+  .m-key {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background: #eff6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .m-key-dot {
+    width: 6px;
+    height: 6px;
+    background: #3b82f6;
+    border-radius: 50%;
+  }
+  .m-val {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .m-val-line {
+    height: 4px;
+    background: #93c5fd;
+    border-radius: 2px;
+  }
+  .m-val-line.gray {
+    background: #e2e8f0;
+  }
+
+  /* 4. Verify */
+  .m-verify {
+    width: 100%;
+    max-width: 150px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+  }
+  .m-v-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 12px;
+  }
+  .m-v-title {
+    width: 50%;
+    height: 5px;
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+  .m-v-check {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .m-v-check svg {
+    width: 10px;
+    height: 10px;
+    stroke: #64748b;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+  }
+  .m-v-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .m-v-block {
+    height: 14px;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 4px;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <header>
+    <h1>Vox prepares the visit before it starts.</h1>
+    <h2>Vox interviews, structures, and hands off a brief the clinician can verify and use.</h2>
+  </header>
+
+  <main class="workflow-container">
+    <div class="connector-track"></div>
+
+    <div class="stages">
+      
+      <!-- Stage 1: Invite -->
+      <div class="stage">
+        <div class="stage-header">
+          <div class="stage-num">01</div>
+          <div class="stage-title">Invite</div>
+        </div>
+        <div class="micro-container">
+          <div class="m-invite">
+            <svg class="m-invite-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <div class="m-line w-full"></div>
+            <div class="m-line w-half"></div>
+            <div class="m-btn"></div>
+          </div>
+        </div>
+        <!-- Empty tags container to maintain flex alignment -->
+        <div class="tags" style="visibility: hidden;">
+          <span class="tag">Placeholder</span>
+        </div>
+      </div>
+
+      <!-- Chevron -->
+      <div class="chevron">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </div>
+
+      <!-- Stage 2: Interview -->
+      <div class="stage">
+        <div class="stage-header">
+          <div class="stage-num">02</div>
+          <div class="stage-title">Interview</div>
+        </div>
+        <div class="micro-container">
+          <div class="m-chat">
+            <div class="m-bubble left">
+              <div class="m-b-line w-full"></div>
+              <div class="m-b-line w-full"></div>
+            </div>
+            <div class="m-bubble right">
+              <div class="m-b-line w-full"></div>
+              <div class="m-b-line w-short"></div>
+            </div>
+            <div class="m-bubble left">
+              <div class="m-b-line w-full"></div>
+            </div>
+          </div>
+        </div>
+        <div class="tags" style="visibility: hidden;">
+          <span class="tag">Placeholder</span>
+        </div>
+      </div>
+
+      <!-- Chevron -->
+      <div class="chevron">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </div>
+
+      <!-- Stage 3: Structure (Visual Star) -->
+      <div class="stage structure">
+        <div class="stage-header">
+          <div class="stage-num">03</div>
+          <div class="stage-title">Structure</div>
+        </div>
+        <div class="micro-container">
+          <div class="m-struct">
+            <div class="m-row">
+              <div class="m-key"><div class="m-key-dot"></div></div>
+              <div class="m-val">
+                <div class="m-val-line w-full"></div>
+                <div class="m-val-line gray" style="width: 70%;"></div>
+              </div>
+            </div>
+            <div class="m-row">
+              <div class="m-key"><div class="m-key-dot"></div></div>
+              <div class="m-val">
+                <div class="m-val-line w-full"></div>
+                <div class="m-val-line gray w-full"></div>
+              </div>
+            </div>
+            <div class="m-row">
+              <div class="m-key"><div class="m-key-dot"></div></div>
+              <div class="m-val">
+                <div class="m-val-line" style="width: 80%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag">Provenance</span>
+          <span class="tag">Explicit Unknowns</span>
+        </div>
+      </div>
+
+      <!-- Chevron -->
+      <div class="chevron">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </div>
+
+      <!-- Stage 4: Verify -->
+      <div class="stage">
+        <div class="stage-header">
+          <div class="stage-num">04</div>
+          <div class="stage-title">Verify</div>
+        </div>
+        <div class="micro-container">
+          <div class="m-verify">
+            <div class="m-v-header">
+              <div class="m-v-title"></div>
+              <div class="m-v-check">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+            </div>
+            <div class="m-v-body">
+              <div class="m-v-block"></div>
+              <div class="m-v-block" style="width: 85%;"></div>
+              <div class="m-v-block" style="width: 95%;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag">Verification Queue</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
+```

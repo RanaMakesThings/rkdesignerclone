@@ -1,0 +1,40 @@
+{
+  "excludePathGlobs": [
+    ".artifacts/**",
+    ".claude/**",
+    ".designer/**",
+    "output/**",
+    "repo-zips/**",
+    "apps/studio/.next/**",
+    "projects/**/deck-report.html",
+    "projects/**/inputs/**",
+    "projects/**/exports/**",
+    "projects/**/slide-assets/**/source-runs/**",
+    "projects/**/slide-figures/**/versions/**/create/**",
+    "projects/**/slide-figures/**/versions/**/tune/**",
+    "projects/**/slide-reports/**"
+  ],
+  "excludeExtensions": [
+    ".ai",
+    ".avif",
+    ".bmp",
+    ".eps",
+    ".fig",
+    ".gif",
+    ".heic",
+    ".ico",
+    ".indd",
+    ".jpeg",
+    ".jpg",
+    ".mov",
+    ".mp3",
+    ".mp4",
+    ".pdf",
+    ".png",
+    ".psd",
+    ".sketch",
+    ".wav",
+    ".webp",
+    ".zip"
+  ]
+}

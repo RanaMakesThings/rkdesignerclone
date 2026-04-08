@@ -1,0 +1,142 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-04-transformation-flow",
+    "family": "transformation_flow",
+    "deckId": "vox-pd-v1",
+    "theme": "vox",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Visits start with story, not structure.",
+    "subtitle": "Clinicians spend valuable minutes turning patient story into decision-ready structure.",
+    "chips": [],
+    "footnote": "Conceptual transformation only. The right side should read like a structured brief, not a literal software screen."
+  },
+  "constraints": {
+    "figureJob": "Show that the costly work is translating story into structure, not just listening to the patient.",
+    "focalPoint": "The middle transformation step.",
+    "layout": "Left-to-right conceptual transformation: story blob, accent middle transform, structured output card on the right, callout attached to the middle.",
+    "big": [
+      "The middle transformation block",
+      "The left and right objects"
+    ],
+    "quiet": [
+      "The object labels",
+      "The footnote"
+    ],
+    "accentTargets": [
+      "Translate -> structure -> verify block"
+    ],
+    "forbidden": [
+      "UI"
+    ],
+    "semanticGuards": [
+      "no_ui"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Visits start with story, not structure.",
+      "Patient story",
+      "Translate -> structure -> verify",
+      "Decision-ready structure"
+    ],
+    "preferred": [
+      "Necessary work that doesn't have to consume visit time."
+    ],
+    "optional": [],
+    "forbidden": [
+      "product UI"
+    ]
+  },
+  "body": {
+    "left": {
+      "label": "Patient story",
+      "fragments": [
+        "It started a few weeks ago...",
+        "Worse after meals...",
+        "I'm not sure if it's related...",
+        "The pain comes and goes...",
+        "I tried to wait it out..."
+      ]
+    },
+    "middle": {
+      "eyebrow": "Necessary work",
+      "label": "Translate -> structure -> verify",
+      "caption": "Necessary work that does not need to consume decision time in the room.",
+      "callout": "Necessary work that doesn't have to consume visit time."
+    },
+    "right": {
+      "label": "Decision-ready structure",
+      "sections": [
+        {
+          "title": "Key positives / negatives",
+          "lines": [
+            "Pain worse after meals",
+            "No fever or chest pain"
+          ]
+        },
+        {
+          "title": "Timeline",
+          "lines": [
+            "Started a few weeks ago",
+            "Intermittent since onset"
+          ]
+        },
+        {
+          "title": "Questions to verify",
+          "lines": [
+            "Any change in appetite?",
+            "Any medication trigger?"
+          ]
+        }
+      ],
+      "note": "Structured enough to start from, but still awaiting clinician verification."
+    }
+  },
+  "trace": [
+    {
+      "excerpt": "Visits start with story, not structure.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the header directly."
+    },
+    {
+      "excerpt": "Clinicians spend valuable minutes turning patient story into decision-ready structure.",
+      "targetPath": "chrome.subtitle",
+      "ruleType": "chrome",
+      "note": "Carry the explanatory subtitle directly under the header."
+    },
+    {
+      "excerpt": "Show the mechanism inside the visit: turning story into structure.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Lock the aha mechanism before choosing shape."
+    },
+    {
+      "excerpt": "messy patient story -> translate / structure / verify -> decision-ready structure",
+      "targetPath": "body.middle",
+      "ruleType": "body",
+      "note": "Map the slide to a transformation flow."
+    },
+    {
+      "excerpt": "The middle should be the focal point, not the right side.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "Keep the transform block visually dominant."
+    },
+    {
+      "excerpt": "Callout attached to the middle.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Place the explanatory callout on the middle block."
+    },
+    {
+      "excerpt": "The right side should still feel conceptual, not like a literal product UI.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Preserve conceptual output language."
+    }
+  ]
+}

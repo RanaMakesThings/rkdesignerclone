@@ -1,0 +1,21 @@
+{
+  "outcome": "escalate",
+  "reason": "At least one regression review found a concrete visual break.",
+  "nextAction": "needs-human",
+  "beforeImagePath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/gemini-html/preview.png",
+  "afterImagePath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/gemini-html/tune/20260329T214800Z/attempt-01/preview.png",
+  "blockers": [
+    "Stray `xml` text is visible at the top-left of the slide.",
+    "The slide is rendered inside a smaller inset canvas with large surrounding margins/shadow, making the composition under-filled/fragment-like versus the baseline.",
+    "Stray 'xml' text artifact visible in the top-left corner of the rendered slide — leaked markup not removed",
+    "Arrow stroke in the AFTER candidate appears thinner/lighter than the BEFORE baseline, making the connector visually weaker and inconsistent with the original weight"
+  ],
+  "delta": {
+    "outcome": "escalate",
+    "reason": "A judge flagged ambiguity, out-of-scope change, or needsHuman."
+  },
+  "regression": {
+    "outcome": "block",
+    "reason": "At least one regression review found a concrete visual break."
+  }
+}

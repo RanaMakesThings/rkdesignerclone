@@ -1,0 +1,504 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox - Adaptive Interviewing System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal-dark: #1A6B64;
+            --teal-main: #2B8C85;
+            --teal-light: #E6F4F1;
+            --teal-line: #A7F3D0;
+            --text-dark: #111827;
+            --text-gray: #4B5563;
+            --text-light: #6B7280;
+            --bg-slide: #FCFCFD;
+            --bg-white: #FFFFFF;
+            --gray-line: #CBD5E1;
+            --ribbon-patient-bg: #F8F9FA;
+            --ribbon-patient-border: #D1D5DB;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #E5E7EB; /* Darker background outside slide to show boundaries */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1920px;
+            height: 1080px;
+            background-color: var(--bg-slide);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section */
+        .header {
+            position: absolute;
+            top: 80px;
+            left: 110px;
+            width: 1500px;
+            z-index: 10;
+        }
+
+        .header h1 {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+        }
+
+        .header h1 span {
+            color: var(--teal-main);
+        }
+
+        .header p {
+            font-size: 20px;
+            color: var(--text-gray);
+            margin-top: 24px;
+            line-height: 1.5;
+            width: 1350px;
+        }
+
+        /* Connecting Lines (SVG) */
+        .connections {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .line-patient {
+            fill: none;
+            stroke: var(--gray-line);
+            stroke-width: 4;
+            stroke-linecap: round;
+            opacity: 0.6;
+        }
+
+        .line-vox {
+            fill: none;
+            stroke: var(--teal-line);
+            stroke-width: 4;
+            stroke-linecap: round;
+            opacity: 0.8;
+        }
+
+        /* Left Ribbons */
+        .ribbons-container {
+            position: absolute;
+            top: 460px;
+            left: 110px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 5;
+        }
+
+        .ribbon {
+            position: relative;
+            width: 400px;
+            height: 50px;
+        }
+
+        .ribbon svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ribbon-text {
+            position: absolute;
+            top: 0;
+            left: 45px;
+            width: 330px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: var(--text-dark);
+            z-index: 2;
+        }
+
+        .ribbon-text strong {
+            color: var(--teal-main);
+            font-weight: 600;
+            margin-right: 4px;
+        }
+
+        /* Center Chamber */
+        .chamber {
+            position: absolute;
+            top: 400px;
+            left: 560px;
+            width: 760px;
+            height: 520px;
+            background: var(--bg-white);
+            border: 1px solid #E5E7EB;
+            border-radius: 32px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            z-index: 4;
+        }
+
+        .chamber-header {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .chamber-logo {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--teal-main);
+            letter-spacing: -0.04em;
+            line-height: 1;
+        }
+
+        .chamber-subtitle {
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        /* Center Object: Reconciliation Ring */
+        .reconciliation-ring-container {
+            position: absolute;
+            top: 160px;
+            left: 80px;
+            width: 240px;
+            height: 240px;
+        }
+
+        .ring-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.3;
+            z-index: 2;
+        }
+
+        /* Right Rails */
+        .rails-container {
+            position: absolute;
+            top: 170px;
+            right: 50px;
+            width: 280px;
+        }
+
+        .rails-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .rail-item {
+            background: var(--bg-white);
+            border: 1px solid #E5E7EB;
+            border-radius: 20px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            position: relative;
+            z-index: 5;
+        }
+
+        .rail-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--teal-main);
+            margin-right: 12px;
+        }
+
+        .rail-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* Far Right Card */
+        .card-wrapper {
+            position: absolute;
+            top: 550px;
+            right: 120px;
+            z-index: 5;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: -0.01em;
+        }
+
+        .card-graphic {
+            position: relative;
+            width: 280px;
+            height: 320px;
+        }
+
+        .card-shadow {
+            position: absolute;
+            top: 12px;
+            left: -12px;
+            width: 100%;
+            height: 100%;
+            background: var(--teal-dark);
+            border-radius: 16px;
+        }
+
+        .card-main {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-white);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            border: 1px solid #F3F4F6;
+        }
+
+        .skeleton-line {
+            height: 8px;
+            border-radius: 4px;
+            background: #F3F4F6;
+        }
+
+        .skeleton-line.header-line {
+            background: #E5E7EB;
+            height: 10px;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1><span>Vox</span> is the adaptive interviewing system that takes on the<br>hard clinical reasoning work needed to turn patient story<br>into a clinician-grade starting point.</h1>
+        <p>Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>what still needs verification before the visit begins.</p>
+    </div>
+
+    <!-- Connecting Lines -->
+    <svg class="connections">
+        <!-- Ribbons to Ring -->
+        <!-- Ribbon 1 (Patient) -->
+        <path class="line-patient" d="M 500 485 C 580 485, 580 620, 640 620" />
+        <!-- Ribbon 2 (Vox) -->
+        <path class="line-vox" d="M 500 555 C 580 555, 580 620, 640 620" />
+        <!-- Ribbon 3 (Patient) -->
+        <path class="line-patient" d="M 500 625 L 640 625" />
+        <!-- Ribbon 4 (Vox) -->
+        <path class="line-vox" d="M 500 695 C 580 695, 580 630, 640 630" />
+        <!-- Ribbon 5 (Patient) -->
+        <path class="line-patient" d="M 500 765 C 580 765, 580 630, 640 630" />
+
+        <!-- Ring to Rails -->
+        <!-- To Rail 1 -->
+        <path class="line-vox" d="M 880 620 C 960 620, 960 542, 1070 542" />
+        <!-- To Rail 2 -->
+        <path class="line-vox" d="M 880 625 L 1070 625" />
+        <!-- To Rail 3 -->
+        <path class="line-vox" d="M 880 630 C 960 630, 960 708, 1070 708" />
+
+        <!-- Rails to Card -->
+        <!-- From Rail 1 -->
+        <path class="line-vox" d="M 1350 542 C 1430 542, 1430 625, 1510 625" />
+        <!-- From Rail 2 -->
+        <path class="line-vox" d="M 1350 625 L 1510 625" />
+        <!-- From Rail 3 -->
+        <path class="line-vox" d="M 1350 708 C 1430 708, 1430 625, 1510 625" />
+    </svg>
+
+    <!-- Left Ribbons -->
+    <div class="ribbons-container">
+        <!-- Ribbon 1 -->
+        <div class="ribbon">
+            <svg viewBox="0 0 400 50">
+                <path d="M 15 1 L 385 1 L 399 25 L 385 49 L 15 49 L 1 25 Z" fill="#F8F9FA" stroke="#D1D5DB" stroke-width="2"/>
+            </svg>
+            <div class="ribbon-text">My back has been hurting...</div>
+        </div>
+        <!-- Ribbon 2 -->
+        <div class="ribbon">
+            <svg viewBox="0 0 400 50">
+                <path d="M 15 1 L 385 1 L 399 25 L 385 49 L 15 49 L 1 25 Z" fill="#E6F4F1" stroke="#2B8C85" stroke-width="2"/>
+            </svg>
+            <div class="ribbon-text"><strong>Vox:</strong> What makes it worse?</div>
+        </div>
+        <!-- Ribbon 3 -->
+        <div class="ribbon">
+            <svg viewBox="0 0 400 50">
+                <path d="M 15 1 L 385 1 L 399 25 L 385 49 L 15 49 L 1 25 Z" fill="#F8F9FA" stroke="#D1D5DB" stroke-width="2"/>
+            </svg>
+            <div class="ribbon-text">It's worse in the morning.</div>
+        </div>
+        <!-- Ribbon 4 -->
+        <div class="ribbon">
+            <svg viewBox="0 0 400 50">
+                <path d="M 15 1 L 385 1 L 399 25 L 385 49 L 15 49 L 1 25 Z" fill="#E6F4F1" stroke="#2B8C85" stroke-width="2"/>
+            </svg>
+            <div class="ribbon-text"><strong>Vox:</strong> When did this start?</div>
+        </div>
+        <!-- Ribbon 5 -->
+        <div class="ribbon">
+            <svg viewBox="0 0 400 50">
+                <path d="M 15 1 L 385 1 L 399 25 L 385 49 L 15 49 L 1 25 Z" fill="#F8F9FA" stroke="#D1D5DB" stroke-width="2"/>
+            </svg>
+            <div class="ribbon-text">Started last Tuesday.</div>
+        </div>
+    </div>
+
+    <!-- Center Chamber -->
+    <div class="chamber">
+        <div class="chamber-header">
+            <div class="chamber-logo">Vox</div>
+            <div class="chamber-subtitle">Adaptive clinical interviewer</div>
+        </div>
+
+        <!-- New Center Object: Reconciliation Ring -->
+        <div class="reconciliation-ring-container">
+            <svg viewBox="0 0 240 240" width="240" height="240" style="position: absolute; top: 0; left: 0; z-index: 1;">
+                <defs>
+                    <linearGradient id="ringGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#2B8C85" />
+                        <stop offset="100%" stop-color="#1A6B64" />
+                    </linearGradient>
+                    <linearGradient id="ringGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#4FD1C5" />
+                        <stop offset="100%" stop-color="#2B8C85" />
+                    </linearGradient>
+                </defs>
+                
+                <!-- Subtle background track -->
+                <circle cx="120" cy="120" r="100" fill="none" stroke="#F3F4F6" stroke-width="16" />
+                
+                <!-- Inner dashed loop indicating continuous process -->
+                <circle cx="120" cy="120" r="78" fill="none" stroke="#2B8C85" stroke-width="2" stroke-dasharray="6 8" opacity="0.4" />
+
+                <!-- Segment 1: Intake & Prioritization (Left to Top) -->
+                <path d="M 35 170 A 100 100 0 0 1 120 20" fill="none" stroke="url(#ringGrad2)" stroke-width="16" stroke-linecap="round" />
+                
+                <!-- Segment 2: Reconciliation & Judgment (Top to Right) -->
+                <path d="M 145 23 A 100 100 0 0 1 215 150" fill="none" stroke="url(#ringGrad1)" stroke-width="16" stroke-linecap="round" />
+                
+                <!-- Segment 3: Transformation (Right to Bottom Left) -->
+                <path d="M 200 180 A 100 100 0 0 1 55 195" fill="none" stroke="#1A6B64" stroke-width="16" stroke-linecap="round" />
+
+                <!-- Checkpoint Nodes (representing clinical reasoning steps) -->
+                <g transform="translate(132, 21)">
+                    <circle cx="0" cy="0" r="10" fill="#FFFFFF" stroke="#2B8C85" stroke-width="3" />
+                    <circle cx="0" cy="0" r="3" fill="#2B8C85" />
+                </g>
+                <g transform="translate(208, 165)">
+                    <circle cx="0" cy="0" r="10" fill="#FFFFFF" stroke="#1A6B64" stroke-width="3" />
+                    <circle cx="0" cy="0" r="3" fill="#1A6B64" />
+                </g>
+                <g transform="translate(45, 183)">
+                    <circle cx="0" cy="0" r="10" fill="#FFFFFF" stroke="#4FD1C5" stroke-width="3" />
+                    <circle cx="0" cy="0" r="3" fill="#4FD1C5" />
+                </g>
+            </svg>
+            <div class="ring-text">Adaptive<br>interview<br>loop</div>
+        </div>
+
+        <!-- Right Rails Section -->
+        <div class="rails-container">
+            <div class="rails-title">Clinical reasoning + medical knowledge</div>
+            
+            <div class="rail-item">
+                <div class="rail-dot"></div>
+                <div class="rail-text">What matters</div>
+            </div>
+            
+            <div class="rail-item">
+                <div class="rail-dot"></div>
+                <div class="rail-text">What connects</div>
+            </div>
+            
+            <div class="rail-item">
+                <div class="rail-dot"></div>
+                <div class="rail-text">What still needs verification</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Far Right Card -->
+    <div class="card-wrapper">
+        <div class="card-title">Clinician-grade starting point</div>
+        <div class="card-graphic">
+            <div class="card-shadow"></div>
+            <div class="card-main">
+                <div class="skeleton-line header-line" style="width: 40%;"></div>
+                <div class="skeleton-line" style="width: 85%; margin-top: 8px;"></div>
+                <div class="skeleton-line" style="width: 95%;"></div>
+                <div class="skeleton-line" style="width: 70%;"></div>
+                
+                <div class="skeleton-line header-line" style="width: 50%; margin-top: 16px;"></div>
+                <div class="skeleton-line" style="width: 80%; margin-top: 8px;"></div>
+                <div class="skeleton-line" style="width: 90%;"></div>
+                <div class="skeleton-line" style="width: 60%;"></div>
+                
+                <div class="skeleton-line header-line" style="width: 45%; margin-top: 16px;"></div>
+                <div class="skeleton-line" style="width: 65%; margin-top: 8px;"></div>
+                <div class="skeleton-line" style="width: 80%;"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+```

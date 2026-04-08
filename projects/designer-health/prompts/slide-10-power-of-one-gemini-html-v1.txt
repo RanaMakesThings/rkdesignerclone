@@ -1,0 +1,41 @@
+Generate a single self-contained HTML document for a 16:9 investor-deck slide.
+
+Slide header:
+Recovered visit time creates real capacity.
+
+Slide subheader:
+When recovered minutes become completed visits, the impact is meaningful.
+
+Strategic job:
+Make one added visit feel economically powerful in one glance.
+
+Use these exact anchors:
+- +1 visit / provider / day
+- $11,000 / year
+- ~$917 / month break-even spend / provider
+- 220 clinic days
+- $125 / visit
+- 40% contribution margin
+
+Direction:
+- one oversized hero card should dominate the slide
+- the card should make the conversion unmistakable:
+  +1 visit / provider / day = $11,000 / year
+- assumptions should live as small quiet pills
+- break-even spend should live as a distinct badge
+- any conservative/base/upside checks should be small and muted below
+
+Style:
+- premium investor-deck feel
+- clean white or warm-white background
+- restrained green accent
+- rounded cards
+- purposeful whitespace
+
+Do not:
+- make it feel like a SaaS pricing page
+- make all cards equal size
+- use dashboard chrome
+- use a full table
+
+Return only the HTML document with inline CSS and any inline SVG needed.

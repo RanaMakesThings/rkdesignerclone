@@ -1,0 +1,36 @@
+Generate a self-contained HTML document for one premium 16:9 investor pitch
+deck slide. Use inline CSS and inline SVG only. Return HTML only.
+
+Slide header:
+Demand is outpacing clinical capacity.
+
+Use this exact proof copy:
+- AMN benchmark survey years
+- Average new-patient physician wait time
+- 31 days
+- +19% since 2022
+- Primary care HPSA, December 31, 2025
+- 1 in 4+
+- Americans live in federally designated primary care shortage areas.
+- 92.3 million people. In those areas, only 48.18% of primary care need is currently met.
+- OB/GYN patients wait 41.8 days
+- vs 23.5 days in family medicine
+
+Composition:
+- two-column editorial split
+- left column: stripped line chart with accurate points 2004 21, 2009 20.5,
+  2014 18.5, 2017 24.1, 2022 26, 2025 31
+- right column: large 1 in 4+ proof block
+- bottom-right or lower band: one compact comparison bar for OB/GYN 41.8 vs
+  family medicine 23.5
+- clean citation footer lane with placeholder citation text only if needed
+
+Visual rules:
+- white background with subtle warm cast
+- deep blue-green accent only
+- serious editorial typography
+- generous whitespace
+- no dashboard cards
+- no fake app UI
+- no overlapping citations
+- no invented numbers

@@ -1,0 +1,324 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Pitch Deck - Slide 10</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #E5E7EB;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FAFAFA;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 80px 80px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Section */
+        .header-section {
+            margin-bottom: 72px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #111827;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+
+        .subheader {
+            font-size: 20px;
+            font-weight: 400;
+            color: #6B7280;
+            letter-spacing: -0.01em;
+        }
+
+        /* Content Section */
+        .content-section {
+            display: flex;
+            flex: 1;
+            gap: 64px;
+            align-items: center;
+        }
+
+        /* Left Column - Visual Callback */
+        .left-column {
+            flex: 0 0 32%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .visual-callback-wrapper {
+            background-color: #FFFFFF;
+            border-radius: 24px;
+            padding: 48px 40px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .bars-container {
+            display: flex;
+            gap: 12px;
+        }
+
+        .visit-bar {
+            display: flex;
+            height: 32px;
+            width: 80px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .visit-blue {
+            width: 28%;
+            background-color: #82AADD;
+        }
+
+        .visit-gray {
+            width: 72%;
+            background-color: #CBD5E1;
+        }
+
+        .callback-arrow {
+            color: #9CA3AF;
+            margin: 8px 0;
+        }
+
+        .new-visit-block {
+            height: 36px;
+            padding: 0 24px;
+            background-color: #3E7B7A;
+            color: #FFFFFF;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            letter-spacing: 0.02em;
+            box-shadow: 0 4px 12px rgba(62, 123, 122, 0.2);
+            width: 100%;
+        }
+
+        /* Right Column - Economics Proof */
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .math-card {
+            background-color: #FFFFFF;
+            border-radius: 24px;
+            padding: 64px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .math-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .math-left .primary {
+            font-size: 56px;
+            font-weight: 700;
+            color: #3E7B7A;
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        .math-left .secondary {
+            font-size: 15px;
+            font-weight: 500;
+            color: #9CA3AF;
+            margin-top: 12px;
+            letter-spacing: 0.01em;
+        }
+
+        .math-operator {
+            color: #D1D5DB;
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        .math-middle {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .multiplier-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            color: #6B7280;
+            font-weight: 400;
+        }
+
+        .multiplier-item::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #D1D5DB;
+        }
+
+        .math-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .math-right .primary {
+            font-size: 80px;
+            font-weight: 700;
+            color: #111827;
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .math-right .secondary {
+            font-size: 18px;
+            font-weight: 500;
+            color: #9CA3AF;
+            margin-top: 12px;
+            letter-spacing: 0.01em;
+        }
+
+        .upside-note {
+            position: absolute;
+            bottom: -40px;
+            right: 24px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #9CA3AF;
+            letter-spacing: 0.01em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .upside-note::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #82AADD;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="slide-container">
+        
+        <div class="header-section">
+            <h1>Recovered visit time creates real capacity.</h1>
+            <p class="subheader">When recovered minutes become completed visits, the impact is meaningful.</p>
+        </div>
+
+        <div class="content-section">
+            
+            <!-- Left Side: Visual Callback -->
+            <div class="left-column">
+                <div class="visual-callback-wrapper">
+                    <div class="bars-container">
+                        <div class="visit-bar">
+                            <div class="visit-blue"></div>
+                            <div class="visit-gray"></div>
+                        </div>
+                        <div class="visit-bar">
+                            <div class="visit-blue"></div>
+                            <div class="visit-gray"></div>
+                        </div>
+                    </div>
+                    
+                    <svg class="callback-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg>
+
+                    <div class="new-visit-block">
+                        New visit
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Economics Proof -->
+            <div class="right-column">
+                <div class="math-card">
+                    
+                    <div class="math-left">
+                        <span class="primary">+1 visit</span>
+                        <span class="secondary">/ provider / day</span>
+                    </div>
+
+                    <svg class="math-operator" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+
+                    <div class="math-middle">
+                        <div class="multiplier-item">220 clinic days</div>
+                        <div class="multiplier-item">$125 / visit</div>
+                        <div class="multiplier-item">40% contribution margin</div>
+                    </div>
+
+                    <div class="math-operator">=</div>
+
+                    <div class="math-right">
+                        <span class="primary">$11,000</span>
+                        <span class="secondary">/ year</span>
+                    </div>
+
+                    <div class="upside-note">
+                        +2 visits / day = $22,000 / year
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

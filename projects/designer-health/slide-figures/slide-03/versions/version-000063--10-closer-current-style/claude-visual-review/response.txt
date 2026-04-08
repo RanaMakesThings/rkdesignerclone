@@ -1,0 +1,35 @@
+## Why It Feels Off
+
+The slide has two independent visual systems (left bar mechanic, right visit grid) that never form a unified composition. They sit in different vertical registers, use inconsistent internal spacing, and lack a clear reading path that connects cause to effect. The result feels like two half-finished modules placed on the same canvas rather than one coherent argument.
+
+---
+
+## Top Visual Issues (by importance)
+
+**1. Left and right objects are not vertically anchored to each other.**
+The bar mechanic (bottom-left) and the visit grid (center-right) float at different heights with no shared baseline or midline alignment. The eye has no natural bridge between them, so the cause-effect relationship has to be inferred rather than felt.
+
+**2. The visit grid lacks internal rhythm and clear segmentation.**
+The paired blocks (blue + gray) inside each visit row are inconsistently spaced — gaps between pairs vary slightly, and the pairs themselves are not clearly grouped as units. This makes the grid read as a loose collection of rectangles rather than a structured 5×2 or 6×2 argument.
+
+**3. The tab row (Story reconstruction / Physical exam / Decisions + counseling) is visually dominant but functionally decorative here.**
+It sits at the top with full button weight, drawing the eye first, yet it does not drive the visual argument on this slide. Its size and contrast make it compete with the headline and the payoff object.
+
+**4. The "Time saved" dashed block is undersized and disconnected.**
+It reads as an afterthought rather than a conclusion. It is roughly the same visual weight as the arrows, so it does not register as the outcome of the compression mechanic. It also drifts rightward with no clear alignment to either the bar or the grid.
+
+**5. Vertical space distribution is uneven.**
+There is too much open space below the visit grid and too little breathing room between the headline block and the tab row. The bottom third of the slide feels abandoned.
+
+---
+
+## Three Concrete Layout / Spacing Fixes
+
+**Fix 1 — Share a common horizontal midline between left and right objects.**
+Vertically center both the bar mechanic (arrows + shortened bar + "Time saved") and the 5→6 visit grid on the same optical midline, roughly at 55–60% of the slide height. This creates a single reading band across the slide and makes the cause-effect relationship spatial rather than just textual.
+
+**Fix 2 — Increase the "Time saved" block to match the gray segment width exactly, and close the gap between the bar and the dashed block to near-zero.**
+The dashed block should feel like it is being peeled off the bar, not floating nearby. Making it the same height and proportional width as the recovered segment — and aligning it flush or with a 4–6px gap — turns it into a legible annotation rather than a label.
+
+**Fix 3 — Add consistent, deliberate gutter spacing inside the visit grid so each visit pair reads as one unit.**
+Use a small inner gap (e.g., 2–3px) between the blue and gray block within a pair, and a larger gap (e.g., 10–12px) between pairs. This simple two-tier spacing makes each visit a discrete object and makes the transition from 5 units to 6 units immediately readable without needing to count.

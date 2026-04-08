@@ -1,0 +1,21 @@
+{
+  "provider": "claude",
+  "verdict": "blocker",
+  "rationale": "The candidate slide has resolved the figure area with real content but carries multiple visible regressions: the locked header text overflows into two lines and collides with the subheader, causing the subheader ('Post-money SAFE • ~18–20 months of runway') to be partially obscured and clipped behind the header block rather than sitting cleanly beneath it. The footer logo has failed to render — the Designer Health lockup in the bottom-right shows a broken image placeholder instead of the resolved SVG/PNG seen in the baseline and the adjacent slide-12 reference. Additionally, the left hero block stat row (core hires / pilot sites / months of runway) is visibly clipped at the bottom, cutting off the label text beneath the three stat columns, meaning required locked copy is missing from the visible slide area.",
+  "blockers": [
+    "Subheader 'Post-money SAFE • ~18–20 months of runway' is clipped and partially hidden behind the oversized header text block",
+    "Footer Designer Health logo is a broken image placeholder — lockup has not resolved",
+    "Left hero stat-row label text (core hires, pilot sites, months of runway descriptors) is clipped at the bottom of the card and not fully visible"
+  ],
+  "nextMove": "Fix header font size or line-height so the two-line header and subheader both render without overlap; replace the broken footer logo src with the correct resolved asset path; and expand or scroll-clip the left hero card so all three stat labels are fully visible within the card boundary.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate slide has resolved the figure area with real content but carries multiple visible regressions: the locked header text overflows into two lines and collides with the subheader, causing the subheader ('Post-money SAFE • ~18–20 months of runway') to be partially obscured and clipped behind the header block rather than sitting cleanly beneath it. The footer logo has failed to render — the Designer Health lockup in the bottom-right shows a broken image placeholder instead of the resolved SVG/PNG seen in the baseline and the adjacent slide-12 reference. Additionally, the left hero block stat row (core hires / pilot sites / months of runway) is visibly clipped at the bottom, cutting off the label text beneath the three stat columns, meaning required locked copy is missing from the visible slide area.",
+    "blockers": [
+      "Subheader 'Post-money SAFE • ~18–20 months of runway' is clipped and partially hidden behind the oversized header text block",
+      "Footer Designer Health logo is a broken image placeholder — lockup has not resolved",
+      "Left hero stat-row label text (core hires, pilot sites, months of runway descriptors) is clipped at the bottom of the card and not fully visible"
+    ],
+    "nextMove": "Fix header font size or line-height so the two-line header and subheader both render without overlap; replace the broken footer logo src with the correct resolved asset path; and expand or scroll-clip the left hero card so all three stat labels are fully visible within the card boundary."
+  }
+}

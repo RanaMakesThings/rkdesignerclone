@@ -1,0 +1,489 @@
+{
+  "manifestVersion": 1,
+  "projectId": "designer-health",
+  "kind": "slide-assets",
+  "slideId": "slide-09",
+  "deckAssetIds": [
+    "designer-logo-pack"
+  ],
+  "assets": [
+    {
+      "assetId": "asset-000003",
+      "id": "documentation-scene-version-02",
+      "label": "Documentation Scene Version 02",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "documentation-scene",
+      "summary": "Gemini bold workstation scene from the physician documentation batch.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/documentation-scene-version-02/preview.jpg",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/documentation-scene-version-02/preview.jpg"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/physician-doc-ai-admin/gemini/v02-bold"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/physician-doc-ai-admin/gemini/v02-bold/image-01.jpg"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "workstation",
+        "ai-assisted"
+      ],
+      "notes": [
+        "Backfilled from the physician-doc-ai-admin presentation image batch."
+      ]
+    },
+    {
+      "assetId": "asset-000004",
+      "id": "documentation-scene-version-03",
+      "label": "Documentation Scene Version 03",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "documentation-scene",
+      "summary": "Gemini minimal workstation scene from the physician documentation batch.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/documentation-scene-version-03/preview.jpg",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/documentation-scene-version-03/preview.jpg"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/physician-doc-ai-admin/gemini/v03-minimal"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/physician-doc-ai-admin/gemini/v03-minimal/image-01.jpg"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "workstation",
+        "ai-assisted"
+      ],
+      "notes": [
+        "Backfilled from the physician-doc-ai-admin presentation image batch."
+      ]
+    },
+    {
+      "assetId": "asset-000005",
+      "id": "documentation-scene-version-04",
+      "label": "Documentation Scene Version 04",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "documentation-scene",
+      "summary": "OpenAI editorial workstation scene from the physician documentation batch.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/documentation-scene-version-04/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/documentation-scene-version-04/preview.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/physician-doc-ai-admin/openai/v01-editorial"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/physician-doc-ai-admin/openai/v01-editorial/image-01.png"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "workstation",
+        "ai-assisted"
+      ],
+      "notes": [
+        "Backfilled from the physician-doc-ai-admin presentation image batch."
+      ]
+    },
+    {
+      "assetId": "asset-000006",
+      "id": "documentation-scene-version-05",
+      "label": "Documentation Scene Version 05",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "documentation-scene",
+      "summary": "OpenAI bold workstation scene from the physician documentation batch.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/documentation-scene-version-05/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/documentation-scene-version-05/preview.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/physician-doc-ai-admin/openai/v02-bold"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/physician-doc-ai-admin/openai/v02-bold/image-01.png"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "workstation",
+        "ai-assisted"
+      ],
+      "notes": [
+        "Backfilled from the physician-doc-ai-admin presentation image batch."
+      ]
+    },
+    {
+      "assetId": "asset-000007",
+      "id": "documentation-scene-version-06",
+      "label": "Documentation Scene Version 06",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "documentation-scene",
+      "summary": "OpenAI minimal workstation scene from the physician documentation batch.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/documentation-scene-version-06/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/documentation-scene-version-06/preview.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/physician-doc-ai-admin/openai/v03-minimal"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/physician-doc-ai-admin/openai/v03-minimal/image-01.png"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "workstation",
+        "ai-assisted"
+      ],
+      "notes": [
+        "Backfilled from the physician-doc-ai-admin presentation image batch."
+      ]
+    },
+    {
+      "assetId": "asset-000018",
+      "id": "documentation-scene-version-07",
+      "label": "Documentation Scene Version 07",
+      "status": "reference",
+      "kind": "image",
+      "role": "documentation-scene",
+      "summary": "OpenAI minimal workstation scene selected as the left-side draft asset for the slide-09 density-panels-v3 reset.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/documentation-scene-version-07/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/documentation-scene-version-07/preview.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/slide-09-doc-admin-slide7-v113-batch-b/openai/version-06--minimal-restraint"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/slide-09-doc-admin-slide7-v113-batch-b/openai/version-06--minimal-restraint/image-01.png"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "workstation",
+        "ai-assisted",
+        "slide-09-draft"
+      ],
+      "notes": [
+        "Selected from graphic-000051 in the slide-09-doc-admin-slide7-v113-batch-b run."
+      ]
+    },
+    {
+      "assetId": "asset-000008",
+      "id": "encounter-scene-version-01",
+      "label": "Encounter Scene Version 01",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "encounter-scene",
+      "summary": "Gemini editorial exam-room encounter scene with a structured brief at the center of the visit start.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-01/preview.jpg",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-01/preview.jpg"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/clinician-patient-brief-vignette/gemini/version-01--editorial-baseline"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/clinician-patient-brief-vignette/gemini/version-01--editorial-baseline/image-01.jpg"
+        }
+      ],
+      "tags": [
+        "encounter",
+        "exam-room",
+        "structured-brief"
+      ],
+      "notes": [
+        "Backfilled from the clinician-patient-brief-vignette presentation image batch."
+      ]
+    },
+    {
+      "assetId": "asset-000009",
+      "id": "encounter-scene-version-02",
+      "label": "Encounter Scene Version 02",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "encounter-scene",
+      "summary": "Gemini bold exam-room encounter scene with a structured brief shaping the conversation.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-02/preview.jpg",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-02/preview.jpg"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/clinician-patient-brief-vignette/gemini/version-02--bold-contrast"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/clinician-patient-brief-vignette/gemini/version-02--bold-contrast/image-01.jpg"
+        }
+      ],
+      "tags": [
+        "encounter",
+        "exam-room",
+        "structured-brief"
+      ],
+      "notes": [
+        "Backfilled from the clinician-patient-brief-vignette presentation image batch."
+      ]
+    },
+    {
+      "assetId": "asset-000010",
+      "id": "encounter-scene-version-03",
+      "label": "Encounter Scene Version 03",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "encounter-scene",
+      "summary": "Gemini minimal exam-room encounter scene emphasizing the clinician-patient start point.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-03/preview.jpg",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-03/preview.jpg"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/clinician-patient-brief-vignette/gemini/version-03--minimal-restraint"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/clinician-patient-brief-vignette/gemini/version-03--minimal-restraint/image-01.jpg"
+        }
+      ],
+      "tags": [
+        "encounter",
+        "exam-room",
+        "structured-brief"
+      ],
+      "notes": [
+        "Backfilled from the clinician-patient-brief-vignette presentation image batch."
+      ]
+    },
+    {
+      "assetId": "asset-000011",
+      "id": "encounter-scene-version-04",
+      "label": "Encounter Scene Version 04",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "encounter-scene",
+      "summary": "OpenAI editorial exam-room encounter scene with a structured brief at the start of the conversation.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-04/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-04/preview.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/clinician-patient-brief-vignette/openai/version-04--editorial-baseline"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/clinician-patient-brief-vignette/openai/version-04--editorial-baseline/image-01.png"
+        }
+      ],
+      "tags": [
+        "encounter",
+        "exam-room",
+        "structured-brief"
+      ],
+      "notes": [
+        "Backfilled from the clinician-patient-brief-vignette presentation image batch."
+      ]
+    },
+    {
+      "assetId": "asset-000012",
+      "id": "encounter-scene-version-05",
+      "label": "Encounter Scene Version 05",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "encounter-scene",
+      "summary": "OpenAI bold exam-room encounter scene with a structured brief shaping the interaction.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-05/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-05/preview.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/clinician-patient-brief-vignette/openai/version-05--bold-contrast"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/clinician-patient-brief-vignette/openai/version-05--bold-contrast/image-01.png"
+        }
+      ],
+      "tags": [
+        "encounter",
+        "exam-room",
+        "structured-brief"
+      ],
+      "notes": [
+        "Backfilled from the clinician-patient-brief-vignette presentation image batch."
+      ]
+    },
+    {
+      "assetId": "asset-000013",
+      "id": "encounter-scene-version-06",
+      "label": "Encounter Scene Version 06",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "encounter-scene",
+      "summary": "OpenAI minimal exam-room encounter scene emphasizing prepared, focused clinical conversation.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-06/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-06/preview.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/clinician-patient-brief-vignette/openai/version-06--minimal-restraint"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/clinician-patient-brief-vignette/openai/version-06--minimal-restraint/image-01.png"
+        }
+      ],
+      "tags": [
+        "encounter",
+        "exam-room",
+        "structured-brief"
+      ],
+      "notes": [
+        "Backfilled from the clinician-patient-brief-vignette presentation image batch."
+      ]
+    },
+    {
+      "assetId": "asset-000019",
+      "id": "encounter-scene-version-07",
+      "label": "Encounter Scene Version 07",
+      "status": "reference",
+      "kind": "image",
+      "role": "encounter-scene",
+      "summary": "OpenAI bold encounter scene selected as the right-side draft asset for the slide-09 density-panels-v3 reset.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-07/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/encounter-scene-version-07/preview.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/slide-09-encounter-slide7-v113-batch/openai/version-05--bold-contrast"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/slide-09-encounter-slide7-v113-batch/openai/version-05--bold-contrast/image-01.png"
+        }
+      ],
+      "tags": [
+        "encounter",
+        "exam-room",
+        "during-visit",
+        "slide-09-draft"
+      ],
+      "notes": [
+        "Selected from graphic-000062 in the slide-09-encounter-slide7-v113-batch run."
+      ]
+    },
+    {
+      "assetId": "asset-000002",
+      "id": "physician-documentation-editorial-scene",
+      "label": "Physician Documentation Editorial Scene",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "documentation-scene",
+      "summary": "Generated editorial workstation scene that can serve as a future visual ingredient for documentation-heavy or ambient-AI-adjacent slides.",
+      "previewPath": "projects/designer-health/slide-assets/slide-09/physician-documentation-editorial-scene/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-09/physician-documentation-editorial-scene/preview.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "output/figures/presentation-images/physician-doc-ai-admin/openai/v01-editorial"
+        },
+        {
+          "label": "Source Preview",
+          "path": "output/figures/presentation-images/physician-doc-ai-admin/openai/v01-editorial/image-01.png"
+        }
+      ],
+      "tags": [
+        "documentation",
+        "workstation",
+        "ai-assisted"
+      ],
+      "notes": [
+        "Seeded from the April 1, 2026 presentation image batch as the first canonical slide-local asset example."
+      ]
+    }
+  ]
+}

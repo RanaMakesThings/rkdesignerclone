@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slide 6 Style Exploration Report</title>
+    <style>
+      :root {
+        --bg: #eef3f1;
+        --panel: rgba(255, 255, 255, 0.92);
+        --panel-strong: #ffffff;
+        --ink: #18312d;
+        --muted: #5f706b;
+        --line: rgba(24, 49, 45, 0.1);
+        --accent: #1f6c63;
+        --accent-soft: rgba(31, 108, 99, 0.1);
+        --shadow: 0 24px 60px rgba(24, 49, 45, 0.08);
+        --radius: 24px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(31, 108, 99, 0.08), transparent 28%),
+          linear-gradient(180deg, #f6faf8 0%, var(--bg) 100%);
+        color: var(--ink);
+      }
+
+      .page {
+        max-width: 1540px;
+        margin: 0 auto;
+        padding: 40px 28px 56px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 18px;
+        margin-bottom: 28px;
+      }
+
+      .eyebrow {
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 52px;
+        line-height: 0.96;
+        letter-spacing: -0.05em;
+      }
+
+      .intro {
+        max-width: 900px;
+        font-size: 19px;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+
+      .recommendation {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+        padding: 12px 16px;
+        border: 1px solid rgba(31, 108, 99, 0.16);
+        border-radius: 999px;
+        background: var(--accent-soft);
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .grid {
+        display: grid;
+        gap: 22px;
+      }
+
+      .card {
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 18px;
+        margin-bottom: 16px;
+      }
+
+      .card-title-wrap {
+        display: grid;
+        gap: 8px;
+      }
+
+      .card-label {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 30px;
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+
+      .card-copy {
+        max-width: 720px;
+        font-size: 16px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .links a {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 13px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--panel-strong);
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .links a:hover {
+        border-color: rgba(31, 108, 99, 0.22);
+        color: var(--accent);
+      }
+
+      .image-frame {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #ffffff;
+      }
+
+      .image-frame img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .two-up {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      @media (min-width: 1100px) {
+        .two-up {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="eyebrow">Designer Health / Slide 6</div>
+        <h1>Style Exploration Report</h1>
+        <div class="intro">
+          This report compares the promoted slide-6 baseline against eight
+          style-only variants. Content and workflow logic are fixed. Only
+          typography, palette feel, connector treatment, and card polish change.
+        </div>
+        <div class="recommendation">
+          Recommended direction: <strong>PD Template Refined Green / designer-v1</strong>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <div class="card-header">
+            <div class="card-title-wrap">
+              <div class="card-label">Current Baseline</div>
+              <h2>Promoted Slide 6</h2>
+              <div class="card-copy">
+                Current anchor from the promoted `v3` pass. Use this as the
+                comparison reference for readability, trust-tag integration, and
+                the `Structure -> Verify` handoff.
+              </div>
+            </div>
+            <div class="links">
+              <a href="../../slide-figures/slide-06/figure.html">Open HTML</a>
+              <a href="../../slide-figures/slide-06/figure.svg">Open SVG</a>
+              <a href="../../slide-figures/slide-06/figure.png">Open PNG</a>
+            </div>
+          </div>
+          <div class="image-frame">
+            <img
+              src="../../slide-figures/slide-06/figure.png"
+              alt="Current promoted slide 6 baseline"
+            />
+          </div>
+        </article>
+
+        <div class="two-up">
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title-wrap">
+                <div class="card-label">Direction A</div>
+                <h2>Editorial Premium</h2>
+                <div class="card-copy">
+                  Serif display, warmer paper palette, and softer tags. Best
+                  pure premium mood, but slightly slower workflow read.
+                </div>
+              </div>
+              <div class="links">
+                <a href="./editorial/figure.html">Open HTML</a>
+                <a href="./editorial/figure.svg">Open SVG</a>
+                <a href="./editorial/figure.png">Open PNG</a>
+              </div>
+            </div>
+            <div class="image-frame">
+              <img
+                src="./editorial/figure.png"
+                alt="Editorial premium workflow strip"
+              />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title-wrap">
+                <div class="card-label">Direction B</div>
+                <h2>Clinical Minimal</h2>
+                <div class="card-copy">
+                  Cooler palette, lower decoration, and more clinical framing.
+                  Fast to scan, but too generic relative to the deck family.
+                </div>
+              </div>
+              <div class="links">
+                <a href="./clinical/figure.html">Open HTML</a>
+                <a href="./clinical/figure.svg">Open SVG</a>
+                <a href="./clinical/figure.png">Open PNG</a>
+              </div>
+            </div>
+            <div class="image-frame">
+              <img
+                src="./clinical/figure.png"
+                alt="Clinical minimal workflow strip"
+              />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title-wrap">
+                <div class="card-label">Direction D</div>
+                <h2>Montserrat Only</h2>
+                <div class="card-copy">
+                  Strict control version of the baseline. Only the font tokens
+                  change from the promoted Vox slide.
+                </div>
+              </div>
+              <div class="links">
+                <a href="./montserrat-only/figure.html">Open HTML</a>
+                <a href="./montserrat-only/figure.svg">Open SVG</a>
+                <a href="./montserrat-only/figure.png">Open PNG</a>
+              </div>
+            </div>
+            <div class="image-frame">
+              <img
+                src="./montserrat-only/figure.png"
+                alt="Montserrat only workflow strip"
+              />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title-wrap">
+                <div class="card-label">Direction E</div>
+                <h2>Montserrat Refresh</h2>
+                <div class="card-copy">
+                  Montserrat pass with a few typography-only sizing and weight
+                  adjustments. Useful if you want the earlier deck voice with a
+                  slightly more tuned fit than the strict control.
+                </div>
+              </div>
+              <div class="links">
+                <a href="./montserrat/figure.html">Open HTML</a>
+                <a href="./montserrat/figure.svg">Open SVG</a>
+                <a href="./montserrat/figure.png">Open PNG</a>
+              </div>
+            </div>
+            <div class="image-frame">
+              <img
+                src="./montserrat/figure.png"
+                alt="Montserrat refresh workflow strip"
+              />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title-wrap">
+                <div class="card-label">Direction C</div>
+                <h2>Systems Clean</h2>
+                <div class="card-copy">
+                  Sharper connectors and tighter surface rhythm. Strongest
+                  balance of readability, premium feel, and family consistency.
+                </div>
+              </div>
+              <div class="links">
+                <a href="./systems/figure.html">Open HTML</a>
+                <a href="./systems/figure.svg">Open SVG</a>
+                <a href="./systems/figure.png">Open PNG</a>
+              </div>
+            </div>
+            <div class="image-frame">
+              <img
+                src="./systems/figure.png"
+                alt="Systems clean workflow strip"
+              />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title-wrap">
+                <div class="card-label">Direction F</div>
+                <h2>PD Template Reconstruction</h2>
+                <div class="card-copy">
+                  Full pass in the older PD deck grammar: white page, black
+                  rules, square cards, Montserrat, and restrained purple focus.
+                </div>
+              </div>
+              <div class="links">
+                <a href="./pd-template/figure.html">Open HTML</a>
+                <a href="./pd-template/figure.svg">Open SVG</a>
+                <a href="./pd-template/figure.png">Open PNG</a>
+              </div>
+            </div>
+            <div class="image-frame">
+              <img
+                src="./pd-template/figure.png"
+                alt="PD template reconstruction workflow strip"
+              />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title-wrap">
+                <div class="card-label">Direction G</div>
+                <h2>PD Template Refined</h2>
+                <div class="card-copy">
+                  Same older PD deck grammar, but lighter and more editorial:
+                  no top rule, calmer headline, and softer workflow framing.
+                </div>
+              </div>
+              <div class="links">
+                <a href="./pd-template-refined/figure.html">Open HTML</a>
+                <a href="./pd-template-refined/figure.svg">Open SVG</a>
+                <a href="./pd-template-refined/figure.png">Open PNG</a>
+              </div>
+            </div>
+            <div class="image-frame">
+              <img
+                src="./pd-template-refined/figure.png"
+                alt="PD template refined workflow strip"
+              />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title-wrap">
+                <div class="card-label">Direction H</div>
+                <h2>PD Template Refined Green</h2>
+                <div class="card-copy">
+                  Same refined PD structure, but with the focal stage pushed
+                  back toward the more vivid Vox green accent family.
+                </div>
+              </div>
+              <div class="links">
+                <a href="./pd-template-refined-green/figure.html">Open HTML</a>
+                <a href="./pd-template-refined-green/figure.svg">Open SVG</a>
+                <a href="./pd-template-refined-green/figure.png">Open PNG</a>
+              </div>
+            </div>
+            <div class="image-frame">
+              <img
+                src="./pd-template-refined-green/figure.png"
+                alt="PD template refined green workflow strip"
+              />
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

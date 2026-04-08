@@ -1,0 +1,9 @@
+Use case: background-extraction
+Asset type: isolated pitch-deck figure element for slide reconstruction
+Primary request: return the attached asset almost exactly as-is, but cleaner and higher-resolution. Keep the same rounded panel, patient holding a phone, one patient speech bubble that says "I've had a bad cough.", one phone follow-up bubble that says "How long has it been going on?", the bottom baseline, and the centered step marker 2.
+Input images: Image 1: crop reference for exact composition and edge behavior
+Style/medium: same grayscale editorial illustration style as the reference
+Composition/framing: same crop and proportions, keep the full circle visible, keep the bubbles attached clearly to the speaker and the phone, no extra line overhangs or stray marks
+Lighting/mood: soft grayscale with restrained teal accent only where already implied by the reference
+Constraints: do not redesign the layout, keep the speech text verbatim, keep the lock-step marker 2, crisp edges, better resolution, suitable for placing into an HTML slide
+Avoid: new elements, extra speech bubbles, different text, checkerboard transparency patterns, watermarks, artifacts, cut-off circle, detached bubble tails

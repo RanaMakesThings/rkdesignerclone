@@ -1,0 +1,33 @@
+You are reviewing TWO static investor pitch-deck figure images.
+
+Image A is the current standalone Slide 5 candidate.
+Image B is the earlier shelved merged 4/5 reference that the current slide was trying to preserve in its top-beat composition.
+
+Your job is to compare Image A against Image B and answer:
+
+1. Does Image A successfully preserve the strongest qualities of Image B?
+2. What, if anything, is materially worse in Image A than Image B?
+3. Is anything in Image A visually or structurally "fucked" or obviously off?
+4. If you had to give one or two concrete next moves, what would they be?
+
+Evaluate specifically:
+- header scale and placement
+- top-right source bar placement
+- arrow shape and elegance
+- hero size, copy hierarchy, and placement
+- support-block shape, attachment, spacing, and readability
+- whether removing the lower explanatory section still leaves a balanced full-slide composition
+
+Be direct and specific. Focus on design quality, spacing, balance, and whether the current slide feels like a proper standalone top-beat slide rather than a cropped fragment of the merged concept.
+
+Answer with exactly these sections:
+
+## Verdict
+
+## What Image A preserves well
+
+## What got worse vs Image B
+
+## Anything obviously off
+
+## Best next move

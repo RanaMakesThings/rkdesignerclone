@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-03-24T18:54:15.245Z",
+  "slug": "slide-03-segmented-focus-bar",
+  "family": "segmented_focus_bar",
+  "deckId": "vox-pd-v1",
+  "theme": "vox",
+  "mode": "full-slide",
+  "title": "More efficient visits will increase supply.",
+  "subtitle": "",
+  "specPath": "projects/figures/specs/slide-03-segmented-focus-bar.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-segmented-focus-bar",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-segmented-focus-bar/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-segmented-focus-bar/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-segmented-focus-bar/figure.html",
+    "png": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-segmented-focus-bar/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-segmented-focus-bar/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-segmented-focus-bar/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-segmented-focus-bar/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-segmented-focus-bar/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-segmented-focus-bar/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-segmented-focus-bar/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-03-segmented-focus-bar/render-assets.json"
+  },
+  "selectedMedia": []
+}

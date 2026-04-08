@@ -1,0 +1,9 @@
+Use case: background-extraction
+Asset type: isolated pitch-deck figure element for slide reconstruction
+Primary request: recreate the attached beat almost exactly as-is: centered phone, lock badge, secure-link card, bottom baseline, and centered step marker 1. Keep the composition and proportions the same.
+Input images: Image 1: accepted beat-1 asset from slide 7 for exact composition
+Style/medium: same grayscale editorial vector illustration style
+Composition/framing: same crop and same relative sizing, full circle visible, no extra line overhangs, no stray marks
+Lighting/mood: flat neutral grayscale with one restrained teal accent on the lock badge
+Constraints: remove cast shadows, remove diffuse glow and halo, remove panel shadow, keep the secure-link text verbatim, keep outlines crisp, make the background plain white and uniform so it can be cut out cleanly
+Avoid: redesign, checkerboard patterns, gradients in the background, glow, haze, soft shadow under the phone or card, watermarks, artifacts, cropped circle

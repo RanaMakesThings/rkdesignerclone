@@ -1,0 +1,130 @@
+
+> designer@0.1.0 anthropic
+> node scripts/doppler/run.mjs -- node scripts/llm/anthropic-cli.mjs messages --model claude-sonnet-4-6
+
+# Slide Concept Analysis
+
+---
+
+## 1. The Three Best Visual Concept Families
+
+**A. The Lit Condition Strip**
+Three horizontal conditions rendered as a spare, luminous bar sequence — each condition a distinct band that must be present simultaneously. The hero sits below or within the convergence.
+
+**B. The Field with Anchor**
+A single dominant central object (the "qualifying setting") floats in open space, with the three conditions orbiting or flanking it as terse labeled marks — not badges, not icons, just precise typographic callouts with short rules.
+
+**C. The Proof Column**
+The slide is organized as a single vertical spine. The three conditions stack as qualifiers at the top. The hero label occupies the center as a weighted statement. The proof panel hangs below as a clean ledger. The whole slide reads top to bottom as a single argument.
+
+---
+
+## 2. Making "Profile, Not Specialty" Obvious Without Going Abstract
+
+The mistake is either labeling it too explicitly (which becomes a disclaimer) or showing so many examples it reads as a specialty list.
+
+The right move is **one visual grammar choice that structurally prevents specialty-reading:**
+
+- The hero object should be **typographically generic** — not "urgent care" or "primary care" but something like *"Any high-volume ambulatory setting"* in a weight that reads as a category descriptor, not a proper noun
+- The three conditions should be presented as **criteria, not filters** — the language reads as "what we look for" not "who qualifies"
+- If example settings appear, they must be visually subordinate enough that the eye hits the conditions *first* and the examples *last* — the examples illustrate the profile, they do not define it
+- The label *"A profile, not a specialty"* works best as a **caption-weight line directly below the hero object**, not as a header or callout — it reads as a clarifying whisper, not a defense
+
+The structural point: if the three conditions are the most visually prominent thing after the header, the slide teaches the right reading order automatically.
+
+---
+
+## 3. Where Example Settings Should Appear
+
+**Recommended: a small labeled footer group**
+
+Here is why the other options fail for this slide:
+
+- **Faint row** — faint often reads as unfinished or uncertain in investor decks; it can accidentally suggest these are the *only* settings but you are not confident in them
+- **Quiet satellites** — satellites around the hero create a specialty-selection reading almost unavoidably; the eye interprets orbiting objects as members of a set, which is exactly the wrong frame
+- **Something else (inline prose)** — burying examples in body copy loses the cross-specialty point entirely
+
+**The footer group works because:**
+- It is physically below the proof panel, so the argument is complete before the examples appear
+- It reads as *"for instance"* rather than *"these are the targets"*
+- It can carry a small label like *"Example settings matching this profile"* or simply *"e.g."* in caption weight, which frames it correctly
+- Three to four setting names in light, equal-weight type with no hierarchy among them prevents any single specialty from reading as primary
+
+The footer group should not have icons, color coding, or size variation. Equal weight, equal size, horizontal, small. The visual equality is the message.
+
+---
+
+## 4. Concept Family Breakdowns
+
+---
+
+### A. The Lit Condition Strip
+
+**Hero object:**
+Three horizontal bands or bars arranged in a tight vertical stack, each containing one qualifying condition as a short phrase. The bands are rendered with a subtle luminance or weight difference from the background — not colored, not iconified. Below the stack, a single short rule leads to the hero label.
+
+**Where the three qualifying conditions go:**
+They *are* the primary visual object. Each band holds one condition. The bands are the hero.
+
+**Where the proof panel goes:**
+To the right, at equal vertical height, as a clean two-column ledger: metric name on the left, brief descriptor or blank target on the right. Separated from the conditions by generous whitespace, not a dividing line.
+
+**Why it works:**
+The conditions feel like requirements, not checkboxes. The visual language is precision and rigor. The side-by-side layout gives conditions and proof panel equal billing, which is correct — the conditions define entry, the proof panel defines success.
+
+**Main risk:**
+If the bands are too literal (borders, fills, obvious UI elements), the slide tips toward product screenshot or feature matrix. The bands must be restrained to the point of near-invisibility as shapes — they are more like paragraph groupings than boxes.
+
+---
+
+### B. The Field with Anchor
+
+**Hero object:**
+A single weighted typographic statement in the center of the slide — something like *"High-volume ambulatory settings with visible schedule pressure"* in a larger, heavier weight than everything else on the slide. This is the anchor. It sits in open white space.
+
+**Where the three qualifying conditions go:**
+Flanking the anchor as three terse labeled callouts — one to the upper left, one to the upper right, one directly below — each with a short em-dash or thin rule connecting it to the anchor. The conditions are in a lighter weight and smaller size than the anchor.
+
+**Where the proof panel goes:**
+Below the anchor and its three flanking conditions, separated by significant vertical whitespace, as a compact horizontal panel with four rows. It reads as a consequence of the anchor, not a peer of it.
+
+**Why it works:**
+The anchor-and-callout structure is familiar from premium financial and strategy decks. It communicates "this is the defined thing, and here is how we know it when we see it." It is inherently non-specialty-specific because the anchor is a description, not a name.
+
+**Main risk:**
+The flanking conditions can read as decorative if the connecting rules are too thin or the positioning too symmetric. If it looks like a logo lockup or a design flourish, the credibility drops. The conditions must read as load-bearing, not ornamental.
+
+---
+
+### C. The Proof Column
+
+**Hero object:**
+The slide's vertical spine is the hero. There is no single dominant object — the argument is the object. The slide reads: *header → conditions → hero label → proof panel → footer examples.* The spine is the visual logic.
+
+**Where the three qualifying conditions go:**
+Stacked vertically below the subheader, each as a single line in medium weight. They are separated by consistent vertical rhythm, not bullets or icons. They feel like a short list that completes the sentence "We look for settings with..."
+
+**Where the proof panel goes:**
+Directly below the hero label, as a four-row ledger. The visual weight of the proof panel is slightly lighter than the conditions, signaling that it is evidence, not argument.
+
+**Why it works:**
+It is the most investor-legible structure. It reads like a well-constructed memo. It requires no visual interpretation — the hierarchy of header, conditions, claim, proof, and examples is self-evident. For an investor who is skimming, the vertical spine delivers the argument in order.
+
+**Main risk:**
+It can read as a text-heavy slide if the spacing is not extremely disciplined. Every element needs more air around it than feels comfortable. If the slide looks like a formatted document, it loses premium quality. The risk is in execution, not concept.
+
+---
+
+## 5. Recommended First Choice: **C — The Proof Column**
+
+**The reason is investor behavior, not design preference.**
+
+An investor seeing this slide in a deck has already absorbed several slides of market and product framing. This slide needs to do one thing with certainty: make them believe the company knows exactly where it is going first and why. Ambiguity in visual structure creates ambiguity in confidence reading.
+
+The Proof Column eliminates interpretation overhead. The investor does not need to understand a visual metaphor or follow a spatial layout. They read top to bottom and the argument assembles itself: *here is the condition we look for, here is the type of setting that meets it, here is what our first pilot must prove.* The footer examples then confirm that the profile is real and already maps to recognizable settings — without narrowing the story.
+
+The Field with Anchor (B) is the strongest alternative and would be the right choice if the presenting partner wants the slide to feel more distinctive or if the deck overall leans toward a more visual premium aesthetic. It would also perform better in a leave-behind PDF where there is time to read spatially.
+
+The Lit Condition Strip (A) is the highest-risk choice for a live investor presentation because it depends most heavily on execution quality — if the bands read as a UI mockup or a feature list, the slide damages rather than supports the strategic argument.
+
+**For the first deck iteration: build C. Test B as a visual variant once the language is locked.**

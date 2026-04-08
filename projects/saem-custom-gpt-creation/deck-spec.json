@@ -1,0 +1,384 @@
+{
+  "deckId": "saem-custom-gpt-creation",
+  "title": "CustomGPT Creation",
+  "version": "2026-04-08.1",
+  "status": "active",
+  "numberingPolicy": {
+    "summary": "Use simple linear numbering for the rebuilt workshop deck and keep the back half reserved for the live walkthrough block.",
+    "activeSequence": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "deprecatedSlides": [],
+    "notes": [
+      "Keep numbering stable once the workshop narrative is locked.",
+      "Reserve the back half for the live build and testing walkthrough."
+    ]
+  },
+  "narrativeSpine": [
+    "Administrative policy lookup in residency is slow, repetitive, and frustrating.",
+    "A custom GPT can become a grounded policy assistant if instructions and source files are designed carefully.",
+    "The audience should leave knowing what to build, how to test it, and how to govern it safely."
+  ],
+  "slides": [
+    {
+      "id": "slide-01",
+      "displayNumber": "1",
+      "importedSlides": [1],
+      "status": "active",
+      "title": "Workshop Title and Promise",
+      "purpose": "Open the talk, establish presenters, and frame the workshop promise.",
+      "header": "From PDF to Policy Assistant",
+      "subheader": "Designing a practical custom GPT for residency administration support",
+      "takeaway": "This workshop will show what the tool is, why it works, and how to build one.",
+      "figureRole": "Orient the audience with title, presenters, and workshop structure.",
+      "family": "conference-title",
+      "buildStatus": "packet and mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-01-title-promise.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/saem-custom-gpt-creation/slide-assets/slide-01/manifest.json"
+      },
+      "selectedDirection": "Title-promise v1 is the current selected opener.",
+      "notes": [
+        "Use this as the clean typographic opener while the rest of the workshop visual language settles."
+      ],
+      "selectedVariantId": "title-promise-v1",
+      "variants": [
+        {
+          "id": "title-promise-v1",
+          "label": "Title Promise V1",
+          "status": "selected",
+          "summary": "Typographic opener that uses the SAEM palette and a three-step workshop promise panel.",
+          "previewPath": "projects/saem-custom-gpt-creation/slide-figures/slide-01/versions/version-000001--title-promise-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-01/versions/version-000001--title-promise-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-01/versions/version-000001--title-promise-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-01/versions/version-000001--title-promise-v1/preview.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-02",
+      "displayNumber": "2",
+      "importedSlides": [4, 6],
+      "status": "active",
+      "title": "Why This Matters",
+      "purpose": "Show the administrative pain point and why the audience should care immediately.",
+      "header": "Policy questions keep landing on the same people",
+      "subheader": "Program directors, chiefs, coordinators, and residents repeatedly search static documents for operational answers",
+      "takeaway": "This is a workflow problem worth fixing, not just a novelty demo.",
+      "figureRole": "Make the administrative burden tangible without overloading the audience.",
+      "family": "problem-frame",
+      "buildStatus": "packet and mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-02-why-this-matters.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/saem-custom-gpt-creation/slide-assets/slide-02/manifest.json"
+      },
+      "selectedDirection": "Workflow-burden v1 is the current selected problem frame.",
+      "notes": [
+        "This replaces a denser theory-first opening with a direct operational burden frame."
+      ],
+      "selectedVariantId": "workflow-burden-v1",
+      "variants": [
+        {
+          "id": "workflow-burden-v1",
+          "label": "Workflow Burden V1",
+          "status": "selected",
+          "summary": "Two-panel burden slide showing the people who absorb policy lookup work and the repeated question loop they face.",
+          "previewPath": "projects/saem-custom-gpt-creation/slide-figures/slide-02/versions/version-000001--workflow-burden-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-02/versions/version-000001--workflow-burden-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-02/versions/version-000001--workflow-burden-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-02/versions/version-000001--workflow-burden-v1/preview.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-03",
+      "displayNumber": "3",
+      "importedSlides": [7],
+      "status": "active",
+      "title": "What This Tool Is",
+      "purpose": "Define the product plainly before theory.",
+      "header": "A custom GPT can act like a residency policy assistant",
+      "subheader": "It answers questions using uploaded policies, instructions, and selected capabilities inside ChatGPT",
+      "takeaway": "The audience should understand the object before hearing how it is built.",
+      "figureRole": "Show a concrete input/output example of a grounded policy answer.",
+      "family": "concept-card",
+      "buildStatus": "packet and mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-03-what-this-tool-is.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/saem-custom-gpt-creation/slide-assets/slide-03/manifest.json"
+      },
+      "selectedDirection": "Policy-assistant-object v1 is the current selected concept card.",
+      "notes": [
+        "Keep the example clearly illustrative so it teaches the object without implying specific institutional policy."
+      ],
+      "selectedVariantId": "policy-assistant-object-v1",
+      "variants": [
+        {
+          "id": "policy-assistant-object-v1",
+          "label": "Policy Assistant Object V1",
+          "status": "selected",
+          "summary": "Question-to-answer concept card that shows the assistant as a grounded policy Q&A workflow before the build walkthrough.",
+          "previewPath": "projects/saem-custom-gpt-creation/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-custom-gpt-creation/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1/preview.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slide-04",
+      "displayNumber": "4",
+      "importedSlides": [10, 11, 12, 13, 14, 15],
+      "status": "active",
+      "title": "Why It Works",
+      "purpose": "Explain the mechanism without drowning the audience in transformer theory.",
+      "header": "Good policy assistants are configured, grounded ChatGPT workflows",
+      "subheader": "Instructions guide behavior, knowledge files provide source material, and capabilities extend what the GPT can do",
+      "takeaway": "This is enough conceptual depth for the workshop audience.",
+      "figureRole": "Use a simple three-part system diagram rather than a dense technical stack.",
+      "family": "system-diagram",
+      "buildStatus": "packet drafted, visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-04-why-it-works.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": null
+      },
+      "selectedDirection": "No selected visual yet.",
+      "notes": [],
+      "selectedVariantId": null,
+      "variants": []
+    },
+    {
+      "id": "slide-05",
+      "displayNumber": "5",
+      "importedSlides": [31, 35],
+      "status": "active",
+      "title": "What Good Looks Like",
+      "purpose": "Define the output standard before the walkthrough.",
+      "header": "A good answer is specific, sourced, and bounded",
+      "subheader": "The assistant should answer from the documents, cite its source, and say when it does not know",
+      "takeaway": "This slide sets the quality bar for the live demo.",
+      "figureRole": "Show a policy question paired with a good answer and a bad answer.",
+      "family": "answer-compare",
+      "buildStatus": "packet drafted, visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-05-what-good-looks-like.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": null
+      },
+      "selectedDirection": "No selected visual yet.",
+      "notes": [],
+      "selectedVariantId": null,
+      "variants": []
+    },
+    {
+      "id": "slide-06",
+      "displayNumber": "6",
+      "importedSlides": [20, 21, 22],
+      "status": "active",
+      "title": "Source Prep",
+      "purpose": "Show the file and knowledge design decisions that matter most.",
+      "header": "The files matter as much as the model",
+      "subheader": "Clear, current, text-forward policy documents improve retrieval and reduce confusion",
+      "takeaway": "Knowledge quality and instruction quality are the real implementation work.",
+      "figureRole": "Make document prep concrete and non-technical.",
+      "family": "workflow-checklist",
+      "buildStatus": "packet drafted, visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-06-source-prep.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": null
+      },
+      "selectedDirection": "No selected visual yet.",
+      "notes": [],
+      "selectedVariantId": null,
+      "variants": []
+    },
+    {
+      "id": "slide-07",
+      "displayNumber": "7",
+      "importedSlides": [19],
+      "status": "active",
+      "title": "Live Walkthrough Setup",
+      "purpose": "Start the live build with a clear map of the steps.",
+      "header": "We are about to build the assistant live",
+      "subheader": "Create the GPT, define the instructions, upload files, test it, then refine it",
+      "takeaway": "The audience should know what to watch for in the demo.",
+      "figureRole": "Provide a clean agenda card for the walkthrough block.",
+      "family": "demo-roadmap",
+      "buildStatus": "packet drafted, visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-07-live-walkthrough-setup.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": null
+      },
+      "selectedDirection": "No selected visual yet.",
+      "notes": [],
+      "selectedVariantId": null,
+      "variants": []
+    },
+    {
+      "id": "slide-08",
+      "displayNumber": "8",
+      "importedSlides": [23, 26, 28],
+      "status": "active",
+      "title": "Live Build",
+      "purpose": "Walk through the current GPT creation surface in ChatGPT.",
+      "header": "Create the GPT in ChatGPT",
+      "subheader": "Use the GPTs area, choose Create, then work through configuration directly",
+      "takeaway": "The workshop should focus on the actual current UI, not the old product assumptions.",
+      "figureRole": "Use annotated interface screenshots rather than abstract diagrams.",
+      "family": "ui-walkthrough",
+      "buildStatus": "packet drafted, visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-08-live-build.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": null
+      },
+      "selectedDirection": "No selected visual yet.",
+      "notes": [],
+      "selectedVariantId": null,
+      "variants": []
+    },
+    {
+      "id": "slide-09",
+      "displayNumber": "9",
+      "importedSlides": [35, 36],
+      "status": "active",
+      "title": "Live Testing",
+      "purpose": "Demonstrate preview testing, refusals, and source-bounded answers.",
+      "header": "Testing matters more than builder theatrics",
+      "subheader": "A good workshop demo should show a strong answer, a weak answer, and an explicit refusal",
+      "takeaway": "Testing is where trust is earned.",
+      "figureRole": "Compare good and bad preview interactions with callouts.",
+      "family": "preview-compare",
+      "buildStatus": "packet drafted, visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-09-live-testing.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": null
+      },
+      "selectedDirection": "No selected visual yet.",
+      "notes": [],
+      "selectedVariantId": null,
+      "variants": []
+    },
+    {
+      "id": "slide-10",
+      "displayNumber": "10",
+      "importedSlides": [39, 40, 46],
+      "status": "active",
+      "title": "Governance and Maintenance",
+      "purpose": "Land the operational rules for safe use.",
+      "header": "The tool needs ownership, updates, and clear boundaries",
+      "subheader": "No PHI, current documents only, citations expected, and a named owner for updates",
+      "takeaway": "This is the adult supervision slide.",
+      "figureRole": "Summarize governance in a compact card set.",
+      "family": "governance-grid",
+      "buildStatus": "packet drafted, visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-10-governance-maintenance.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": null
+      },
+      "selectedDirection": "No selected visual yet.",
+      "notes": [],
+      "selectedVariantId": null,
+      "variants": []
+    },
+    {
+      "id": "slide-11",
+      "displayNumber": "11",
+      "importedSlides": [49, 51],
+      "status": "active",
+      "title": "Takeaways and Q&A",
+      "purpose": "Close with memorable decisions, not more theory.",
+      "header": "Build small, ground it well, test it hard",
+      "subheader": "Custom GPTs can reduce administrative friction when they are well-scoped and well-governed",
+      "takeaway": "Leave the audience with a practical next step and discussion prompts.",
+      "figureRole": "Clean closing summary with optional QR or link area.",
+      "family": "closing-summary",
+      "buildStatus": "packet drafted, visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-custom-gpt-creation/slide-packets/slide-11-takeaways-qa.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": null
+      },
+      "selectedDirection": "No selected visual yet.",
+      "notes": [],
+      "selectedVariantId": null,
+      "variants": []
+    }
+  ],
+  "paths": {
+    "deckAssetsManifest": "projects/saem-custom-gpt-creation/assets/manifest.json"
+  }
+}

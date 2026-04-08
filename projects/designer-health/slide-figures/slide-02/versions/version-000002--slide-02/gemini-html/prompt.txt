@@ -1,0 +1,89 @@
+Generate a self-contained HTML document for one premium 16:9 investor pitch
+deck slide. Use inline CSS only. Do not use external scripts. If you use SVG,
+keep it inline inside the HTML.
+
+Use this exact on-slide copy:
+
+Header:
+Demand is outpacing clinical capacity.
+
+Main chart title:
+Average new-patient physician wait time
+
+Small chart eyebrow:
+AMN benchmark survey years
+
+Main endpoint callout:
+31 days
+
+Small support chip:
++19% since 2022
+
+Specialty panel eyebrow:
+Where waits are longest
+
+Specialty panel title:
+2025 waits by specialty
+
+Specialty values:
+- OB/GYN 41.8
+- Gastroenterology 40.0
+- Dermatology 36.5
+- Cardiology 32.7
+- Family medicine 23.5
+
+Shortage proof eyebrow:
+Primary care HPSA, December 31, 2025
+
+Shortage proof hero:
+1 in 4+
+
+Shortage proof headline:
+Americans live in federally designated primary care shortage areas.
+
+Shortage proof support line:
+92.3 million people. In those areas, only 48.18% of primary care need is currently met.
+
+Figure job:
+Make the slide feel like a structural access crisis, not a generic healthcare
+chart. Show worsening waits, long specialty access delays, and a federally
+designated shortage in one clear editorial composition.
+
+Composition direction:
+- use a wide panoramic chart field rather than a centered white slab
+- let the trend line own the top-left to center span
+- make the 2025 endpoint feel unmistakably like the climax
+- integrate the specialty bars as a compact right-side ladder, visually tied to
+  the endpoint zone
+- treat the shortage proof as a strong lower-third band or block, not a weak
+  footer
+- preserve generous whitespace and premium deck restraint
+
+Visual rules:
+- background should carry the same tonal atmosphere as the graphic; no detached
+  white box sitting on a different slide treatment
+- restrained deep green / blue-green accents only
+- warm neutral support surfaces are allowed
+- rounded geometry is fine, but keep it taut and editorial
+- typography should feel serious and premium
+- chart labeling must stay sparse and legible
+- reserve a clean citation lane at the bottom; do not bury footnotes under the
+  composition
+
+Semantic guards:
+- the wait-time series is a benchmark series, not annual data
+- the shortage claim must stay explicitly tied to primary care HPSA designation
+- keep the ratio-led read stronger than the raw 92.3M number
+
+Do not:
+- make a dashboard
+- create multiple disconnected tiles
+- use bright startup colors
+- imitate a hospital EHR screen
+- let the citation row collide with the artwork
+
+Overall feel:
+editorial, structural, premium, calm, and a little more surprising than a
+standard consulting-style chart slide.
+
+Return HTML only.

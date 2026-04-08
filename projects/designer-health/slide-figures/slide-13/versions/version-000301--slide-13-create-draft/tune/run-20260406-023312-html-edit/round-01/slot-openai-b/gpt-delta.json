@@ -1,0 +1,33 @@
+{
+  "provider": "gpt",
+  "status": "partial",
+  "summary": "The candidate clearly attempts the intended ask-slide structure with a left hero ask block, right milestone stack, and bottom use-of-funds ribbon inside the Designer shell, but the slide is not presentation-ready because the layout is visibly broken, content overlaps heavily, and the footer/logo contract is violated by an extra broken image replacing the standard shell logo treatment.",
+  "evidence": [
+    "The locked header and subheader are present and use the requested wording: “Raising $1.25M…” and “Post-money SAFE • ~18–20 months of runway.”",
+    "The main figure follows the requested high-level logic: one integrated master card with a left ask panel, three right-side milestone cards labeled Build / Deploy / Validate, and a bottom use-of-funds ribbon with percentages.",
+    "The left hero block surfaces the ask first with “$1.25M,” “Post-money SAFE,” and support stats including “2 hires” and “3 pilots,” matching the proof-stage financing intent.",
+    "However, the header area is crowded and overlapping: the long title wraps into multiple lines and the subheader sits on top of the title descenders, reducing legibility.",
+    "The lower portion is severely broken: the ‘2 hires’ and ‘3 pilots’ stats collide with body copy and the bottom ribbon cards, and the closing sentence overlaps the ribbon content.",
+    "The right milestone cards are also clipped/overstuffed, with bullet text cut off at the bottom of at least the Deploy and Validate cards.",
+    "A broken image placeholder appears in the bottom-right corner, while the official Designer footer logo position is not preserved cleanly, violating the locked shell/footer requirement.",
+    "The slide no longer feels clinically polished or fully resolved because of visible overflow, clipping, and stacking errors."
+  ],
+  "nextPrompt": "Keep the same overall concept, but rebuild slide 13 so it is presentation-ready within the locked Designer shell: preserve the exact header/subheader, keep one integrated master card, reduce type sizes and rebalance spacing so no text overlaps or clips, keep the left ask block to amount/instrument/3 stats only, keep the right Build/Deploy/Validate cards to concise outcome-first copy, make the bottom use-of-funds ribbon quieter and fully readable, and restore the standard footer rule and Designer logo with no extra/broken image element.",
+  "needsHuman": true,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate clearly attempts the intended ask-slide structure with a left hero ask block, right milestone stack, and bottom use-of-funds ribbon inside the Designer shell, but the slide is not presentation-ready because the layout is visibly broken, content overlaps heavily, and the footer/logo contract is violated by an extra broken image replacing the standard shell logo treatment.",
+    "evidence": [
+      "The locked header and subheader are present and use the requested wording: “Raising $1.25M…” and “Post-money SAFE • ~18–20 months of runway.”",
+      "The main figure follows the requested high-level logic: one integrated master card with a left ask panel, three right-side milestone cards labeled Build / Deploy / Validate, and a bottom use-of-funds ribbon with percentages.",
+      "The left hero block surfaces the ask first with “$1.25M,” “Post-money SAFE,” and support stats including “2 hires” and “3 pilots,” matching the proof-stage financing intent.",
+      "However, the header area is crowded and overlapping: the long title wraps into multiple lines and the subheader sits on top of the title descenders, reducing legibility.",
+      "The lower portion is severely broken: the ‘2 hires’ and ‘3 pilots’ stats collide with body copy and the bottom ribbon cards, and the closing sentence overlaps the ribbon content.",
+      "The right milestone cards are also clipped/overstuffed, with bullet text cut off at the bottom of at least the Deploy and Validate cards.",
+      "A broken image placeholder appears in the bottom-right corner, while the official Designer footer logo position is not preserved cleanly, violating the locked shell/footer requirement.",
+      "The slide no longer feels clinically polished or fully resolved because of visible overflow, clipping, and stacking errors."
+    ],
+    "nextPrompt": "Keep the same overall concept, but rebuild slide 13 so it is presentation-ready within the locked Designer shell: preserve the exact header/subheader, keep one integrated master card, reduce type sizes and rebalance spacing so no text overlaps or clips, keep the left ask block to amount/instrument/3 stats only, keep the right Build/Deploy/Validate cards to concise outcome-first copy, make the bottom use-of-funds ribbon quieter and fully readable, and restore the standard footer rule and Designer logo with no extra/broken image element.",
+    "needsHuman": true
+  }
+}

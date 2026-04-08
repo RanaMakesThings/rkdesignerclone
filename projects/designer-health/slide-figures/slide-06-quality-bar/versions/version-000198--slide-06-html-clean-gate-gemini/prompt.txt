@@ -1,0 +1,67 @@
+Return one self-contained HTML document for a 1920x1080 investor-deck figure.
+
+This is a premium healthcare startup slide figure, not a product mockup, not a browser page, and not a dashboard.
+
+Use the attached reference image only as inspiration for the broad left-center-right story. Do not copy its boxy chamber too literally.
+
+Primary goal:
+Keep the same message as the reference image, but reinterpret the center as a cleaner adaptive interviewing gate instead of a big rounded UI box.
+
+Copy contract:
+
+Header:
+Vox is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.
+
+Support copy:
+Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.
+By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.
+
+Internal figure labels:
+- Vox
+- Adaptive clinical interviewer
+- What matters
+- What connects
+- What still needs verification
+- Clinician-grade starting point
+
+Left-side conversational ribbons:
+- My back has been hurting...
+- Vox: What makes it worse?
+- It’s worse in the morning.
+- Vox: When did this start?
+- Started last Tuesday.
+
+Design direction:
+- white background
+- grayscale / off-white base
+- restrained teal / blue accent
+- premium editorial figure, not infographic
+- airy, calm, clinically serious
+- subtle gradients and soft shadows
+
+Composition requirements:
+- top area: the header and support copy
+- left side: five clean ribbons, simple geometry, generous spacing, horizontal text
+- center: a narrower vertical or slightly sculpted adaptive gate that feels like the moment of clinical questioning and refinement
+- the gate should feel intelligent and premium, not sci-fi and not literal hardware
+- immediately after the gate, the narrative condenses into three clear lanes or grouped threads labeled:
+  What matters
+  What connects
+  What still needs verification
+- place “Vox” and “Adaptive clinical interviewer” near the gate in a tasteful way
+- right side: one compact clinician-grade starting point card emerging from the organized threads
+
+Important:
+- no huge software container
+- no fake dashboard internals
+- no excessive pills or badges
+- no extra copy beyond the allowed lines
+- no stock medical iconography
+- keep the right card secondary and compact
+
+The slide should feel more contemporary and less diagrammatic than the reference image while still being immediately understandable.
+
+Output:
+- a complete HTML document only
+- inline CSS only
+- inline SVG allowed and preferred

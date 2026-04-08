@@ -1,0 +1,266 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><style>/* CSS Reset & Variables */
+        :root {
+            --bg-base: #FCFDFD;
+            --text-hero: #0F172A;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+            --text-tertiary: #94A3B8;
+            --accent-main: #0F766E; /* Restrained Teal */
+            --accent-light: #CCFBF1;
+            --accent-subtle: #F0FDFA;
+            --border-light: #E2E8F0;
+            --white: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg-base);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* 16:9 Slide Container */
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg-base);
+            position: relative;
+            overflow: hidden;
+            box-shadow: none;
+            padding: 64px 80px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Subtle Background Glow */
+        .bg-glow {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(15, 118, 110, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+            top: -200px;
+            right: -100px;
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Section */
+        .header-area {
+            margin-bottom: 72px;
+        }
+
+        h1 {
+            font-size: 44px;
+            font-weight: 700;
+            color: var(--text-hero);
+            margin: 0 0 12px 0;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin: 0;
+            letter-spacing: -0.01em;
+            line-height: 1.4;
+        }
+
+        /* Hero Economics Object */
+        .hero-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .hero-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 64px 72px;
+            box-shadow: 0 12px 48px -12px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(15, 23, 42, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Logic Flow: Input */
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            min-width: 240px;
+        }
+
+        .input-val {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--accent-main);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .input-label {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        /* Logic Flow: Operators */
+        .math-operator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-tertiary);
+            padding: 0 16px;
+        }
+
+        /* Logic Flow: Multipliers (Assumptions) */
+        .multipliers-group {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 12px 0 12px 32px;
+            border-left: 2px solid var(--border-light);
+        }
+
+        .multiplier-item {
+            font-size: 20px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-weight: 400;
+        }
+
+        .multiplier-item::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--text-tertiary);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        /* Logic Flow: Output */
+        .output-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 16px;
+        }
+
+        .output-val {
+            font-size: 92px;
+            font-weight: 800;
+            color: var(--text-hero);
+            line-height: 1;
+            letter-spacing: -0.04em;
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .output-label {
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            letter-spacing: -0.01em;
+        }
+
+        .breakeven-badge {
+            margin-top: 24px;
+            background: var(--accent-subtle);
+            color: var(--accent-main);
+            padding: 12px 20px;
+            border-radius: 100px;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid var(--accent-light);
+            letter-spacing: -0.01em;
+        }
+
+        /* Subordinate Range Check */
+        .range-check {
+            position: absolute;
+            bottom: 48px;
+            right: 80px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .range-title {
+            font-size: 11px;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 600;
+        }
+
+        .range-track {
+            width: 140px;
+            height: 2px;
+            background: var(--border-light);
+            position: relative;
+            border-radius: 2px;
+        }
+
+        .range-node {
+            width: 6px;
+            height: 6px;
+            background: var(--text-tertiary);
+            border-radius: 50%;
+            position: absolute;
+            top: -2px;
+        }
+
+        .range-node.conservative { left: 0; }
+        .range-node.base { 
+            left: 50%; 
+            transform: translateX(-50%); 
+            background: var(--accent-main); 
+            width: 8px; 
+            height: 8px; 
+            top: -3px; 
+            box-shadow: 0 0 0 3px var(--accent-subtle);
+        }
+        .range-node.upside { right: 0; }
+
+        .range-label {
+            position: absolute;
+            top: 14px;
+            font-size: 11px;
+            color: var(--text-tertiary);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .range-label.conservative { left: 0; transform: translateX(-20%); }
+        .range-label.base { left: 50%; transform: translateX(-50%); color: var(--accent-main); font-weight: 600; }
+        .range-label.upside { right: 0; transform: translateX(10%); }</style>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>

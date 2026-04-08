@@ -1,0 +1,116 @@
+{
+  "slideId": "slide-12",
+  "displayNumber": "12",
+  "lane": "hybrid",
+  "laneReason": "Explicit lane override selected: hybrid.",
+  "createdDraftVersion": false,
+  "draftVersionId": "version-000341",
+  "draftVersionDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft",
+  "projectRoot": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health",
+  "slideDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12",
+  "deckSpecPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/deck-spec.json",
+  "packetPath": null,
+  "packetText": "",
+  "noteReadmePath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-12/README.md",
+  "noteReadmeText": "# Slide 12 — The Ask\n\n## Status\n\n- slide: `12`\n- display number: `12`\n- state: `ask reset in progress`\n\n## Current running read\n\n- baseline visual references:\n  - `../../slide-figures/slide-13/versions/version-000320--slide-13-create-openai-bonus`\n  - `../../slide-figures/slide-13/versions/version-000340--slide-13-user-html-studio-html-lab`\n\n## Why this is the active lane\n\n- slide 12 is the ask slide and should no longer route through a legacy\n  `slide-13` workstream\n- the locked Apr 6, 2026 spec is clearer than the older placeholder close and\n  should be treated as the source of truth\n- version `000320` has the stronger overall visual system\n- version `000340` proves that tighter milestone copy and simpler compression\n  can work\n\n## Current issues\n\n- the repo still carries stale legacy numbering and archive state from the old\n  `slide-13` ask workstream\n- the next pass should preserve the stronger visual language while allowing a\n  little more useful structure, such as a timeline or restrained allocation\n  bars, when it genuinely sharpens the argument\n- no new slide-12 ask draft bank has been generated yet\n\n## Locked copy / structure\n\n- eyebrow:\n  - `The Ask`\n- header:\n  - `Raising $1.25M to launch pilots, prove value, and establish repeatable deployment`\n- subheader:\n  - `Post-money SAFE • ~18–20 months of runway`\n- hero:\n  - `$1.25M`\n  - `Pre-Seed SAFE`\n- support stats:\n  - `2 key hires`\n  - `3 pilot sites`\n  - `18–20 months runway`\n- milestone cards:\n  - `Build`\n    `Founding engineer in place`\n    `Clinician-grade product loop live`\n  - `Deploy`\n    `Implementation / ops lead in place`\n    `Pilot sites launched with a repeatable rollout motion`\n  - `Validate`\n    `Measurable pilot outcomes`\n    `Seed-ready proof package`\n- footer treatment:\n  - `Use of funds: Build • Deploy • Validate`\n\n## Next move\n\n- import the strongest legacy ask references into real `slide-12` history\n- seed a fresh slide-12 create draft from the locked shell\n- generate six new ask options with versions `000320` and `000340` as visual\n  cues\n- keep the result in draft state until a human chooses a promotion\n",
+  "deckSlide": {
+    "id": "slide-12",
+    "displayNumber": "12",
+    "importedSlides": [
+      13
+    ],
+    "status": "active",
+    "title": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+    "purpose": "close the deck with a concrete financing ask that feels like a de-risking plan",
+    "header": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+    "subheader": "Post-money SAFE • ~18–20 months of runway",
+    "takeaway": "This round is sized for a disciplined next step and funds the exact work needed to turn the product story into pilot proof and seed readiness.",
+    "figureRole": "surface the ask first, then show what the round unlocks with disciplined milestone logic",
+    "family": "ask hero with milestone column",
+    "buildStatus": "slide-12 ask reset underway from the locked Apr 6, 2026 spec, with versions 000320 and 000340 as visual references",
+    "proof": [],
+    "paths": {
+      "packet": null,
+      "specs": [
+        "projects/designer-health/inputs/slide-12-ask-spec-2026-04-06/slide-12-ask-spec-v1.1-locked.md"
+      ],
+      "stampedDir": "projects/designer-health/slide-figures/slide-12",
+      "assetsManifest": "projects/designer-health/slide-assets/slide-12/manifest.json"
+    },
+    "selectedDirection": "Use one integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, a restrained bottom ribbon, and allow tasteful extra proof structure like a timeline or allocation bars when it sharpens the argument.",
+    "notes": [
+      "Slide 12 is the ask slide and should no longer route through a legacy slide-13 workstream.",
+      "Bias the next exploration toward the visual language of versions 000320 and 000340.",
+      "Allow elegant add-on structure like a timeline, rollout sequence, or restrained percent bars when it improves the read."
+    ],
+    "variants": [],
+    "specText": "### Current official read\n\n**Slide job**\nClose the deck with a concrete financing ask that feels like a de-risking plan, not a generic raise.\n\n**Core claim**\n**We are raising $1.25M to fund the next proof stage: launch pilots, demonstrate value, and show deployment can be repeated.**\n\n**What the audience should believe after this slide**\n**This round is sized for a disciplined next step. It funds the exact work needed to turn the product story into pilot proof and seed readiness.**\n\n**Strategic role in deck**\nThis is the closing conversion slide. It should translate the entire deck from thesis into financing logic.\n\n**Current running copy plan**\n- eyebrow: `The Ask`\n- header: `Raising $1.25M to launch pilots, prove value, and establish repeatable deployment`\n- subheader: `Post-money SAFE • ~18–20 months of runway`\n- hero block: `$1.25M` + `Pre-Seed SAFE`\n- support stats: `2 key hires` / `3 pilot sites` / `18–20 months runway`\n- milestone cards:\n  - Build: `Founding engineer in place` / `Clinician-grade product loop live`\n  - Deploy: `Implementation / ops lead in place` / `Pilot sites launched with a repeatable rollout motion`\n  - Validate: `Measurable pilot outcomes` / `Seed-ready proof package`\n- bottom ribbon / small footer treatment: `Use of funds: Build • Deploy • Validate`\n\n**Figure plan**\nThe slide should read in three zones:\n- left hero block: large raise amount and structure\n- right milestone area: three clean Build / Deploy / Validate cards\n- bottom ribbon: one restrained use-of-funds line, not a budget table\n\n### Exploration bias for the next draft bank\n\nUse the stronger visual language from versions `000320` and `000340` as continuity cues. It is acceptable to introduce tasteful added structure when it helps the slide read faster, for example:\n- a simple timeline or staged sequence\n- restrained allocation bars or percentage-style breakdowns\n- compact proof checkpoints or rollout markers\n\nOnly add those if they clarify the ask. They should feel like elegant slide logic, not fabricated diligence detail or a finance spreadsheet.\n\n### What to avoid\n\n- a dense use-of-funds table\n- salary-heavy budget detail\n- fuzzy wording like `clinician trust` on the headline\n- too many milestones\n- a generic close like `build team / go to market / scale`\n\n**One-line test**\n**This feels like funding a concrete proof plan, not funding hope.**\n\n---"
+  },
+  "slideEntry": {
+    "id": "slide-12",
+    "displayNumber": "12",
+    "importedSlides": [
+      13
+    ],
+    "status": "active",
+    "title": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+    "purpose": "close the deck with a concrete financing ask that feels like a de-risking plan",
+    "header": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+    "subheader": "Post-money SAFE • ~18–20 months of runway",
+    "takeaway": "This round is sized for a disciplined next step and funds the exact work needed to turn the product story into pilot proof and seed readiness.",
+    "figureRole": "surface the ask first, then show what the round unlocks with disciplined milestone logic",
+    "family": "ask hero with milestone column",
+    "buildStatus": "slide-12 ask reset underway from the locked Apr 6, 2026 spec, with versions 000320 and 000340 as visual references",
+    "proof": [],
+    "paths": {
+      "packet": null,
+      "specs": [
+        "projects/designer-health/inputs/slide-12-ask-spec-2026-04-06/slide-12-ask-spec-v1.1-locked.md"
+      ],
+      "stampedDir": "projects/designer-health/slide-figures/slide-12",
+      "assetsManifest": "projects/designer-health/slide-assets/slide-12/manifest.json"
+    },
+    "selectedDirection": "Use one integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, a restrained bottom ribbon, and allow tasteful extra proof structure like a timeline or allocation bars when it sharpens the argument.",
+    "notes": [
+      "Slide 12 is the ask slide and should no longer route through a legacy slide-13 workstream.",
+      "Bias the next exploration toward the visual language of versions 000320 and 000340.",
+      "Allow elegant add-on structure like a timeline, rollout sequence, or restrained percent bars when it improves the read."
+    ],
+    "variants": [],
+    "specText": "### Current official read\n\n**Slide job**\nClose the deck with a concrete financing ask that feels like a de-risking plan, not a generic raise.\n\n**Core claim**\n**We are raising $1.25M to fund the next proof stage: launch pilots, demonstrate value, and show deployment can be repeated.**\n\n**What the audience should believe after this slide**\n**This round is sized for a disciplined next step. It funds the exact work needed to turn the product story into pilot proof and seed readiness.**\n\n**Strategic role in deck**\nThis is the closing conversion slide. It should translate the entire deck from thesis into financing logic.\n\n**Current running copy plan**\n- eyebrow: `The Ask`\n- header: `Raising $1.25M to launch pilots, prove value, and establish repeatable deployment`\n- subheader: `Post-money SAFE • ~18–20 months of runway`\n- hero block: `$1.25M` + `Pre-Seed SAFE`\n- support stats: `2 key hires` / `3 pilot sites` / `18–20 months runway`\n- milestone cards:\n  - Build: `Founding engineer in place` / `Clinician-grade product loop live`\n  - Deploy: `Implementation / ops lead in place` / `Pilot sites launched with a repeatable rollout motion`\n  - Validate: `Measurable pilot outcomes` / `Seed-ready proof package`\n- bottom ribbon / small footer treatment: `Use of funds: Build • Deploy • Validate`\n\n**Figure plan**\nThe slide should read in three zones:\n- left hero block: large raise amount and structure\n- right milestone area: three clean Build / Deploy / Validate cards\n- bottom ribbon: one restrained use-of-funds line, not a budget table\n\n### Exploration bias for the next draft bank\n\nUse the stronger visual language from versions `000320` and `000340` as continuity cues. It is acceptable to introduce tasteful added structure when it helps the slide read faster, for example:\n- a simple timeline or staged sequence\n- restrained allocation bars or percentage-style breakdowns\n- compact proof checkpoints or rollout markers\n\nOnly add those if they clarify the ask. They should feel like elegant slide logic, not fabricated diligence detail or a finance spreadsheet.\n\n### What to avoid\n\n- a dense use-of-funds table\n- salary-heavy budget detail\n- fuzzy wording like `clinician trust` on the headline\n- too many milestones\n- a generic close like `build team / go to market / scale`\n\n**One-line test**\n**This feels like funding a concrete proof plan, not funding hope.**\n\n---"
+  },
+  "adjacentSlides": [
+    {
+      "slideId": "slide-11",
+      "displayNumber": "10",
+      "title": "Start where throughput proof is fastest",
+      "versionId": "version-000047",
+      "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/slide-11--version-000047.png"
+    }
+  ],
+  "referenceImagePaths": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000320--slide-12-create-openai-bonus/preview.png",
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000340--slide-12-user-html-studio-html-lab/preview.png"
+  ],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "designer-deck-template-v1",
+    "templateDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/templates/designer-deck-template-v1",
+    "contractPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/designer-deck-template.md",
+    "canonicalHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/templates/designer-deck-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/templates/designer-deck-template-v1/template.png",
+    "shellRegionsPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/templates/designer-deck-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft/generated.html",
+    "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft/preview.png",
+    "templateHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-12/create-request.md",
+  "createRequestSnapshotPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft/create/create-request.snapshot.md"
+}

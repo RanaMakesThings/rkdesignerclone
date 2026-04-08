@@ -1,0 +1,24 @@
+Generate one self-contained 1920x1080 HTML slide figure for Designer Health.
+
+Use the attached reference image as a strict layout shell. Keep the overall composition, typography hierarchy, chamber size, ribbons, right-side handoff, lane labels, clinician-grade card, and copy structure very close to the reference. Do not redesign the slide.
+
+Only change the center circle styling and the text inside it.
+
+Requirements:
+- Keep the circle in the same position and at roughly the same size.
+- Remove the small arrow/tick marks attached to the ring.
+- Style the ring so it feels more intentional and rotational, not arbitrary teal-and-gray.
+- Use repeating light-to-dark gradient segments around the ring so the gradient restarts and implies spinning.
+- Keep the styling restrained and premium. No extra icons, no triangles, no decorative metaphors.
+- Keep the right-side handoff untouched except for any tiny alignment needed to fit the updated circle.
+- Replace the text inside the circle with exactly three centered lines:
+  - Medical knowledge
+  - Clinical reasoning
+  - Guided follow-up
+- Make the inner text smaller and cleaner than the current version so all three lines fit comfortably.
+
+Visual guidance:
+- Soft white Designer slide language.
+- The circle should feel like a refined rotating system.
+- The ring should read clearly even when the slide is viewed small.
+- Avoid glow-heavy or futuristic effects.

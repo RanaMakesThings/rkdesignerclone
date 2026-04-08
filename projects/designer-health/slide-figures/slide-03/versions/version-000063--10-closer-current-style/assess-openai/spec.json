@@ -1,0 +1,12 @@
+{
+  "objective": "Critique slide-03 local exploration variant 10 as a visual composition and spacing pass.",
+  "message": "Shrink story reconstruction time and show that the recovered time creates capacity for one additional visit.",
+  "constraints": [
+    "Stay close to the current slide-03 style and family language.",
+    "Do not drift into a new background treatment or a redesigned visual family.",
+    "Focus on spacing, hierarchy, balance, alignment, and visual clarity.",
+    "The left-side mechanism should stay simple: one shortened bar, arrows on the blue segment, and a nearby dashed time-saved block.",
+    "The right side should stay minimal: just the payoff object showing 5 visits becoming 6."
+  ],
+  "reviewAsk": "Explain why the current variant feels visually off even though the concept is close."
+}

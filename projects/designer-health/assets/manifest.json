@@ -1,0 +1,53 @@
+{
+  "manifestVersion": 1,
+  "projectId": "designer-health",
+  "kind": "deck-assets",
+  "assets": [
+    {
+      "assetId": "asset-000001",
+      "id": "designer-logo-pack",
+      "label": "Designer Logo Pack",
+      "status": "selected",
+      "kind": "brand-package",
+      "role": "deck-branding",
+      "summary": "Canonical logo package for footer lockups, title slides, and deck-level branding.",
+      "previewPath": "projects/designer-health/assets/logo/designer-health-logo-black.png",
+      "files": [
+        {
+          "label": "Black SVG",
+          "path": "projects/designer-health/assets/logo/designer-health-logo-black.svg"
+        },
+        {
+          "label": "White SVG",
+          "path": "projects/designer-health/assets/logo/designer-health-logo-white.svg"
+        },
+        {
+          "label": "Black PNG",
+          "path": "projects/designer-health/assets/logo/designer-health-logo-black.png"
+        },
+        {
+          "label": "White PNG",
+          "path": "projects/designer-health/assets/logo/designer-health-logo-white.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Logo README",
+          "path": "projects/designer-health/assets/logo/README.md"
+        },
+        {
+          "label": "Official Package",
+          "path": "projects/designer-health/assets/logo/official-2026-04-01"
+        }
+      ],
+      "tags": [
+        "logo",
+        "brand",
+        "footer"
+      ],
+      "notes": [
+        "Use these checked-in assets for canonical deck branding rather than ad hoc slide-local copies."
+      ]
+    }
+  ]
+}

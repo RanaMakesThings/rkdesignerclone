@@ -1,0 +1,181 @@
+{
+  "manifestVersion": 1,
+  "projectId": "designer-health",
+  "kind": "slide-assets",
+  "slideId": "slide-07",
+  "deckAssetIds": [
+    "designer-logo-pack"
+  ],
+  "assets": [
+    {
+      "assetId": "asset-000014",
+      "id": "storyboard-beat-01-invite",
+      "label": "Slide 7 Beat 1 Invite",
+      "status": "approved",
+      "kind": "generated-image",
+      "role": "storyboard-beat",
+      "summary": "Locked beat-1 graphic from slide 7 version 000125, with a Gemini shadow-free cleanup and transparent cutout for page-native reconstruction.",
+      "previewPath": "projects/designer-health/slide-assets/slide-07/storyboard-beat-01-invite/preview.png",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-07/storyboard-beat-01-invite/preview.png"
+        },
+        {
+          "label": "Shadow-Free Preview",
+          "path": "projects/designer-health/slide-assets/slide-07/storyboard-beat-01-invite/shadow-free.png"
+        },
+        {
+          "label": "Transparent PNG",
+          "path": "projects/designer-health/slide-assets/slide-07/storyboard-beat-01-invite/cutout.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Locked Source Version",
+          "path": "projects/designer-health/slide-figures/slide-06/versions/version-000125--slide-07-v113-beat1-gemini-clean-v2"
+        },
+        {
+          "label": "Locked Source Preview",
+          "path": "projects/designer-health/slide-figures/slide-06/versions/version-000125--slide-07-v113-beat1-gemini-clean-v2/image-01.jpg"
+        },
+        {
+          "label": "Shadow-Free Cleanup Run",
+          "path": "projects/designer-health/slide-assets/slide-07/source-runs/beat-01-invite-v125-flat-v1/gemini/v01-clean"
+        },
+        {
+          "label": "Shadow-Free Cleanup Preview",
+          "path": "projects/designer-health/slide-assets/slide-07/source-runs/beat-01-invite-v125-flat-v1/gemini/v01-clean/image-01.jpg"
+        }
+      ],
+      "tags": [
+        "slide-07",
+        "storyboard",
+        "beat-1",
+        "invite"
+      ],
+      "notes": [
+        "Locked to slide 7 version 000125 as the canonical beat-1 graphic.",
+        "Transparent cutout is derived from a Gemini cleanup pass that removes the visible shadow while preserving the phone, secure-link card, baseline, and 1-marker geometry."
+      ]
+    },
+    {
+      "assetId": "asset-000015",
+      "id": "storyboard-beat-02-adaptive-interview",
+      "label": "Slide 7 Beat 2 Adaptive Interview",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "storyboard-beat",
+      "summary": "Gemini cleanup rerender of the official slide-7 interview beat for HTML reconstruction.",
+      "previewPath": "projects/designer-health/slide-assets/slide-07/storyboard-beat-02-adaptive-interview/preview.jpg",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-07/storyboard-beat-02-adaptive-interview/preview.jpg"
+        },
+        {
+          "label": "Transparent PNG",
+          "path": "projects/designer-health/slide-assets/slide-07/storyboard-beat-02-adaptive-interview/cutout.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "projects/designer-health/slide-assets/slide-07/source-runs/beat-02-adaptive-interview/gemini/v02-clean"
+        },
+        {
+          "label": "Source Preview",
+          "path": "projects/designer-health/slide-assets/slide-07/source-runs/beat-02-adaptive-interview/gemini/v02-clean/image-01.jpg"
+        }
+      ],
+      "tags": [
+        "slide-07",
+        "storyboard",
+        "beat-2",
+        "interview"
+      ],
+      "notes": [
+        "Accepted beat asset derived from official slide 7 version 000113 via beat-2 cleanup pass."
+      ]
+    },
+    {
+      "assetId": "asset-000016",
+      "id": "storyboard-beat-03-brief-prepared",
+      "label": "Slide 7 Beat 3 Brief Prepared",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "storyboard-beat",
+      "summary": "Gemini cleanup rerender of the official slide-7 brief beat for HTML reconstruction.",
+      "previewPath": "projects/designer-health/slide-assets/slide-07/storyboard-beat-03-brief-prepared/preview.jpg",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-07/storyboard-beat-03-brief-prepared/preview.jpg"
+        },
+        {
+          "label": "Transparent PNG",
+          "path": "projects/designer-health/slide-assets/slide-07/storyboard-beat-03-brief-prepared/cutout.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "projects/designer-health/slide-assets/slide-07/source-runs/beat-03-brief-prepared/gemini/v01-clean"
+        },
+        {
+          "label": "Source Preview",
+          "path": "projects/designer-health/slide-assets/slide-07/source-runs/beat-03-brief-prepared/gemini/v01-clean/image-01.jpg"
+        }
+      ],
+      "tags": [
+        "slide-07",
+        "storyboard",
+        "beat-3",
+        "brief"
+      ],
+      "notes": [
+        "Accepted beat asset derived from official slide 7 version 000113 via beat-3 cleanup pass."
+      ]
+    },
+    {
+      "assetId": "asset-000017",
+      "id": "storyboard-beat-04-clinician-prepared",
+      "label": "Slide 7 Beat 4 Clinician Prepared",
+      "status": "reference",
+      "kind": "generated-image",
+      "role": "storyboard-beat",
+      "summary": "Gemini cleanup rerender of the official slide-7 clinician beat for HTML reconstruction.",
+      "previewPath": "projects/designer-health/slide-assets/slide-07/storyboard-beat-04-clinician-prepared/preview.jpg",
+      "files": [
+        {
+          "label": "Preview",
+          "path": "projects/designer-health/slide-assets/slide-07/storyboard-beat-04-clinician-prepared/preview.jpg"
+        },
+        {
+          "label": "Transparent PNG",
+          "path": "projects/designer-health/slide-assets/slide-07/storyboard-beat-04-clinician-prepared/cutout.png"
+        }
+      ],
+      "sourceFiles": [
+        {
+          "label": "Source Run",
+          "path": "projects/designer-health/slide-assets/slide-07/source-runs/beat-04-clinician-prepared/gemini/v03-clean"
+        },
+        {
+          "label": "Source Preview",
+          "path": "projects/designer-health/slide-assets/slide-07/source-runs/beat-04-clinician-prepared/gemini/v03-clean/image-01.jpg"
+        }
+      ],
+      "tags": [
+        "slide-07",
+        "storyboard",
+        "beat-4",
+        "clinician"
+      ],
+      "notes": [
+        "Accepted beat asset derived from official slide 7 version 000113 via beat-4 cleanup pass.",
+        "Transparent cutout is now extracted directly from Gemini v03-clean by clearing only the border-connected white so the baseline and 4-marker remain provider-native."
+      ]
+    }
+  ]
+}

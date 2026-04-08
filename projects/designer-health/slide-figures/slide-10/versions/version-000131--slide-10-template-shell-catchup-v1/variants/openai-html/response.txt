@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Recovered visit time creates real capacity</title>
+<style>
+  :root{
+    --bg:#f7f5ef;
+    --bg2:#fbfaf7;
+    --ink:#14213d;
+    --muted:#64748b;
+    --line:#d9e1ea;
+    --line2:#e7edf3;
+    --accent:#157a74;
+    --accent-soft:#e7f7f3;
+    --blue-soft:#eef4f8;
+    --shadow:0 28px 60px rgba(20,33,61,.10), 0 10px 24px rgba(20,33,61,.05);
+  }
+  *{box-sizing:border-box}
+  html,body{
+    width:1920px;
+    height:1080px;
+    margin:0;
+    overflow:hidden;
+    background:linear-gradient(180deg,var(--bg2) 0%, var(--bg) 100%);
+    font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color:var(--ink);
+  }
+  .slide{
+    position:relative;
+    width:1920px;
+    height:1080px;
+    background:
+      radial-gradient(1100px 520px at 72% 18%, rgba(224,237,242,.65) 0%, rgba(224,237,242,0) 60%),
+      radial-gradient(900px 420px at 28% 76%, rgba(242,247,240,.85) 0%, rgba(242,247,240,0) 58%),
+      linear-gradient(180deg,#fbfaf7 0%, #f6f4ee 100%);
+  }
+  .grain{
+    position:absolute; inset:0; pointer-events:none; opacity:.06;
+    background-image:
+      radial-gradient(circle at 25% 35%, rgba(0,0,0,.8) .6px, transparent .7px),
+      radial-gradient(circle at 75% 60%, rgba(0,0,0,.8) .6px, transparent .7px),
+      radial-gradient(circle at 45% 80%, rgba(0,0,0,.8) .6px, transparent .7px);
+    background-size: 180px 180px, 220px 220px, 260px 260px;
+  }
+
+  .header{
+    position:absolute;
+    left:140px;
+    top:120px;
+    width:1280px;
+  }
+  .title{
+    font-size:58px;
+    line-height:1.04;
+    font-weight:760;
+    letter-spacing:-0.035em;
+    margin:0 0 18px 0;
+  }
+  .subtitle{
+    font-size:25px;
+    line-height:1.35;
+    color:var(--muted);
+    margin:0;
+    letter-spacing:-0.02em;
+  }
+
+  .hero{
+    position:absolute;
+    left:138px;
+    right:138px;
+    top:288px;
+    height:560px;
+    border-radius:34px;
+    background:linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.84));
+    border:1px solid rgba(218,226,234,.9);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(520px 180px at 16% 86%, rgba(21,122,116,.045), transparent 70%),
+      radial-gradient(480px 180px at 78% 14%, rgba(74,111,143,.06), transparent 72%);
+    pointer-events:none;
+  }
+
+  .equation{
+    position:absolute;
+    inset:0;
+    display:grid;
+    grid-template-columns: 1.05fr 64px 1.1fr 82px 1.55fr;
+    align-items:center;
+    padding:56px 72px 94px 72px;
+    column-gap:14px;
+  }
+
+  .lhs{
+    padding-left:12px;
+  }
+  .lhs .big{
+    font-size:70px;
+    line-height:0.95;
+    font-weight:790;
+    color:var(--accent);
+    letter-spacing:-0.05em;
+    margin:0 0 10px 0;
+  }
+  .lhs .small{
+    font-size:28px;
+    line-height:1.2;
+    color:#586f92;
+    font-weight:530;
+    letter-spacing:-0.03em;
+  }
+
+  .arrowWrap,.eqWrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+  }
+
+  .assumptions{
+    position:relative;
+    padding-left:56px;
+    align-self:stretch;
+    display:flex;
+    align-items:center;
+  }
+  .assumptions::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:54px;
+    bottom:54px;
+    width:2px;
+    border-radius:2px;
+    background:linear-gradient(180deg, transparent 0%, var(--line) 6%, var(--line) 94%, transparent 100%);
+  }
+  .assumption-list{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  .assumption-list li{
+    position:relative;
+    padding-left:22px;
+    margin:18px 0;
+    color:#5b6f90;
+    font-size:22px;
+    line-height:1.18;
+    letter-spacing:-0.02em;
+  }
+  .assumption-list li::before{
+    content:"•";
+    position:absolute;
+    left:0;
+    top:-1px;
+    color:#c0c9d5;
+    font-size:30px;
+    line-height:1;
+  }
+
+  .rhs{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    min-width:0;
+  }
+  .valueRow{
+    display:flex;
+    align-items:flex-end;
+    gap:14px;
+    white-space:nowrap;
+  }
+  .dollar{
+    font-size:110px;
+    line-height:0.92;
+    font-weight:810;
+    letter-spacing:-0.055em;
+    color:#111b3a;
+  }
+  .per{
+    font-size:34px;
+    line-height:1;
+    color:#64748b;
+    font-weight:500;
+    margin-bottom:16px;
+    letter-spacing:-0.03em;
+  }
+  .pill{
+    margin-top:32px;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 22px 14px 20px;
+    border-radius:999px;
+    background:linear-gradient(180deg, #eefbf7, #e8f8f3);
+    border:1px solid #bde8de;
+    color:#12746f;
+    font-weight:650;
+    font-size:18px;
+    letter-spacing:-0.02em;
+    box-shadow:0 8px 18px rgba(21,122,116,.08);
+  }
+  .pill .icon{
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    border:1.6px solid #8ad1c3;
+    display:grid;
+    place-items:center;
+    flex:0 0 auto;
+    background:white;
+  }
+
+  .bottom{
+    position:absolute;
+    left:72px;
+    right:72px;
+    bottom:34px;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:20px;
+  }
+  .sensitivity{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    color:#91a0b7;
+    font-size:13px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  .range{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+  }
+  .range .labels{
+    display:flex;
+    gap:28px;
+    margin-top:8px;
+    font-size:14px;
+    letter-spacing:-0.01em;
+    text-transform:none;
+    color:#92a1b8;
+    font-weight:520;
+  }
+  .range .labels span.active{
+    color:var(--accent);
+    font-weight:700;
+  }
+
+  .footghost{
+    position:absolute;
+    left:72px;
+    right:72px;
+    bottom:112px;
+    height:1px;
+    background:linear-gradient(90deg, transparent 0%, rgba(217,225,234,.28) 22%, rgba(217,225,234,.28) 78%, transparent 100%);
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="grain"></div>
+
+    <div class="header">
+      <h1 class="title">Recovered visit time creates real capacity.</h1>
+      <p class="subtitle">When recovered minutes become completed visits, the impact is meaningful.</p>
+    </div>
+
+    <section class="hero">
+      <div class="equation">
+        <div class="lhs">
+          <div class="big">+1 visit</div>
+          <div class="small">/ provider / day</div>
+        </div>
+
+        <div class="arrowWrap" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 44 44">
+            <path d="M8 22h24" fill="none" stroke="#94A3B8" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M24 11l11 11-11 11" fill="none" stroke="#94A3B8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="assumptions">
+          <ul class="assumption-list">
+            <li>220 clinic<br/>days</li>
+            <li>$125 / visit</li>
+            <li>40%<br/>contribution<br/>margin</li>
+          </ul>
+        </div>
+
+        <div class="eqWrap" aria-hidden="true">
+          <svg width="38" height="44" viewBox="0 0 38 44">
+            <path d="M8 16h22" fill="none" stroke="#94A3B8" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M8 28h22" fill="none" stroke="#94A3B8" stroke-width="2.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="rhs">
+          <div class="valueRow">
+            <div class="dollar">$11,000</div>
+            <div class="per">/ year</div>
+          </div>
+
+          <div class="pill">
+            <span class="icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14">
+                <path d="M2 7h7.5" stroke="#12746f" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M6.8 3.2L10.6 7l-3.8 3.8" fill="none" stroke="#12746f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            ~$917 / month break-even spend / provider
+          </div>
+        </div>
+      </div>
+
+      <div class="footghost"></div>
+
+      <div class="bottom">
+        <div class="sensitivity">
+          <span>Sensitivity</span>
+          <div>
+            <svg width="180" height="30" viewBox="0 0 180 30" aria-hidden="true">
+              <line x1="18" y1="12" x2="162" y2="12" stroke="#D5DEE8" stroke-width="2"/>
+              <circle cx="18" cy="12" r="4" fill="#A7B5C8"/>
+              <circle cx="90" cy="12" r="5.5" fill="#157A74"/>
+              <circle cx="162" cy="12" r="4" fill="#A7B5C8"/>
+            </svg>
+            <div class="labels">
+              <span>Cons.</span>
+              <span class="active">Base</span>
+              <span>Upside</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

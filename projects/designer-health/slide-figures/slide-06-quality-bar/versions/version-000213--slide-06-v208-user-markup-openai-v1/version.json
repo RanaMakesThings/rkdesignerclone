@@ -1,0 +1,12 @@
+{
+  "id": "version-000213",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000213--slide-06-v208-user-markup-openai-v1",
+  "label": "slide-06-v208-user-markup-openai-v1",
+  "status": "archived",
+  "createdAt": "2026-04-03T18:32:13.170Z",
+  "sourceKind": "fine-tune-draft",
+  "baseVersionId": "version-000208",
+  "legacySourcePaths": []
+}

@@ -1,0 +1,30 @@
+Create a premium 16:9 investor-deck central figure for Designer Health.
+
+Use the attached slide-07 version-107 image as the single composition anchor.
+Preserve it almost exactly. This is a surgical cleanup pass, not a redesign.
+
+Keep everything the same:
+- overall composition and spacing
+- all panels and their sizes
+- the secure-link phone
+- the patient and phone speech bubbles
+- the brief object in beat 3
+- the clinician with one tablet in beat 4
+- the existing labels and typography already present in version 107
+- the white background and restrained teal accent
+
+Change only one thing:
+- remove the small `Five days.` speech bubble entirely
+
+Important:
+- do not add any new text
+- do not move the other speech bubbles
+- do not change the brief object
+- do not add extra devices
+- do not redraw the overall slide structure
+- do not change the fonts or styling
+
+Style:
+- identical visual style to version 107
+- premium editorial healthcare illustration
+- grayscale with restrained teal accents

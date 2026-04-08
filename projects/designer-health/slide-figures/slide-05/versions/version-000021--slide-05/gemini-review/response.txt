@@ -1,0 +1,18 @@
+**1. Verdict**
+This figure is working exceptionally well. It successfully isolates the "history" wedge from the broader visit timeline and immediately justifies the focus without getting bogged down in how the product actually achieves it. The visual logic is tight, and the core argument easily lands in under three seconds.
+
+**2. What works**
+*   The visual extraction metaphor is instant: dropping the blue segment down from the slide-3 source bar makes it immediately clear what part of the workflow is being targeted.
+*   The three supporting reasons are punchy, conceptual, and perfectly grouped into a single, calm block that doesn't overwhelm the eye.
+*   The headline is strong, opinionated, and directly supported by the visual hierarchy below it.
+
+**3. What is still broken**
+*   The visual "extraction" relies entirely on color matching; the slide lacks a structural cue to show that the bottom box was pulled out of the top bar.
+*   The text formatting for "History reconstruction" changes between the top bar (single line, smaller) and the bottom box (two lines, larger), which slightly weakens the 1:1 visual mapping of the object.
+*   The three supporting reasons in the white box lack actual bullet points, making them read slightly like a stacked paragraph rather than three distinct, fast-scanning arguments.
+
+**4. Is this slide still leaking slide-4 work?**
+No. This slide successfully stays in the "why" space rather than the "how" space. The three reasons provided (can begin before, repeated, time-variable) are inherent characteristics of the medical history process itself, not descriptions of Designer's specific technological mechanism. It perfectly sets the stage for slide 4 to explain the actual solution.
+
+**5. Best next move**
+Add a subtle visual connector to emphasize the extraction action, such as faint, light-gray diagonal lines connecting the bottom corners of the top blue segment to the top corners of the lower blue box. Standardize the typography of "History reconstruction" across both elements so they look like the exact same object being magnified, and add standard, minimal bullet points to the three reasons to ensure they scan instantly as a list.

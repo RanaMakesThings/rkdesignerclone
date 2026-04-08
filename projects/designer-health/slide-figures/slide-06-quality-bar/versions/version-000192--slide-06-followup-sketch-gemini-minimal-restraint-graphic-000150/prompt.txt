@@ -1,0 +1,102 @@
+We are making a single image graphic for a pitch deck or presentation.
+Treat the following input as a design spec, not as a conversational prompt.
+Return one polished 16:9 image concept that feels premium, intentional, and presentation-ready.
+Do not generate browser chrome, UI screenshots, device mockups, or a slide-within-a-slide.
+Do not add on-image text unless the spec explicitly asks for it.
+Avoid generic stock-photo energy, generic SaaS dashboard imagery, and weak filler composition.
+
+Variant direction: Minimal Restraint. Bias toward minimalism, whitespace, and reduction. Keep the image confident and resolved without becoming empty or generic.
+
+Design spec:
+We are getting close. This is a follow-up pass for a premium healthcare investor-deck figure about Vox.
+
+Use the attached images in this order:
+- attached image 1 = current-family reference showing the overall premium composition and adaptive interview vibe
+- attached image 2 = another current-family reference showing the main chamber and right-edge card emergence
+- attached image 3 = another current-family reference in the same family
+- attached image 4 = hand-drawn structural sketch and should be treated as the PRIMARY missing-piece reference when it conflicts with the other images
+
+What is working in the current family:
+- the left side feels like adaptive interviewing, not just static processing
+- the central Vox chamber has the right premium white-background investor-deck feel
+- the right-edge card often shoots out / extrudes from the machine in a compelling way
+
+What is NOT working yet:
+- the right side is leaving value on the table
+- it often stops at just three generic labels like “What matters / What connects / What still needs verification” without feeling like a rich clinician-grade starting point
+- the internal story is not explicit enough about the handoff from adaptive interviewing to clinical reasoning / medical knowledge to report output
+
+Primary direction for this pass:
+Use the hand-drawn sketch as the missing structural idea.
+The figure should more clearly show:
+1. words from patient flowing into Vox from the upper left
+2. words from Vox flowing back out toward the lower left as adaptive follow-up
+3. the adaptive clinical interviewer as the first internal stage
+4. a second internal stage for clinical reasoning plus medical knowledge
+5. a clear handoff from stage one to stage two
+6. a compact report / clinician-grade starting point emerging from the right edge with more actual value inside it
+
+This is NOT:
+- a product UI
+- a dashboard
+- a dense explainer
+- a busy infographic
+- a literal software mockup
+
+This IS:
+- a premium investor-deck concept image
+- elegant
+- restrained
+- clinically serious
+- modern
+- easy to understand at a glance
+
+Style:
+- white background
+- grayscale / off-white base
+- restrained teal / blue accent
+- rounded geometry
+- soft shadows
+- editorial / vector feel
+- premium industrial-design aesthetic
+
+Slide copy context:
+Vox is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.
+Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.
+By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.
+
+Preferred figure labels if text is used:
+- Vox
+- Adaptive clinical interviewer
+- What matters
+- What connects
+- What still needs verification
+- Clinician-grade starting point
+
+Left conversational example to imply in the figure:
+- My back has been hurting...
+- Vox: What makes it worse?
+- It’s worse in the morning.
+- Vox: When did this start?
+- Started last Tuesday.
+
+Critical improvement:
+The right-side output should feel more like a concise, clinician-grade starting point with meaningful grouped content.
+Do not make it just a blank card or just three generic labels.
+It can imply things like:
+- chief complaint
+- onset / timeline
+- aggravating context
+- what still needs confirmation
+But keep it compact and elegant, not like a software form.
+
+Important:
+- preserve the good card-extrusion / ejection feeling from the better current references
+- keep the right card secondary, but smarter and more valuable
+- keep the internal middle calmer and more premium than the hand sketch; do not make it look like a cartoon diagram
+- the sketch provides the conceptual architecture, not the visual finish
+- avoid generic AI box tropes and avoid literal brain/database icons
+
+Success condition:
+In 2 seconds, the viewer should think:
+Vox actively interviews, reasons clinically, and hands the clinician a better starting point before the visit begins.

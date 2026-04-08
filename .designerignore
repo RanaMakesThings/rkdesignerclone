@@ -1,0 +1,12 @@
+.next/
+_handoff/
+.playwright-cli/
+output/
+**/exports/**
+**/experiments/**
+**/archive/**
+**/tmp/**
+**/raw/**
+**/response.json
+**/*.log
+**/.DS_Store

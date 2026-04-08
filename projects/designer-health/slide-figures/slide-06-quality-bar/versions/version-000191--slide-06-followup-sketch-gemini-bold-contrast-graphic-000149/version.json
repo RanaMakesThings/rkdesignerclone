@@ -1,0 +1,25 @@
+{
+  "id": "version-000191",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000191--slide-06-followup-sketch-gemini-bold-contrast-graphic-000149",
+  "label": "slide-06-followup-sketch-gemini-bold-contrast-graphic-000149",
+  "status": "archived",
+  "createdAt": "2026-04-03T16:52:45.680Z",
+  "sourceKind": "presentation-image-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/presentation-images/vox-slide6-followup-sketch-override-2026-04-03/gemini/version-02--bold-contrast",
+    "output/figures/presentation-images/vox-slide6-followup-sketch-override-2026-04-03/gemini/version-02--bold-contrast/image-01.jpg"
+  ],
+  "runId": "graphic-batch-000031",
+  "attempt": 2,
+  "sourceGraphicId": "graphic-000149",
+  "sourceBatchId": "graphic-batch-000031",
+  "sourceBatchSlug": "vox-slide6-followup-sketch-override-2026-04-03",
+  "sourceProvider": "gemini",
+  "sourceVariantId": "v02-bold",
+  "sourceVariantLabel": "Bold Contrast",
+  "sourcePath": "output/figures/presentation-images/vox-slide6-followup-sketch-override-2026-04-03/gemini/version-02--bold-contrast",
+  "sourceImagePath": "output/figures/presentation-images/vox-slide6-followup-sketch-override-2026-04-03/gemini/version-02--bold-contrast/image-01.jpg"
+}

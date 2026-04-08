@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Health - Vox Architecture</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FAFAFB;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            color: #0F172A;
+        }
+
+        .slide-container {
+            position: relative;
+            width: 1920px;
+            height: 1080px;
+            background-color: #FAFAFB;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            margin: 0 0 20px 0;
+            color: #0F172A;
+        }
+
+        h1 span {
+            color: #2A9D8F;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #475569;
+            margin: 0;
+            max-width: 1400px;
+        }
+
+        /* Header Positioning */
+        .header {
+            position: absolute;
+            top: 80px;
+            left: 100px;
+        }
+
+        /* SVG Ribbons Layer */
+        .ribbons-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Left Bubbles */
+        .bubble {
+            position: absolute;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 500;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.03));
+        }
+
+        .bubble-text {
+            position: absolute;
+            left: 40px;
+            right: 20px;
+            z-index: 11;
+        }
+
+        .bubble-patient { color: #334155; }
+        .bubble-vox { color: #0F766E; font-weight: 600; }
+
+        /* Center Container */
+        .center-container {
+            position: absolute;
+            top: 410px;
+            left: 530px;
+            width: 780px;
+            height: 520px;
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            z-index: 5;
+        }
+
+        .center-header {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .center-logo {
+            font-size: 46px;
+            font-weight: 700;
+            color: #2A9D8F;
+            margin: 0;
+            letter-spacing: -1.5px;
+            line-height: 1;
+        }
+
+        .center-subtitle {
+            font-size: 15px;
+            color: #0F172A;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        /* The Core Rotating Ring */
+        .adaptive-ring-container {
+            position: absolute;
+            top: 170px;
+            left: 170px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Repeating light-to-dark gradient segments to imply spinning */
+            background: conic-gradient(from -45deg, 
+                #E6F4F1 0deg 10deg, #2A9D8F 90deg, 
+                #E6F4F1 90deg 100deg, #2A9D8F 180deg, 
+                #E6F4F1 180deg 190deg, #2A9D8F 270deg, 
+                #E6F4F1 270deg 280deg, #2A9D8F 360deg);
+            box-shadow: 0 4px 12px rgba(42, 157, 143, 0.15);
+            z-index: 10;
+        }
+
+        .adaptive-ring-inner {
+            width: 144px;
+            height: 144px;
+            background: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.04);
+            gap: 4px;
+        }
+
+        .adaptive-ring-inner span {
+            font-size: 12px;
+            font-weight: 600;
+            color: #0F172A;
+            line-height: 1.2;
+            text-align: center;
+            letter-spacing: -0.2px;
+        }
+
+        /* Right Pills */
+        .pill {
+            position: absolute;
+            left: 440px;
+            width: 260px;
+            height: 48px;
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            z-index: 10;
+        }
+
+        .pill-dot {
+            width: 6px;
+            height: 6px;
+            background: #2A9D8F;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        .pill-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: #0F172A;
+        }
+
+        /* Right Document */
+        .document-container {
+            position: absolute;
+            top: 560px;
+            left: 1520px;
+            z-index: 10;
+        }
+
+        .document-label {
+            position: absolute;
+            top: -40px;
+            left: -60px;
+            width: 400px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #0F172A;
+            letter-spacing: -0.5px;
+        }
+
+        .doc-back {
+            position: absolute;
+            top: 16px;
+            left: -26px;
+            width: 280px;
+            height: 320px;
+            background: #1E6B61;
+            border-radius: 16px;
+            z-index: 1;
+        }
+
+        .doc-front {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 320px;
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            z-index: 2;
+            padding: 32px 24px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .skeleton-line {
+            height: 10px;
+            background: #E2E8F0;
+            border-radius: 5px;
+        }
+        .skeleton-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .skeleton-line.w-full { width: 100%; }
+        .skeleton-line.w-3-4 { width: 75%; }
+        .skeleton-line.w-1-2 { width: 50%; }
+        .skeleton-line.w-1-3 { width: 33%; }
+
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Header -->
+    <div class="header">
+        <h1><span>Vox</span> is the adaptive interviewing system that takes on the<br>hard clinical reasoning work needed to turn patient story<br>into a clinician-grade starting point.</h1>
+        <p class="subtitle">Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>what still needs verification before the visit begins.</p>
+    </div>
+
+    <!-- SVG Ribbons Layer -->
+    <svg class="ribbons-layer" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Left Ribbons (Patient -> Gray, Vox -> Teal) -->
+        <path d="M 460 492 C 580 492, 600 630, 705 630" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 460 576 C 560 576, 600 650, 700 650" stroke="#66B2A8" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 460 660 C 550 660, 600 670, 698 670" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 460 744 C 560 744, 600 690, 700 690" stroke="#66B2A8" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 460 828 C 580 828, 600 710, 705 710" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round"/>
+
+        <!-- Center to Pills Ribbons -->
+        <!-- Main trunk exiting circle -->
+        <path d="M 880 670 L 950 670" stroke="#A7D7D1" stroke-width="4" stroke-linecap="round"/>
+        <!-- Branches to pills -->
+        <path d="M 950 670 C 950 580, 980 580, 1010 580" stroke="#A7D7D1" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 950 670 L 1010 670" stroke="#A7D7D1" stroke-width="4" stroke-linecap="round"/>
+        <path d="M 950 670 C 950 760, 980 760, 1010 760" stroke="#A7D7D1" stroke-width="4" stroke-linecap="round"/>
+        
+        <!-- Node circle where branches split -->
+        <circle cx="950" cy="670" r="6" fill="#FFFFFF" stroke="#A7D7D1" stroke-width="3"/>
+
+        <!-- Container to Document Ribbons -->
+        <!-- Background flare shape -->
+        <path d="M 1310 670 L 1480 640 L 1480 800 L 1310 700 Z" fill="#E6F4F1" opacity="0.6"/>
+        <!-- Flow lines -->
+        <path d="M 1310 580 C 1400 580, 1400 720, 1480 720" stroke="#A7D7D1" stroke-width="3" stroke-linecap="round"/>
+        <path d="M 1310 670 C 1400 670, 1400 750, 1480 750" stroke="#A7D7D1" stroke-width="3" stroke-linecap="round"/>
+        <path d="M 1310 760 C 1400 760, 1400 780, 1480 780" stroke="#A7D7D1" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Left Input Bubbles -->
+    <div class="bubble" style="top: 460px; left: 100px; width: 360px; height: 64px;">
+        <svg width="360" height="64" viewBox="0 0 360 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 0;">
+            <path d="M20 0.5H359.5V63.5H20L0.5 32L20 0.5Z" fill="#F8FAFC" stroke="#CBD5E1"/>
+        </svg>
+        <span class="bubble-text bubble-patient">My back has been hurting...</span>
+    </div>
+
+    <div class="bubble" style="top: 544px; left: 120px; width: 340px; height: 64px;">
+        <svg width="340" height="64" viewBox="0 0 340 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 0;">
+            <path d="M20 0.5H339.5V63.5H20L0.5 32L20 0.5Z" fill="#E6F4F1" stroke="#2A9D8F"/>
+        </svg>
+        <span class="bubble-text bubble-vox">Vox: What makes it worse?</span>
+    </div>
+
+    <div class="bubble" style="top: 628px; left: 100px; width: 360px; height: 64px;">
+        <svg width="360" height="64" viewBox="0 0 360 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 0;">
+            <path d="M20 0.5H359.5V63.5H20L0.5 32L20 0.5Z" fill="#F8FAFC" stroke="#CBD5E1"/>
+        </svg>
+        <span class="bubble-text bubble-patient">It's worse in the morning.</span>
+    </div>
+
+    <div class="bubble" style="top: 712px; left: 120px; width: 340px; height: 64px;">
+        <svg width="340" height="64" viewBox="0 0 340 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 0;">
+            <path d="M20 0.5H339.5V63.5H20L0.5 32L20 0.5Z" fill="#E6F4F1" stroke="#2A9D8F"/>
+        </svg>
+        <span class="bubble-text bubble-vox">Vox: When did this start?</span>
+    </div>
+
+    <div class="bubble" style="top: 796px; left: 100px; width: 360px; height: 64px;">
+        <svg width="360" height="64" viewBox="0 0 360 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 0;">
+            <path d="M20 0.5H359.5V63.5H20L0.5 32L20 0.5Z" fill="#F8FAFC" stroke="#CBD5E1"/>
+        </svg>
+        <span class="bubble-text bubble-patient">Started last Tuesday.</span>
+    </div>
+
+    <!-- Center Processing Container -->
+    <div class="center-container">
+        <div class="center-header">
+            <h2 class="center-logo">Vox</h2>
+            <p class="center-subtitle">Adaptive clinical interviewer</p>
+        </div>
+
+        <!-- The Core Rotating Ring (Updated per requirements) -->
+        <div class="adaptive-ring-container">
+            <div class="adaptive-ring-inner">
+                <span>Medical knowledge</span>
+                <span>Clinical reasoning</span>
+                <span>Guided follow-up</span>
+            </div>
+        </div>
+
+        <!-- Right Pills inside container -->
+        <div class="pill" style="top: 146px;">
+            <div class="pill-dot"></div>
+            <span class="pill-text">What matters</span>
+        </div>
+        <div class="pill" style="top: 236px;">
+            <div class="pill-dot"></div>
+            <span class="pill-text">What connects</span>
+        </div>
+        <div class="pill" style="top: 326px;">
+            <div class="pill-dot"></div>
+            <span class="pill-text">What still needs<br>verification</span>
+        </div>
+    </div>
+
+    <!-- Right Output Document -->
+    <div class="document-container">
+        <div class="document-label">Clinician-grade starting point</div>
+        <div class="doc-back"></div>
+        <div class="doc-front">
+            <div class="skeleton-group">
+                <div class="skeleton-line w-1-3"></div>
+                <div class="skeleton-line w-full"></div>
+                <div class="skeleton-line w-3-4"></div>
+            </div>
+            <div style="height: 1px; background: #F1F5F9; margin: 4px 0;"></div>
+            <div class="skeleton-group">
+                <div class="skeleton-line w-1-2"></div>
+                <div class="skeleton-line w-full"></div>
+                <div class="skeleton-line w-3-4"></div>
+            </div>
+            <div style="height: 1px; background: #F1F5F9; margin: 4px 0;"></div>
+            <div class="skeleton-group">
+                <div class="skeleton-line w-1-3"></div>
+                <div class="skeleton-line w-full"></div>
+                <div class="skeleton-line w-3-4"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

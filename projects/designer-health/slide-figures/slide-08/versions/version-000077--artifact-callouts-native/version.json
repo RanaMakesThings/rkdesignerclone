@@ -1,0 +1,14 @@
+{
+  "id": "version-000077",
+  "slideId": "slide-08",
+  "slideDir": "projects/designer-health/slide-figures/slide-08",
+  "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000077--artifact-callouts-native",
+  "label": "artifact-callouts-native",
+  "status": "archived",
+  "createdAt": "2026-03-31T21:13:43.177Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/slide-08-artifact-callouts"
+  ]
+}

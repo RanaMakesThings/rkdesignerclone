@@ -1,0 +1,21 @@
+{
+  "provider": "gpt",
+  "verdict": "blocker",
+  "rationale": "The candidate is materially resolved, but it still contains clear visible regressions versus a finished deck slide: the locked subheader is overlapped by the oversized title, the bottom ribbon/footer area drifts into the shell footer line, and a stray broken-image/stub artifact remains visible at the lower right of the ribbon area.",
+  "blockers": [
+    "Locked subheader is visibly overlapped/clipped by the headline at the top left.",
+    "Bottom ribbon/footer treatment is misaligned and collides with the footer shell area instead of sitting cleanly above it.",
+    "A visible broken-image/stub placeholder artifact appears at the lower right of the ribbon area."
+  ],
+  "nextMove": "Fix the top text stack spacing so the headline and locked subheader separate cleanly, remove the stray broken-image artifact, and re-anchor the bottom ribbon above the footer line/logo with proper family alignment.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate is materially resolved, but it still contains clear visible regressions versus a finished deck slide: the locked subheader is overlapped by the oversized title, the bottom ribbon/footer area drifts into the shell footer line, and a stray broken-image/stub artifact remains visible at the lower right of the ribbon area.",
+    "blockers": [
+      "Locked subheader is visibly overlapped/clipped by the headline at the top left.",
+      "Bottom ribbon/footer treatment is misaligned and collides with the footer shell area instead of sitting cleanly above it.",
+      "A visible broken-image/stub placeholder artifact appears at the lower right of the ribbon area."
+    ],
+    "nextMove": "Fix the top text stack spacing so the headline and locked subheader separate cleanly, remove the stray broken-image artifact, and re-anchor the bottom ribbon above the footer line/logo with proper family alignment."
+  }
+}

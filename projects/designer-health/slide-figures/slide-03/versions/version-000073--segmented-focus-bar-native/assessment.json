@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-03-24T18:54:17.169Z",
+  "slug": "slide-03-segmented-focus-bar",
+  "family": "segmented_focus_bar",
+  "provider": "openai",
+  "policyPath": "/Users/kabeer/Code/rkdesignerclone/scripts/figures/workflow-policy.json",
+  "summary": "The figure faithfully presents the segmented focus bar with the History reconstruction segment highlighted and associated callout, effectively supporting the message that more efficient visits increase supply.",
+  "issues": [],
+  "scores": {
+    "overall": 9,
+    "categories": {
+      "specFidelity": 10,
+      "focalHierarchy": 9,
+      "conceptualClarity": 9,
+      "deckConsistency": 9,
+      "restraintPolish": 8,
+      "readabilityAtSlideScale": 9
+    }
+  },
+  "suggestedUpgrades": [
+    "Consider slightly increasing the contrast or font weight on the 'Why this matters' callout bullet points to improve legibility at a distance without overpowering the main focal segment.",
+    "The bar label 'TYPICAL VISIT' could be made marginally larger or darker to improve reading ease without stealing focus.",
+    "The callout's border radius and shadow appear consistent but a subtle increase in shadow softness might enhance the premium feel."
+  ],
+  "pass": true
+}

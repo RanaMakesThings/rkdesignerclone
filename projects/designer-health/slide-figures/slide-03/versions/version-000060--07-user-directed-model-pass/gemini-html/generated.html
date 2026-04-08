@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vox Pitch Deck Slide</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-color: #F5F5F2;
+    --card-bg: #FFFFFF;
+    --text-main: #1A2625;
+    --text-muted: #6B7A79;
+    --text-light: #9AA6A6;
+    --color-blue: #5C8DC4;
+    --color-lt-gray: #E4E8E8;
+    --color-dk-gray: #A8B2B6;
+    --color-green: #4E8077;
+    --font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Dark background outside the slide */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .slide-container {
+    width: 1920px;
+    height: 1080px;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slide-card {
+    width: 1760px;
+    height: 920px;
+    background-color: var(--card-bg);
+    border-radius: 24px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.03);
+    padding: 70px 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header Section */
+  .header {
+    margin-bottom: 60px;
+  }
+  .header h1 {
+    font-size: 52px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0 0 8px 0;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+  }
+  .header h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin: 0;
+    letter-spacing: -0.5px;
+  }
+
+  /* Top Anatomy Section */
+  .anatomy-section {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-anatomy-bar {
+    display: flex;
+    width: 65%;
+    height: 64px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .ma-blue {
+    flex: 1.2;
+    background-color: var(--color-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .ma-lt {
+    flex: 0.8;
+    background-color: var(--color-lt-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .ma-dk {
+    flex: 1;
+    background-color: var(--color-dk-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .bracket-wrapper {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bracket-inner {
+    width: 40%; /* Matches flex 1.2 out of 3 */
+  }
+  .bracket-lines {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+  .bracket-tick {
+    width: 1px;
+    height: 8px;
+    background-color: var(--color-dk-gray);
+  }
+  .bracket-horizontal {
+    flex-grow: 1;
+    border-top: 1px solid var(--color-dk-gray);
+    margin-top: 7px;
+  }
+  .bracket-center-tick {
+    width: 1px;
+    height: 8px;
+    background-color: var(--color-dk-gray);
+    margin: 0 auto;
+  }
+  .bracket-text {
+    text-align: center;
+    margin-top: 12px;
+  }
+  .bracket-text-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-main);
+  }
+  .bracket-text-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 6px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  /* Transition Text */
+  .transition-text {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 60px;
+    letter-spacing: -0.3px;
+  }
+
+  /* Bottom Split Layout */
+  .bottom-split {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    flex-grow: 1;
+  }
+
+  /* Common Bottom Styles */
+  .kicker {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0 0 12px 0;
+    letter-spacing: -0.5px;
+  }
+  .section-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+    max-width: 90%;
+  }
+
+  /* Mechanism Section (Left) */
+  .mech-grid {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 20px 24px;
+    align-items: center;
+  }
+  .row-label {
+    text-align: right;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+  }
+  .mech-bar-container {
+    display: flex;
+    align-items: center;
+  }
+  .mech-bar {
+    display: flex;
+    height: 48px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .mb-blue { background-color: var(--color-blue); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-weight: 600; font-size: 14px; }
+  .mb-lt { background-color: var(--color-lt-gray); }
+  .mb-dk { background-color: var(--color-dk-gray); }
+  
+  /* Mechanism Math: Normal = 100 + 40 + 60 = 200px */
+  .mech-normal { width: 200px; }
+  .mech-normal .mb-blue { width: 100px; }
+  .mech-normal .mb-lt { width: 40px; }
+  .mech-normal .mb-dk { width: 60px; }
+
+  /* Mechanism Math: Short = 50 + 40 + 60 = 150px. Saved = 50px */
+  .mech-short { width: 150px; }
+  .mech-short .mb-blue { width: 50px; }
+  .mech-short .mb-lt { width: 40px; }
+  .mech-short .mb-dk { width: 60px; }
+
+  .mech-saved-box {
+    width: 46px; /* 50px gap - 4px margin */
+    height: 44px;
+    border: 2px dashed var(--color-dk-gray);
+    border-radius: 6px;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    box-sizing: border-box;
+  }
+
+  .mech-caption-area {
+    margin-top: -10px;
+  }
+  .mech-arrow-line {
+    display: flex;
+    align-items: center;
+    width: 60px;
+    margin-left: 20px;
+    margin-bottom: 8px;
+    color: var(--text-main);
+  }
+  .mech-arrow-line span {
+    font-size: 18px;
+    line-height: 1;
+  }
+  .mech-arrow-line div {
+    height: 1px;
+    background-color: var(--text-main);
+    flex-grow: 1;
+    margin-left: -2px;
+  }
+  .mech-caption-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 4px;
+  }
+  .mech-caption-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.4;
+    font-weight: 500;
+    max-width: 280px;
+  }
+
+  /* Payoff Section (Right) */
+  .payoff-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px 24px;
+    align-items: center;
+  }
+  .payoff-label {
+    text-align: right;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-main); /* Stronger label */
+    text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+  }
+  .payoff-bars-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  /* Payoff Math: Normal = 32 + 18 + 30 = 80px */
+  .pb-normal { width: 80px; display: flex; height: 36px; border-radius: 4px; overflow: hidden; }
+  .pb-normal .p-blue { width: 32px; background-color: var(--color-blue); }
+  .pb-normal .p-lt { width: 18px; background-color: var(--color-lt-gray); }
+  .pb-normal .p-dk { width: 30px; background-color: var(--color-dk-gray); }
+
+  /* Payoff Math: Short = 16 + 18 + 30 = 64px. Saved = 16px per visit */
+  .pb-short { width: 64px; display: flex; height: 36px; border-radius: 4px; overflow: hidden; }
+  .pb-short .p-blue { width: 16px; background-color: var(--color-blue); }
+  .pb-short .p-lt { width: 18px; background-color: var(--color-lt-gray); }
+  .pb-short .p-dk { width: 30px; background-color: var(--color-dk-gray); }
+
+  /* 5 normal = 400px. 5 short = 320px. Difference = 80px. New visit = 80px. Perfect fit. */
+  .pb-new {
+    width: 80px;
+    height: 36px;
+    background-color: var(--color-green);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .payoff-middle-text {
+    font-size: 13px;
+    color: var(--text-main);
+    font-weight: 500;
+  }
+  .payoff-middle-text strong {
+    font-weight: 800;
+  }
+  .payoff-middle-text span {
+    color: var(--text-muted);
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="slide-container">
+    <div class="slide-card">
+      
+      <!-- Header -->
+      <div class="header">
+        <h1>More efficient visits will increase supply.</h1>
+        <h2>Small per-visit gains compound.</h2>
+      </div>
+
+      <!-- Top Anatomy -->
+      <div class="anatomy-section">
+        <div class="main-anatomy-bar">
+          <div class="ma-blue">Story reconstruction</div>
+          <div class="ma-lt">Physical exam</div>
+          <div class="ma-dk">Decisions + counseling</div>
+        </div>
+        <div class="bracket-wrapper">
+          <div class="bracket-inner">
+            <div class="bracket-lines">
+              <div class="bracket-tick"></div>
+              <div class="bracket-horizontal"></div>
+              <div class="bracket-tick"></div>
+            </div>
+            <div class="bracket-center-tick"></div>
+            <div class="bracket-text">
+              <div class="bracket-text-title">Most variable minutes of the visit</div>
+              <div class="bracket-text-desc">Best target for upstream prep without losing quality<br>The part AI can help most</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transition -->
+      <div class="transition-text">
+        The story only works if the recovered minutes become a real new slot.
+      </div>
+
+      <!-- Bottom Split -->
+      <div class="bottom-split">
+        
+        <!-- Mechanism (Left) -->
+        <div class="mechanism">
+          <div class="kicker">MECHANISM</div>
+          <h3 class="section-title">Story time gets smaller</h3>
+          <p class="section-desc">Vox only compresses the blue portion. Physical exam and counseling stay fixed, so the saved piece reads as usable capacity.</p>
+          
+          <div class="mech-grid">
+            <div class="row-label">CURRENT<br>VISIT</div>
+            <div class="mech-bar-container">
+              <div class="mech-bar mech-normal">
+                <div class="mb-blue">Story</div>
+                <div class="mb-lt"></div>
+                <div class="mb-dk"></div>
+              </div>
+            </div>
+
+            <div class="row-label">WITH VOX<br>PREP</div>
+            <div class="mech-bar-container">
+              <div class="mech-bar mech-short">
+                <div class="mb-blue">Story</div>
+                <div class="mb-lt"></div>
+                <div class="mb-dk"></div>
+              </div>
+              <div class="mech-saved-box">Time<br>saved</div>
+            </div>
+
+            <div></div> <!-- Empty grid cell -->
+            <div class="mech-caption-area">
+              <div class="mech-arrow-line">
+                <span>←</span><div></div>
+              </div>
+              <div class="mech-caption-title">Al-assisted prep pulls this inward.</div>
+              <div class="mech-caption-desc">Blue shrinks. The clinical pieces stay fixed. The saved piece stays visible instead of disappearing.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payoff (Right) -->
+        <div class="payoff">
+          <div class="kicker">COMPOUNDED RESULT</div>
+          <h3 class="section-title">Same day: 5 visits becomes 6</h3>
+          <p class="section-desc">Make the state change obvious. The top row is today. The bottom row is the same clinic day after story reconstruction gets shorter across each visit.</p>
+          
+          <div class="payoff-grid">
+            <div class="payoff-label">TODAY<br>(5 VISITS)</div>
+            <div class="payoff-bars-row">
+              <div class="pb-normal"><div class="p-blue"></div><div class="p-lt"></div><div class="p-dk"></div></div>
+              <div class="pb-normal"><div class="p-blue"></div><div class="p-lt"></div><div class="p-dk"></div></div>
+              <div class="pb-normal"><div class="p-blue"></div><div class="p-lt"></div><div class="p-dk"></div></div>
+              <div class="pb-normal"><div class="p-blue"></div><div class="p-lt"></div><div class="p-dk"></div></div>
+              <div class="pb-normal"><div class="p-blue"></div><div class="p-lt"></div><div class="p-dk"></div></div>
+            </div>
+
+            <div></div> <!-- Empty grid cell -->
+            <div class="payoff-middle-text">
+              <strong>Repeated across 5 visits</strong> <span>-> enough recovered time to open one more patient slot.</span>
+            </div>
+
+            <div class="payoff-label">WITH VOX PREP<br>(6 VISITS)</div>
+            <div class="payoff-bars-row">
+              <div class="pb-short"><div class="p-blue"></div><div class="p-lt"></div><div class="p-dk"></div></div>
+              <div class="pb-short"><div class="p-blue"></div><div class="p-lt"></div><div class="p-dk"></div></div>
+              <div class="pb-short"><div class="p-blue"></div><div class="p-lt"></div><div class="p-dk"></div></div>
+              <div class="pb-short"><div class="p-blue"></div><div class="p-lt"></div><div class="p-dk"></div></div>
+              <div class="pb-short"><div class="p-blue"></div><div class="p-lt"></div><div class="p-dk"></div></div>
+              <div class="pb-new">New visit</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

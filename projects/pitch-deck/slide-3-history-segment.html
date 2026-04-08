@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pitch Deck Slide 3: History Reconstruction</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+      :root {
+        --page-bg: #ece8e0;
+        --slide-bg: #fcfbf8;
+        --ink: #17322d;
+        --muted: #6a7d78;
+        --line: #d9dfdb;
+        --history: #1d766c;
+        --history-deep: #165950;
+        --segment-mid: #c9cfcc;
+        --segment-light: #eef1ef;
+        --callout-bg: rgba(255, 255, 255, 0.95);
+        --callout-line: rgba(29, 118, 108, 0.42);
+        --shadow: 0 26px 70px rgba(23, 50, 45, 0.12);
+        --bar-width: 76%;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        padding: 28px;
+        font-family: 'Manrope', 'Avenir Next', sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(980px 480px at 12% 0%, rgba(34, 130, 118, 0.1) 0%, rgba(34, 130, 118, 0) 72%),
+          radial-gradient(820px 420px at 100% 10%, rgba(210, 198, 172, 0.34) 0%, rgba(210, 198, 172, 0) 76%),
+          linear-gradient(180deg, #f3efe8 0%, var(--page-bg) 100%);
+      }
+
+      .slide {
+        position: relative;
+        width: min(1440px, calc(100vw - 56px));
+        aspect-ratio: 16 / 9;
+        border-radius: 30px;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0) 28%),
+          linear-gradient(135deg, #fffdf8 0%, var(--slide-bg) 100%);
+        box-shadow: var(--shadow);
+      }
+
+      .slide::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(680px 320px at 82% 76%, rgba(29, 118, 108, 0.06) 0%, rgba(29, 118, 108, 0) 72%),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0) 36%);
+        pointer-events: none;
+      }
+
+      .inner {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        padding: 74px 82px 44px;
+      }
+
+      .header {
+        max-width: 980px;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: 'Space Grotesk', 'Avenir Next', sans-serif;
+        font-size: clamp(2.2rem, 3vw, 3.5rem);
+        line-height: 1.03;
+        letter-spacing: -0.04em;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      .chip {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 9px 16px;
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.66);
+        backdrop-filter: blur(10px);
+      }
+
+      .figure {
+        position: relative;
+        height: calc(100% - 178px);
+      }
+
+      .visit-wrap {
+        position: absolute;
+        left: 2%;
+        bottom: 23%;
+        width: var(--bar-width);
+      }
+
+      .visit-label {
+        margin: 0 0 12px 4px;
+        font-size: 0.83rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #81918c;
+      }
+
+      .visit-bar {
+        display: flex;
+        height: 208px;
+        width: 100%;
+        border-radius: 28px;
+        overflow: hidden;
+        border: 1px solid rgba(23, 50, 45, 0.05);
+        box-shadow:
+          0 18px 40px rgba(23, 50, 45, 0.12),
+          inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      }
+
+      .segment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 20px;
+        text-align: center;
+      }
+
+      .segment span {
+        display: block;
+        max-width: 18ch;
+      }
+
+      .segment-history {
+        flex: 0 0 44%;
+        position: relative;
+        z-index: 2;
+        background:
+          linear-gradient(135deg, #208378 0%, var(--history) 52%, var(--history-deep) 100%);
+        color: #f9fffd;
+      }
+
+      .segment-history::after {
+        content: '';
+        position: absolute;
+        inset: 12px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        pointer-events: none;
+      }
+
+      .segment-history span {
+        font-size: clamp(1.7rem, 2.3vw, 2.35rem);
+        font-weight: 800;
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+      }
+
+      .segment-decisions {
+        flex: 0 0 24%;
+        background: linear-gradient(180deg, #d2d8d5 0%, var(--segment-mid) 100%);
+        color: rgba(23, 50, 45, 0.72);
+      }
+
+      .segment-other {
+        flex: 1;
+        background: linear-gradient(180deg, #f4f6f4 0%, var(--segment-light) 100%);
+        color: rgba(23, 50, 45, 0.62);
+      }
+
+      .segment-decisions span,
+      .segment-other span {
+        font-size: 0.95rem;
+        font-weight: 650;
+        line-height: 1.2;
+      }
+
+      .callout {
+        position: absolute;
+        top: 19%;
+        right: 4%;
+        width: 36%;
+        padding: 28px 30px 26px;
+        border: 2px solid var(--callout-line);
+        border-radius: 28px;
+        background: var(--callout-bg);
+        box-shadow:
+          0 18px 50px rgba(23, 50, 45, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      }
+
+      .callout::before {
+        content: '';
+        position: absolute;
+        left: -306px;
+        top: 58%;
+        width: 306px;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(29, 118, 108, 0.75) 0%, rgba(29, 118, 108, 0.2) 100%);
+      }
+
+      .callout::after {
+        content: '';
+        position: absolute;
+        left: -316px;
+        top: calc(58% - 6px);
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--history);
+        box-shadow: 0 0 0 6px rgba(29, 118, 108, 0.12);
+      }
+
+      .callout-title {
+        margin: 0 0 14px;
+        font-family: 'Space Grotesk', 'Avenir Next', sans-serif;
+        font-size: clamp(1.55rem, 1.95vw, 2.1rem);
+        letter-spacing: -0.03em;
+      }
+
+      .callout ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 14px;
+      }
+
+      .callout li {
+        position: relative;
+        padding-left: 20px;
+        font-size: clamp(1.08rem, 1.3vw, 1.3rem);
+        font-weight: 700;
+        line-height: 1.22;
+      }
+
+      .callout li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.48em;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(29, 118, 108, 0.88);
+      }
+
+      .footnote {
+        position: absolute;
+        left: 82px;
+        right: 82px;
+        bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 0.78rem;
+        color: rgba(23, 50, 45, 0.48);
+      }
+
+      .footnote span:last-child {
+        text-align: right;
+      }
+
+      @media (max-width: 1200px) {
+        .inner {
+          padding: 56px 52px 34px;
+        }
+
+        .figure {
+          height: calc(100% - 160px);
+        }
+
+        .visit-wrap {
+          width: 82%;
+          bottom: 16%;
+        }
+
+        .visit-bar {
+          height: 170px;
+        }
+
+        .callout {
+          width: 40%;
+          top: 16%;
+          right: 2%;
+          padding: 22px 24px;
+        }
+
+        .footnote {
+          left: 52px;
+          right: 52px;
+        }
+      }
+
+      @media (max-width: 920px) {
+        body {
+          padding: 16px;
+        }
+
+        .slide {
+          width: min(100%, 900px);
+          aspect-ratio: auto;
+        }
+
+        .inner {
+          padding: 30px 22px 26px;
+        }
+
+        .figure {
+          height: auto;
+          margin-top: 30px;
+          display: grid;
+          gap: 22px;
+        }
+
+        .visit-wrap,
+        .callout,
+        .footnote {
+          position: static;
+          width: 100%;
+        }
+
+        .visit-wrap {
+          margin-top: 0;
+        }
+
+        .visit-bar {
+          height: 132px;
+          border-radius: 22px;
+        }
+
+        .segment-history span {
+          font-size: 1.35rem;
+        }
+
+        .segment-decisions span,
+        .segment-other span {
+          font-size: 0.9rem;
+        }
+
+        .callout {
+          padding: 22px;
+        }
+
+        .callout::before,
+        .callout::after {
+          display: none;
+        }
+
+        .footnote {
+          font-size: 0.75rem;
+          display: grid;
+          gap: 6px;
+        }
+
+        .footnote span:last-child {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide">
+      <div class="inner">
+        <header class="header">
+          <h1>History reconstruction is still the part to move upstream.</h1>
+          <div class="chips" aria-label="Figure labels">
+            <span class="chip">Typical visit</span>
+            <span class="chip">Conceptual split, not to scale</span>
+          </div>
+        </header>
+
+        <div class="figure">
+          <div class="visit-wrap">
+            <p class="visit-label">Typical visit</p>
+            <div class="visit-bar" aria-label="Typical visit segments">
+              <div class="segment segment-history">
+                <span>History reconstruction</span>
+              </div>
+              <div class="segment segment-decisions">
+                <span>Decisions + counseling</span>
+              </div>
+              <div class="segment segment-other">
+                <span>Everything else</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="callout" aria-label="Why this matters">
+            <h2 class="callout-title">Why this matters</h2>
+            <ul>
+              <li>Most variable minutes of the visit</li>
+              <li>Best target for upstream prep without losing quality</li>
+              <li>The part AI can help most</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="footnote">
+          <span>Illustrative breakdown for narrative framing.</span>
+          <span>Not a time-and-motion study.</span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

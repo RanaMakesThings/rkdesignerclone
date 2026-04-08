@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-03-29T16:45:21.404Z",
+  "slug": "slide-06-workflow-strip-montserrat",
+  "family": "workflow_strip",
+  "deckId": "vox-pd-v1",
+  "theme": "vox-montserrat",
+  "mode": "full-slide",
+  "title": "Vox prepares the visit before it starts.",
+  "subtitle": "Vox interviews, structures, and hands off a brief the clinician can verify and use.",
+  "specPath": "projects/designer-health/experiments/slide-06-style-exploration/specs/slide-06-workflow-strip-montserrat.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat/figure.html",
+    "svg": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat/figure.svg",
+    "png": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-06-style-exploration/montserrat/render-assets.json"
+  },
+  "selectedMedia": []
+}

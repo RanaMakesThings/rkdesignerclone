@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designer Deck Template v1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --ink: #111111;
+        --muted: #6f7785;
+        --line: rgba(0, 0, 0, 0.9);
+        --blue: #4A89C8;
+        --gray-light: #E2E8F0;
+        --gray-med: #94A3B8;
+        --gray-dark: #64748B;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+      }
+
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+      }
+
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 62px;
+        margin: 0;
+        font-size: 64px;
+        line-height: 1.04;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        color: var(--ink);
+      }
+
+      .visit-bar-container {
+        position: absolute;
+        left: 182px;
+        top: 240px;
+        width: 1556px;
+        height: 64px;
+        display: flex;
+      }
+
+      .visit-bar-slot {
+        width: 640px;
+        height: 100%;
+        border: 2px dashed #CBD5E1;
+        background: #F8FAFC;
+        border-radius: 8px 0 0 8px;
+        position: relative;
+      }
+
+      .visit-bar-slot::after {
+        content: "History";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        font-weight: 600;
+        color: #94A3B8;
+        opacity: 0.4;
+      }
+
+      .visit-bar-exam {
+        width: 320px;
+        height: 100%;
+        background: var(--gray-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--gray-dark);
+      }
+
+      .visit-bar-decisions {
+        width: 596px;
+        height: 100%;
+        background: var(--gray-med);
+        border-radius: 0 8px 8px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: #ffffff;
+      }
+
+      .connection-svg {
+        position: absolute;
+        left: 182px;
+        top: 304px;
+        width: 640px;
+        height: 76px;
+      }
+
+      .lifted-history {
+        position: absolute;
+        left: 182px;
+        top: 380px;
+        width: 640px;
+        height: 200px;
+        background: var(--blue);
+        border-radius: 12px;
+        box-shadow: 0 24px 48px rgba(74, 137, 200, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        z-index: 10;
+      }
+
+      .history-title {
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .history-sub {
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 16px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .support-line {
+        position: absolute;
+        left: 182px;
+        top: 612px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+      }
+
+      .proof-field {
+        position: absolute;
+        left: 940px;
+        top: 380px;
+        width: 798px;
+      }
+
+      .proof-row {
+        position: relative;
+        margin-bottom: 64px;
+        padding-left: 32px;
+      }
+
+      .proof-bullet {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 12px;
+        height: 12px;
+        background: var(--blue);
+        border-radius: 2px;
+      }
+
+      .proof-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--ink);
+        letter-spacing: -0.01em;
+      }
+
+      .proof-text {
+        font-size: 22px;
+        font-weight: 400;
+        color: var(--muted);
+        margin-top: 8px;
+        line-height: 1.4;
+      }
+
+      .bottom-statement {
+        position: absolute;
+        left: 182px;
+        top: 840px;
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--ink);
+        letter-spacing: -0.02em;
+        padding-left: 24px;
+        border-left: 4px solid var(--blue);
+        line-height: 1.2;
+      }
+
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="History is the cleanest place to reclaim minutes">
+      <h1 class="header">History is the cleanest place to reclaim minutes.</h1>
+
+      <div class="visit-bar-container">
+        <div class="visit-bar-slot"></div>
+        <div class="visit-bar-exam">Physical exam</div>
+        <div class="visit-bar-decisions">Decisions + counseling</div>
+      </div>
+
+      <svg class="connection-svg" viewBox="0 0 640 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2,0 L2,76 M638,0 L638,76" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="6 6"/>
+        <rect x="0" y="0" width="640" height="76" fill="url(#conn-grad)" />
+        <defs>
+          <linearGradient id="conn-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4A89C8" stop-opacity="0.08" />
+            <stop offset="100%" stop-color="#4A89C8" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div class="lifted-history">
+        <div class="history-title">History</div>
+        <div class="history-sub">Relevant details • Timeline • Next questions</div>
+      </div>
+
+      <div class="support-line">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 12px; color: #94A3B8;"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        A high-leverage target for pre-visit prep.
+      </div>
+
+      <div class="proof-field">
+        <div class="proof-row">
+          <div class="proof-bullet"></div>
+          <div class="proof-title">Foundational to the encounter</div>
+          <div class="proof-text">Shapes the starting point for what follows in the visit.</div>
+        </div>
+        <div class="proof-row">
+          <div class="proof-bullet"></div>
+          <div class="proof-title">Time-variable</div>
+          <div class="proof-text">Time required depends on complexity, communication, and context.</div>
+        </div>
+        <div class="proof-row">
+          <div class="proof-bullet"></div>
+          <div class="proof-title">Can begin before the encounter</div>
+          <div class="proof-text">A meaningful portion can start before the clinician is on the clock.</div>
+        </div>
+      </div>
+
+      <div class="bottom-statement">
+        But reclaiming those minutes still requires clinical judgment.
+      </div>
+
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../../../../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>

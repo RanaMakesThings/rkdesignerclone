@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide 03 Hybrid Callback</title>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f4f4ef;
+    --ink: #16322b;
+    --muted: #677572;
+    --line: #d4d9d6;
+    --story: #558ac5;
+    --story-soft: #8bb2d8;
+    --exam: #dde3e4;
+    --counsel: #aab4bd;
+    --green: #56857b;
+  }
+
+  body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: #e8e7df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", system-ui, sans-serif;
+  }
+
+  .slide {
+    width: 1828px;
+    height: 972px;
+    border-radius: 26px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.95));
+    box-shadow: 0 26px 70px rgba(22, 50, 43, 0.08);
+    padding: 56px 58px 48px;
+  }
+
+  h1 {
+    color: var(--ink);
+    font-size: 72px;
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+    font-weight: 800;
+    max-width: 1280px;
+  }
+
+  .subheader {
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 34px;
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+
+  .hero {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-bar {
+    width: 1080px;
+    display: flex;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 600;
+  }
+
+  .story { background: var(--story); color: white; }
+  .exam { background: var(--exam); color: var(--ink); }
+  .counsel { background: var(--counsel); color: white; }
+
+  .hero .story { width: 540px; }
+  .hero .exam { width: 216px; }
+  .hero .counsel { width: 324px; }
+
+  .callout-brace {
+    width: 540px;
+    margin-right: 540px;
+    margin-top: 16px;
+    position: relative;
+  }
+
+  .callout-brace svg {
+    display: block;
+    width: 100%;
+    height: 22px;
+  }
+
+  .hero-copy {
+    margin-top: 14px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .hero-copy strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--ink);
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .bridge {
+    margin-top: 28px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .detail-grid {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.25fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .section-label {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .section-title {
+    margin-top: 10px;
+    color: var(--ink);
+    font-size: 36px;
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+  }
+
+  .section-copy {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.38;
+    max-width: 44ch;
+  }
+
+  .mechanism {
+    padding-right: 8px;
+  }
+
+  .visit-compare {
+    margin-top: 22px;
+    display: grid;
+    gap: 12px;
+  }
+
+  .visit-row {
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .visit-label {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .visit-shell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .visit-bar {
+    display: flex;
+    height: 68px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .visit-current {
+    width: 396px;
+  }
+
+  .visit-current .story { width: 196px; }
+  .visit-current .exam { width: 84px; }
+  .visit-current .counsel { width: 116px; }
+
+  .visit-vox {
+    width: 328px;
+  }
+
+  .visit-vox .story { width: 128px; }
+  .visit-vox .exam { width: 84px; }
+  .visit-vox .counsel { width: 116px; }
+
+  .time-saved {
+    width: 116px;
+    height: 68px;
+    border: 2px dashed #a7b1b7;
+    border-radius: 8px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 700;
+    background: rgba(255,255,255,0.44);
+  }
+
+  .arrow-band {
+    position: absolute;
+    left: 128px;
+    top: 72px;
+    width: 196px;
+    height: 30px;
+  }
+
+  .arrow-band svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .arrow-note {
+    margin-top: 18px;
+    margin-left: 146px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .arrow-note strong {
+    color: var(--ink);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 15px;
+  }
+
+  .payoff {
+    position: relative;
+  }
+
+  .payoff-shell {
+    margin-top: 24px;
+    padding-top: 8px;
+  }
+
+  .payoff-row {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .payoff-row + .payoff-row {
+    margin-top: 28px;
+  }
+
+  .payoff-label {
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.35;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .day-row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .mini {
+    display: flex;
+    height: 58px;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+
+  .mini.current {
+    width: 118px;
+  }
+
+  .mini.current .story { width: 59px; background: var(--story-soft); }
+  .mini.current .exam { width: 24px; }
+  .mini.current .counsel { width: 35px; background: #bcc4ca; }
+
+  .mini.vox {
+    width: 92px;
+  }
+
+  .mini.vox .story { width: 36px; background: var(--story-soft); }
+  .mini.vox .exam { width: 24px; }
+  .mini.vox .counsel { width: 32px; background: #bcc4ca; }
+
+  .new-visit {
+    width: 142px;
+    height: 58px;
+    border-radius: 7px;
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .payoff-connector {
+    margin: 14px 0 8px 188px;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .payoff-shell::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(212,217,214,0) 0%, rgba(212,217,214,1) 12%, rgba(212,217,214,1) 88%, rgba(212,217,214,0) 100%);
+    margin-bottom: 18px;
+  }
+
+  .payoff-connector strong {
+    color: var(--ink);
+  }
+
+</style>
+</head>
+<body>
+  <div class="slide">
+    <h1>More efficient visits will increase supply.</h1>
+    <div class="subheader">Small per-visit gains compound.</div>
+
+    <section class="hero">
+      <div class="hero-bar">
+        <div class="seg story">Story reconstruction</div>
+        <div class="seg exam">Physical exam</div>
+        <div class="seg counsel">Decisions + counseling</div>
+      </div>
+      <div class="callout-brace">
+        <svg viewBox="0 0 540 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1V18H539V1" stroke="#a7b1b7" stroke-width="1.5"/>
+          <path d="M270 18V31" stroke="#a7b1b7" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="hero-copy">
+        <strong>Most variable minutes of the visit</strong>
+        Best target for upstream prep without losing quality<br>
+        The part AI can help most
+      </div>
+    </section>
+
+    <div class="bridge">The story only works if the recovered minutes become a real new slot.</div>
+
+    <section class="detail-grid">
+      <div class="mechanism">
+        <div class="section-label">Mechanism</div>
+        <div class="section-title">Story time gets smaller</div>
+        <div class="section-copy">Vox only compresses the blue portion. Physical exam and counseling stay fixed, so the saved piece reads as usable capacity.</div>
+
+        <div class="visit-compare">
+          <div class="visit-row">
+            <div class="visit-label">Current visit</div>
+            <div class="visit-shell">
+              <div class="visit-bar visit-current">
+                <div class="seg story">Story</div>
+                <div class="seg exam"></div>
+                <div class="seg counsel"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="visit-row">
+            <div class="visit-label">With Vox prep</div>
+            <div class="visit-shell">
+              <div class="visit-bar visit-vox">
+                <div class="seg story">Story</div>
+                <div class="seg exam"></div>
+                <div class="seg counsel"></div>
+              </div>
+              <div class="time-saved">Time saved</div>
+              <div class="arrow-band">
+                <svg viewBox="0 0 196 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 15H72" stroke="#7e8d9a" stroke-width="1.5"/>
+                  <path d="M72 15L61 8" stroke="#7e8d9a" stroke-width="1.5"/>
+                  <path d="M72 15L61 22" stroke="#7e8d9a" stroke-width="1.5"/>
+                  <path d="M186 15H124" stroke="#7e8d9a" stroke-width="1.5"/>
+                  <path d="M124 15L135 8" stroke="#7e8d9a" stroke-width="1.5"/>
+                  <path d="M124 15L135 22" stroke="#7e8d9a" stroke-width="1.5"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="arrow-note">
+          <strong>AI-assisted prep pulls this inward.</strong>
+          Blue shrinks. The clinical pieces stay fixed. The saved piece stays visible instead of disappearing.
+        </div>
+      </div>
+
+      <div class="payoff">
+        <div class="section-label">Compounded Result</div>
+        <div class="section-title">Same day: 5 visits becomes 6</div>
+        <div class="section-copy">Make the state change obvious. The top row is today. The bottom row is the same clinic day after story reconstruction gets shorter across each visit.</div>
+
+        <div class="payoff-shell">
+          <div class="payoff-row">
+            <div class="payoff-label">Today<br>(5 visits)</div>
+            <div class="day-row">
+              <div class="mini current"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini current"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini current"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini current"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini current"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+            </div>
+          </div>
+
+          <div class="payoff-connector"><strong>Repeated across 5 visits</strong> -> enough recovered time to open one more patient slot.</div>
+
+          <div class="payoff-row">
+            <div class="payoff-label">With Vox prep<br>(6 visits)</div>
+            <div class="day-row">
+              <div class="mini vox"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini vox"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini vox"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini vox"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="mini vox"><div class="story"></div><div class="exam"></div><div class="counsel"></div></div>
+              <div class="new-visit">New visit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

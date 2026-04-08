@@ -1,0 +1,50 @@
+We are making a single image graphic for a pitch deck or presentation.
+Treat the following input as a design spec, not as a conversational prompt.
+Return one polished 16:9 image concept that feels premium, intentional, and presentation-ready.
+Do not generate browser chrome, UI screenshots, device mockups, or a slide-within-a-slide.
+Do not add on-image text unless the spec explicitly asks for it.
+Avoid generic stock-photo energy, generic SaaS dashboard imagery, and weak filler composition.
+
+Variant direction: Editorial Baseline. Start with the clearest premium editorial interpretation. One strong visual idea, calm hierarchy, restrained composition, and presentation-grade polish.
+
+Design spec:
+Create one premium investor-deck concept figure for a healthcare startup.
+
+This is a creative reset exploration for a slide about Vox, an adaptive clinical interviewer. Do not reuse the familiar visual trope of a monolithic rounded software box with inner channels, appliance shading, filter bolts, or "AI machine" plumbing.
+
+Concept family: Magnetic Field / Typographic Alignment.
+
+Core idea:
+Vox acts like a cognitive magnetic field that forces scattered, messy patient language to align into a clinician-grade starting point.
+
+Required visual story:
+- left side = messy patient quote fragments, scattered and slightly rotated, in soft neutral gray
+- middle = a thin, elegant teal field, wave, or resonance plane representing Vox's adaptive question
+- one subtle moment of back-and-forth should be implied, as if one intelligent question caused the alignment
+- right side = the fragments snap into a clean, calm, sharply aligned structured output
+- the output can be a compact card or aligned clinical stack, but it must feel secondary to the alignment event itself
+
+Style:
+- white background
+- grayscale / off-white base
+- restrained teal / blue accent only where semantically important
+- editorial, premium, quiet, clinically serious
+- rounded geometry only where useful, but avoid big enclosing boxes
+- soft shadows, industrial-design taste, generous whitespace
+
+Do not make:
+- a UI screenshot
+- a flowchart
+- a dashboard
+- a literal magnet icon
+- a brain icon
+- a database icon
+- a software module box
+- a busy infographic
+
+Keep text minimal.
+If any text appears inside the figure, it should be sparse and elegant, not paragraph-heavy.
+The image should feel surprising and intelligent, not gimmicky.
+
+Success condition:
+In 2 seconds the viewer feels that Vox asks a better question and brings hidden clinical signal into alignment.

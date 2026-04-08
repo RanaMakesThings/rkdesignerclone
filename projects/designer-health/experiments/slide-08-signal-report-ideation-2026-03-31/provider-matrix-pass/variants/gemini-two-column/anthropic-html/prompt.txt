@@ -1,0 +1,109 @@
+Visual thesis:
+- clean two-column clinical workspace, quiet, modern, precise, no dashboard noise
+
+Content plan:
+- one unified card
+- left column = structured patient reality
+- right column = considerations to confirm and next step
+
+Interaction thesis:
+- static report-like artifact
+- no interactive widgets or tool chrome
+
+Build one investor-deck figure for Designer Health slide 8.
+
+This figure should be a single central clinician-facing artifact on a quiet
+warm-neutral background. It should look like a premium clinical workspace a
+doctor could open in a browser, but without browser chrome.
+
+Use the attached screenshot as a strong family reference:
+- preserve the left/right split feeling
+- preserve the row-based extraction logic
+- preserve the ranked candidate-card logic
+- preserve the calm thin-border clinical feel
+
+Locked direction:
+- one shared outer frame
+- internal vertical split only
+- left = patient reality
+- right = AI synthesis
+
+Hard constraints:
+- no full app shell
+- no sidebars, top nav, or tabs
+- no trace or raw LLM artifacts
+- no bright consumer-app colors
+- no generic SaaS card grid
+
+Layout:
+- one large white card
+- subtle outer border and subtle shadow
+- internal divider
+- left column about 40%
+- right column about 60%
+
+Left column:
+- title can be `What We Know` or `Patient History & Status`
+- categories:
+  - SOCIAL CONTEXT
+  - REPORTED SYMPTOMS
+  - KEY NEGATIVES
+- flat rows, not heavily bordered mini-cards
+- each row should include:
+  - title line
+  - optional value line
+  - evidence token on the right like `[Turn 14]`
+  - soft state pill
+
+State pill semantics:
+- present = soft blue pill with dark blue text
+- absent = soft red pill with dark red text
+- unresolved = pale amber or warm gray pill
+- no icons inside pills
+
+Right column:
+- title must be `Considerations to Confirm`
+- three soft gray candidate blocks
+- each block includes:
+  - rank
+  - diagnosis name
+  - confidence pill like `High match`
+  - Supports
+  - Against
+  - Unknowns
+- include one dedicated `Highest Yield Next Question` block at the bottom of
+  the right column
+
+Reasoning glyph system:
+- Supports use a tiny muted green `↑`
+- Against use a tiny muted red `↓`
+- Unknowns use a tiny amber `○` or `?`
+- these are typographic glyphs, not big icons
+- movement chips like `SAME 1→1` should be removed entirely
+
+Use real cough-case content:
+
+Left-side rows should include concrete items like:
+- Care seeking prompted by spouse
+- Cough
+- Cough pattern: bursts with periods of relative calm
+- Cough worse at night
+- Cough worsens when lying down
+- Scratchy throat
+- Sputum color: mostly yellow, possibly green once
+- Hemoptysis absent
+
+Right-side considerations should include:
+1. Acute bronchitis
+2. Community-acquired pneumonia
+3. GERD-induced cough or post-viral cough as a contrast candidate
+
+Use compact, clinically plausible reasoning bullets. Do not let any one bullet
+be too long.
+
+The overall feel should be:
+- sleek
+- expensive
+- clinician-grade
+- calm
+- visibly more refined than the source screenshot

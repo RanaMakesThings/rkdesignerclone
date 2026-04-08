@@ -1,0 +1,63 @@
+Generate one self-contained HTML document for a premium 1920x1080 investor deck
+slide.
+
+This is a market-positioning slide, not an illustration slide.
+Do not use photos, screenshots, or literal scene illustrations.
+Do not make this look like a competitor matrix or consulting framework.
+Do not use rounded comparison cards as the main device.
+
+Use this exact on-slide copy:
+
+Headline:
+AI has traction after the visit. The visit itself is still thinly served.
+
+Zone 1 kicker:
+AI impact after the visit
+
+Zone 1 statement:
+Ambient scribes validate clinician buy-in for AI assistance.
+
+Zone 1 labels:
+- ambient scribe
+- note generation
+- documentation support
+- clerical relief
+
+Zone 2 kicker:
+AI impact during the visit
+
+Zone 2 statement:
+Few tools actually change how the encounter is conducted. Vox does.
+
+Zone 2 field:
+- one blue VOX marker
+- optionally one or two faint outline ghost markers
+
+Composition rules:
+- lead with the headline
+- below it, create two territories inside one editorial composition
+- the after-visit territory should feel denser, darker, and already occupied
+- the during-visit territory should feel larger, calmer, and visibly thinner
+- density itself should carry the argument
+- the slide should read as category definition plus whitespace, not as a
+  workflow explainer
+- typography and simple geometric marks should do most of the work
+
+Style rules:
+- white or warm-white background
+- restrained grayscale palette
+- one blue accent only for VOX
+- premium editorial investor-deck feel
+- quiet, intentional geometry
+- avoid generic dashboard or SaaS styling
+
+Do not add:
+- subheader
+- body paragraphs
+- arrows
+- workflow map
+- chip rows
+- vendor logos
+- illustrations
+
+Return only the HTML document with inline CSS and any inline SVG needed.

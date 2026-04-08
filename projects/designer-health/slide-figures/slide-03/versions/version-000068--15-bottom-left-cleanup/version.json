@@ -1,0 +1,14 @@
+{
+  "id": "version-000068",
+  "slideId": "slide-03",
+  "slideDir": "projects/designer-health/slide-figures/slide-03",
+  "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000068--15-bottom-left-cleanup",
+  "label": "15-bottom-left-cleanup",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:05:30.387Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-03/variants/15-bottom-left-cleanup"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "provider": "gpt",
+  "status": "partial",
+  "summary": "The candidate clearly turns the blank shell into a financing-ask slide with the correct headline, subheader, hero ask, milestone logic, and restrained use-of-funds ribbon, but execution issues remain: the header/subheader overlap badly, some content is cropped at the bottom, and the figure is denser and less polished than the locked spec implies.",
+  "evidence": [
+    "The locked header text appears verbatim: “Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.”",
+    "The locked subheader text is present: “Post-money SAFE · ~18–20 months of runway,” but it visibly overlaps the headline and is not cleanly placed.",
+    "The left hero block surfaces the ask first with “$1.25M” and SAFE structure, matching the brief’s required financing emphasis.",
+    "The right side uses stacked milestone cards labeled Build / Deploy / Validate, which aligns with the required milestone logic.",
+    "Top support stats are present as separate cards: “2 key hires,” “3 pilot sites,” and “18–20 months runway.”",
+    "A bottom ribbon labeled “Use of funds” is included with restrained allocation bars/categories rather than a dense budget table, consistent with the guidance.",
+    "The slide preserves the white Designer shell, footer rule, and logo placement.",
+    "The Build/Deploy/Validate area is overcrowded and the bottom of the Validate section appears cut off behind the ribbon, reducing presentation readiness.",
+    "There is more detail than the official read calls for, including multiple pills and extra explanatory blocks, which weakens the intended clean close-slide feel."
+  ],
+  "nextPrompt": "Keep the same overall structure, but fix layout collisions and simplify: place the locked headline and subheader with clear spacing, ensure no text overlaps, fully reveal all three milestone cards above the bottom ribbon, reduce the number of pill callouts inside each card, and keep the slide to one clean integrated ask card with left hero ask, three readable milestone rows, and a restrained bottom use-of-funds ribbon.",
+  "needsHuman": true,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate clearly turns the blank shell into a financing-ask slide with the correct headline, subheader, hero ask, milestone logic, and restrained use-of-funds ribbon, but execution issues remain: the header/subheader overlap badly, some content is cropped at the bottom, and the figure is denser and less polished than the locked spec implies.",
+    "evidence": [
+      "The locked header text appears verbatim: “Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.”",
+      "The locked subheader text is present: “Post-money SAFE · ~18–20 months of runway,” but it visibly overlaps the headline and is not cleanly placed.",
+      "The left hero block surfaces the ask first with “$1.25M” and SAFE structure, matching the brief’s required financing emphasis.",
+      "The right side uses stacked milestone cards labeled Build / Deploy / Validate, which aligns with the required milestone logic.",
+      "Top support stats are present as separate cards: “2 key hires,” “3 pilot sites,” and “18–20 months runway.”",
+      "A bottom ribbon labeled “Use of funds” is included with restrained allocation bars/categories rather than a dense budget table, consistent with the guidance.",
+      "The slide preserves the white Designer shell, footer rule, and logo placement.",
+      "The Build/Deploy/Validate area is overcrowded and the bottom of the Validate section appears cut off behind the ribbon, reducing presentation readiness.",
+      "There is more detail than the official read calls for, including multiple pills and extra explanatory blocks, which weakens the intended clean close-slide feel."
+    ],
+    "nextPrompt": "Keep the same overall structure, but fix layout collisions and simplify: place the locked headline and subheader with clear spacing, ensure no text overlaps, fully reveal all three milestone cards above the bottom ribbon, reduce the number of pill callouts inside each card, and keep the slide to one clean integrated ask card with left hero ask, three readable milestone rows, and a restrained bottom use-of-funds ribbon.",
+    "needsHuman": true
+  }
+}

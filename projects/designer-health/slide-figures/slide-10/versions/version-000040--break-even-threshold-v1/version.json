@@ -1,0 +1,14 @@
+{
+  "id": "version-000040",
+  "slideId": "slide-10",
+  "slideDir": "projects/designer-health/slide-figures/slide-10",
+  "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000040--break-even-threshold-v1",
+  "label": "break-even-threshold-v1",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.894Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-10/break-even-threshold-v1"
+  ]
+}

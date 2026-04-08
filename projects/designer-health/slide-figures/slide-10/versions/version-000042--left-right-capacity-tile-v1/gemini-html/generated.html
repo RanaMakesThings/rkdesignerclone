@@ -1,0 +1,92 @@
+<!doctype html>
+xml
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%" style="background-color: #F9FAFB; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  
+  <defs>
+    <!-- Soft shadow for the main card -->
+    <filter id="card-shadow" x="-2%" y="-5%" width="104%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="24" flood-color="#000000" flood-opacity="0.04"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#000000" flood-opacity="0.02"/>
+    </filter>
+  </defs>
+
+  <!-- Header Section -->
+  <g transform="translate(100, 130)">
+    <text x="0" y="0" font-size="36" font-weight="800" fill="#111827" letter-spacing="-0.02em">Recovered visit time creates real capacity.</text>
+    <text x="0" y="36" font-size="18" font-weight="400" fill="#6B7280">When recovered minutes become completed visits, the impact is meaningful.</text>
+  </g>
+
+  <!-- Main Content Card -->
+  <rect x="100" y="240" width="1080" height="280" rx="20" fill="#FFFFFF" filter="url(#card-shadow)"/>
+
+  <!-- LEFT SIDE: Visual Callback to Slide 3 -->
+  <g transform="translate(142, 350)">
+    <!-- Sequence 1 -->
+    <rect x="0" y="0" width="16" height="24" rx="3" fill="#7CA3D6"/>
+    <rect x="20" y="0" width="24" height="24" rx="3" fill="#D1D5DB"/>
+    <rect x="48" y="0" width="32" height="24" rx="3" fill="#9CA3AF"/>
+    
+    <!-- Sequence 2 -->
+    <rect x="92" y="0" width="16" height="24" rx="3" fill="#7CA3D6"/>
+    <rect x="112" y="0" width="24" height="24" rx="3" fill="#D1D5DB"/>
+    <rect x="140" y="0" width="32" height="24" rx="3" fill="#9CA3AF"/>
+    
+    <!-- Sequence 3 -->
+    <rect x="184" y="0" width="16" height="24" rx="3" fill="#7CA3D6"/>
+    <rect x="204" y="0" width="24" height="24" rx="3" fill="#D1D5DB"/>
+    <rect x="232" y="0" width="32" height="24" rx="3" fill="#9CA3AF"/>
+
+    <!-- Payoff Block -->
+    <rect x="284" y="0" width="76" height="24" rx="4" fill="#4A7D6E"/>
+    <text x="322" y="16" font-size="11" font-weight="600" fill="#FFFFFF" text-anchor="middle">New visit</text>
+
+    <!-- Bracket & Callback Text -->
+    <path d="M 0 36 L 0 42 L 132 42 L 132 48 M 132 42 L 264 42 L 264 36" fill="none" stroke="#D1D5DB" stroke-width="1.5" stroke-linejoin="round"/>
+    <text x="132" y="66" font-size="11" font-weight="500" fill="#8892A0" text-anchor="middle" letter-spacing="0.01em">Efficiency repeated across visits creates capacity</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="530" y1="290" x2="530" y2="470" stroke="#F3F4F6" stroke-width="2"/>
+
+  <!-- RIGHT SIDE: Economics -->
+  <g transform="translate(580, 340)">
+    
+    <!-- Primary Driver -->
+    <g transform="translate(0, 42)">
+      <text x="0" y="0" font-size="44" font-weight="800" fill="#4A7D6E" letter-spacing="-0.02em">+1 visit</text>
+      <text x="2" y="24" font-size="14" font-weight="500" fill="#9CA3AF">/ provider / day</text>
+    </g>
+
+    <!-- Flow Arrow -->
+    <text x="150" y="36" font-size="24" font-weight="300" fill="#D1D5DB">→</text>
+
+    <!-- Quiet Assumptions -->
+    <g transform="translate(190, 0)">
+      <text x="0" y="12" font-size="13" font-weight="400" fill="#D1D5DB">•</text>
+      <text x="14" y="12" font-size="13" font-weight="400" fill="#8892A0">220 clinic days</text>
+      
+      <text x="0" y="38" font-size="13" font-weight="400" fill="#D1D5DB">•</text>
+      <text x="14" y="38" font-size="13" font-weight="400" fill="#8892A0">$125 / visit</text>
+      
+      <text x="0" y="64" font-size="13" font-weight="400" fill="#D1D5DB">•</text>
+      <text x="14" y="64" font-size="13" font-weight="400" fill="#8892A0">40% contribution margin</text>
+    </g>
+
+    <!-- Equals -->
+    <text x="360" y="36" font-size="24" font-weight="300" fill="#D1D5DB">=</text>
+
+    <!-- Financial Impact -->
+    <g transform="translate(400, 42)">
+      <text x="0" y="0" font-size="60" font-weight="800" fill="#111827" letter-spacing="-0.03em">$11,000</text>
+      <text x="218" y="0" font-size="18" font-weight="500" fill="#6B7280">/ year</text>
+      
+      <!-- Quiet Upside Note -->
+      <g transform="translate(4, 30)">
+        <rect x="0" y="0" width="256" height="26" rx="13" fill="#EEF4F2"/>
+        <text x="12" y="17" font-size="10.5" font-weight="600" fill="#4A7D6E" letter-spacing="0.01em">⊕  ~$917 / month break-even spend / provider</text>
+      </g>
+    </g>
+
+  </g>
+
+</svg>

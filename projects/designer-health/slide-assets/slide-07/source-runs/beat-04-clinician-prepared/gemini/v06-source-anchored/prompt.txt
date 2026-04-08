@@ -1,0 +1,9 @@
+Use case: background-extraction
+Asset type: isolated pitch-deck figure element for slide reconstruction
+Primary request: return the attached panel almost exactly as-is, but cleaner and higher-resolution. Keep the same rounded clinician review panel, the same bottom black baseline, and the same centered step marker 4 with the baseline cutting through the marker exactly as in the reference.
+Input images: Image 1: source panel reference with exact line and marker geometry
+Style/medium: same grayscale editorial illustration style as the reference
+Composition/framing: preserve the exact locked composition and marker placement from the source reference, keep only the panel plus the marker and baseline, remove the lower slide title text area from the image, no extra line overhangs or stray marks
+Lighting/mood: soft grayscale with restrained teal accent only in the clinician top where already implied
+Constraints: do not redesign the layout, keep only one tablet, preserve the soft filled panel, keep the bottom baseline and step marker geometry exactly from the source reference, crisp edges, better resolution, suitable for placing into an HTML slide
+Avoid: new props, second device, extra text, title text, checkerboard transparency patterns, heavy outer frame, black rectangle border around the whole panel, watermarks, artifacts, cut-off circle, moving the step marker, changing the line/marker relationship

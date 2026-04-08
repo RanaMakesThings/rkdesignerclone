@@ -1,0 +1,17 @@
+{
+  "provider": "gpt",
+  "verdict": "blocker",
+  "rationale": "The arrow itself is present and cleaner, but the candidate introduces a clear composition regression versus the baseline: the main content shrinks and shifts up/left, leaving the slide visibly under-filled with a large empty lower-right area. No clipping or stray markup is visible, but the overall layout no longer matches the original balance.",
+  "blockers": [
+    "The slide became visibly under-filled and top-heavy, with the main elements reduced in scale and clustered in the upper-left compared with the baseline."
+  ],
+  "nextMove": "Keep the new smoother arrow style, but restore the baseline layout scale and positioning of the title, timeline, hero card, and wedge panel so the slide fills the canvas like before.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The arrow itself is present and cleaner, but the candidate introduces a clear composition regression versus the baseline: the main content shrinks and shifts up/left, leaving the slide visibly under-filled with a large empty lower-right area. No clipping or stray markup is visible, but the overall layout no longer matches the original balance.",
+    "blockers": [
+      "The slide became visibly under-filled and top-heavy, with the main elements reduced in scale and clustered in the upper-left compared with the baseline."
+    ],
+    "nextMove": "Keep the new smoother arrow style, but restore the baseline layout scale and positioning of the title, timeline, hero card, and wedge panel so the slide fills the canvas like before."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "provider": "gpt",
+  "verdict": "blocker",
+  "rationale": "The candidate is materially resolved, but it still contains clear visible regressions that make it feel unfinished: the header/subheader overlap badly, a stray broken image placeholder is visible in the bottom-right, and some body content is clipped within the master card. Those are concrete blockers relative to a finished ask slide.",
+  "blockers": [
+    "Locked header and subheader are visibly overlapping, making the top copy look broken and partially unreadable",
+    "A broken image/placeholder box is visible at the bottom-right instead of a resolved asset or clean footer area",
+    "Lower-left stat tiles/body copy are clipped/truncated inside the main card, so required support stats are not cleanly readable"
+  ],
+  "nextMove": "Fix the top text stack spacing first, remove the broken bottom-right placeholder, and reflow the lower-left support-stat area so all locked/support copy is fully visible within the card.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate is materially resolved, but it still contains clear visible regressions that make it feel unfinished: the header/subheader overlap badly, a stray broken image placeholder is visible in the bottom-right, and some body content is clipped within the master card. Those are concrete blockers relative to a finished ask slide.",
+    "blockers": [
+      "Locked header and subheader are visibly overlapping, making the top copy look broken and partially unreadable",
+      "A broken image/placeholder box is visible at the bottom-right instead of a resolved asset or clean footer area",
+      "Lower-left stat tiles/body copy are clipped/truncated inside the main card, so required support stats are not cleanly readable"
+    ],
+    "nextMove": "Fix the top text stack spacing first, remove the broken bottom-right placeholder, and reflow the lower-left support-stat area so all locked/support copy is fully visible within the card."
+  }
+}

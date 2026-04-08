@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, initial-scale=1" />
+    <title>Designer Health — Slide 13</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --ink: #111111;
+        --muted: #6f7785;
+        --muted-2: #8f97a4;
+        --line: rgba(0, 0, 0, 0.9);
+        --card: #ffffff;
+        --field: #f5f7fa;
+        --field-2: #eef3f8;
+        --blue: #4e739c;
+        --blue-2: #6a8cad;
+        --blue-3: #dfe8f2;
+        --blue-4: #edf3f8;
+        --stroke: #d9e1ea;
+        --shadow: 0 10px 28px rgba(34, 52, 74, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+      }
+
+      .slide {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        background: #ffffff;
+      }
+
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 64px;
+        width: 1490px;
+        margin: 0;
+        font-size: 52px;
+        line-height: 1.08;
+        font-weight: 700;
+        letter-spacing: -0.045em;
+        color: var(--ink);
+      }
+
+      .subheader {
+        position: absolute;
+        left: 92px;
+        top: 166px;
+        margin: 0;
+        font-size: 26px;
+        line-height: 1.24;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: var(--muted);
+      }
+
+      .master-card {
+        position: absolute;
+        left: 92px;
+        top: 246px;
+        width: 1538px;
+        height: 646px;
+        border-radius: 30px;
+        background: linear-gradient(180deg, #f6f8fb 0%, #f3f6fa 100%);
+        border: 1px solid #e8edf3;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      }
+
+      .master-card::before {
+        content: "";
+        position: absolute;
+        left: 496px;
+        top: 32px;
+        bottom: 128px;
+        width: 1px;
+        background: linear-gradient(180deg, rgba(122, 142, 167, 0.16), rgba(122, 142, 167, 0.08));
+      }
+
+      .hero {
+        position: absolute;
+        left: 34px;
+        top: 32px;
+        width: 432px;
+        height: 454px;
+        border-radius: 28px;
+        background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+        border: 1px solid #e4ebf2;
+        box-shadow: var(--shadow);
+        padding: 34px 34px 28px 34px;
+      }
+
+      .hero-tag {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: var(--blue-4);
+        color: var(--blue);
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .hero-amount {
+        margin-top: 26px;
+        font-size: 78px;
+        line-height: 0.95;
+        font-weight: 800;
+        letter-spacing: -0.06em;
+        color: var(--ink);
+      }
+
+      .hero-label {
+        margin-top: 12px;
+        font-size: 24px;
+        line-height: 1.22;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        color: var(--ink);
+      }
+
+      .hero-copy {
+        margin-top: 18px;
+        font-size: 19px;
+        line-height: 1.52;
+        font-weight: 400;
+        letter-spacing: -0.015em;
+        color: var(--muted);
+        max-width: 344px;
+      }
+
+      .hero-stats {
+        margin-top: 28px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .stat {
+        min-height: 112px;
+        border-radius: 18px;
+        background: linear-gradient(180deg, #f8fbfe 0%, #f1f6fb 100%);
+        border: 1px solid #dde7f0;
+        padding: 16px 14px 14px 14px;
+      }
+
+      .stat-num {
+        font-size: 34px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        color: var(--blue);
+        margin-bottom: 10px;
+      }
+
+      .stat-label {
+        font-size: 14px;
+        line-height: 1.32;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: #4f5f73;
+      }
+
+      .hero-note {
+        position: absolute;
+        left: 34px;
+        bottom: 22px;
+        right: 34px;
+        padding-top: 14px;
+        border-top: 1px solid #e7edf4;
+        font-size: 14px;
+        line-height: 1.45;
+        color: var(--muted-2);
+      }
+
+      .milestones {
+        position: absolute;
+        left: 532px;
+        top: 32px;
+        width: 972px;
+        height: 454px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .milestone {
+        position: relative;
+        flex: 1 1 0;
+        border-radius: 24px;
+        background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+        border: 1px solid #e4ebf2;
+        box-shadow: var(--shadow);
+        padding: 24px 28px 22px 28px;
+      }
+
+      .milestone-title-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+      }
+
+      .milestone-title {
+        font-size: 28px;
+        line-height: 1.1;
+        font-weight: 700;
+        letter-spacing: -0.035em;
+        color: var(--ink);
+      }
+
+      .milestone-chip {
+        padding: 8px 13px;
+        border-radius: 999px;
+        background: var(--blue-4);
+        border: 1px solid #dbe6f0;
+        color: var(--blue);
+        font-size: 13px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .milestone-desc {
+        font-size: 19px;
+        line-height: 1.45;
+        letter-spacing: -0.015em;
+        color: #4f5f73;
+        margin-bottom: 16px;
+        max-width: 760px;
+      }
+
+      .milestone-points {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .point {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 12px 12px 10px 12px;
+        border-radius: 16px;
+        background: #f8fbfe;
+        border: 1px solid #e2ebf3;
+      }
+
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--blue);
+        margin-top: 6px;
+        flex: 0 0 auto;
+      }
+
+      .point span {
+        font-size: 15px;
+        line-height: 1.42;
+        letter-spacing: -0.01em;
+        color: #556476;
+        font-weight: 500;
+      }
+
+      .ribbon {
+        position: absolute;
+        left: 34px;
+        right: 34px;
+        bottom: 28px;
+        height: 98px;
+        border-radius: 22px;
+        background: linear-gradient(180deg, #ffffff 0%, #fbfcfd 100%);
+        border: 1px solid #e4ebf2;
+        box-shadow: 0 8px 22px rgba(34, 52, 74, 0.05);
+        display: grid;
+        grid-template-columns: 250px 1fr 1fr 1fr 1fr;
+        align-items: stretch;
+        overflow: hidden;
+      }
+
+      .ribbon-label {
+        padding: 22px 24px;
+        background: linear-gradient(180deg, #edf3f8 0%, #e8eff6 100%);
+        border-right: 1px solid #dbe4ed;
+      }
+
+      .ribbon-label .small {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: var(--blue);
+        margin-bottom: 10px;
+      }
+
+      .ribbon-label .big {
+        font-size: 24px;
+        line-height: 1.15;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        color: var(--ink);
+      }
+
+      .fund {
+        position: relative;
+        padding: 18px 20px 16px 20px;
+        border-right: 1px solid #e7edf4;
+      }
+
+      .fund:last-child {
+        border-right: none;
+      }
+
+      .fund-top {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .fund-pct {
+        font-size: 28px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        color: var(--blue);
+      }
+
+      .fund-name {
+        font-size: 16px;
+        line-height: 1.15;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+      }
+
+      .fund-copy {
+        font-size: 13px;
+        line-height: 1.45;
+        color: var(--muted);
+        letter-spacing: -0.005em;
+      }
+
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="Designer Health fundraising ask slide">
+      <h1 class="header">Raising $1.25M to launch pilots, prove value, and establish repeatable deployment</h1>
+      <p class="subheader">Post-money SAFE • ~18–20 months of runway</p>
+
+      <div class="master-card" aria-label="Integrated fundraising plan">
+        <div class="hero">
+          <div class="hero-tag">The ask</div>
+          <div class="hero-amount">$1.25M</div>
+          <div class="hero-label">Finite proof-stage raise</div>
+          <div class="hero-copy">
+            Sized to fund the minimum team, pilots, and validation work required to turn initial deployment into a repeatable model.
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-num">2</div>
+              <div class="stat-label">core hires to support product and pilot execution</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">3</div>
+              <div class="stat-label">pilot sites to establish real deployment workflows</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">18–20</div>
+              <div class="stat-label">months of runway to build, deploy, and validate</div>
+            </div>
+          </div>
+
+          <div class="hero-note">
+            Financing objective: reach proof of repeatable deployment with measured spend, not open-ended company building.
+          </div>
+        </div>
+
+        <div class="milestones">
+          <div class="milestone">
+            <div class="milestone-title-row">
+              <div class="milestone-title">Build</div>
+              <div class="milestone-chip">FOUNDATION</div>
+            </div>
+            <div class="milestone-desc">
+              Complete the implementation-ready product and operating layer required to support live pilot execution in clinical environments.
+            </div>
+            <div class="milestone-points">
+              <div class="point"><div class="dot"></div><span>Hire core product and deployment capacity</span></div>
+              <div class="point"><div class="dot"></div><span>Finish pilot-ready workflows, reporting, and implementation support</span></div>
+              <div class="point"><div class="dot"></div><span>Stand up the playbook required to onboard initial sites efficiently</span></div>
+            </div>
+          </div>
+
+          <div class="milestone">
+            <div class="milestone-title-row">
+              <div class="milestone-title">Deploy</div>
+              <div class="milestone-chip">PILOTS</div>
+            </div>
+            <div class="milestone-desc">
+              Launch 3 pilot sites and demonstrate that Designer can be implemented cleanly inside the visit, not just shown in a demo.
+            </div>
+            <div class="milestone-points">
+              <div class="point"><div class="dot"></div><span>Go live with early partner sites and train frontline users</span></div>
+              <div class="point"><div class="dot"></div><span>Instrument onboarding, usage, and workflow adoption from day one</span></div>
+              <div class="point"><div class="dot"></div><span>Refine deployment steps into a repeatable site-launch motion</span></div>
+            </div>
+          </div>
+
+          <div class="milestone">
+            <div class="milestone-title-row">
+              <div class="milestone-title">Validate</div>
+              <div class="milestone-chip">PROOF</div>
+            </div>
+            <div class="milestone-desc">
+              Generate the evidence needed to support repeatable deployment: operational fit, measurable value, and credible early commercial readiness.
+            </div>
+            <div class="milestone-points">
+              <div class="point"><div class="dot"></div><span>Show engagement and workflow persistence across pilot sites</span></div>
+              <div class="point"><div class="dot"></div><span>Document pilot outcomes and site-level value signals</span></div>
+              <div class="point"><div class="dot"></div><span>Exit the round with a clear deployment case for the next financing step</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ribbon" aria-label="Use of funds summary">
+          <div class="ribbon-label">
+            <div class="small">USE OF FUNDS</div>
+            <div class="big">Kept secondary to the milestones</div>
+          </div>
+          <div class="fund">
+            <div class="fund-top">
+              <div class="fund-pct">38%</div>
+              <div class="fund-name">Product + engineering</div>
+            </div>
+            <div class="fund-copy">Pilot-ready product completion, implementation tooling, and technical delivery support.</div>
+          </div>
+          <div class="fund">
+            <div class="fund-top">
+              <div class="fund-pct">27%</div>
+              <div class="fund-name">Deployment + clinical ops</div>
+            </div>
+            <div class="fund-copy">Site onboarding, workflow design, training, and day-to-day pilot execution capacity.</div>
+          </div>
+          <div class="fund">
+            <div class="fund-top">
+              <div class="fund-pct">18%</div>
+              <div class="fund-name">Validation + analytics</div>
+            </div>
+            <div class="fund-copy">Instrumentation, reporting, pilot measurement, and evidence generation for the next step.</div>
+          </div>
+          <div class="fund">
+            <div class="fund-top">
+              <div class="fund-pct">17%</div>
+              <div class="fund-name">G&amp;A + contingency</div>
+            </div>
+            <div class="fund-copy">Lean overhead, compliance, and buffer to complete the proof-stage plan with discipline.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../../../../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>

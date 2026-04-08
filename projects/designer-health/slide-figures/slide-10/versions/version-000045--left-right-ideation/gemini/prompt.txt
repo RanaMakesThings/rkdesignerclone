@@ -1,0 +1,55 @@
+You are helping refine one investor-deck slide concept.
+
+I am attaching one board image with:
+
+- running slide 3 on the left
+- current running slide 10 on the right
+
+New constraint:
+
+- the slide should probably be a left/right layout
+- left side is just a callback to slide 3's lower capacity motif
+- right side is the economics proof
+
+Important:
+
+- the left callback should use FEWER bars than slide 3
+- do not replay all 5 or 6 visits
+- think in terms of a very reduced motif:
+  - maybe 2 shortened bars
+  - maybe 1 green `New visit` block
+  - maybe a tiny cue that capacity was unlocked
+
+The right side should be simple:
+
+- `+1 visit / provider / day`
+- assumptions
+- `$11,000 / year`
+
+There may also be a very quiet secondary `+2` / upside check on the right, but
+it must not compete with the base case.
+
+Please answer these questions:
+
+1. For a left/right slide, what is the best reduced callback object to put on
+   the left?
+2. Should the left side show:
+   - just a couple shortened bars plus green `New visit`
+   - a before/after mini-comparison
+   - a single unlocked slot / capacity object
+   - something else?
+3. Should the right side include a secondary `+2` upside check, or keep only
+   the `+1 -> $11,000` proof?
+4. Give me the best 3 concrete layout ideas for this left/right version.
+5. For each one, say:
+   - what goes on the left
+   - what goes on the right
+   - why it works
+   - main risk
+
+Priorities:
+
+- make the callback clear without replaying slide 3
+- make the slide feel like one added visit turns into dollars
+- keep it premium, sparse, and investor-deck appropriate
+- avoid tables and avoid dashboard chrome

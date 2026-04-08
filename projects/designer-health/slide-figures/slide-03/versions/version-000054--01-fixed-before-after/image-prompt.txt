@@ -1,0 +1,28 @@
+Create a 16:9 pitch-deck slide mockup for a healthcare AI startup called Vox.
+
+Goal:
+Show that reducing the story-reconstruction portion of each visit creates enough capacity for one additional patient visit in the same clinic day.
+
+Critical communication constraint:
+Do not imply rushed care or indiscriminate visit compression. The visual must make clear that physical exam and counseling remain protected, and only story reconstruction shrinks because upstream AI-assisted prep makes it more efficient.
+
+Design direction:
+- Premium editorial healthcare pitch-deck aesthetic
+- Clean off-white background, restrained green/blue/gray palette
+- Big headline at top: More efficient visits will increase supply.
+- Subheader: Small per-visit gains compound.
+- Use Montserrat-style typography feel
+- No app UI, no dashboard chrome, no gradients that feel flashy
+
+Variant concept:
+Fixed-width before/after comparison.
+- Top row labeled Current schedule (5 visits)
+- Bottom row labeled AI-assisted schedule (6 visits)
+- Both rows must have exactly the same total width to show the same day length
+- In both rows, physical exam and decisions/counseling stay the same width
+- Only the story-reconstruction segment gets smaller in the second row
+- The sixth visit should clearly read as an additional visit slot, not a button
+- Include a concise explanatory line between rows, something like:
+  Saving a few minutes of story reconstruction per visit creates room for one more patient in the same day.
+
+Make the logic obvious in under 3 seconds. The slide should read as an executive-quality static mockup, not an illustration sketch.

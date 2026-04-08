@@ -1,0 +1,9 @@
+{
+  "model": "gpt-image-1.5",
+  "requestModel": null,
+  "size": "1536x1024",
+  "quality": "high",
+  "background": "opaque",
+  "outputFormat": "png",
+  "revisedPrompt": ""
+}

@@ -1,0 +1,42 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+.preview {
+  order: -1;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+  max-height: 220px;
+  background:
+    linear-gradient(180deg, rgba(249, 251, 248, 0.98), rgba(239, 244, 241, 0.98));
+}
+
+.preview :global(.lightbox-trigger) {
+  display: block;
+  height: 100%;
+  padding: 10px;
+  cursor: zoom-in;
+}
+
+.preview :global(img) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.preview :global(.studio-empty-preview) {
+  min-height: 100px;
+  padding: 16px;
+  place-items: start;
+  color: var(--ink);
+  border-radius: 12px;
+  border: 1px dashed rgba(21, 44, 39, 0.14);
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.preview :global(.studio-empty-preview-copy) {
+  max-width: 34ch;
+}

@@ -1,0 +1,9 @@
+Use case: background-extraction
+Asset type: isolated pitch-deck figure element for slide reconstruction
+Primary request: return the attached asset almost exactly as-is, but cleaner and higher-resolution. Keep the same rounded panel, three source snippets flowing into one structured brief card, the small teal product badge inside the card, the bottom baseline, and the centered step marker 3.
+Input images: Image 1: transparent extraction reference for exact composition and edge behavior
+Style/medium: same grayscale editorial illustration style as the reference
+Composition/framing: same crop and proportions, keep the full circle visible, preserve the compact arrow and handoff feel, no extra line overhangs or stray marks
+Lighting/mood: soft grayscale with restrained teal accent on the product card only
+Constraints: do not redesign the layout, do not turn this into a clipboard, keep the brief card tech-forward and minimal, crisp edges, better resolution, suitable for placing into an HTML slide
+Avoid: new labels, extra text, extra icons, clipboard metaphor, watermarks, artifacts, cut-off circle

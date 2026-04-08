@@ -1,0 +1,37 @@
+{
+  "provider": "claude",
+  "status": "partial",
+  "summary": "The candidate slide successfully replaces the blank template with real content and hits most of the brief's requirements: the locked header and subheader are present, the $1.25M hero ask is prominent in the left block, the three Build/Deploy/Validate milestone cards appear on the right with correct copy, the support stats (2 key hires, 3 pilot sites, 18–20 months runway) are shown, and a bottom ribbon reads 'USE OF FUNDS Build • Deploy • Validate'. However, several issues prevent a full 'applied' rating: (1) the Designer Health footer logo renders as a plain wordmark 'designer' in a different typeface/weight rather than the locked Designer Health logomark seen in the shell and reference slides; (2) the slide is rendered inside a grey browser/viewport surround rather than as a clean white slide filling the frame, breaking the shell contract; (3) the header adds a trailing period not present in the locked spec; (4) the left hero block is visually sparse and the stat row sits above the milestone area rather than integrated into the left panel, slightly misaligning with the 'left hero ask block' layout intent; (5) the milestone cards are condensed to single-line summaries rather than the two-bullet structure specified in the brief.",
+  "evidence": [
+    "Header reads 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.' — trailing period not in locked spec",
+    "Subheader correctly reads 'Post-money SAFE • ~18–20 months of runway'",
+    "$1.25M displayed in large hero type in left block with 'PRE-SEED ROUND' eyebrow and 'Post-money SAFE' label",
+    "BUILD / DEPLOY / VALIDATE badge labels present with correct milestone copy on right side",
+    "Support stats '2 key hires', '3 pilot sites', '18–20 months runway' visible in top stat row",
+    "Bottom ribbon reads 'USE OF FUNDS Build • Deploy • Validate' — correctly restrained, no budget table",
+    "Footer logo renders as plain lowercase 'designer' wordmark, not the Designer Health logomark with the chevron icon seen in the shell baseline",
+    "Slide is surrounded by a grey viewport/browser background rather than presenting as a clean white slide frame",
+    "Milestone cards show single-line summaries (e.g. 'Founding engineer hired; clinician-grade product loop live.') rather than the two-bullet card structure specified",
+    "Stat row (2/3/18-20) floats above the milestone section rather than being anchored inside the left hero block as the figure plan specifies"
+  ],
+  "nextPrompt": "Fix four issues: (1) Remove the trailing period from the header so it matches the locked spec exactly. (2) Replace the plain 'designer' wordmark in the footer with the full Designer Health logomark (chevron icon + 'DESIGNER HEALTH' text) matching the shell baseline. (3) Remove the grey viewport surround so the slide renders as a clean white frame edge-to-edge. (4) Expand each milestone card to show two distinct bullet points per the spec (Build: 'Founding engineer in place' + 'Clinician-grade product loop live'; Deploy: 'Implementation / ops lead in place' + 'Pilot sites launched with a repeatable rollout motion'; Validate: 'Measurable pilot outcomes' + 'Seed-ready proof package'). Keep all other content and layout as-is.",
+  "needsHuman": false,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate slide successfully replaces the blank template with real content and hits most of the brief's requirements: the locked header and subheader are present, the $1.25M hero ask is prominent in the left block, the three Build/Deploy/Validate milestone cards appear on the right with correct copy, the support stats (2 key hires, 3 pilot sites, 18–20 months runway) are shown, and a bottom ribbon reads 'USE OF FUNDS Build • Deploy • Validate'. However, several issues prevent a full 'applied' rating: (1) the Designer Health footer logo renders as a plain wordmark 'designer' in a different typeface/weight rather than the locked Designer Health logomark seen in the shell and reference slides; (2) the slide is rendered inside a grey browser/viewport surround rather than as a clean white slide filling the frame, breaking the shell contract; (3) the header adds a trailing period not present in the locked spec; (4) the left hero block is visually sparse and the stat row sits above the milestone area rather than integrated into the left panel, slightly misaligning with the 'left hero ask block' layout intent; (5) the milestone cards are condensed to single-line summaries rather than the two-bullet structure specified in the brief.",
+    "evidence": [
+      "Header reads 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.' — trailing period not in locked spec",
+      "Subheader correctly reads 'Post-money SAFE • ~18–20 months of runway'",
+      "$1.25M displayed in large hero type in left block with 'PRE-SEED ROUND' eyebrow and 'Post-money SAFE' label",
+      "BUILD / DEPLOY / VALIDATE badge labels present with correct milestone copy on right side",
+      "Support stats '2 key hires', '3 pilot sites', '18–20 months runway' visible in top stat row",
+      "Bottom ribbon reads 'USE OF FUNDS Build • Deploy • Validate' — correctly restrained, no budget table",
+      "Footer logo renders as plain lowercase 'designer' wordmark, not the Designer Health logomark with the chevron icon seen in the shell baseline",
+      "Slide is surrounded by a grey viewport/browser background rather than presenting as a clean white slide frame",
+      "Milestone cards show single-line summaries (e.g. 'Founding engineer hired; clinician-grade product loop live.') rather than the two-bullet card structure specified",
+      "Stat row (2/3/18-20) floats above the milestone section rather than being anchored inside the left hero block as the figure plan specifies"
+    ],
+    "nextPrompt": "Fix four issues: (1) Remove the trailing period from the header so it matches the locked spec exactly. (2) Replace the plain 'designer' wordmark in the footer with the full Designer Health logomark (chevron icon + 'DESIGNER HEALTH' text) matching the shell baseline. (3) Remove the grey viewport surround so the slide renders as a clean white frame edge-to-edge. (4) Expand each milestone card to show two distinct bullet points per the spec (Build: 'Founding engineer in place' + 'Clinician-grade product loop live'; Deploy: 'Implementation / ops lead in place' + 'Pilot sites launched with a repeatable rollout motion'; Validate: 'Measurable pilot outcomes' + 'Seed-ready proof package'). Keep all other content and layout as-is.",
+    "needsHuman": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "provider": "gpt",
+  "verdict": "blocker",
+  "rationale": "The candidate is no longer a blank shell, but it has multiple visible regressions that make it feel unfinished: key locked copy is overlapping, several text blocks are clipped or colliding, a broken image/placeholder remains at bottom right, and the footer/logo area has drifted from the official shell.",
+  "blockers": [
+    "Locked subheader overlaps the header and is visibly mispositioned",
+    "Multiple body text areas are clipped/colliding in the milestone cards and bottom ribbon, making required content unreadable",
+    "A broken image/placeholder box is visible at the bottom right of the slide",
+    "Footer shell drift: the official Designer footer/logo treatment is misaligned/replaced and no longer matches the baseline family"
+  ],
+  "nextMove": "Fix the layout pass before styling tweaks: restore the official footer/logo shell, remove the broken bottom-right placeholder, then reflow the header/subheader and all card/ribbon text so nothing overlaps or clips.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate is no longer a blank shell, but it has multiple visible regressions that make it feel unfinished: key locked copy is overlapping, several text blocks are clipped or colliding, a broken image/placeholder remains at bottom right, and the footer/logo area has drifted from the official shell.",
+    "blockers": [
+      "Locked subheader overlaps the header and is visibly mispositioned",
+      "Multiple body text areas are clipped/colliding in the milestone cards and bottom ribbon, making required content unreadable",
+      "A broken image/placeholder box is visible at the bottom right of the slide",
+      "Footer shell drift: the official Designer footer/logo treatment is misaligned/replaced and no longer matches the baseline family"
+    ],
+    "nextMove": "Fix the layout pass before styling tweaks: restore the official footer/logo shell, remove the broken bottom-right placeholder, then reflow the header/subheader and all card/ribbon text so nothing overlaps or clips."
+  }
+}

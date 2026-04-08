@@ -1,0 +1,33 @@
+{
+  "provider": "gpt",
+  "status": "partial",
+  "summary": "The candidate clearly attempts the required ask slide structure with a left hero ask block, right Build/Deploy/Validate milestone cards, and a restrained use-of-funds ribbon, but execution issues keep it from being successfully realized as a finished in-family deck slide.",
+  "evidence": [
+    "The locked header text is present as the main title: “Raising $1.25M to launch pilots, prove value, and establish repeatable deployment,” and the subheader reads “Post-money SAFE • ~18–20 months of runway.”",
+    "The figure follows the requested logic: a left hero card featuring “$1.25M,” a right-side milestone area labeled Build / Deploy / Validate, and a bottom ribbon labeled “Use of funds.”",
+    "Support stats are surfaced across the top of the master card as “2 key hires,” “3 pilot sites,” and “18–20 months runway,” matching the brief’s burden to surface the ask first and then what the round unlocks.",
+    "The milestone area communicates disciplined progression with three stacked cards: Build, Deploy, and Validate, each with milestone-style chips and right-side explanatory proof statements.",
+    "However, the slide has visible overlap/collision at the top: the subheader sits on top of the large title, making the header area look broken and not presentation-ready.",
+    "The left hero card is overcrowded and contains extra small text blocks and chips beyond the brief’s restrained ask logic, making the figure denser than requested.",
+    "The footer logo shell is not preserved cleanly: the Designer footer mark appears replaced or broken with a visible image placeholder box in the lower-right corner.",
+    "Some lower content is clipped/stacked awkwardly, especially around the bottom ribbon and the Validate area, which reduces readability and polish."
+  ],
+  "nextPrompt": "Keep the same overall structure, but fix layout fidelity: separate the title and subheader with proper spacing, preserve the official footer rule and Designer logo with no broken image placeholder, simplify the left ask card to the requested core content, and ensure the Build/Deploy/Validate stack plus bottom use-of-funds ribbon are fully readable without clipping or overlap.",
+  "needsHuman": false,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate clearly attempts the required ask slide structure with a left hero ask block, right Build/Deploy/Validate milestone cards, and a restrained use-of-funds ribbon, but execution issues keep it from being successfully realized as a finished in-family deck slide.",
+    "evidence": [
+      "The locked header text is present as the main title: “Raising $1.25M to launch pilots, prove value, and establish repeatable deployment,” and the subheader reads “Post-money SAFE • ~18–20 months of runway.”",
+      "The figure follows the requested logic: a left hero card featuring “$1.25M,” a right-side milestone area labeled Build / Deploy / Validate, and a bottom ribbon labeled “Use of funds.”",
+      "Support stats are surfaced across the top of the master card as “2 key hires,” “3 pilot sites,” and “18–20 months runway,” matching the brief’s burden to surface the ask first and then what the round unlocks.",
+      "The milestone area communicates disciplined progression with three stacked cards: Build, Deploy, and Validate, each with milestone-style chips and right-side explanatory proof statements.",
+      "However, the slide has visible overlap/collision at the top: the subheader sits on top of the large title, making the header area look broken and not presentation-ready.",
+      "The left hero card is overcrowded and contains extra small text blocks and chips beyond the brief’s restrained ask logic, making the figure denser than requested.",
+      "The footer logo shell is not preserved cleanly: the Designer footer mark appears replaced or broken with a visible image placeholder box in the lower-right corner.",
+      "Some lower content is clipped/stacked awkwardly, especially around the bottom ribbon and the Validate area, which reduces readability and polish."
+    ],
+    "nextPrompt": "Keep the same overall structure, but fix layout fidelity: separate the title and subheader with proper spacing, preserve the official footer rule and Designer logo with no broken image placeholder, simplify the left ask card to the requested core content, and ensure the Build/Deploy/Validate stack plus bottom use-of-funds ribbon are fully readable without clipping or overlap.",
+    "needsHuman": false
+  }
+}

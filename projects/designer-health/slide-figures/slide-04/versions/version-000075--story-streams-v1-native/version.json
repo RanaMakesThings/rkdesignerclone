@@ -1,0 +1,14 @@
+{
+  "id": "version-000075",
+  "slideId": "slide-04",
+  "slideDir": "projects/designer-health/slide-figures/slide-04",
+  "dir": "projects/designer-health/slide-figures/slide-04/versions/version-000075--story-streams-v1-native",
+  "label": "story-streams-v1-native",
+  "status": "archived",
+  "createdAt": "2026-03-31T21:13:43.089Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/slide-04-story-streams-v1"
+  ]
+}

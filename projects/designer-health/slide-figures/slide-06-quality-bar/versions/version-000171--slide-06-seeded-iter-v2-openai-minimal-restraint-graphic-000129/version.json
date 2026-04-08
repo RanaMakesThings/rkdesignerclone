@@ -1,0 +1,25 @@
+{
+  "id": "version-000171",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000171--slide-06-seeded-iter-v2-openai-minimal-restraint-graphic-000129",
+  "label": "slide-06-seeded-iter-v2-openai-minimal-restraint-graphic-000129",
+  "status": "archived",
+  "createdAt": "2026-04-03T04:07:14.666Z",
+  "sourceKind": "presentation-image-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/presentation-images/vox-slide6-seeded-iteration-v2-2026-04-03/openai/version-06--minimal-restraint",
+    "output/figures/presentation-images/vox-slide6-seeded-iteration-v2-2026-04-03/openai/version-06--minimal-restraint/image-01.png"
+  ],
+  "runId": "graphic-batch-000026",
+  "attempt": 6,
+  "sourceGraphicId": "graphic-000129",
+  "sourceBatchId": "graphic-batch-000026",
+  "sourceBatchSlug": "vox-slide6-seeded-iteration-v2-2026-04-03",
+  "sourceProvider": "openai",
+  "sourceVariantId": "v03-minimal",
+  "sourceVariantLabel": "Minimal Restraint",
+  "sourcePath": "output/figures/presentation-images/vox-slide6-seeded-iteration-v2-2026-04-03/openai/version-06--minimal-restraint",
+  "sourceImagePath": "output/figures/presentation-images/vox-slide6-seeded-iteration-v2-2026-04-03/openai/version-06--minimal-restraint/image-01.png"
+}

@@ -1,0 +1,37 @@
+{
+  "provider": "claude",
+  "status": "partial",
+  "summary": "The candidate slide (image 6) successfully replaces all template placeholders with real content and delivers the core structural logic: eyebrow 'THE ASK', locked header, locked subheader, left hero block with $1.25M / Post-money SAFE, right milestone cards for Build / Deploy / Validate with correct copy, support stats (2 key hires / 3 pilot sites / 18–20 months runway), and a bottom 'USE OF FUNDS: Build • Deploy • Validate' ribbon. However, several spec requirements are only partially met: the header adds a trailing period not present in the locked spec; the footer logo renders as lowercase wordmark 'designer' rather than the Designer Health logomark used in the shell and reference slides; the left hero block feels visually thin and underweight compared to the 000320/000340 reference density (no supporting proof copy or milestone summary below the ask); the milestone cards are very sparse one-liners rather than the two-bullet-per-card structure specified; and the overall card sits on a light grey background rather than the white Designer shell. The slide is substantially realized but falls short of the locked spec on header punctuation, logo fidelity, milestone card depth, and shell background.",
+  "evidence": [
+    "Header reads 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.' — trailing period not in locked spec",
+    "Footer logo renders as lowercase 'designer' wordmark, not the Designer Health logomark with icon used in the official shell and reference slides",
+    "Left hero block shows 'PRE-SEED ROUND / $1.25M / Post-money SAFE / Funds the next proof stage.' — missing the two-line proof descriptor and milestone summary visible in 000320/000340 references",
+    "BUILD card reads only 'Founding engineer hired; clinician-grade product loop live.' — spec requires two distinct bullet lines per card",
+    "DEPLOY card reads only 'Implementation lead hired; 3 pilot sites live.' — spec requires 'Implementation / ops lead in place' and 'Pilot sites launched with a repeatable rollout motion' as separate items",
+    "VALIDATE card reads only 'Measured pilot outcomes; seed-ready proof package.' — matches spec intent but compressed to one line",
+    "Slide background is light grey (#f5f5f5 range) rather than the white shell used across the deck",
+    "Support stats row (2 key hires / 3 pilot sites / 18–20 months runway) is present and correctly labeled",
+    "Bottom ribbon 'USE OF FUNDS Build • Deploy • Validate' is present and restrained — matches spec",
+    "Eyebrow 'THE ASK' is present in correct position and style"
+  ],
+  "nextPrompt": "Fix four issues: (1) Remove the trailing period from the header so it reads exactly 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' with no period. (2) Replace the lowercase 'designer' wordmark with the Designer Health logomark (icon + DESIGNER HEALTH text) matching the shell footer. (3) Set the slide and master card background to white (#ffffff) to match the locked shell. (4) Expand each milestone card to two distinct bullet lines per the spec: BUILD — 'Founding engineer in place' / 'Clinician-grade product loop live'; DEPLOY — 'Implementation / ops lead in place' / 'Pilot sites launched with a repeatable rollout motion'; VALIDATE — 'Measurable pilot outcomes' / 'Seed-ready proof package'. Keep all other structure intact.",
+  "needsHuman": false,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate slide (image 6) successfully replaces all template placeholders with real content and delivers the core structural logic: eyebrow 'THE ASK', locked header, locked subheader, left hero block with $1.25M / Post-money SAFE, right milestone cards for Build / Deploy / Validate with correct copy, support stats (2 key hires / 3 pilot sites / 18–20 months runway), and a bottom 'USE OF FUNDS: Build • Deploy • Validate' ribbon. However, several spec requirements are only partially met: the header adds a trailing period not present in the locked spec; the footer logo renders as lowercase wordmark 'designer' rather than the Designer Health logomark used in the shell and reference slides; the left hero block feels visually thin and underweight compared to the 000320/000340 reference density (no supporting proof copy or milestone summary below the ask); the milestone cards are very sparse one-liners rather than the two-bullet-per-card structure specified; and the overall card sits on a light grey background rather than the white Designer shell. The slide is substantially realized but falls short of the locked spec on header punctuation, logo fidelity, milestone card depth, and shell background.",
+    "evidence": [
+      "Header reads 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.' — trailing period not in locked spec",
+      "Footer logo renders as lowercase 'designer' wordmark, not the Designer Health logomark with icon used in the official shell and reference slides",
+      "Left hero block shows 'PRE-SEED ROUND / $1.25M / Post-money SAFE / Funds the next proof stage.' — missing the two-line proof descriptor and milestone summary visible in 000320/000340 references",
+      "BUILD card reads only 'Founding engineer hired; clinician-grade product loop live.' — spec requires two distinct bullet lines per card",
+      "DEPLOY card reads only 'Implementation lead hired; 3 pilot sites live.' — spec requires 'Implementation / ops lead in place' and 'Pilot sites launched with a repeatable rollout motion' as separate items",
+      "VALIDATE card reads only 'Measured pilot outcomes; seed-ready proof package.' — matches spec intent but compressed to one line",
+      "Slide background is light grey (#f5f5f5 range) rather than the white shell used across the deck",
+      "Support stats row (2 key hires / 3 pilot sites / 18–20 months runway) is present and correctly labeled",
+      "Bottom ribbon 'USE OF FUNDS Build • Deploy • Validate' is present and restrained — matches spec",
+      "Eyebrow 'THE ASK' is present in correct position and style"
+    ],
+    "nextPrompt": "Fix four issues: (1) Remove the trailing period from the header so it reads exactly 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' with no period. (2) Replace the lowercase 'designer' wordmark with the Designer Health logomark (icon + DESIGNER HEALTH text) matching the shell footer. (3) Set the slide and master card background to white (#ffffff) to match the locked shell. (4) Expand each milestone card to two distinct bullet lines per the spec: BUILD — 'Founding engineer in place' / 'Clinician-grade product loop live'; DEPLOY — 'Implementation / ops lead in place' / 'Pilot sites launched with a repeatable rollout motion'; VALIDATE — 'Measurable pilot outcomes' / 'Seed-ready proof package'. Keep all other structure intact.",
+    "needsHuman": false
+  }
+}

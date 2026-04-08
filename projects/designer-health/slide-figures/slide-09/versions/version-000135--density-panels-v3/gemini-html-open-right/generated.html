@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Deck Slide</title>
+    <style>
+        /* Base Setup & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        :root {
+            /* Restrained Grayscale Palette */
+            --bg-color: #F8F8F7; /* Warm-white background */
+            --card-bg: #FFFFFF;
+            --text-primary: #1A1A1A;
+            --text-secondary: #6B6B6B;
+            --border-color: #EAEAEA;
+            --chip-bg-gray: #F2F2F2;
+            --chip-text-gray: #4A4A4A;
+            
+            /* Single Accent Color */
+            --vox-blue: #0055FF;
+
+            /* Geometry */
+            --radius-card: 32px;
+            --radius-image: 16px;
+            --radius-chip: 100px;
+        }
+
+        body {
+            width: 1920px;
+            height: 1080px;
+            background-color: var(--bg-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            padding: 80px 100px;
+            overflow: hidden;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 52px;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 70px;
+            max-width: 1400px;
+            color: var(--text-primary);
+        }
+
+        /* Layout */
+        .deck-container {
+            display: flex;
+            gap: 60px;
+            flex: 1;
+            height: 100%;
+        }
+
+        /* Card Styles */
+        .card {
+            flex: 1;
+            background-color: var(--card-bg);
+            border-radius: var(--radius-card);
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            /* Soft light card effect */
+            border: 1px solid var(--border-color);
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.03), 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Card Internals - Order: Kicker -> Image -> Support Line -> Chips */
+        .kicker {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .image-wrapper {
+            width: 100%;
+            aspect-ratio: 1.5; /* Enforces same image size/shape on both sides */
+            border-radius: var(--radius-image);
+            overflow: hidden;
+            background-color: #F5F5F5; /* Fallback */
+            margin-bottom: 40px;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center center;
+            display: block;
+        }
+
+        .support-line {
+            font-size: 26px;
+            line-height: 1.4;
+            font-weight: 400;
+            color: var(--text-primary);
+        }
+
+        .chip-field {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* Chip Base Styles */
+        .chip {
+            padding: 12px 24px;
+            border-radius: var(--radius-chip);
+            font-size: 16px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        /* Left Card Specifics - "Occupied and Validated" */
+        .card.left .support-line {
+            margin-bottom: 32px;
+        }
+        
+        .card.left .chip {
+            background-color: var(--chip-bg-gray);
+            color: var(--chip-text-gray);
+        }
+
+        /* Right Card Specifics - "Visibly more internal whitespace", "Airier field" */
+        .card.right .support-line {
+            margin-bottom: 56px; /* Increased margin for airiness */
+            padding-right: 40px; /* Slight right padding to let text breathe */
+        }
+
+        .card.right .chip-field {
+            margin-top: auto; /* Pushes chips down slightly if needed, though structure handles most whitespace */
+        }
+
+        .chip.vox {
+            background-color: var(--vox-blue);
+            color: #FFFFFF;
+            box-shadow: 0 4px 12px rgba(0, 85, 255, 0.2);
+        }
+
+        .chip.outline {
+            background-color: transparent;
+            border: 1px dashed #CCCCCC;
+            color: #999999;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>AI has traction after the visit. The visit itself is still thinly served.</h1>
+
+    <div class="deck-container">
+        
+        <!-- Left Panel -->
+        <div class="card left">
+            <div class="kicker">AI impact after the visit</div>
+            <div class="image-wrapper">
+                <img src="/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-doc-admin-slide7-v113-batch-b/openai/version-06--minimal-restraint/image-01.png" alt="Clinician working at dual monitors">
+            </div>
+            <div class="support-line">Ambient scribes validate clinician buy-in for AI assistance.</div>
+            <div class="chip-field">
+                <div class="chip">ambient scribe</div>
+                <div class="chip">note generation</div>
+                <div class="chip">clerical relief</div>
+                <div class="chip">documentation support</div>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="card right">
+            <div class="kicker">AI impact during the visit</div>
+            <div class="image-wrapper">
+                <img src="/Users/kabeer/Code/rkdesignerclone/output/figures/presentation-images/slide-09-encounter-slide7-v113-batch/openai/version-05--bold-contrast/image-01.png" alt="Clinician interacting with patient">
+            </div>
+            <div class="support-line">Few tools actually change how the encounter is conducted. Vox does.</div>
+            <div class="chip-field">
+                <div class="chip vox">VOX</div>
+                <div class="chip outline">legacy tools</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

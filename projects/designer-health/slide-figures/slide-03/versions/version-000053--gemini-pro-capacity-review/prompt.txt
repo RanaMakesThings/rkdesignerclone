@@ -1,0 +1,15 @@
+Review this pitch-deck slide as a visual communication problem.
+
+Intended message: if the story-reconstruction portion of each visit gets smaller, repeated across the day, capacity is created and one additional visit can be added.
+
+Important constraint: we do not want the slide to read as reckless visit compression or lower-quality care. It should feel tactful and credible, not like we are simply shortening visits indiscriminately.
+
+Current problem: viewers are not immediately understanding why five visits become six, what the green new visit means, or how the capacity is created.
+
+Please give: 
+1. Five concrete redesign directions for this exact slide.
+2. For each direction, include: the visual change, why it would clarify the point, and the main tradeoff or risk.
+3. Explicitly react to ideas like: two new visits instead of one, a key or legend, arrows showing the blue segment shrinking, an efficiency or capacity arrow, changing the middle transition text, or making the before/after transformation more explicit.
+4. Recommend one preferred direction.
+
+Be specific and practical. Avoid generic design advice.

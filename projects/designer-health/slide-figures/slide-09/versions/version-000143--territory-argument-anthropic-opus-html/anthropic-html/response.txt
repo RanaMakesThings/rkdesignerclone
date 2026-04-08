@@ -1,0 +1,268 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>Investor Deck – Slide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #FAFAF8;
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .slide {
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 112px;
+  }
+
+  /* ── Headline zone: top ~21% ── */
+  .headline-zone {
+    height: 228px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 32px;
+  }
+
+  .headline {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    color: #111;
+    max-width: 1100px;
+  }
+
+  .headline em {
+    font-style: normal;
+    color: #6B7280;
+    font-weight: 400;
+  }
+
+  /* ── Divider ── */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: #E0DFDC;
+    flex-shrink: 0;
+  }
+
+  /* ── Two-column zone ── */
+  .columns {
+    flex: 1;
+    display: flex;
+    gap: 64px;
+    padding-top: 48px;
+  }
+
+  .col-left {
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-right {
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── Vertical separator between columns ── */
+  .col-right {
+    border-left: 1px solid #E8E7E4;
+    padding-left: 64px;
+  }
+
+  /* ── Kicker ── */
+  .kicker {
+    font-size: 11.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #9CA3AF;
+    margin-bottom: 14px;
+  }
+
+  /* ── Statement ── */
+  .statement {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    max-width: 560px;
+  }
+
+  .col-right .statement {
+    max-width: 640px;
+  }
+
+  /* ── Image wrapper ── */
+  .evidence-img-wrap {
+    position: relative;
+    margin-bottom: 28px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #F3F3F1;
+    border: 1px solid #E8E7E4;
+  }
+
+  .evidence-img-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: saturate(0.15) contrast(0.92) brightness(1.03);
+    mix-blend-mode: multiply;
+  }
+
+  .col-left .evidence-img-wrap {
+    max-width: 520px;
+  }
+
+  .col-right .evidence-img-wrap {
+    max-width: 600px;
+  }
+
+  /* ── Density caption ── */
+  .density-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 2px;
+  }
+
+  .density-caption {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #B0AEA8;
+  }
+
+  /* ── Density markers ── */
+  .density-markers {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 20px;
+  }
+
+  /* Left: crowded cluster */
+  .marker-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    background: #B0AEA8;
+    opacity: 0.7;
+  }
+
+  .marker-dot.dark {
+    background: #8B8985;
+    opacity: 0.85;
+  }
+
+  /* Right: sparse with VOX accent */
+  .marker-vox {
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    background: #2563EB;
+  }
+
+  .marker-ghost {
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    border: 1.2px solid #D1D0CC;
+    background: transparent;
+  }
+
+  .spacer-marker {
+    width: 12px;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="slide">
+
+  <!-- ── Headline ── -->
+  <div class="headline-zone">
+    <h1 class="headline">AI has traction after the visit. <em>The visit itself is still thinly served.</em></h1>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ── Two columns ── -->
+  <div class="columns">
+
+    <!-- LEFT COLUMN -->
+    <div class="col-left">
+      <div class="kicker">AI impact after the visit</div>
+      <p class="statement">Ambient scribes validate clinician buy-in for AI&nbsp;assistance.</p>
+
+      <div class="evidence-img-wrap">
+        <img src="/Users/kabeer/Desktop/4FAA88B9-3C54-4321-B182-C8DB4ED0A963.png" alt="Clinician reviewing records on dual monitors">
+      </div>
+
+      <div class="density-row">
+        <span class="density-caption">More crowded</span>
+        <div class="density-markers">
+          <span class="marker-dot dark"></span>
+          <span class="marker-dot"></span>
+          <span class="marker-dot dark"></span>
+          <span class="marker-dot"></span>
+          <span class="marker-dot dark"></span>
+          <span class="marker-dot"></span>
+          <span class="marker-dot dark"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="col-right">
+      <div class="kicker">AI impact during the visit</div>
+      <p class="statement">Few tools actually change how the encounter is&nbsp;conducted. Vox&nbsp;does.</p>
+
+      <div class="evidence-img-wrap">
+        <img src="/Users/kabeer/Desktop/757B1C3E-6121-4432-8524-C7BDE4EE6722.png" alt="Clinician consulting with patient using tablet">
+      </div>
+
+      <div class="density-row">
+        <span class="density-caption">Still thin</span>
+        <div class="density-markers">
+          <span class="marker-vox"></span>
+          <span class="spacer-marker"></span>
+          <span class="marker-ghost"></span>
+          <span class="spacer-marker"></span>
+          <span class="marker-ghost"></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
+```

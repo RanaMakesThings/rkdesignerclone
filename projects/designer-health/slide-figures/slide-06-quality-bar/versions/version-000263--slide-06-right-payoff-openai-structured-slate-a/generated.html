@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Vox Structured Slate Slide</title>
+<style>
+  :root{
+    --bg:#f7f8f6;
+    --ink:#151c2f;
+    --muted:#5e6b83;
+    --line:#cfd7e3;
+    --line2:#d9e4ea;
+    --teal:#3aa0a8;
+    --teal-deep:#1f7f89;
+    --teal-soft:#d9f0ee;
+    --teal-fade:#edf8f7;
+    --slate:#eef2f7;
+    --shadow:0 22px 60px rgba(30,55,90,.10), 0 6px 20px rgba(30,55,90,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;}
+  .slide{
+    width:1920px;height:1080px;position:relative;overflow:hidden;background:
+      radial-gradient(900px 500px at 50% 72%, rgba(95,145,175,.08), transparent 70%),
+      radial-gradient(520px 520px at 8% 18%, rgba(69,162,171,.08), transparent 58%),
+      radial-gradient(520px 520px at 92% 78%, rgba(69,162,171,.05), transparent 60%),
+      var(--bg);
+  }
+  .title{
+    position:absolute;left:108px;top:70px;width:1450px;
+    color:var(--ink);font-weight:700;font-size:64px;line-height:1.04;letter-spacing:-0.05em;
+  }
+  .title .teal{color:var(--teal)}
+  .sub{
+    position:absolute;left:108px;top:292px;width:1420px;
+    color:var(--muted);font-size:23px;line-height:1.38;letter-spacing:-0.03em;
+  }
+
+  .panel{
+    position:absolute;left:532px;top:409px;width:782px;height:526px;
+    background:rgba(255,255,255,.72);
+    border:1.5px solid rgba(177,190,205,.55);
+    border-radius:42px;
+    box-shadow:0 30px 70px rgba(102,117,140,.10), inset 0 1px 0 rgba(255,255,255,.9);
+  }
+  .panel h2{
+    position:absolute;left:0;right:0;top:34px;margin:0;
+    text-align:center;font-size:55px;letter-spacing:-0.05em;color:#2d8f99;font-weight:700;
+  }
+  .panel .subhead{
+    position:absolute;left:0;right:0;top:103px;text-align:center;
+    color:#304056;font-size:17px;letter-spacing:-0.03em;
+  }
+
+  .lane{
+    position:absolute;left:884px;width:350px;height:46px;border-radius:23px;
+    background:rgba(255,255,255,.85);border:1.5px solid #d4dbe4;
+    box-shadow:0 8px 16px rgba(56,79,104,.04), inset 0 1px 0 rgba(255,255,255,.95);
+    color:#2f3d52;font-size:19px;font-weight:600;display:flex;align-items:center;padding-left:34px;
+    line-height:1.0;
+  }
+  .lane:before{
+    content:"";position:absolute;left:15px;top:17px;width:10px;height:10px;border-radius:50%;
+    background:var(--teal);box-shadow:0 0 0 5px rgba(58,160,168,.08);
+  }
+  .lane.one{top:566px}
+  .lane.two{top:656px}
+  .lane.three{top:746px;height:48px}
+  .lane.three span{display:block;line-height:1.03}
+
+  .label-right{
+    position:absolute;right:190px;top:553px;color:#1f2737;font-weight:700;
+    font-size:24px;letter-spacing:-0.04em;
+  }
+
+  .center-badge{
+    position:absolute;left:700px;top:592px;width:172px;height:172px;border-radius:50%;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,.96) 0 61%, transparent 62%),
+      conic-gradient(from -12deg, rgba(65,173,181,.85) 0 23deg, transparent 23deg 108deg, rgba(65,173,181,.85) 108deg 191deg, transparent 191deg 280deg, rgba(65,173,181,.85) 280deg 350deg, transparent 350deg 360deg);
+    box-shadow:inset 0 0 0 10px rgba(223,241,243,.92), 0 8px 20px rgba(44,84,96,.08);
+  }
+  .center-badge:before{
+    content:"";position:absolute;inset:14px;border-radius:50%;
+    box-shadow:inset 0 0 0 2px rgba(215,233,236,.95);
+  }
+  .center-badge .txt{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;
+    color:#243144;font-weight:700;font-size:18px;line-height:1.08;
+  }
+  .tick{
+    position:absolute;width:18px;height:7px;border-radius:4px;background:#2f9aa2;
+    transform-origin:center center;
+  }
+  .tick.t1{left:146px;top:45px;transform:rotate(-47deg)}
+  .tick.t2{left:34px;top:136px;transform:rotate(-47deg)}
+
+  .ribbon{
+    position:absolute;height:66px;display:flex;align-items:center;padding:0 28px 0 42px;
+    font-size:18px;font-weight:500;color:#4b5a71;letter-spacing:-0.03em;
+    clip-path:polygon(0 50%, 10% 0, 92% 0, 100% 50%, 92% 100%, 10% 100%);
+    background:#fbfcfd;border:3px solid #aebbcf;
+    min-width:390px;
+  }
+  .ribbon.teal{
+    background:#eaf8f7;border-color:#59afb5;color:#166a76;font-weight:700;
+  }
+  .r1{left:101px;top:463px}
+  .r2{left:120px;top:552px}
+  .r3{left:101px;top:640px}
+  .r4{left:120px;top:728px}
+  .r5{left:101px;top:816px}
+
+  .sig{
+    position:absolute;left:1312px;top:620px;width:320px;height:210px;
+    opacity:.95;
+  }
+
+  .slate-wrap{
+    position:absolute;left:1494px;top:602px;width:308px;height:322px;
+    filter:drop-shadow(0 18px 34px rgba(44,73,103,.12)) drop-shadow(0 5px 14px rgba(44,73,103,.06));
+  }
+  .slate-tab{
+    position:absolute;left:-26px;top:18px;width:34px;height:210px;border-radius:18px;
+    background:linear-gradient(180deg, #2b8591 0%, #1f6670 100%);
+    box-shadow:inset -4px 0 0 rgba(255,255,255,.22);
+  }
+  .slate-tab:after{
+    content:"";position:absolute;left:14px;top:18px;bottom:18px;width:6px;border-radius:4px;
+    background:rgba(255,255,255,.20);
+  }
+
+  .slate{
+    width:280px;height:322px;border-radius:20px;background:linear-gradient(180deg, #fff 0%, #fbfcfc 100%);
+    border:1.5px solid #d9e2ea;position:absolute;right:0;top:0;overflow:hidden;
+  }
+  .slate .topbar{
+    height:12px;background:linear-gradient(90deg, rgba(84,183,188,.15), rgba(84,183,188,.42));
+  }
+  .slate .pad{padding:18px 24px}
+  .row-label{
+    font-size:10px;font-weight:800;color:#6d7d93;letter-spacing:.17em;margin-bottom:9px;
+  }
+  .chief{
+    height:18px;width:68%;border-radius:9px;background:#dfe6ef;margin-bottom:11px;
+  }
+  .chief2{
+    height:14px;width:86%;border-radius:8px;background:#e7edf4;margin-bottom:10px;
+  }
+  .divider{height:1px;background:#d7e0e8;margin:14px 0 12px}
+  .line{
+    height:14px;border-radius:8px;background:#e3e9f0;margin-bottom:8px;
+  }
+  .line.s{width:54%}
+  .line.m{width:73%}
+  .line.l{width:92%}
+  .priority{
+    display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;
+  }
+  .priority .ptext{
+    width:68%;height:16px;border-radius:8px;background:#dfe6ee;
+  }
+  .priority .pill{
+    width:64px;height:22px;border-radius:12px;background:#dff2ea;color:#1e6f50;
+    font-size:11px;font-weight:800;letter-spacing:.09em;display:flex;align-items:center;justify-content:center;
+  }
+  .bullet{
+    display:flex;align-items:center;gap:8px;margin:8px 0;
+  }
+  .dot{
+    width:6px;height:6px;border-radius:50%;background:#58aeb4;
+  }
+  .bline{
+    height:12px;border-radius:7px;background:#e7edf3;flex:1;
+  }
+  .clarify{
+    margin-top:12px;padding-top:12px;border-top:1px solid #d7e0e8;
+  }
+  .verify-head{
+    display:flex;align-items:center;gap:8px;margin-bottom:9px;
+  }
+  .verify-head .mini{
+    width:8px;height:8px;border-radius:50%;background:#2c919b;
+  }
+  .verify-head .vtxt{
+    font-size:10px;font-weight:800;color:#6d7d93;letter-spacing:.17em;
+  }
+
+  .note-label{
+    position:absolute;left:1540px;top:770px;color:#4f6177;font-size:14px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="title">
+    <span class="teal">Vox</span> is the adaptive interviewing system that takes on the<br>
+    hard clinical reasoning work needed to turn patient story<br>
+    into a clinician-grade starting point.
+  </div>
+
+  <div class="sub">
+    Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+    By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>
+    what still needs verification before the visit begins.
+  </div>
+
+  <div class="ribbon r1">My back has been hurting...</div>
+  <div class="ribbon teal r2">Vox: What makes it worse?</div>
+  <div class="ribbon r3">It's worse in the morning.</div>
+  <div class="ribbon teal r4">Vox: When did this start?</div>
+  <div class="ribbon r5">Started last Tuesday.</div>
+
+  <div class="panel">
+    <h2>Vox</h2>
+    <div class="subhead">Adaptive clinical interviewer</div>
+  </div>
+
+  <div class="center-badge">
+    <div class="tick t1"></div>
+    <div class="tick t2"></div>
+    <div class="txt">Adaptive<br>clinical<br>interviewer</div>
+  </div>
+
+  <div class="lane one">What matters</div>
+  <div class="lane two">What connects</div>
+  <div class="lane three"><span>What still needs<br>verification</span></div>
+
+  <div class="label-right">Clinician-grade starting point</div>
+
+  <svg width="1920" height="1080" style="position:absolute;left:0;top:0">
+    <defs>
+      <linearGradient id="lineGrey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#b9c5d5" stop-opacity=".95"/>
+        <stop offset="100%" stop-color="#c9d2df" stop-opacity=".88"/>
+      </linearGradient>
+      <linearGradient id="lineTeal" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#53b1b5" stop-opacity=".95"/>
+        <stop offset="100%" stop-color="#7ec8cc" stop-opacity=".75"/>
+      </linearGradient>
+      <linearGradient id="handoffA" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#bde8ea" stop-opacity=".85"/>
+        <stop offset="45%" stop-color="#9ad8db" stop-opacity=".55"/>
+        <stop offset="100%" stop-color="#77c3c7" stop-opacity=".10"/>
+      </linearGradient>
+      <linearGradient id="handoffB" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#94d4d7" stop-opacity=".50"/>
+        <stop offset="100%" stop-color="#94d4d7" stop-opacity=".02"/>
+      </linearGradient>
+      <filter id="softBlur"><feGaussianBlur stdDeviation="10"/></filter>
+      <filter id="bigBlur"><feGaussianBlur stdDeviation="18"/></filter>
+    </defs>
+
+    <!-- Left input curves -->
+    <path d="M486 497 C 555 493, 606 560, 646 620 S 696 650, 700 649" fill="none" stroke="url(#lineGrey)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M468 585 C 565 585, 615 638, 676 665 S 701 674, 701 674" fill="none" stroke="url(#lineTeal)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M486 673 C 574 673, 633 672, 683 678 S 700 678, 701 678" fill="none" stroke="url(#lineGrey)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M468 761 C 557 763, 617 712, 677 695 S 700 692, 701 692" fill="none" stroke="url(#lineTeal)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M486 849 C 564 849, 626 716, 687 706 S 699 706, 700 706" fill="none" stroke="url(#lineGrey)" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Center to lanes -->
+    <line x1="884" y1="589" x2="974" y2="589" stroke="url(#lineTeal)" stroke-width="24" stroke-linecap="round" opacity=".32"/>
+    <line x1="884" y1="679" x2="974" y2="679" stroke="url(#lineTeal)" stroke-width="24" stroke-linecap="round" opacity=".32"/>
+    <line x1="884" y1="769" x2="974" y2="769" stroke="url(#lineTeal)" stroke-width="24" stroke-linecap="round" opacity=".32"/>
+
+    <!-- Ordered handoff -->
+    <g opacity=".95">
+      <path d="M1314 626 C 1370 652, 1406 672, 1456 678 L 1496 678 L 1496 702 L 1450 702 C 1406 701, 1368 692, 1314 671 Z" fill="url(#handoffA)"/>
+      <path d="M1314 678 L 1496 678" stroke="url(#handoffB)" stroke-width="6" stroke-linecap="round"/>
+      <path d="M1314 624 C 1372 653, 1407 670, 1480 670" fill="none" stroke="#caeef0" stroke-width="8" stroke-linecap="round" opacity=".65"/>
+      <path d="M1314 731 C 1369 713, 1403 698, 1448 690 S 1492 686, 1496 686" fill="none" stroke="#d6f1f2" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+      <path d="M1314 626 C 1370 652, 1406 672, 1456 678 L 1491 678" fill="none" stroke="#8dcfd3" stroke-width="3" stroke-linecap="round" opacity=".45"/>
+      <ellipse cx="1478" cy="694" rx="44" ry="44" fill="#7cc6c9" opacity=".12" filter="url(#bigBlur)"/>
+      <ellipse cx="1452" cy="716" rx="74" ry="48" fill="#58afb5" opacity=".10" filter="url(#softBlur)"/>
+    </g>
+  </svg>
+
+  <div class="slate-wrap">
+    <div class="slate-tab"></div>
+    <div class="slate">
+      <div class="topbar"></div>
+      <div class="pad">
+        <div class="row-label">CHIEF COMPLAINT</div>
+        <div class="chief"></div>
+        <div class="chief2"></div>
+
+        <div class="divider"></div>
+
+        <div class="row-label">PRIORITIZED ASSESSMENT</div>
+        <div class="priority">
+          <div class="ptext"></div>
+          <div class="pill">HIGH</div>
+        </div>
+        <div class="bullet"><div class="dot"></div><div class="bline l"></div></div>
+        <div class="bullet"><div class="dot"></div><div class="bline m"></div></div>
+        <div class="bullet"><div class="dot"></div><div class="bline s"></div></div>
+
+        <div class="clarify">
+          <div class="verify-head">
+            <div class="mini"></div>
+            <div class="vtxt">CLARIFY / VERIFY</div>
+          </div>
+          <div class="line s"></div>
+          <div class="line m"></div>
+          <div class="line l"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

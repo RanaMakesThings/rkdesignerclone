@@ -1,0 +1,78 @@
+artifact_type: figure-ideation-input
+version: v0.1
+run_mode: standard
+authoring_context:
+  project: Designer / Vox Investor Deck
+  source_artifacts:
+    - slide-06-concept-spec-v0.1.md
+slide_metadata:
+  slide_number: "06"
+  working_title: What Vox is
+  status: Strategic lock
+  adjacent_slides:
+    - "05"
+    - "07"
+locked_meaning:
+  slide_job: Define Vox as a disciplined clinical starting-point system without drifting into a feature cloud or workflow strip.
+  audience_should_leave_believing: Vox is a clinically rigorous starting-point product, not an airy marketing layer.
+  core_claim: Vox changes how the visit starts by assembling a clinician-ready brief before the encounter begins.
+slide_copy:
+  text_first:
+    header: Vox changes how the visit starts.
+    support_line: It assembles a clinician-ready starting point before the encounter begins.
+  compressed:
+    header: Vox changes the starting point.
+    subheader: Not a generic assistive layer.
+figure_requirements:
+  figure_burden:
+    - show a disciplined starting-point product
+    - show buildable clinical structure
+  figure_logic: The visual should feel product-real and clinically grounded without becoming a workflow strip.
+  must_not_become:
+    - feature cloud
+    - airy marketing placard
+    - workflow strip pretending to be product concept
+starting_hypothesis:
+  proposed_figure_direction: A compact clinician-ready brief surface with disciplined supporting structure.
+  treat_as: starting hypothesis
+  explore_alternatives: true
+current_visual_context:
+  keep:
+    - product discipline
+    - editorial restraint
+  change:
+    - avoid airy abstractions
+design_constraints:
+  tone:
+    - serious
+    - clinically literate
+    - restrained
+  density_target: sparse
+  template: template.html
+  max_candidates: 8
+  shortlist_count: 3
+  thumbnail_count: 4
+  allow_high_risk_candidate: false
+assets:
+  template_file: template.html
+provider_preferences:
+  text_ideators:
+    - openai
+    - anthropic
+  image_generators:
+    - openai
+    - google
+  vision_critics:
+    - openai
+    - anthropic
+    - google
+requested_outputs:
+  - normalized_brief
+  - figure_brief
+  - figure_move_candidates
+  - ranked_shortlist
+  - spatial_spec
+  - thumbnail_manifest
+  - critique_report
+  - build_spec
+  - run_manifest

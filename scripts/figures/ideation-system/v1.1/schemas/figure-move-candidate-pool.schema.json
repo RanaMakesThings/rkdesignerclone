@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designer.health/schemas/figure-move-candidate-pool.schema.json",
+  "title": "Figure Move Candidate Pool",
+  "type": "object",
+  "required": [
+    "raw_candidates",
+    "canonical_candidates",
+    "clusters",
+    "diversity_score"
+  ],
+  "properties": {
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "canonical_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "clusters": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "raw_to_canonical_map": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "diversity_score": {
+      "type": "number"
+    },
+    "duplicate_warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

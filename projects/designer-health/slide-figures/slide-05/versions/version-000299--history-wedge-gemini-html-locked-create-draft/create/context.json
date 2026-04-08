@@ -1,0 +1,284 @@
+{
+  "slideId": "slide-05",
+  "displayNumber": "4",
+  "lane": "html",
+  "laneReason": "Explicit lane override selected: html.",
+  "createdDraftVersion": false,
+  "draftVersionId": "version-000299",
+  "draftVersionDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft",
+  "projectRoot": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health",
+  "slideDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05",
+  "deckSpecPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/deck-spec.json",
+  "packetPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-05-history-wedge.md",
+  "packetText": "# Slide 5 — History Wedge\n\n## Status\n\n- current deck numbering: slide 5\n- decision state: reopened active packet\n- role in deck sequence:\n  immediate continuation of slide `3`\n\n## Why this slide exists\n\n- carry forward the slide-3 history wedge directly\n- make the intervention point obvious before the denser mechanism slide\n- keep the message sparse and punchy in scan mode\n- preserve continuity with slide `3` without replaying the whole visit bar logic\n\n## Locked slide thesis\n\nHistory is the cleanest place to reclaim minutes because this work is repeated\nacross visits, time-variable, and able to begin before the encounter.\n\n## Figure job\n\n- quote the slide-3 source bar as the family anchor\n- peel out the history wedge into one simple focal object\n- attach one grouped support block with the three reasons\n- keep the whole slide sparse; no subordinate mechanism panel\n- make the claim land in under 3 seconds\n\n## Locked copy architecture\n\n- header:\n  `History is the cleanest place to reclaim minutes`\n- reason 1:\n  `Can begin before the encounter`\n- reason 2:\n  `Repeated across visits`\n- reason 3:\n  `Time-variable`\n\n## Visual rules\n\n- visually quote the slide-3 history wedge; do not redesign it from scratch\n- use one restrained peel / pull motion\n- use one simple arced arrow; not squiggly, not decorative\n- keep the support reasons grouped into one coherent block with short warrants\n  only\n- do not show the lower story-to-structure mechanism panel on this slide\n- do not show workflow mechanics or pre-visit zones\n- keep the slide simple, light, and family-consistent\n\n## Starting references\n\n- slide-3 stamped anchor:\n  `slide-figures/slide-03/figure.png`\n- merged 4/5 top-beat reference:\n  `slide-figures/slide-04-05/gemini-image/image-01.jpg`\n- shelved merged packet:\n  `slide-packets/slide-04-history-bridge.md`\n",
+  "noteReadmePath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-05/README.md",
+  "noteReadmeText": "# Slide 5\n\nCurrent stamped assets for the reopened wedge / intervention slide.\n\n## Current state\n\n- locked current winner is `version-000024`\n- older canonical native `v1` still exists as a historical option\n- this slide now sits immediately after slide `3`\n- keep the visual job sparse:\n  quote the slide-3 wedge, peel it out, and attach the grouped reasons\n- Gemini comparison lanes still exist inside historical versions\n\n## Source of truth\n\n- slide packet:\n  `slide-packets/slide-05-history-wedge.md`\n- locked current branch:\n  `slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01/generated.html`\n- older native spec:\n  `figures/specs/slide-05-history-wedge-v1.json`\n\n## Current best references\n\n- slide-3 stamped anchor:\n  `../slide-03/slide-03--version-000050.png`\n- shelved merged 4/5 Gemini image:\n  `../slide-04-05/gemini-image/image-01.jpg`\n- locked current asset:\n  - `../slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01/generated.html`\n  - `../slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01/preview.png`\n- historical native asset:\n  - `slide-05--version-000024.png`\n  - `slide-05--version-000024.html`\n- slide report:\n  - `slide-reports/slide-05.html`\n\n## Working rule\n\n- do not let mechanism detail leak onto this slide\n- the goal here is simply:\n  `this is the wedge to pull`\n- connector preference:\n  one simple arced arrow, not a squiggly or decorative connector\n\n## Current read\n\n- the locked current winner is `version-000024`, the Gemini HTML top-beat\n  branch derived from the shelved merged reference, with the lower explanatory\n  beat removed\n- current strengths:\n  - simpler standalone composition\n  - visible arrowhead with one clean broad arc\n  - lower figure cluster that fills the page better without the bottom panel\n- the older native `v1` remains useful historical reference, but it is no\n  longer the selected slide-5 direction\n\n## Theme note\n\n- the repo's Montserrat-backed theme is `pd-template-1`\n- the first attempt to apply that theme through `gemini:html:tune` was\n  correctly stopped for human review because Gemini collapsed the structure\n- current working state uses the good original structure plus a direct\n  Montserrat/theme-style patch on top of the dedicated slide-5 Gemini HTML\n",
+  "deckSlide": {
+    "id": "slide-05",
+    "displayNumber": "4",
+    "importedSlides": [
+      4,
+      5
+    ],
+    "historySourceSlideIds": [
+      "slide-04",
+      "slide-04-05"
+    ],
+    "status": "active",
+    "title": "History is the cleanest place to reclaim minutes",
+    "purpose": "make the wedge/intervention-point argument immediately after slide 3",
+    "header": "History is the cleanest place to reclaim minutes.",
+    "subheader": "No formal subtitle; keep the message sparse and grouped around the wedge.",
+    "takeaway": "History can begin before the encounter, is repeated across visits, and remains time-variable, so it is the wedge to pull first.",
+    "figureRole": "quote the slide-3 source bar, peel out the history wedge, and attach one compressed warrant stack",
+    "family": "quoted slide-3 wedge plus grouped reasons",
+    "buildStatus": "Gemini HTML top-beat branch version 000024 is now the current winner; older native v1 remains as a historical option",
+    "proof": [],
+    "paths": {
+      "packet": "projects/designer-health/slide-packets/slide-05-history-wedge.md",
+      "specs": [
+        "projects/designer-health/figures/specs/slide-05-history-wedge-v1.json"
+      ],
+      "stampedDir": "projects/designer-health/slide-figures/slide-05",
+      "assetsManifest": "projects/designer-health/slide-assets/slide-05/manifest.json"
+    },
+    "selectedDirection": "The current selected direction is version 000024: the locked Gemini HTML top-beat slide that keeps the quoted slide-3 source bar, one clean broad arc, the extracted history wedge, and the attached grouped reasons, with no lower explanatory panel.",
+    "notes": [
+      "This slide now sits immediately after slide 3 in the active backbone.",
+      "Old Slide 4 mechanism work and old Slide 5 wedge work both now belong to this current public Slide 4 surface.",
+      "Keep this slide sparse; do not let lower mechanism detail leak in.",
+      "The current locked winner is the Gemini HTML branch in version 000024, derived from the shelved merged top-beat reference.",
+      "The lower explanatory mechanism beat has been removed; this slide now lives as a standalone top-beat intervention slide.",
+      "The older native v1 asset remains useful historical reference, but it is no longer the selected winner."
+    ],
+    "selectedVariantId": "history-wedge-gemini-html-locked",
+    "variants": [
+      {
+        "id": "history-wedge-gemini-html-locked",
+        "label": "History Wedge Gemini HTML",
+        "status": "selected",
+        "summary": "Current locked slide-5 winner. Uses the shelved merged top-beat as the direct reference, then strips the lower explanatory panel so the slide stands alone as the sparse intervention-point argument.",
+        "previewPath": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01/preview.png",
+        "files": [
+          {
+            "label": "Locked branch",
+            "path": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01"
+          },
+          {
+            "label": "HTML",
+            "path": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01/generated.html"
+          },
+          {
+            "label": "Preview",
+            "path": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01/preview.png"
+          }
+        ]
+      },
+      {
+        "id": "history-wedge-v1",
+        "label": "History Wedge Native v1",
+        "status": "option",
+        "summary": "Earlier native reopened wedge slide. Kept as historical reference, but no longer the selected direction after the Gemini HTML top-beat branch proved stronger.",
+        "previewPath": "projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05/figure.png",
+        "files": [
+          {
+            "label": "Stamped dir",
+            "path": "projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05"
+          },
+          {
+            "label": "Spec",
+            "path": "projects/designer-health/figures/specs/slide-05-history-wedge-v1.json"
+          },
+          {
+            "label": "Slide report",
+            "path": "projects/designer-health/slide-reports/slide-05.html"
+          }
+        ]
+      },
+      {
+        "id": "history-wedge-packet",
+        "label": "Slide 5 Packet",
+        "status": "option",
+        "summary": "The current active packet and copy authority for the reopened slide-5 wedge argument.",
+        "previewPath": "",
+        "files": [
+          {
+            "label": "Slide packet",
+            "path": "projects/designer-health/slide-packets/slide-05-history-wedge.md"
+          }
+        ]
+      },
+      {
+        "id": "merged-gemini-top-beat-reference",
+        "label": "Shelved Merge Top-Beat Reference",
+        "status": "option",
+        "summary": "Useful composition reference from the shelved merged concept. Stronger on the upper wedge/hero/support grouping than on the lower explanatory beat.",
+        "previewPath": "projects/designer-health/slide-figures/slide-04-05/versions/version-000013--gemini-image/image-01.jpg",
+        "files": [
+          {
+            "label": "Historical note",
+            "path": "projects/designer-health/slide-notes/slide-04-05/README.md"
+          },
+          {
+            "label": "Image",
+            "path": "projects/designer-health/slide-figures/slide-04-05/versions/version-000013--gemini-image/image-01.jpg"
+          }
+        ]
+      }
+    ],
+    "specText": "### Current official read\n\n**Slide job**\nThis is the wedge-selection slide. It answers: where, specifically, inside the visit are the best minutes to reclaim?\n\n**Core claim**\n**History is the cleanest wedge because it is repeated, time-variable, and can begin before the encounter.**\n\n**What this slide must make the audience believe**\n**History is the right place to focus if the goal is to recover visit time in a meaningful, scalable way.**\n\n**Current preferred header**\n**History is the cleanest place to reclaim minutes.**\n\n**Current preferred subheader**\n**It is repeated, time-variable, and can begin before the encounter.**\n\n**Current preferred supporting labels**\n- **Repeated across visits**\n- **Time-variable**\n- **Can begin before the encounter**\n\n### Preserved strategic discussion\n\nThis slide is where the deck turns from a general throughput story into a specific wedge.\n\nIt is not merely saying history matters. It is saying history has the structural properties that make it the right operational wedge:\n- repeated\n- time-variable\n- movable upstream\n\nThis slide has to prevent several bad readings:\n- why history and not documentation, counseling, triage, or scheduling?\n- this sounds like generic intake logic\n- you are just trying to move any work earlier\n\nIt should feel like a **clean narrowing insight**.\n\nIt should **not**:\n- fully explain the mechanism\n- show the story-to-structure pipeline in detail\n- show product UI\n- talk about clinician-grade output yet\n- become a checklist memo\n\nMain risks:\n- too thin to earn the wedge\n- too generic and intake-adjacent\n- starts stealing work from Slide 5\n\n### Preserved refinements / appended copy recommendations\n\nThis slide was one of the explicit “tighten the copy” slides in the appended recommendations.\n\n**Recommended direction**\nStay sparse, but make the wedge feel selected, not merely highlighted.\n\n**Optional tiny support lines if needed**\n- The same story is often retold across encounters.\n- Time required varies meaningfully with complexity.\n- Much of this work can move upstream.\n\n**What this slide should not say**\n- history is the largest part of the visit\n- history takes ~X minutes\n- AI can automate history taking\n- intake can solve this\n\n### Preserved deck-wide note tied to Slide 4\n\nThe source explicitly called out Slide 4 as a slide at risk of feeling thin. It needs to feel decisive, not decorative.\n\n**One-line test**\n**Okay — history is the right place to intervene if you want to recover visit time.**\n\n---"
+  },
+  "slideEntry": {
+    "id": "slide-05",
+    "displayNumber": "4",
+    "importedSlides": [
+      4,
+      5
+    ],
+    "historySourceSlideIds": [
+      "slide-04",
+      "slide-04-05"
+    ],
+    "status": "active",
+    "title": "History is the cleanest place to reclaim minutes",
+    "purpose": "make the wedge/intervention-point argument immediately after slide 3",
+    "header": "History is the cleanest place to reclaim minutes.",
+    "subheader": "No formal subtitle; keep the message sparse and grouped around the wedge.",
+    "takeaway": "History can begin before the encounter, is repeated across visits, and remains time-variable, so it is the wedge to pull first.",
+    "figureRole": "quote the slide-3 source bar, peel out the history wedge, and attach one compressed warrant stack",
+    "family": "quoted slide-3 wedge plus grouped reasons",
+    "buildStatus": "Gemini HTML top-beat branch version 000024 is now the current winner; older native v1 remains as a historical option",
+    "proof": [],
+    "paths": {
+      "packet": "projects/designer-health/slide-packets/slide-05-history-wedge.md",
+      "specs": [
+        "projects/designer-health/figures/specs/slide-05-history-wedge-v1.json"
+      ],
+      "stampedDir": "projects/designer-health/slide-figures/slide-05",
+      "assetsManifest": "projects/designer-health/slide-assets/slide-05/manifest.json"
+    },
+    "selectedDirection": "The current selected direction is version 000024: the locked Gemini HTML top-beat slide that keeps the quoted slide-3 source bar, one clean broad arc, the extracted history wedge, and the attached grouped reasons, with no lower explanatory panel.",
+    "notes": [
+      "This slide now sits immediately after slide 3 in the active backbone.",
+      "Old Slide 4 mechanism work and old Slide 5 wedge work both now belong to this current public Slide 4 surface.",
+      "Keep this slide sparse; do not let lower mechanism detail leak in.",
+      "The current locked winner is the Gemini HTML branch in version 000024, derived from the shelved merged top-beat reference.",
+      "The lower explanatory mechanism beat has been removed; this slide now lives as a standalone top-beat intervention slide.",
+      "The older native v1 asset remains useful historical reference, but it is no longer the selected winner."
+    ],
+    "selectedVariantId": "history-wedge-gemini-html-locked",
+    "variants": [
+      {
+        "id": "history-wedge-gemini-html-locked",
+        "label": "History Wedge Gemini HTML",
+        "status": "selected",
+        "summary": "Current locked slide-5 winner. Uses the shelved merged top-beat as the direct reference, then strips the lower explanatory panel so the slide stands alone as the sparse intervention-point argument.",
+        "previewPath": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01/preview.png",
+        "files": [
+          {
+            "label": "Locked branch",
+            "path": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01"
+          },
+          {
+            "label": "HTML",
+            "path": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01/generated.html"
+          },
+          {
+            "label": "Preview",
+            "path": "projects/designer-health/slide-figures/slide-05/versions/version-000024--slide-05-20260329t214800z-attempt-01/preview.png"
+          }
+        ]
+      },
+      {
+        "id": "history-wedge-v1",
+        "label": "History Wedge Native v1",
+        "status": "option",
+        "summary": "Earlier native reopened wedge slide. Kept as historical reference, but no longer the selected direction after the Gemini HTML top-beat branch proved stronger.",
+        "previewPath": "projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05/figure.png",
+        "files": [
+          {
+            "label": "Stamped dir",
+            "path": "projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05"
+          },
+          {
+            "label": "Spec",
+            "path": "projects/designer-health/figures/specs/slide-05-history-wedge-v1.json"
+          },
+          {
+            "label": "Slide report",
+            "path": "projects/designer-health/slide-reports/slide-05.html"
+          }
+        ]
+      },
+      {
+        "id": "history-wedge-packet",
+        "label": "Slide 5 Packet",
+        "status": "option",
+        "summary": "The current active packet and copy authority for the reopened slide-5 wedge argument.",
+        "previewPath": "",
+        "files": [
+          {
+            "label": "Slide packet",
+            "path": "projects/designer-health/slide-packets/slide-05-history-wedge.md"
+          }
+        ]
+      },
+      {
+        "id": "merged-gemini-top-beat-reference",
+        "label": "Shelved Merge Top-Beat Reference",
+        "status": "option",
+        "summary": "Useful composition reference from the shelved merged concept. Stronger on the upper wedge/hero/support grouping than on the lower explanatory beat.",
+        "previewPath": "projects/designer-health/slide-figures/slide-04-05/versions/version-000013--gemini-image/image-01.jpg",
+        "files": [
+          {
+            "label": "Historical note",
+            "path": "projects/designer-health/slide-notes/slide-04-05/README.md"
+          },
+          {
+            "label": "Image",
+            "path": "projects/designer-health/slide-figures/slide-04-05/versions/version-000013--gemini-image/image-01.jpg"
+          }
+        ]
+      }
+    ],
+    "specText": "### Current official read\n\n**Slide job**\nThis is the wedge-selection slide. It answers: where, specifically, inside the visit are the best minutes to reclaim?\n\n**Core claim**\n**History is the cleanest wedge because it is repeated, time-variable, and can begin before the encounter.**\n\n**What this slide must make the audience believe**\n**History is the right place to focus if the goal is to recover visit time in a meaningful, scalable way.**\n\n**Current preferred header**\n**History is the cleanest place to reclaim minutes.**\n\n**Current preferred subheader**\n**It is repeated, time-variable, and can begin before the encounter.**\n\n**Current preferred supporting labels**\n- **Repeated across visits**\n- **Time-variable**\n- **Can begin before the encounter**\n\n### Preserved strategic discussion\n\nThis slide is where the deck turns from a general throughput story into a specific wedge.\n\nIt is not merely saying history matters. It is saying history has the structural properties that make it the right operational wedge:\n- repeated\n- time-variable\n- movable upstream\n\nThis slide has to prevent several bad readings:\n- why history and not documentation, counseling, triage, or scheduling?\n- this sounds like generic intake logic\n- you are just trying to move any work earlier\n\nIt should feel like a **clean narrowing insight**.\n\nIt should **not**:\n- fully explain the mechanism\n- show the story-to-structure pipeline in detail\n- show product UI\n- talk about clinician-grade output yet\n- become a checklist memo\n\nMain risks:\n- too thin to earn the wedge\n- too generic and intake-adjacent\n- starts stealing work from Slide 5\n\n### Preserved refinements / appended copy recommendations\n\nThis slide was one of the explicit “tighten the copy” slides in the appended recommendations.\n\n**Recommended direction**\nStay sparse, but make the wedge feel selected, not merely highlighted.\n\n**Optional tiny support lines if needed**\n- The same story is often retold across encounters.\n- Time required varies meaningfully with complexity.\n- Much of this work can move upstream.\n\n**What this slide should not say**\n- history is the largest part of the visit\n- history takes ~X minutes\n- AI can automate history taking\n- intake can solve this\n\n### Preserved deck-wide note tied to Slide 4\n\nThe source explicitly called out Slide 4 as a slide at risk of feeling thin. It needs to feel decisive, not decorative.\n\n**One-line test**\n**Okay — history is the right place to intervene if you want to recover visit time.**\n\n---"
+  },
+  "adjacentSlides": [
+    {
+      "slideId": "slide-03",
+      "displayNumber": "3",
+      "title": "More efficient visits will increase supply",
+      "versionId": "version-000069",
+      "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/slide-03--version-000069.png"
+    },
+    {
+      "slideId": "slide-06",
+      "displayNumber": "5",
+      "title": "The hard part is producing a history clinicians can start from",
+      "versionId": "version-000271",
+      "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06-quality-bar/slide-06-quality-bar--version-000271.png"
+    }
+  ],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "designer-deck-template-v1",
+    "templateDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/templates/designer-deck-template-v1",
+    "contractPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/designer-deck-template.md",
+    "canonicalHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/templates/designer-deck-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/templates/designer-deck-template-v1/template.png",
+    "shellRegionsPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/templates/designer-deck-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft/generated.html",
+    "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft/preview.png",
+    "templateHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-05/create-request.md",
+  "createRequestSnapshotPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000299--history-wedge-gemini-html-locked-create-draft/create/create-request.snapshot.md"
+}

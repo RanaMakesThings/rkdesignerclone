@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, initial-scale=1" />
+    <title>Designer Deck – Slide 05</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --bg: #ffffff;
+        --ink: #141821;
+        --muted: #6d7687;
+        --muted-2: #8e98aa;
+        --rule: rgba(17, 17, 17, 0.9);
+        --line: #d9dee7;
+        --line-2: #e8ecf2;
+        --blue: #4f88c5;
+        --blue-deep: #3f78b4;
+        --blue-soft: #eaf2fb;
+        --slate-1: #d8dee7;
+        --slate-2: #bbc4d1;
+        --slate-3: #9ea8b6;
+        --history-shadow: 0 16px 36px rgba(79, 136, 197, 0.18), 0 4px 10px rgba(20, 24, 33, 0.06);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--bg);
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+      }
+
+      .slide {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        background: #fff;
+      }
+
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 52px;
+        width: 1340px;
+        margin: 0;
+        font-size: 64px;
+        line-height: 1.03;
+        font-weight: 700;
+        letter-spacing: -0.055em;
+        color: var(--ink);
+      }
+
+      .visit-bar-wrap {
+        position: absolute;
+        left: 218px;
+        top: 252px;
+        width: 1480px;
+        height: 220px;
+      }
+
+      .visit-label {
+        position: absolute;
+        left: 0;
+        top: -34px;
+        font-size: 19px;
+        line-height: 1;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--muted-2);
+      }
+
+      .visit-label .dot {
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--muted-2);
+        margin-right: 10px;
+        transform: translateY(-1px);
+        opacity: 0.7;
+      }
+
+      .visit-track {
+        position: absolute;
+        left: 0;
+        top: 24px;
+        width: 1480px;
+        height: 86px;
+        border-radius: 18px;
+        background: #f3f6fa;
+        overflow: hidden;
+        box-shadow: inset 0 0 0 1px rgba(20, 24, 33, 0.05);
+      }
+
+      .seg {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+      }
+
+      .seg.history-base {
+        left: 0;
+        width: 760px;
+        background: linear-gradient(180deg, #4f88c5 0%, #467fbc 100%);
+        color: rgba(255, 255, 255, 0.25);
+      }
+
+      .seg.exam {
+        left: 760px;
+        width: 300px;
+        background: #d8dee7;
+        color: #273245;
+      }
+
+      .seg.plan {
+        left: 1060px;
+        width: 420px;
+        background: #a5afbc;
+        color: #ffffff;
+      }
+
+      .history-lift {
+        position: absolute;
+        left: 18px;
+        top: 0;
+        width: 724px;
+        height: 122px;
+        border-radius: 20px;
+        background: linear-gradient(180deg, #5790cd 0%, #4c86c3 100%);
+        box-shadow: var(--history-shadow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+      }
+
+      .history-lift .title {
+        font-size: 34px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .history-support {
+        position: absolute;
+        left: 48px;
+        top: 142px;
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: -0.018em;
+        color: var(--muted);
+      }
+
+      .history-support .accent {
+        color: var(--blue-deep);
+        font-weight: 700;
+      }
+
+      .support-inline {
+        position: absolute;
+        left: 450px;
+        top: 142px;
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: -0.018em;
+        color: var(--muted-2);
+      }
+
+      .proof {
+        position: absolute;
+        left: 950px;
+        top: 455px;
+        width: 720px;
+      }
+
+      .proof-head {
+        margin: 0 0 18px 0;
+        font-size: 16px;
+        line-height: 1.1;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted-2);
+      }
+
+      .proof-row {
+        position: relative;
+        padding: 0 0 34px 34px;
+      }
+
+      .proof-row:last-child {
+        padding-bottom: 0;
+      }
+
+      .proof-row::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--blue);
+        box-shadow: 0 0 0 8px rgba(79, 136, 197, 0.08);
+      }
+
+      .proof-row::after {
+        content: "";
+        position: absolute;
+        left: 5.5px;
+        top: 26px;
+        width: 1px;
+        height: calc(100% - 6px);
+        background: var(--line);
+      }
+
+      .proof-row:last-child::after {
+        display: none;
+      }
+
+      .proof-title {
+        margin: 0 0 8px 0;
+        font-size: 31px;
+        line-height: 1.05;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        color: var(--ink);
+      }
+
+      .proof-copy {
+        margin: 0;
+        width: 620px;
+        font-size: 23px;
+        line-height: 1.45;
+        font-weight: 500;
+        letter-spacing: -0.022em;
+        color: var(--muted);
+      }
+
+      .open-field-lines {
+        position: absolute;
+        left: 148px;
+        top: 548px;
+        width: 640px;
+        height: 196px;
+        opacity: 0.9;
+      }
+
+      .bottom-statement {
+        position: absolute;
+        left: 92px;
+        top: 816px;
+        width: 1470px;
+        margin: 0;
+        font-size: 54px;
+        line-height: 1.08;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        color: var(--ink);
+      }
+
+      .bottom-statement .requires {
+        color: var(--blue-deep);
+      }
+
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: var(--rule);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="Designer slide 05">
+      <h1 class="header">History is the cleanest place to reclaim minutes.</h1>
+
+      <div class="visit-bar-wrap" aria-label="Visit bar with history selected">
+        <div class="visit-label"><span class="dot"></span>Visit as a whole</div>
+
+        <div class="visit-track">
+          <div class="seg history-base">History</div>
+          <div class="seg exam">Exam</div>
+          <div class="seg plan">Assessment / plan</div>
+        </div>
+
+        <div class="history-lift" aria-label="Selected history segment">
+          <div class="title">History</div>
+        </div>
+
+        <div class="history-support">
+          <span class="accent">A high-leverage target</span> for pre-visit prep.
+        </div>
+        <div class="support-inline">Relevant details • Timeline • Next questions</div>
+      </div>
+
+      <svg class="open-field-lines" viewBox="0 0 640 196" aria-hidden="true">
+        <defs>
+          <linearGradient id="fadeLine" x1="0" x2="1">
+            <stop offset="0%" stop-color="#d9dee7" stop-opacity="0.85"></stop>
+            <stop offset="100%" stop-color="#d9dee7" stop-opacity="0"></stop>
+          </linearGradient>
+        </defs>
+        <path d="M18 38 C78 16, 146 16, 208 38" fill="none" stroke="url(#fadeLine)" stroke-width="2.2"/>
+        <path d="M112 98 C184 64, 252 64, 326 98" fill="none" stroke="url(#fadeLine)" stroke-width="2.2"/>
+        <path d="M246 156 C316 128, 390 128, 470 156" fill="none" stroke="url(#fadeLine)" stroke-width="2.2"/>
+        <circle cx="18" cy="38" r="3" fill="#d9dee7"/>
+        <circle cx="112" cy="98" r="3" fill="#d9dee7"/>
+        <circle cx="246" cy="156" r="3" fill="#d9dee7"/>
+      </svg>
+
+      <div class="proof" aria-label="Three reasons history is the right wedge">
+        <p class="proof-head">Why this is the right wedge</p>
+
+        <div class="proof-row">
+          <h2 class="proof-title">Foundational to the encounter</h2>
+          <p class="proof-copy">Shapes the starting point for what follows in the visit.</p>
+        </div>
+
+        <div class="proof-row">
+          <h2 class="proof-title">Time-variable</h2>
+          <p class="proof-copy">Time required depends on complexity, communication, and context.</p>
+        </div>
+
+        <div class="proof-row">
+          <h2 class="proof-title">Can begin before the encounter</h2>
+          <p class="proof-copy">A meaningful portion can start before the clinician is on the clock.</p>
+        </div>
+      </div>
+
+      <p class="bottom-statement">
+        But reclaiming those minutes still <span class="requires">requires clinical judgment.</span>
+      </p>
+
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../../../../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>

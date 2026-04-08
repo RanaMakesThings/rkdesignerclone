@@ -1,0 +1,145 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>History Wedge Slide</title>
+</head>
+<body style="margin: 0; padding: 0; width: 1920px; height: 1080px; background: white; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; position: relative; overflow: hidden;">
+    
+    <!-- Header -->
+    <div style="position: absolute; top: 80px; left: 120px; font-size: 48px; font-weight: 600; color: #1a1a1a; letter-spacing: -1px;">
+        History is the cleanest place to reclaim minutes
+    </div>
+
+    <!-- Source Bar (quoted from Slide 3) -->
+    <div style="position: absolute; top: 200px; right: 120px; width: 800px; height: 80px; display: flex; align-items: center; background: #f5f5f5; border-radius: 12px; overflow: hidden;">
+        <div style="width: 40%; background: #4A90E2; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: 500;">
+            Story reconstruction
+        </div>
+        <div style="width: 35%; background: #888; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: 500;">
+            Decisions + counseling
+        </div>
+        <div style="width: 25%; background: #bbb; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: 500;">
+            Exam + workflow
+        </div>
+        <!-- Ruler -->
+        <div style="position: absolute; top: -35px; width: 100%; height: 30px; left: 0;">
+            <div style="position: absolute; left: 0; top: 20px; font-size: 14px; color: #999;">0</div>
+            <div style="position: absolute; left: 20%; top: 20px; font-size: 14px; color: #999;">5</div>
+            <div style="position: absolute; left: 40%; top: 20px; font-size: 14px; color: #999;">10</div>
+            <div style="position: absolute; left: 60%; top: 20px; font-size: 14px; color: #999;">15</div>
+            <div style="position: absolute; left: 80%; top: 20px; font-size: 14px; color: #999;">20</div>
+        </div>
+    </div>
+
+    <!-- Curved Peel-back Arrow -->
+    <svg style="position: absolute; top: 180px; left: 400px; width: 800px; height: 300px; pointer-events: none;">
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#4A90E2" opacity="0.6"/>
+            </marker>
+        </defs>
+        <path d="M 720 100 Q 500 150, 280 200" 
+              stroke="#4A90E2" 
+              stroke-width="2.5" 
+              fill="none" 
+              opacity="0.5"
+              stroke-dasharray="8,4"
+              marker-end="url(#arrowhead)"/>
+    </svg>
+
+    <!-- Hero Module -->
+    <div style="position: absolute; top: 360px; left: 120px; width: 560px; height: 120px; background: #4A90E2; border-radius: 16px; padding: 30px 40px; display: flex; flex-direction: column; justify-content: center;">
+        <div style="color: white; font-size: 32px; font-weight: 600; margin-bottom: 12px;">
+            History reconstruction
+        </div>
+        <div style="color: rgba(255,255,255,0.9); font-size: 20px; display: flex; align-items: center;">
+            <span>Patient story</span>
+            <span style="margin: 0 15px; opacity: 0.7;">→</span>
+            <span>decision-ready structure</span>
+        </div>
+    </div>
+
+    <!-- Grouped Support Block -->
+    <div style="position: absolute; top: 340px; right: 120px; width: 480px; background: #fafafa; border-radius: 12px; padding: 35px;">
+        <div style="font-size: 22px; font-weight: 600; color: #333; margin-bottom: 28px; text-transform: uppercase; letter-spacing: 1px; font-size: 18px;">
+            Why this wedge
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+            <div style="font-size: 20px; font-weight: 500; color: #1a1a1a; margin-bottom: 6px;">
+                Repeated across visits
+            </div>
+            <div style="font-size: 16px; color: #666; line-height: 1.4;">
+                The same story gets repeated across encounters
+            </div>
+        </div>
+        
+        <div style="margin-bottom: 24px;">
+            <div style="font-size: 20px; font-weight: 500; color: #1a1a1a; margin-bottom: 6px;">
+                Time-variable
+            </div>
+            <div style="font-size: 16px; color: #666; line-height: 1.4;">
+                Time required depends on complexity and communication
+            </div>
+        </div>
+        
+        <div>
+            <div style="font-size: 20px; font-weight: 500; color: #1a1a1a; margin-bottom: 6px;">
+                Can begin before the encounter
+            </div>
+            <div style="font-size: 16px; color: #666; line-height: 1.4;">
+                Much of it can happen before the clinician is on the clock
+            </div>
+        </div>
+    </div>
+
+    <!-- Lower Explanatory Heading -->
+    <div style="position: absolute; top: 680px; left: 120px; right: 120px; font-size: 28px; font-weight: 500; color: #333; text-align: center;">
+        Valuable visit time is spent turning patient story into decision-ready structure
+    </div>
+
+    <!-- Zoom Panel -->
+    <div style="position: absolute; top: 760px; left: 420px; width: 1080px; height: 200px; background: #f9f9f9; border-radius: 12px; display: flex; align-items: center; padding: 0 60px;">
+        
+        <!-- Patient Story Side -->
+        <div style="flex: 1; padding-right: 40px;">
+            <div style="font-size: 14px; color: #999; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">
+                Patient story
+            </div>
+            <div style="background: white; border-radius: 8px; padding: 20px; border: 1px solid #e0e0e0;">
+                <div style="height: 8px; background: #ddd; border-radius: 4px; margin-bottom: 12px;"></div>
+                <div style="height: 8px; background: #ddd; border-radius: 4px; margin-bottom: 12px; width: 85%;"></div>
+                <div style="height: 8px; background: #ddd; border-radius: 4px; width: 70%;"></div>
+            </div>
+        </div>
+
+        <!-- Bridge -->
+        <div style="width: 80px; display: flex; align-items: center; justify-content: center;">
+            <svg width="60" height="60">
+                <circle cx="30" cy="30" r="28" fill="none" stroke="#4A90E2" stroke-width="2" opacity="0.3"/>
+                <path d="M 15 30 L 45 30 M 38 23 L 45 30 L 38 37" stroke="#4A90E2" stroke-width="2" opacity="0.5"/>
+            </svg>
+        </div>
+
+        <!-- Decision-Ready Structure Side -->
+        <div style="flex: 1; padding-left: 40px;">
+            <div style="font-size: 14px; color: #999; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">
+                Decision-ready structure
+            </div>
+            <div style="background: white; border-radius: 8px; padding: 20px; border: 1px solid #e0e0e0;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div style="background: #4A90E2; height: 40px; border-radius: 6px; opacity: 0.2;"></div>
+                    <div style="background: #4A90E2; height: 40px; border-radius: 6px; opacity: 0.2;"></div>
+                    <div style="background: #4A90E2; height: 40px; border-radius: 6px; opacity: 0.15; grid-column: span 2;"></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
+```

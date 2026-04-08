@@ -1,0 +1,48 @@
+You are reviewing a pitch-deck slide design decision.
+
+I am attaching one combined board image that contains:
+
+- the running slide 3 figure on the left
+- the current running slide 10 figure on the right
+
+Slide 3's important callback motif is the lower "after" capacity view:
+
+- shortened repeated visit rows
+- the green "New visit" payoff block
+
+We want to decide how to incorporate that motif into slide 10 so the economics
+slide more clearly shows that added capacity turns into dollars.
+
+Please evaluate these three depiction options:
+
+1. Left Capacity Motif + Right Equation
+- Put a compact slide-3 callback object on the left:
+  two shortened visit mini-bars plus the green New visit block.
+- Keep the economics equation/proof on the right.
+
+2. Callback Embedded Inside the Hero Card
+- Keep the current slide mostly intact.
+- Put a compact callback strip inside the main white economics card on the far
+  left, then bridge into the +1 visit -> assumptions -> $11,000 math.
+
+3. Bottom Capacity Strip Replaces the Quiet Range Rail
+- Keep the current economics hero intact.
+- Replace the tiny bottom range strip with a compact callback strip using the
+  shortened visits + green New visit payoff.
+
+What I need from you:
+
+- Which option is strongest for this deck, and why?
+- Which option most clearly communicates that one added visit creates meaningful
+  annual value?
+- Which option best preserves continuity with slide 3 without becoming a replay
+  of slide 3?
+- What is the main failure mode for each option?
+- Give one concrete recommendation for how to depict the callback object.
+
+Important:
+
+- This is still an investor-deck slide, not a product UI or workflow diagram.
+- Do not recommend a full table as the main object.
+- Prioritize clarity, deck continuity, and causal readability over novelty.
+- Be explicit if one option should be rejected.

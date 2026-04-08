@@ -1,0 +1,203 @@
+We are making a single image graphic for a pitch deck or presentation.
+Treat the following input as a design spec, not as a conversational prompt.
+Return one polished 16:9 image concept that feels premium, intentional, and presentation-ready.
+Do not generate browser chrome, UI screenshots, device mockups, or a slide-within-a-slide.
+Do not add on-image text unless the spec explicitly asks for it.
+Avoid generic stock-photo energy, generic SaaS dashboard imagery, and weak filler composition.
+
+Variant direction: Editorial Baseline. Start with the clearest premium editorial interpretation. One strong visual idea, calm hierarchy, restrained composition, and presentation-grade polish.
+
+Design spec:
+You are acting as a world-class pitch deck strategist, information designer, and visual creative director.
+
+Your task is to create ONE investor-deck figure for a healthcare startup pitch deck.
+
+Use the ATTACHED REFERENCE IMAGE as the PRIMARY VISUAL SEED.
+Preserve its strongest qualities:
+- premium white-background deck aesthetic
+- one elegant central Vox object
+- raw patient narrative flowing in from the left
+- compact card emerging from the right edge
+- calm editorial restraint
+- clinically serious, modern, investor-deck quality
+
+Do NOT drift into:
+- product-demo UI
+- boxed software modules
+- busy process diagram energy
+- giant circular infographic loops
+- maze-like channels
+- PowerPoint arrows everywhere
+- overly warped text ribbons
+
+This is NOT a product explainer.
+This IS a premium concept image for a pitch deck.
+
+Slide copy this figure supports:
+
+Header:
+Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.
+
+Subheader:
+By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces what still needs verification before the visit begins.
+
+Core message:
+Vox is not just intake or transcription.
+Vox takes messy patient story, asks a better next question, gets a cleaner signal through back-and-forth conversation, then structures that signal into a clinician-grade starting point.
+
+The figure should read in this order:
+raw patient narrative in -> Vox follow-up out -> clarified patient response back in -> adaptive interviewing / clinical reasoning inside Vox -> clinician-grade starting point out
+
+OVERALL COMPOSITION
+
+Top of slide:
+- header
+- subheader
+
+Lower portion:
+- left = a few conversational text ribbons
+- center = one monolithic Vox object
+- right = compact clinician-grade starting-point card emerging from the object
+
+LEFT-SIDE CONVERSATIONAL RIBBONS
+
+This is the most important refinement.
+
+Use exactly FIVE ribbons total.
+Keep them simple, clean, and readable.
+Do NOT make them weirdly warped, tightly curved, overlapping, or squeezed into tapered ends.
+Text should remain mostly horizontal and legible.
+
+The left side should show three distinct motions:
+
+1. raw patient narrative flowing INTO Vox
+2. a thinner Vox follow-up ribbon flowing BACK OUT toward the left
+3. clarified patient response ribbons flowing BACK INTO Vox
+
+Use these exact phrases:
+
+Top incoming patient ribbons:
+1. My stomach hurts, especially after I eat...
+2. It started maybe two weeks ago...
+
+Middle outgoing Vox ribbon:
+3. Vox: What makes it worse?
+
+Bottom returning patient ribbons:
+4. Worse after meals.
+5. Started two weeks ago.
+
+Color / semantic treatment:
+- patient raw narrative ribbons = neutral gray
+- Vox follow-up ribbon = restrained teal / blue accent
+- clarified patient-response ribbons = cooler gray or lightly blue-tinted, more focused than the raw narrative
+
+The viewer must instantly understand:
+patient speaks -> Vox asks something back -> patient clarifies
+
+MIDDLE / VOX OBJECT
+
+Keep one monolithic premium Vox object.
+Preserve the elegant shell from the reference image.
+
+Important:
+The object should be more interesting than a plain rounded rectangle, but it should remain simple and premium.
+Do NOT turn it into a carved maze or tube network.
+Do NOT split it into obvious internal software panels.
+
+Top-left inside the object:
+Vox
+Adaptive clinical interviewer
+
+Move the wordmark to the top-left / upper band, not the center.
+
+Inside the object:
+- left-inside = adaptive interview chamber / cycler
+- right-inside = clinical reasoning / structuring core
+
+The adaptive interview chamber should be visible, but elegant and restrained.
+It should feel like:
+- input enters
+- Vox asks something back
+- clarified signal returns
+- signal quality improves
+
+The right-inside structuring core should feel like:
+- selected signal is pulled forward
+- useful pieces are grouped
+- relationships are clarified
+- uncertainty stays explicit
+
+Use only these quiet internal labels:
+- What matters
+- What connects
+- What still needs verification
+
+Do not add extra filler labels or long explanatory text.
+
+MEDICAL KNOWLEDGE
+
+Medical knowledge should be implied through the intelligence of the machine, not shown with icons.
+Do NOT use:
+- brain icons
+- database icons
+- knowledge graph symbols
+- tech-stack symbols
+
+RIGHT-SIDE OUTPUT
+
+Keep the compact card emerging from the right edge.
+This was one of the strongest parts of the reference image.
+
+Important:
+The card should feel physically produced / extruded from the object.
+Do NOT use a simple arrow.
+Use a subtle slot, seam, or emergence effect.
+
+Label:
+Clinician-grade starting point
+
+The card should stay compact and secondary.
+It should only imply:
+- key points
+- timeline
+- what still needs confirmation
+
+COLOR
+
+Use slightly more color than the pure grayscale versions, but remain restrained.
+Use teal / blue accent sparingly and semantically:
+- Vox follow-up ribbon
+- selected structured signal
+- subtle highlight in the Vox wordmark if helpful
+- subtle output-slot highlight
+
+Do NOT make it look like a colorful infographic.
+
+TEXT BUDGET
+
+Allowed text inside the figure:
+- Vox
+- Adaptive clinical interviewer
+- What matters
+- What connects
+- What still needs verification
+- Clinician-grade starting point
+- the five ribbon phrases listed above
+
+Do not add extra labels.
+
+SUCCESS CONDITION
+
+When someone sees this figure for 2 seconds, they should think:
+Vox is interviewing adaptively, not just processing text.
+It asks a better next question, gets a better signal, reasons clinically, and produces a clinician-grade starting point.
+
+Final instruction:
+Use the attached reference image as the main aesthetic base.
+Preserve its coolness, restraint, and premium investor-deck feel.
+Improve only these things:
+- clearer words-in / words-out conversation on the left
+- slightly more color
+- more breathing room by keeping Vox in the upper-left
+- a more legible adaptive-interviewer-plus-structuring story inside the object

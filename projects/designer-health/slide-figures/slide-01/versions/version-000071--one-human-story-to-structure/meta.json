@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-03-25T02:52:09.402Z",
+  "slug": "slide-01-one-human-story-to-structure",
+  "family": "story_to_structure_triptych",
+  "deckId": "pitch-deck-lab",
+  "theme": "pd-template-1",
+  "mode": "body-only",
+  "title": "",
+  "subtitle": "",
+  "specPath": "projects/figures/specs/slide-01-one-human-story-to-structure.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-01-one-human-story-to-structure",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-01-one-human-story-to-structure/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-01-one-human-story-to-structure/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-01-one-human-story-to-structure/figure.html",
+    "png": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-01-one-human-story-to-structure/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-01-one-human-story-to-structure/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-01-one-human-story-to-structure/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-01-one-human-story-to-structure/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-01-one-human-story-to-structure/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-01-one-human-story-to-structure/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-01-one-human-story-to-structure/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-01-one-human-story-to-structure/render-assets.json"
+  },
+  "selectedMedia": []
+}

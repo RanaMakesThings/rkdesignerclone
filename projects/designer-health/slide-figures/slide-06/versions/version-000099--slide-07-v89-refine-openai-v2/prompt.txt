@@ -1,0 +1,50 @@
+Create a premium 16:9 investor-deck slide figure for Designer Health.
+
+Use the attached slide-07 version-89 image as the composition anchor. Keep the
+same overall structure, spacing, and sequence.
+
+Use these exact on-image labels and copy:
+- `Before visit`
+- `Visit begins`
+- `1`
+- `Invite sent`
+- `Patient receives secure pre-visit link.`
+- `2`
+- `Adaptive interview`
+- `Vox asks follow-up questions and captures the story.`
+- `3`
+- `Brief prepared`
+- `Patient story becomes a clinician-ready handoff.`
+- `4`
+- `Clinician starts prepared`
+- `Sets up a more efficient visit.`
+
+Preserve:
+- the nice beat-1 secure-link phone
+- the clean beat-3 `VOX` brief object
+- the full storyboard feel of version 89
+- the white background and soft fade
+
+Refine:
+- people should match the attached reference-family style more closely
+- beat 2 should show a person speaking to the phone with real speech bubbles
+- use one crisp follow-up question bubble and one crisp answer bubble
+- no thought bubbles
+- beat 4 should show a clinician calmly reading one tablet with the brief on it
+- remove any redundant second object in the clinician beat
+
+Speech bubble suggestion:
+- question: `How long has this been going on?`
+- answer: `About five days.`
+
+Style:
+- premium editorial medical illustration
+- grayscale with restrained teal
+- refined anatomy and softer line/shading than the original version 89
+- still deck-native and graphic, not photoreal
+
+Avoid:
+- dropping any of the labels
+- turning the brief into a clipboard
+- UI-heavy center panel
+- busy exam room scenes

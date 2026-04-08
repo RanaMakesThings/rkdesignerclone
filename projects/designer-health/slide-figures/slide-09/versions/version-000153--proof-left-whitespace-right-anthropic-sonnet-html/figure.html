@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920">
+<title>Investor Deck – Slide 09</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: #faf9f7;
+    font-family: 'Georgia', 'Times New Roman', serif;
+  }
+
+  /* ── TOP BAND ── */
+  .top-band {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 148px;
+    padding: 0 96px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e2ddd8;
+  }
+
+  .headline {
+    font-size: 34px;
+    font-weight: 400;
+    color: #1a1a18;
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+    max-width: 980px;
+  }
+
+  .headline em {
+    font-style: italic;
+    color: #3a3a37;
+  }
+
+  /* slide number */
+  .slide-num {
+    position: absolute;
+    right: 96px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: #b0aba4;
+    letter-spacing: 2px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+  }
+
+  /* ── BOTTOM AREA ── */
+  .bottom-area {
+    position: absolute;
+    top: 148px;
+    left: 0; right: 0; bottom: 0;
+    display: flex;
+  }
+
+  /* thin separator */
+  .col-sep {
+    position: absolute;
+    top: 48px;
+    bottom: 48px;
+    left: 620px;
+    width: 1px;
+    background: #e2ddd8;
+  }
+
+  /* ── LEFT COLUMN ── */
+  .col-left {
+    width: 620px;
+    flex-shrink: 0;
+    padding: 52px 56px 52px 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+
+  .kicker {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #9a948c;
+    margin-bottom: 14px;
+  }
+
+  .statement-left {
+    font-size: 20px;
+    font-weight: 400;
+    color: #2a2a26;
+    line-height: 1.45;
+    max-width: 340px;
+    margin-bottom: 34px;
+  }
+
+  .image-left-wrap {
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 28px;
+  }
+
+  .image-left-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #e2ddd8;
+  }
+
+  /* crowded field – text evidence block */
+  .evidence-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 4px;
+    border-top: 1px solid #e2ddd8;
+    max-width: 420px;
+  }
+
+  .ev-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .ev-label {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #b0aba4;
+    min-width: 88px;
+    flex-shrink: 0;
+  }
+
+  .ev-bar {
+    height: 3px;
+    background: #ccc9c2;
+    border-radius: 2px;
+    flex: 1;
+    position: relative;
+    top: -2px;
+  }
+
+  .ev-bar-fill {
+    height: 3px;
+    background: #8a8880;
+    border-radius: 2px;
+  }
+
+  .ev-value {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11px;
+    color: #6a6860;
+    min-width: 36px;
+    text-align: right;
+  }
+
+  .evidence-note {
+    margin-top: 12px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11px;
+    color: #9a948c;
+    line-height: 1.6;
+    max-width: 380px;
+  }
+
+  /* ── RIGHT COLUMN ── */
+  .col-right {
+    flex: 1;
+    padding: 52px 96px 52px 72px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .kicker-right {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #9a948c;
+    margin-bottom: 14px;
+  }
+
+  .statement-right {
+    font-size: 24px;
+    font-weight: 400;
+    color: #1a1a18;
+    line-height: 1.4;
+    max-width: 560px;
+    margin-bottom: 0;
+  }
+
+  .statement-right strong {
+    font-weight: 600;

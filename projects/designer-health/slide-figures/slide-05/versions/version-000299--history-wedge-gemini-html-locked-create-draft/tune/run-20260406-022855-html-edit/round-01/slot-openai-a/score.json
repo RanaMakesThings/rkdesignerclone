@@ -1,0 +1,18 @@
+{
+  "class": "blocked",
+  "numeric": 0.05,
+  "status": "blocked",
+  "outcome": "block",
+  "reason": "Regression review found a concrete blocker.",
+  "blockers": [
+    "Broken footer/logo shell at bottom right with a visible missing-image placeholder instead of the standard Designer footer logo",
+    "Locked bottom statement is oversized and overlaps the proof field, causing visible collision and clipping/family drift",
+    "Selected history label is obviously wrong: the lifted segment is labeled 'Selected wedge' instead of the required locked/explicit 'History' treatment",
+    "Bottom locked statement overlaps and collides with the third proof row body text, making both illegible — layout overflow not resolved",
+    "Footer Designer Health logo is a broken image placeholder; the locked footer treatment is missing",
+    "Lifted segment label reads 'Selected wedge' instead of the spec-required 'History' label with support line 'A high-leverage target for pre-visit prep.'"
+  ],
+  "warnings": [
+    "Footer Logo drifted beyond semantic-stable threshold."
+  ]
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Deck Slide - Operating Leverage</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111827;
+            --text-muted: #6B7280;
+            --text-light: #9CA3AF;
+            --accent-green: #059669;
+            --accent-green-light: #D1FAE5;
+            --accent-green-bg: #F0FDF4;
+            --border-color: #E5E7EB;
+            --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e5e5e5; /* Darker background outside the slide to frame it */
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--bg-color);
+            font-family: var(--font-family);
+            position: relative;
+            box-sizing: border-box;
+            padding: 64px 80px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Header Section */
+        .header-group {
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 44px;
+            font-weight: 600;
+            color: var(--text-main);
+            margin: 0 0 16px 0;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin: 0;
+            letter-spacing: -0.01em;
+        }
+
+        /* Main Content - The Equation Flow */
+        .flow-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        /* Subtle background track line */
+        .flow-track {
+            position: absolute;
+            top: 50%;
+            left: 60px;
+            right: 360px;
+            height: 2px;
+            background-color: #F3F4F6;
+            z-index: 0;
+            transform: translateY(-50%);
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 170px;
+            z-index: 1;
+            background: var(--bg-color); /* To mask the track line */
+            padding: 20px 0;
+        }
+
+        .step.input-lever {
+            background: #F9FAFB;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px 16px;
+            width: 180px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .step-value {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--text-main);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .step.input-lever .step-value {
+            color: var(--text-main);
+            font-size: 40px;
+        }
+
+        .step-label {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+
+        .operator {
+            font-size: 24px;
+            color: var(--text-light);
+            font-weight: 300;
+            width: 48px;
+            text-align: center;
+            z-index: 1;
+            background: var(--bg-color);
+        }
+
+        .transition-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            z-index: 1;
+            background: var(--bg-color);
+            color: var(--text-light);
+        }
+
+        /* Hero Result Card */
+        .result-card {
+            background-color: var(--accent-green-bg);
+            border: 1px solid var(--accent-green-light);
+            border-radius: 16px;
+            padding: 48px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: 16px;
+            box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.1), 0 8px 10px -6px rgba(5, 150, 105, 0.1);
+            z-index: 2;
+            min-width: 240px;
+        }
+
+        .result-value {
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--accent-green);
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        .result-label {
+            font-size: 20px;
+            color: #047857; /* Slightly darker green for text */
+            margin-top: 12px;
+            font-weight: 500;
+        }
+
+        /* Bottom Badge */
+        .badge-container {
+            position: absolute;
+            bottom: 64px;
+            right: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .badge {
+            background-color: #F3F4F6;
+            border: 1px solid #E5E7EB;
+            color: #4B5563;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.01em;
+        }
+
+        .badge svg {
+            width: 18px;
+            height: 18px;
+            color: #9CA3AF;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="slide-container">
+        
+        <!-- Header -->
+        <div class="header-group">
+            <h1>Recovered visit time creates real capacity.</h1>
+            <h2>When recovered minutes become completed visits, the impact is meaningful.</h2>
+        </div>
+
+        <!-- Operating Leverage Flow -->
+        <div class="flow-container">
+            <div class="flow-track"></div>
+
+            <!-- Step 1: Catalyst -->
+            <div class="step input-lever">
+                <div class="step-value">+1</div>
+                <div class="step-label">visit / provider<br>/ day</div>
+            </div>
+
+            <div class="operator">✕</div>
+
+            <!-- Step 2: Days -->
+            <div class="step">
+                <div class="step-value">220</div>
+                <div class="step-label">clinic days</div>
+            </div>
+
+            <div class="operator">✕</div>
+
+            <!-- Step 3: Revenue -->
+            <div class="step">
+                <div class="step-value">$125</div>
+                <div class="step-label">/ visit</div>
+            </div>
+
+            <div class="operator">✕</div>
+
+            <!-- Step 4: Margin -->
+            <div class="step">
+                <div class="step-value">40%</div>
+                <div class="step-label">contribution<br>margin</div>
+            </div>
+
+            <div class="transition-arrow">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+
+            <!-- Result: Annual Value -->
+            <div class="result-card">
+                <div class="result-value">$11,000</div>
+                <div class="result-label">/ year</div>
+            </div>
+
+        </div>
+
+        <!-- Support Badge -->
+        <div class="badge-container">
+            <div class="badge">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                ~$917 / month break-even spend / provider
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox - Investor Pitch Slide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+        :root {
+            --paper: #ffffff;
+            --ink: #0f172a;
+            --muted: rgba(15, 23, 42, 0.68);
+            --quiet: rgba(15, 23, 42, 0.42);
+            --line: rgba(15, 23, 42, 0.12);
+            --soft-line: rgba(15, 23, 42, 0.06);
+            --panel: #f8fafc;
+            --accent: #2f6df6;
+            --accent-deep: #2456cb;
+            --accent-soft: rgba(47, 109, 246, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            background: var(--paper);
+        }
+
+        body {
+            font-family: 'Montserrat', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .slide-container {
+            width: 1920px;
+            height: 1080px;
+            margin: 0 auto;
+            padding: 56px 64px 42px;
+            background: var(--paper);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide-container::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(248, 250, 252, 0.5) 100%),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent 0,
+                    transparent 158px,
+                    rgba(15, 23, 42, 0.018) 158px,
+                    rgba(15, 23, 42, 0.018) 159px
+                );
+            pointer-events: none;
+        }
+
+        .slide-container::after {
+            content: "";
+            position: absolute;
+            inset: 310px 72px 84px 72px;
+            border: 1px solid var(--soft-line);
+            border-radius: 32px;
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            max-width: 1320px;
+            font-size: 68px;
+            line-height: 1.04;
+            letter-spacing: -0.055em;
+            font-weight: 700;
+        }
+
+        .header .accent-text {
+            color: var(--accent);
+        }
+
+        .subheader {
+            margin-top: 20px;
+            max-width: 1180px;
+            font-size: 28px;
+            line-height: 1.38;
+            letter-spacing: -0.022em;
+            color: var(--muted);
+            font-weight: 400;
+        }
+
+        .journey-section {
+            position: relative;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 34px;
+            padding: 34px 44px 24px;
+        }
+
+        .journey-titles,
+        .journey-cards {
+            display: grid;
+            grid-template-columns: 1fr 1.22fr 1fr;
+            gap: 48px;
+        }
+
+        .journey-titles {
+            margin-bottom: 34px;
+            align-items: end;
+        }
+
+        .zone-title {
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: var(--quiet);
+        }
+
+        .zone-title.active {
+            color: var(--accent);
+        }
+
+        .journey-cards {
+            position: relative;
+            align-items: center;
+        }
+
+        .track-line {
+            position: absolute;
+            left: 7%;
+            right: 7%;
+            top: 50%;
+            height: 1px;
+            background:
+                linear-gradient(90deg, transparent 0%, rgba(15, 23, 42, 0.12) 10%, rgba(15, 23, 42, 0.12) 90%, transparent 100%);
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+
+        .quiet-card {
+            min-height: 300px;
+            padding: 34px 26px;
+            border: 1px solid var(--soft-line);
+            border-radius: 24px;
+            background:
+                linear-gradient(180deg, rgba(248, 250, 252, 0.9) 0%, rgba(248, 250, 252, 0.55) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .support-label {
+            min-height: 74px;
+            padding: 0 24px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.92);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 24px;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            font-weight: 500;
+            color: rgba(15, 23, 42, 0.72);
+        }
+
+        .center-wrapper {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .center-wrapper::before {
+            content: "";
+            position: absolute;
+            top: -44px;
+            width: 2px;
+            height: 28px;
+            background: rgba(47, 109, 246, 0.24);
+        }
+
+        .center-wrapper::after {
+            content: "";
+            position: absolute;
+            inset: 26px -26px -20px -26px;
+            border-radius: 30px;
+            background: radial-gradient(circle at center, rgba(47, 109, 246, 0.1) 0%, rgba(47, 109, 246, 0.04) 45%, transparent 72%);
+            z-index: -1;
+        }
+
+        .blue-card {
+            width: 100%;
+            padding: 34px 34px 30px;
+            border-radius: 24px;
+            background: linear-gradient(180deg, var(--accent) 0%, var(--accent-deep) 100%);
+            color: #ffffff;
+            box-shadow: 0 24px 46px rgba(47, 109, 246, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .blue-card-title {
+            margin-bottom: 22px;
+            text-align: center;
+            font-size: 31px;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            font-weight: 700;
+        }
+
+        .blue-card-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            min-height: 72px;
+            padding: 0 18px;
+            margin-bottom: 12px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.11);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 23px;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            font-weight: 500;
+        }
+
+        .blue-card-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .row-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 14px;
+            flex-shrink: 0;
+        }
+
+        .optional-line {
+            margin-top: 18px;
+            padding: 8px 18px 9px;
+            border-radius: 999px;
+            border: 1px solid rgba(47, 109, 246, 0.14);
+            background: rgba(47, 109, 246, 0.06);
+            color: rgba(15, 23, 42, 0.56);
+            font-size: 16px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            font-weight: 500;
+        }
+    </style>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      body {
+        position: relative;
+        font-family: "Montserrat", "Avenir Next", "Helvetica Neue", Arial, sans-serif !important;
+      }
+
+      h1,
+      h2,
+      h3,
+      .title,
+      .header,
+      .headline,
+      [class*="title"] {
+        font-family: "Montserrat", "Avenir Next", "Helvetica Neue", Arial, sans-serif !important;
+      }
+
+      .designer-template-footer-line {
+        position: absolute;
+        left: 112px;
+        bottom: 87px;
+        width: 1536px;
+        height: 1px;
+        background: rgba(17, 17, 17, 0.84);
+        z-index: 30;
+        pointer-events: none;
+      }
+
+      .designer-template-footer-logo {
+        position: absolute;
+        right: 114px;
+        bottom: 59px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+        z-index: 30;
+        pointer-events: none;
+      }
+    </style>
+
+  </head>
+<body>
+    <div class="slide-container">
+        <div class="content">
+            <h1 class="header">Current AI helps around the visit. <span class="accent-text">Vox changes how the visit starts.</span></h1>
+            <p class="subheader">Most assistive AI reduces operational or documentation work. Vox gives the clinician a structured brief at the beginning of the visit.</p>
+
+            <div class="journey-section">
+                <div class="journey-titles">
+                    <div class="zone-title">Before visit</div>
+                    <div class="zone-title active">Start of visit</div>
+                    <div class="zone-title">During / after</div>
+                </div>
+
+                <div class="journey-cards">
+                    <div class="track-line"></div>
+
+                    <div class="quiet-card">
+                        <div class="support-label">Scheduling</div>
+                        <div class="support-label">Reminders</div>
+                    </div>
+
+                    <div class="center-wrapper">
+                        <div class="blue-card">
+                            <div class="blue-card-title">Vox-prepared brief</div>
+
+                            <div class="blue-card-row">
+                                <div class="row-icon">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="5" cy="5" r="5" fill="white" fill-opacity="0.92"/>
+                                    </svg>
+                                </div>
+                                <span>What matters</span>
+                            </div>
+
+                            <div class="blue-card-row">
+                                <div class="row-icon">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="5" cy="5" r="5" fill="white" fill-opacity="0.92"/>
+                                    </svg>
+                                </div>
+                                <span>What happened when</span>
+                            </div>
+
+                            <div class="blue-card-row">
+                                <div class="row-icon">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="5" cy="5" r="5" fill="white" fill-opacity="0.92"/>
+                                    </svg>
+                                </div>
+                                <span>What still needs confirmation</span>
+                            </div>
+                        </div>
+
+                        <div class="optional-line">Where clinical reasoning begins</div>
+                    </div>
+
+                    <div class="quiet-card">
+                        <div class="support-label">Documentation support</div>
+                        <div class="support-label">Note generation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="designer-template-footer-line" aria-hidden="true"></div>
+    <img class="designer-template-footer-logo" src="../../../../assets/logo/designer-health-logo-black.svg" alt="" aria-hidden="true" />
+
+  </body>
+</html>

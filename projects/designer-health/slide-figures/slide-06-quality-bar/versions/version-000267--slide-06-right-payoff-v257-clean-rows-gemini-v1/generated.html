@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox Pitch Deck Slide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --teal: #2A8E82;
+            --teal-light: #E8F5F3;
+            --teal-line: #A7F3D0;
+            --text-dark: #111827;
+            --text-gray: #4B5563;
+            --text-light: #9CA3AF;
+            --bg-white: #FFFFFF;
+            --border-gray: #E5E7EB;
+            --sim-dark: #64748B;   /* Replaces black redaction - strong title */
+            --sim-med: #94A3B8;    /* Medium text line */
+            --sim-light: #CBD5E1;  /* Soft text line */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #E5E5E5; /* Darker background to show slide bounds */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .slide {
+            width: 1920px;
+            height: 1080px;
+            background-color: var(--bg-white);
+            position: relative;
+            overflow: hidden;
+            padding: 90px 100px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* --- Header Section --- */
+        .header-container {
+            max-width: 1500px;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 52px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+
+        h1 .teal {
+            color: var(--teal);
+        }
+
+        .subheader {
+            font-size: 22px;
+            color: var(--text-gray);
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        /* --- Main Layout Grid --- */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 60px;
+            position: relative;
+            z-index: 10;
+            height: 600px;
+        }
+
+        /* --- Left Column: Chat --- */
+        .chat-column {
+            width: 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding-top: 20px;
+        }
+
+        .bubble-wrapper {
+            position: relative;
+            width: 340px;
+            /* The clip-path creates the ribbon shape. 
+               Left side has an inward chevron, right side has an outward point. */
+            clip-path: polygon(16px 0, 100% 0, calc(100% - 16px) 50%, 100% 100%, 16px 100%, 0 50%);
+            padding: 1px; /* Acts as border width */
+        }
+
+        .bubble-wrapper.patient {
+            background-color: #CBD5E1; /* Gray border */
+        }
+
+        .bubble-wrapper.vox {
+            background-color: var(--teal); /* Teal border */
+        }
+
+        .bubble-inner {
+            clip-path: polygon(16px 0, 100% 0, calc(100% - 16px) 50%, 100% 100%, 16px 100%, 0 50%);
+            padding: 18px 32px 18px 40px;
+            font-size: 16px;
+            line-height: 1.4;
+            height: 100%;
+        }
+
+        .bubble-inner.patient {
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .bubble-inner.vox {
+            background-color: var(--teal-light);
+            color: var(--teal);
+            font-weight: 700;
+        }
+
+        /* --- Center Column: Chamber --- */
+        .chamber-column {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .chamber-card {
+            width: 780px;
+            height: 520px;
+            background: var(--bg-white);
+            border-radius: 24px;
+            border: 1px solid #F3F4F6;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .chamber-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .chamber-logo {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--teal);
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+        }
+
+        .chamber-subtitle {
+            font-size: 14px;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .chamber-body {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            margin-top: 20px;
+        }
+
+        .chamber-loop {
+            position: relative;
+            width: 180px;
+            height: 180px;
+        }
+
+        .chamber-loop svg {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg); /* Start at top */
+        }
+
+        .loop-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .chamber-lanes {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            width: 260px;
+        }
+
+        .lane-label {
+            background: var(--bg-white);
+            border: 1px solid #F3F4F6;
+            border-radius: 12px;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: var(--shadow-sm);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            position: relative;
+            z-index: 2;
+        }
+
+        .lane-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--teal);
+            border-radius: 50%;
+        }
+
+        /* --- Right Column: Report Card (Redesigned) --- */
+        .report-column {
+            width: 380px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 20px;
+        }
+
+        .report-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            margin-left: 10px;
+        }
+
+        .report-card {
+            width: 100%;
+            background: #FAFAFA; /* Off-white premium feel */
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid #F3F4F6;
+            border-top: 4px solid var(--teal);
+            padding: 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .report-tag {
+            font-size: 10px;
+            font-weight: 800;
+            color: var(--teal);
+            letter-spacing: 0.05em;
+            text-align: right;
+            margin-bottom: 24px;
+        }
+
+        .report-section {
+            margin-bottom: 32px;
+        }
+
+        .report-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-header {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        /* Simulated Text Lines - Replacing Redactions */
+        .sim-line {
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        .sim-line:last-child {
+            margin-bottom: 0;
+        }
+
+        .sim-title {
+            height: 10px;
+            background-color: var(--sim-dark);
+        }
+
+        .sim-body-strong {
+            height: 8px;
+            background-color: var(--sim-med);
+        }
+
+        .sim-body-soft {
+            height: 8px;
+            background-color: var(--sim-light);
+        }
+
+        /* Assessment specific layout */
+        .assessment-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .assessment-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-top: 2px; /* Align with first line */
+            flex-shrink: 0;
+        }
+
+        .status-dot.teal { background-color: var(--teal); }
+        .status-dot.orange { background-color: #F59E0B; }
+
+        .assessment-lines {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Clarify/Verify Pills */
+        .pill-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-pill {
+            height: 22px;
+            border-radius: 11px;
+            border: 1px solid #BAE6FD;
+            background-color: #F0F9FF;
+        }
+
+        /* --- SVG Connecting Lines --- */
+        .connections {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .path-gray {
+            fill: none;
+            stroke: #CBD5E1;
+            stroke-width: 2;
+        }
+
+        .path-teal {
+            fill: none;
+            stroke: var(--teal-line);
+            stroke-width: 2;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="slide">
+        
+        <!-- Background SVG for connecting lines -->
+        <svg class="connections" viewBox="0 0 1920 1080">
+            <!-- Lines from Chat to Chamber Loop -->
+            <!-- Approximate coordinates based on layout -->
+            <path d="M 440 485 C 550 485, 600 600, 720 600" class="path-gray" />
+            <path d="M 440 585 C 550 585, 600 600, 720 600" class="path-teal" />
+            <path d="M 440 685 C 550 685, 600 600, 720 600" class="path-gray" />
+            <path d="M 440 785 C 550 785, 600 600, 720 600" class="path-teal" />
+            <path d="M 440 885 C 550 885, 600 600, 720 600" class="path-gray" />
+
+            <!-- Lines from Chamber Lanes to Report Card -->
+            <path d="M 1250 585 C 1350 585, 1380 560, 1440 560" class="path-teal" />
+            <path d="M 1250 675 C 1350 675, 1380 650, 1440 650" class="path-teal" />
+            <path d="M 1250 765 C 1350 765, 1380 740, 1440 740" class="path-teal" />
+        </svg>
+
+        <div class="header-container">
+            <h1><span class="teal">Vox</span> is the adaptive interviewing system that takes on the<br>hard clinical reasoning work needed to turn patient story<br>into a clinician-grade starting point.</h1>
+            <p class="subheader">Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>what still needs verification before the visit begins.</p>
+        </div>
+
+        <div class="main-content">
+            
+            <!-- Left Column: Chat Ribbons -->
+            <div class="chat-column">
+                <div class="bubble-wrapper patient">
+                    <div class="bubble-inner patient">My back has been hurting...</div>
+                </div>
+                <div class="bubble-wrapper vox">
+                    <div class="bubble-inner vox">Vox: What makes it worse?</div>
+                </div>
+                <div class="bubble-wrapper patient">
+                    <div class="bubble-inner patient">It's worse in the morning.</div>
+                </div>
+                <div class="bubble-wrapper vox">
+                    <div class="bubble-inner vox">Vox: When did this start?</div>
+                </div>
+                <div class="bubble-wrapper patient">
+                    <div class="bubble-inner patient">Started last Tuesday.</div>
+                </div>
+            </div>
+
+            <!-- Center Column: Chamber -->
+            <div class="chamber-column">
+                <div class="chamber-card">
+                    <div class="chamber-header">
+                        <div class="chamber-logo">Vox</div>
+                        <div class="chamber-subtitle">Adaptive clinical interviewer</div>
+                    </div>
+                    
+                    <div class="chamber-body">
+                        <div class="chamber-loop">
+                            <svg viewBox="0 0 180 180">
+                                <!-- Background track -->
+                                <circle cx="90" cy="90" r="75" fill="none" stroke="#F3F4F6" stroke-width="14" />
+                                <!-- Teal segment (approx 60% of circle) -->
+                                <!-- Circumference = 2 * pi * 75 = 471. 60% = 282 -->
+                                <circle cx="90" cy="90" r="75" fill="none" stroke="#2A8E82" stroke-width="14" stroke-linecap="round" stroke-dasharray="282 471" stroke-dashoffset="40" />
+                            </svg>
+                            <div class="loop-text">
+                                Adaptive<br>clinical<br>interviewer
+                            </div>
+                        </div>
+
+                        <div class="chamber-lanes">
+                            <div class="lane-label">
+                                <div class="lane-dot"></div>
+                                What matters
+                            </div>
+                            <div class="lane-label">
+                                <div class="lane-dot"></div>
+                                What connects
+                            </div>
+                            <div class="lane-label">
+                                <div class="lane-dot"></div>
+                                What still needs<br>verification
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Clinician-grade Report -->
+            <div class="report-column">
+                <div class="report-title">Clinician-grade starting point</div>
+                
+                <div class="report-card">
+                    <div class="report-tag">VOX SUMMARY</div>
+                    
+                    <!-- Chief Complaint -->
+                    <div class="report-section">
+                        <div class="section-header">CHIEF COMPLAINT</div>
+                        <!-- Replaced heavy black bars with structured text hierarchy -->
+                        <div class="sim-line sim-title" style="width: 85%;"></div>
+                        <div class="sim-line sim-body-soft" style="width: 60%;"></div>
+                    </div>
+
+                    <!-- Prioritized Assessment -->
+                    <div class="report-section">
+                        <div class="section-header">PRIORITIZED ASSESSMENT</div>
+                        
+                        <div class="assessment-item">
+                            <div class="status-dot teal"></div>
+                            <div class="assessment-lines">
+                                <div class="sim-line sim-body-strong" style="width: 95%;"></div>
+                                <div class="sim-line sim-body-soft" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="assessment-item">
+                            <div class="status-dot orange"></div>
+                            <div class="assessment-lines">
+                                <div class="sim-line sim-body-strong" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clarify / Verify -->
+                    <div class="report-section">
+                        <div class="section-header">CLARIFY / VERIFY</div>
+                        <div class="pill-row">
+                            <div class="action-pill" style="width: 55px;"></div>
+                            <div class="action-pill" style="width: 40px;"></div>
+                            <div class="action-pill" style="width: 65px;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

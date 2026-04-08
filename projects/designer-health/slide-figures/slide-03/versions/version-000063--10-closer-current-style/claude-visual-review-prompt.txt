@@ -1,0 +1,25 @@
+Review this 16:9 pitch-deck slide mockup as a visual composition problem.
+
+Context:
+- This is a local exploration for Designer slide 03.
+- The concept is close, but the slide still feels visually off.
+- We are not trying to redesign it into a different family.
+- Stay close to the current slide language and style.
+
+What the slide needs to communicate:
+- Shrinking the story reconstruction portion creates recovered time.
+- Recovered time across visits creates one additional visit slot.
+
+Hard constraints:
+- Keep the current overall slide language.
+- Do not propose new background treatments or a new visual family.
+- The left side should stay simple: one shortened bar, arrows on the blue segment, and a nearby dashed "Time saved" block.
+- The right side should stay simple: just the 5-visits to 6-visits payoff object.
+- Focus on spacing, hierarchy, rhythm, grouping, alignment, and visual balance.
+
+Please answer in plain text with:
+1. A short summary of why it feels off.
+2. 3-5 concrete visual issues, ordered by importance.
+3. 3 concrete layout or spacing fixes that would improve it without changing the concept.
+
+Do not critique the underlying business idea. Focus on visual design only.

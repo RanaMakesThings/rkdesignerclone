@@ -1,0 +1,110 @@
+{
+  "deckId": "saem-2026",
+  "title": "SAEM 2026 Annual Meeting",
+  "version": "2026-04-08.1",
+  "status": "active",
+  "numberingPolicy": {
+    "summary": "Use simple linear numbering until a merge or split is necessary. Introduce displayNumber only when a real merge happens.",
+    "activeSequence": [
+      "1",
+      "2",
+      "3"
+    ],
+    "deprecatedSlides": [],
+    "notes": [
+      "Use displayNumber only when the deck genuinely merges or splits slides.",
+      "Keep numbering stable once the abstract narrative is locked."
+    ]
+  },
+  "narrativeSpine": [
+    "Why this emergency medicine problem matters now.",
+    "What the audience should understand or adopt.",
+    "What action or framing should stick after the talk."
+  ],
+  "slides": [
+    {
+      "id": "slide-01",
+      "displayNumber": "1",
+      "importedSlides": [
+        1
+      ],
+      "status": "active",
+      "title": "Talk Setup",
+      "purpose": "Open the talk, establish speaker context, and frame the clinical problem.",
+      "header": "TODO",
+      "subheader": "TODO",
+      "takeaway": "Define the opening claim for the deck.",
+      "figureRole": "Support the opening frame or orient the audience.",
+      "family": "TBD",
+      "buildStatus": "missing canonical spec",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-01-talk-setup.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-01/manifest.json"
+      },
+      "selectedDirection": "No selected visual yet.",
+      "notes": [],
+      "selectedVariantId": null,
+      "variants": []
+    },
+    {
+      "id": "slide-02",
+      "displayNumber": "2",
+      "importedSlides": [
+        2
+      ],
+      "status": "active",
+      "title": "Core Argument",
+      "purpose": "Present the main analysis, framework, or intervention claim.",
+      "header": "TODO",
+      "subheader": "TODO OR NONE",
+      "takeaway": "Capture the central message of the presentation.",
+      "figureRole": "Make the main relationship or comparison legible in one look.",
+      "family": "TBD",
+      "buildStatus": "packet and canonical spec pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-02-core-argument.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-02/manifest.json"
+      },
+      "selectedDirection": "No selected visual yet.",
+      "notes": [],
+      "selectedVariantId": null,
+      "variants": []
+    },
+    {
+      "id": "slide-03",
+      "displayNumber": "3",
+      "importedSlides": [
+        3
+      ],
+      "status": "active",
+      "title": "Close / Implications",
+      "purpose": "Land the implication, recommendation, or call to action.",
+      "header": "TODO",
+      "subheader": "TODO OR NONE",
+      "takeaway": "Leave the audience with the change in thinking or behavior.",
+      "figureRole": "Reinforce the synthesis, roadmap, or closing takeaway.",
+      "family": "TBD",
+      "buildStatus": "packet and canonical spec pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-03-close-implications.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-03/manifest.json"
+      },
+      "selectedDirection": "No selected visual yet.",
+      "notes": [],
+      "selectedVariantId": null,
+      "variants": []
+    }
+  ],
+  "paths": {
+    "deckAssetsManifest": "projects/saem-2026/assets/manifest.json"
+  }
+}

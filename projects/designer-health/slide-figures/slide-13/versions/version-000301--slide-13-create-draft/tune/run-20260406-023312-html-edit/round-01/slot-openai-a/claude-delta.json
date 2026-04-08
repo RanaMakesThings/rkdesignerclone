@@ -1,0 +1,35 @@
+{
+  "provider": "claude",
+  "status": "partial",
+  "summary": "The candidate has successfully replaced the blank template stub with substantive content — the $1.25M ask, Post-money SAFE instrument, three milestone cards (Build/Deploy/Validate), stat chips (2 core hires, 3 pilot sites, 18–20 months), and a use-of-funds ribbon are all present and structurally correct. However, several execution problems prevent a full 'applied' rating: (1) the header text is oversized and overflows, obscuring the subheader 'Post-money SAFE • ~18–20 months of runway' which is barely legible behind the header block; (2) the milestone card body copy is visibly clipped/truncated mid-sentence in all three right-column cards; (3) the footer logo area renders as a broken image placeholder rather than the Designer Health logo; (4) the use-of-funds ribbon has unstyled/merged text with no visual separation between the four categories, creating a run-on appearance; and (5) the overall vertical scale of the slide appears compressed, causing the left hero block description text to be cut off.",
+  "evidence": [
+    "Header 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' renders at an oversized scale that pushes into and obscures the subheader line",
+    "Subheader 'Post-money SAFE • ~18–20 months of runway' is partially visible but overlapped by the large header block",
+    "BUILD milestone card body text ends mid-sentence: '...and tighten the' — content is clipped",
+    "DEPLOY milestone card body text ends mid-sentence: '...site learning loops, and' — content is clipped",
+    "VALIDATE milestone card body text ends mid-sentence: '...to support follow-on expansion and' — content is clipped",
+    "Footer logo area shows a broken/missing image box instead of the Designer Health logo",
+    "Use-of-funds ribbon shows 'Team build implementation + productPilot launch site onboardingDeployment support workflow integratValidation usage, outcomes, ROI' with merged/unstyled text and a truncated word 'integrat'",
+    "Left hero block descriptive paragraph text is cut off mid-sentence before the stat chips",
+    "The integrated master card layout (left hero + right stacked milestones + bottom ribbon) is structurally present and matches the brief's figure logic"
+  ],
+  "nextPrompt": "Fix the following rendering issues: (1) Reduce header font size so it fits on 1–2 lines without overlapping the subheader — subheader must be fully legible below the header. (2) Ensure all three milestone card body text blocks are fully visible and not clipped — reduce font size or card padding if needed. (3) Restore the Designer Health footer logo (the img src is broken — use the correct path or inline SVG from the shell). (4) Style the use-of-funds ribbon so each of the four categories (Team build, Pilot launch, Deployment support, Validation) is visually separated with a pill or divider, and fix the truncated word 'integrat' to read 'workflow integration'. (5) Ensure the left hero block description paragraph is fully visible above the stat chips. Do not change the layout structure or content — only fix the overflow, clipping, logo, and ribbon formatting issues.",
+  "needsHuman": false,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate has successfully replaced the blank template stub with substantive content — the $1.25M ask, Post-money SAFE instrument, three milestone cards (Build/Deploy/Validate), stat chips (2 core hires, 3 pilot sites, 18–20 months), and a use-of-funds ribbon are all present and structurally correct. However, several execution problems prevent a full 'applied' rating: (1) the header text is oversized and overflows, obscuring the subheader 'Post-money SAFE • ~18–20 months of runway' which is barely legible behind the header block; (2) the milestone card body copy is visibly clipped/truncated mid-sentence in all three right-column cards; (3) the footer logo area renders as a broken image placeholder rather than the Designer Health logo; (4) the use-of-funds ribbon has unstyled/merged text with no visual separation between the four categories, creating a run-on appearance; and (5) the overall vertical scale of the slide appears compressed, causing the left hero block description text to be cut off.",
+    "evidence": [
+      "Header 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' renders at an oversized scale that pushes into and obscures the subheader line",
+      "Subheader 'Post-money SAFE • ~18–20 months of runway' is partially visible but overlapped by the large header block",
+      "BUILD milestone card body text ends mid-sentence: '...and tighten the' — content is clipped",
+      "DEPLOY milestone card body text ends mid-sentence: '...site learning loops, and' — content is clipped",
+      "VALIDATE milestone card body text ends mid-sentence: '...to support follow-on expansion and' — content is clipped",
+      "Footer logo area shows a broken/missing image box instead of the Designer Health logo",
+      "Use-of-funds ribbon shows 'Team build implementation + productPilot launch site onboardingDeployment support workflow integratValidation usage, outcomes, ROI' with merged/unstyled text and a truncated word 'integrat'",
+      "Left hero block descriptive paragraph text is cut off mid-sentence before the stat chips",
+      "The integrated master card layout (left hero + right stacked milestones + bottom ribbon) is structurally present and matches the brief's figure logic"
+    ],
+    "nextPrompt": "Fix the following rendering issues: (1) Reduce header font size so it fits on 1–2 lines without overlapping the subheader — subheader must be fully legible below the header. (2) Ensure all three milestone card body text blocks are fully visible and not clipped — reduce font size or card padding if needed. (3) Restore the Designer Health footer logo (the img src is broken — use the correct path or inline SVG from the shell). (4) Style the use-of-funds ribbon so each of the four categories (Team build, Pilot launch, Deployment support, Validation) is visually separated with a pill or divider, and fix the truncated word 'integrat' to read 'workflow integration'. (5) Ensure the left hero block description paragraph is fully visible above the stat chips. Do not change the layout structure or content — only fix the overflow, clipping, logo, and ribbon formatting issues.",
+    "needsHuman": false
+  }
+}

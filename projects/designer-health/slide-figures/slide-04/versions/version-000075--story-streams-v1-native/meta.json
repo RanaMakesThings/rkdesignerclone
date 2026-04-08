@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-03-25T03:01:36.474Z",
+  "slug": "slide-04-story-streams-v1",
+  "family": "story_to_structure_membrane",
+  "deckId": "pitch-deck-lab",
+  "theme": "pd-template-1",
+  "mode": "body-only",
+  "title": "",
+  "subtitle": "",
+  "specPath": "projects/figures/specs/slide-04-story-streams-v1.json",
+  "outputDir": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-story-streams-v1",
+  "artifacts": {
+    "spec": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-story-streams-v1/spec.json",
+    "meta": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-story-streams-v1/meta.json",
+    "html": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-story-streams-v1/figure.html",
+    "png": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-story-streams-v1/figure.png",
+    "coverage": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-story-streams-v1/coverage.json",
+    "assessment": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-story-streams-v1/assessment.json",
+    "assetsManifest": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-story-streams-v1/assets.json",
+    "assetBoardHtml": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-story-streams-v1/asset-board.html",
+    "assetBoardPng": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-story-streams-v1/asset-board.png",
+    "assetSelection": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-story-streams-v1/asset-selection.json",
+    "renderAssets": "/Users/kabeer/Code/rkdesignerclone/output/figures/slide-04-story-streams-v1/render-assets.json"
+  },
+  "selectedMedia": []
+}

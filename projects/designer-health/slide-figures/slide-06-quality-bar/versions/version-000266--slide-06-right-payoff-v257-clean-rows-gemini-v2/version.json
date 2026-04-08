@@ -1,0 +1,15 @@
+{
+  "id": "version-000266",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000266--slide-06-right-payoff-v257-clean-rows-gemini-v2",
+  "label": "slide-06-right-payoff-v257-clean-rows-gemini-v2",
+  "status": "archived",
+  "createdAt": "2026-04-03T20:54:25.508Z",
+  "sourceKind": "right-payoff-refine",
+  "baseVersionId": "version-000257",
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000257--slide-06-right-payoff-gemini-structured-slate-a",
+    "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000258--slide-06-right-payoff-gemini-structured-slate-b"
+  ]
+}

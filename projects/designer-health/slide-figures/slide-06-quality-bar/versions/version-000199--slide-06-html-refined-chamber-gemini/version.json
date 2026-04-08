@@ -1,0 +1,17 @@
+{
+  "id": "version-000199",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000199--slide-06-html-refined-chamber-gemini",
+  "label": "slide-06-html-refined-chamber-gemini",
+  "status": "archived",
+  "createdAt": "2026-04-03T17:07:33.179Z",
+  "sourceKind": "html-experiment-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/gemini/vox-slide6-html-refined-chamber-gemini"
+  ],
+  "sourcePath": "output/figures/gemini/vox-slide6-html-refined-chamber-gemini",
+  "sourceProvider": "gemini",
+  "sourceVariantLabel": "html-refined-chamber-gemini"
+}

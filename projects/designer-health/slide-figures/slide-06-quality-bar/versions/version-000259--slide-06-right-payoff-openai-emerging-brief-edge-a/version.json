@@ -1,0 +1,14 @@
+{
+  "id": "version-000259",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000259--slide-06-right-payoff-openai-emerging-brief-edge-a",
+  "label": "slide-06-right-payoff-openai-emerging-brief-edge-a",
+  "status": "archived",
+  "createdAt": "2026-04-03T20:46:08.784Z",
+  "sourceKind": "right-payoff-ideation",
+  "baseVersionId": "version-000244",
+  "legacySourcePaths": [
+    "projects/designer-health/experiments/slide-06-right-payoff-ideation-2026-04-03/openai/emerging-brief-edge-a"
+  ]
+}

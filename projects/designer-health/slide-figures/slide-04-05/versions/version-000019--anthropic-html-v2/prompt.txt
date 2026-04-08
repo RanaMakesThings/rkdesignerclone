@@ -1,0 +1,251 @@
+You are designing ONE conceptual figure for an investor pitch deck.
+
+I am attaching the current Slide 3 image.
+Use it as a visual reference and source object.
+This new slide should visually QUOTE the top hero bar from Slide 3 so the design family stays consistent.
+
+IMPORTANT STRATEGIC CONTEXT
+
+This slide combines two earlier conceptual jobs:
+
+1. WHY HISTORY IS THE RIGHT WEDGE
+History is the cleanest place to reclaim minutes because it is repeated across visits, time-variable, and able to begin before the encounter.
+
+2. WHAT THAT WEDGE IS ACTUALLY DOING
+Valuable visit time is spent turning patient story into decision-ready structure.
+
+This slide must present BOTH concepts clearly.
+Right now the problem is that previous attempts blended the two concepts into one object.
+This revision must stage them as TWO LINKED BEATS.
+
+This slide is STILL conceptual.
+It is NOT yet the later Vox workflow slide.
+Do not show a literal pre-visit workflow, encounter boundary, timeline, software UI, or product mechanism.
+
+The figure should only suggest that this work is unusually well suited to be pulled earlier / upstream.
+Do not explain how Vox operationalizes that.
+
+==================================================
+USE THIS EXACT COPY
+==================================================
+
+HEADER
+History is the cleanest place to reclaim minutes
+
+HERO
+History reconstruction
+Patient story → decision-ready structure
+
+GROUPED SUPPORT BLOCK HEADING
+Why this wedge
+
+REASON 1
+Repeated across visits
+The same story gets repeated across encounters
+
+REASON 2
+Time-variable
+Time required depends on complexity and communication
+
+REASON 3
+Can begin before the encounter
+Much of it can happen before the clinician is on the clock
+
+LOWER EXPLANATORY HEADING
+Valuable visit time is spent turning patient story into decision-ready structure
+
+ZOOM LABELS
+Patient story
+Decision-ready structure
+
+SOURCE BAR TEXT
+Story reconstruction
+Decisions + counseling
+Exam + workflow
+0 / 5 / 10 / 15 / 20
+
+==================================================
+COMPOSITION — TWO-BEAT STRUCTURE
+==================================================
+
+BEAT 1 — UPPER / MIDDLE CLAIM
+Why history is the right wedge
+
+This beat includes:
+- quoted Slide 3 source bar in the upper-right
+- curved peel-back arrow
+- extracted hero module in the center-left
+- grouped support block on the right
+
+BEAT 2 — LOWER EXPLANATORY CLAIM
+What this work actually is
+
+This beat includes:
+- lower explanatory heading
+- compact zoom panel directly beneath it
+
+This should read:
+top/middle = this is the wedge to pull
+bottom = this is the work that wedge is actually doing
+
+==================================================
+LAYOUT
+==================================================
+
+Top-left:
+header only
+
+Upper-right:
+quoted Slide 3 source bar
+
+Center-left:
+hero extracted module
+
+Middle diagonal:
+curved peel-back arrow from source wedge to hero
+
+Center-right:
+one grouped support block titled “Why this wedge”
+
+Lower band:
+the sentence “Valuable visit time is spent turning patient story into decision-ready structure”
+with the zoom panel directly beneath it
+
+Do NOT:
+- scatter the 3 reasons around the slide
+- place the explanatory sentence directly under the title
+- put everything on one flat horizontal line
+- center everything symmetrically
+
+==================================================
+OBJECT-BY-OBJECT INSTRUCTIONS
+==================================================
+
+OBJECT 1 — SOURCE BAR
+Use the Slide 3 top bar as the geometric and stylistic reference.
+It should remain recognizably the same object.
+
+Keep:
+- same ruler
+- same rounded geometry
+- same blue first segment
+- same neutral remaining segments
+- same label family
+
+Remove:
+- bracket text
+- repeated mini-bars
+- new visit block
+
+This is a quoted object, not the hero.
+
+OBJECT 2 — CURVED PEEL-BACK MOTION
+Start from the blue history wedge.
+Move leftward and slightly downward into the hero.
+This should feel like pulling a layer earlier, not transporting a box.
+
+Keep the arrow elegant and restrained.
+Not cartoonish.
+Not thick.
+Not a giant arc.
+
+OBJECT 3 — HERO MODULE
+Use a stable rounded blue module.
+Do NOT use a trapezoid or diagonal/slanted hero shape.
+
+Reason:
+time-variability should not be represented by distorting the hero shape.
+
+Inside the hero:
+History reconstruction
+Patient story → decision-ready structure
+
+This is the semantic center of the slide.
+
+OBJECT 4 — GROUPED SUPPORT BLOCK
+On the right side of the hero, create ONE grouped block:
+
+Why this wedge
+
+Repeated across visits
+The same story gets repeated across encounters
+
+Time-variable
+Time required depends on complexity and communication
+
+Can begin before the encounter
+Much of it can happen before the clinician is on the clock
+
+This must read as one coherent support cluster.
+Do NOT turn these into three scattered callouts.
+
+OBJECT 5 — LOWER EXPLANATORY HEADING
+Place this in the lower band, above the zoom panel:
+
+Valuable visit time is spent turning patient story into decision-ready structure
+
+This is not a subtitle under the main title.
+It is the heading for the slide’s second beat.
+
+OBJECT 6 — ZOOM PANEL
+Below the lower explanatory heading, place a compact subordinate zoom panel.
+
+Inside it:
+- left: patient story fragment
+- middle: subtle organizing bridge / membrane
+- right: compact decision-ready structure card
+
+Tiny labels only:
+Patient story
+Decision-ready structure
+
+This is explanatory, not a second hero.
+
+==================================================
+STYLE
+==================================================
+
+- white background
+- premium investor-deck feel
+- grayscale base
+- one restrained blue accent
+- rounded geometry
+- generous but purposeful whitespace
+- clean hierarchy
+- conceptual, not operational
+
+==================================================
+DO NOT
+==================================================
+
+Do NOT:
+- create an explicit pre-visit zone
+- label encounter boundaries
+- show Vox workflow mechanics
+- use a trapezoid hero
+- scatter the three reasons around the canvas
+- use a giant subheader
+- turn the bottom panel into fake software
+- let the zoom become a second hero
+- add decorative infographic clutter
+
+==================================================
+QUALITY BAR
+==================================================
+
+This slide should feel like a clean conceptual bridge between:
+- Slide 3 = where the time is
+- Slide 6 = the quality bar of the output
+
+The final result should clearly stage TWO linked concepts:
+1. why history is the best wedge
+2. what that wedge is actually doing
+
+Please produce ONE strong static figure concept that follows this structure closely.
+
+One more refinement:
+- make the hero module materially smaller and more band-like
+- make “History reconstruction” the dominant line inside the hero
+- make the grouped support block lighter and less slab-like
+- make the lower story→structure zoom larger and more legible
+- do not add icons

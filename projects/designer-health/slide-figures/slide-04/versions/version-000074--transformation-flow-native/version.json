@@ -1,0 +1,14 @@
+{
+  "id": "version-000074",
+  "slideId": "slide-04",
+  "slideDir": "projects/designer-health/slide-figures/slide-04",
+  "dir": "projects/designer-health/slide-figures/slide-04/versions/version-000074--transformation-flow-native",
+  "label": "transformation-flow-native",
+  "status": "current",
+  "createdAt": "2026-03-31T21:13:43.071Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/slide-04-transformation-flow"
+  ]
+}

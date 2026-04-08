@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designer Deck - Economics V2</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --ink: #111111;
+        --muted: #6f7785;
+        --line: rgba(0, 0, 0, 0.9);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Modified strictly for the preview environment to scale the 1920x1080 slide down to fit your screen */
+      html, body {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: #f3f4f6; /* Soft gray backdrop outside the slide */
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .slide {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        background: #ffffff;
+        /* This scales the slide dynamically to fit the window while maintaining the 1920x1080 aspect ratio */
+        transform: scale(calc(min(90vw / 1920, 90vh / 1080)));
+        transform-origin: center center;
+        flex-shrink: 0;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+
+      /* Zone 1: Narrative */
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 62px;
+        width: 1700px;
+        margin: 0;
+        font-size: 64px;
+        line-height: 1.04;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+      }
+
+      .subheader {
+        position: absolute;
+        left: 92px;
+        top: 172px; /* Pushed down 18px for breathing room */
+        width: 1700px;
+        margin: 0;
+        font-size: 27px;
+        line-height: 1.3;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: var(--muted);
+      }
+
+      /* Zone 2: Hero Math (Re-engineered for optical alignment) */
+      .hero-container {
+        position: absolute;
+        left: 182px;
+        top: 360px; /* Pushed down slightly to balance the slide */
+        width: 1296px;
+        display: flex;
+        align-items: flex-start; /* Align numbers at the top */
+        justify-content: center;
+        gap: 70px;
+      }
+
+      .hero-block {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .text-right { text-align: right; }
+      .text-left { text-align: left; }
+
+      .hero-metric {
+        font-size: 160px;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        color: var(--ink);
+        line-height: 0.85; /* Tightened so the box model hugs the numbers */
+      }
+
+      .hero-label {
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--muted);
+        line-height: 1.4;
+        margin-top: 24px; /* Explicit gap between number and label */
+      }
+
+      .hero-arrow {
+        font-size: 100px;
+        font-weight: 400;
+        color: #D1D5DB; /* Darkened from Gray-200 to Gray-300 for screen visibility */
+        margin-top: 10px; /* Optically centers the arrow precisely on the horizontal axis of the numbers */
+      }
+
+      /* Zone 3: Assumptions */
+      .assumptions-block {
+        position: absolute;
+        left: 955px; /* Mathematically aligned with the left edge of the $23k block */
+        top: 650px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--muted);
+        border-left: 2px solid #D1D5DB; /* Matched the arrow color */
+        padding-left: 20px;
+      }
+
+      .assumptions-block strong {
+        font-weight: 700;
+        color: var(--ink);
+        letter-spacing: -0.01em;
+      }
+
+      /* Zone 4: Kicker */
+      .bottom-kicker {
+        position: absolute;
+        left: 92px; 
+        top: 800px; 
+        width: 1400px;
+        font-size: 34px; /* Bumped up slightly for more gravity */
+        line-height: 1.4;
+        font-weight: 500;
+        letter-spacing: -0.02em; /* Tighter tracking for readability */
+        color: var(--muted);
+      }
+
+      .bottom-kicker strong {
+        font-weight: 800;
+        color: var(--ink);
+      }
+
+      /* Zone 5: Citations */
+      .citations-block {
+        position: absolute;
+        left: 92px;
+        top: 900px; 
+        width: 1536px;
+        font-size: 11px;
+        line-height: 1.6;
+        color: #9CA3AF;
+      }
+
+      .cite {
+        font-size: 0.6em;
+        vertical-align: super;
+        line-height: 0;
+        margin-left: 2px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .citations-block .cite {
+        color: #9CA3AF;
+        margin-left: 0;
+        margin-right: 2px;
+      }
+
+      /* Footer Elements */
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="Designer Economics Slide">
+      <h1 class="header">Turning saved time into filled visits creates real revenue.</h1>
+      <p class="subheader">One additional filled outpatient visit per clinician per day is worth roughly $23k in annual revenue.</p>
+
+      <div class="hero-container">
+        <div class="hero-block text-right">
+          <div class="hero-metric">+1</div>
+          <div class="hero-label">filled outpatient visit<br>per clinician / day</div>
+        </div>
+        
+        <div class="hero-arrow">→</div>
+        
+        <div class="hero-block text-left">
+          <div class="hero-metric">≈$23k</div>
+          <div class="hero-label">annual revenue<br>per clinician<sup class="cite">*</sup></div>
+        </div>
+      </div>
+
+      <div class="assumptions-block">
+        <strong>Illustrative assumptions</strong><br>
+        ~$100 / added outpatient visit<sup class="cite">[4]</sup><br>
+        240 clinic days / year<sup class="cite">*</sup><br>
+        Medicare-like outpatient baseline<sup class="cite">[1][2]</sup>
+      </div>
+
+      <div class="bottom-kicker">
+        <strong>~$10M ARR</strong> at ~10% value capture requires only <strong>~4,500 clinicians</strong><sup class="cite">*</sup> — roughly 0.5% of the U.S. patient-care physician base.<sup class="cite">[3]</sup>
+      </div>
+
+      <div class="citations-block">
+        [1] AMA, “CPT® code 99213: Established patient office visit, 20–29 minutes.” | [2] CMS, “CY 2026 Medicare Physician Fee Schedule Final Rule” and PFS Look-Up. | [3] HRSA, State of the U.S. Health Care Workforce, 2025.<br>
+        [4] FastRVU, “CPT 99213: Office o/p est low 20 min – RVU Values & Medicare Payment 2026” (CMS-derived rate table).<br>
+        * Derived from illustrative slide assumptions: ~$95 visit benchmark rounded to ~$100, 240 clinic days/year, and 10% value capture.
+      </div>
+
+      <div class="footer-line" aria-hidden="true"></div>
+      
+      <!-- Inline SVG replacement for the Designer logo to avoid broken image links in the preview -->
+      <svg class="footer-logo" viewBox="0 0 114 59" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 15L62 27L50 39M40 15L52 27L40 39" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="57" y="52" font-family="Montserrat, sans-serif" font-size="11" font-weight="800" text-anchor="middle" fill="#111111">DESIGNER</text>
+        <text x="57" y="62" font-family="Montserrat, sans-serif" font-size="6" font-weight="600" text-anchor="middle" letter-spacing="0.15em" fill="#6f7785">HEALTH</text>
+      </svg>
+
+    </section>
+  </body>
+</html>

@@ -1,0 +1,279 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox - Investor Pitch Slide</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #E2E8F0; /* Darker backdrop for the presentation view */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* 16:9 Slide Container */
+        .slide-container {
+            width: 100%;
+            max-width: 1600px;
+            aspect-ratio: 16 / 9;
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 80px 100px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Typography */
+        .header {
+            font-size: 52px;
+            font-weight: 600;
+            color: #0F172A;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            max-width: 1200px;
+            margin-bottom: 24px;
+        }
+
+        .subheader {
+            font-size: 26px;
+            font-weight: 400;
+            color: #475569;
+            line-height: 1.5;
+            max-width: 1100px;
+            letter-spacing: -0.01em;
+        }
+
+        /* Journey Strip Layout */
+        .journey-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .journey-titles {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            gap: 48px;
+            margin-bottom: 32px;
+        }
+
+        .zone-title {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #64748B;
+        }
+
+        .zone-title.active {
+            color: #1D4ED8;
+        }
+
+        .journey-cards {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Connecting Line */
+        .track-line {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(226,232,240,0) 0%, rgba(226,232,240,1) 10%, rgba(226,232,240,1) 90%, rgba(226,232,240,0) 100%);
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+
+        /* Outer Zones (Quiet, Gray, Credible) */
+        .quiet-card {
+            background-color: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 20px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .support-label {
+            background-color: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 18px 24px;
+            font-size: 17px;
+            font-weight: 500;
+            color: #475569;
+            text-align: center;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Center Zone (Clear Blue Object) */
+        .center-wrapper {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .blue-card {
+            background-color: #1D4ED8;
+            width: 100%;
+            border-radius: 20px;
+            padding: 40px;
+            color: #FFFFFF;
+            box-shadow: 0 20px 40px -10px rgba(29, 78, 216, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blue-card-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-align: center;
+            letter-spacing: -0.01em;
+        }
+
+        .blue-card-row {
+            background-color: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            font-size: 17px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .blue-card-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .row-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* Optional Line */
+        .optional-line {
+            position: absolute;
+            bottom: -48px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            color: #64748B;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-container">
+        <!-- Header Section -->
+        <h1 class="header">Current AI helps around the visit. Vox changes how the visit starts.</h1>
+        <p class="subheader">Most assistive AI reduces operational or documentation work. Vox gives the clinician a structured brief at the beginning of the visit.</p>
+
+        <!-- Main Figure: Journey Strip -->
+        <div class="journey-section">
+            
+            <!-- Zone Titles -->
+            <div class="journey-titles">
+                <div class="zone-title">Before visit</div>
+                <div class="zone-title active">Start of visit</div>
+                <div class="zone-title">During / after</div>
+            </div>
+
+            <!-- Zone Cards -->
+            <div class="journey-cards">
+                <!-- Continuous Background Line -->
+                <div class="track-line"></div>
+
+                <!-- Zone 1: Before Visit -->
+                <div class="quiet-card">
+                    <div class="support-label">scheduling</div>
+                    <div class="support-label">reminders</div>
+                </div>
+
+                <!-- Zone 2: Start of Visit (Center) -->
+                <div class="center-wrapper">
+                    <div class="blue-card">
+                        <div class="blue-card-title">Vox-prepared brief</div>
+                        
+                        <div class="blue-card-row">
+                            <div class="row-icon">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4" cy="4" r="4" fill="white" fill-opacity="0.9"/>
+                                </svg>
+                            </div>
+                            What matters
+                        </div>
+                        
+                        <div class="blue-card-row">
+                            <div class="row-icon">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4" cy="4" r="4" fill="white" fill-opacity="0.9"/>
+                                </svg>
+                            </div>
+                            What happened when
+                        </div>
+                        
+                        <div class="blue-card-row">
+                            <div class="row-icon">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4" cy="4" r="4" fill="white" fill-opacity="0.9"/>
+                                </svg>
+                            </div>
+                            What still needs confirmation
+                        </div>
+                    </div>
+                    
+                    <div class="optional-line">Where clinical reasoning begins</div>
+                </div>
+
+                <!-- Zone 3: During / After -->
+                <div class="quiet-card">
+                    <div class="support-label">documentation support</div>
+                    <div class="support-label">note generation</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+```

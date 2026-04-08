@@ -1,0 +1,14 @@
+{
+  "id": "version-000051",
+  "slideId": "slide-03",
+  "slideDir": "projects/designer-health/slide-figures/slide-03",
+  "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000051--claude-opus-capacity-review",
+  "label": "claude-opus-capacity-review",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:05:30.247Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-03/claude-opus-capacity-review"
+  ]
+}

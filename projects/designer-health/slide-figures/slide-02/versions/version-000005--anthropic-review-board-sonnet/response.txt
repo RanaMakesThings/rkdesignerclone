@@ -1,0 +1,54 @@
+## Slide 2 — Board Review: "Demand is outpacing clinical capacity"
+
+---
+
+### 1. Verdict
+The slide is structurally sound and data-rich, but the specialty card reads as a UI widget dropped into a presentation, and the visual hierarchy still has too many competing anchors fighting for first read.
+
+---
+
+### 2. Top Issues (ordered by severity)
+
+- **The specialty card is stylistically mismatched.** It has a white card with a drop shadow sitting inside what should be a clean, flat layout. It looks like a SaaS dashboard component — not a board deck element. The rounded-corner card treatment creates a "two worlds" problem: the left side is a chart, the right side is a product screenshot. They don't share visual DNA.
+
+- **"31 days" and the trend line compete rather than reinforce.** The big blue "31 days" callout floats above the line chart endpoint but is spatially disconnected from it. A board reader's eye bounces between the number, the label, the "+19% since 2022" badge, and the endpoint dot — none of these three elements have a clear visual leader. One of them needs to absorb the others.
+
+- **The "+19% since 2022" badge feels low-resolution.** The pill/badge treatment is too informal — it reads like a tooltip or annotation from a BI tool. In a premium deck, that delta belongs integrated into the callout typography or a clean annotation line, not a floating lozenge.
+
+- **The shortage banner lacks visual weight relative to its strategic importance.** "More than 1 in 4" is the most emotionally resonant stat on the slide, but it's buried in a lightly bordered box at the bottom with small supporting copy. If this is a thesis-level stat, it should command more vertical space and typographic presence — currently it reads as a footnote appendix rather than a second proof point.
+
+- **The x-axis label treatment is inconsistent.** "2025" is bolded to call out the endpoint, but this micro-decision draws attention to an inconsistency rather than resolving cleanly. Either all axis labels are styled identically and the endpoint is marked with a data callout, or the entire axis is suppressed except the labeled points.
+
+---
+
+### 3. Board-Read Risk
+
+- **The slide asks investors to process three separate proof zones in a single glance** — the trend chart, the specialty card, and the shortage banner. In a live setting with 45 seconds of attention, a sophisticated investor may absorb only one zone and miss the cumulative argument. There is no single sentence or visual path that ties all three into one conclusion.
+
+- **The specialty card's bar chart has no axis or scale.** The bars are unanchored — a detail-oriented board member will immediately notice that Gastroenterology's bar appears nearly identical in length to OB/GYN's despite a 1.8-day difference, while Family Medicine's bar looks dramatically shorter. This invites a credibility question during Q&A that shouldn't exist.
+
+- **The footnote cluster at the bottom is dense and small**, which in a live projection setting will be completely illegible — but its presence signals "we're sourcing this carefully," which is good. The risk is that someone asks for the source during the meeting and the presenter has to admit the footnotes can't be read on screen. Either make them readable or move them to an appendix slide with a single superscript reference on the main slide.
+
+---
+
+### 4. Aesthetic Upgrades
+
+- **Flatten and integrate the specialty card.** Remove the drop shadow and card border entirely. Let the specialty data live as a right-aligned column within the same visual plane as the chart — separated by whitespace alone, not a container. Style the specialty bars with the same stroke weight and color palette as the trend line.
+
+- **Consolidate the "31 days" callout into a single, unified annotation.** Merge the "+19% since 2022" badge directly into the callout — e.g., **"31 days (+19% since 2022)"** in a two-line typographic treatment at the endpoint. Eliminate the floating pill entirely.
+
+- **Give the shortage banner a left accent bar instead of a full border box.** A 4px vertical blue rule on the left edge of the banner — no box, no shadow, no background fill — would feel premium and editorial rather than UI-component. Increase the "More than 1 in 4" font size by 20% and reduce the supporting copy size slightly to sharpen the hierarchy.
+
+- **Standardize the specialty bar chart with a shared baseline and proportional scaling.** Anchor all bars to a common left edge with consistent scaling so the length differences are visually honest. Add a single thin axis line at the bottom of the bar group — no gridlines, just a baseline — so the comparison reads as intentional data visualization rather than decorative bars.
+
+- **Reduce the number of visible gridlines on the trend chart to two.** Currently the chart has horizontal rules at 16, 24, and 32. Keeping only the 24-day line (the midpoint) strips visual noise while preserving scale reference. The chart area should feel like open space with a line moving through it, not a graph paper grid.
+
+---
+
+### 5. Keep As-Is
+
+- **The headline.** "Demand is outpacing clinical capacity." is direct, declarative, and thesis-grade. It does not editorialize or over-explain. Do not touch it.
+
+- **The trend line's upward arc from 2014 through 2025.** The shape of the data — the dip in 2014 followed by a steep, sustained climb — is genuinely compelling and tells a story without annotation. The line itself is well-weighted and the endpoint dot is appropriately sized.
+
+- **The "More than 1 in 4" phrasing.** This is strong human-scale framing of an abstract statistic. It is more resonant than "25% of Americans" and should not be converted to a percentage. The plain-language format is correct for an investor context.

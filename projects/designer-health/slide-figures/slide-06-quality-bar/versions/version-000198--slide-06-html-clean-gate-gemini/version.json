@@ -1,0 +1,17 @@
+{
+  "id": "version-000198",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000198--slide-06-html-clean-gate-gemini",
+  "label": "slide-06-html-clean-gate-gemini",
+  "status": "archived",
+  "createdAt": "2026-04-03T17:07:33.172Z",
+  "sourceKind": "html-experiment-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/gemini/vox-slide6-html-clean-gate-gemini"
+  ],
+  "sourcePath": "output/figures/gemini/vox-slide6-html-clean-gate-gemini",
+  "sourceProvider": "gemini",
+  "sourceVariantLabel": "html-clean-gate-gemini"
+}

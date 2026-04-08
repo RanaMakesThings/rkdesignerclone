@@ -1,0 +1,46 @@
+Create one premium 16:9 investor pitch-deck slide on a white background.
+
+Use this exact on-slide copy:
+
+Header:
+Current AI helps around the visit. Vox changes how the visit starts.
+
+Subheader:
+Most assistive AI reduces operational or documentation work. Vox gives the clinician a structured brief at the beginning of the visit.
+
+Main figure:
+Show the visit as a threshold, not just a timeline.
+
+Use a quiet left support zone for before-visit help and a quiet right support
+zone for during/after help. In the middle, place one strong blue object at the
+threshold where the visit begins:
+Vox-prepared brief
+
+Optional small line near the center:
+Where clinical reasoning begins
+
+Outer support context can include a few small labels:
+- scheduling
+- reminders
+- documentation support
+- note generation
+
+Inside the center brief, imply these three short rows:
+- What matters
+- What happened when
+- What still needs confirmation
+
+Visual rules:
+- white background
+- grayscale outer zones
+- one restrained blue center object
+- quiet threshold marker or crossing point
+- rounded geometry
+- clean premium typography
+- no fake product UI
+- no matrix or comparison table
+- no anti-scribe rhetoric
+- no loud infographic arrows
+
+Overall feel:
+strategic, editorial, calm, and very clear that Vox is the middle layer.

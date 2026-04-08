@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Vox — Quality Bar Slide</title>
+<style>
+  html, body {
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: #f8fafc;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color: #162033;
+  }
+  .slide {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background:
+      radial-gradient(900px 520px at 18% 18%, rgba(110,170,190,0.10), rgba(255,255,255,0) 62%),
+      radial-gradient(700px 460px at 78% 78%, rgba(110,170,190,0.08), rgba(255,255,255,0) 64%),
+      linear-gradient(180deg, #ffffff 0%, #f9fbfd 100%);
+  }
+  .title {
+    position: absolute;
+    left: 108px;
+    top: 70px;
+    width: 1450px;
+    font-size: 64px;
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+    font-weight: 700;
+    color: #161f31;
+  }
+  .title .vox {
+    color: #2e959d;
+    font-weight: 700;
+  }
+  .subtitle {
+    position: absolute;
+    left: 108px;
+    top: 290px;
+    width: 1420px;
+    font-size: 24px;
+    line-height: 1.35;
+    color: #5c6b84;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+  }
+  .panel {
+    position: absolute;
+    left: 558px;
+    top: 409px;
+    width: 719px;
+    height: 525px;
+    border-radius: 38px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.97) 0%, rgba(250,252,254,0.97) 100%);
+    border: 1px solid rgba(171,184,202,0.55);
+    box-shadow:
+      0 20px 60px rgba(180,193,210,0.18),
+      inset 0 1px 0 rgba(255,255,255,0.9);
+  }
+  .panel-title {
+    position: absolute;
+    top: 44px;
+    left: 170px;
+    width: 180px;
+    text-align: center;
+    color: #2e959d;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    font-size: 56px;
+  }
+  .panel-subtitle {
+    position: absolute;
+    top: 109px;
+    left: 104px;
+    width: 312px;
+    text-align: center;
+    color: #2f3b4e;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+  }
+  .panel-right-title {
+    position: absolute;
+    top: 93px;
+    right: 72px;
+    width: 275px;
+    text-align: left;
+    color: #2f3b4e;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+  }
+
+  .rail {
+    position: absolute;
+    right: 78px;
+    width: 348px;
+    height: 46px;
+    border-radius: 23px;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid rgba(212,220,231,0.9);
+    box-shadow: 0 7px 18px rgba(167,182,201,0.12);
+    display: flex;
+    align-items: center;
+    padding-left: 34px;
+    font-size: 18px;
+    line-height: 1.1;
+    color: #2b3749;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+  .rail .dot {
+    position: absolute;
+    left: 14px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #5db7ba;
+    box-shadow: 0 0 0 5px rgba(93,183,186,0.10);
+  }
+  .rail.r1 { top: 156px; }
+  .rail.r2 { top: 246px; }
+  .rail.r3 { top: 336px; }
+
+  .rlabel {
+    position: absolute;
+    left: 1458px;
+    top: 551px;
+    font-size: 24px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: #1f2a3a;
+    letter-spacing: -0.04em;
+  }
+
+  .card {
+    position: absolute;
+    left: 1520px;
+    top: 601px;
+    width: 280px;
+    height: 320px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(245,248,251,0.98) 100%);
+    border: 1px solid rgba(207,217,228,0.85);
+    box-shadow: 0 16px 36px rgba(166,180,198,0.20);
+  }
+
+  .svg-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1080px;
+    pointer-events: none;
+  }
+
+  .small-note {
+    position: absolute;
+    font-size: 14px;
+    color: #6c7b92;
+    letter-spacing: -0.02em;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="title">
+    <span class="vox">Vox</span> is the adaptive interviewing system that takes on the hard clinical reasoning work needed to turn patient story into a clinician-grade starting point.
+  </div>
+
+  <div class="subtitle">
+    Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+    By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>
+    what still needs verification before the visit begins.
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">Vox</div>
+    <div class="panel-subtitle">Adaptive clinical interviewer</div>
+    <div class="panel-right-title">Clinical reasoning + medical knowledge</div>
+
+    <div class="rail r1"><span class="dot"></span>What matters</div>
+    <div class="rail r2"><span class="dot"></span>What connects</div>
+    <div class="rail r3"><span class="dot"></span>What still needs<br>&nbsp;&nbsp;&nbsp;&nbsp;verification</div>
+  </div>
+
+  <div class="rlabel">Clinician-grade starting point</div>
+
+  <div class="card"></div>
+
+  <svg class="svg-layer" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="softBlur" x="-40%" y="-40%" width="180%" height="180%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#aab8c9" flood-opacity="0.22"/>
+      </filter>
+      <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#9fdde0"/>
+        <stop offset="100%" stop-color="#4eaeb3"/>
+      </linearGradient>
+      <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#d6e0ec"/>
+        <stop offset="100%" stop-color="#9fb3c8"/>
+      </linearGradient>
+      <linearGradient id="fadeRail" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#b8ecec" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#d9f2f3" stop-opacity="0.15"/>
+      </linearGradient>
+      <linearGradient id="fadeBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#b8c6d8" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#d9e2ec" stop-opacity="0.16"/>
+      </linearGradient>
+      <linearGradient id="pipe" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#8fd2d4" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#dff5f6" stop-opacity="0.35"/>
+      </linearGradient>
+      <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
+        <stop offset="68%" stop-color="#f4fbfb" stop-opacity="0.98"/>
+        <stop offset="100%" stop-color="#dceff0" stop-opacity="0.9"/>
+      </radialGradient>
+      <radialGradient id="tealGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#6cc1c5" stop-opacity="0.42"/>
+        <stop offset="100%" stop-color="#6cc1c5" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <!-- Left conversation ribbons -->
+    <g filter="url(#shadow)">
+      <path d="M118 465 L478 465 L525 497.5 L478 530 L118 530 L152 497.5 Z"
+            fill="rgba(255,255,255,0.8)" stroke="#9fb1c5" stroke-width="3"/>
+      <text x="165" y="506" font-size="25" fill="#455166" font-weight="500" letter-spacing="-0.03em">My back has been hurting...</text>
+
+      <path d="M137 553 L521 553 L521 618 L183 618 L137 585.5 Z"
+            fill="rgba(222,244,244,0.78)" stroke="#57aeb2" stroke-width="3"/>
+      <text x="209" y="595" font-size="24" fill="#176778" font-weight="600" letter-spacing="-0.03em">Vox: What makes it worse?</text>
+
+      <path d="M118 641 L478 641 L525 673.5 L478 706 L118 706 L152 673.5 Z"
+            fill="rgba(255,255,255,0.82)" stroke="#9fb1c5" stroke-width="3"/>
+      <text x="165" y="682" font-size="24" fill="#455166" font-weight="500" letter-spacing="-0.03em">It's worse in the morning.</text>
+
+      <path d="M137 728 L521 728 L521 793 L183 793 L137 760.5 Z"
+            fill="rgba(222,244,244,0.78)" stroke="#57aeb2" stroke-width="3"/>
+      <text x="217" y="770" font-size="24" fill="#176778" font-weight="600" letter-spacing="-0.03em">Vox: When did this start?</text>
+
+      <path d="M118 816 L478 816 L525 848.5 L478 881 L118 881 L152 848.5 Z"
+            fill="rgba(255,255,255,0.82)" stroke="#9fb1c5" stroke-width="3"/>
+      <text x="165" y="857" font-size="24" fill="#455166" font-weight="500" letter-spacing="-0.03em">Started last Tuesday.</text>
+    </g>
+
+    <!-- Left incoming lines -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M525 498 C595 500, 615 640, 678 649" stroke="url(#fadeBlue)" stroke-width="12"/>
+      <path d="M521 585 C594 585, 612 664, 680 675" stroke="url(#fadeRail)" stroke-width="12"/>
+      <path d="M525 674 C598 673, 620 675, 682 677" stroke="url(#fadeBlue)" stroke-width="12"/>
+      <path d="M521 761 C596 760, 615 688, 680 704" stroke="url(#fadeRail)" stroke-width="12"/>
+      <path d="M525 848 C598 846, 616 734, 678 706" stroke="url(#fadeBlue)" stroke-width="12"/>
+
+      <path d="M525 498 C596 499, 616 639, 678 649" stroke="#8fa5bc" stroke-opacity="0.55" stroke-width="4"/>
+      <path d="M521 585 C594 585, 612 664, 680 675" stroke="#4eaeb3" stroke-opacity="0.8" stroke-width="4"/>
+      <path d="M525 674 C598 673, 620 675, 682 677" stroke="#8fa5bc" stroke-opacity="0.55" stroke-width="4"/>
+      <path d="M521 761 C596 760, 615 688, 680 704" stroke="#4eaeb3" stroke-opacity="0.8" stroke-width="4"/>
+      <path d="M525 848 C598 846, 616 734, 678 706" stroke="#8fa5bc" stroke-opacity="0.55" stroke-width="4"/>
+    </g>
+
+    <!-- Right outgoing rails / transformation -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M848 589 L938 589" stroke="url(#tealGrad)" stroke-opacity="0.55" stroke-width="24"/>
+      <path d="M848 678 L938 678" stroke="url(#tealGrad)" stroke-opacity="0.55" stroke-width="24"/>
+      <path d="M848 767 L938 767" stroke="url(#tealGrad)" stroke-opacity="0.55" stroke-width="24"/>
+
+      <path d="M1275 600 C1355 625, 1380 674, 1496 678" stroke="url(#pipe)" stroke-width="10"/>
+      <path d="M1275 678 C1355 678, 1398 678, 1496 678" stroke="url(#pipe)" stroke-width="10"/>
+      <path d="M1275 756 C1355 730, 1380 688, 1496 678" stroke="url(#pipe)" stroke-width="10"/>
+
+      <path d="M1275 600 C1355 625, 1380 674, 1496 678" stroke="#9ad5d8" stroke-opacity="0.45" stroke-width="4"/>
+      <path d="M1275 678 C1355 678, 1398 678, 1496 678" stroke="#9ad5d8" stroke-opacity="0.45" stroke-width="4"/>
+      <path d="M1275 756 C1355 730, 1380 688, 1496 678" stroke="#9ad5d8" stroke-opacity="0.45" stroke-width="4"/>
+    </g>
+
+    <!-- Bundle into chart / clipboard -->
+    <g>
+      <path d="M1498 650 L1513 650 C1520 650 1526 656 1526 663 L1526 814 C1526 822 1520 828 1513 828 L1498 828
+               C1490 828 1484 822 1484 814 L1484 663 C1484 656 1490 650 1498 650 Z"
+            fill="#1f7a87" opacity="0.9" filter="url(#shadow)"/>
+      <rect x="1508" y="637" width="9" height="172" rx="4.5" fill="#81c7cb" opacity="0.45"/>
+      <path d="M1418 702 C1445 699, 1469 699, 1494 702 L1494 735 C1468 738, 1444 739, 1418 735 Z"
+            fill="url(#tealGrad)" opacity="0.45" filter="url(#softBlur)"/>
+      <path d="M1418 702 C1445 699, 1469 699, 1494 702 L1494 735 C1468 738, 1444 739, 1418 735 Z"
+            fill="url(#tealGrad)" opacity="0.38"/>
+    </g>
+
+    <!-- Card contents -->
+    <g opacity="0.95">
+      <rect x="1543" y="633" width="104" height="18" rx="9" fill="#dfe6ef"/>
+      <rect x="1543" y="662" width="214" height="14" rx="7" fill="#e4eaf2"/>
+      <rect x="1543" y="684" width="148" height="14" rx="7" fill="#e4eaf2"/>
+      <line x1="1543" y1="712" x2="1775" y2="712" stroke="#c7d2df" stroke-width="2"/>
+      <rect x="1543" y="726" width="105" height="16" rx="8" fill="#dfe6ef"/>
+      <rect x="1543" y="753" width="180" height="13" rx="6.5" fill="#e4eaf2"/>
+      <rect x="1543" y="775" width="212" height="13" rx="6.5" fill="#e4eaf2"/>
+      <rect x="1543" y="797" width="130" height="13" rx="6.5" fill="#e4eaf2"/>
+      <line x1="1543" y1="825" x2="1775" y2="825" stroke="#c7d2df" stroke-width="2"/>
+      <rect x="1543" y="838" width="104" height="16" rx="8" fill="#dfe6ef"/>
+      <rect x="1543" y="866" width="148" height="13" rx="6.5" fill="#e4eaf2"/>
+      <rect x="1543" y="888" width="180" height="13" rx="6.5" fill="#e4eaf2"/>
+    </g>
+
+    <!-- Reconciliation Ring center object -->
+    <g transform="translate(770,680)">
+      <circle cx="0" cy="0" r="92" fill="url(#tealGlow)" opacity="0.85"/>
+      <circle cx="0" cy="0" r="89" fill="url(#ringGlow)" stroke="#dce8ef" stroke-width="2"/>
+
+      <!-- segmented outer ring -->
+      <g fill="none" stroke-linecap="butt">
+        <path d="M -52 -68 A 86 86 0 0 1 -7 -86" stroke="#e2edf0" stroke-width="14"/>
+        <path d="M 8 -86 A 86 86 0 0 1 42 -74" stroke="#72c4c7" stroke-width="14"/>
+        <path d="M 58 -61 A 86 86 0 0 1 78 -18" stroke="#9fdde0" stroke-width="14"/>
+        <path d="M 81 2 A 86 86 0 0 1 71 42" stroke="#5ab2b6" stroke-width="14"/>
+        <path d="M 52 68 A 86 86 0 0 1 5 86" stroke="#3e9fa4" stroke-width="14"/>
+        <path d="M -9 86 A 86 86 0 0 1 -47 72" stroke="#dce8ef" stroke-width="14"/>
+        <path d="M -63 58 A 86 86 0 0 1 -81 19" stroke="#56aeb2" stroke-width="14"/>
+        <path d="M -84 -2 A 86 86 0 0 1 -74 -41" stroke="#a5d4d8" stroke-width="14"/>
+      </g>
+
+      <!-- internal checkpoints / reconciliation markers -->
+      <g>
+        <circle cx="-54" cy="-28" r="8" fill="#ffffff" stroke="#a9b8ca" stroke-width="2"/>
+        <circle cx="-10" cy="-58" r="8" fill="#ffffff" stroke="#6ebfc3" stroke-width="2"/>
+        <circle cx="44" cy="-40" r="8" fill="#ffffff" stroke="#6ebfc3" stroke-width="2"/>
+        <circle cx="58" cy="16" r="8" fill="#ffffff" stroke="#6ebfc3" stroke-width="2"/>
+        <circle cx="15" cy="55" r="8" fill="#ffffff" stroke="#6ebfc3" stroke-width="2"/>
+        <circle cx="-40" cy="42" r="8" fill="#ffffff" stroke="#a9b8ca" stroke-width="2"/>
+      </g>
+
+      <!-- inner linking paths -->
+      <g fill="none" stroke-linecap="round">
+        <path d="M-50 -26 C-24 -40, 4 -42, 38 -36" stroke="#c8d7e2" stroke-width="3"/>
+        <path d="M-8 -54 C11 -28, 20 -7, 18 18" stroke="#9fd7da" stroke-width="3"/>
+        <path d="M40 -38 C47 -18, 49 -2, 54 13" stroke="#9fd7da" stroke-width="3"/>
+        <path d="M54 16 C39 31, 26 41, 12 52" stroke="#9fd7da" stroke-width="3"/>
+        <path d="M11 52 C-9 51, -23 49, -39 41" stroke="#c8d7e2" stroke-width="3"/>
+        <path d="M-39 41 C-38 15, -42 -7, -50 -26" stroke="#c8d7e2" stroke-width="3"/>
+      </g>
+
+      <!-- subtle central structure -->
+      <circle cx="0" cy="0" r="48" fill="#ffffff" stroke="#e1ecf2" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="35" fill="#f8fbfc" stroke="#edf3f6" stroke-width="1"/>
+
+      <!-- center label -->
+      <text x="0" y="-13" text-anchor="middle" font-size="17" fill="#253244" font-weight="700" letter-spacing="-0.03em">Adaptive</text>
+      <text x="0" y="8" text-anchor="middle" font-size="17" fill="#253244" font-weight="700" letter-spacing="-0.03em">interview</text>
+      <text x="0" y="29" text-anchor="middle" font-size="17" fill="#253244" font-weight="700" letter-spacing="-0.03em">loop</text>
+
+      <!-- directional chevrons -->
+      <path d="M63 -47 L74 -36 L63 -25" fill="none" stroke="#3ea0a5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M-47 44 L-36 55 L-25 44" fill="none" stroke="#3ea0a5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- tiny labels around ring to suggest hidden work, kept subtle -->
+      <g font-size="11.5" fill="#6d7d92" font-weight="600" letter-spacing="-0.02em">
+        <text x="-102" y="-54">prioritize</text>
+        <text x="24" y="-96">reconcile</text>
+        <text x="86" y="2">judge</text>
+        <text x="-99" y="82">clarify</text>
+      </g>
+    </g>
+
+    <!-- Ring to rails connectors -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M856 589 C885 589, 902 589, 938 589" stroke="url(#tealGrad)" stroke-width="7"/>
+      <path d="M856 678 C885 678, 902 678, 938 678" stroke="url(#tealGrad)" stroke-width="7"/>
+      <path d="M856 767 C885 767, 902 767, 938 767" stroke="url(#tealGrad)" stroke-width="7"/>
+    </g>
+  </svg>
+
+</div>
+</body>
+</html>

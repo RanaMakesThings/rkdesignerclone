@@ -1,0 +1,9 @@
+Use case: background-extraction
+Asset type: isolated pitch-deck figure element for slide reconstruction
+Primary request: return a flatter no-shadow remake of the attached beat with the same phone, secure-link card, lock badge, baseline, and 1 marker. Match the original layout very closely, but make it transparent-background friendly.
+Input images: Image 1: accepted beat-1 asset from slide 7 for exact composition
+Style/medium: clean grayscale product-style editorial illustration, very crisp and flat
+Composition/framing: same crop, same object scale, full circle visible, centered line and circle exactly like the reference
+Lighting/mood: almost shadowless, calm, neutral white background
+Constraints: preserve the secure-link label exactly, preserve the lock badge exactly, preserve the baseline and 1 marker, use no cast shadow or ambient halo around the phone or card, keep the background solid white with no texture
+Avoid: checkerboard patterns, drop shadows, background gradients, extra text, extra objects, over-stylized rendering, watermarks, cropped line or circle

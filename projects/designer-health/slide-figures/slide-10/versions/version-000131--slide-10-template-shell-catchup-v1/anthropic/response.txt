@@ -1,0 +1,90 @@
+## Evaluation: Slide 10 Callback Options
+
+---
+
+### Framing the Decision
+
+The core communication job is a **causal chain**: *efficiency recovered on slide 3 → one freed visit slot → $11,000/year/provider.* The callback object must make that chain feel **inevitable**, not decorative. The risk is either breaking slide 10's economic momentum or reducing the callback to visual wallpaper.
+
+---
+
+## Option-by-Option Analysis
+
+---
+
+### Option 1 — Left Capacity Motif + Right Equation
+
+**How it reads:** The slide splits into two zones: proof-of-concept left, economics right. The viewer must hold both sides in working memory and self-construct the bridge.
+
+**Strongest for:** Audiences who are already tracking the narrative thread from slide 3 and want explicit visual confirmation of the link.
+
+**Clearest causal communication:** Moderate. The spatial separation means the green New visit block and the $11,000 figure are never in the same visual field. The causal arrow exists, but the reader must travel across the slide to feel it.
+
+**Continuity without replay:** This is the option most at risk of feeling like a **replay.** Giving the motif its own left-column zone gives it structural weight that it shouldn't have on slide 10 — it re-elevates slide 3's argument when slide 10 should be *assuming* that argument and accelerating past it.
+
+**Main failure mode:** The slide reads as two slides stitched together. Investors read left-to-right; if the left zone looks like a workflow diagram, attention stalls before reaching the $11,000 payoff. The callback becomes the subject instead of the premise.
+
+**Verdict:** Weakest of the three. **Reject** if the deck's primary audience is investors in a live pitch context.
+
+---
+
+### Option 2 — Callback Embedded Inside the Hero Card
+
+**How it reads:** The callback strip runs as the leftmost element *inside* the economics card, then flows rightward into +1 visit → assumptions → $11,000. The card itself carries the full argument.
+
+**Strongest for:** Decks where slide 10 must stand alone (e.g., sent as a leave-behind), because the card contains both the premise and the proof in one contained object.
+
+**Clearest causal communication:** High, but fragile. When executed well, the strip-to-math flow reads as a single sentence: *"Here's the freed slot → here's what it's worth."* The green New visit block can visually anchor directly to the +1 visit label.
+
+**Continuity without replay:** Good, because the callback is subordinated inside a larger card — it reads as a **reference**, not a re-presentation. The card's dominant message remains the dollar figure.
+
+**Main failure mode:** Crowding. The current hero card already carries +1 visit, three assumption lines, and the $11,000 hero number. Adding a callback strip on the far left risks making the card feel like a process diagram. If the strip is even slightly too large or too detailed, it steals hierarchy from $11,000 — which must remain the undisputed visual apex of the slide.
+
+**Execution constraint:** The strip must be **no more than ~15% of the card's horizontal width** and must use reduced opacity or smaller scale relative to slide 3's original. It is a whisper, not a statement.
+
+---
+
+### Option 3 — Bottom Capacity Strip Replaces the Quiet Range Rail
+
+**How it reads:** The economics hero stays completely intact. The bottom strip — currently a low-signal sensitivity range — is replaced by a compact callback: shortened visit mini-bars ending in the green New visit block. It reads as a **foundation line** beneath the proof, not as a competing argument.
+
+**Strongest for:** Live pitch decks where the economics card must dominate the slide and the callback serves a confirmatory, not argumentative, function. This is the correct role for slide 10.
+
+**Clearest causal communication:** The causality reads **bottom-up**: the strip shows where the visit came from; the card above shows what it's worth. This matches natural slide logic — the mechanism underlies the outcome. The spatial relationship is correct without requiring a horizontal bridge the eye must cross.
+
+**Continuity without replay:** Strongest of the three. The bottom position signals *"you already accepted this on slide 3; here it is grounding the economics"* rather than re-opening the argument. The motif is present but does not compete for primary attention.
+
+**Main failure mode:** If the strip is too quiet, it reads as decoration and the callback lands with zero force — investors won't consciously register the connection. The strip must retain the green New visit block at sufficient contrast to be noticed in a 2-second scan, or it contributes nothing.
+
+---
+
+## Direct Answers
+
+**Which option is strongest?**
+**Option 3.** It preserves the economics card's full hierarchy, places the callback in the correct subordinate role, and uses spatial logic (mechanism below, outcome above) that is intuitively readable without instruction.
+
+**Which most clearly communicates that one added visit creates meaningful annual value?**
+Option 2 has the highest potential clarity *if* executed perfectly, but its failure mode is severe and the execution constraint is tight. Option 3 communicates the same causality with lower execution risk and is therefore the stronger practical answer.
+
+**Which best preserves continuity without becoming a replay?**
+Option 3. The bottom-strip position signals *recall*, not *re-argument.* Option 1 is the highest replay risk and should be rejected.
+
+**Main failure modes, summarized:**
+
+| Option | Primary Failure Mode |
+|--------|----------------------|
+| 1 | Replay — callback becomes the slide's subject, not its premise |
+| 2 | Crowding — card loses hierarchy, $11,000 loses dominance |
+| 3 | Invisibility — strip too quiet to register the connection |
+
+---
+
+## Concrete Recommendation: How to Depict the Callback Object
+
+**Use a single compact row for Option 3, built as follows:**
+
+- **4–5 shortened visit bars** in the same muted blue-gray as slide 3's "after" state — width approximately 60–65% of a full visit bar, no labels, no internal detail.
+- **One green New visit block** at the end of the row, same green as slide 3, with a single label: *"New visit"* in the same small type used on slide 3.
+- **No bracket, no annotation, no arrow.** The repetition of the visual language is the communication. Investors who saw slide 3 will read it immediately; those who didn't will read it as "capacity available."
+- **Scale:** Strip height should be approximately equal to the current range rail it replaces — roughly 28–32px rendered height. It should feel like a **footer reference**, not a diagram.
+- **Optional:** A hairline rule or 6–8px vertical gap separating the strip from the card above reinforces that these are two layers of the same

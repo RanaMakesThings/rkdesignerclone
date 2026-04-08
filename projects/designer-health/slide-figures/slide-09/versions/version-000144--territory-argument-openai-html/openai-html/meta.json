@@ -1,0 +1,8 @@
+{
+  "model": "gpt-5.4",
+  "images": [
+    "/Users/kabeer/Desktop/4FAA88B9-3C54-4321-B182-C8DB4ED0A963.png",
+    "/Users/kabeer/Desktop/757B1C3E-6121-4432-8524-C7BDE4EE6722.png"
+  ],
+  "maxOutputTokens": 6000
+}

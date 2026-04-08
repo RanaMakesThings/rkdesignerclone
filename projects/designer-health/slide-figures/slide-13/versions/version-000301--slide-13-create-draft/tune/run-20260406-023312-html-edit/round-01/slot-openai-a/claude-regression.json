@@ -1,0 +1,23 @@
+{
+  "provider": "claude",
+  "verdict": "blocker",
+  "rationale": "The candidate slide has real content but contains multiple visible regressions: the locked subheader ('Post-money SAFE • ~18–20 months of runway') is partially obscured/overprinted by the oversized header text bleeding into its zone; the milestone card body copy is visibly clipped mid-sentence on all three right-column cards (BUILD, DEPLOY, VALIDATE descriptions cut off); the use-of-funds ribbon at the bottom has collapsed typographic spacing causing label and descriptor text to run together without clear separation (e.g., 'integratValidation' is a visible merge artifact); and the footer logo has failed to render — the Designer Health lockup in the bottom-right shows a broken image placeholder box instead of the resolved logo asset.",
+  "blockers": [
+    "Locked subheader text is overprinted and partially hidden beneath the oversized header, making it unreadable on first scan",
+    "All three right-column milestone card body descriptions are clipped mid-sentence — content is visibly truncated",
+    "Use-of-funds ribbon text is merged/colliding — 'integratValidation' is a visible broken concatenation artifact",
+    "Footer Designer Health logo is a broken image placeholder, not the resolved lockup"
+  ],
+  "nextMove": "Fix the header/subheader vertical spacing so the subheader is fully legible; expand or scroll-clip the milestone card containers so body copy is not truncated; repair the use-of-funds ribbon with proper gutters between each label-descriptor pair; and resolve the footer logo asset path so the Designer Health lockup renders correctly.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate slide has real content but contains multiple visible regressions: the locked subheader ('Post-money SAFE • ~18–20 months of runway') is partially obscured/overprinted by the oversized header text bleeding into its zone; the milestone card body copy is visibly clipped mid-sentence on all three right-column cards (BUILD, DEPLOY, VALIDATE descriptions cut off); the use-of-funds ribbon at the bottom has collapsed typographic spacing causing label and descriptor text to run together without clear separation (e.g., 'integratValidation' is a visible merge artifact); and the footer logo has failed to render — the Designer Health lockup in the bottom-right shows a broken image placeholder box instead of the resolved logo asset.",
+    "blockers": [
+      "Locked subheader text is overprinted and partially hidden beneath the oversized header, making it unreadable on first scan",
+      "All three right-column milestone card body descriptions are clipped mid-sentence — content is visibly truncated",
+      "Use-of-funds ribbon text is merged/colliding — 'integratValidation' is a visible broken concatenation artifact",
+      "Footer Designer Health logo is a broken image placeholder, not the resolved lockup"
+    ],
+    "nextMove": "Fix the header/subheader vertical spacing so the subheader is fully legible; expand or scroll-clip the milestone card containers so body copy is not truncated; repair the use-of-funds ribbon with proper gutters between each label-descriptor pair; and resolve the footer logo asset path so the Designer Health lockup renders correctly."
+  }
+}

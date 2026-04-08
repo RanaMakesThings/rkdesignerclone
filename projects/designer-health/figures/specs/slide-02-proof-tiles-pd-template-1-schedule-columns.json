@@ -1,0 +1,85 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-proof-tiles-pd-template-1-schedule-columns",
+    "family": "proof_tiles",
+    "deckId": "pd-template-1",
+    "theme": "pd-template-1",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Demand is outpacing clinical capacity.",
+    "subtitle": "",
+    "chips": [],
+    "footnote": "[1] AMN/Merritt Hawkins physician appointment wait-time survey. [2] CDC/NCHS delayed-care measure."
+  },
+  "constraints": {
+    "figureJob": "Use filled schedule columns to show what constrained appointment supply actually looks like.",
+    "focalPoint": "The shared scheduling surface, then the two proof metrics.",
+    "layout": "Header top left, one full-width band of schedule columns through the middle, two proof tiles beneath.",
+    "big": [
+      "The schedule columns",
+      "The two proof metrics"
+    ],
+    "quiet": [
+      "Eyebrows",
+      "Support copy",
+      "Footnote"
+    ],
+    "accentTargets": [
+      "none"
+    ],
+    "forbidden": [
+      "dashboard UI",
+      "random mini-icons"
+    ],
+    "semanticGuards": []
+  },
+  "copyPolicy": {
+    "locked": [
+      "Demand is outpacing clinical capacity.",
+      "~1 month",
+      "10.6%"
+    ],
+    "preferred": [],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "motif": "schedule-columns",
+    "tiles": [
+      {
+        "eyebrow": "Access",
+        "metric": "~1 month",
+        "detail": "Average wait for a new doctor appointment",
+        "kicker": "Up 19% in three years [1]",
+        "graphic": {
+          "kind": ""
+        }
+      },
+      {
+        "eyebrow": "Deferred care",
+        "metric": "10.6%",
+        "detail": "Adults delayed or did not get care because no appointment was available when needed [2]",
+        "kicker": "",
+        "graphic": {
+          "kind": ""
+        }
+      }
+    ]
+  },
+  "trace": [
+    {
+      "excerpt": "Schedule Columns",
+      "targetPath": "body.motif",
+      "ruleType": "body",
+      "note": "Use clinic schedule columns as the central figure object."
+    },
+    {
+      "excerpt": "Make the stats feel like evidence of a system problem.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "The schedule surface represents the constrained system."
+    }
+  ]
+}

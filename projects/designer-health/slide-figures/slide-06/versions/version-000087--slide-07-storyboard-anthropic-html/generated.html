@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vox – Prepares the Visit</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    background: #ffffff;
+    font-family: 'Georgia', 'Times New Roman', serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 60px 40px 60px;
+  }
+  .slide-header {
+    margin-bottom: 6px;
+  }
+  .slide-header h1 {
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #0d2b2b;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+  }
+  .slide-header p {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #6b7b7b;
+    margin-top: 5px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+  }
+  .figure-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 18px;
+  }
+  svg {
+    width: 100%;
+    height: 580px;
+    overflow: visible;
+  }
+</style>
+</head>
+<body>
+
+<div class="slide-header">
+  <h1>Vox prepares the visit before it starts.</h1>
+  <p>Vox interviews, structures, and hands off a brief the clinician can verify and use.</p>
+</div>
+
+<div class="figure-area">
+<svg viewBox="0 0 1160 540" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Shadow filter for cards -->
+    <filter id="shadow-sm" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000015"/>
+    </filter>
+    <filter id="shadow-md" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0000001a"/>
+    </filter>
+    <filter id="shadow-lg" x="-10%" y="-10%" width="120%" height="135%">
+      <feDropShadow dx="0" dy="6" stdDeviation="14" flood-color="#0000001e"/>
+    </filter>
+    <!-- Subtle gradient for hero card -->
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0fafa"/>
+      <stop offset="100%" stop-color="#e8f5f5"/>
+    </linearGradient>
+    <!-- Accent color -->
+    <!-- #2a8c8c = teal accent -->
+    <linearGradient id="bracketGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a8c8c" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#2a8c8c" stop-opacity="0.15"/>
+    </linearGradient>
+    <marker id="arrowTeal" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0.5 L5,3 L0,5.5" fill="none" stroke="#2a8c8c" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0.5 L5,3 L0,5.5" fill="none" stroke="#b0bcbc" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <!-- ============================================================
+       LAYOUT PLAN (viewBox 1160 x 540):
+       Beat1 (Invite):     x=20,  w=140, h=200, top=180
+       Beat2 (Interview):  x=205, w=220, h=300, top=100
+       Beat3 (Brief):      x=470, w=310, h=390, top=60  [HERO]
+       Threshold marker:   x=832
+       Beat4 (Clinician):  x=855, w=270, h=300, top=100
+       
+       Baseline: y=450
+       All cards bottom-aligned to baseline=450
+  ============================================================ -->
+
+  <!-- ============================================================
+       BRACKET: "Before visit" over beats 1–3
+  ============================================================ -->
+  <!-- Bracket top line -->
+  <path d="M 26 62 L 26 50 L 774 50 L 774 62" 
+        fill="none" stroke="#2a8c8c" stroke-width="1.2" stroke-dasharray="none" opacity="0.45"/>
+  <!-- Bracket label -->
+  <rect x="340" y="34" width="110" height="20" rx="4" fill="white"/>
+  <text x="395" y="48" text-anchor="middle" font-family="Arial" font-size="11" 
+        fill="#2a8c8c" font-weight="600" letter-spacing="0.8" opacity="0.85">BEFORE VISIT</text>
+
+  <!-- ============================================================
+       BEAT 1 — INVITE SENT (small, clean)
+       Card: x=20, y=250, w=148, h=200
+  ============================================================ -->
+  <g filter="url(#shadow-sm)">
+    <rect x="20" y="250" width="148" height="200" rx="12" fill="#ffffff" stroke="#e8eaea" stroke-width="1"/>
+  </g>
+  <!-- Phone device -->
+  <rect x="72" y="268" width="44" height="76" rx="7" fill="#f4f6f6" stroke="#d0d8d8" stroke-width="1"/>
+  <rect x="78" y="274" width="32" height="56" rx="4" fill="#ffffff" stroke="#e0e8e8" stroke-width="0.5"/>
+  <!-- Screen content - notification -->
+  <rect x="81" y="277" width="26" height="4" rx="2" fill="#e0e8e8"/>
+  <rect x="81" y="284" width="18" height="3" rx="1.5" fill="#2a8c8c" opacity="0.5"/>
+  <rect x="81" y="290" width="22" height="3" rx="1.5" fill="#e8eded"/>
+  <rect x="81" y="296" width="16" height="3" rx="1.5" fill="#e8eded"/>
+  <!-- Notification badge -->
+  <circle cx="113" cy="272" r="5" fill="#2a8c8c"/>
+  <text x="113" y="275.5" text-anchor="middle" font-family="Arial" font-size="6" fill="white" font-weight="700">1</text>
+  <!-- Link pill -->
+  <rect x="74" y="310" width="40" height="10" rx="5" fill="#eaf5f5" stroke="#2a8c8c" stroke-width="0.7" opacity="0.8"/>
+  <text x="94" y="318" text-anchor="middle" font-family="Arial" font-size="6.5" fill="#2a8c8c" font-weight="600">secure link</text>
+  <!-- Lock icon small -->
+  <rect x="81" y="323" width="8" height="6" rx="1.5" fill="none" stroke="#b0bcbc" stroke-width="0.8"/>
+  <path d="M83,323 Q85,319 87,323" fill="none" stroke="#b0bcbc" stroke-width="0.8"/>
+  <circle cx="85" cy="325.5" r="1" fill="#b0bcbc"/>
+
+  <!-- Beat 1 label -->
+  <text x="94" y="372" text-anchor="middle" font-family="Arial" font-size="12.5" font-weight="700" fill="#1a3333">Invite sent</text>
+  <text x="94" y="388" text-anchor="middle" font-family="Arial" font-size="10" fill="#7a9090">Patient receives</text>
+  <text x="94" y="401" text-anchor="middle" font-family="Arial" font-size="10" fill="#7a9090">secure pre-visit link.</text>
+
+  <!-- ============================================================
+       CONNECTOR 1→2
+  ============================================================ -->
+  <line x1="170" y1="352" x2="198" y2="352" stroke="#c8d4d4" stroke-width="1" marker-end="url(#arrowGray)"/>
+  <!-- motion tick -->
+  <line x1="180" y1="347" x2="180" y2="357" stroke="#c8d4d4" stroke-width="0.7"/>
+  <line x1="186" y1="347" x2="186" y2="357" stroke="#c8d4d4" stroke-width="0.5"/>
+
+  <!-- ============================================================
+       BEAT 2 — ADAPTIVE INTERVIEW (medium)
+       Card: x=205, y=150, w=238, h=300
+  ============================================================ -->
+  <g filter="url(#shadow-md)">
+    <rect x="205" y="150" width="238" height="300" rx="14" fill="#ffffff" stroke="#dde8e8" stroke-width="1"/>
+  </g>
+  <!-- Person silhouette holding phone -->
+  <!-- Body -->
+  <ellipse cx="276" cy="207" rx="14" ry="14" fill="#e8eef0" stroke="#ccd8d8" stroke-width="0.8"/>
+  <!-- Head/face simple -->
+  <circle cx="276" cy="200" r="7" fill="#d8e4e4" stroke="#c0d0d0" stroke-width="0.8"/>
+  <rect x="264" y="207" width="24" height="28" rx="8" fill="#e8eef0" stroke="#ccd8d8" stroke-width="0.8"/>
+  <!-- Phone in hand -->
+  <rect x="282" y="212" width="20" height="34" rx="4" fill="#f0f6f6" stroke="#c8d8d8" stroke-width="0.8"/>
+  <rect x="285" y="215" width="14" height="24" rx="2" fill="#ffffff" stroke="#dde8e8" stroke-width="0.4"/>
+  <!-- Screen content -->
+  <rect x="287" y="217" width="10" height="2" rx="1" fill="#e0e8e8"/>
+  <rect x="287" y="221" width="7" height="2" rx="1" fill="#2a8c8c" opacity="0.6"/>
+
+  <!-- Chat bubbles -->
+  <!-- Vox bubble (left) -->
+  <rect x="222" y="256" width="118" height="28" rx="8" fill="#f0fafa" stroke="#c8e0e0" stroke-width="0.8"/>
+  <path d="M226,284 L219,290 L232,284" fill="#f0fafa" stroke="#c8e0e0" stroke-width="0.8"/>
+  <text x="232" y="266" font-family="Arial" font-size="8.5" fill="#2a8c8c" font-weight="600">Vox</text>
+  <text x="232" y="278" font-family="Arial" font-size="8" fill="#3d5555">When did it start?</text>
+
+  <!-- Patient bubble (right) -->
+  <rect x="266" y="295" width="128" height="28" rx="8" fill="#f7f7f7" stroke="#e0e4e4" stroke-width="0.8"/>
+  <path d="M386,295 L394,288 L382,295" fill="#f7f7f7" stroke="#e0e4e4" stroke-width="0.8"/>
+  <text x="276" y="305" font-family="Arial" font-size="8.5" fill="#555" font-weight="600">Patient</text>
+  <text x="276" y="317" font-family="Arial" font-size="8" fill="#444">About 5 days ago.</text>
+
+  <!-- Follow-up bubble (Vox) -->
+  <rect x="222" y="330" width="140" height="28" rx="8" fill="#f0fafa" stroke="#c8e0e0" stroke-width="0.8"/>
+  <path d="M226,358 L219,364 L232,358" fill="#f0fafa" stroke="#c8e0e0" stroke-width="0.8"/>
+  <text x="232" y="340" font-family="Arial" font-size="8.5" fill="#2a8c8c" font-weight="600">Vox</text>
+  <text x="232" y="352" font-family="Arial" font-size="8" fill="#3d5555">Any fever or chills?</text>
+
+  <!-- Response chip -->
+  <rect x="313" y="366" width="60" height="16" rx="8" fill="#eaf5f5" stroke="#2a8c8c" stroke-width="0.7"/>
+  <text x="343" y="378" text-anchor="middle" font-family="Arial" font-size="7.5" fill="#2a8c8c" font-weight="600">Yes, last night</text>
+
+  <!-- Subtle wave/orb motif - secondary -->
+  <ellipse cx="390" cy="185" rx="22" ry="22" fill="none" stroke="#2a8c8c" stroke-width="0.6" opacity="0.15"/>
+  <ellipse cx="390" cy="185" rx="14" ry="14" fill="none" stroke="#2a8c8c" stroke-width="0.8" opacity="0.2"/>
+  <circle cx="390" cy="185" r="5" fill="#2a8c8c" opacity="0.12"/>
+  <text x="390" y="228" text-anchor="middle" font-family="Arial" font-size="7.5" fill="#7a9090" font-style="italic" opacity="0.7">listening</text>
+
+  <!-- Beat 2 label -->
+  <text x="324" y="415" text-anchor="middle" font-family="Arial" font-size="13.5" font-weight="700" fill="#1a3333">Adaptive interview</text>
+  <text x="324" y="432" text-anchor="middle" font-family="Arial" font-size="10" fill="#7a9090">Vox asks follow-up questions</text>
+  <text x="324" y="445" text-anchor="middle" font-family="Arial" font-size="10" fill="#7a9090">and captures the story.</text>
+
+  <!-- ============================================================
+       CONNECTOR 2→3
+  ============================================================ -->
+  <line x1

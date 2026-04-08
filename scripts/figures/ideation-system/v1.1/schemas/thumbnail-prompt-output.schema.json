@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designer.health/schemas/thumbnail-prompt-output.schema.json",
+  "title": "Thumbnail Prompt Output",
+  "type": "object",
+  "required": [
+    "thumbnail_prompts"
+  ],
+  "properties": {
+    "thumbnail_prompts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "thumbnail_prompt_id",
+          "source_spatial_spec_id",
+          "source_candidate_id",
+          "generator_target",
+          "prompt_text",
+          "expected_variation_dimension",
+          "whether_copy_is_real_or_placeholder",
+          "whether_images_are_literal_or_abstract",
+          "likely_risk"
+        ],
+        "properties": {
+          "thumbnail_prompt_id": {
+            "type": "string"
+          },
+          "source_spatial_spec_id": {
+            "type": "string"
+          },
+          "source_candidate_id": {
+            "type": "string"
+          },
+          "generator_target": {
+            "type": "string"
+          },
+          "prompt_text": {
+            "type": "string"
+          },
+          "expected_variation_dimension": {
+            "type": "string"
+          },
+          "whether_copy_is_real_or_placeholder": {
+            "type": "string"
+          },
+          "whether_images_are_literal_or_abstract": {
+            "type": "string"
+          },
+          "likely_risk": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

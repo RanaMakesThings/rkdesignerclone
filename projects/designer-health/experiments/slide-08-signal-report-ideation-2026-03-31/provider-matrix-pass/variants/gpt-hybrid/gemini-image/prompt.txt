@@ -1,0 +1,66 @@
+Create one polished 16:9 investor-deck figure for Designer Health slide 8.
+
+This should be one central clinician-facing report sheet on a quiet deck
+background. It should combine a dominant left extraction area, a restrained
+right reasoning rail, and a full-width bottom timeline strip.
+
+Use the attached screenshot only as family reference:
+- preserve the left-side row anatomy
+- preserve the ranked reasoning blocks
+- preserve the calm thin-border clinical look
+- do not keep the source screenshot as two equal cards
+
+Locked direction:
+- one shared white sheet
+- wider left column
+- narrower right reasoning rail
+- bottom timeline strip across full width
+
+Visual requirements:
+- not a dashboard
+- not a fake browser
+- not a pile of floating cards
+- one central artifact with strong hierarchy
+
+Left side should include:
+- social context
+- symptoms
+- key negatives
+- workup / uncertainties
+- row labels, value lines, evidence, and neutral state pills
+
+Right side should include:
+- working or clinical considerations
+- three ranked candidate blocks
+- compact confidence signals
+- tiny typographic reasoning glyphs
+- one suggested next question block
+
+Bottom should include:
+- a simple timeline:
+  - URI symptoms begin
+  - cough develops
+  - yellow sputum noted
+  - unresolved fever / breathing impact
+
+Use the cough case:
+- spouse encouraged evaluation
+- cough
+- cough pattern/frequency
+- worse at night
+- worse lying down
+- scratchy throat
+- yellow sputum
+- hemoptysis absent
+- fever unresolved
+- dyspnea / breathing impact unresolved
+
+Use three considerations:
+- community-acquired pneumonia
+- acute bronchitis
+- post-viral cough
+
+Important for image generation:
+- prioritize overall artifact composition and timeline integration
+- if text fidelity becomes unreliable, preserve the section hierarchy, row
+  geometry, and bottom strip concept

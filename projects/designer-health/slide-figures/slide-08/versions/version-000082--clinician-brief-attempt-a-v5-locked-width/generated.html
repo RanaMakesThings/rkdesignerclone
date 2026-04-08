@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The clinician starts from a structured brief.</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --paper: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #4f46e5;
+      --accent-2: #0f766e;
+      --green: #166534;
+      --green-soft: rgba(34, 197, 94, 0.12);
+      --amber: #b45309;
+      --amber-soft: rgba(245, 158, 11, 0.12);
+      --red: #b91c1c;
+      --red-soft: rgba(239, 68, 68, 0.12);
+      --slate-soft: rgba(148, 163, 184, 0.16);
+      --border: rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 30px 80px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      width: 1920px;
+      height: 1080px;
+      margin: 0;
+      padding: 0;
+      color: var(--text);
+      background: var(--paper);
+      overflow: hidden;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      padding: 48px 64px 28px;
+      background: var(--paper);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,250,252,0.58) 100%),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0,
+          transparent 158px,
+          rgba(15,23,42,0.018) 158px,
+          rgba(15,23,42,0.018) 159px
+        );
+      pointer-events: none;
+    }
+
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 296px 188px 52px 188px;
+      border-radius: 32px;
+      border: 1px solid rgba(15,23,42,0.05);
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .slide-header {
+      max-width: 1220px;
+      margin-bottom: 26px;
+    }
+
+    .slide-title {
+      margin: 0;
+      font-family: 'Montserrat', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 58px;
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .slide-subtitle {
+      margin: 12px 0 0;
+      font-family: 'Montserrat', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 26px;
+      line-height: 1.36;
+      letter-spacing: -0.022em;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    .artifact-wrap {
+      min-height: 0;
+      display: grid;
+      place-items: start center;
+    }
+
+    .artifact {
+      width: auto;
+      height: 100%;
+      max-height: 866px;
+      max-width: 1540px;
+      aspect-ratio: 1540 / 866;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      background: linear-gradient(180deg, #fcfdff 0%, #f8fafc 100%);
+      box-shadow: 0 18px 44px rgba(15, 23, 42, 0.06);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    .hero {
+      position: relative;
+      padding: 22px 22px 16px;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .brand-float {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+
+    .brand-float .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #6366f1, #0f766e);
+    }
+
+    .hero-title {
+      margin: 0;
+      font-size: 43px;
+      line-height: 0.94;
+      letter-spacing: -0.045em;
+      padding-right: 220px;
+    }
+
+    .main {
+      padding: 16px 22px 14px;
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 16px;
+      min-height: 0;
+    }
+
+    .stack {
+      display: grid;
+      gap: 12px;
+      min-height: 0;
+    }
+
+    .panel,
+    .dx-panel {
+      background: rgba(255,255,255,0.84);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+      min-height: 0;
+    }
+
+    .dx-panel {
+      background: linear-gradient(180deg, rgba(79,70,229,0.06), rgba(255,255,255,0.94));
+      border-color: rgba(79,70,229,0.14);
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .panel h3,
+    .dx-panel h3 {
+      margin: 0 0 12px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #64748b;
+      font-weight: 800;
+    }
+
+    .story {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.62;
+      color: #1e293b;
+    }
+
+    .context-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .mini-card {
+      border: 1px solid #e8edf5;
+      border-radius: 18px;
+      padding: 14px;
+      background: rgba(255,255,255,0.9);
+    }
+
+    .mini-card h4 {
+      margin: 0 0 8px;
+      font-size: 11.25px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #64748b;
+      font-weight: 800;
+    }
+
+    .micro-list {
+      margin: 0;
+      padding-left: 16px;
+      color: #334155;
+      font-size: 14px;
+      line-height: 1.45;
+      display: grid;
+      gap: 6px;
+    }
+
+    .facts-stack {
+      display: grid;
+      gap: 10px;
+    }
+
+    .fact-card {
+      border: 1px solid #e8edf5;
+      border-radius: 18px;
+      padding: 14px;
+      background: rgba(255,255,255,0.88);
+    }
+
+    .fact-card h4 {
+      margin: 0 0 9px;
+      font-size: 11.25px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #64748b;
+      font-weight: 800;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #334155;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+    }
+
+    .tag.positive { background: var(--green-soft); color: var(--green); border-color: transparent; }
+    .tag.negative { background: var(--red-soft); color: var(--red); border-color: transparent; }
+    .tag.pending { background: #eef2ff; color: #4338ca; border-color: transparent; }
+
+    .dx-stack {
+      display: grid;
+      gap: 12px;
+      min-height: 0;
+    }
+
+    .dx-secondary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .dx-secondary-grid .dx-card {
+      height: 100%;
+      min-height: 208px;
+      padding: 18px;
+    }
+
+    .dx-secondary-grid .dx-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      column-gap: 12px;
+      row-gap: 0;
+      margin-bottom: 10px;
+    }
+
+    .dx-secondary-grid .dx-top > div {
+      display: contents;
+    }
+
+    .dx-secondary-grid .dx-title {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .dx-secondary-grid .score {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: start;
+    }
+
+    .dx-secondary-grid .dx-sub {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      margin-top: 10px;
+    }
+
+    .dx-card {
+      border: 1px solid #e6ebf2;
+      border-radius: 18px;
+      padding: 17px;
+      background: rgba(255,255,255,0.94);
+    }
+
+    .dx-card.primary {
+      background: rgba(255,255,255,0.97);
+      border-color: rgba(79,70,229,0.16);
+    }
+
+    .dx-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .dx-title {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .dx-title.secondary {
+      font-size: 19.5px;
+    }
+
+    .dx-sub {
+      margin: 6px 0 0;
+      font-size: 15px;
+      line-height: 1.52;
+      color: #475569;
+    }
+
+    .score {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 82px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 11.25px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+
+    .score.high { background: var(--green-soft); color: var(--green); }
+    .score.medium { background: var(--amber-soft); color: var(--amber); }
+    .score.watch { background: var(--slate-soft); color: #475569; }
+
+    .dx-rails {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .rail {
+      border: 1px solid #edf2f7;
+      border-radius: 15px;
+      padding: 13px;
+      background: rgba(255,255,255,0.9);
+    }
+
+    .rail h4 {
+      margin: 0 0 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #64748b;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+
+    .icon.support { background: var(--green-soft); color: var(--green); }
+    .icon.against { background: var(--red-soft); color: var(--red); }
+    .icon.unclear { background: #e2e8f0; color: #475569; }
+
+    .bullet-list {
+      margin: 0;
+      padding-left: 17px;
+      color: #334155;
+      font-size: 13.75px;
+      line-height: 1.42;
+      display: grid;
+      gap: 5px;
+    }
+
+    .mini-note {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #eef2f7;
+      font-size: 13.5px;
+      line-height: 1.52;
+      color: #475569;
+    }
+
+    .timeline-footer {
+      padding: 0 22px 18px;
+    }
+
+    .timeline-strip {
+      background: linear-gradient(180deg, rgba(15,118,110,0.05), rgba(255,255,255,0.94));
+      border: 1px solid rgba(15,118,110,0.10);
+      border-radius: 16px;
+      padding: 8px 10px;
+    }
+
+    .timeline-horizontal {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 7px;
+      align-items: stretch;
+    }
+
+    .time-node {
+      position: relative;
+      border: 1px solid #dfe7f0;
+      border-radius: 13px;
+      padding: 8px 10px;
+      background: rgba(255,255,255,0.92);
+      min-height: 0;
+      line-height: 1.25;
+    }
+
+    .time-node.today {
+      background: linear-gradient(180deg, rgba(79,70,229,0.10), rgba(255,255,255,0.96));
+      border-color: rgba(79,70,229,0.24);
+      box-shadow: inset 0 0 0 1px rgba(79,70,229,0.04);
+    }
+
+    .time-node.today .time-label {
+      color: #3730a3;
+    }
+
+    .time-node::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -7px;
+      width: 7px;
+      height: 1px;
+      background: #cfd8e3;
+      transform: translateY(-50%);
+    }
+
+    .time-node:last-child::after { display: none; }
+
+    .time-label,
+    .time-copy {
+      display: inline;
+      font-size: 12.25px;
+      line-height: 1.32;
+    }
+
+    .time-label {
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.01em;
+      margin-right: 4px;
+    }
+
+    .time-copy {
+      color: #334155;
+    }
+
+    @media (max-width: 1180px) {
+      .main,
+      .context-grid,
+      .dx-rails,
+      .dx-secondary-grid,
+      .timeline-horizontal {
+        grid-template-columns: 1fr;
+      }
+      .time-node::after { display: none; }
+      .hero-title { padding-right: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="content">
+      <header class="slide-header">
+        <h1 class="slide-title">The clinician starts from a structured brief.</h1>
+        <p class="slide-subtitle">Scan, verify, decide.</p>
+      </header>
+
+      <div class="artifact-wrap">
+        <div class="artifact">
+        <div class="hero">
+          <div class="brand-float"><span class="dot"></span> Vox Clinician Summary</div>
+          <h1 class="hero-title">Chief complaint: Acute cough — 5 days</h1>
+        </div>
+
+        <div class="main">
+          <div class="stack">
+            <div class="panel">
+              <h3>Clinical story</h3>
+              <p class="story">A scratchy throat was followed by about five days of intermittent cough, sometimes in bursts, with yellow sputum that is more noticeable in the mornings. Symptoms are worse at night and when lying down. The patient reports mild shortness of breath with exertion and wheezing, with fever to 101.8 last night.</p>
+            </div>
+
+            <div class="context-grid">
+              <div class="mini-card">
+                <h4>Medications</h4>
+                <ul class="micro-list">
+                  <li>Albuterol inhaler as needed</li>
+                  <li>Acetaminophen overnight for fever</li>
+                </ul>
+              </div>
+
+              <div class="mini-card">
+                <h4>Pertinent PMH / PSH / FH / SH</h4>
+                <ul class="micro-list">
+                  <li>History of asthma</li>
+                  <li>No relevant surgical history</li>
+                  <li>Family history noncontributory</li>
+                  <li>No smoking reported</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="facts-stack">
+              <div class="fact-card">
+                <h4>Pertinent positives</h4>
+                <div class="tags">
+                  <span class="tag positive">Cough</span>
+                  <span class="tag positive">Yellow sputum</span>
+                  <span class="tag positive">Wheeze</span>
+                  <span class="tag positive">Mild exertional dyspnea</span>
+                  <span class="tag positive">Fever 101.8</span>
+                </div>
+              </div>
+
+              <div class="fact-card">
+                <h4>Pertinent negatives</h4>
+                <div class="tags">
+                  <span class="tag negative">No hemoptysis reported</span>
+                  <span class="tag negative">No chest pain reported</span>
+                </div>
+              </div>
+
+              <div class="fact-card">
+                <h4>Still useful to clarify</h4>
+                <div class="tags">
+                  <span class="tag pending">Current breathing limitation</span>
+                  <span class="tag pending">Progression vs improvement</span>
+                  <span class="tag pending">Recent sick contacts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dx-panel">
+            <h3>Differential diagnosis</h3>
+            <div class="dx-stack">
+              <div class="dx-card primary">
+                <div class="dx-top">
+                  <div>
+                    <h4 class="dx-title">Acute bronchitis / viral post-infectious cough</h4>
+                    <p class="dx-sub">The overall story still fits a viral or post-infectious lower respiratory process best, but the dyspnea and wheeze prevent a simplistic read.</p>
+                  </div>
+                  <span class="score high">High</span>
+                </div>
+
+                <div class="dx-rails">
+                  <div class="rail">
+                    <h4><span class="icon support">✓</span> Supports</h4>
+                    <ul class="bullet-list">
+                      <li>Scratchy throat preceded cough</li>
+                      <li>~5-day course</li>
+                      <li>Yellow sputum</li>
+                      <li>Worse at night / lying down</li>
+                    </ul>
+                  </div>
+                  <div class="rail">
+                    <h4><span class="icon against">–</span> Against</h4>
+                    <ul class="bullet-list">
+                      <li>Exertional dyspnea</li>
+                      <li>Fever to 101.8 raises concern beyond a trivial URI</li>
+                    </ul>
+                  </div>
+                  <div class="rail">
+                    <h4><span class="icon unclear">?</span> Clarify</h4>
+                    <ul class="bullet-list">
+                      <li>Current breathing limitation</li>
+                      <li>Progression vs improvement</li>
+                      <li>Underlying asthma severity</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dx-secondary-grid">
+                <div class="dx-card">
+                  <div class="dx-top">
+                    <div>
+                      <h4 class="dx-title secondary">Community-acquired pneumonia</h4>
+                      <p class="dx-sub">Still relevant because of fever, sputum, and dyspnea, especially if symptoms are worsening or functional limitation is increasing.</p>
+                    </div>
+                    <span class="score medium">Medium</span>
+                  </div>
+                  <div class="mini-note">Fever, productive cough, and respiratory symptoms keep pneumonia in consideration until progression and objective findings are clearer.</div>
+                </div>
+
+                <div class="dx-card">
+                  <div class="dx-top">
+                    <div>
+                      <h4 class="dx-title secondary">Obstructive airway exacerbation</h4>
+                      <p class="dx-sub">Wheeze and dyspnea make an obstructive process plausible, especially with a history of asthma and rescue inhaler use.</p>
+                    </div>
+                    <span class="score watch">Watch</span>
+                  </div>
+                  <div class="mini-note">Baseline asthma control, recent trigger exposure, and current inhaler response would determine whether this branch should move up.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-footer">
+          <div class="timeline-strip">
+            <div class="timeline-horizontal">
+              <div class="time-node"><span class="time-label">Day 0:</span><span class="time-copy">Scratchy throat begins.</span></div>
+              <div class="time-node"><span class="time-label">Day 1:</span><span class="time-copy">Cough develops in intermittent bursts.</span></div>
+              <div class="time-node"><span class="time-label">Days 2–3:</span><span class="time-copy">Yellow sputum appears, more noticeable in the mornings.</span></div>
+              <div class="time-node"><span class="time-label">Day 4:</span><span class="time-copy">Mild exertional dyspnea and wheeze develop.</span></div>
+              <div class="time-node today"><span class="time-label">Day 5 (Today):</span><span class="time-copy">Fever 101.8; symptoms worse at night / lying down.</span></div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

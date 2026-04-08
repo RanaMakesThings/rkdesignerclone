@@ -1,0 +1,18 @@
+Generate a self-contained 1920x1080 HTML pitch-deck slide mockup for Vox.
+
+Goal:
+Make the mechanism easy to understand by first showing how one visit changes, then showing the day-level capacity effect.
+
+Requirements:
+- Single-file HTML
+- Inline CSS and SVG only
+- Elegant investor-deck visual quality
+- Headline: More efficient visits will increase supply.
+- Subheader: Small per-visit gains compound.
+- No app UI
+
+Structure this variant in two beats:
+1. A large single-visit before/after comparison that shows only story reconstruction shrinking, while physical exam and counseling remain protected.
+2. A bottom-level scale-up result showing that repeated across five visits, the recovered time creates room for a sixth visit.
+
+It should feel more explanatory than the current slide, but still polished and concise.

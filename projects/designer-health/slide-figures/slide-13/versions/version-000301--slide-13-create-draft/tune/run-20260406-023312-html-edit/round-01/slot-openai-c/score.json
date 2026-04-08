@@ -1,0 +1,19 @@
+{
+  "class": "blocked",
+  "numeric": 0.05,
+  "status": "blocked",
+  "outcome": "block",
+  "reason": "Regression review found a concrete blocker.",
+  "blockers": [
+    "A visible broken-image/placeholder box remains in the bottom-right corner.",
+    "The bottom use-of-funds ribbon is clipped/overflowing, with copy cut off and intruding into other content.",
+    "The footer shell has drifted: the official Designer logo/footer treatment is missing and the bottom-right area is broken.",
+    "Left hero card stat row ('18 / 20 / months of') is clipped and overlaps with the use-of-funds ribbon, making required copy illegible",
+    "Use-of-funds ribbon text is cut off at the bottom of the card and not fully readable",
+    "Footer Designer Health logo is broken — replaced by an unresolved image stub/placeholder box",
+    "Master card overflows the slide canvas — Validate milestone card and bottom ribbon are partially outside the visible slide area"
+  ],
+  "warnings": [
+    "Footer Logo drifted beyond semantic-stable threshold."
+  ]
+}

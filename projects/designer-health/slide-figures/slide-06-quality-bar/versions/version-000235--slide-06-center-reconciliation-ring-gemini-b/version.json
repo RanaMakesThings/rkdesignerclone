@@ -1,0 +1,12 @@
+{
+  "id": "version-000235",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000235--slide-06-center-reconciliation-ring-gemini-b",
+  "label": "slide-06-center-reconciliation-ring-gemini-b",
+  "status": "archived",
+  "createdAt": "2026-04-03T20:06:37.342Z",
+  "sourceKind": "fine-tune-draft",
+  "baseVersionId": "version-000222",
+  "legacySourcePaths": []
+}

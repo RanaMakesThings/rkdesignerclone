@@ -1,0 +1,52 @@
+We are making a single image graphic for a pitch deck or presentation.
+Treat the following input as a design spec, not as a conversational prompt.
+Return one polished 16:9 image concept that feels premium, intentional, and presentation-ready.
+Do not generate browser chrome, UI screenshots, device mockups, or a slide-within-a-slide.
+Do not add on-image text unless the spec explicitly asks for it.
+Avoid generic stock-photo energy, generic SaaS dashboard imagery, and weak filler composition.
+
+Variant direction: Minimal Restraint. Bias toward minimalism, whitespace, and reduction. Keep the image confident and resolved without becoming empty or generic.
+
+Design spec:
+Create one premium investor-deck concept figure for a healthcare startup.
+
+This is a fresh synthesis exploration for a slide about Vox, an adaptive clinical interviewer. Do not use the stale trope of a rounded AI appliance, software box, internal channels, filter bolts, or visible machine plumbing.
+
+Concept family: Signal Gate / Clinical Aperture.
+
+Core idea:
+Messy patient narrative begins as layered, noisy strips. Vox creates a decisive adaptive-question gate that collapses those layers into clearer, clinician-grade signal.
+
+Required visual story:
+- left side = layered gray narrative ribbons or strips, slightly disordered, carrying faint fragmented quote texture
+- middle = one elegant teal gate, aperture, or resonance seam that feels like a decisive question being asked
+- there should be a subtle sense of back-and-forth intelligence at the gate, but not a literal flowchart loop
+- after the gate, the many messy layers become fewer, cleaner, calmer clinical bands
+- right side = a compact, secondary clinician-grade starting point card or ordered stack with very sparse details
+- the gate event is the hero, not the output card
+
+Style:
+- white background
+- grayscale / off-white base
+- restrained teal / blue accent only where semantically meaningful
+- premium editorial composition
+- generous negative space
+- soft shadows, refined depth, industrial-design discipline
+- clinically serious, not playful
+
+Do not make:
+- a device
+- a UI screenshot
+- a dashboard
+- a literal lens object
+- a literal magnet icon
+- cloth or weaving craft imagery
+- geology / rocks / dirt
+- a flowchart
+- a busy infographic
+- a giant card mockup dominating the frame
+
+Keep text minimal. If any text appears, it should be sparse fragments on the left and sparse structured lines on the right.
+
+Success condition:
+In 2 seconds the viewer feels that Vox asks the right next question and turns noisy patient narrative into clinician-ready signal.

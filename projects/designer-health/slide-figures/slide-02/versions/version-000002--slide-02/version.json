@@ -1,0 +1,26 @@
+{
+  "id": "version-000002",
+  "slideId": "slide-02",
+  "slideDir": "projects/designer-health/slide-figures/slide-02",
+  "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000002--slide-02",
+  "label": "slide-02",
+  "status": "current",
+  "createdAt": "2026-03-31T17:04:29.388Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-02/anthropic-review",
+    "projects/designer-health/slide-figures/slide-02/codex-review.md",
+    "projects/designer-health/slide-figures/slide-02/coverage.json",
+    "projects/designer-health/slide-figures/slide-02/exploration-review-2026-03-30.md",
+    "projects/designer-health/slide-figures/slide-02/figure.html",
+    "projects/designer-health/slide-figures/slide-02/figure.png",
+    "projects/designer-health/slide-figures/slide-02/figure.svg",
+    "projects/designer-health/slide-figures/slide-02/gemini-html",
+    "projects/designer-health/slide-figures/slide-02/gemini-html-diptych",
+    "projects/designer-health/slide-figures/slide-02/gemini-image",
+    "projects/designer-health/slide-figures/slide-02/gemini-image-diptych",
+    "projects/designer-health/slide-figures/slide-02/meta.json",
+    "projects/designer-health/slide-figures/slide-02/spec.json"
+  ]
+}

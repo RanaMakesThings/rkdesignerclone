@@ -1,0 +1,14 @@
+{
+  "id": "version-000060",
+  "slideId": "slide-03",
+  "slideDir": "projects/designer-health/slide-figures/slide-03",
+  "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000060--07-user-directed-model-pass",
+  "label": "07-user-directed-model-pass",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:05:30.325Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-03/variants/07-user-directed-model-pass"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-proof-tiles-pd-template-1-phone-scheduling-screen",
+    "family": "proof_tiles",
+    "deckId": "pd-template-1",
+    "theme": "pd-template-1",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "Demand is outpacing clinical capacity.",
+    "subtitle": "",
+    "chips": [],
+    "footnote": "[1] AMN/Merritt Hawkins physician appointment wait-time survey. [2] CDC/NCHS delayed-care measure."
+  },
+  "constraints": {
+    "figureJob": "Test a more contemporary hybrid direction by framing a real phone scheduling image as the central object.",
+    "focalPoint": "The phone-screen object first, then the proof metrics.",
+    "layout": "Header top left, one centered device-style image frame above two proof tiles.",
+    "big": [
+      "The phone-screen object",
+      "The two proof metrics"
+    ],
+    "quiet": [
+      "Eyebrows",
+      "Support copy",
+      "Footnote"
+    ],
+    "accentTargets": [
+      "none"
+    ],
+    "forbidden": [
+      "bright app-store visual styling",
+      "fake product UI outside the selected image"
+    ],
+    "semanticGuards": []
+  },
+  "copyPolicy": {
+    "locked": [
+      "Demand is outpacing clinical capacity.",
+      "~1 month",
+      "10.6%"
+    ],
+    "preferred": [],
+    "optional": [],
+    "forbidden": []
+  },
+  "media": {
+    "slots": [
+      {
+        "id": "device-photo",
+        "label": "Phone scheduling screen",
+        "query": "smartphone medical app scheduling",
+        "orientation": "portrait",
+        "maxCandidates": 4,
+        "placementNote": "Use a portrait phone image that already contains a health/scheduling surface."
+      }
+    ],
+    "selection": [
+      {
+        "slotId": "device-photo",
+        "candidateId": "5712677",
+        "placement": "device",
+        "treatment": "soft",
+        "objectPosition": "center center"
+      }
+    ]
+  },
+  "body": {
+    "motif": "phone-and-scheduling-screen",
+    "tiles": [
+      {
+        "eyebrow": "Access",
+        "metric": "~1 month",
+        "detail": "Average wait for a new doctor appointment",
+        "kicker": "Up 19% in three years [1]",
+        "graphic": {
+          "kind": ""
+        }
+      },
+      {
+        "eyebrow": "Deferred care",
+        "metric": "10.6%",
+        "detail": "Adults delayed or did not get care because no appointment was available when needed [2]",
+        "kicker": "",
+        "graphic": {
+          "kind": ""
+        }
+      }
+    ]
+  },
+  "trace": [
+    {
+      "excerpt": "Phone and Scheduling Screen",
+      "targetPath": "body.motif",
+      "ruleType": "body",
+      "note": "Use a contemporary phone-screen concept as a hybrid proof direction."
+    }
+  ]
+}

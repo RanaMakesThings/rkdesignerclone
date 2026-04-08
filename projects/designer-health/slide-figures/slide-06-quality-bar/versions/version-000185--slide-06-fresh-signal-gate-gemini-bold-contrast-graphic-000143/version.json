@@ -1,0 +1,25 @@
+{
+  "id": "version-000185",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000185--slide-06-fresh-signal-gate-gemini-bold-contrast-graphic-000143",
+  "label": "slide-06-fresh-signal-gate-gemini-bold-contrast-graphic-000143",
+  "status": "archived",
+  "createdAt": "2026-04-03T04:37:04.385Z",
+  "sourceKind": "presentation-image-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/presentation-images/vox-slide6-fresh-signal-gate-synthesis-2026-04-03/gemini/version-02--bold-contrast",
+    "output/figures/presentation-images/vox-slide6-fresh-signal-gate-synthesis-2026-04-03/gemini/version-02--bold-contrast/image-01.jpg"
+  ],
+  "runId": "graphic-batch-000030",
+  "attempt": 2,
+  "sourceGraphicId": "graphic-000143",
+  "sourceBatchId": "graphic-batch-000030",
+  "sourceBatchSlug": "vox-slide6-fresh-signal-gate-synthesis-2026-04-03",
+  "sourceProvider": "gemini",
+  "sourceVariantId": "v02-bold",
+  "sourceVariantLabel": "Bold Contrast",
+  "sourcePath": "output/figures/presentation-images/vox-slide6-fresh-signal-gate-synthesis-2026-04-03/gemini/version-02--bold-contrast",
+  "sourceImagePath": "output/figures/presentation-images/vox-slide6-fresh-signal-gate-synthesis-2026-04-03/gemini/version-02--bold-contrast/image-01.jpg"
+}

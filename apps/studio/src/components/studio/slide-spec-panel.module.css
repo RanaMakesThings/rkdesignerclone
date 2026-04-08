@@ -1,0 +1,369 @@
+.section {
+  gap: 18px;
+  padding: 24px 28px 28px;
+  border-radius: 28px;
+  border-color: rgba(21, 44, 39, 0.12);
+  background:
+    radial-gradient(circle at top left, rgba(83, 156, 140, 0.13), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(246, 248, 243, 0.96));
+  box-shadow: 0 24px 60px rgba(17, 32, 29, 0.08);
+}
+
+.sectionHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.sectionCopy {
+  display: grid;
+  gap: 8px;
+  max-width: 66ch;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: clamp(1.2rem, 1.15rem + 0.35vw, 1.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.sectionNote {
+  margin: 0;
+  color: rgba(21, 44, 39, 0.68);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.editorStack {
+  display: grid;
+  gap: 18px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.toolbarMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  color: rgba(21, 44, 39, 0.62);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.toolbarActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.filePill,
+.statePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 30px;
+  padding: 0 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(83, 156, 140, 0.18);
+  background: rgba(255, 255, 255, 0.82);
+  color: rgba(21, 44, 39, 0.72);
+}
+
+.filePill {
+  max-width: min(320px, 100%);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.statePillDirty {
+  border-color: rgba(168, 122, 25, 0.22);
+  background: rgba(255, 245, 224, 0.9);
+  color: #7a5711;
+}
+
+.statePillSaved {
+  border-color: rgba(55, 126, 109, 0.2);
+  background: rgba(232, 247, 241, 0.92);
+  color: #236453;
+}
+
+.saveButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(36, 93, 84, 0.14);
+  background: linear-gradient(135deg, #1f6b5f, #245d54);
+  color: #f8fbf9;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    opacity 160ms ease;
+}
+
+.saveButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 24px rgba(18, 58, 52, 0.16);
+}
+
+.saveButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.dropZone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  border: 1px dashed rgba(36, 93, 84, 0.18);
+  background:
+    radial-gradient(circle at top left, rgba(83, 156, 140, 0.16), transparent 48%),
+    rgba(255, 255, 255, 0.86);
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.dropZoneActive {
+  border-color: rgba(36, 93, 84, 0.38);
+  background:
+    radial-gradient(circle at top left, rgba(83, 156, 140, 0.18), transparent 52%),
+    rgba(245, 250, 247, 0.96);
+  transform: translateY(-1px);
+}
+
+.dropZoneCopy {
+  margin: 6px 0 0;
+  color: rgba(21, 44, 39, 0.66);
+  line-height: 1.55;
+}
+
+.fileInput {
+  display: none;
+}
+
+.workbench {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+  gap: 18px;
+}
+
+.pane {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.paneHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.paneHead p {
+  margin: 0;
+}
+
+.paneHead span {
+  color: rgba(21, 44, 39, 0.62);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.editor {
+  min-height: 26rem;
+  width: 100%;
+  padding: 18px 20px;
+  border-radius: 22px;
+  border: 1px solid rgba(21, 44, 39, 0.14);
+  background: rgba(252, 253, 252, 0.98);
+  color: rgba(21, 44, 39, 0.92);
+  font: 500 0.95rem/1.62 "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono",
+    Menlo, monospace;
+  resize: vertical;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.52),
+    0 16px 30px rgba(18, 34, 30, 0.05);
+}
+
+.editor:focus-visible {
+  outline: 2px solid rgba(83, 156, 140, 0.34);
+  outline-offset: 2px;
+}
+
+.preview {
+  min-height: 26rem;
+  padding: 18px 20px;
+  border-radius: 22px;
+  border: 1px solid rgba(21, 44, 39, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 245, 0.94));
+  overflow-y: auto;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.62);
+}
+
+.readFrame {
+  padding: 24px 26px 28px;
+  border-radius: 24px;
+  border: 1px solid rgba(21, 44, 39, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(249, 250, 246, 0.94));
+}
+
+.collapsedState {
+  display: flex;
+  align-items: center;
+  min-height: 96px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  border: 1px dashed rgba(21, 44, 39, 0.16);
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.collapsedState p {
+  margin: 0;
+  color: rgba(21, 44, 39, 0.66);
+  line-height: 1.6;
+}
+
+.readPreview,
+.editorPreview,
+.lightboxPreview {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.readPreview {
+  max-width: 78ch;
+  font-size: 1.02rem;
+  line-height: 1.72;
+}
+
+.readPreview :global(h3),
+.editorPreview :global(h3),
+.lightboxPreview :global(h3) {
+  letter-spacing: 0.16em;
+}
+
+.readPreview :global(h3) {
+  margin-top: 1.25rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.8rem;
+}
+
+.readPreview :global(h4) {
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  font-size: 1.08rem;
+}
+
+.readPreview :global(p) {
+  margin-bottom: 0.8rem;
+}
+
+.readPreview :global(ul),
+.readPreview :global(ol) {
+  margin: 0.25rem 0 1rem;
+  padding-left: 1.3rem;
+}
+
+.readPreview :global(li) {
+  margin-bottom: 0.45rem;
+}
+
+.editorPreview {
+  font-size: 0.96rem;
+  line-height: 1.64;
+}
+
+.lightboxPreview {
+  font-size: 1rem;
+  line-height: 1.66;
+}
+
+.emptyState {
+  margin: 0;
+  color: rgba(21, 44, 39, 0.6);
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .workbench {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHead {
+    display: grid;
+  }
+
+  .actions {
+    justify-content: flex-start;
+  }
+
+  .paneHead {
+    display: grid;
+  }
+
+  .paneHead span {
+    text-align: left;
+  }
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 20px 20px 22px;
+  }
+
+  .dropZone,
+  .toolbar {
+    display: grid;
+  }
+
+  .toolbarActions {
+    width: 100%;
+  }
+
+  .toolbarActions > * {
+    flex: 1 1 0;
+  }
+
+  .readFrame,
+  .preview {
+    padding: 16px;
+  }
+
+  .readPreview {
+    font-size: 0.98rem;
+  }
+}

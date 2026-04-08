@@ -1,0 +1,9 @@
+Use case: background-extraction
+Asset type: isolated pitch-deck figure element for slide reconstruction
+Primary request: return the attached asset almost exactly as-is, but cleaner and flatter. Keep the same phone, secure-link card, bottom baseline, and centered step marker 1.
+Input images: Image 1: exact composition reference from slide 7 version 000125
+Style/medium: same grayscale editorial illustration style as the reference
+Composition/framing: same crop and proportions, keep the full circle visible, preserve the rounded panel shape, preserve the line through the 1 marker exactly, do not add any second marker bubble or extra badge
+Lighting/mood: flat grayscale with restrained teal on the lock badge only, no drop shadow, no halo, no soft cast shadow under the phone or card
+Constraints: do not redesign the layout, do not change the secure-link text, keep all edges crisp, keep the surrounding background plain white and simple so only the peripheral white can be removed afterward
+Avoid: extra number bubble, checkerboard transparency patterns, heavy outer frame, glow, shadow, gradient vignette, extra text, changed line geometry, cut-off circle, artifacts

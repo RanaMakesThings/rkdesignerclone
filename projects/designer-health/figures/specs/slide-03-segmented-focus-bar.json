@@ -1,0 +1,130 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-03-segmented-focus-bar",
+    "family": "segmented_focus_bar",
+    "deckId": "vox-pd-v1",
+    "theme": "vox",
+    "mode": "full-slide"
+  },
+  "chrome": {
+    "title": "More efficient visits will increase supply.",
+    "subtitle": "",
+    "chips": [
+      "Every minute matters",
+      "Small per-visit gains compound"
+    ],
+    "footnote": "Conceptual allocation only. This is not a time-and-motion study."
+  },
+  "constraints": {
+    "figureJob": "Make history feel like the safest place to recover minutes inside a visit.",
+    "focalPoint": "The highlighted history reconstruction segment.",
+    "layout": "Header at top, two chips beneath it, one long horizontal bar centered, callout attached on the right.",
+    "big": [
+      "The bar",
+      "The history segment",
+      "The callout title and bullets"
+    ],
+    "quiet": [
+      "The Typical visit label",
+      "Non-history segment labels",
+      "The footnote"
+    ],
+    "accentTargets": [
+      "History reconstruction segment",
+      "Callout border"
+    ],
+    "forbidden": [
+      "time-and-motion",
+      "overly precise"
+    ],
+    "semanticGuards": [
+      "avoid_exact_time_claim",
+      "focused_segment_not_largest",
+      "focus_segment_reasonable_share"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "More efficient visits will increase supply.",
+      "History reconstruction",
+      "Typical visit"
+    ],
+    "preferred": [
+      "Why this matters",
+      "Most variable minutes of the visit",
+      "Best target for upstream prep without losing quality",
+      "Most amenable to automation"
+    ],
+    "optional": [],
+    "forbidden": [
+      "20-minute visit"
+    ]
+  },
+  "body": {
+    "barLabel": "Typical visit",
+    "segments": [
+      {
+        "label": "History reconstruction",
+        "width": 31,
+        "role": "focus"
+      },
+      {
+        "label": "Decisions + counseling",
+        "width": 29,
+        "role": "neutral"
+      },
+      {
+        "label": "Everything else",
+        "width": 40,
+        "role": "quiet"
+      }
+    ],
+    "callout": {
+      "title": "Why this matters",
+      "bullets": [
+        "Most variable minutes of the visit",
+        "Best target for upstream prep without losing quality",
+        "Most amenable to automation"
+      ]
+    }
+  },
+  "trace": [
+    {
+      "excerpt": "More efficient visits will increase supply.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Use the proposed header verbatim."
+    },
+    {
+      "excerpt": "Introduce the operational lever: if you make visits more efficient, you create supply.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Anchor the figure around reclaiming safe minutes."
+    },
+    {
+      "excerpt": "One clean visit-duration bar with the history segment highlighted.",
+      "targetPath": "body.segments",
+      "ruleType": "body",
+      "note": "Map the slide to the segmented focus bar family."
+    },
+    {
+      "excerpt": "The history segment should be visually substantial, but not so large that it looks exaggerated.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "Treat history as focal without making it dominant."
+    },
+    {
+      "excerpt": "Attach one callout box directly to the history segment, ideally on the right.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Lock callout placement and attachment."
+    },
+    {
+      "excerpt": "Do not annotate it with too many numbers or secondary labels.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Keep the bar conceptual and label-driven."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+Create one polished 16:9 investor-deck figure image.
+
+This is a market-positioning slide, not an illustration scene.
+Use typography, simple lines, dots, bars, and whitespace instead of photos or
+literal scenes.
+Do not make it look like a consulting matrix or a generic SaaS comparison.
+
+Use this exact on-slide copy:
+
+Headline:
+AI has traction after the visit. The visit itself is still thinly served.
+
+Left territory kicker:
+AI impact after the visit
+
+Left territory statement:
+Ambient scribes validate clinician buy-in for AI assistance.
+
+Left territory labels:
+ambient scribe
+note generation
+documentation support
+clerical relief
+
+Right territory kicker:
+AI impact during the visit
+
+Right territory statement:
+Few tools actually change how the encounter is conducted. Vox does.
+
+Right territory field:
+one blue VOX marker and at most one or two faint ghost markers
+
+Required visual read:
+- left side should feel denser, darker, and already occupied
+- right side should feel larger, calmer, and visibly thinly served
+- density itself should make the argument obvious
+- the slide should feel premium, editorial, and sharp
+
+Style:
+- white or warm-white background
+- grayscale base
+- one restrained blue accent
+- clean typography
+- intentional whitespace
+- abstract market field, not illustration

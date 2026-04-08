@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Vox Investor Deck Slide</title>
+<style>
+  :root{
+    --bg:#f7f8f7;
+    --ink:#111827;
+    --muted:#4b5563;
+    --muted2:#8a93a3;
+    --line:#d8e1ea;
+    --line2:#cdd7e4;
+    --teal:#2c9597;
+    --teal-soft:#dff3f0;
+    --teal-softer:#edf8f6;
+    --card:#ffffff;
+    --off:#fbfcfd;
+    --shadow:0 18px 38px rgba(28,46,68,.10), 0 4px 10px rgba(28,46,68,.05);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;}
+  .slide{
+    position:relative;
+    width:1920px;
+    height:1080px;
+    margin:0 auto;
+    background:var(--bg);
+    overflow:hidden;
+  }
+  .title{
+    position:absolute;
+    left:111px;
+    top:82px;
+    width:1640px;
+    color:var(--ink);
+    font-size:61px;
+    line-height:1.05;
+    letter-spacing:-2.2px;
+    font-weight:800;
+  }
+  .title .vox{color:var(--teal)}
+  .subtitle{
+    position:absolute;
+    left:111px;
+    top:300px;
+    width:1550px;
+    color:#4d5c73;
+    font-size:24px;
+    line-height:1.38;
+    letter-spacing:-.2px;
+    font-weight:400;
+  }
+
+  .label-right{
+    position:absolute;
+    right:99px;
+    top:442px;
+    width:390px;
+    text-align:center;
+    color:#1e2433;
+    font-size:23px;
+    font-weight:700;
+    letter-spacing:-.5px;
+  }
+
+  .left-col{
+    position:absolute;
+    left:100px;
+    top:460px;
+    width:360px;
+  }
+  .rib{
+    position:relative;
+    width:360px;
+    height:64px;
+    margin:0 0 23px 0;
+    color:#415168;
+    font-size:16px;
+  }
+  .rib svg{display:block;width:100%;height:100%}
+  .rib .txt{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    padding-left:40px;
+    padding-right:34px;
+    font-size:17px;
+    font-weight:500;
+    color:#425268;
+  }
+  .rib.ask .txt{
+    color:#127d81;
+    font-weight:700;
+  }
+
+  .center-card{
+    position:absolute;
+    left:530px;
+    top:410px;
+    width:780px;
+    height:520px;
+    background:linear-gradient(180deg,#ffffff 0%, #fefefe 100%);
+    border:1.5px solid #dbe4ee;
+    border-radius:28px;
+    box-shadow:0 1px 0 rgba(255,255,255,.9) inset;
+  }
+  .center-brand{
+    position:absolute;
+    left:0;right:0;
+    top:34px;
+    text-align:center;
+  }
+  .center-brand .name{
+    color:var(--teal);
+    font-size:47px;
+    line-height:1;
+    letter-spacing:-1.4px;
+    font-weight:800;
+  }
+  .center-brand .sub{
+    margin-top:8px;
+    color:#49566b;
+    font-size:18px;
+    font-weight:600;
+    letter-spacing:-.2px;
+  }
+
+  .loop{
+    position:absolute;
+    left:640px;
+    top:565px;
+    width:202px;
+    height:202px;
+  }
+  .loop .center-text{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#1d2430;
+    font-weight:700;
+    font-size:18px;
+    line-height:1.02;
+    letter-spacing:-.4px;
+  }
+
+  .lane{
+    position:absolute;
+    left:880px;
+    width:260px;
+    height:46px;
+    border-radius:20px;
+    background:#fff;
+    border:1.5px solid #d7e1eb;
+    box-shadow:0 6px 14px rgba(31,48,71,.05);
+    display:flex;
+    align-items:center;
+    padding:0 22px 0 22px;
+    gap:14px;
+    color:#1b2330;
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:-.25px;
+  }
+  .lane:before{
+    content:"";
+    position:absolute;
+    left:-40px;
+    top:14px;
+    width:42px;
+    height:18px;
+    border-radius:12px;
+    background:linear-gradient(90deg, rgba(44,149,151,.12), rgba(44,149,151,.04));
+  }
+  .lane .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--teal);
+    flex:0 0 auto;
+  }
+  .lane.l1{top:560px}
+  .lane.l2{top:666px}
+  .lane.l3{top:774px;height:64px;border-radius:22px}
+  .lane.l3 .label-wrap{line-height:1.02}
+
+  .report{
+    position:absolute;
+    right:80px;
+    top:500px;
+    width:380px;
+    height:350px;
+    background:linear-gradient(180deg,#ffffff 0%, #fcfcfb 100%);
+    border-radius:18px;
+    border:1px solid #dfe6ee;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .report .topline{
+    position:absolute;left:0;top:0;right:0;height:4px;background:var(--teal);
+  }
+  .report .tag{
+    position:absolute;
+    right:18px;
+    top:12px;
+    color:#4a41ff;
+    font-size:11px;
+    letter-spacing:.8px;
+    font-weight:800;
+  }
+  .report .section-title{
+    color:#9aa3af;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.7px;
+  }
+  .report .chief{
+    position:absolute;
+    left:34px; top:38px; right:26px;
+  }
+  .report .bar{
+    height:16px;
+    border-radius:7px;
+    background:#d3dae5;
+  }
+  .report .bar.dark{background:#445066}
+  .report .bar.mid{background:#96a0af}
+  .report .bar.light{background:#d6dce6}
+  .report .bar + .bar{margin-top:10px}
+  .report .assessment{
+    position:absolute;
+    left:34px; right:28px; top:140px;
+  }
+  .report .ass-grid{
+    margin-top:10px;
+    display:grid;
+    grid-template-columns: 1fr 112px;
+    gap:14px;
+    align-items:start;
+  }
+  .report .ass-left .row{
+    display:flex; align-items:center; gap:12px; margin:0 0 12px 0;
+  }
+  .bullet{
+    width:10px;height:10px;border-radius:50%;
+    flex:0 0 auto;
+  }
+  .bullet.teal{background:var(--teal)}
+  .bullet.orange{background:#f59e0b}
+  .bullet.gray{background:#c3ccd8}
+  .stack .mini{
+    height:13px;border-radius:7px;background:#a7b0bf;
+  }
+  .stack .mini.light{background:#cfd6df}
+  .stack .mini + .mini{margin-top:8px}
+  .report .side-note{
+    background:#f2fbf8;
+    border:1px solid #d9f0ea;
+    border-radius:12px;
+    padding:12px 12px 10px;
+  }
+  .report .side-note .sidecap{
+    color:#87a79f;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.7px;
+    margin-bottom:10px;
+  }
+  .pill{
+    height:30px;
+    border-radius:9px;
+    background:#fff;
+    border:1px solid #cdebe3;
+    margin-bottom:10px;
+    position:relative;
+  }
+  .pill:before{
+    content:"";
+    position:absolute;
+    left:10px;top:11px;
+    width:36px;height:8px;border-radius:5px;background:#8fd6c8;
+  }
+  .pill.grayish:before{width:54px;background:#b6c0cf}
+  .report .verify{
+    position:absolute;
+    left:34px; right:28px; bottom:32px;
+  }
+  .report .verify .pills{
+    margin-top:10px;
+    display:flex;
+    gap:11px;
+  }
+  .report .verify .vp{
+    height:24px;
+    border-radius:12px;
+    background:#dfe5f4;
+    border:1px solid #b8c7ff;
+  }
+  .report .verify .vp:nth-child(1){width:100px}
+  .report .verify .vp:nth-child(2){width:58px}
+  .report .verify .vp:nth-child(3){width:80px}
+
+  .connector{
+    position:absolute; inset:0; pointer-events:none;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="title">
+    <span class="vox">Vox</span> is the adaptive interviewing system that takes on the<br>
+    hard clinical reasoning work needed to turn patient story<br>
+    into a clinician-grade starting point.
+  </div>
+
+  <div class="subtitle">
+    Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+    By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>
+    what still needs verification before the visit begins.
+  </div>
+
+  <div class="left-col">
+    <div class="rib">
+      <svg viewBox="0 0 360 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 1 H342 L360 32 L342 63 H16 L34 32 Z" fill="#ffffff" stroke="#c6d3e3" stroke-width="2.5"/>
+      </svg>
+      <div class="txt">My back has been hurting...</div>
+    </div>
+
+    <div class="rib ask">
+      <svg viewBox="0 0 360 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 32 L18 1 H360 V63 H18 Z" fill="#f5fbfa" stroke="#2c9597" stroke-width="2.3"/>
+      </svg>
+      <div class="txt">Vox: What makes it worse?</div>
+    </div>
+
+    <div class="rib">
+      <svg viewBox="0 0 360 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 1 H360 L342 32 L360 63 H18 L0 32 Z" fill="#ffffff" stroke="#c6d3e3" stroke-width="2.5"/>
+      </svg>
+      <div class="txt">It's worse in the morning.</div>
+    </div>
+
+    <div class="rib ask">
+      <svg viewBox="0 0 360 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 32 L18 1 H360 V63 H18 Z" fill="#f5fbfa" stroke="#2c9597" stroke-width="2.3"/>
+      </svg>
+      <div class="txt">Vox: When did this start?</div>
+    </div>
+
+    <div class="rib">
+      <svg viewBox="0 0 360 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 1 H360 L342 32 L360 63 H18 L0 32 Z" fill="#ffffff" stroke="#c6d3e3" stroke-width="2.5"/>
+      </svg>
+      <div class="txt">Started last Tuesday.</div>
+    </div>
+  </div>
+
+  <div class="center-card">
+    <div class="center-brand">
+      <div class="name">Vox</div>
+      <div class="sub">Adaptive clinical interviewer</div>
+    </div>
+  </div>
+
+  <div class="loop">
+    <svg viewBox="0 0 202 202" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="101" cy="101" r="84" fill="none" stroke="#eef2f7" stroke-width="12"/>
+      <path d="M145 24 A84 84 0 0 1 185 98" fill="none" stroke="#2c9597" stroke-width="12" stroke-linecap="round"/>
+      <path d="M170 151 A84 84 0 0 1 139 182" fill="none" stroke="#2c9597" stroke-width="12" stroke-linecap="round"/>
+      <path d="M10 114 A84 84 0 0 0 25 152" fill="none" stroke="#2c9597" stroke-width="12" stroke-linecap="round"/>
+      <path d="M62 187 A84 84 0 0 0 101 193" fill="none" stroke="#2c9597" stroke-width="12" stroke-linecap="round"/>
+    </svg>
+    <div class="center-text">Adaptive<br>clinical<br>interviewer</div>
+  </div>
+
+  <div class="lane l1"><span class="dot"></span><span>What matters</span></div>
+  <div class="lane l2"><span class="dot"></span><span>What connects</span></div>
+  <div class="lane l3"><span class="dot"></span><span class="label-wrap">What still needs<br>verification</span></div>
+
+  <div class="label-right">Clinician-grade starting point</div>
+
+  <div class="report">
+    <div class="topline"></div>
+    <div class="tag">VOX SUMMARY</div>
+
+    <div class="chief">
+      <div class="section-title">CHIEF COMPLAINT</div>
+      <div style="margin-top:10px;width:285px" class="bar dark"></div>
+      <div style="width:190px;margin-top:9px" class="bar mid"></div>
+    </div>
+
+    <div class="assessment">
+      <div class="section-title">PRIORITIZED ASSESSMENT</div>
+      <div class="ass-grid">
+        <div class="ass-left">
+          <div class="row">
+            <span class="bullet teal"></span>
+            <div class="stack" style="width:100%">
+              <div class="mini" style="width:292px"></div>
+              <div class="mini light" style="width:235px"></div>
+            </div>
+          </div>
+          <div class="row">
+            <span class="bullet orange"></span>
+            <div class="stack" style="width:100%">
+              <div class="mini" style="width:248px"></div>
+            </div>
+          </div>
+        </div>
+        <div class="side-note">
+          <div class="sidecap">KEY CONTEXT</div>
+          <div class="pill"></div>
+          <div class="pill grayish"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verify">
+      <div class="section-title">CLARIFY / VERIFY</div>
+      <div class="pills">
+        <div class="vp"></div>
+        <div class="vp"></div>
+        <div class="vp"></div>
+      </div>
+    </div>
+  </div>
+
+  <svg class="connector" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+    <!-- left to chamber -->
+    <path d="M450 492 C500 500, 515 525, 530 540" fill="none" stroke="#c9d4e4" stroke-width="4" stroke-linecap="round"/>
+    <path d="M450 580 C500 582, 515 590, 530 596" fill="none" stroke="#70b9ba" stroke-width="4" stroke-linecap="round"/>
+    <path d="M450 668 C500 668, 515 664, 530 666" fill="none" stroke="#c9d4e4" stroke-width="4" stroke-linecap="round"/>
+    <path d="M450 756 C502 756, 515 748, 530 740" fill="none" stroke="#70b9ba" stroke-width="4" stroke-linecap="round"/>
+    <path d="M450 844 C500 840, 515 820, 530 810" fill="none" stroke="#c9d4e4" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- chamber to report -->
+    <path d="M1310 568 C1380 558, 1418 560, 1460 560" fill="none" stroke="#8ce7dc" stroke-width="4" stroke-linecap="round"/>
+    <path d="M1310 652 C1382 648, 1416 650, 1460 650" fill="none" stroke="#8ce7dc" stroke-width="4" stroke-linecap="round"/>
+    <path d="M1310 746 C1380 740, 1416 744, 1460 744" fill="none" stroke="#8ce7dc" stroke-width="4" stroke-linecap="round"/>
+  </svg>
+
+</div>
+</body>
+</html>

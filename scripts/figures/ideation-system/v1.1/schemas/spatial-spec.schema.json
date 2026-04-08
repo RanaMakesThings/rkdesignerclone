@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designer.health/schemas/spatial-spec.schema.json",
+  "title": "Spatial Spec",
+  "type": "object",
+  "required": [
+    "spatial_specs"
+  ],
+  "properties": {
+    "spatial_specs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "spatial_spec_id",
+          "source_candidate_id",
+          "selected_family",
+          "visual_anchor",
+          "viewer_order",
+          "regions"
+        ],
+        "properties": {
+          "spatial_spec_id": {
+            "type": "string"
+          },
+          "source_candidate_id": {
+            "type": "string"
+          },
+          "selected_family": {
+            "type": "string"
+          },
+          "visual_anchor": {
+            "type": "string"
+          },
+          "viewer_order": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "regions": {
+            "type": "object"
+          },
+          "density_map": {
+            "type": "object"
+          },
+          "accent_usage": {
+            "type": "object"
+          },
+          "text_load": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "figure_load": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "literal_vs_abstract_guidance": {
+            "type": "string"
+          },
+          "element_inventory": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "keep_remove": {
+            "type": "object"
+          },
+          "buildability_risk": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

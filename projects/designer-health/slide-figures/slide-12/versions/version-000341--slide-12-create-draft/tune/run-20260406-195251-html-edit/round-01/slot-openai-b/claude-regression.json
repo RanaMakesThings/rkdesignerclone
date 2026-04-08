@@ -1,0 +1,19 @@
+{
+  "provider": "claude",
+  "verdict": "blocker",
+  "rationale": "The candidate slide (image 3) is a resolved, content-complete slide with correct locked copy, milestone cards, and a use-of-funds ribbon. However, two concrete regressions are visible against the baseline and spec: (1) the Designer Health footer logo renders as a broken image placeholder — a small white box with no logo art appears in the bottom-right corner of the footer strip, meaning the locked brand mark is missing/unresolved; and (2) the subheader line 'Post-money SAFE • ~18–20 months of runway' is visibly clipped and partially obscured by the large header text block, making the locked subheader copy unreadable at a glance. These are shell-level failures on required locked objects.",
+  "blockers": [
+    "Footer logo renders as a broken image placeholder — Designer Health brand mark is missing from the bottom-right footer zone",
+    "Locked subheader 'Post-money SAFE • ~18–20 months of runway' is clipped/obscured beneath the oversized header block and does not read cleanly"
+  ],
+  "nextMove": "Fix the footer logo asset reference so the Designer Health lockup renders correctly, and increase the vertical gap between the header and subheader (or reduce header font size) so the subheader line is fully legible before re-submitting.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate slide (image 3) is a resolved, content-complete slide with correct locked copy, milestone cards, and a use-of-funds ribbon. However, two concrete regressions are visible against the baseline and spec: (1) the Designer Health footer logo renders as a broken image placeholder — a small white box with no logo art appears in the bottom-right corner of the footer strip, meaning the locked brand mark is missing/unresolved; and (2) the subheader line 'Post-money SAFE • ~18–20 months of runway' is visibly clipped and partially obscured by the large header text block, making the locked subheader copy unreadable at a glance. These are shell-level failures on required locked objects.",
+    "blockers": [
+      "Footer logo renders as a broken image placeholder — Designer Health brand mark is missing from the bottom-right footer zone",
+      "Locked subheader 'Post-money SAFE • ~18–20 months of runway' is clipped/obscured beneath the oversized header block and does not read cleanly"
+    ],
+    "nextMove": "Fix the footer logo asset reference so the Designer Health lockup renders correctly, and increase the vertical gap between the header and subheader (or reduce header font size) so the subheader line is fully legible before re-submitting."
+  }
+}

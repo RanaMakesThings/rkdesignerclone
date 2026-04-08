@@ -1,0 +1,109 @@
+Visual thesis:
+- quiet clinician-grade document, paper-like, dense but legible, premium and restrained
+
+Content plan:
+- single central artifact only
+- no slide headline, no callout overlays, no browser chrome
+- real cough-case extraction, then working considerations, then open questions
+
+Interaction thesis:
+- static artifact for a pitch deck screenshot
+- no product chrome, no hover-dependent content
+
+Build one investor-deck figure for Designer Health slide 8.
+
+This figure should be a single central clinician-facing report artifact on a
+quiet warm-neutral background. It should look like a believable report page a
+doctor could scan, not a dashboard, not a transcript, and not a fake EHR.
+
+Use the attached screenshot as family reference only:
+- preserve the thin-border clinical UI feel
+- preserve the row/evidence logic
+- preserve the ranked reasoning logic
+- do not copy the two-card split literally
+
+Locked direction:
+- a full-width vertical clinical brief
+- one outer frame only
+- top-to-bottom reading order
+- no equal left/right cards
+
+Hard constraints:
+- one central white or eggshell artifact
+- subtle border, subtle shadow
+- no nav, no tabs, no browser frame
+- no decorative gradients inside the artifact
+- no dashboard-card mosaic
+- no giant colorful icons
+
+Artifact structure, top to bottom:
+1. document header
+2. social context
+3. symptoms
+4. key negatives
+5. workup / uncertainties
+6. timeline
+7. working considerations
+8. open questions / suggested next step
+
+Detailed art direction:
+- document width should feel substantial, like a printed consult sheet
+- use soft internal horizontal dividers
+- left-side extraction rows should feel ledger-like, not card-per-row
+- evidence references remain visible but visually secondary
+- right-side reasoning should appear in a lower band or lower section, not as a
+  co-equal dashboard column
+
+State semantics on extraction rows:
+- `present` = strongest neutral pill, deep charcoal or strong neutral fill
+- `absent` = lighter gray pill
+- `unresolved` / `not yet assessed` = warm gray or pale amber pill
+- no green for present
+
+Reasoning semantics in the lower working-considerations section:
+- keep `Supports`, `Against`, `Unknowns`
+- use restrained micro-glyphs only if helpful
+- if using arrows, they must be tiny and typographic, not loud icons
+- movement chips should be simplified to something like `stable` or omitted
+
+Use the cough example content directly. Include concrete rows such as:
+- Care seeking prompted by spouse
+- Cough
+- Cough pattern / frequency
+- Cough worse at night
+- Cough worsens when lying down
+- Scratchy throat
+- Sputum color: mostly yellow, maybe green once
+- Hemoptysis absent
+- Dyspnea with exertion or breathing impact unresolved / present depending on
+  layout clarity
+- Measured fever unresolved or not yet assessed
+
+Use three considerations:
+- Community-acquired pneumonia
+- Acute bronchitis
+- Post-viral cough or another plausibly contrasting third consideration
+
+For each consideration, show:
+- rank
+- title
+- confidence
+- Supports
+- Against
+- Unknowns
+
+Open questions block should feel like the handoff to the clinician:
+- How has your breathing changed?
+- Any chest pain with deep breath?
+- Is fever ongoing or resolved?
+
+Typography and density:
+- premium clinical sans-serif
+- small uppercase section labels
+- highly readable hierarchy
+- enough density to feel real, but not text soup
+
+The result should feel like:
+- an artifact a clinician could trust
+- a deck-ready object that makes the product tangible
+- a structured brief, not a reasoning console

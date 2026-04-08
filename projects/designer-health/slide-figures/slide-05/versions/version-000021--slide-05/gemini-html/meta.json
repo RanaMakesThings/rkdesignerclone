@@ -1,0 +1,13 @@
+{
+  "model": "gemini-3.1-pro-preview",
+  "temperature": 0.4,
+  "images": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/figure.png",
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05/gemini-html/preview.png"
+  ],
+  "tune": {
+    "lastSeenHtmlSha256": "bdc666af405b473e17c76222de4c760b6d04269888804b60b8aa171dd87194fc",
+    "approvalStale": false,
+    "approvalStaleReason": ""
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "version-000045",
+  "slideId": "slide-10",
+  "slideDir": "projects/designer-health/slide-figures/slide-10",
+  "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000045--left-right-ideation",
+  "label": "left-right-ideation",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.966Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-10/left-right-ideation"
+  ]
+}

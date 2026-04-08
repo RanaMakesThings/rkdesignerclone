@@ -1,0 +1,36 @@
+{
+  "requestedChange": "Create a finished Designer deck slide from the seeded blank template.\n\nSlide id: slide-12\nLane: hybrid\nSlide title: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment\nLocked header: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment\nLocked subheader: Post-money SAFE • ~18–20 months of runway\nAudience should leave believing: This round is sized for a disciplined next step and funds the exact work needed to turn the product story into pilot proof and seed readiness.\nCore claim: This round is sized for a disciplined next step and funds the exact work needed to turn the product story into pilot proof and seed readiness.\nSlide job: close the deck with a concrete financing ask that feels like a de-risking plan\nFigure burden: surface the ask first, then show what the round unlocks with disciplined milestone logic\nFigure logic: Use one integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, a restrained bottom ribbon, and allow tasteful extra proof structure like a timeline or allocation bars when it sharpens the argument.\nBuild status: slide-12 ask reset underway from the locked Apr 6, 2026 spec, with versions 000320 and 000340 as visual references\n\nLocked spec guidance:\n### Current official read\n\n**Slide job**\nClose the deck with a concrete financing ask that feels like a de-risking plan, not a generic raise.\n\n**Core claim**\n**We are raising $1.25M to fund the next proof stage: launch pilots, demonstrate value, and show deployment can be repeated.**\n\n**What the audience should believe after this slide**\n**This round is sized for a disciplined next step. It funds the exact work needed to turn the product story into pilot proof and seed readiness.**\n\n**Strategic role in deck**\nThis is the closing conversion slide. It should translate the entire deck from thesis into financing logic.\n\n**Current running copy plan**\n- eyebrow: `The Ask`\n- header: `Raising $1.25M to launch pilots, prove value, and establish repeatable deployment`\n- subheader: `Post-money SAFE • ~18–20 months of runway`\n- hero block: `$1.25M` + `Pre-Seed SAFE`\n- support stats: `2 key hires` / `3 pilot sites` / `18–20 months runway`\n- milestone cards:\n  - Build: `Founding engineer in place` / `Clinician-grade product loop live`\n  - Deploy: `Implementation / ops lead in place` / `Pilot sites launched with a repeatable rollout motion`\n  - Validate: `Measurable pilot outcomes` / `Seed-ready proof package`\n- bottom ribbon / small footer treatment: `Use of funds: Build • Deploy • Validate`\n\n**Figure plan**\nThe slide should read in three zones:\n- left hero block: large raise amount and structure\n- right milestone area: three clean Build / Deploy / Validate cards\n- bottom ribbon: one restrained use-of-funds line, not a budget table\n\n### Exploration bias for the next draft bank\n\nUse the stronger visual language from versions `000320` and `000340` as continuity cues. It is acceptable to introduce tasteful added structure when it helps the slide read faster, for example:\n- a simple timeline or staged sequence\n- restrained allocation bars or percentage-style breakdowns\n- compact proof checkpoints or rollout markers\n\nOnly add those if they clarify the ask. They should feel like elegant slide logic, not fabricated diligence detail or a finance spreadsheet.\n\n### What to avoid\n\n- a dense use-of-funds table\n- salary-heavy budget detail\n- fuzzy wording like `clinician trust` on the headline\n- too many milestones\n- a generic close like `build team / go to market / scale`\n\n**One-line test**\n**This feels like funding a concrete proof plan, not funding hope.**\n\n---\n\nExisting slide note excerpt:\n# Slide 12 — The Ask",
+  "successChecks": "- The slide is fully resolved and presentation-ready.\n- No template placeholders remain.\n- The header reads: Raising $1.25M to launch pilots, prove value, and establish repeatable deployment\n- The subheader reads: Post-money SAFE • ~18–20 months of runway\n- The figure visibly carries the specified burden.\n- The slide stays inside the locked Designer shell contract.\n- The footer rule and footer logo remain aligned with the shell.\n- The slide feels in-family with the adjacent official slides.",
+  "guardrails": "- preserve the white Designer shell\n- preserve the footer rule and footer logo\n- do not leave the figure stub or placeholder copy visible\n- do not turn the slide into a browser page, app UI, or card grid unless the brief explicitly requires it\n- do not weaken the locked slide claim",
+  "approvedRegions": [
+    {
+      "id": "footer-rule",
+      "label": "Footer Rule",
+      "shape": "rect",
+      "x": 112,
+      "y": 992,
+      "width": 1536,
+      "height": 4,
+      "freezeLevel": "pixel-strict",
+      "note": "Preserve the thin footer divider rule from the locked Designer shell."
+    },
+    {
+      "id": "footer-logo",
+      "label": "Footer Logo",
+      "shape": "rect",
+      "x": 1692,
+      "y": 962,
+      "width": 114,
+      "height": 59,
+      "freezeLevel": "semantic-stable",
+      "note": "Keep the official Designer footer logo aligned to the shell."
+    }
+  ],
+  "approvedRegionsPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft/create/shell-regions.json",
+  "referenceIntent": "- Adjacent slide previews are for deck continuity only.\n- Optional reference images are for style or composition cues, not for literal copying unless explicitly stated.\n- Supplemental reference files are summarized above and may clarify slide intent.",
+  "stopIf": "- the request actually needs a new slide concept rather than execution\n- the brief is missing core copy needed to build the slide\n- the best candidate still conflicts with the locked slide job after repeated rounds",
+  "requiredTextSnippets": [
+    "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+    "Post-money SAFE • ~18–20 months of runway"
+  ]
+}

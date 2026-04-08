@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox Pitch Deck Slide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --vox-teal: #2B8A88;
+            --vox-teal-light: #E6F4F1;
+            --text-dark: #0F172A;
+            --text-gray: #475569;
+            --bg-white: #FFFFFF;
+            --bg-offwhite: #F8FAFC;
+            --border-light: #E2E8F0;
+            --ribbon-gray-bg: #F1F5F9;
+            --ribbon-gray-border: #CBD5E1;
+            
+            /* Slate specific colors */
+            --slate-bg: #FFFFFF;
+            --slate-band-bg: #F8FAFC;
+            --slate-block-dark: #CBD5E1;
+            --slate-block-light: #E2E8F0;
+            --slate-accent-bg: #F0FDF4;
+            --slate-accent-block: #A7F3D0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #E5E5E5; /* Dark background to see the slide bounds */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .slide-container {
+            width: 1920px;
+            height: 1080px;
+            background-color: var(--bg-white);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        /* --- Header Section --- */
+        header {
+            padding: 80px 100px 0 100px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+            max-width: 1500px;
+        }
+
+        h1 span.teal {
+            color: var(--vox-teal);
+        }
+
+        p.subtitle {
+            font-size: 22px;
+            color: var(--text-gray);
+            line-height: 1.5;
+            max-width: 1400px;
+            font-weight: 400;
+        }
+
+        /* --- Diagram Area --- */
+        .diagram-area {
+            position: absolute;
+            top: 380px;
+            left: 0;
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 100px;
+            z-index: 10;
+        }
+
+        /* --- SVG Connections Layer --- */
+        .connections-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* --- Left Column: Ribbons --- */
+        .col-left {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            width: 380px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .ribbon-container {
+            position: relative;
+            width: 100%;
+            height: 64px;
+            display: flex;
+            align-items: center;
+        }
+
+        .ribbon-text {
+            position: absolute;
+            left: 40px;
+            font-size: 18px;
+            color: var(--text-gray);
+            z-index: 2;
+        }
+
+        .ribbon-text.teal-text {
+            color: var(--vox-teal);
+            font-weight: 600;
+            left: 70px;
+        }
+
+        .ribbon-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* --- Center Column: Chamber --- */
+        .col-center {
+            position: relative;
+            width: 780px;
+            height: 520px;
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.02);
+        }
+
+        .chamber-header {
+            position: absolute;
+            top: 40px;
+            text-align: center;
+        }
+
+        .chamber-header h2 {
+            font-size: 42px;
+            color: var(--vox-teal);
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 4px;
+        }
+
+        .chamber-header p {
+            font-size: 16px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .chamber-core {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .cycle-graphic {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cycle-text {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.2;
+            z-index: 2;
+        }
+
+        .cycle-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .lane-labels {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .lane-label {
+            display: flex;
+            align-items: center;
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: 99px;
+            padding: 12px 24px;
+            width: 260px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            position: relative;
+        }
+        
+        .lane-label::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 16px;
+            background: var(--vox-teal-light);
+            border-radius: 99px 0 0 99px;
+            z-index: -1;
+        }
+
+        .lane-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--vox-teal);
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        .lane-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* --- Right Column: Redesigned Slate --- */
+        .col-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 400px;
+            position: relative;
+            z-index: 10;
+            margin-right: 40px;
+        }
+
+        .right-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            margin-left: 12px;
+        }
+
+        /* The New Slate Object */
+        .clinical-slate {
+            width: 100%;
+            background: var(--slate-bg);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            /* Premium soft shadow and subtle border */
+            box-shadow: 0 24px 48px -12px rgba(0,0,0,0.08), 0 12px 24px -8px rgba(0,0,0,0.04), 0 0 0 1px rgba(226, 232, 240, 0.8);
+            position: relative;
+        }
+
+        /* Structural Bands */
+        .slate-band {
+            background: var(--slate-band-bg);
+            border-radius: 10px;
+            padding: 16px;
+        }
+
+        /* Band 1: Header/Chief Complaint */
+        .slate-header {
+            padding: 18px 16px;
+        }
+        
+        .block-title {
+            height: 14px;
+            width: 60%;
+            background: var(--slate-block-dark);
+            border-radius: 4px;
+        }
+
+        /* Band 2: Body Split (Story & Differential) */
+        .slate-body {
+            display: flex;
+            gap: 12px;
+            background: transparent; /* Container itself is transparent, children have bg */
+            padding: 0;
+        }
+
+        .slate-col {
+            background: var(--slate-band-bg);
+            border-radius: 10px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .col-main {
+            flex: 1.6;
+        }
+
+        .col-side {
+            flex: 1;
+            background: var(--slate-accent-bg); /* Subtle tint for differential area */
+        }
+
+        .block-line {
+            height: 8px;
+            background: var(--slate-block-light);
+            border-radius: 4px;
+            width: 100%;
+        }
+        
+        .block-line.short { width: 70%; }
+        .block-line.medium { width: 85%; }
+
+        .block-card {
+            height: 32px;
+            background: var(--bg-white);
+            border-radius: 6px;
+            border: 1px solid rgba(167, 243, 208, 0.5);
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+        }
+        
+        .block-card-inner {
+            height: 6px;
+            width: 40%;
+            background: var(--slate-accent-block);
+            border-radius: 3px;
+        }
+
+        /* Band 3: Footer/Actionable */
+        .slate-footer {
+            display: flex;
+            gap: 8px;
+            padding: 12px 16px;
+        }
+
+        .block-pill {
+            height: 12px;
+            width: 48px;
+            background: var(--slate-block-light);
+            border-radius: 6px;
+        }
+        .block-pill.wide { width: 64px; }
+
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <header>
+        <h1><span class="teal">Vox</span> is the adaptive interviewing system that takes on the<br>hard clinical reasoning work needed to turn patient story<br>into a clinician-grade starting point.</h1>
+        <p class="subtitle">Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>what still needs verification before the visit begins.</p>
+    </header>
+
+    <!-- SVG Layer for all connecting lines -->
+    <svg class="connections-layer" viewBox="0 0 1920 1080">
+        <defs>
+            <!-- Gradient for the new expressive transition -->
+            <linearGradient id="transitionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#2B8A88" stop-opacity="0.05" />
+                <stop offset="50%" stop-color="#2B8A88" stop-opacity="0.15" />
+                <stop offset="100%" stop-color="#2B8A88" stop-opacity="0.25" />
+            </linearGradient>
+        </defs>
+
+        <!-- Incoming lines from ribbons to chamber -->
+        <!-- Ribbon 1 -->
+        <path d="M 480 412 C 600 412, 650 560, 780 560" fill="none" stroke="#CBD5E1" stroke-width="4" />
+        <!-- Ribbon 2 -->
+        <path d="M 480 508 C 600 508, 650 580, 780 580" fill="none" stroke="#2B8A88" stroke-width="4" stroke-opacity="0.6" />
+        <!-- Ribbon 3 -->
+        <path d="M 480 604 C 600 604, 650 600, 780 600" fill="none" stroke="#CBD5E1" stroke-width="4" />
+        <!-- Ribbon 4 -->
+        <path d="M 480 700 C 600 700, 650 620, 780 620" fill="none" stroke="#2B8A88" stroke-width="4" stroke-opacity="0.6" />
+        <!-- Ribbon 5 -->
+        <path d="M 480 796 C 600 796, 650 640, 780 640" fill="none" stroke="#CBD5E1" stroke-width="4" />
+
+        <!-- Outgoing Expressive Transition (Chamber to Slate) -->
+        <!-- Starts from the right edge of the chamber, spans the height of the pills, flows into the slate -->
+        <path d="M 1380 520 
+                 C 1440 520, 1460 560, 1500 560 
+                 L 1500 680 
+                 C 1460 680, 1440 660, 1380 660 
+                 Z" 
+              fill="url(#transitionGradient)" />
+              
+        <!-- Subtle center line within transition -->
+        <path d="M 1380 590 C 1440 590, 1460 620, 1500 620" fill="none" stroke="#2B8A88" stroke-width="2" stroke-opacity="0.3" />
+    </svg>
+
+    <div class="diagram-area">
+        
+        <!-- Left Column: Patient & Vox Ribbons -->
+        <div class="col-left">
+            <!-- Ribbon 1: Patient -->
+            <div class="ribbon-container">
+                <svg class="ribbon-svg" viewBox="0 0 380 64" preserveAspectRatio="none">
+                    <path d="M 0 32 L 20 0 L 380 0 L 340 32 L 380 64 L 20 64 Z" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2"/>
+                </svg>
+                <div class="ribbon-text">My back has been hurting...</div>
+            </div>
+
+            <!-- Ribbon 2: Vox -->
+            <div class="ribbon-container">
+                <svg class="ribbon-svg" viewBox="0 0 380 64" preserveAspectRatio="none">
+                    <path d="M 20 32 L 0 0 L 380 0 L 380 64 L 0 64 Z" fill="#E6F4F1" stroke="#2B8A88" stroke-width="2"/>
+                </svg>
+                <div class="ribbon-text teal-text">Vox: What makes it worse?</div>
+            </div>
+
+            <!-- Ribbon 3: Patient -->
+            <div class="ribbon-container">
+                <svg class="ribbon-svg" viewBox="0 0 380 64" preserveAspectRatio="none">
+                    <path d="M 0 32 L 20 0 L 380 0 L 340 32 L 380 64 L 20 64 Z" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2"/>
+                </svg>
+                <div class="ribbon-text">It's worse in the morning.</div>
+            </div>
+
+            <!-- Ribbon 4: Vox -->
+            <div class="ribbon-container">
+                <svg class="ribbon-svg" viewBox="0 0 380 64" preserveAspectRatio="none">
+                    <path d="M 20 32 L 0 0 L 380 0 L 380 64 L 0 64 Z" fill="#E6F4F1" stroke="#2B8A88" stroke-width="2"/>
+                </svg>
+                <div class="ribbon-text teal-text">Vox: When did this start?</div>
+            </div>
+
+            <!-- Ribbon 5: Patient -->
+            <div class="ribbon-container">
+                <svg class="ribbon-svg" viewBox="0 0 380 64" preserveAspectRatio="none">
+                    <path d="M 0 32 L 20 0 L 380 0 L 340 32 L 380 64 L 20 64 Z" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2"/>
+                </svg>
+                <div class="ribbon-text">Started last Tuesday.</div>
+            </div>
+        </div>
+
+        <!-- Center Column: The Chamber -->
+        <div class="col-center">
+            <div class="chamber-header">
+                <h2>Vox</h2>
+                <p>Adaptive clinical interviewer</p>
+            </div>
+
+            <div class="chamber-core">
+                <!-- Cycle Graphic -->
+                <div class="cycle-graphic">
+                    <svg class="cycle-svg" viewBox="0 0 180 180">
+                        <!-- Background ring -->
+                        <circle cx="90" cy="90" r="70" fill="none" stroke="#F1F5F9" stroke-width="16" />
+                        <!-- Teal segments -->
+                        <path d="M 90 20 A 70 70 0 0 1 150 55" fill="none" stroke="#2B8A88" stroke-width="16" stroke-linecap="round" />
+                        <path d="M 158 105 A 70 70 0 0 1 105 158" fill="none" stroke="#2B8A88" stroke-width="16" stroke-linecap="round" />
+                        <path d="M 35 125 A 70 70 0 0 1 20 90" fill="none" stroke="#2B8A88" stroke-width="16" stroke-linecap="round" />
+                    </svg>
+                    <div class="cycle-text">Adaptive<br>clinical<br>interviewer</div>
+                </div>
+
+                <!-- Lane Labels -->
+                <div class="lane-labels">
+                    <div class="lane-label">
+                        <div class="lane-dot"></div>
+                        <div class="lane-text">What matters</div>
+                    </div>
+                    <div class="lane-label">
+                        <div class="lane-dot"></div>
+                        <div class="lane-text">What connects</div>
+                    </div>
+                    <div class="lane-label">
+                        <div class="lane-dot"></div>
+                        <div class="lane-text">What still needs<br>verification</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Redesigned Slate -->
+        <div class="col-right">
+            <div class="right-title">Clinician-grade starting point</div>
+            
+            <!-- The Structured Slate -->
+            <div class="clinical-slate">
+                
+                <!-- Band 1: Header -->
+                <div class="slate-band slate-header">
+                    <div class="block-title"></div>
+                </div>
+
+                <!-- Band 2: Body Split -->
+                <div class="slate-body">
+                    <!-- Left: Clinical Story Abstraction -->
+                    <div class="slate-col col-main">
+                        <div class="block-line"></div>
+                        <div class="block-line medium"></div>
+                        <div class="block-line"></div>
+                        <div class="block-line short"></div>
+                        <div style="height: 8px;"></div> <!-- spacer -->
+                        <div class="block-line medium"></div>
+                        <div class="block-line short"></div>
+                    </div>
+                    
+                    <!-- Right: Differential/Structured Abstraction -->
+                    <div class="slate-col col-side">
+                        <div class="block-card">
+                            <div class="block-card-inner"></div>
+                        </div>
+                        <div class="block-card">
+                            <div class="block-card-inner" style="width: 60%; background: #CBD5E1;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Band 3: Footer/Tags -->
+                <div class="slate-band slate-footer">
+                    <div class="block-pill"></div>
+                    <div class="block-pill wide"></div>
+                    <div class="block-pill"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

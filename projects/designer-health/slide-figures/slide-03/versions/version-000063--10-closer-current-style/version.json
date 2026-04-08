@@ -1,0 +1,14 @@
+{
+  "id": "version-000063",
+  "slideId": "slide-03",
+  "slideDir": "projects/designer-health/slide-figures/slide-03",
+  "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000063--10-closer-current-style",
+  "label": "10-closer-current-style",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:05:30.359Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-03/variants/10-closer-current-style"
+  ]
+}

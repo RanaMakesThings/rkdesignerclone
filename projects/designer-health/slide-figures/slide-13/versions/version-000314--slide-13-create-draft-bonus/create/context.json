@@ -1,0 +1,107 @@
+{
+  "slideId": "slide-13",
+  "displayNumber": "12",
+  "lane": "html",
+  "laneReason": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000314",
+  "draftVersionDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus",
+  "projectRoot": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health",
+  "slideDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13",
+  "deckSpecPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/deck-spec.json",
+  "packetPath": null,
+  "packetText": "",
+  "noteReadmePath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-13/README.md",
+  "noteReadmeText": "# Slide 13 — The Ask\n\n## Status\n\n- slide: `13`\n- display number: `12`\n- state: `first create pass underway`\n\n## Current running read\n\n- current lead:\n  - `../../slide-figures/slide-13/versions/version-000301--slide-13-create-draft`\n\n## Why this is the active lane\n\n- the April 5, 2026 ask build spec locks the slide as a concrete `$1.25M`\n  close rather than the older generic proof-language placeholder\n- the create draft is seeded from the locked Designer shell and the imported\n  ask build spec, so it is the correct first-build surface\n- the preferred composition is now clear:\n  left hero ask block, right stacked milestone cards, bottom use-of-funds\n  ribbon\n\n## Current issues\n\n- no official ask winner is selected yet\n- the older `studio-html-lab` imports in `slide-13/` should be treated as\n  exploratory history, not as the locked ask source of truth\n- the first live pass still needs to prove the hero / milestone balance and\n  the restraint of the bottom ribbon\n\n## Current artifacts\n\n- imported build spec:\n  - `../../inputs/slide-12-ask-build-spec-2026-04-05/slide-12-build-spec-v1.0.md`\n- checked-in create request:\n  - `./create-request.md`\n- active create draft bundle:\n  - `../../slide-figures/slide-13/versions/version-000301--slide-13-create-draft/generated.html`\n  - `../../slide-figures/slide-13/versions/version-000301--slide-13-create-draft/preview.png`\n\n## Next move\n\n- generate six first-pass draft variants from the locked template shell\n- compare the ask slide against the adjacent team slide for late-deck\n  continuity\n- leave the winner as a draft until a human explicitly chooses a promotion\n",
+  "deckSlide": {
+    "id": "slide-13",
+    "displayNumber": "12",
+    "importedSlides": [
+      13
+    ],
+    "status": "active",
+    "title": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+    "purpose": "close with a disciplined proof-stage ask",
+    "header": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+    "subheader": "Post-money SAFE • ~18–20 months of runway",
+    "takeaway": "This is a finite, milestone-based raise tied to proof-stage deployment.",
+    "figureRole": "surface the ask first, then show what the round unlocks",
+    "family": "ask hero with milestone column",
+    "buildStatus": "create workflow underway from the April 5, 2026 ask build spec",
+    "proof": [],
+    "paths": {
+      "packet": null,
+      "specs": [],
+      "stampedDir": "projects/designer-health/slide-figures/slide-13",
+      "assetsManifest": "projects/designer-health/slide-assets/slide-13/manifest.json"
+    },
+    "selectedDirection": "Use one integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.",
+    "notes": [
+      "Public slide 12 now runs off the locked ask build spec imported on April 5, 2026.",
+      "Prefer the left-hero / right-stacked milestone composition unless crowding forces the horizontal fallback."
+    ],
+    "variants": [],
+    "specText": "### Current official read\n\n**Slide job**\nThis is the closing ask slide. It should turn the deck into a finite proof-stage financing plan rather than a generic raise page.\n\n**Core claim**\n**The ask is disciplined, milestone-based, and sized to prove the next stage of deployment.**\n\n**What this slide must make the audience believe**\n**$1.25M on a post-money SAFE funds the hires, pilots, runway, and validation needed to establish repeatable deployment.**\n\n**Current preferred header**\n**Raising $1.25M to launch pilots, prove value, and establish repeatable deployment**\n\n**Current preferred subheader**\n**Post-money SAFE • ~18–20 months of runway**\n\n**Current preferred figure logic**\nA single integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.\n\n### Preserved strategic discussion\n\nThe slide should surface the ask on first scan, then show exactly what the round unlocks. It should feel like a clean conversion slide: thesis translated into financing logic.\n\nKeep the left side focused on the amount, instrument, and support stats (`2 core hires`, `3 pilot sites`, `18–20 months`). Keep the right side focused on outcome-first milestone cards, not generic startup activity. Keep the bottom ribbon quieter than the milestone logic.\n\nThis slide must avoid:\n- spreadsheet or payroll memo energy\n- generic build / scale / go-to-market language\n- decorative icons or illustration\n- use-of-funds detail that overpowers the milestones\n\nPreferred visual treatment:\n- soft gray field with calm white card surfaces\n- restrained shadow and rounded corners\n- one muted blue accent family only\n- premium, clinically serious late-deck tone\n\nFallback only if needed: convert the right column into a horizontal three-card strip if the stacked milestone column becomes crowded.\n\n**One-line test**\n**This feels like funding a concrete proof plan, not funding hope.**\n\n---"
+  },
+  "slideEntry": {
+    "id": "slide-13",
+    "displayNumber": "12",
+    "importedSlides": [
+      13
+    ],
+    "status": "active",
+    "title": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+    "purpose": "close with a disciplined proof-stage ask",
+    "header": "Raising $1.25M to launch pilots, prove value, and establish repeatable deployment",
+    "subheader": "Post-money SAFE • ~18–20 months of runway",
+    "takeaway": "This is a finite, milestone-based raise tied to proof-stage deployment.",
+    "figureRole": "surface the ask first, then show what the round unlocks",
+    "family": "ask hero with milestone column",
+    "buildStatus": "create workflow underway from the April 5, 2026 ask build spec",
+    "proof": [],
+    "paths": {
+      "packet": null,
+      "specs": [],
+      "stampedDir": "projects/designer-health/slide-figures/slide-13",
+      "assetsManifest": "projects/designer-health/slide-assets/slide-13/manifest.json"
+    },
+    "selectedDirection": "Use one integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.",
+    "notes": [
+      "Public slide 12 now runs off the locked ask build spec imported on April 5, 2026.",
+      "Prefer the left-hero / right-stacked milestone composition unless crowding forces the horizontal fallback."
+    ],
+    "variants": [],
+    "specText": "### Current official read\n\n**Slide job**\nThis is the closing ask slide. It should turn the deck into a finite proof-stage financing plan rather than a generic raise page.\n\n**Core claim**\n**The ask is disciplined, milestone-based, and sized to prove the next stage of deployment.**\n\n**What this slide must make the audience believe**\n**$1.25M on a post-money SAFE funds the hires, pilots, runway, and validation needed to establish repeatable deployment.**\n\n**Current preferred header**\n**Raising $1.25M to launch pilots, prove value, and establish repeatable deployment**\n\n**Current preferred subheader**\n**Post-money SAFE • ~18–20 months of runway**\n\n**Current preferred figure logic**\nA single integrated master card: left hero ask block, right stacked Build / Deploy / Validate milestone cards, and a restrained use-of-funds ribbon across the bottom.\n\n### Preserved strategic discussion\n\nThe slide should surface the ask on first scan, then show exactly what the round unlocks. It should feel like a clean conversion slide: thesis translated into financing logic.\n\nKeep the left side focused on the amount, instrument, and support stats (`2 core hires`, `3 pilot sites`, `18–20 months`). Keep the right side focused on outcome-first milestone cards, not generic startup activity. Keep the bottom ribbon quieter than the milestone logic.\n\nThis slide must avoid:\n- spreadsheet or payroll memo energy\n- generic build / scale / go-to-market language\n- decorative icons or illustration\n- use-of-funds detail that overpowers the milestones\n\nPreferred visual treatment:\n- soft gray field with calm white card surfaces\n- restrained shadow and rounded corners\n- one muted blue accent family only\n- premium, clinically serious late-deck tone\n\nFallback only if needed: convert the right column into a horizontal three-card strip if the stacked milestone column becomes crowded.\n\n**One-line test**\n**This feels like funding a concrete proof plan, not funding hope.**\n\n---"
+  },
+  "adjacentSlides": [
+    {
+      "slideId": "slide-12",
+      "displayNumber": "11",
+      "title": "Built by people who understand the visit",
+      "versionId": "version-000291",
+      "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/slide-12--version-000291.png"
+    }
+  ],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "designer-deck-template-v1",
+    "templateDir": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/templates/designer-deck-template-v1",
+    "contractPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/designer-deck-template.md",
+    "canonicalHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/templates/designer-deck-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/templates/designer-deck-template-v1/template.png",
+    "shellRegionsPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/templates/designer-deck-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/create/template.html",
+    "seededTemplatePreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/generated.html",
+    "previewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/preview.png",
+    "templateHtmlPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/create/template.html",
+    "templatePreviewPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/create/template.png",
+    "shellRegionsPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-13/create-request.md",
+  "createRequestSnapshotPath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus/create/create-request.snapshot.md"
+}

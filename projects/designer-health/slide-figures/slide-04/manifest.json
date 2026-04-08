@@ -1,0 +1,40 @@
+{
+  "slideId": "slide-04",
+  "slideDir": "projects/designer-health/slide-figures/slide-04",
+  "currentVersionId": "version-000074",
+  "versions": [
+    {
+      "id": "version-000074",
+      "label": "transformation-flow-native",
+      "status": "current",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T21:13:43.071Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-04/versions/version-000074--transformation-flow-native",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000075",
+      "label": "story-streams-v1-native",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T21:13:43.089Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-04/versions/version-000075--story-streams-v1-native",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000128",
+      "label": "slide-04-template-shell-catchup-v1",
+      "status": "draft",
+      "sourceKind": "fine-tune-draft",
+      "createdAt": "2026-04-01T23:21:15.480Z",
+      "baseVersionId": "version-000074",
+      "dir": "projects/designer-health/slide-figures/slide-04/versions/version-000128--slide-04-template-shell-catchup-v1",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

@@ -1,0 +1,506 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Designer Health — Clinical Workspace</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #f5f3f0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 24px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .workspace {
+    background: #ffffff;
+    border: 1px solid #e8e5e1;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.06);
+    max-width: 1120px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+
+  /* LEFT COLUMN */
+  .left {
+    width: 40%;
+    padding: 36px 32px 36px 36px;
+    border-right: 1px solid #eae7e3;
+    flex-shrink: 0;
+  }
+
+  .col-title {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #8a8580;
+    margin-bottom: 28px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #b0aaa4;
+    margin-bottom: 12px;
+    margin-top: 28px;
+  }
+
+  .section-label:first-of-type {
+    margin-top: 0;
+  }
+
+  .row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f4f2ef;
+    gap: 12px;
+  }
+
+  .row:last-child {
+    border-bottom: none;
+  }
+
+  .row-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .row-title {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #2c2825;
+    line-height: 1.35;
+  }
+
+  .row-value {
+    font-size: 12px;
+    color: #8a8580;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
+  .row-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .turn-token {
+    font-size: 10.5px;
+    font-weight: 500;
+    color: #b0aaa4;
+    white-space: nowrap;
+  }
+
+  /* PILLS */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10.5px;
+    font-weight: 550;
+    padding: 3px 10px;
+    border-radius: 100px;
+    white-space: nowrap;
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+
+  .pill-present {
+    background: #eef4fb;
+    color: #3b6fa0;
+  }
+
+  .pill-absent {
+    background: #fdf0ef;
+    color: #a8504a;
+  }
+
+  .pill-unresolved {
+    background: #f8f3ec;
+    color: #9a7d5a;
+  }
+
+  /* RIGHT COLUMN */
+  .right {
+    width: 60%;
+    padding: 36px 36px 36px 32px;
+    background: #fcfbfa;
+  }
+
+  .candidate {
+    background: #ffffff;
+    border: 1px solid #eceae7;
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+  }
+
+  .candidate:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .candidate-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .candidate-rank {
+    font-size: 11px;
+    font-weight: 600;
+    color: #b0aaa4;
+    width: 20px;
+    flex-shrink: 0;
+  }
+
+  .candidate-name {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #2c2825;
+    flex: 1;
+    line-height: 1.3;
+  }
+
+  .confidence-pill {
+    font-size: 10.5px;
+    font-weight: 550;
+    padding: 3px 10px;
+    border-radius: 100px;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  .conf-high {
+    background: #eef4eb;
+    color: #4a7a42;
+  }
+
+  .conf-medium {
+    background: #f8f3ec;
+    color: #9a7d5a;
+  }
+
+  .conf-low {
+    background: #f4f2ef;
+    color: #8a8580;
+  }
+
+  .reasoning-section {
+    margin-bottom: 12px;
+  }
+
+  .reasoning-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .reasoning-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #b0aaa4;
+    margin-bottom: 6px;
+  }
+
+  .reasoning-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 12.5px;
+    color: #5a5550;
+    line-height: 1.45;
+    margin-bottom: 3px;
+  }
+
+  .reasoning-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .glyph {
+    flex-shrink: 0;
+    font-size: 12px;
+    line-height: 1.45;
+    width: 14px;
+    text-align: center;
+  }
+
+  .glyph-up { color: #6a9a62; }
+  .glyph-down { color: #b86a64; }
+  .glyph-unknown { color: #c4a46a; }
+
+  /* NEXT QUESTION BLOCK */
+  .next-question {
+    margin-top: 18px;
+    background: #f9f7f5;
+    border: 1px solid #eceae7;
+    border-radius: 10px;
+    padding: 18px 22px;
+  }
+
+  .nq-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #b0aaa4;
+    margin-bottom: 8px;
+  }
+
+  .nq-text {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #2c2825;
+    line-height: 1.5;
+  }
+
+  .nq-rationale {
+    font-size: 12px;
+    color: #8a8580;
+    margin-top: 6px;
+    line-height: 1.45;
+  }
+
+  .divider-subtle {
+    height: 1px;
+    background: #f0eeeb;
+    margin: 4px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="workspace">
+
+  <!-- LEFT COLUMN -->
+  <div class="left">
+    <div class="col-title">Patient History &amp; Status</div>
+
+    <div class="section-label">Social Context</div>
+    <div class="row">
+      <div class="row-text">
+        <div class="row-title">Care seeking prompted by spouse</div>
+        <div class="row-value">Spouse encouraged evaluation</div>
+      </div>
+      <div class="row-meta">
+        <span class="turn-token">Turn 2</span>
+        <span class="pill pill-present">Present</span>
+      </div>
+    </div>
+
+    <div class="section-label">Reported Symptoms</div>
+    <div class="row">
+      <div class="row-text">
+        <div class="row-title">Cough</div>
+        <div class="row-value">Persistent, approximately 1 week</div>
+      </div>
+      <div class="row-meta">
+        <span class="turn-token">Turn 2</span>
+        <span class="pill pill-present">Present</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-text">
+        <div class="row-title">Cough pattern</div>
+        <div class="row-value">Bursts with periods of relative calm</div>
+      </div>
+      <div class="row-meta">
+        <span class="turn-token">Turn 14</span>
+        <span class="pill pill-present">Present</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-text">
+        <div class="row-title">Cough worse at night</div>
+      </div>
+      <div class="row-meta">
+        <span class="turn-token">Turn 16</span>
+        <span class="pill pill-present">Present</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-text">
+        <div class="row-title">Cough worsens when lying down</div>
+      </div>
+      <div class="row-meta">
+        <span class="turn-token">Turn 16</span>
+        <span class="pill pill-present">Present</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-text">
+        <div class="row-title">Scratchy throat</div>
+        <div class="row-value">Preceded cough by a few days</div>
+      </div>
+      <div class="row-meta">
+        <span class="turn-token">Turn 4</span>
+        <span class="pill pill-present">Present</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-text">
+        <div class="row-title">Sputum color</div>
+        <div class="row-value">Mostly yellow; possibly green once</div>
+      </div>
+      <div class="row-meta">
+        <span class="turn-token">Turn 10</span>
+        <span class="pill pill-unresolved">Uncertain</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-text">
+        <div class="row-title">Exertional dyspnea</div>
+        <div class="row-value">Mild, with coughing fits</div>
+      </div>
+      <div class="row-meta">
+        <span class="turn-token">Turn 12</span>
+        <span class="pill pill-present">Present</span>
+      </div>
+    </div>
+
+    <div class="section-label">Key Negatives</div>
+    <div class="row">
+      <div class="row-text">
+        <div class="row-title">Hemoptysis</div>
+      </div>
+      <div class="row-meta">
+        <span class="turn-token">Turn 12</span>
+        <span class="pill pill-absent">Absent</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-text">
+        <div class="row-title">Documented fever</div>
+      </div>
+      <div class="row-meta">
+        <span class="turn-token">Turn 8</span>
+        <span class="pill pill-absent">Absent</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-text">
+        <div class="row-title">Chest pain</div>
+      </div>
+      <div class="row-meta">
+        <span class="turn-token">Turn 12</span>
+        <span class="pill pill-absent">Absent</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="right">
+    <div class="col-title">Considerations to Confirm</div>
+
+    <!-- Candidate 1 -->
+    <div class="candidate">
+      <div class="candidate-header">
+        <span class="candidate-rank">#1</span>
+        <span class="candidate-name">Acute bronchitis (viral or post-infectious)</span>
+        <span class="confidence-pill conf-high">High match</span>
+      </div>
+      <div class="reasoning-section">
+        <div class="reasoning-label">Supports</div>
+        <div class="reasoning-item"><span class="glyph glyph-up">↑</span> URI-like prodrome: scratchy throat preceded cough</div>
+        <div class="reasoning-item"><span class="glyph glyph-up">↑</span> Course ~1 week, consistent with viral timeline</div>
+        <div class="reasoning-item"><span class="glyph glyph-up">↑</span> Cough in bursts with periods of relative calm</div>
+        <div class="reasoning-item"><span class="glyph glyph-up">↑</span> Productive sputum; yellow color typical of inflammation</div>
+      </div>
+      <div class="reasoning-section">
+        <div class="reasoning-label">Against</div>
+        <div class="reasoning-item"><span class="glyph glyph-down">↓</span> Exertional dyspnea warrants exclusion of pneumonia</div>
+        <div class="reasoning-item"><span class="glyph glyph-down">↓</span> Positional worsening could suggest non-bronchitis contributors</div>
+      </div>
+      <div class="reasoning-section">
+        <div class="reasoning-label">Unknowns</div>
+        <div class="reasoning-item"><span class="glyph glyph-unknown">○</span> Vitals (RR, O₂ sat) and lung exam findings</div>
+        <div class="reasoning-item"><span class="glyph glyph-unknown">○</span> Dyspnea severity and ability to speak in full sentences</div>
+      </div>
+    </div>
+
+    <!-- Candidate 2 -->
+    <div class="candidate">
+      <div class="candidate-header">
+        <span class="candidate-rank">#2</span>
+        <span class="candidate-name">Community-acquired pneumonia</span>
+        <span class="confidence-pill conf-medium">Moderate match</span>
+      </div>
+      <div class="reasoning-section">
+        <div class="reasoning-label">Supports</div>
+        <div class="reasoning-item"><span class="glyph glyph-up">↑</span> Persistent cough with exertional dyspnea</div>
+        <div class="reasoning-item"><span class="glyph glyph-up">↑</span> Productive sputum; possible green episode</div>
+      </div>
+      <div class="reasoning-section">
+        <div class="reasoning-label">Against</div>
+        <div class="reasoning-item"><span class="glyph glyph-down">↓</span> No hemoptysis reported</div>
+        <div class="reasoning-item"><span class="glyph glyph-down">↓</span> No documented fever or systemic symptoms</div>
+        <div class="reasoning-item"><span class="glyph glyph-down">↓</span> No objective data yet (O₂ sat, lung exam, imaging)</div>
+      </div>
+      <div class="reasoning-section">
+        <div class="reasoning-label">Unknowns</div>
+        <div class="reasoning-item"><span class="glyph glyph-unknown">○</span> Oxygen saturation, respiratory rate, temperature</div>
+        <div class="reasoning-item"><span class="glyph glyph-unknown">○</span> Focal lung findings or chest imaging</div>
+      </div>
+    </div>
+
+    <!-- Candidate 3 -->
+    <div class="candidate">
+      <div class="candidate-header">
+        <span class="candidate-rank">#3</span>
+        <span class="candidate-name">GERD-induced or post-viral cough</span>
+        <span class="confidence-pill conf-low">Lower match</span>
+      </div>
+      <div class="reasoning-section">
+        <div class="reasoning-label">Supports</div>
+        <div class="reasoning-item"><span class="glyph glyph-up">↑</span> Positional worsening (worse lying down) is classic for GERD</div>
+        <div class="reasoning-item"><span class="glyph glyph-up">↑</span> Nocturnal exacerbation consistent with reflux pattern</div>
+      </div>
+      <div class="reasoning-section">
+        <div class="reasoning-label">Against</div>
+        <div class="reasoning-item"><span class="glyph glyph-down">↓</span> No reported heartburn, acid taste, or dysphagia</div>
+        <div class="reasoning-item"><span class="glyph glyph-down">↓</span> Productive cough less typical for isolated GERD cough</div>
+      </div>
+      <div class="reasoning-section">
+        <div class="reasoning-label">Unknowns</div>
+        <div class="reasoning-item"><span class="glyph glyph-unknown">○</span> Dietary triggers, meal timing relative to symptoms</div>
+        <div class="reasoning-item"><span class="glyph glyph-unknown">○</span> History of GERD or PPI use</div>
+      </div>
+    </div>
+
+    <!-- Next Question -->
+    <div class="next-question">
+      <div class="nq-label">Highest-Yield Next Question</div>
+      <div class="nq-text">"Have you checked your temperature at home, or have you had any chills, sweats, or feeling feverish?"</div>
+      <div class="nq-rationale">Fever or systemic signs would significantly raise pneumonia probability and lower the bronchitis threshold, changing the workup priority.</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
+```

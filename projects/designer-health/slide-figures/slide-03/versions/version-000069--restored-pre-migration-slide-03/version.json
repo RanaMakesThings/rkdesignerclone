@@ -1,0 +1,13 @@
+{
+  "id": "version-000069",
+  "slideId": "slide-03",
+  "slideDir": "projects/designer-health/slide-figures/slide-03",
+  "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000069--restored-pre-migration-slide-03",
+  "label": "restored-pre-migration-slide-03",
+  "status": "current",
+  "createdAt": "2026-03-31T19:56:21.731Z",
+  "sourceKind": "legacy-recovery",
+  "baseVersionId": "version-000050",
+  "legacySourcePaths": [],
+  "restoredFromCommit": "9127792"
+}

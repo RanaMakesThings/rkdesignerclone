@@ -1,0 +1,2367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designer deck report</title>
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --panel: #ffffff;
+        --text: #12202f;
+        --muted: #617286;
+        --line: #dbe3ec;
+        --accent: #4a89c8;
+        --accent-soft: #eef5fc;
+        --good: #1d766c;
+        --warn: #9a6a18;
+        --shadow: 0 16px 40px rgba(18, 32, 47, 0.08);
+        --radius: 22px;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 32px;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+      .page {
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+      .hero, .card, .slide-card {
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+      .hero {
+        padding: 30px 32px;
+        background:
+          radial-gradient(circle at top right, rgba(74, 137, 200, 0.09), transparent 32%),
+          var(--panel);
+      }
+      .eyebrow {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 12px 0 0;
+        font-size: 48px;
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+      h2 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+      }
+      .summary {
+        margin-top: 14px;
+        max-width: 980px;
+        font-size: 19px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+      .chips, .file-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .chips { margin-top: 20px; }
+      .file-row { margin-top: 14px; }
+      .file-chip, .stat-chip, .status-pill {
+        display: inline-flex;
+        align-items: center;
+        padding: 9px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .file-chip:hover { border-color: var(--accent); color: var(--accent); }
+      .status-live {
+        border-color: rgba(29, 118, 108, 0.2);
+        color: var(--good);
+        background: rgba(29, 118, 108, 0.06);
+      }
+      .status-open {
+        border-color: rgba(154, 106, 24, 0.2);
+        color: var(--warn);
+        background: rgba(154, 106, 24, 0.06);
+      }
+      .status-deprecated {
+        border-color: rgba(97, 114, 134, 0.18);
+        color: var(--muted);
+        background: rgba(97, 114, 134, 0.08);
+      }
+      .top-grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1.1fr 0.9fr;
+        margin-top: 24px;
+      }
+      .card {
+        padding: 22px 24px;
+      }
+      .selector-bar {
+        position: sticky;
+        top: 16px;
+        z-index: 20;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        margin-top: 24px;
+        padding: 18px 20px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(12px);
+      }
+      .selector-copy {
+        min-width: 220px;
+      }
+      .selector-copy p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+      .selector-controls {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+      }
+      .selector-controls select,
+      .selector-controls button {
+        height: 44px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--text);
+        font-size: 14px;
+      }
+      .selector-controls select {
+        min-width: 320px;
+        padding: 0 14px;
+      }
+      .selector-controls button {
+        padding: 0 14px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .selector-controls button:disabled {
+        cursor: default;
+        color: #9aa8b7;
+        background: #f6f8fb;
+      }
+      .selector-status {
+        min-height: 20px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+      .slide-list {
+        display: grid;
+        gap: 22px;
+        margin-top: 26px;
+      }
+      .section-title {
+        margin: 28px 0 0;
+        font-size: 32px;
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
+      .section-copy {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.45;
+      }
+      .slide-card {
+        padding: 22px 24px 24px;
+      }
+      .slide-card.is-hidden {
+        display: none;
+      }
+      .slide-card-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 18px;
+      }
+      .slide-grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: 420px 1fr 1fr;
+      }
+      .slide-panel {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #fbfdff;
+        padding: 18px;
+      }
+      .slide-source {
+        grid-column: 2 / span 2;
+      }
+      .slide-options {
+        grid-column: 1 / -1;
+      }
+      .options-copy {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+      .variant-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 12px;
+      }
+      .variant-card {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #fff;
+        overflow: hidden;
+      }
+      .variant-selected {
+        border-color: rgba(74, 137, 200, 0.4);
+        box-shadow: 0 12px 28px rgba(74, 137, 200, 0.12);
+      }
+      .variant-option {
+        background: #fcfdff;
+      }
+      .variant-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 16px 16px 0;
+      }
+      .variant-head h3 {
+        margin: 6px 0 0;
+        font-size: 20px;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+      .variant-pill {
+        flex: 0 0 auto;
+        padding: 8px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        color: var(--muted);
+        background: #fff;
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .variant-body {
+        padding: 14px 16px 16px;
+      }
+      .variant-body p {
+        margin: 0;
+        color: #243344;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .artifact-shot {
+        margin: 0;
+        overflow: hidden;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+      .artifact-shot img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .artifact-shot figcaption {
+        padding: 12px 14px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.4;
+      }
+      .missing {
+        padding: 22px;
+        border-radius: 18px;
+        border: 1px dashed var(--line);
+        color: var(--muted);
+        background: #fbfcfe;
+      }
+      .markdown h3, .markdown h4 {
+        margin: 1.1em 0 0.45em;
+        line-height: 1.15;
+      }
+      .markdown h3 { font-size: 18px; }
+      .markdown h4 { font-size: 16px; }
+      .markdown p, .markdown li {
+        font-size: 15px;
+        line-height: 1.55;
+        color: #243344;
+      }
+      .markdown ul, .markdown ol {
+        padding-left: 22px;
+      }
+      .markdown code {
+        padding: 1px 6px;
+        border-radius: 8px;
+        background: #f2f6fa;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.92em;
+      }
+      @media (max-width: 1180px) {
+        .top-grid, .slide-grid { grid-template-columns: 1fr; }
+        .slide-card-head { flex-direction: column; }
+        .slide-source { grid-column: auto; }
+        .slide-options { grid-column: auto; }
+        .variant-grid { grid-template-columns: 1fr; }
+        .selector-bar { position: static; }
+        .selector-controls { width: 100%; }
+        .selector-controls select { min-width: 0; width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <section class="hero">
+        <div class="eyebrow">Designer Health</div>
+        <h1>Current deck spec and build status</h1>
+        <div class="summary">
+          This is the current running deck view. It uses the canonical deck spec
+          with intentionally preserved slide numbering, explicitly marks
+          deprecated and shelved concepts, and shows the current selected
+          direction plus alternate explored figure options wherever they already
+          exist.
+        </div>
+        <div class="chips"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/deck-spec.json">Deck spec</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/master-slide-specs.md">Master slide specs</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/deck-matrix.md">Deck matrix</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figure-companion.md">Figure companion</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/workflow.md">Workflow</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/assessment.md">Assessment</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/inputs/vox_deck_slide_specs_clean_pack.md">Clean pack</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/inputs/vox-full-slide-map-copy.md">Full slide map</a></div>
+      </section>
+
+      <section class="top-grid">
+        <article class="card">
+          <div class="eyebrow">Current Backbone</div>
+          <div class="markdown"><ul><li>Version: 2026-03-29.7</li><li>Active sequence: 1 → 2 → 3 → 5 → 4 → 6 → 7 → 8 → 9 → 10 → 11 → 12 → 13</li><li>Deprecated slides: 4/5</li><li>Policy: Preserve original slide numbering even when the active backbone is non-monotonic. The current running deck intentionally uses the literal sequence 3, 5, 4, 6, and the former merged slide 4/5 is retained only as a shelved historical concept.</li><li>Notes:</li><li>The current running backbone intentionally uses the literal sequence 3, 5, 4, 6 to preserve the original slide numbers while improving narrative flow.</li><li>The old merged slide 4/5 is now a shelved historical concept rather than the active bridge.</li><li>Later deck slides keep their original numbers instead of being renumbered after the reordered conceptual block.</li><li>Some working artifacts created before this numbering policy was locked still live under legacy paths, especially the current slide 7 workflow assets under slide-06 directories.</li></ul></div>
+          <div class="eyebrow" style="margin-top:20px;">Narrative Spine</div>
+          <div class="markdown"><ul><li>Demand is outpacing clinical capacity.</li><li>Recovering visit minutes can create supply.</li><li>History is the cleanest place to reclaim minutes because it is the wedge to pull first.</li><li>Visits start with story, not structure, so clinicians spend valuable minutes turning patient story into usable structure.</li><li>That only matters if the output is clinician-grade.</li><li>Vox prepares that starting point before the visit.</li><li>The clinician should start from a structured brief, not from zero.</li><li>If that shift is real, the category, economics, and beachhead are credible.</li></ul></div>
+        </article>
+        <article class="card">
+          <div class="eyebrow">Coverage Snapshot</div>
+          <div class="stats">
+            <span class="stat-chip">13 active slides</span>
+            <span class="stat-chip">1 deprecated slide</span>
+            <span class="stat-chip">8 slide packets checked in</span>
+            <span class="stat-chip">10 stamped slide figures</span>
+          </div>
+          <div class="eyebrow" style="margin-top:20px;">Spec Notes</div>
+          <div class="markdown"><p><code>deck-spec.json</code> is the canonical current deck backbone. The markdown docs remain companion references, but the report now renders the active / deprecated state directly from the codified spec.</p></div>
+        </article>
+      </section>
+
+      <section class="selector-bar">
+        <div class="selector-copy">
+          <div class="eyebrow">Slide Selector</div>
+          <p>Pick one slide to inspect, or switch back to the full deck view.</p>
+        </div>
+        <div class="selector-controls">
+          <button type="button" id="slide-prev">Previous</button>
+          <select id="slide-selector" aria-label="Select slide">
+            <option value="__all_active__">All active slides</option>
+<option value="__all__">All slides</option>
+<option value="slide-01">Slide 1 — VOX</option>
+<option value="slide-02">Slide 2 — Demand is outpacing clinical capacity</option>
+<option value="slide-03">Slide 3 — More efficient visits will increase supply</option>
+<option value="slide-05">Slide 5 — History is the cleanest place to reclaim minutes</option>
+<option value="slide-04">Slide 4 — Visits start with story, not structure</option>
+<option value="slide-06">Slide 6 — The hard part is producing a history clinicians can start from</option>
+<option value="slide-07">Slide 7 — Vox prepares the visit before it starts</option>
+<option value="slide-08">Slide 8 — The clinician starts from a structured brief</option>
+<option value="slide-09">Slide 9 — Current AI helps around the visit</option>
+<option value="slide-10">Slide 10 — Recovered visit time creates real capacity</option>
+<option value="slide-11">Slide 11 — Start where throughput proof is fastest</option>
+<option value="slide-12">Slide 12 — Built by people who understand the visit</option>
+<option value="slide-13">Slide 13 — This round is about proving trust, capture, and repeatable deployment</option>
+<option value="slide-04-05">Slide 4/5 — History Bridge (Shelved Combined Concept)</option>
+          </select>
+          <button type="button" id="slide-next">Next</button>
+          <span class="selector-status" id="slide-selector-status"></span>
+        </div>
+      </section>
+
+      <h2 class="section-title" data-section-heading="active">Active Backbone</h2>
+      <p class="section-copy" data-section-copy="active">
+        These are the slides currently in the running deck. The active order is
+        taken directly from <code>deck-spec.json</code>, so non-monotonic
+        sequences like <code>3 -&gt; 5 -&gt; 4 -&gt; 6</code> are shown
+        intentionally rather than normalized away.
+      </p>
+      <section class="slide-list" data-slide-section="active">
+        
+          <section class="slide-card" id="slide-01">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 1</div>
+                <h2>VOX</h2>
+              </div>
+              <div class="status-pill status-live">
+                Stamped figure exists
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-01/slide-01--version-000070.png" alt="slide-01 preview" />
+      <figcaption>slide-01 preview</figcaption>
+    </figure>
+  
+                <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-01/manifest.json">Manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-01/versions/version-000070--one-human-story-to-structure-membrane">Current version-000070</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-01/slide-01--version-000070.png">Figure PNG</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-01">Stamped dir</a></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                <p class="body-copy"><strong>Current version:</strong> version-000070</p>
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: set tone and establish seriousness</li><li>Header: <code>VOX</code></li><li>Subheader: <code>Pre-visit clinical intelligence for efficient, high-quality care.</code></li><li>Takeaway: Vox is a serious, premium, clinically oriented workflow company.</li><li>Figure role: minimal brand lockup only</li><li>Family: minimal lockup</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: historical opener concepts are now stamped; minimal lockup-only selection is still unresolved</li><li>Selected direction: Two older opener concepts are now stamped under the manifest-backed slide-01 inventory. The membrane version is the current historical reference lead, but the active deck still needs a simpler lockup-only final choice.</li><li>Notes:</li><li>Treat the current stamped surface as a reference lead, not a final locked opener.</li><li>The current deck still wants a more minimal title-slide treatment than these older concept comps.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>There is no real figure job beyond brand and tone framing.</p>
+<h6>Selected direction</h6>
+<p>Minimal lockup.</p>
+<h6>Core idea</h6>
+<p>One centered brand lockup with generous whitespace and almost no supporting structure.</p>
+<h6>Composition</h6>
+<ul><li>bird mark centered in upper-middle region</li><li>VOX directly beneath</li><li>one-line subheader beneath</li><li>one thin horizontal rule above the lockup</li><li>one thin horizontal rule below the subheader</li></ul>
+<h6>Avoid</h6>
+<ul><li>background image</li><li>diagrams</li><li>UI</li><li>extra body copy</li><li>decorative patterns</li></ul>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<ul><li><strong>Primary:</strong> Minimal title slide with the Designer bird mark above VOX, generous whitespace, two thin horizontal rules.</li><li><strong>Alternative direction:</strong> Even more stripped-down wordmark slide with almost no ornament if you want it to feel more serious / premium.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Put the Designer bird mark centered in the upper third of the slide.</li><li>Put <strong>VOX</strong> directly beneath it, centered, large, and with strong letter spacing.</li><li>Put the subheader beneath VOX, centered, with a lot of vertical breathing room.</li><li>Use a plain white background.</li><li>Put one thin horizontal rule above the VOX lockup and one below the subheader.</li><li>No background image, no diagram, no UI, no secondary text.</li></ul>
+<h6>Additional comments</h6>
+<ul><li>No external citation needed on-slide.</li><li>This slide wins by <strong>not</strong> trying too hard.</li><li>The whole job is tone.</li></ul></div>
+              </article>
+              
+              <article class="slide-panel slide-options">
+                <div class="eyebrow">Figure Options</div>
+                <p class="options-copy">
+                  Main selected direction: One Human Story to Structure Membrane.
+                </p>
+                <div class="variant-grid">
+                  
+    <article class="variant-card variant-selected">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Current Selection</div>
+          <h3>One Human Story to Structure Membrane</h3>
+        </div>
+        <div class="variant-pill">main selected</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-01/versions/version-000070--one-human-story-to-structure-membrane/figure.png" alt="One Human Story to Structure Membrane preview" />
+      <figcaption>One Human Story to Structure Membrane preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Current stamped historical lead for slide 1. Useful opener-direction reference, but still richer than the desired minimal lockup.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-01/versions/version-000070--one-human-story-to-structure-membrane">Stamped dir</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>One Human Story to Structure</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-01/versions/version-000071--one-human-story-to-structure/figure.png" alt="One Human Story to Structure preview" />
+      <figcaption>One Human Story to Structure preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Alternative historical opener concept imported into the stamped version set for comparison.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-01/versions/version-000071--one-human-story-to-structure">Stamped dir</a></div>
+      </div>
+    </article>
+  
+                </div>
+              </article>
+            
+            </div>
+          </section>
+        
+
+          <section class="slide-card" id="slide-02">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 2</div>
+                <h2>Demand is outpacing clinical capacity</h2>
+              </div>
+              <div class="status-pill status-live">
+                Stamped figure exists
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-02/slide-02--version-000002.png" alt="slide-02 preview" />
+      <figcaption>slide-02 preview</figcaption>
+    </figure>
+  
+                <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/manifest.json">Manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/versions/version-000002--slide-02">Current version-000002</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-02/README.md">Slide note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-02-wait-times-shortage-anchor.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-02.html">Slide report</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/slide-02--version-000002.png">Figure PNG</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-02-wait-times-shortage-banner.json">Spec 1</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-02-proof-tiles.json">Spec 2</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-02-proof-tiles-pd-template-1.json">Spec 3</a></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                <p class="body-copy"><strong>Current version:</strong> version-000002</p>
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: establish the system problem with clean proof</li><li>Header: <code>Demand is outpacing clinical capacity.</code></li><li>Subheader: _none_</li><li>Takeaway: Waits are rising, specialty access is already stretched, and the primary care shortage is federally designated.</li><li>Figure role: show worsening waits, current specialty strain, and hard shortage proof in one read</li><li>Family: wait-time trend + specialty breakout + shortage banner</li><li>Proof / citation:</li><li>Average new-patient physician wait time reached 31 days in 2025, up from 26 days in 2022 [1]</li><li>2025 specialty waits include OB/GYN at 41.8 days, gastroenterology at 40.0, dermatology at 36.5, cardiology at 32.7, and family medicine at 23.5 [1]</li><li>More than 1 in 4 Americans live in primary care HPSAs as of December 31, 2025; HRSA estimates only 48.18% of need is met in those areas [2]</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: locked Gemini HTML chart-led anchor is now selected; older native spec remains as historical coverage</li><li>Selected direction: The current selected slide-2 anchor is the locked Gemini HTML chart-led composition: benchmark wait-time trend on the left, 2025 specialty breakout on the right, and a full-width primary care shortage banner across the bottom, now restyled onto the white Designer theme canvas.</li><li>Notes:</li><li>This slide replaces the older two-proof-tile concept as the current selected direction.</li><li>The wait-time series must be labeled as benchmark survey years, not an annual series.</li><li>The bottom banner should keep the primary care HPSA designation explicit.</li><li>Current active fine-tune surface is slide-02/gemini-html/generated.html.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Make the supply problem undeniable in seconds.</p>
+<h6>Selected direction</h6>
+<p>Two proof tiles.</p>
+<h6>Core idea</h6>
+<p>Use two large proof tiles to show worsening access and delayed care.</p>
+<h6>Composition</h6>
+<ul><li>centered header</li><li>two large rounded proof tiles side by side</li><li>lots of whitespace</li></ul>
+<h6>Avoid</h6>
+<ul><li>charts</li><li>calendars</li><li>icons</li><li>decorative motifs</li><li>extra explanation</li></ul>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<ul><li><strong>Primary:</strong> Two large proof tiles showing worsening access and delayed care.</li><li><strong>Alternative:</strong> Same two proof tiles with a very faint calendar / schedule motif behind them.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Tile 1</li></ul>
+<ul><li>eyebrow: <strong>Access</strong></li><li>main number: <strong>~1 month</strong></li><li>supporting line: <strong>Average wait for a new doctor appointment</strong></li><li>small kicker beneath: <strong>Up 19% in three years</strong> [1]</li><li>Tile 2</li></ul>
+<ul><li>eyebrow: <strong>Deferred care</strong></li><li>main number: <strong>10.6%</strong></li><li>supporting line: <strong>Adults delayed or did not get care because no appointment was available when needed</strong> [2]</li><li>Main numbers should dominate visually.</li><li>Supporting text should be one line only.</li><li>If you use a motif, make it extremely faint and keep it behind the tiles, not around them.</li></ul>
+<h6>Additional comments</h6>
+<ul><li>This is a proof slide, not a visual centerpiece.</li><li>Keep it very clean.</li><li>These are the first true external-fact citations in the deck.</li></ul></div>
+              </article>
+              
+              <article class="slide-panel slide-options">
+                <div class="eyebrow">Figure Options</div>
+                <p class="options-copy">
+                  Main selected direction: Wait Times + Shortage Banner Gemini HTML.
+                </p>
+                <div class="variant-grid">
+                  
+    <article class="variant-card variant-selected">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Current Selection</div>
+          <h3>Wait Times + Shortage Banner Gemini HTML</h3>
+        </div>
+        <div class="variant-pill">main selected</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-02/versions/version-000002--slide-02/gemini-html/preview.png" alt="Wait Times + Shortage Banner Gemini HTML preview" />
+      <figcaption>Wait Times + Shortage Banner Gemini HTML preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Current locked slide-2 winner. Keeps the chart-led proof structure, but promotes it into the Montserrat-backed white Designer theme and makes the HTML branch the active fine-tune surface.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/versions/version-000002--slide-02/gemini-html">Locked branch</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/versions/version-000002--slide-02/gemini-html/generated.html">HTML</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/versions/version-000002--slide-02/gemini-html/preview.png">Preview</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-02-wait-times-shortage-anchor.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-02/versions/version-000002--slide-02">Stamped dir</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Wait Times + Shortage Banner Native</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      <div class="missing">No stamped preview yet.</div>
+      <div class="variant-body">
+        <p>Earlier native selected anchor built from the slide-2 spec. Retained as historical coverage and fallback reference, but no longer the selected working surface.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-02-wait-times-shortage-banner.json">Spec</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-02-wait-times-shortage-anchor.md">Slide packet</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Proof Tiles Legacy</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      <div class="missing">No stamped preview yet.</div>
+      <div class="variant-body">
+        <p>Older slide-2 family built around two proof tiles and scheduling motifs. Retained as historical coverage, but no longer the selected direction.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-02-proof-tiles.json">Spec</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-02-proof-tiles-pd-template-1.json">Spec</a></div>
+      </div>
+    </article>
+  
+                </div>
+              </article>
+            
+            </div>
+          </section>
+        
+
+          <section class="slide-card" id="slide-03">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 3</div>
+                <h2>More efficient visits will increase supply</h2>
+              </div>
+              <div class="status-pill status-live">
+                Stamped figure exists
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-03/slide-03--version-000069.png" alt="slide-03 preview" />
+      <figcaption>slide-03 preview</figcaption>
+    </figure>
+  
+                <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/manifest.json">Manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/versions/version-000069--restored-pre-migration-slide-03">Current version-000069</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-03/README.md">Slide note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-03-compound-ribbon-anchor.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-03.html">Slide report</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/slide-03--version-000069.png">Figure PNG</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-03-compound-ribbon-before-after.json">Spec 1</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-03-segmented-focus-bar.json">Spec 2</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/compound-ribbon-v2-hero-day-view.json">Spec 3</a></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                <p class="body-copy"><strong>Current version:</strong> version-000069</p>
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: introduce the operational lever</li><li>Header: <code>More efficient visits will increase supply.</code></li><li>Subheader: <code>Use chips: Every minute matters / Small per-visit gains compound.</code></li><li>Takeaway: Small per-visit gains compound into real capacity.</li><li>Figure role: make history wedge plus repeated efficiency equals capacity land instantly</li><li>Family: segmented visit bar plus compounding capacity</li><li>Proof / citation:</li><li>Adult primary care visits increased from 18.0 to 20.9 minutes while items addressed increased from 5.4 to 7.1 per visit [3]</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: strong stamped anchor exists; older native output bundles are now also registered as historical versions</li><li>Selected direction: Compound ribbon before/after is the current selected slide-3 anchor.</li><li>Notes:</li><li>The compound-ribbon before/after version is the current preferred anchor.</li><li>Older native output bundles are now imported into the manifest-backed history instead of living only under output/figures.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Make “history wedge + repeated efficiency = capacity” land instantly.</p>
+<h6>Selected direction</h6>
+<p>Segmented hero visit bar plus quieter repeated mini-bars.</p>
+<h6>Core idea</h6>
+<p>One highlighted visit segment shows where time is most moveable; repeated small gains across visits visibly create one additional visit.</p>
+<h6>Composition</h6>
+<ul><li>top: one long segmented visit bar with faint minute ruler</li><li>bracket / callout attached to history segment</li><li>bottom: quieter repeated visit bars showing compounding into one new visit</li></ul>
+<h6>Avoid</h6>
+<ul><li>exact minute values inside segments</li><li>too many repeated mini-bars</li><li>loud arrows</li><li>forensic-looking decomposition</li></ul>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<ul><li><strong>Primary:</strong> One clean visit-duration bar with the history segment highlighted.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Put one long horizontal bar across the middle of the slide.</li><li>Best label above the bar:</li></ul>
+<ul><li><strong>Typical visit</strong></li><li>or <strong>~20-minute primary care visit</strong> if you want to anchor to the upper end of the cited range [3]</li><li>Add a faint minute ruler above or below the bar:</li></ul>
+<ul><li><strong>0 | 5 | 10 | 15 | 20</strong></li><li>Divide the bar into three segments:</li></ul>
+<ul><li><strong>History reconstruction</strong> in accent color</li><li><strong>Decisions + counseling</strong> in neutral</li><li><strong>Everything else</strong> in lighter neutral</li><li>Attach one callout box or bracket to the history segment:</li></ul>
+<ul><li>Most variable minutes of the visit</li><li>Best target for upstream prep without losing quality</li><li>The part AI can help most</li><li>Do <strong>not</strong> print exact minute values inside each segment unless you later surface a direct source for the decomposition.</li><li>Do <strong>not</strong> claim on-slide that history is the “largest” share of the visit.</li></ul>
+<h6>Additional comments</h6>
+<ul><li>The source supports a <strong>tight time budget and many items per visit</strong>, not a precise time split. [3]</li><li>So the figure should stay conceptual, not forensic.</li><li>This slide’s sourced claim is the <strong>crowded visit</strong>, not a hard-coded history percentage.</li></ul></div>
+              </article>
+              
+              <article class="slide-panel slide-options">
+                <div class="eyebrow">Figure Options</div>
+                <p class="options-copy">
+                  Main selected direction: Compound Ribbon Before/After.
+                </p>
+                <div class="variant-grid">
+                  
+    <article class="variant-card variant-selected">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Current Selection</div>
+          <h3>Compound Ribbon Before/After</h3>
+        </div>
+        <div class="variant-pill">main selected</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-03/versions/version-000069--restored-pre-migration-slide-03/figure.png" alt="Compound Ribbon Before/After preview" />
+      <figcaption>Compound Ribbon Before/After preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Current selected slide-3 anchor restored from the pre-migration slide comp and promoted into the manifest-backed version system.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/versions/version-000069--restored-pre-migration-slide-03">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-03-compound-ribbon-before-after.json">Spec</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Compound Ribbon Before/After Native Output</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-03/versions/version-000072--compound-ribbon-before-after-native/figure.png" alt="Compound Ribbon Before/After Native Output preview" />
+      <figcaption>Compound Ribbon Before/After Native Output preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Archived native output bundle imported into the stamped history so the original render no longer lives only under output/figures.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/versions/version-000072--compound-ribbon-before-after-native">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-03-compound-ribbon-before-after.json">Spec</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Segmented Focus Bar</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-03/versions/version-000073--segmented-focus-bar-native/figure.png" alt="Segmented Focus Bar preview" />
+      <figcaption>Segmented Focus Bar preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Cleaner original conceptual wedge version with the highlighted history segment and compounding capacity logic.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-03/versions/version-000073--segmented-focus-bar-native">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-03-segmented-focus-bar.json">Spec</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Compound Ribbon v2</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="../../output/figures/compound-ribbon-v2-hero-day-view/figure.png" alt="Compound Ribbon v2 preview" />
+      <figcaption>Compound Ribbon v2 preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>A more expansive native comp with the hero visit plus day-view capacity argument.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/compound-ribbon-v2-hero-day-view.json">Spec</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/output/figures/compound-ribbon-v2-hero-day-view/figure.html">Render</a></div>
+      </div>
+    </article>
+  
+                </div>
+              </article>
+            
+            </div>
+          </section>
+        
+
+          <section class="slide-card" id="slide-05">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 5</div>
+                <h2>History is the cleanest place to reclaim minutes</h2>
+              </div>
+              <div class="status-pill status-live">
+                Stamped figure exists
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-05/slide-05--version-000021.png" alt="slide-05 preview" />
+      <figcaption>slide-05 preview</figcaption>
+    </figure>
+  
+                <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/manifest.json">Manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05">Current version-000021</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-05/README.md">Slide note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-05-history-wedge.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-05.html">Slide report</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/slide-05--version-000021.png">Figure PNG</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-05-history-wedge-v1.json">Spec</a></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                <p class="body-copy"><strong>Current version:</strong> version-000021</p>
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: make the wedge/intervention-point argument immediately after slide 3</li><li>Header: <code>History is the cleanest place to reclaim minutes.</code></li><li>Subheader: <code>No formal subtitle; keep the message sparse and grouped around the wedge.</code></li><li>Takeaway: History can begin before the encounter, is repeated across visits, and remains time-variable, so it is the wedge to pull first.</li><li>Figure role: quote the slide-3 source bar, peel out the history wedge, and attach one compressed warrant stack</li><li>Family: quoted slide-3 wedge plus grouped reasons</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: Gemini HTML top-beat branch is now locked as the current winner; older native v1 remains as a historical option</li><li>Selected direction: The current selected direction is the locked Gemini HTML top-beat slide: keep the quoted slide-3 source bar, one clean broad arc, the extracted history wedge, and the attached grouped reasons, with no lower explanatory panel.</li><li>Notes:</li><li>This slide now sits immediately after slide 3 in the active backbone.</li><li>Keep this slide sparse; do not let lower mechanism detail leak in.</li><li>The current locked winner is the Gemini HTML branch derived from the shelved merged top-beat reference.</li><li>The lower explanatory mechanism beat has been removed; this slide now lives as a standalone top-beat intervention slide.</li><li>The older native v1 asset remains useful historical reference, but it is no longer the selected winner.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Make the intervention point feel obvious and credible.</p>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<ul><li><strong>Primary:</strong> A zoom-in on the history segment from Slide 3: one large central history block with three attached reasons.</li><li><strong>Alternative:</strong> A three-column conceptual slide if you absolutely need something simpler, though the single-object version is stronger.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Put one large accent-colored band or rounded block across the center of the slide.</li><li>Label it:</li></ul>
+<ul><li><strong>History reconstruction</strong></li><li>or <strong>History taking</strong></li><li>Attach three callout boxes to that central block:</li></ul>
+<ul><li><strong>Retold at every visit</strong></li></ul>
+<ul><li>support line: *The same story gets repeated across encounters*</li><li><strong>Time-variable</strong></li></ul>
+<ul><li>support line: *Time required depends on complexity and communication*</li><li><strong>Can begin before the encounter</strong></li></ul>
+<ul><li>support line: *Much of it can happen before the clinician is on the clock*</li><li>Give each callout a slightly distinct visual cue:</li></ul>
+<ul><li>repetition / echo motif</li><li>time / uncertainty motif</li><li>upstream / off-clock motif</li></ul>
+<h6>Additional comments</h6>
+<ul><li>Keep this conceptual.</li><li>No external citation needed on-slide unless you later add a quantitative proof line.</li><li>This should feel like a zoom-in on the wedge, not a new framework.</li></ul></div>
+              </article>
+              
+              <article class="slide-panel slide-options">
+                <div class="eyebrow">Figure Options</div>
+                <p class="options-copy">
+                  Main selected direction: History Wedge Gemini HTML.
+                </p>
+                <div class="variant-grid">
+                  
+    <article class="variant-card variant-selected">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Current Selection</div>
+          <h3>History Wedge Gemini HTML</h3>
+        </div>
+        <div class="variant-pill">main selected</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-05/versions/version-000021--slide-05/gemini-html/preview.png" alt="History Wedge Gemini HTML preview" />
+      <figcaption>History Wedge Gemini HTML preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Current locked slide-5 winner. Uses the shelved merged top-beat as the direct reference, then strips the lower explanatory panel so the slide stands alone as the sparse intervention-point argument.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05/gemini-html">Locked branch</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05/gemini-html/generated.html">HTML</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05/gemini-html/preview.png">Preview</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05/gemini-html/preview.svg">SVG</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>History Wedge Native v1</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-05/versions/version-000021--slide-05/figure.png" alt="History Wedge Native v1 preview" />
+      <figcaption>History Wedge Native v1 preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Earlier native reopened wedge slide. Kept as historical reference, but no longer the selected direction after the Gemini HTML top-beat branch proved stronger.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-05/versions/version-000021--slide-05">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-05-history-wedge-v1.json">Spec</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-05.html">Slide report</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Slide 5 Packet</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      <div class="missing">No stamped preview yet.</div>
+      <div class="variant-body">
+        <p>The current active packet and copy authority for the reopened slide-5 wedge argument.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-05-history-wedge.md">Slide packet</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Shelved Merge Top-Beat Reference</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-04-05/versions/version-000013--gemini-image/image-01.jpg" alt="Shelved Merge Top-Beat Reference preview" />
+      <figcaption>Shelved Merge Top-Beat Reference preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Useful composition reference from the shelved merged concept. Stronger on the upper wedge/hero/support grouping than on the lower explanatory beat.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-04-05/README.md">Historical note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05/versions/version-000013--gemini-image/image-01.jpg">Image</a></div>
+      </div>
+    </article>
+  
+                </div>
+              </article>
+            
+            </div>
+          </section>
+        
+
+          <section class="slide-card" id="slide-04">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 4</div>
+                <h2>Visits start with story, not structure</h2>
+              </div>
+              <div class="status-pill status-live">
+                Stamped figure exists
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-04/slide-04--version-000074.png" alt="slide-04 preview" />
+      <figcaption>slide-04 preview</figcaption>
+    </figure>
+  
+                <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04/manifest.json">Manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04/versions/version-000074--transformation-flow-native">Current version-000074</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-04/README.md">Slide note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-04-story-not-structure.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-04.html">Slide report</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04/slide-04--version-000074.png">Figure PNG</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-04-transformation-flow.json">Spec 1</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-04-story-streams-v1.json">Spec 2</a></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                <p class="body-copy"><strong>Current version:</strong> version-000074</p>
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: make the mechanism legible after the wedge/intervention claim has already landed</li><li>Header: <code>Visits start with story, not structure.</code></li><li>Subheader: <code>Clinicians spend valuable minutes turning patient story into decision-ready structure.</code></li><li>Takeaway: Valuable visit time is spent turning patient story into decision-ready structure.</li><li>Figure role: show human story on the left, necessary organizing work in the middle, and decision-ready structure on the right</li><li>Family: standalone transformation flow</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: legacy mechanism comparison set is now stamped; transformation-flow native is the current reference lead while the reopened final render is still pending</li><li>Selected direction: The reopened slide-4 mechanism work now has a stamped comparison set. Transformation-flow native is the current reference lead, story-streams remains the quieter option, and the final reopened render still needs a fresh pass.</li><li>Notes:</li><li>This slide now follows slide 5 in the active backbone.</li><li>Keep the left story field soft and human, the middle editorial, and the right side calm and decision-ready.</li><li>Gemini image plus Gemini HTML is the primary iteration lane once rendering starts.</li><li>The packet remains the source-of-truth intent even though the current stamped surface is a legacy-native reference lead.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Show story on the left, usable structure on the right, and make the middle feel like scarce cognitive work.</p>
+<h6>Selected direction</h6>
+<p>Narrative bridge / membrane.</p>
+<h6>Core idea</h6>
+<p>One human story enters on the left. A soft broad bridge in the middle shows the real translation work. A quiet structured card on the right shows the usable result. The middle communicates through grouping and flow, not prose.</p>
+<h6>Composition</h6>
+<ul><li>centered horizontal hero figure</li><li>left narrative panel</li><li>broad rounded transformation bridge in the middle</li><li>right structured card</li><li>thin callout beneath the bridge</li></ul>
+<h6>Avoid</h6>
+<ul><li>tables in the middle</li><li>sentence-to-output rows</li><li>workflow boxes</li><li>bullets on the left</li><li>fake UI on the right</li><li>thick arrows</li><li>funnels</li></ul>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<p>messy patient story → translate / structure / verify → decision-ready structure.</p>
+<ul><li><strong>Primary:</strong> Left-to-right conceptual transformation:</li><li><strong>Alternative:</strong> Same concept, but with a more funnel-like middle transformation if that feels visually stronger.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Build one horizontal conceptual figure across the center of the slide.</li><li>Left side:</li></ul>
+<ul><li>one large soft-edged speech bubble / narrative blob labeled <strong>Patient story</strong></li><li>inside it, 4–6 faint narrative fragments</li><li>Middle:</li></ul>
+<ul><li>one prominent transformation block / arrow / funnel</li><li>label: <strong>Translate → structure → verify</strong></li><li>Right side:</li></ul>
+<ul><li>one clean structured card labeled <strong>Decision-ready structure</strong></li><li>inside it, 3 simple sections:</li></ul>
+<ul><li>Key positives / negatives</li><li>Timeline</li><li>Questions to verify</li><li>Attach the callout to the <strong>middle step</strong>, not the right side:</li></ul>
+<ul><li><strong>Necessary work that doesn’t have to consume visit time</strong></li><li>Keep the right side conceptual, not product-specific.</li></ul>
+<h6>Additional comments</h6>
+<ul><li>No external stat needed on-slide.</li><li>This is the “aha” mechanism slide.</li><li>The middle step is the star.</li></ul></div>
+              </article>
+              
+              <article class="slide-panel slide-options">
+                <div class="eyebrow">Figure Options</div>
+                <p class="options-copy">
+                  Main selected direction: Transformation Flow Native.
+                </p>
+                <div class="variant-grid">
+                  
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Slide 4 Packet</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      <div class="missing">No stamped preview yet.</div>
+      <div class="variant-body">
+        <p>The reopened active slide-4 mechanism direction. Use the old mechanism family as the base, especially the softer story field and wobbly narrative texture on the left.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-04-story-not-structure.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04">Stamped dir</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-selected">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Current Selection</div>
+          <h3>Transformation Flow Native</h3>
+        </div>
+        <div class="variant-pill">main selected</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-04/versions/version-000074--transformation-flow-native/figure.png" alt="Transformation Flow Native preview" />
+      <figcaption>Transformation Flow Native preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Strong standalone mechanism slide from the pre-merge direction. This is now the stamped current reference lead for the reopened active slide 4.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04/versions/version-000074--transformation-flow-native">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-04-transformation-flow.json">Spec</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Story Streams v1 Native</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-04/versions/version-000075--story-streams-v1-native/figure.png" alt="Story Streams v1 Native preview" />
+      <figcaption>Story Streams v1 Native preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Membrane-style story-to-structure direction. Useful as a middle-zone reference for the reopened mechanism slide.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04/versions/version-000075--story-streams-v1-native">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-04-story-streams-v1.json">Spec</a></div>
+      </div>
+    </article>
+  
+                </div>
+              </article>
+            
+            </div>
+          </section>
+        
+
+          <section class="slide-card" id="slide-06">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 6</div>
+                <h2>The hard part is producing a history clinicians can start from</h2>
+              </div>
+              <div class="status-pill status-open">
+                No stamped figure yet
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                <div class="missing">No stamped preview yet.</div>
+                <div class="file-row"></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: define the quality bar</li><li>Header: <code>The hard part is producing a history clinicians can start from.</code></li><li>Subheader: <code>Vox creates value by turning patient story into adaptive, structured, verifiable history clinicians can actually use.</code></li><li>Takeaway: This only matters if the output is clinician-grade.</li><li>Figure role: codify the success state</li><li>Family: success-state qualification card</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: missing</li><li>Selected direction: No selected visual yet.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Codify the success state.</p>
+<h6>Selected direction</h6>
+<p>Central success-state card.</p>
+<h6>Core idea</h6>
+<p>One prominent clinician-grade-history card supported by four qualifying attributes.</p>
+<h6>Composition</h6>
+<ul><li>one large central card</li><li>four compact support elements beneath or around it</li><li>one payoff line below</li></ul>
+<h6>Avoid</h6>
+<ul><li>intake-form language</li><li>fake product screenshots</li><li>dense comparison tables</li></ul>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<ul><li><strong>Primary:</strong> Central success-state card showing the standard Vox has to meet.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Place one prominent central card slightly above the vertical midpoint.</li><li>Label the card:</li></ul>
+<ul><li><strong>History clinicians can start from</strong></li><li>alt: <strong>Clinician-grade history</strong></li><li>Beneath or around that card, place four support / qualification elements:</li></ul>
+<ul><li>Adaptive</li><li>Structured</li><li>Prioritized</li><li>Verifiable</li><li>Best treatment:</li></ul>
+<ul><li>either four support pillars beneath the card</li><li>or a tight four-cell qualification row beneath it</li><li>Under the main card, place one payoff line:</li></ul>
+<ul><li><strong>Changes the starting point of the visit</strong></li><li>Do <strong>not</strong> repeat the patient story bubble from Slide 4.</li><li>Do <strong>not</strong> show multiple fake output options.</li></ul>
+<h6>Additional comments</h6>
+<ul><li>No external stat needed on-slide.</li><li>This is about the <strong>standard that matters</strong>, not about forms.</li><li>The card has to feel substantial, not flimsy.</li></ul></div>
+              </article>
+              
+            </div>
+          </section>
+        
+
+          <section class="slide-card" id="slide-07">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 7</div>
+                <h2>Vox prepares the visit before it starts</h2>
+              </div>
+              <div class="status-pill status-live">
+                Stamped figure exists
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-06/slide-06--version-000028.png" alt="slide-07 preview" />
+      <figcaption>slide-07 preview</figcaption>
+    </figure>
+  
+                <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/manifest.json">Manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/versions/version-000028--slide-07">Current version-000028</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-06/README.md">Slide note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-06-workflow-strip.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-06.html">Slide report</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/slide-06--version-000028.png">Figure PNG</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-06-workflow-strip-v3.json">Spec</a></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                <p class="body-copy"><strong>Current version:</strong> version-000028</p>
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: explain the workflow</li><li>Header: <code>Vox prepares the visit before it starts.</code></li><li>Subheader: <code>Vox interviews, structures, and hands off a brief the clinician can verify and use.</code></li><li>Takeaway: Vox interviews, structures, and hands off a brief the clinician verifies.</li><li>Figure role: show a credible pre-visit operational flow</li><li>Family: four-step workflow strip</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: canonical native v3 exists and clears the loop gate; older native v1 is now also registered as historical coverage</li><li>Selected direction: Workflow strip v3 is the current selected and stamped direction. The slide is canonically slide 7 even though the artifact directory still uses legacy slide-06 paths.</li><li>Notes:</li><li>Canonical deck slide number is 7.</li><li>Current packet and stamped assets still live under legacy slide-06 paths from the temporary renumbered phase.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Show a credible pre-visit operational flow.</p>
+<h6>Selected direction</h6>
+<p>Crisp four-step strip.</p>
+<h6>Core idea</h6>
+<p>One horizontal four-step workflow: Invite → Interview → Structure → Verify.</p>
+<h6>Composition</h6>
+<ul><li>four evenly weighted rounded stages across one horizontal strip</li><li>minimal support text beneath each</li><li>small trust tags under later steps if needed</li></ul>
+<h6>Avoid</h6>
+<ul><li>swimlanes</li><li>too many arrows</li><li>dense captions</li><li>system-architecture styling</li></ul>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<p>Invite → Interview → Structure → Verify.</p>
+<ul><li><strong>Primary:</strong> Four-step workflow:</li><li><strong>Alternative:</strong> Same four steps with slightly more visual emphasis on the handoff artifact between steps 3 and 4.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Four-step horizontal flow</li></ul>
+<ol><li>Invite</li><li>Interview</li><li>Structure</li><li>Verify</li></ol>
+<ul><li>Minimal supporting text under each step</li><li>Small trust tags under the later steps:</li></ul>
+<ul><li>provenance</li><li>explicit unknowns</li><li>verification queue</li><li>Keep the verbs crisp and equal in visual weight.</li></ul>
+<h6>Additional comments</h6>
+<ul><li>No external citation needed on-slide.</li><li>This is an operational slide, not an evidence slide.</li></ul></div>
+              </article>
+              
+              <article class="slide-panel slide-options">
+                <div class="eyebrow">Figure Options</div>
+                <p class="options-copy">
+                  Main selected direction: Workflow Strip v3.
+                </p>
+                <div class="variant-grid">
+                  
+    <article class="variant-card variant-selected">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Current Selection</div>
+          <h3>Workflow Strip v3</h3>
+        </div>
+        <div class="variant-pill">main selected</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-06/versions/version-000028--slide-07/figure.png" alt="Workflow Strip v3 preview" />
+      <figcaption>Workflow Strip v3 preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Current selected native workflow figure. The overlapping handoff card was removed and the strip now clears the loop gate.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/versions/version-000028--slide-07">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-06-workflow-strip-v3.json">Spec</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-06.html">Slide report</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Workflow Strip v1 Native</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-06/versions/version-000076--workflow-strip-v1-native/figure.png" alt="Workflow Strip v1 Native preview" />
+      <figcaption>Workflow Strip v1 Native preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Earlier native workflow-strip pass imported into the manifest-backed history so the legacy render is no longer orphaned under output/figures.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/versions/version-000076--workflow-strip-v1-native">Stamped dir</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Gemini Image Pass</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-06/versions/version-000028--slide-07/gemini-image/image-01.jpg" alt="Gemini Image Pass preview" />
+      <figcaption>Gemini Image Pass preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Taste/composition branch from Gemini image generation. Useful for style comparison, but not canonical.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/versions/version-000028--slide-07/gemini-image">Artifact dir</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Gemini HTML Pass</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-06/versions/version-000028--slide-07/gemini-html/preview.png" alt="Gemini HTML Pass preview" />
+      <figcaption>Gemini HTML Pass preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Editable HTML/SVG-leaning branch from Gemini. Useful for structural comparison, but not the selected winner.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06/versions/version-000028--slide-07/gemini-html">Artifact dir</a></div>
+      </div>
+    </article>
+  
+                </div>
+              </article>
+            
+            </div>
+          </section>
+        
+
+          <section class="slide-card" id="slide-08">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 8</div>
+                <h2>The clinician starts from a structured brief</h2>
+              </div>
+              <div class="status-pill status-live">
+                Stamped figure exists
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-08/slide-08--version-000079.png" alt="slide-08 preview" />
+      <figcaption>slide-08 preview</figcaption>
+    </figure>
+  
+                <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-08/manifest.json">Manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-08/versions/version-000079--clinician-brief-attempt-a-v2-slide-chrome">Current version-000079</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-08/README.md">Slide note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-08.html">Slide report</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-08/slide-08--version-000079.png">Figure PNG</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-08">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-08-artifact-callouts.json">Spec</a></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                <p class="body-copy"><strong>Current version:</strong> version-000079</p>
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: make the product tangible</li><li>Header: <code>The clinician starts from a structured brief.</code></li><li>Subheader: <code>Scan, verify, decide.</code></li><li>Takeaway: The product is a structured clinical brief the clinician can actually start from.</li><li>Figure role: turn the abstract product into a concrete object</li><li>Family: artifact with zoom callouts</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: versioned clinician-brief HTML is now stamped as the current lead; older artifact-callouts native remains archived as prior reference coverage</li><li>Selected direction: Clinician-brief-attempt-a-v2-slide-chrome is now the current stamped slide-8 lead. It keeps the report as the central product artifact while restoring the proper Designer slide header and white-canvas chrome around it.</li><li>Notes:</li><li>A multi-model slide-8 ideation pass also exists under experiments and remains useful context.</li><li>The older artifact-callouts native version remains in stamped history as archived reference coverage.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Turn the abstract product into a concrete object.</p>
+<h6>Selected direction</h6>
+<p>Central brief plus three anchored zooms.</p>
+<h6>Core idea</h6>
+<p>One central structured brief is the hero artifact. Three zoomed regions map to the core jobs: what matters, what happened when, and what still needs confirmation.</p>
+<h6>Composition</h6>
+<ul><li>centered one-page report as hero object</li><li>three anchored zoom callouts around it</li><li>subtle leader lines or matching highlights tying zooms to visible regions</li></ul>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<ul><li><strong>Primary:</strong> Structured brief / artifact with three zoomed callouts.</li><li><strong>Alternative:</strong> Main artifact centered with three side callouts rather than zoom windows, if that reads cleaner.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Put one central artifact on the slide: a clean one-page structured brief / report.</li><li>Pull out or zoom into three regions of that artifact:</li></ul>
+<ul><li><strong>What matters</strong></li><li><strong>What happened when</strong></li><li><strong>What still needs confirmation</strong></li><li>Literal alternatives if preferred:</li></ul>
+<ul><li>key positives / negatives</li><li>timeline anchors</li><li>questions to verify</li><li>Each zoom should clearly map to a visible place on the main document.</li><li>The zooms should be large enough to read instantly.</li></ul>
+<h6>Additional comments</h6>
+<ul><li>No external stat needed on-slide.</li><li>This is one of the strongest anchor slides.</li><li>It should feel like a usable starting point, not a UI demo.</li></ul></div>
+              </article>
+              
+              <article class="slide-panel slide-options">
+                <div class="eyebrow">Figure Options</div>
+                <p class="options-copy">
+                  Main selected direction: Clinician Brief Attempt A V2 Slide Chrome.
+                </p>
+                <div class="variant-grid">
+                  
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Artifact Callouts Native</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-08/versions/version-000077--artifact-callouts-native/figure.png" alt="Artifact Callouts Native preview" />
+      <figcaption>Artifact Callouts Native preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Archived prior stamped slide-8 reference lead imported from the legacy native artifact-callout spec.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-08/versions/version-000077--artifact-callouts-native">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-08-artifact-callouts.json">Spec</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-selected">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Current Selection</div>
+          <h3>Clinician Brief Attempt A V2 Slide Chrome</h3>
+        </div>
+        <div class="variant-pill">main selected</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-08/versions/version-000079--clinician-brief-attempt-a-v2-slide-chrome/preview.png" alt="Clinician Brief Attempt A V2 Slide Chrome preview" />
+      <figcaption>Clinician Brief Attempt A V2 Slide Chrome preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Current stamped slide-8 lead. Keeps the clinician brief as the central artifact and wraps it in proper Designer slide chrome with the official header and subheader.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-08/versions/version-000079--clinician-brief-attempt-a-v2-slide-chrome">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-08/slide-08--version-000079.html">Root HTML</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-08/slide-08--version-000079.png">Root PNG</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Signal Report Ideation</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      <div class="missing">No stamped preview yet.</div>
+      <div class="variant-body">
+        <p>User-directed multi-model ideation comparing alternate ways to make the structured brief tangible without over-synthesizing the brief.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-08-signal-report-ideation-2026-03-31/README.md">Experiment README</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/experiments/slide-08-signal-report-ideation-2026-03-31/compare.html">Compare board</a></div>
+      </div>
+    </article>
+  
+                </div>
+              </article>
+            
+            </div>
+          </section>
+        
+
+          <section class="slide-card" id="slide-09">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 9</div>
+                <h2>Current AI helps around the visit</h2>
+              </div>
+              <div class="status-pill status-live">
+                Stamped figure exists
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-09/slide-09--version-000030.png" alt="slide-09 preview" />
+      <figcaption>slide-09 preview</figcaption>
+    </figure>
+  
+                <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-09/manifest.json">Manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09">Current version-000030</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-09/README.md">Slide note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-09-care-journey-gap.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-09.html">Slide report</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-09/slide-09--version-000030.png">Figure PNG</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-09">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-09-starting-point-strip-v1.json">Spec</a></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                <p class="body-copy"><strong>Current version:</strong> version-000030</p>
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: define the category gap</li><li>Header: <code>Current AI helps around the visit. Vox changes how the visit starts.</code></li><li>Subheader: <code>Most assistive AI reduces operational or documentation work. Vox gives the clinician a structured brief at the beginning of the visit.</code></li><li>Takeaway: Current assistive AI helps around the encounter; Vox changes the clinician&#39;s starting point.</li><li>Figure role: position Vox as the start-of-visit layer inside the care journey</li><li>Family: starting-point strip with Vox brief</li><li>Proof / citation:</li><li>Optional evidence line: ambient AI scribes have already shown utilization and reduced documentation burden [4][5]</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: canonical starting-point strip exists and is stamped; only optional copy polish remains</li><li>Selected direction: Starting-point strip v1 is the current selected and stamped direction. It keeps existing assistive support visible around the encounter while making Vox explicit as the start-of-visit layer.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Locate the unmet need spatially in the care journey.</p>
+<h6>Selected direction</h6>
+<p>Workflow-gap journey strip.</p>
+<h6>Core idea</h6>
+<p>Map the care journey from before the visit through after the visit. Show adjacent parts of the workflow as increasingly assisted, but leave the “start of visit” zone visibly open and highlighted as the unresolved problem.</p>
+<h6>Composition</h6>
+<ul><li>one horizontal journey strip across the slide</li><li>three zones: Before visit / Start of visit / During &amp; after</li><li>supported zones lightly filled</li><li>open zone outlined or accent-highlighted</li></ul>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<ul><li><strong>Primary:</strong> Workflow-gap map across the care journey.</li><li><strong>Alternative:</strong> Two-column comparison, but only if the workflow-gap map proves too hard to execute cleanly.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Build a horizontal care-journey strip across the slide.</li><li>Divide it into three zones:</li></ul>
+<ul><li>Before visit</li><li>Start of visit</li><li>During / after</li><li>Show the already-supported parts of the workflow as filled / validated.</li><li>Leave the <strong>Start of visit</strong> zone open or outlined in accent color.</li><li>Supported zones can carry small labels like:</li></ul>
+<ul><li>reminders</li><li>scheduling</li><li>documentation support</li><li>note generation</li><li>clerical relief</li><li>Open zone can carry:</li></ul>
+<ul><li>structured starting point</li><li>pre-decision signal</li><li>recovered decision time</li></ul>
+<h6>Additional comments</h6>
+<ul><li>This slide is conceptually strong but visually design-sensitive.</li><li>The workflow-gap map is stronger than two text columns.</li><li>The citations here are best as tiny footnotes or speaker-note support, not big on-slide copy.</li></ul></div>
+              </article>
+              
+              <article class="slide-panel slide-options">
+                <div class="eyebrow">Figure Options</div>
+                <p class="options-copy">
+                  Main selected direction: Starting-Point Strip v1.
+                </p>
+                <div class="variant-grid">
+                  
+    <article class="variant-card variant-selected">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Current Selection</div>
+          <h3>Starting-Point Strip v1</h3>
+        </div>
+        <div class="variant-pill">main selected</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-09/versions/version-000030--slide-09/figure.png" alt="Starting-Point Strip v1 preview" />
+      <figcaption>Starting-Point Strip v1 preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Current selected official slide 9. The center Vox-prepared brief makes the category point explicit while the outer support zones stay quiet.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-09-starting-point-strip-v1.json">Spec</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-09.html">Slide report</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Strip Gemini Image</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-09/versions/version-000030--slide-09/gemini-image/image-01.jpg" alt="Strip Gemini Image preview" />
+      <figcaption>Strip Gemini Image preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Taste and composition reference for the selected strip direction.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-09/versions/version-000030--slide-09/gemini-image">Artifact dir</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Threshold v2</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      <div class="missing">No stamped preview yet.</div>
+      <div class="variant-body">
+        <p>Challenge branch that emphasizes the encounter boundary more symbolically.</p>
+        <div class="file-row"></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Hallway v2</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      <div class="missing">No stamped preview yet.</div>
+      <div class="variant-body">
+        <p>Contextual clinical-photo branch. Useful for comparison, but less direct than the selected strip.</p>
+        <div class="file-row"></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Clipboard v2</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      <div class="missing">No stamped preview yet.</div>
+      <div class="variant-body">
+        <p>Tangible hybrid branch that makes the brief feel physical, but reads less cleanly than the selected strip.</p>
+        <div class="file-row"></div>
+      </div>
+    </article>
+  
+                </div>
+              </article>
+            
+            </div>
+          </section>
+        
+
+          <section class="slide-card" id="slide-10">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 10</div>
+                <h2>Recovered visit time creates real capacity</h2>
+              </div>
+              <div class="status-pill status-live">
+                Stamped figure exists
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-10/slide-10--version-000038.png" alt="slide-10 preview" />
+      <figcaption>slide-10 preview</figcaption>
+    </figure>
+  
+                <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/manifest.json">Manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1">Current version-000038</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-10/README.md">Slide note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-10-capacity-economics.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-10.html">Slide report</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/slide-10--version-000038.png">Figure PNG</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-10-hero-metrics.json">Spec</a></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                <p class="body-copy"><strong>Current version:</strong> version-000038</p>
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: show economic consequence</li><li>Header: <code>Recovered visit time creates real capacity.</code></li><li>Subheader: <code>When recovered minutes become completed visits, the impact is meaningful.</code></li><li>Takeaway: Recovered minutes matter when they convert into completed visits.</li><li>Figure role: make the economics intuitive and credible</li><li>Family: hero economics block plus scenarios</li><li>Proof / citation:</li><li>+1 visit / provider / day</li><li>$11,000 / year</li><li>~$917 / month break-even spend / provider</li><li>Use 2025 Medicare anchors and 40% contribution-margin planning assumption [6][7][8]</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: versioned comparison set exists; equation-hero Gemini HTML remains current while newer left-right callback variants are stamped as active options</li><li>Selected direction: The current running direction is the Gemini HTML equation-hero branch: one dominant economics proof object that makes +1 visit / provider / day clearly resolve into $11,000 / year, with ~$917 / month as the quieter punchline.</li><li>Notes:</li><li>The legacy hero-metrics native spec remains a useful historical reference, but it is no longer the active lead.</li><li>The current winner is the Gemini HTML equation-hero branch, not the image branch.</li><li>Range-check detail should remain visually subordinate to the hero economics proof.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Make the economics intuitive and credible.</p>
+<h6>Selected direction</h6>
+<p>Hero scenario plus three scenario tiles.</p>
+<h6>Core idea</h6>
+<p>One large base case anchors the economics. Three smaller scenarios show range. The bottom-line message is that recovered time matters when it becomes completed visits.</p>
+<h6>Composition</h6>
+<ul><li>left hero block</li><li>right-side scenario tiles</li><li>quiet assumption line</li><li>one interpretive bottom line</li></ul>
+<h6>Avoid</h6>
+<ul><li>large tables</li><li>formula-heavy layouts</li><li>spreadsheet styling</li><li>too many assumptions on-slide</li></ul>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<ul><li><strong>Primary:</strong> Hero scenario + three scenario tiles + one interpretive bottom line.</li><li><strong>Alternative:</strong> Hero scenario + compact sensitivity table, if you decide you want a more financial feel.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Use a three-part layout.</li></ul>
+<p><strong>Left hero block</strong></p>
+<ul><li><strong>+1 visit / provider / day</strong></li><li>small assumptions line:</li></ul>
+<ul><li><strong>220 clinic days</strong></li><li><strong>$125 / visit</strong></li><li><strong>40% contribution margin</strong> [6][7][8]</li><li>main output:</li></ul>
+<ul><li><strong>$11,000 / year</strong></li><li>secondary line:</li></ul>
+<ul><li><strong>~$917 / month break-even spend / provider</strong></li></ul>
+<p><strong>Right scenario tiles</strong></p>
+<ul><li><strong>Conservative</strong></li></ul>
+<ul><li><strong>$7,920 / year</strong></li><li><strong>+1 / day at $90 / visit</strong></li><li><strong>Base</strong></li></ul>
+<ul><li><strong>$11,000 / year</strong></li><li><strong>+1 / day at $125 / visit</strong></li><li><strong>Upside</strong></li></ul>
+<ul><li><strong>$22,000 / year</strong></li><li><strong>+2 / day at $125 / visit</strong></li></ul>
+<p><strong>Bottom line</strong></p>
+<ul><li><strong>Recovered time matters when it becomes completed visits</strong></li></ul>
+<h6>Additional comments</h6>
+<ul><li>This is another anchor slide.</li><li>It should feel like operating leverage, not a finance memo.</li><li>If you later want an appendix all-payer case, commercial physician prices average roughly <strong>1.29x Medicare</strong> overall in CBO’s review. [9]</li></ul></div>
+              </article>
+              
+              <article class="slide-panel slide-options">
+                <div class="eyebrow">Figure Options</div>
+                <p class="options-copy">
+                  Main selected direction: Equation Hero Gemini HTML.
+                </p>
+                <div class="variant-grid">
+                  
+    <article class="variant-card variant-selected">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Current Selection</div>
+          <h3>Equation Hero Gemini HTML</h3>
+        </div>
+        <div class="variant-pill">main selected</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-html/preview.png" alt="Equation Hero Gemini HTML preview" />
+      <figcaption>Equation Hero Gemini HTML preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Current running slide-10 direction. The slide is anchored by one dominant economics proof object that shows how +1 visit / provider / day turns into $11,000 / year, with the monthly break-even number staying secondary.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-html">HTML branch</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-html/generated.html">HTML</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-html/preview.png">Preview</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-html/preview.svg">SVG</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Equation Hero Gemini Image</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-image/image-01.jpg" alt="Equation Hero Gemini Image preview" />
+      <figcaption>Equation Hero Gemini Image preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>More aggressive visual interpretation of the equation-hero concept. Useful composition reference, but less controlled than the selected HTML branch.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1/gemini-image">Image branch</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Power of One</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-10/versions/version-000039--power-of-one-v1/gemini-html/preview.png" alt="Power of One preview" />
+      <figcaption>Power of One preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Punchier card-led version of the economics claim, explored through Gemini image and HTML.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000039--power-of-one-v1">Option folder</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Break-even Threshold</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-10/versions/version-000040--break-even-threshold-v1/gemini-html/preview.png" alt="Break-even Threshold preview" />
+      <figcaption>Break-even Threshold preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Threshold-led variant that foregrounds the monthly break-even spend before the annual contribution logic.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000040--break-even-threshold-v1">Option folder</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Capacity Waterfall</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-10/versions/version-000041--capacity-waterfall-v1/gemini-html/preview.png" alt="Capacity Waterfall preview" />
+      <figcaption>Capacity Waterfall preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>More explicit operating-leverage flow variant that explains the translation from recovered capacity into annual contribution.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000041--capacity-waterfall-v1">Option folder</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Left / Right Capacity Tile</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-10/versions/version-000042--left-right-capacity-tile-v1/gemini-html/preview.png" alt="Left / Right Capacity Tile preview" />
+      <figcaption>Left / Right Capacity Tile preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Most reduced callback variant. Tests whether a very compressed slide-3-derived capacity tile on the left can support the economics proof on the right without replaying slide 3.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000042--left-right-capacity-tile-v1">Option folder</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Left / Right Micro Journey</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-10/versions/version-000043--left-right-micro-journey-v1/gemini-html/preview.png" alt="Left / Right Micro Journey preview" />
+      <figcaption>Left / Right Micro Journey preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Left/right callback variant that uses two shortened visit bars, a light causal cue, and one green new-visit payoff before the economics proof.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000043--left-right-micro-journey-v1">Option folder</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Left / Right Motif Card</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-10/versions/version-000044--left-right-motif-card-v1/gemini-html/preview.png" alt="Left / Right Motif Card preview" />
+      <figcaption>Left / Right Motif Card preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Strongest callback-led challenge branch so far. Keeps the right-side economics proof simple while quoting slide 3 with two shortened bars plus one green new-visit block on the left.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000044--left-right-motif-card-v1">Option folder</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Legacy Hero Metrics</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-10/versions/version-000046--slide-10-legacy/figure.png" alt="Legacy Hero Metrics preview" />
+      <figcaption>Legacy Hero Metrics preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Earlier native economics comp. Historically important, but now superseded by the stronger equation-hero direction.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-10/versions/version-000046--slide-10-legacy">Legacy render</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-10-hero-metrics.json">Legacy spec</a></div>
+      </div>
+    </article>
+  
+                </div>
+              </article>
+            
+            </div>
+          </section>
+        
+
+          <section class="slide-card" id="slide-11">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 11</div>
+                <h2>Start where throughput proof is fastest</h2>
+              </div>
+              <div class="status-pill status-live">
+                Stamped figure exists
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-11/slide-11--version-000047.png" alt="slide-11 preview" />
+      <figcaption>slide-11 preview</figcaption>
+    </figure>
+  
+                <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/manifest.json">Manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1">Current version-000047</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-11/README.md">Slide note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-11-beachhead-proof.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-11.html">Slide report</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/slide-11--version-000047.png">Figure PNG</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11">Stamped dir</a></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                <p class="body-copy"><strong>Current version:</strong> version-000047</p>
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: identify the beachhead and proof logic</li><li>Header: <code>Start where throughput proof is fastest.</code></li><li>Subheader: <code>The best first market is any setting with visible visit pressure, simple buying, and low deployment friction.</code></li><li>Takeaway: The beachhead is defined by operational shape, not specialty: choose settings where deployment is light and pilot outcomes show up fast.</li><li>Figure role: make the beachhead definition feel operational, cross-specialty, credible, and testable</li><li>Family: highlighted beachhead profile plus pilot proof scorecard</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: versioned comparison set exists; beachhead-profile hero Gemini HTML is now the stamped current lead</li><li>Selected direction: The current stamped lead is the beachhead-profile-hero Gemini HTML branch: one highlighted beachhead profile, de-emphasized example settings, and a compact pilot-proof scorecard. Proof-column remains the strongest challenge branch.</li><li>Notes:</li><li>This is a beachhead-selection slide, not a TAM or market-map slide.</li><li>The persuasive job is to show where Vox can prove throughput gains fastest in the real world.</li><li>Do not collapse the beachhead into a single specialty like primary care; the point is that the profile can travel across specialties.</li><li>Avoid generic filter, gate, funnel, or consulting-style market-selection graphics.</li><li>The highlighted reasons should feel specific to Vox deployment and proof, not generic healthcare GTM criteria.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Make market selection feel disciplined and concrete.</p>
+<h6>Selected direction</h6>
+<p>Highlighted beachhead plus proof panel.</p>
+<h6>Core idea</h6>
+<p>Show a row of outpatient setting cards in very light treatment, clearly highlight “Independent primary care groups” as the chosen beachhead, attach the three reasons it wins, and pair it with a simple “what the pilot must prove” panel.</p>
+<h6>Composition</h6>
+<ul><li>row of lightly treated candidate setting cards</li><li>one clearly highlighted beachhead card</li><li>one compact proof panel nearby</li></ul>
+<h6>Avoid</h6>
+<ul><li>funnel diagrams</li><li>layered filter stacks</li><li>consulting-style selection graphics</li><li>market-sizing clutter</li></ul>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<ul><li><strong>Primary:</strong> Filter-to-beachhead visual.</li><li><strong>Alternative:</strong> Simpler beachhead highlight plus proof panel, if the filter visual feels too elaborate.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Left: faint set of outpatient setting cards</li><li>Middle: three filters / gates</li></ul>
+<ul><li>throughput pressure</li><li>few decision makers</li><li>low integration friction</li><li>Right: one highlighted beachhead card</li></ul>
+<ul><li><strong>Independent primary care groups</strong></li><li>Separate block:</li></ul>
+<ul><li><strong>What the pilot must prove</strong></li></ul>
+<ul><li>completion rate</li><li>clinician verification time</li><li>re-asking reduction</li><li>captured slots / schedule effect</li></ul>
+<h6>Additional comments</h6>
+<ul><li>No external stat needed on-slide.</li><li>This is a logic / selection slide, not a market-size slide.</li></ul></div>
+              </article>
+              
+              <article class="slide-panel slide-options">
+                <div class="eyebrow">Figure Options</div>
+                <p class="options-copy">
+                  Main selected direction: Beachhead Profile Hero v1.
+                </p>
+                <div class="variant-grid">
+                  
+    <article class="variant-card variant-selected">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Current Selection</div>
+          <h3>Beachhead Profile Hero v1</h3>
+        </div>
+        <div class="variant-pill">main selected</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1/gemini-html/preview.png" alt="Beachhead Profile Hero v1 preview" />
+      <figcaption>Beachhead Profile Hero v1 preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Current stamped slide-11 lead. Highlights the target beachhead profile as a repeatable operating shape, not a single specialty, and pairs it with a compact pilot-proof panel.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1/gemini-html">HTML branch</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Proof Column v1</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-11/versions/version-000048--proof-column-v1/gemini-image/image-01.jpg" alt="Proof Column v1 preview" />
+      <figcaption>Proof Column v1 preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Stronger memo-like challenge branch. More document-like than the current lead, but useful if the profile-hero family keeps feeling too UI-card-like.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/versions/version-000048--proof-column-v1">Stamped dir</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Claude Ideation</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      <div class="missing">No stamped preview yet.</div>
+      <div class="variant-body">
+        <p>Supporting ideation artifact that helped sharpen the proof-column challenge branch and the reasons/examples structure.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/versions/version-000049--claude-ideation/response.txt">Ideation response</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-11-beachhead-proof.md">Slide packet</a></div>
+      </div>
+    </article>
+  
+                </div>
+              </article>
+            
+            </div>
+          </section>
+        
+
+          <section class="slide-card" id="slide-12">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 12</div>
+                <h2>Built by people who understand the visit</h2>
+              </div>
+              <div class="status-pill status-open">
+                No stamped figure yet
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                <div class="missing">No stamped preview yet.</div>
+                <div class="file-row"></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: establish execution credibility</li><li>Header: <code>Built by people who understand the visit.</code></li><li>Subheader: <code>Clinical insight, product judgment, and deployment realism.</code></li><li>Takeaway: The team matches the problem.</li><li>Figure role: compress trust quickly</li><li>Family: clean founder grid</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: missing</li><li>Selected direction: No selected visual yet.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Compress trust quickly.</p>
+<h6>Selected direction</h6>
+<p>Clean founder grid.</p>
+<h6>Core idea</h6>
+<p>Use a simple founder grid with headshots, titles, and one short execution-relevant line under each person.</p>
+<h6>Composition</h6>
+<ul><li>clean grid</li><li>headshots</li><li>titles</li><li>one-line relevance under each founder</li></ul>
+<h6>Avoid</h6>
+<ul><li>long bios</li><li>over-ornamented people cards</li><li>visual noise</li></ul>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<ul><li><strong>Primary:</strong> Clean founder grid with execution-risk lines under each person.</li><li><strong>Alternative:</strong> Same grid, but with slightly stronger role framing if you want more “who reduces what risk” energy.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Founder grid / headshots</li><li>One short execution-relevant line under each founder:</li></ul>
+<ul><li>clinical credibility</li><li>AI / product execution</li><li>workflow / systems implementation</li><li>operations / commercialization</li><li>Keep the layout simple and clean.</li></ul>
+<h6>Additional comments</h6>
+<ul><li>No citation needed.</li><li>The quality of the one-line founder framing matters most.</li></ul></div>
+              </article>
+              
+            </div>
+          </section>
+        
+
+          <section class="slide-card" id="slide-13">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 13</div>
+                <h2>This round is about proving trust, capture, and repeatable deployment</h2>
+              </div>
+              <div class="status-pill status-open">
+                No stamped figure yet
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                <div class="missing">No stamped preview yet.</div>
+                <div class="file-row"></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                
+                <div class="markdown"><ul><li>Status: active</li><li>Purpose: close on proof logic</li><li>Header: <code>This round is about proving trust, capture, and repeatable deployment.</code></li><li>Subheader: <code>Fund the milestones that turn product promise into deployment proof.</code></li><li>Takeaway: The round funds measurable proof, not just product activity.</li><li>Figure role: end the deck on concrete milestone logic</li><li>Family: milestone cards</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: missing</li><li>Selected direction: No selected visual yet.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<ul><li><strong>Primary:</strong> Three milestone cards.</li><li><strong>Alternative:</strong> Milestone timeline if you want it to feel slightly more sequential, though cards are cleaner.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Three milestone cards:</li></ul>
+<ol><li>trust primitives fully working</li><li>pilot sites live with measurable capture</li><li>paid conversions + repeatable playbook</li></ol>
+<ul><li>Small footer:</li></ul>
+<ul><li>amount</li><li>timing</li><li>use of funds</li></ul>
+<h6>Additional comments</h6>
+<ul><li>No citation needed.</li><li>This slide should end the deck on proof, not vague activity.</li></ul></div>
+              </article>
+              
+            </div>
+          </section>
+        
+      </section>
+
+      <h2 class="section-title" data-section-heading="deprecated">Deprecated / Shelved</h2>
+      <p class="section-copy" data-section-copy="deprecated">
+        These slides and concepts are retained only as historical context. They
+        are not part of the current backbone, but they remain useful for
+        tracking what was merged, reopened, or shelved.
+      </p>
+      <section class="slide-list" data-slide-section="deprecated">
+        
+          <section class="slide-card" id="slide-04-05">
+            <div class="slide-card-head">
+              <div>
+                <div class="eyebrow">Slide 4/5</div>
+                <h2>History Bridge (Shelved Combined Concept)</h2>
+              </div>
+              <div class="status-pill status-deprecated">
+                Deprecated
+              </div>
+            </div>
+            <div class="slide-grid">
+              <div class="slide-preview">
+                <div class="missing">No stamped preview yet.</div>
+                <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05/manifest.json">Manifest</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-04-05/README.md">Slide note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-04-history-bridge.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-reports/slide-04-05.html">Slide report</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05">Stamped dir</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-04-story-streams-v1.json">Spec 1</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-04-transformation-flow.json">Spec 2</a></div>
+              </div>
+              <article class="slide-panel">
+                <div class="eyebrow">Current Running Spec</div>
+                
+                <div class="markdown"><ul><li>Status: deprecated</li><li>Purpose: historical combined bridge concept created when slides 4 and 5 were temporarily merged</li><li>Header: <code>History is the cleanest place to reclaim minutes.</code></li><li>Subheader: <code>No formal subtitle; use distributed figure copy instead.</code></li><li>Takeaway: Shelved concept: merge the wedge/intervention claim and the story-to-structure explanation into one two-beat bridge slide.</li><li>Figure role: historical reference only</li><li>Family: quoted slide-3 source bar plus peel-back bridge plus subordinate story-to-structure zoom</li></ul></div>
+              </article>
+              <article class="slide-panel">
+                <div class="eyebrow">Build Notes</div>
+                <div class="markdown"><ul><li>Build status: shelved; keep for rationale and reference branches only</li><li>Selected direction: Shelved combined bridge concept. Keep for historical rationale and reference branches only; it is no longer part of the active backbone.</li><li>Notes:</li><li>The merge rationale remains useful context, but the active deck now uses the literal 3, 5, 4, 6 sequence instead.</li><li>The visual branches below remain useful references, especially for the upper wedge/intervention beat.</li></ul></div>
+              </article>
+              <article class="slide-panel slide-source">
+                <div class="eyebrow">Imported Figure Suggestion</div>
+                <div class="markdown"><p>_Current slide 4/5 merges multiple legacy source slides, so all imported figure suggestions are shown here._</p>
+<h4>Legacy slide 4 — Visits start with story, not structure</h4>
+<h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Show story on the left, usable structure on the right, and make the middle feel like scarce cognitive work.</p>
+<h6>Selected direction</h6>
+<p>Narrative bridge / membrane.</p>
+<h6>Core idea</h6>
+<p>One human story enters on the left. A soft broad bridge in the middle shows the real translation work. A quiet structured card on the right shows the usable result. The middle communicates through grouping and flow, not prose.</p>
+<h6>Composition</h6>
+<ul><li>centered horizontal hero figure</li><li>left narrative panel</li><li>broad rounded transformation bridge in the middle</li><li>right structured card</li><li>thin callout beneath the bridge</li></ul>
+<h6>Avoid</h6>
+<ul><li>tables in the middle</li><li>sentence-to-output rows</li><li>workflow boxes</li><li>bullets on the left</li><li>fake UI on the right</li><li>thick arrows</li><li>funnels</li></ul>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<p>messy patient story → translate / structure / verify → decision-ready structure.</p>
+<ul><li><strong>Primary:</strong> Left-to-right conceptual transformation:</li><li><strong>Alternative:</strong> Same concept, but with a more funnel-like middle transformation if that feels visually stronger.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Build one horizontal conceptual figure across the center of the slide.</li><li>Left side:</li></ul>
+<ul><li>one large soft-edged speech bubble / narrative blob labeled <strong>Patient story</strong></li><li>inside it, 4–6 faint narrative fragments</li><li>Middle:</li></ul>
+<ul><li>one prominent transformation block / arrow / funnel</li><li>label: <strong>Translate → structure → verify</strong></li><li>Right side:</li></ul>
+<ul><li>one clean structured card labeled <strong>Decision-ready structure</strong></li><li>inside it, 3 simple sections:</li></ul>
+<ul><li>Key positives / negatives</li><li>Timeline</li><li>Questions to verify</li><li>Attach the callout to the <strong>middle step</strong>, not the right side:</li></ul>
+<ul><li><strong>Necessary work that doesn’t have to consume visit time</strong></li><li>Keep the right side conceptual, not product-specific.</li></ul>
+<h6>Additional comments</h6>
+<ul><li>No external stat needed on-slide.</li><li>This is the “aha” mechanism slide.</li><li>The middle step is the star.</li></ul>
+<h4>Legacy slide 5 — History is the cleanest place to reclaim minutes</h4>
+<h5>Clean pack direction</h5>
+<h6>Figure job</h6>
+<p>Make the intervention point feel obvious and credible.</p>
+<h5>Full slide map proposal</h5>
+<h6>Proposed figure summary</h6>
+<ul><li><strong>Primary:</strong> A zoom-in on the history segment from Slide 3: one large central history block with three attached reasons.</li><li><strong>Alternative:</strong> A three-column conceptual slide if you absolutely need something simpler, though the single-object version is stronger.</li></ul>
+<h6>Figure details</h6>
+<ul><li>Put one large accent-colored band or rounded block across the center of the slide.</li><li>Label it:</li></ul>
+<ul><li><strong>History reconstruction</strong></li><li>or <strong>History taking</strong></li><li>Attach three callout boxes to that central block:</li></ul>
+<ul><li><strong>Retold at every visit</strong></li></ul>
+<ul><li>support line: *The same story gets repeated across encounters*</li><li><strong>Time-variable</strong></li></ul>
+<ul><li>support line: *Time required depends on complexity and communication*</li><li><strong>Can begin before the encounter</strong></li></ul>
+<ul><li>support line: *Much of it can happen before the clinician is on the clock*</li><li>Give each callout a slightly distinct visual cue:</li></ul>
+<ul><li>repetition / echo motif</li><li>time / uncertainty motif</li><li>upstream / off-clock motif</li></ul>
+<h6>Additional comments</h6>
+<ul><li>Keep this conceptual.</li><li>No external citation needed on-slide unless you later add a quantitative proof line.</li><li>This should feel like a zoom-in on the wedge, not a new framework.</li></ul></div>
+              </article>
+              
+              <article class="slide-panel slide-options">
+                <div class="eyebrow">Figure Options</div>
+                <p class="options-copy">
+                  Main selected direction: Merged History Bridge Packet.
+                </p>
+                <div class="variant-grid">
+                  
+    <article class="variant-card variant-selected">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Current Selection</div>
+          <h3>Merged History Bridge Packet</h3>
+        </div>
+        <div class="variant-pill">main selected</div>
+      </div>
+      <div class="missing">No stamped preview yet.</div>
+      <div class="variant-body">
+        <p>Historical packet for the shelved combined concept. Useful for rationale, constraints, and the attempt history that led to the temporary merge.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-packets/slide-04-history-bridge.md">Slide packet</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/prompts/slide-04-history-bridge-gemini.txt">Gemini prompt</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/references/slide-04-05-chatgpt-handoff-2026-03-28.md">External handoff</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Gemini Reference-Image Pass</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-04-05/versions/version-000013--gemini-image/image-01.jpg" alt="Gemini Reference-Image Pass preview" />
+      <figcaption>Gemini Reference-Image Pass preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Strongest historical composition reference for the combined concept. Especially useful for the upper wedge/hero/support grouping.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-04-05/README.md">Historical note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05/versions/version-000013--gemini-image/image-01.jpg">Image</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Gemini HTML Reference Pass</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-04-05/versions/version-000012--gemini-html/preview.png" alt="Gemini HTML Reference Pass preview" />
+      <figcaption>Gemini HTML Reference Pass preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Historical editable reference for the combined concept. Cleaner on the lower explanatory beat than the Gemini image, but flatter overall.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-notes/slide-04-05/README.md">Historical note</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05/versions/version-000012--gemini-html/generated.html">HTML</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05/versions/version-000012--gemini-html/preview.png">Preview</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>OpenAI HTML Reference Pass</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-04-05/versions/version-000014--openai-html/preview.png" alt="OpenAI HTML Reference Pass preview" />
+      <figcaption>OpenAI HTML Reference Pass preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Archived challenge branch for the combined concept. Still useful as a structural reference, but not part of the main Gemini-first execution lane.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05/versions/version-000014--openai-html/generated.html">HTML</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05/versions/version-000014--openai-html/preview.png">Preview</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Anthropic Sonnet HTML Pass</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-04-05/versions/version-000017--anthropic-html-sonnet/preview.png" alt="Anthropic Sonnet HTML Pass preview" />
+      <figcaption>Anthropic Sonnet HTML Pass preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Archived challenge branch for the combined concept. Valid comparison branch, but no longer part of the primary lane.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05/versions/version-000017--anthropic-html-sonnet/generated.html">HTML</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05/versions/version-000017--anthropic-html-sonnet/preview.png">Preview</a></div>
+      </div>
+    </article>
+  
+
+    <article class="variant-card variant-option">
+      <div class="variant-head">
+        <div>
+          <div class="eyebrow">Figure Option</div>
+          <h3>Anthropic Opus HTML Pass</h3>
+        </div>
+        <div class="variant-pill">option</div>
+      </div>
+      
+    <figure class="artifact-shot">
+      <img src="slide-figures/slide-04-05/versions/version-000018--anthropic-html-opus/preview.png" alt="Anthropic Opus HTML Pass preview" />
+      <figcaption>Anthropic Opus HTML Pass preview</figcaption>
+    </figure>
+  
+      <div class="variant-body">
+        <p>Archived challenge branch for the combined concept. Bolder than Sonnet, but still secondary to the Gemini-first lane.</p>
+        <div class="file-row"><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05/versions/version-000018--anthropic-html-opus/generated.html">HTML</a><a class="file-chip" href="file:///Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-04-05/versions/version-000018--anthropic-html-opus/preview.png">Preview</a></div>
+      </div>
+    </article>
+  
+                </div>
+              </article>
+            
+            </div>
+          </section>
+        
+      </section>
+    </div>
+    <script>
+      (() => {
+        const slides = [{"id":"slide-01","displayNumber":"1","title":"VOX","status":"active"},{"id":"slide-02","displayNumber":"2","title":"Demand is outpacing clinical capacity","status":"active"},{"id":"slide-03","displayNumber":"3","title":"More efficient visits will increase supply","status":"active"},{"id":"slide-05","displayNumber":"5","title":"History is the cleanest place to reclaim minutes","status":"active"},{"id":"slide-04","displayNumber":"4","title":"Visits start with story, not structure","status":"active"},{"id":"slide-06","displayNumber":"6","title":"The hard part is producing a history clinicians can start from","status":"active"},{"id":"slide-07","displayNumber":"7","title":"Vox prepares the visit before it starts","status":"active"},{"id":"slide-08","displayNumber":"8","title":"The clinician starts from a structured brief","status":"active"},{"id":"slide-09","displayNumber":"9","title":"Current AI helps around the visit","status":"active"},{"id":"slide-10","displayNumber":"10","title":"Recovered visit time creates real capacity","status":"active"},{"id":"slide-11","displayNumber":"11","title":"Start where throughput proof is fastest","status":"active"},{"id":"slide-12","displayNumber":"12","title":"Built by people who understand the visit","status":"active"},{"id":"slide-13","displayNumber":"13","title":"This round is about proving trust, capture, and repeatable deployment","status":"active"},{"id":"slide-04-05","displayNumber":"4/5","title":"History Bridge (Shelved Combined Concept)","status":"deprecated"}];
+        const defaultValue = window.location.hash
+          ? decodeURIComponent(window.location.hash.slice(1))
+          : (slides.find((slide) => slide.status === "active")?.id || "__all_active__");
+        const validValues = new Set(["__all_active__", "__all__", ...slides.map((slide) => slide.id)]);
+        const selector = document.getElementById("slide-selector");
+        const prevButton = document.getElementById("slide-prev");
+        const nextButton = document.getElementById("slide-next");
+        const status = document.getElementById("slide-selector-status");
+        const cards = Array.from(document.querySelectorAll(".slide-card"));
+        const sections = {
+          active: {
+            heading: document.querySelector('[data-section-heading="active"]'),
+            copy: document.querySelector('[data-section-copy="active"]'),
+            body: document.querySelector('[data-slide-section="active"]'),
+          },
+          deprecated: {
+            heading: document.querySelector('[data-section-heading="deprecated"]'),
+            copy: document.querySelector('[data-section-copy="deprecated"]'),
+            body: document.querySelector('[data-slide-section="deprecated"]'),
+          },
+        };
+
+        const setSectionVisible = (sectionKey, visible) => {
+          for (const node of Object.values(sections[sectionKey])) {
+            if (node) {
+              node.style.display = visible ? "" : "none";
+            }
+          }
+        };
+
+        const visibleSlidesForValue = (value) => {
+          if (value === "__all__") {
+            return slides.map((slide) => slide.id);
+          }
+          if (value === "__all_active__") {
+            return slides.filter((slide) => slide.status === "active").map((slide) => slide.id);
+          }
+          return slides.some((slide) => slide.id === value) ? [value] : [];
+        };
+
+        const updateControls = (value) => {
+          const slideIndex = slides.findIndex((slide) => slide.id === value);
+          const isSingleSlide = slideIndex !== -1;
+          prevButton.disabled = !isSingleSlide || slideIndex === 0;
+          nextButton.disabled = !isSingleSlide || slideIndex === slides.length - 1;
+          if (value === "__all__") {
+            status.textContent = "Showing the full deck.";
+            return;
+          }
+          if (value === "__all_active__") {
+            status.textContent = "Showing active slides only.";
+            return;
+          }
+          const slide = slides[slideIndex];
+          status.textContent = slide
+            ? "Viewing slide " + slide.displayNumber + " of " + slides.length + "."
+            : "";
+        };
+
+        const applySelection = (rawValue, pushHash = true) => {
+          const value = validValues.has(rawValue) ? rawValue : "__all_active__";
+          selector.value = value;
+          const visibleIds = new Set(visibleSlidesForValue(value));
+          cards.forEach((card) => {
+            card.classList.toggle("is-hidden", !visibleIds.has(card.id));
+          });
+
+          if (value === "__all__") {
+            setSectionVisible("active", true);
+            setSectionVisible("deprecated", true);
+          } else if (value === "__all_active__") {
+            setSectionVisible("active", true);
+            setSectionVisible("deprecated", false);
+          } else {
+            const slide = slides.find((item) => item.id === value);
+            setSectionVisible("active", slide?.status === "active");
+            setSectionVisible("deprecated", slide?.status === "deprecated");
+          }
+
+          updateControls(value);
+          if (pushHash) {
+            const hashValue = value === "__all_active__" ? "all-active" : value === "__all__" ? "all" : value;
+            history.replaceState(null, "", "#" + encodeURIComponent(hashValue));
+          }
+        };
+
+        selector.addEventListener("change", (event) => {
+          applySelection(event.target.value);
+        });
+
+        prevButton.addEventListener("click", () => {
+          const index = slides.findIndex((slide) => slide.id === selector.value);
+          if (index > 0) {
+            applySelection(slides[index - 1].id);
+          }
+        });
+
+        nextButton.addEventListener("click", () => {
+          const index = slides.findIndex((slide) => slide.id === selector.value);
+          if (index !== -1 && index < slides.length - 1) {
+            applySelection(slides[index + 1].id);
+          }
+        });
+
+        const hashValue = decodeURIComponent(window.location.hash.slice(1));
+        const initialValue =
+          hashValue === "all"
+            ? "__all__"
+            : hashValue === "all-active"
+              ? "__all_active__"
+              : defaultValue;
+        applySelection(initialValue, false);
+      })();
+    </script>
+  </body>
+</html>

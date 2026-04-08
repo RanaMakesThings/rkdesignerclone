@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designer.health/schemas/vision-critic-output.schema.json",
+  "title": "Vision Critic Output",
+  "type": "object",
+  "required": [
+    "thumbnail_reports",
+    "ranked_list",
+    "winner",
+    "why_winner_wins",
+    "whether_upstream_truth_should_be_reopened",
+    "whether_human_review_is_recommended",
+    "next_action"
+  ],
+  "properties": {
+    "thumbnail_reports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "thumbnail_id",
+          "scores",
+          "overall_score",
+          "top_strength",
+          "top_weakness",
+          "keep",
+          "remove",
+          "exact_revision",
+          "confidence"
+        ],
+        "properties": {
+          "thumbnail_id": {
+            "type": "string"
+          },
+          "scores": {
+            "type": "object",
+            "required": [
+              "two_second_clarity",
+              "strategic_fidelity",
+              "figure_burden_fit",
+              "adjacent_slide_distinctness",
+              "collapse_resistance",
+              "elegance_restraint",
+              "visual_balance",
+              "build_feasibility",
+              "investor_readability"
+            ],
+            "properties": {
+              "two_second_clarity": {
+                "type": "number"
+              },
+              "strategic_fidelity": {
+                "type": "number"
+              },
+              "figure_burden_fit": {
+                "type": "number"
+              },
+              "adjacent_slide_distinctness": {
+                "type": "number"
+              },
+              "collapse_resistance": {
+                "type": "number"
+              },
+              "elegance_restraint": {
+                "type": "number"
+              },
+              "visual_balance": {
+                "type": "number"
+              },
+              "build_feasibility": {
+                "type": "number"
+              },
+              "investor_readability": {
+                "type": "number"
+              }
+            }
+          },
+          "overall_score": {
+            "type": "number"
+          },
+          "top_strength": {
+            "type": "string"
+          },
+          "top_weakness": {
+            "type": "string"
+          },
+          "keep": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "remove": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "exact_revision": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "ranked_list": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "winner": {
+      "type": "string"
+    },
+    "why_winner_wins": {
+      "type": "string"
+    },
+    "whether_upstream_truth_should_be_reopened": {
+      "type": "boolean"
+    },
+    "whether_human_review_is_recommended": {
+      "type": "boolean"
+    },
+    "next_action": {
+      "type": "string"
+    }
+  }
+}

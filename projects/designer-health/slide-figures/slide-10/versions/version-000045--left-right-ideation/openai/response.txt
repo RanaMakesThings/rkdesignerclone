@@ -1,0 +1,206 @@
+Here’s the cleanest recommendation set.
+
+## 1. Best reduced callback object on the left
+
+**Best choice: a single “unlocked slot” capacity object built from 2 shortened visit bars plus 1 green `New visit` block.**
+
+Why this is strongest:
+- It **clearly references slide 3** without replaying the whole sequence.
+- It shows **cause → effect** in one glance: shorter visits create enough room for another visit.
+- It stays **premium and sparse**.
+- It gives the right side permission to say: **that extra slot = +1 visit/day = $11,000/year**.
+
+So the left object should not be a full mini-chart. It should be more like a **compressed visual proof glyph**.
+
+---
+
+## 2. What should the left side show?
+
+## Best answer:
+**Show just a couple shortened bars plus a green `New visit`.**
+
+Specifically:
+- **2 shortened visit bars**
+- a subtle cue that reclaimed time accumulates
+- **1 green `New visit` block** at the end
+
+This is better than the alternatives:
+
+### Better than a before/after mini-comparison
+A before/after introduces more interpretation work:
+- “before what?”
+- “after what?”
+- “how many visits am I comparing?”
+It risks becoming explanatory rather than referential.
+
+### Better than a single unlocked slot icon/object alone
+A single slot alone may be too abstract. You lose the explicit callback to slide 3’s visit bars, which is the whole point of the left side.
+
+### So the sweet spot is:
+**not a comparison, not a standalone icon — a tiny continuation of slide 3’s motif.**
+
+Think:
+`shortened visit` + `shortened visit` → `New visit`
+
+That’s enough.
+
+---
+
+## 3. Should the right side include a secondary `+2` upside check?
+
+## Recommendation:
+**Keep the main right-side proof focused on `+1 visit / provider / day → $11,000 / year`.**
+
+If you include `+2`, make it **very quiet** and clearly secondary.
+
+Why:
+- The slide’s job is to make **one added visit feel real and monetizable**.
+- A visible `+2` scenario can weaken credibility by making the base case feel like a setup for upside selling.
+- Investors usually trust a **tight conservative proof** more than a slide trying to show range on the same plane.
+
+### Best practice:
+Include `+2` only as:
+- a tiny muted note below the assumptions, or
+- a very faint “Upside: ~2x impact at +2 visits/day” footnote-style line
+
+Do **not** give it equal visual weight, separate math, or another big number.
+
+---
+
+## 4. Best 3 concrete layout ideas
+
+---
+
+# Layout Idea 1: **Motif + Economics Card**  
+## Best overall recommendation
+
+### Left
+A compact callback object:
+- two shortened horizontal visit bars
+- small reclaimed-space cue between/after them
+- one green `New visit` pill/block at the end
+
+Visually, this should feel like a **miniature excerpt** from slide 3, not a new graphic system.
+
+### Right
+A clean economics stack:
+- large line: **`+1 visit / provider / day`**
+- compact assumptions beneath:
+  - 220 clinic days
+  - $125 / visit
+  - 40% contribution margin
+- large result:
+  - **`$11,000 / year`**
+- optional tiny muted upside note:
+  - `Upside: +2 visits/day doubles impact`
+
+### Why it works
+- Strongest **continuity** with slide 3
+- Very easy to read as:
+  **capacity unlocked** on left → **financial value** on right
+- Sparse, premium, board-friendly
+- Minimal cognitive load
+
+### Main risk
+If the left motif is too small or too abstract, some viewers may not immediately recognize it as the slide 3 callback. The styling has to be very faithful.
+
+---
+
+# Layout Idea 2: **Micro Journey Left, Numeric Proof Right**
+
+### Left
+A slightly more sequential object:
+- one shortened bar
+- second shortened bar
+- subtle arrow or accumulation cue
+- green `New visit`
+
+Almost like a tiny sentence:
+**shorter visits accumulate into one extra slot**
+
+This is still sparse, but a touch more narrative than Idea 1.
+
+### Right
+A more linear proof line:
+- **`+1 visit / provider / day`**
+- thin arrow
+- assumptions in a compact vertical list
+- equals
+- **`$11,000 / year`**
+
+Potential formatting:
+`+1 visit/day  →  220 days × $125 × 40%  =  $11,000/year`
+
+### Why it works
+- Strongly communicates **turning one visit into dollars**
+- More explicit than Idea 1
+- Excellent if the goal is to make the economics feel immediate and mechanical
+
+### Main risk
+It can drift toward a formula slide. If overdesigned, it starts to feel less premium and more like a consulting-page equation.
+
+---
+
+# Layout Idea 3: **Capacity Tile Left, Hero Number Right**
+
+### Left
+A very simplified capacity object:
+- one horizontal slot track or visit bar fragment
+- one distinct green unlocked slot labeled `New visit`
+- maybe just one tiny shortened blue/gray bar before it
+
+This is the most reduced version.
+
+### Right
+Large hero economics treatment:
+- large top line: **`+1 visit / provider / day`**
+- very restrained assumptions underneath
+- oversized **`$11,000 / year`**
+- no visible `+2`, or only a tiny footnote
+
+### Why it works
+- Most elegant and sparse
+- Gives maximum emphasis to the commercial takeaway
+- Feels very investor-deck appropriate if the audience already knows slide 3 well
+
+### Main risk
+This may become **too abstract**. Without enough slide 3 DNA, the left side could feel decorative instead of explanatory.
+
+---
+
+## 5. My recommendation ranking
+
+## 1) Layout Idea 1 — Motif + Economics Card
+**Best choice.**
+It balances callback, clarity, and restraint.
+
+## 2) Layout Idea 2 — Micro Journey Left, Numeric Proof Right
+Best if you want a bit more explicit “how this turns into dollars” logic.
+
+## 3) Layout Idea 3 — Capacity Tile Left, Hero Number Right
+Best if you want maximum minimalism, but it carries the most abstraction risk.
+
+---
+
+## Sharp answers to your four decision points
+
+### Left callback object
+**Use a compressed slide-3 motif: 2 shortened bars + 1 green `New visit` block.**
+
+### Left-side format
+**Not a full before/after. Not a standalone slot icon.**
+Use **a tiny motif continuation**.
+
+### Right-side upside check
+**Base case only in the main composition.**
+If included, `+2` should be **quiet, subordinate, and optional**.
+
+### Overall slide philosophy
+The slide should read like:
+**Recovered time creates one more visit. One more visit is worth $11,000/year.**
+
+That’s the whole story.
+
+If you want, I can next turn this into:
+1. a **wireframe spec** with proportions and spacing, or  
+2. **exact on-slide copy** for the headline, subhead, assumptions, and footnote.

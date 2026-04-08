@@ -1,0 +1,14 @@
+{
+  "id": "version-000053",
+  "slideId": "slide-03",
+  "slideDir": "projects/designer-health/slide-figures/slide-03",
+  "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000053--gemini-pro-capacity-review",
+  "label": "gemini-pro-capacity-review",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:05:30.253Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-03/gemini-pro-capacity-review"
+  ]
+}

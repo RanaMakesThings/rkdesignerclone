@@ -1,0 +1,7 @@
+{
+  "assessor": {
+    "provider": "openai",
+    "strictJson": true,
+    "maxTokens": 1600
+  }
+}

@@ -1,0 +1,79 @@
+Generate a self-contained HTML document for one premium 16:9 investor pitch
+deck slide. Use inline CSS only. Do not use external scripts. If you use SVG,
+keep it inline inside the HTML.
+
+Use this exact on-slide copy:
+
+Header:
+Demand is outpacing clinical capacity.
+
+Left-column eyebrow:
+AMN benchmark survey years
+
+Left-column title:
+Average new-patient physician wait time
+
+Left-column hero:
+31 days
+
+Left-column chip:
++19% since 2022
+
+Right-column eyebrow:
+Primary care HPSA, December 31, 2025
+
+Right-column hero:
+1 in 4+
+
+Right-column headline:
+Americans live in federally designated primary care shortage areas.
+
+Right-column support line:
+92.3 million people. In those areas, only 48.18% of primary care need is currently met.
+
+Bottom comparison label:
+OB/GYN patients wait 41.8 days
+
+Small comparison support:
+vs 23.5 days in family medicine
+
+Figure job:
+This slide should feel like two co-equal proofs of one system problem:
+wait times are rising and coverage is failing. It should feel more like an
+editorial spread than a dashboard.
+
+Composition:
+- use a clean two-column tension layout with a vertical divider or implied split
+- left column should be dominated by a stripped line chart that runs from 2004
+  to 2025 and culminates in the 31-day endpoint
+- right column should be dominated by the 1 in 4+ shortage statistic in large
+  display typography
+- use one compact horizontal comparison bar near the bottom or lower-right to
+  show OB/GYN 41.8 days versus family medicine 23.5 days
+- citations must sit in a clean hairline footer strip and never overlap the art
+
+Data to depict accurately:
+- wait-time series: 2004 21, 2009 20.5, 2014 18.5, 2017 24.1, 2022 26, 2025 31
+- shortage ratio: more than 1 in 4, equal to 92.3 million people
+- primary care need met in shortage areas: 48.18%
+- comparison range: OB/GYN 41.8, family medicine 23.5
+
+Visual rules:
+- no boxed dashboard modules
+- no more than one accent color family, in deep blue-green
+- minimal gridlines
+- serious editorial typography
+- generous whitespace
+- premium deck restraint
+
+Do not:
+- reproduce the existing three-widget layout
+- invent new numbers
+- show all five specialties as a cramped bar cluster
+- turn the slide into healthcare software UI
+
+Overall feel:
+strategic, sharp, premium, and visibly more intentional than a standard
+consulting chart.
+
+Return HTML only.

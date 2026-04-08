@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Investor Deck Slide</title>
+<style>
+  :root{
+    --bg:#f7f4ee;
+    --paper:#fbf9f5;
+    --ink:#171717;
+    --muted:#66625b;
+    --soft:#9a958d;
+    --line:#ddd6cc;
+    --node:#b6b1a8;
+    --node2:#d8d2c8;
+    --blue:#4d79c7;
+  }
+  *{box-sizing:border-box}
+  html,body{
+    margin:0;
+    width:1920px;
+    height:1080px;
+    overflow:hidden;
+    background:var(--bg);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    color:var(--ink);
+  }
+  .slide{
+    position:relative;
+    width:1920px;
+    height:1080px;
+    background:
+      radial-gradient(1200px 500px at 20% -10%, rgba(0,0,0,0.02), transparent 60%),
+      radial-gradient(900px 420px at 100% 0%, rgba(0,0,0,0.018), transparent 60%),
+      linear-gradient(180deg, #faf8f4 0%, #f7f4ee 100%);
+  }
+  .grain{
+    position:absolute; inset:0; pointer-events:none; opacity:.06;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(0,0,0,.35) .4px, transparent .5px),
+      radial-gradient(circle at 70% 60%, rgba(0,0,0,.25) .4px, transparent .5px),
+      radial-gradient(circle at 40% 80%, rgba(0,0,0,.2) .4px, transparent .5px);
+    background-size: 18px 18px, 22px 22px, 26px 26px;
+  }
+  .top{
+    position:absolute;
+    left:108px;
+    right:108px;
+    top:64px;
+    height:220px;
+    display:flex;
+    align-items:flex-start;
+  }
+  h1{
+    margin:0;
+    max-width:1280px;
+    font-weight:500;
+    font-size:62px;
+    line-height:1.04;
+    letter-spacing:-0.04em;
+    color:#141414;
+  }
+  .bottom{
+    position:absolute;
+    left:108px;
+    right:108px;
+    top:292px;
+    bottom:72px;
+    display:grid;
+    grid-template-columns: 0.43fr 0.57fr;
+    column-gap:56px;
+  }
+  .col{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    min-height:0;
+  }
+  .kicker{
+    font-size:16px;
+    line-height:1.2;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    color:var(--soft);
+    font-weight:600;
+    margin-bottom:20px;
+  }
+  .statement{
+    font-size:44px;
+    line-height:1.08;
+    letter-spacing:-0.035em;
+    font-weight:500;
+    color:#111;
+    max-width:95%;
+    margin-bottom:34px;
+  }
+  .right .statement{
+    font-size:48px;
+    max-width:92%;
+  }
+  .image-wrap{
+    position:relative;
+    width:100%;
+    display:flex;
+    align-items:flex-start;
+    margin-top:4px;
+  }
+  .left .image-wrap{ height:340px; }
+  .right .image-wrap{ height:360px; }
+  .photo-shell{
+    position:relative;
+    display:inline-flex;
+    align-items:flex-start;
+    justify-content:flex-start;
+    background:transparent;
+  }
+  .left .photo-shell{
+    width:88%;
+    height:100%;
+  }
+  .right .photo-shell{
+    width:86%;
+    height:100%;
+  }
+  .photo-shell img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:left top;
+    display:block;
+    filter:saturate(.82) contrast(.93) brightness(1.02);
+    opacity:.96;
+  }
+  .caption-row{
+    margin-top:18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    width:88%;
+  }
+  .right .caption-row{ width:86%; }
+  .density-caption{
+    font-size:14px;
+    line-height:1.2;
+    color:var(--muted);
+    letter-spacing:.01em;
+  }
+  .marker{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    min-width:140px;
+    height:20px;
+  }
+  .left .marker svg{ overflow:visible }
+  .right .marker svg{ overflow:visible }
+  .rule{
+    position:absolute;
+    left:0;
+    right:0;
+    top:-18px;
+    height:1px;
+    background:linear-gradient(90deg, rgba(180,172,160,.18), rgba(180,172,160,.5) 18%, rgba(180,172,160,.18));
+  }
+  .baseline{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:1px;
+    background:linear-gradient(90deg, rgba(180,172,160,.12), rgba(180,172,160,.24) 28%, rgba(180,172,160,.12));
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="grain"></div>
+
+    <section class="top">
+      <h1>AI has traction after the visit. The visit itself is still thinly served.</h1>
+    </section>
+
+    <section class="bottom">
+      <div class="col left">
+        <div class="rule"></div>
+        <div class="kicker">AI impact after the visit</div>
+        <div class="statement">Ambient scribes validate clinician buy-in for AI assistance.</div>
+
+        <div class="image-wrap">
+          <div class="photo-shell">
+            <img src="/Users/kabeer/Desktop/4FAA88B9-3C54-4321-B182-C8DB4ED0A963.png" alt="Clinician working at dual monitors" />
+          </div>
+        </div>
+
+        <div class="caption-row">
+          <div class="density-caption">More crowded</div>
+          <div class="marker" aria-hidden="true">
+            <svg width="124" height="18" viewBox="0 0 124 18">
+              <rect x="4" y="6" width="10" height="6" rx="3" fill="#b8b2a8"/>
+              <rect x="20" y="4" width="8" height="10" rx="4" fill="#c3bdb3"/>
+              <rect x="34" y="6" width="12" height="6" rx="3" fill="#a9a399"/>
+              <rect x="52" y="3" width="7" height="12" rx="3.5" fill="#d0cabf"/>
+              <rect x="65" y="6" width="11" height="6" rx="3" fill="#b5afa5"/>
+              <rect x="82" y="5" width="9" height="8" rx="4" fill="#c7c1b7"/>
+              <rect x="97" y="6" width="12" height="6" rx="3" fill="#aaa59b"/>
+              <rect x="114" y="5" width="6" height="8" rx="3" fill="#d4cec4"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="col right">
+        <div class="rule"></div>
+        <div class="kicker">AI impact during the visit</div>
+        <div class="statement">Few tools actually change how the encounter is conducted. Vox does.</div>
+
+        <div class="image-wrap">
+          <div class="photo-shell">
+            <img src="/Users/kabeer/Desktop/757B1C3E-6121-4432-8524-C7BDE4EE6722.png" alt="Clinician speaking with patient while holding a tablet" />
+          </div>
+        </div>
+
+        <div class="caption-row">
+          <div class="density-caption">Still thin</div>
+          <div class="marker" aria-hidden="true">
+            <svg width="160" height="20" viewBox="0 0 160 20">
+              <rect x="12" y="5" width="12" height="10" rx="5" fill="none" stroke="#d7d1c7" stroke-width="1.5"/>
+              <rect x="72" y="4" width="18" height="12" rx="6" fill="#4d79c7"/>
+              <rect x="128" y="5" width="12" height="10" rx="5" fill="none" stroke="#ddd7cd" stroke-width="1.5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="baseline"></div>
+  </div>
+</body>
+</html>

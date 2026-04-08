@@ -1,0 +1,161 @@
+{
+  "slideId": "slide-12",
+  "slideDir": "projects/designer-health/slide-figures/slide-12",
+  "currentVersionId": "version-000320",
+  "versions": [
+    {
+      "id": "version-000315",
+      "label": "slide-12-create-openai-a",
+      "status": "archived",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T02:39:23.153Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000315--slide-12-create-openai-a",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000316",
+      "label": "slide-12-create-openai-b",
+      "status": "archived",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T02:39:25.086Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000316--slide-12-create-openai-b",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000317",
+      "label": "slide-12-create-openai-c",
+      "status": "archived",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T02:39:26.614Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000317--slide-12-create-openai-c",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000318",
+      "label": "slide-12-create-gemini-a",
+      "status": "archived",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T02:39:28.108Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000318--slide-12-create-gemini-a",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000319",
+      "label": "slide-12-create-gemini-c",
+      "status": "archived",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T02:39:29.553Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000319--slide-12-create-gemini-c",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000320",
+      "label": "slide-12-create-openai-bonus",
+      "status": "current",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T02:39:31.042Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000320--slide-12-create-openai-bonus",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000340",
+      "label": "slide-12-user-html-studio-html-lab",
+      "status": "archived",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T17:43:16.994Z",
+      "baseVersionId": "version-000320",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000340--slide-12-user-html-studio-html-lab",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000341",
+      "label": "slide-12-create-draft",
+      "status": "archived",
+      "sourceKind": "create-draft",
+      "createdAt": "2026-04-06T19:52:26.094Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000342",
+      "label": "slide-12-create-apr06-openai-a",
+      "status": "archived",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T19:57:45.252Z",
+      "baseVersionId": "version-000341",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000342--slide-12-create-apr06-openai-a",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000343",
+      "label": "slide-12-create-apr06-openai-b",
+      "status": "archived",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T19:57:47.850Z",
+      "baseVersionId": "version-000341",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000343--slide-12-create-apr06-openai-b",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000344",
+      "label": "slide-12-create-apr06-openai-c",
+      "status": "archived",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T19:57:48.981Z",
+      "baseVersionId": "version-000341",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000344--slide-12-create-apr06-openai-c",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000345",
+      "label": "slide-12-create-apr06-openai-d",
+      "status": "archived",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T19:57:50.049Z",
+      "baseVersionId": "version-000341",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000345--slide-12-create-apr06-openai-d",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000346",
+      "label": "slide-12-create-apr06-openai-e",
+      "status": "archived",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T19:57:51.123Z",
+      "baseVersionId": "version-000341",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000346--slide-12-create-apr06-openai-e",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000347",
+      "label": "slide-12-create-apr06-openai-f",
+      "status": "draft",
+      "sourceKind": "user-html-snapshot",
+      "createdAt": "2026-04-06T19:57:52.376Z",
+      "baseVersionId": "version-000341",
+      "dir": "projects/designer-health/slide-figures/slide-12/versions/version-000347--slide-12-create-apr06-openai-f",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

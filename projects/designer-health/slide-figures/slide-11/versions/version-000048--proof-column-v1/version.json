@@ -1,0 +1,14 @@
+{
+  "id": "version-000048",
+  "slideId": "slide-11",
+  "slideDir": "projects/designer-health/slide-figures/slide-11",
+  "dir": "projects/designer-health/slide-figures/slide-11/versions/version-000048--proof-column-v1",
+  "label": "proof-column-v1",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:30.046Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-11/proof-column-v1"
+  ]
+}

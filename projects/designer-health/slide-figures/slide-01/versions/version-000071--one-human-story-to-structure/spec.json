@@ -1,0 +1,173 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-01-one-human-story-to-structure",
+    "family": "story_to_structure_triptych",
+    "deckId": "pitch-deck-lab",
+    "theme": "pd-template-1",
+    "mode": "body-only",
+    "sourcePath": "/Users/kabeer/Code/rkdesignerclone/projects/figures/specs/slide-01-one-human-story-to-structure.json"
+  },
+  "chrome": {
+    "title": "",
+    "subtitle": "",
+    "chips": [],
+    "footnote": ""
+  },
+  "constraints": {
+    "figureJob": "Show that the hard part of the visit is turning one human story into decision-ready structure, and that this work does not all need to happen live.",
+    "focalPoint": "The middle translation chamber.",
+    "layout": "One horizontal triptych across the middle of the slide: patient story left, translation chamber center, decision-ready structure right, with one thin callout beneath the chamber.",
+    "big": [
+      "The middle chamber",
+      "The left narrative field",
+      "The right structure card"
+    ],
+    "quiet": [
+      "The left story text",
+      "Row dividers",
+      "The right section dividers"
+    ],
+    "accentTargets": [
+      "Turn story into structure chamber",
+      "Callout text"
+    ],
+    "forbidden": [
+      "flowchart",
+      "software UI",
+      "funnel",
+      "thick arrows",
+      "decorative gradients"
+    ],
+    "semanticGuards": [
+      "no_ui"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Patient story",
+      "Turn story into structure",
+      "Necessary work that doesn’t all need to happen live",
+      "Decision-ready structure"
+    ],
+    "preferred": [
+      "Relevant positives / negatives",
+      "Timeline",
+      "What to verify"
+    ],
+    "optional": [],
+    "forbidden": [
+      "dashboard",
+      "funnel"
+    ]
+  },
+  "media": {
+    "strategy": "native",
+    "provider": "pexels",
+    "slots": [],
+    "selection": []
+  },
+  "body": {
+    "left": {
+      "label": "Patient story",
+      "storyText": "This started maybe three days ago. It’s worse when I’m walking around. I was up a lot of last night because of it. I don’t think I’ve had a fever. I’ve had something kind of like this before."
+    },
+    "middle": {
+      "label": "Turn story into structure",
+      "rows": [
+        {
+          "sourceExcerpt": "“It’s worse when I’m walking around… I don’t think I’ve had a fever.”",
+          "outputs": [
+            "Worse w/ walking",
+            "No fever"
+          ]
+        },
+        {
+          "sourceExcerpt": "“This started maybe three days ago… I was up a lot of last night because of it.”",
+          "outputs": [
+            "3-day course",
+            "Worse overnight"
+          ]
+        },
+        {
+          "sourceExcerpt": "“I’ve had something kind of like this before.”",
+          "outputs": [
+            "Prior similar episode?",
+            "Trigger / severity?"
+          ]
+        }
+      ],
+      "callout": "Necessary work that doesn’t all need to happen live"
+    },
+    "right": {
+      "label": "Decision-ready structure",
+      "sections": [
+        {
+          "title": "Relevant positives / negatives",
+          "items": [
+            "Worse with walking",
+            "No fever"
+          ]
+        },
+        {
+          "title": "Timeline",
+          "items": [
+            "3-day course",
+            "Worse overnight"
+          ]
+        },
+        {
+          "title": "What to verify",
+          "items": [
+            "Prior similar episode?",
+            "Trigger / severity?"
+          ]
+        }
+      ]
+    }
+  },
+  "trace": [
+    {
+      "excerpt": "The left side should feel like one human voice.",
+      "targetPath": "body.left",
+      "ruleType": "body",
+      "note": "Use one soft narrative field with one paragraph-like spoken block."
+    },
+    {
+      "excerpt": "Place one rounded chamber in the center. This chamber is the star of the figure.",
+      "targetPath": "body.middle",
+      "ruleType": "body",
+      "note": "Keep the accent concentrated in the central structure chamber."
+    },
+    {
+      "excerpt": "On the right, place a clean rounded card labeled Decision-ready structure.",
+      "targetPath": "body.right",
+      "ruleType": "body",
+      "note": "Make the right card structured and quiet."
+    },
+    {
+      "excerpt": "Attach one clean callout to the middle chamber: Necessary work that doesn’t all need to happen live.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Preserve the interpretation directly beneath the chamber."
+    },
+    {
+      "excerpt": "Build one centered horizontal figure across the middle of the slide.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Keep the composition horizontal and spacious."
+    },
+    {
+      "excerpt": "The hard part of the visit is turning the story into something decisions can use.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Anchor the figure around translation work rather than diagnosis or UI."
+    },
+    {
+      "excerpt": "The middle chamber is the star.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "Maintain the strongest contrast and emphasis in the center."
+    }
+  ]
+}

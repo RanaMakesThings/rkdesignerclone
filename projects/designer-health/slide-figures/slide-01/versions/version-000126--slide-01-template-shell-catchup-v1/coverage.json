@@ -1,0 +1,118 @@
+{
+  "generatedAt": "2026-03-25T02:58:26.573Z",
+  "slug": "slide-01-one-human-story-to-structure-membrane",
+  "family": "story_to_structure_membrane",
+  "pass": true,
+  "summary": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "id": "artifacts.html",
+      "pass": true,
+      "severity": "error",
+      "message": "Rendered HTML artifact exists.",
+      "details": null
+    },
+    {
+      "id": "artifacts.png",
+      "pass": true,
+      "severity": "info",
+      "message": "PNG artifact exists.",
+      "details": null
+    },
+    {
+      "id": "constraints.focal-point",
+      "pass": true,
+      "severity": "error",
+      "message": "Focal point is declared.",
+      "details": null
+    },
+    {
+      "id": "constraints.accent-targets",
+      "pass": true,
+      "severity": "error",
+      "message": "Accent targets are declared.",
+      "details": null
+    },
+    {
+      "id": "copy.locked.Patient story",
+      "pass": true,
+      "severity": "error",
+      "message": "Locked copy present: \"Patient story\".",
+      "details": null
+    },
+    {
+      "id": "copy.locked.Turn story into structure",
+      "pass": true,
+      "severity": "error",
+      "message": "Locked copy present: \"Turn story into structure\".",
+      "details": null
+    },
+    {
+      "id": "copy.locked.Essential work that can start before the visit",
+      "pass": true,
+      "severity": "error",
+      "message": "Locked copy present: \"Essential work that can start before the visit\".",
+      "details": null
+    },
+    {
+      "id": "copy.locked.Decision-ready structure",
+      "pass": true,
+      "severity": "error",
+      "message": "Locked copy present: \"Decision-ready structure\".",
+      "details": null
+    },
+    {
+      "id": "copy.forbidden.dashboard",
+      "pass": true,
+      "severity": "error",
+      "message": "Forbidden copy absent: \"dashboard\".",
+      "details": null
+    },
+    {
+      "id": "copy.forbidden.workflow",
+      "pass": true,
+      "severity": "error",
+      "message": "Forbidden copy absent: \"workflow\".",
+      "details": null
+    },
+    {
+      "id": "trace.constraints.figureJob",
+      "pass": true,
+      "severity": "error",
+      "message": "Trace covers constraints.figureJob.",
+      "details": null
+    },
+    {
+      "id": "trace.constraints.focalPoint",
+      "pass": true,
+      "severity": "error",
+      "message": "Trace covers constraints.focalPoint.",
+      "details": null
+    },
+    {
+      "id": "trace.constraints.layout",
+      "pass": true,
+      "severity": "error",
+      "message": "Trace covers constraints.layout.",
+      "details": null
+    },
+    {
+      "id": "trace.copyPolicy.locked",
+      "pass": true,
+      "severity": "error",
+      "message": "Trace covers copyPolicy.locked.",
+      "details": null
+    },
+    {
+      "id": "semantic.no-ui",
+      "pass": true,
+      "severity": "info",
+      "message": "Figure family renders conceptual objects only; no product UI chrome emitted.",
+      "details": null
+    }
+  ]
+}

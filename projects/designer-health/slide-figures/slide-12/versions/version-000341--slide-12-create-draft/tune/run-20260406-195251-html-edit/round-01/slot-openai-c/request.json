@@ -1,0 +1,12 @@
+{
+  "provider": "openai",
+  "model": "gpt-5.4",
+  "referenceImages": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft/tune/run-20260406-195251-html-edit/baseline/official-preview.png",
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000341--slide-12-create-draft/tune/run-20260406-195251-html-edit/baseline/parent-preview.png",
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-11/slide-11--version-000047.png",
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000320--slide-12-create-openai-bonus/preview.png",
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-12/versions/version-000340--slide-12-user-html-studio-html-lab/preview.png"
+  ],
+  "maxOutputTokens": 6000
+}

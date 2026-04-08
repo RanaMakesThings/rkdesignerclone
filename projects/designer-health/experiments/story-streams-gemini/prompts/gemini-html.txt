@@ -1,0 +1,37 @@
+Generate a single self-contained HTML document for a 1600x900 pitch-deck
+figure. Return only raw HTML, with no markdown fences and no explanation. Use
+inline CSS only. Do not use external fonts, scripts, images, or libraries.
+Prefer one centered inline SVG inside the HTML body.
+
+Design brief:
+Create a premium horizontal figure that feels like the same design family as a
+refined pitch-deck mechanism graphic: white background, grayscale base, one
+restrained blue accent, rounded geometry, and a highlighted middle zone with a
+thin callout beneath it.
+
+Arrange three main objects horizontally.
+On the left, place a soft rounded narrative panel labeled "Patient story,"
+containing one wrapped paragraph-like block of natural language rather than
+bullets. Use this text: "This started maybe three days ago. It's worse when I'm
+walking around. I was up a lot last night because of it. I don't think I've had
+a fever. I've had something kind of like this before." Within the paragraph,
+apply three subtle translucent highlight sweeps to seed three idea-clusters.
+
+In the center, place a rounded accent-outlined chamber labeled "Turn story into
+structure." Inside it, render three gently separated horizontal streams or
+bands, each containing only short grouped text: top stream "Worse w/ walking"
+and "No fever," middle stream "3-day course" and "Worse overnight," bottom
+stream "Prior episode?" and "Trigger / severity?" Do not render a table, row
+grid, or comparison layout.
+
+Beneath the chamber, add a small thin-line callout reading "Essential work that
+can start before the visit."
+
+On the right, place a clean rounded card labeled "Decision-ready structure,"
+with three stacked sections: "Relevant positives / negatives," "Timeline," and
+"What to verify," each containing short text rows that match the chamber
+streams.
+
+Keep the whole figure premium, calm, and editorial. No icons, no people, no
+thick arrows, no funnel, no software UI, no decorative gradients, no heavy
+shadow. Use crisp, readable typography and strong spacing discipline.

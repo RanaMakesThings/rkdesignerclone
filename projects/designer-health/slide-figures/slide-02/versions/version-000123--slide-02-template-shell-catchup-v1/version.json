@@ -1,0 +1,12 @@
+{
+  "id": "version-000123",
+  "slideId": "slide-02",
+  "slideDir": "projects/designer-health/slide-figures/slide-02",
+  "dir": "projects/designer-health/slide-figures/slide-02/versions/version-000123--slide-02-template-shell-catchup-v1",
+  "label": "slide-02-template-shell-catchup-v1",
+  "status": "draft",
+  "createdAt": "2026-04-01T23:15:05.085Z",
+  "sourceKind": "fine-tune-draft",
+  "baseVersionId": "version-000002",
+  "legacySourcePaths": []
+}

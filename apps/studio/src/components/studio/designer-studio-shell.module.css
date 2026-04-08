@@ -1,0 +1,33 @@
+.rail {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.railTop {
+  display: grid;
+  gap: 12px;
+}
+
+.railList {
+  flex: 0 0 auto;
+  min-height: auto;
+  overflow: visible;
+  align-content: start;
+  padding-right: 0;
+}
+
+@media (max-width: 1200px) {
+  .rail {
+    overflow: visible;
+  }
+
+  .railList {
+    overflow: visible;
+    padding-right: 0;
+  }
+}

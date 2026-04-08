@@ -1,0 +1,17 @@
+{
+  "id": "version-000201",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000201--slide-06-html-refined-chamber-openai",
+  "label": "slide-06-html-refined-chamber-openai",
+  "status": "archived",
+  "createdAt": "2026-04-03T17:07:33.192Z",
+  "sourceKind": "html-experiment-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/openai/vox-slide6-html-refined-chamber-openai"
+  ],
+  "sourcePath": "output/figures/openai/vox-slide6-html-refined-chamber-openai",
+  "sourceProvider": "openai",
+  "sourceVariantLabel": "html-refined-chamber-openai"
+}

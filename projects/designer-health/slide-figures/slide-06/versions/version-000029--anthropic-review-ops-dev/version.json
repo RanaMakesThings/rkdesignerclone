@@ -1,0 +1,14 @@
+{
+  "id": "version-000029",
+  "slideId": "slide-07",
+  "slideDir": "projects/designer-health/slide-figures/slide-06",
+  "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000029--anthropic-review-ops-dev",
+  "label": "anthropic-review-ops-dev",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.628Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-06/anthropic-review-ops-dev"
+  ]
+}

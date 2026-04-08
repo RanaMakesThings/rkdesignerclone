@@ -1,0 +1,130 @@
+run_defaults:
+  run_mode: standard
+  auto_promote_allowed: false
+  human_review_required_by_default: true
+
+model_assignment:
+  interpretation:
+    mode: deterministic
+
+  figure_move_search:
+    required_workers:
+      - alias: anthropic_ideator
+        provider_family: anthropic
+        task: text_ideation
+      - alias: google_ideator
+        provider_family: google
+        task: text_ideation
+    optional_workers:
+      - alias: openai_ideator
+        provider_family: openai
+        task: text_ideation
+
+  merge_and_cluster:
+    mode: deterministic_first
+
+  shortlist_selection:
+    mode: deterministic
+
+  figure_family_selection:
+    mode: deterministic
+
+  spatialization:
+    primary:
+      alias: google_spatializer
+      provider_family: google
+      task: text_spatialization
+    fallbacks:
+      - alias: anthropic_spatializer
+        provider_family: anthropic
+        task: text_spatialization
+      - alias: openai_spatializer
+        provider_family: openai
+        task: text_spatialization
+
+  thumbnail_prompt_builder:
+    primary:
+      alias: google_thumbnail_prompt_builder
+      provider_family: google
+      task: text_thumbnail_prompt_building
+    fallbacks:
+      - alias: anthropic_thumbnail_prompt_builder
+        provider_family: anthropic
+        task: text_thumbnail_prompt_building
+      - alias: openai_thumbnail_prompt_builder
+        provider_family: openai
+        task: text_thumbnail_prompt_building
+
+  thumbnail_generation:
+    required_workers:
+      - alias: openai_image_generator
+        provider_family: openai
+        task: image_generation
+      - alias: gemini_image_generator
+        provider_family: google
+        task: image_generation
+
+  critique:
+    required_workers:
+      - alias: openai_vision_critic
+        provider_family: openai
+        task: vision_critique
+      - alias: gemini_vision_critic
+        provider_family: google
+        task: vision_critique
+    quorum: 1
+
+  packaging:
+    mode: deterministic
+
+thresholds:
+  min_interpretation_confidence: 0.70
+  min_candidate_diversity: 0.55
+  min_thumbnail_diversity: 0.50
+
+  candidate_auto_reject:
+    min_job_fidelity: 7.0
+    min_figure_burden_fit: 7.0
+    min_collapse_resistance: 6.0
+
+  candidate_auto_win:
+    min_weighted_total: 8.7
+    min_runner_up_gap: 0.8
+
+  thumbnail_auto_win:
+    min_aggregate_score: 8.3
+    min_collapse_resistance: 7.0
+    max_disagreement_score: 2.0
+
+  disagreement:
+    mild: 1.0
+    significant: 2.0
+    high: 3.0
+
+retry_policy:
+  max_provider_retries: 2
+  max_stage_reruns: 2
+  max_full_run_retries: 1
+
+thumbnail_defaults:
+  standard_count: 4
+  exploratory_count: 6
+  strict_count: 3
+  use_real_copy_by_default: true
+  preserve_template_header_area: true
+
+weights:
+  job_fidelity: 0.20
+  audience_belief_fidelity: 0.10
+  figure_burden_fit: 0.18
+  two_second_clarity: 0.18
+  distinctness: 0.10
+  collapse_resistance: 0.14
+  elegance_restraint: 0.05
+  buildability: 0.05
+
+artifact_paths:
+  build_spec: slide-{slide_number}-build-spec-v{version}.md
+  critique_report: slide-{slide_number}-figure-critique-v{version}.json
+  thumbnail_manifest: slide-{slide_number}-thumbnails-v{version}.json
+  run_manifest: slide-{slide_number}-run-manifest-v{version}.json

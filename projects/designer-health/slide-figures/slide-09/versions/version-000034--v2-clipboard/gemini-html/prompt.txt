@@ -1,0 +1,47 @@
+Generate a self-contained HTML document for one premium 16:9 investor pitch
+deck slide. Use inline CSS only. Do not use external scripts. If you use SVG,
+keep it inline inside the HTML.
+
+Use a quiet documentary-style image of clinician hands with a clipboard, paper,
+or intake surface as the context layer.
+
+Use this exact on-slide copy:
+
+Header:
+Current AI helps around the visit. Vox changes how the visit starts.
+
+Subheader:
+Most assistive AI reduces operational or documentation work. Vox gives the clinician a structured brief at the beginning of the visit.
+
+Main figure:
+Align one clear blue object to the clipboard or paper surface and label it:
+Vox-prepared brief
+
+Inside that brief, imply these three short rows:
+- What matters
+- What happened when
+- What still needs confirmation
+
+Keep only a few small gray support labels around the edges:
+- scheduling
+- reminders
+- documentation support
+- note generation
+
+Optional small line near the center:
+Where clinical reasoning begins
+
+Visual rules:
+- natural light
+- low drama
+- grayscale base with one restrained blue accent
+- the paper or clipboard should make the structured brief feel tangible
+- no fake tablet UI
+- no dense callouts
+- no anti-scribe rhetoric
+
+Overall feel:
+editorial, grounded, premium, and clear that Vox is the structured starting
+layer.
+
+Return HTML only.

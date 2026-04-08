@@ -1,0 +1,38 @@
+Create a figure-only 16:9 investor-deck illustration for Designer Health.
+
+No words anywhere in the image.
+No title, no subtitle, no labels, no numbers, no UI text, no bracket text, and
+no letterforms. If a place would normally contain text, render only neutral
+lines or abstract blocks.
+
+Composition:
+- one left-to-right four-beat storyboard on a shared baseline
+- beat 1 small: secure-link phone
+- beat 2 medium: adaptive interview with the strongest human-presence beat
+- beat 3 largest: prepared brief as a document/card object, not a software
+  screen
+- beat 4 medium: clinician starts prepared
+- before-visit grouping shown only as a simple graphic line or bracket with no
+  wording
+- threshold shown only as a vertical marker with no wording
+- keep generous whitespace above for live deck copy
+
+Style target:
+- match the people and grayscale rendering language of the references
+- softer editorial medical illustration
+- refined anatomy, cleaner hands, more natural faces
+- premium grayscale with restrained teal accent
+- white background with soft fade
+
+Important:
+- beat 2 and beat 4 should feel most human and closest to the reference family
+- beat 3 should feel like a structured handoff card or clipboard, not a tablet
+  UI or dashboard
+- preserve a clear storyboard cadence without relying on any text
+
+Avoid:
+- any words, letters, or numbers
+- screen-heavy center panels
+- fake app windows
+- cluttered room detail
+- cartoon styling

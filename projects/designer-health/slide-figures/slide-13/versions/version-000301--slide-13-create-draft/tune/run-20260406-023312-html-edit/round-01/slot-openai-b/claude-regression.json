@@ -1,0 +1,25 @@
+{
+  "provider": "claude",
+  "verdict": "blocker",
+  "rationale": "The candidate slide has resolved the header and body content correctly but contains multiple visible regressions: the footer logo has failed to render (showing a broken image placeholder instead of the Designer Health lockup), the subheader is being visually overrun by the large bold header text causing overlap and clipping, content inside the master card is overflowing its bounds (the '3 pilots' stat row and the use-of-funds ribbon text are colliding and partially obscured), and the Build milestone card's bullet list is clipped at the bottom edge. Taken together, the footer shell is broken and internal layout overflow is visible on first scan.",
+  "blockers": [
+    "Footer logo is a broken image placeholder — Designer Health lockup is missing entirely",
+    "Subheader text ('Post-money SAFE • ~18–20 months of runway') is overlapped and partially hidden beneath the oversized two-line header",
+    "Left hero block overflow: '3 pilots' stat row and its descriptor text collide with the use-of-funds ribbon layer below, producing illegible stacked text",
+    "Build milestone card bullet list is clipped at the card's bottom edge — at least one bullet is cut off",
+    "Use-of-funds ribbon text strings overlap each other and the milestone card boundary, making the ribbon unreadable"
+  ],
+  "nextMove": "Fix the footer logo src path so the Designer Health lockup renders correctly, reduce header font size or tighten line-height so the subheader clears below it without overlap, constrain the left hero block height and enforce overflow-hidden with proper spacing so the stats and ribbon do not collide, and increase the master card's minimum height or reduce internal padding so the Build card bullets are fully visible before the ribbon begins.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate slide has resolved the header and body content correctly but contains multiple visible regressions: the footer logo has failed to render (showing a broken image placeholder instead of the Designer Health lockup), the subheader is being visually overrun by the large bold header text causing overlap and clipping, content inside the master card is overflowing its bounds (the '3 pilots' stat row and the use-of-funds ribbon text are colliding and partially obscured), and the Build milestone card's bullet list is clipped at the bottom edge. Taken together, the footer shell is broken and internal layout overflow is visible on first scan.",
+    "blockers": [
+      "Footer logo is a broken image placeholder — Designer Health lockup is missing entirely",
+      "Subheader text ('Post-money SAFE • ~18–20 months of runway') is overlapped and partially hidden beneath the oversized two-line header",
+      "Left hero block overflow: '3 pilots' stat row and its descriptor text collide with the use-of-funds ribbon layer below, producing illegible stacked text",
+      "Build milestone card bullet list is clipped at the card's bottom edge — at least one bullet is cut off",
+      "Use-of-funds ribbon text strings overlap each other and the milestone card boundary, making the ribbon unreadable"
+    ],
+    "nextMove": "Fix the footer logo src path so the Designer Health lockup renders correctly, reduce header font size or tighten line-height so the subheader clears below it without overlap, constrain the left hero block height and enforce overflow-hidden with proper spacing so the stats and ribbon do not collide, and increase the master card's minimum height or reduce internal padding so the Build card bullets are fully visible before the ribbon begins."
+  }
+}

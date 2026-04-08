@@ -1,0 +1,45 @@
+Generate a single 16:9 investor-deck figure.
+
+This is slide 10 of the Designer pitch deck.
+
+Use the attached board image as reference context.
+It includes:
+- the running slide 3 figure
+- the current running slide 10 figure
+
+Goal:
+Rebuild slide 10 as a left/right slide.
+
+Header:
+Recovered visit time creates real capacity.
+
+Subheader:
+When recovered minutes become completed visits, the impact is meaningful.
+
+Left side:
+- make a reduced callback to slide 3
+- use exactly two shortened visit bars plus one green `New visit` block
+- callback should feel quoted from slide 3 but much simpler
+- no ruler
+- no full before/after replay
+- no full repeated row set
+
+Right side:
+- one simple economics proof
+- `+1 visit / provider / day`
+- `220 clinic days`
+- `$125 / visit`
+- `40% contribution margin`
+- `$11,000 / year`
+- optional very quiet upside note:
+  `+2 visits / day = $22,000 / year`
+
+Design priorities:
+- left callback should clearly imply added capacity
+- right side should dominate
+- premium investor-deck feel
+- sparse, calm, editorial
+- no table
+- no dashboard chrome
+
+Return only the requested artifact.

@@ -1,0 +1,17 @@
+{
+  "class": "blocked",
+  "numeric": 0.05,
+  "status": "blocked",
+  "outcome": "block",
+  "reason": "Regression review found a concrete blocker.",
+  "blockers": [
+    "Locked subheader is visibly overlapped/clipped by the headline at the top left.",
+    "Bottom ribbon/footer treatment is misaligned and collides with the footer shell area instead of sitting cleanly above it.",
+    "A visible broken-image/stub placeholder artifact appears at the lower right of the ribbon area.",
+    "Footer logo renders as a broken image placeholder — Designer Health brand mark is missing from the bottom-right footer zone",
+    "Locked subheader 'Post-money SAFE • ~18–20 months of runway' is clipped/obscured beneath the oversized header block and does not read cleanly"
+  ],
+  "warnings": [
+    "Footer Logo drifted beyond semantic-stable threshold."
+  ]
+}

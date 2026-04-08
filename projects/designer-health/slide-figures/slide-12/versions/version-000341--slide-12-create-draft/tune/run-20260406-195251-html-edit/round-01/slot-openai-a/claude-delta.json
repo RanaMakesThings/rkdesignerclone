@@ -1,0 +1,41 @@
+{
+  "provider": "claude",
+  "status": "partial",
+  "summary": "The candidate (image 3) successfully replaces the blank template with real slide content and hits the core structural requirements: locked header and subheader are present, the $1.25M hero ask is prominent on the left, three Build/Deploy/Validate milestone cards appear on the right, support stats (2 key hires, 3 pilot sites, 18–20 months runway) are shown, and a bottom 'Use of Funds: Build • Deploy • Validate' ribbon closes the card. However, several issues prevent a full 'applied' rating: (1) the Designer Health footer logo has failed to render — a broken image placeholder appears in the bottom-right instead of the locked Designer Health wordmark/logo; (2) the header is missing the 'THE ASK' eyebrow label that appears above the header in the spec and in reference versions 000320/000340; (3) the left hero block feels underpopulated — the 'Pre-Seed SAFE' label is present but the three support stats (2 key hires / 3 pilot sites / 18–20 months) are placed only in the right column header row rather than anchored to the left hero block as specified; (4) the milestone cards are clean but each contains only a single condensed sentence rather than the two discrete bullet checkpoints called out in the spec (e.g., Build: 'Founding engineer in place' + 'Clinician-grade product loop live' as separate items); (5) the subheader overlaps slightly with the header text in the rendered output. The white Designer shell and footer rule are preserved, and the overall layout logic is correct, but the broken logo and missing eyebrow are blocking issues for a presentation-ready slide.",
+  "evidence": [
+    "Footer logo area shows a broken image placeholder (gray box) instead of the Designer Health logo/wordmark — shell contract violation",
+    "No 'THE ASK' eyebrow label appears above the locked header in the candidate; spec and reference versions both require it",
+    "Header text 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' is present and correct",
+    "Subheader 'Post-money SAFE • ~18–20 months of runway' is present but visually overlaps the header bottom edge",
+    "$1.25M hero number is large and prominent in the left block with 'Post-money SAFE' label — correct",
+    "Support stats (2 key hires, 3 pilot sites, 18–20 months runway) appear only in the right-column top row, not anchored to the left hero block as specified",
+    "BUILD card reads 'Founding engineer hired; clinician-grade product loop live' as a single sentence rather than two discrete checkpoint bullets",
+    "DEPLOY card reads 'Implementation lead hired; 3 pilot sites live' — correct content but collapsed to one line",
+    "VALIDATE card reads 'Measured pilot outcomes; seed-ready proof package' — correct content, same single-line issue",
+    "Bottom ribbon reads 'USE OF FUNDS  Build • Deploy • Validate' — matches spec",
+    "White shell background and horizontal footer rule are preserved correctly",
+    "Overall left-hero / right-milestone card layout matches the specified figure logic"
+  ],
+  "nextPrompt": "Fix three blocking issues: (1) Restore the Designer Health footer logo — the image is broken; use the correct asset path or inline SVG from the shell contract. (2) Add the 'THE ASK' eyebrow label in small caps above the locked header. (3) Expand each milestone card to show two discrete bullet-point checkpoints on separate lines (Build: 'Founding engineer in place' / 'Clinician-grade product loop live'; Deploy: 'Implementation / ops lead in place' / 'Pilot sites launched with a repeatable rollout motion'; Validate: 'Measurable pilot outcomes' / 'Seed-ready proof package'). Also move the 2 key hires / 3 pilot sites / 18–20 months stats into the left hero block beneath the $1.25M figure, or keep them in the right column but ensure they do not crowd the subheader. Do not change the overall layout, shell, or footer rule.",
+  "needsHuman": false,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate (image 3) successfully replaces the blank template with real slide content and hits the core structural requirements: locked header and subheader are present, the $1.25M hero ask is prominent on the left, three Build/Deploy/Validate milestone cards appear on the right, support stats (2 key hires, 3 pilot sites, 18–20 months runway) are shown, and a bottom 'Use of Funds: Build • Deploy • Validate' ribbon closes the card. However, several issues prevent a full 'applied' rating: (1) the Designer Health footer logo has failed to render — a broken image placeholder appears in the bottom-right instead of the locked Designer Health wordmark/logo; (2) the header is missing the 'THE ASK' eyebrow label that appears above the header in the spec and in reference versions 000320/000340; (3) the left hero block feels underpopulated — the 'Pre-Seed SAFE' label is present but the three support stats (2 key hires / 3 pilot sites / 18–20 months) are placed only in the right column header row rather than anchored to the left hero block as specified; (4) the milestone cards are clean but each contains only a single condensed sentence rather than the two discrete bullet checkpoints called out in the spec (e.g., Build: 'Founding engineer in place' + 'Clinician-grade product loop live' as separate items); (5) the subheader overlaps slightly with the header text in the rendered output. The white Designer shell and footer rule are preserved, and the overall layout logic is correct, but the broken logo and missing eyebrow are blocking issues for a presentation-ready slide.",
+    "evidence": [
+      "Footer logo area shows a broken image placeholder (gray box) instead of the Designer Health logo/wordmark — shell contract violation",
+      "No 'THE ASK' eyebrow label appears above the locked header in the candidate; spec and reference versions both require it",
+      "Header text 'Raising $1.25M to launch pilots, prove value, and establish repeatable deployment' is present and correct",
+      "Subheader 'Post-money SAFE • ~18–20 months of runway' is present but visually overlaps the header bottom edge",
+      "$1.25M hero number is large and prominent in the left block with 'Post-money SAFE' label — correct",
+      "Support stats (2 key hires, 3 pilot sites, 18–20 months runway) appear only in the right-column top row, not anchored to the left hero block as specified",
+      "BUILD card reads 'Founding engineer hired; clinician-grade product loop live' as a single sentence rather than two discrete checkpoint bullets",
+      "DEPLOY card reads 'Implementation lead hired; 3 pilot sites live' — correct content but collapsed to one line",
+      "VALIDATE card reads 'Measured pilot outcomes; seed-ready proof package' — correct content, same single-line issue",
+      "Bottom ribbon reads 'USE OF FUNDS  Build • Deploy • Validate' — matches spec",
+      "White shell background and horizontal footer rule are preserved correctly",
+      "Overall left-hero / right-milestone card layout matches the specified figure logic"
+    ],
+    "nextPrompt": "Fix three blocking issues: (1) Restore the Designer Health footer logo — the image is broken; use the correct asset path or inline SVG from the shell contract. (2) Add the 'THE ASK' eyebrow label in small caps above the locked header. (3) Expand each milestone card to show two discrete bullet-point checkpoints on separate lines (Build: 'Founding engineer in place' / 'Clinician-grade product loop live'; Deploy: 'Implementation / ops lead in place' / 'Pilot sites launched with a repeatable rollout motion'; Validate: 'Measurable pilot outcomes' / 'Seed-ready proof package'). Also move the 2 key hires / 3 pilot sites / 18–20 months stats into the left hero block beneath the $1.25M figure, or keep them in the right column but ensure they do not crowd the subheader. Do not change the overall layout, shell, or footer rule.",
+    "needsHuman": false
+  }
+}

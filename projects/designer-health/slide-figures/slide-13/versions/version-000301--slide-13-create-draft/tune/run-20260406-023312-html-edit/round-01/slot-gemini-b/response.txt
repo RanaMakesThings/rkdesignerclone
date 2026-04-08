@@ -1,0 +1,424 @@
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designer Deck Template v1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --ink: #111111;
+        --muted: #6f7785;
+        --line: rgba(0, 0, 0, 0.9);
+        
+        /* Muted Blue Accent Family */
+        --blue-900: #1e3a8a;
+        --blue-600: #2563eb;
+        --blue-200: #bfdbfe;
+        --blue-100: #dbeafe;
+        
+        /* Soft Grays */
+        --gray-50: #f8fafc;
+        --gray-100: #f1f5f9;
+        --gray-200: #e2e8f0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+      }
+
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+      }
+
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 62px;
+        margin: 0;
+        font-size: 64px;
+        line-height: 1.04;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+      }
+
+      .subheader {
+        position: absolute;
+        left: 92px;
+        top: 154px;
+        margin: 0;
+        font-size: 27px;
+        line-height: 1.28;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: var(--muted);
+      }
+
+      /* Master Card Layout */
+      .master-card {
+        position: absolute;
+        left: 140px;
+        top: 250px;
+        width: 1640px;
+        height: 680px;
+        background: var(--gray-100);
+        border-radius: 32px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .top-section {
+        display: flex;
+        gap: 32px;
+        flex: 1;
+      }
+
+      /* Left Hero Ask Block */
+      .hero-ask {
+        flex: 0 0 540px;
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 48px;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.04);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .hero-overline {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: var(--blue-600);
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .hero-amount {
+        font-size: 112px;
+        font-weight: 800;
+        line-height: 1;
+        color: var(--blue-900);
+        letter-spacing: -0.04em;
+        margin-bottom: 12px;
+      }
+
+      .hero-instrument {
+        font-size: 28px;
+        font-weight: 600;
+        color: var(--ink);
+        margin-bottom: 48px;
+      }
+
+      .hero-divider {
+        height: 1px;
+        background: var(--gray-200);
+        margin-bottom: 40px;
+      }
+
+      .hero-stats {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .stat-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .stat-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--blue-100);
+        color: var(--blue-600);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .stat-icon svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .stat-text {
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--ink);
+        letter-spacing: -0.01em;
+      }
+
+      /* Right Stacked Milestones */
+      .milestones {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .milestone-card {
+        flex: 1;
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 0 40px;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.04);
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .milestone-number {
+        font-size: 64px;
+        font-weight: 800;
+        color: var(--blue-100);
+        line-height: 1;
+        letter-spacing: -0.02em;
+        width: 80px;
+      }
+
+      .milestone-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .milestone-title {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--blue-900);
+        letter-spacing: -0.01em;
+      }
+
+      .milestone-desc {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--muted);
+        line-height: 1.4;
+      }
+
+      /* Bottom Use of Funds Ribbon */
+      .funds-ribbon {
+        height: 100px;
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 0 40px;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.04);
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .ribbon-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--ink);
+        white-space: nowrap;
+        letter-spacing: -0.01em;
+      }
+
+      .ribbon-bar {
+        flex: 1;
+        height: 16px;
+        border-radius: 8px;
+        display: flex;
+        overflow: hidden;
+      }
+
+      .bar-segment-1 { width: 50%; background: var(--blue-900); }
+      .bar-segment-2 { width: 35%; background: var(--blue-600); }
+      .bar-segment-3 { width: 15%; background: var(--blue-200); }
+
+      .ribbon-legend {
+        display: flex;
+        gap: 32px;
+        white-space: nowrap;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .legend-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+      }
+
+      .legend-dot.c1 { background: var(--blue-900); }
+      .legend-dot.c2 { background: var(--blue-600); }
+      .legend-dot.c3 { background: var(--blue-200); }
+
+      .legend-text {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--muted);
+      }
+
+      .legend-text span {
+        color: var(--ink);
+        font-weight: 700;
+        margin-left: 6px;
+      }
+
+      /* Locked Footer Elements */
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="Designer Deck Slide">
+      <h1 class="header">Raising $1.25M to launch pilots, prove value, and establish repeatable deployment</h1>
+      <p class="subheader">Post-money SAFE • ~18–20 months of runway</p>
+      
+      <div class="master-card">
+        
+        <div class="top-section">
+          <!-- Left Hero Ask Block -->
+          <div class="hero-ask">
+            <div class="hero-overline">Financing Round</div>
+            <div class="hero-amount">$1.25M</div>
+            <div class="hero-instrument">Post-money SAFE</div>
+            
+            <div class="hero-divider"></div>
+            
+            <div class="hero-stats">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="stat-text">2 core hires</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                    <path d="M9 22v-4h6v4"></path>
+                    <path d="M8 6h.01"></path>
+                    <path d="M16 6h.01"></path>
+                    <path d="M12 6h.01"></path>
+                    <path d="M12 10h.01"></path>
+                    <path d="M12 14h.01"></path>
+                    <path d="M16 10h.01"></path>
+                    <path d="M16 14h.01"></path>
+                    <path d="M8 10h.01"></path>
+                    <path d="M8 14h.01"></path>
+                  </svg>
+                </div>
+                <div class="stat-text">3 pilot sites</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="stat-text">18–20 months runway</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Stacked Milestones -->
+          <div class="milestones">
+            <div class="milestone-card">
+              <div class="milestone-number">01</div>
+              <div class="milestone-content">
+                <div class="milestone-title">Build</div>
+                <div class="milestone-desc">Finalize clinical workflow platform and onboard core engineering team.</div>
+              </div>
+            </div>
+            <div class="milestone-card">
+              <div class="milestone-number">02</div>
+              <div class="milestone-content">
+                <div class="milestone-title">Deploy</div>
+                <div class="milestone-desc">Launch in 3 initial pilot sites with integrated EHR capabilities.</div>
+              </div>
+            </div>
+            <div class="milestone-card">
+              <div class="milestone-number">03</div>
+              <div class="milestone-content">
+                <div class="milestone-title">Validate</div>
+                <div class="milestone-desc">Prove clinical value, user adoption, and establish repeatable deployment playbook.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Use of Funds Ribbon -->
+        <div class="funds-ribbon">
+          <div class="ribbon-title">Use of Funds</div>
+          <div class="ribbon-bar">
+            <div class="bar-segment-1"></div>
+            <div class="bar-segment-2"></div>
+            <div class="bar-segment-3"></div>
+          </div>
+          <div class="ribbon-legend">
+            <div class="legend-item">
+              <div class="legend-dot c1"></div>
+              <div class="legend-text">Product & Eng <span>50%</span></div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-dot c2"></div>
+              <div class="legend-text">Clinical Pilots <span>35%</span></div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-dot c3"></div>
+              <div class="legend-text">Ops & Legal <span>15%</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../../../../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>
+```

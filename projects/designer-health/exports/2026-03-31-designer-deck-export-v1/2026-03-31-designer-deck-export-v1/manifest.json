@@ -1,0 +1,98 @@
+{
+  "exportDate": "2026-03-31",
+  "project": "designer-health",
+  "bundleId": "2026-03-31-designer-deck-export-v1",
+  "deckReport": "deck-report.html",
+  "runningFigure": {
+    "label": "slide-03 current running figure",
+    "html": "main-running-figure/main-running-figure-slide-03.html",
+    "png": "main-running-figure/main-running-figure-slide-03.png",
+    "sourceSlideDir": "slide-03"
+  },
+  "slides": [
+    {
+      "slideNumber": "01",
+      "title": "VOX",
+      "html": "slides/slide-01-vox.html",
+      "png": "slides/slide-01-vox.png",
+      "sourceSlideDir": "slide-01"
+    },
+    {
+      "slideNumber": "02",
+      "title": "Demand is outpacing clinical capacity",
+      "html": "slides/slide-02-demand-is-outpacing-clinical-capacity.html",
+      "png": "slides/slide-02-demand-is-outpacing-clinical-capacity.png",
+      "sourceSlideDir": "slide-02"
+    },
+    {
+      "slideNumber": "03",
+      "title": "More efficient visits will increase supply",
+      "html": "slides/slide-03-more-efficient-visits-will-increase-supply.html",
+      "png": "slides/slide-03-more-efficient-visits-will-increase-supply.png",
+      "sourceSlideDir": "slide-03"
+    },
+    {
+      "slideNumber": "04",
+      "title": "Visits start with story, not structure",
+      "html": "slides/slide-04-visits-start-with-story-not-structure.html",
+      "png": "slides/slide-04-visits-start-with-story-not-structure.png",
+      "sourceSlideDir": "slide-04"
+    },
+    {
+      "slideNumber": "05",
+      "title": "History is the cleanest place to reclaim minutes",
+      "html": "slides/slide-05-history-is-the-cleanest-place-to-reclaim-minutes.html",
+      "png": "slides/slide-05-history-is-the-cleanest-place-to-reclaim-minutes.png",
+      "sourceSlideDir": "slide-05"
+    },
+    {
+      "slideNumber": "07",
+      "title": "Vox prepares the visit before it starts",
+      "html": "slides/slide-07-vox-prepares-the-visit-before-it-starts.html",
+      "png": "slides/slide-07-vox-prepares-the-visit-before-it-starts.png",
+      "sourceSlideDir": "slide-06"
+    },
+    {
+      "slideNumber": "08",
+      "title": "The clinician starts from a structured brief",
+      "html": "slides/slide-08-the-clinician-starts-from-a-structured-brief.html",
+      "png": "slides/slide-08-the-clinician-starts-from-a-structured-brief.png",
+      "sourceSlideDir": "slide-08"
+    },
+    {
+      "slideNumber": "09",
+      "title": "Current AI helps around the visit",
+      "html": "slides/slide-09-current-ai-helps-around-the-visit.html",
+      "png": "slides/slide-09-current-ai-helps-around-the-visit.png",
+      "sourceSlideDir": "slide-09"
+    },
+    {
+      "slideNumber": "10",
+      "title": "Recovered visit time creates real capacity",
+      "html": "slides/slide-10-recovered-visit-time-creates-real-capacity.html",
+      "png": "slides/slide-10-recovered-visit-time-creates-real-capacity.png",
+      "sourceSlideDir": "slide-10"
+    },
+    {
+      "slideNumber": "11",
+      "title": "Start where throughput proof is fastest",
+      "html": "slides/slide-11-start-where-throughput-proof-is-fastest.html",
+      "png": "slides/slide-11-start-where-throughput-proof-is-fastest.png",
+      "sourceSlideDir": "slide-11"
+    }
+  ],
+  "omittedSlides": [
+    {
+      "slideNumber": "06",
+      "reason": "No current stamped figure export"
+    },
+    {
+      "slideNumber": "12",
+      "reason": "No current stamped figure export"
+    },
+    {
+      "slideNumber": "13",
+      "reason": "No current stamped figure export"
+    }
+  ]
+}

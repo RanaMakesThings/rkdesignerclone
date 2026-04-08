@@ -1,0 +1,17 @@
+{
+  "roundNumber": 1,
+  "status": "running",
+  "startedAt": "2026-04-06T19:52:52.904Z",
+  "completedAt": null,
+  "slots": [],
+  "summary": {
+    "passCount": 0,
+    "retryCount": 0,
+    "blockedCount": 0,
+    "escalatedCount": 0
+  },
+  "retrySynthesis": {
+    "global": "",
+    "slotLocal": {}
+  }
+}

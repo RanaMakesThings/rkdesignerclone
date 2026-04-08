@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, initial-scale=1" />
+    <title>slide-05 — History is the cleanest place to reclaim minutes</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --bg: #ffffff;
+        --ink: #151820;
+        --muted: #6f7785;
+        --muted-2: #8d96a5;
+        --line: rgba(0, 0, 0, 0.9);
+
+        --history: #4f89c6;
+        --history-dark: #3f76b0;
+        --exam: #d9dee6;
+        --plan: #a2abb8;
+
+        --teal: #2d8f98;
+        --orange: #d7872e;
+        --green: #5d8c86;
+
+        --soft-blue: rgba(79, 137, 198, 0.13);
+        --soft-gray: rgba(17, 24, 32, 0.06);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--bg);
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+      }
+
+      .slide {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        background: #fff;
+      }
+
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 46px;
+        width: 1200px;
+        margin: 0;
+        font-size: 66px;
+        line-height: 0.98;
+        font-weight: 700;
+        letter-spacing: -0.055em;
+        color: #141923;
+      }
+
+      .visit-wrap {
+        position: absolute;
+        left: 218px;
+        top: 246px;
+        width: 1484px;
+        height: 205px;
+      }
+
+      .visit-label {
+        position: absolute;
+        left: 2px;
+        top: -34px;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--muted-2);
+      }
+
+      .visit-bar {
+        position: absolute;
+        left: 0;
+        top: 44px;
+        width: 1480px;
+        height: 96px;
+        border-radius: 14px;
+        overflow: visible;
+      }
+
+      .seg {
+        position: absolute;
+        top: 0;
+        height: 96px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        line-height: 1;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+      }
+
+      .seg.history {
+        left: 0;
+        width: 740px;
+        height: 118px;
+        top: -11px;
+        background: linear-gradient(180deg, var(--history) 0%, var(--history-dark) 100%);
+        border-radius: 16px;
+        color: #fff;
+        box-shadow:
+          0 24px 44px rgba(79, 137, 198, 0.20),
+          0 10px 18px rgba(0, 0, 0, 0.06);
+        z-index: 3;
+      }
+
+      .seg.exam {
+        left: 740px;
+        width: 300px;
+        background: #d5dbe4;
+        color: #253041;
+        z-index: 1;
+      }
+
+      .seg.plan {
+        left: 1040px;
+        width: 440px;
+        background: #9ca6b3;
+        color: #ffffff;
+        z-index: 1;
+        border-top-right-radius: 14px;
+        border-bottom-right-radius: 14px;
+      }
+
+      .seg-base {
+        position: absolute;
+        top: 0;
+        height: 96px;
+        border-radius: 14px;
+        background: #eef2f6;
+        z-index: 0;
+      }
+
+      .history-caption {
+        position: absolute;
+        left: 72px;
+        top: 176px;
+        width: 470px;
+        text-align: left;
+      }
+
+      .history-caption .cap-title {
+        font-size: 18px;
+        line-height: 1.15;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #233246;
+        margin-bottom: 8px;
+      }
+
+      .history-caption .cap-sub {
+        font-size: 16px;
+        line-height: 1.3;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: var(--muted);
+      }
+
+      .proof {
+        position: absolute;
+        left: 1020px;
+        top: 472px;
+        width: 650px;
+      }
+
+      .proof-row {
+        position: relative;
+        margin-bottom: 52px;
+        padding-left: 34px;
+      }
+
+      .proof-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .proof-row::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--orange);
+        box-shadow: 0 0 0 6px rgba(215, 135, 46, 0.10);
+      }
+
+      .proof-row:nth-child(1)::before {
+        background: var(--teal);
+        box-shadow: 0 0 0 6px rgba(45, 143, 152, 0.10);
+      }
+
+      .proof-row:nth-child(2)::before {
+        background: var(--history);
+        box-shadow: 0 0 0 6px rgba(79, 137, 198, 0.10);
+      }
+
+      .proof-row:nth-child(3)::before {
+        background: var(--orange);
+        box-shadow: 0 0 0 6px rgba(215, 135, 46, 0.10);
+      }
+
+      .proof-kicker {
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #9da6b4;
+        margin-bottom: 12px;
+      }
+
+      .proof-title {
+        font-size: 31px;
+        line-height: 1.08;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        color: #182131;
+        margin-bottom: 10px;
+      }
+
+      .proof-body {
+        font-size: 20px;
+        line-height: 1.35;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        color: #657082;
+        max-width: 540px;
+      }
+
+      .bottom-truth {
+        position: absolute;
+        left: 92px;
+        top: 838px;
+        width: 1210px;
+        font-size: 50px;
+        line-height: 1.05;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        color: #202937;
+      }
+
+      .left-scaffold {
+        position: absolute;
+        left: 218px;
+        top: 470px;
+        width: 640px;
+        height: 292px;
+      }
+
+      .left-note {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 580px;
+        font-size: 22px;
+        line-height: 1.42;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        color: #677285;
+      }
+
+      .left-note strong {
+        color: #273243;
+        font-weight: 700;
+      }
+
+      .micro-lines {
+        position: absolute;
+        left: 0;
+        top: 132px;
+        width: 620px;
+        height: 96px;
+      }
+
+      .micro-bar {
+        position: absolute;
+        left: 0;
+        height: 14px;
+        border-radius: 999px;
+        background: #edf1f5;
+        overflow: hidden;
+      }
+
+      .micro-bar.one {
+        top: 0;
+        width: 364px;
+      }
+
+      .micro-bar.two {
+        top: 32px;
+        width: 422px;
+      }
+
+      .micro-bar.three {
+        top: 64px;
+        width: 300px;
+      }
+
+      .micro-fill-h {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: rgba(79, 137, 198, 0.75);
+      }
+
+      .micro-fill-e {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        background: rgba(217, 222, 230, 1);
+      }
+
+      .micro-fill-p {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        background: rgba(162, 171, 184, 1);
+      }
+
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+      }
+
+      .bg-svg {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="History is the cleanest place to reclaim minutes">
+      <svg class="bg-svg" viewBox="0 0 1920 1080" aria-hidden="true">
+        <defs>
+          <linearGradient id="fadeBlue" x1="0" x2="1">
+            <stop offset="0%" stop-color="#4f89c6" stop-opacity="0.22"></stop>
+            <stop offset="100%" stop-color="#4f89c6" stop-opacity="0"></stop>
+          </linearGradient>
+          <linearGradient id="fadeGray" x1="0" x2="1">
+            <stop offset="0%" stop-color="#95a0af" stop-opacity="0.18"></stop>
+            <stop offset="100%" stop-color="#95a0af" stop-opacity="0"></stop>
+          </linearGradient>
+        </defs>
+
+        <line x1="259" y1="330" x2="958" y2="330" stroke="url(#fadeBlue)" stroke-width="2"/>
+        <line x1="958" y1="330" x2="1502" y2="330" stroke="url(#fadeGray)" stroke-width="2"/>
+
+        <line x1="468" y1="384" x2="468" y2="430" stroke="#4f89c6" stroke-opacity="0.28" stroke-width="2"/>
+        <line x1="1278" y1="468" x2="1278" y2="820" stroke="#e8edf3" stroke-width="1"/>
+      </svg>
+
+      <h1 class="header">History is the cleanest place to reclaim minutes.</h1>
+
+      <div class="visit-wrap" aria-label="Visit bar with history selected">
+        <div class="visit-label">Visit as a whole</div>
+
+        <div class="visit-bar">
+          <div class="seg-base" style="left:0; width:1480px;"></div>
+          <div class="seg history">History</div>
+          <div class="seg exam">Exam</div>
+          <div class="seg plan">Assessment / plan</div>
+        </div>
+
+        <div class="history-caption">
+          <div class="cap-title">A high-leverage target for pre-visit prep.</div>
+          <div class="cap-sub">Relevant details • Timeline • Next questions</div>
+        </div>
+      </div>
+
+      <div class="left-scaffold" aria-hidden="true">
+        <div class="left-note">
+          The right wedge is the part that is both <strong>important to the encounter</strong> and <strong>variable enough to reclaim</strong> without reducing the visit to clerical intake.
+        </div>
+
+        <div class="micro-lines">
+          <div class="micro-bar one">
+            <div class="micro-fill-h" style="width:56%;"></div>
+            <div class="micro-fill-e" style="left:56%; width:18%;"></div>
+            <div class="micro-fill-p" style="left:74%; width:26%;"></div>
+          </div>
+          <div class="micro-bar two">
+            <div class="micro-fill-h" style="width:48%;"></div>
+            <div class="micro-fill-e" style="left:48%; width:20%;"></div>
+            <div class="micro-fill-p" style="left:68%; width:32%;"></div>
+          </div>
+          <div class="micro-bar three">
+            <div class="micro-fill-h" style="width:61%;"></div>
+            <div class="micro-fill-e" style="left:61%; width:15%;"></div>
+            <div class="micro-fill-p" style="left:76%; width:24%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proof" aria-label="Proof field">
+        <div class="proof-row">
+          <div class="proof-kicker">Why history is the wedge</div>
+          <div class="proof-title">Foundational to the encounter</div>
+          <div class="proof-body">Shapes the starting point for what follows in the visit.</div>
+        </div>
+
+        <div class="proof-row">
+          <div class="proof-title">Time-variable</div>
+          <div class="proof-body">Time required depends on complexity, communication, and context.</div>
+        </div>
+
+        <div class="proof-row">
+          <div class="proof-title">Can begin before the encounter</div>
+          <div class="proof-body">A meaningful portion can start before the clinician is on the clock.</div>
+        </div>
+      </div>
+
+      <div class="bottom-truth">But reclaiming those minutes still requires clinical judgment.</div>
+
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../../../../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>

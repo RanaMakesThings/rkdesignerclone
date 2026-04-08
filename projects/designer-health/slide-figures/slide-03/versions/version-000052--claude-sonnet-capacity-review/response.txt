@@ -1,0 +1,68 @@
+# Slide Redesign Analysis
+
+## Framing the Core Communication Problem
+
+Before the five directions: the slide currently asks viewers to **infer** a three-step logical chain — (1) story reconstruction shrinks, (2) that shrinkage compounds across visits, (3) a new visit slot appears. None of those three steps are made visually explicit. The green "New visit" button reads as a call-to-action rather than a capacity outcome. The middle row of blocks looks like a repeated pattern, not a transformation.
+
+---
+
+## Five Concrete Redesign Directions
+
+---
+
+### Direction 1: Explicit Before/After Framing with a Labeled Gap
+
+**The visual change:**
+Split the slide into two clearly labeled horizontal rows — **"Today"** and **"With AI-assisted prep"** — each showing five visit blocks. In the "Today" row, each block has a large blue (story reconstruction) segment and small gray segments. In the second row, each block has a visibly smaller blue segment and same-size gray segments. At the end of the second row, a sixth block appears with a label like **"Recovered capacity → 1 additional visit."** Add a thin bracket under each row spanning all five visits, with the second bracket labeled something like "Same total time."
+
+**Why it clarifies:**
+It makes the before/after transformation **explicit rather than inferred.** Viewers immediately see the comparison. The "same total time" bracket neutralizes the "reckless compression" concern because it shows you're not shrinking the day — you're redistributing minutes within it. The sixth block now reads as a logical mathematical outcome, not a bonus.
+
+**Main tradeoff/risk:**
+The slide becomes taller and more complex. You risk it feeling like a two-slide argument compressed into one. The "same total time" bracket requires that claim to be literally true and defensible — if story reconstruction saves 3 minutes per visit, you need 15–18 minutes to fill a sixth visit, and that math may not hold cleanly. If the numbers are approximate, this framing will invite skepticism.
+
+---
+
+### Direction 2: Animated/Sequential Shrinking with a Running Total
+
+**The visual change:**
+Keep one row of visits. Above each block, show a small counter or label that accumulates: **"+2 min," "+4 min," "+6 min,"** etc. as the blue segment visibly narrows from left to right (each block's blue portion gets slightly smaller, showing the compounding effect visit by visit). When the counter hits a threshold (say, "+15 min"), the sixth block appears with the label **"Enough time for a new visit."** The blue segment's shrinkage should be labeled once, early — something like **"Story reconstruction: 3 min shorter per visit."**
+
+**Why it clarifies:**
+This makes the compounding mechanism **mechanically visible.** The viewer doesn't have to do any math — the slide does it for them. It also answers the implicit question "where does the capacity come from?" with a specific, credible number rather than a vague gesture at efficiency. The framing of "3 min shorter" feels precise and non-reckless because it's a small, named change rather than a wholesale visit compression.
+
+**Main tradeoff/risk:**
+If this is a static slide (PDF or printed), the "sequential" nature is lost. The running counter approach requires careful typographic execution — if it looks cluttered, it will undermine the clean argument. Also, stating a specific number (3 min) is a commitment: if challenged, you need supporting data for that figure.
+
+---
+
+### Direction 3: The Single Annotated Transition — Rewrite the Middle Text and Add Directional Arrows
+
+**The visual change:**
+Keep the current two-row structure but make three targeted changes: (a) Add a small rightward-pointing arrow *inside* each blue segment in the top row, with a label on the first block only: **"AI prep shortens this portion."** (b) Replace the current middle transition text ("Efficiency repeated across visits creates capacity") with something more mechanistic: **"5 visits × [X] minutes recovered = [Y] minutes free."** (c) Change the green "New visit" block to look identical in structure to the other blocks (blue + gray segments) but add a label above it: **"New visit slot"** with a small bracket connecting it back to the recovered-minutes label.
+
+**Why it clarifies:**
+This is the lowest-lift intervention and the most respectful of the current design. The arrow inside the blue segment directly answers "what is changing and why." The rewritten middle text converts a vague statement into a logical equation, making the capacity creation feel like arithmetic rather than magic. Making the new visit *look like* the other visits is critical — the green button currently reads as UI, not as a visit slot.
+
+**Main tradeoff/risk:**
+This is iterative, not transformative. If the underlying layout is confusing, these fixes patch symptoms. The two-row structure still requires viewers to understand that the top row and bottom row represent the same day — that relationship is still implicit. The arithmetic in the middle text only works if your numbers are defensible.
+
+---
+
+### Direction 4: The "Stack" View — Show Time Freed as a Visible Pool
+
+**The visual change:**
+Replace the bottom row of visit blocks with a horizontal timeline bar for the full clinic day. Show five visit blocks on the timeline. Between each block, a small colored sliver (perhaps teal, distinct from the blue) appears, labeled once: **"Recovered minutes."** Those slivers visually migrate to the right end of the timeline and combine into a sixth visit-sized block, labeled **"New visit."** Above the timeline, a single sentence: **"AI reduces story reconstruction time. The minutes add up."**
+
+**Why it clarifies:**
+This is the only direction that shows **where in the day the time comes from and where it goes.** It respects the viewer's intelligence — rather than showing abstract blocks, it grounds the argument in a real clinical day. The slivers-combining-into-a-visit is a physically intuitive metaphor. Critically, it avoids any implication of visit compression because each visit block remains the same size — only the recovered slivers between or within them change.
+
+**Main tradeoff/risk:**
+This is the highest-design-effort option and the hardest to execute cleanly without it looking messy. The "slivers migrating" concept may require animation to be clear — as a static image, it could confuse. It also implicitly claims that recovered minutes are contiguous and schedulable, which may oversimplify scheduling realities.
+
+---
+
+### Direction 5: Anchored Narrative with a Single Focal Visit, Then Multiply
+
+**The visual change:**
+Zoom in on **one visit** at the top of the slide. Show it as a segmented bar with labeled sections: Story reconstruction (blue, e.g., 10 min), Physical exam (gray, e.g., 8 min), Decisions + counseling (gray, e.g., 7 min). Below it, show the same visit with story reconstruction reduced to

@@ -1,0 +1,14 @@
+{
+  "id": "version-000042",
+  "slideId": "slide-10",
+  "slideDir": "projects/designer-health/slide-figures/slide-10",
+  "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000042--left-right-capacity-tile-v1",
+  "label": "left-right-capacity-tile-v1",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.923Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-10/left-right-capacity-tile-v1"
+  ]
+}

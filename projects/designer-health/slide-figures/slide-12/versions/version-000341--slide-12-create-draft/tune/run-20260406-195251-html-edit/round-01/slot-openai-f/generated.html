@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, initial-scale=1" />
+    <title>Designer Health — Slide 12</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --ink: #111111;
+        --navy: #1f2a44;
+        --text: #27334a;
+        --muted: #667388;
+        --muted-2: #8a95a7;
+        --line: #d7dfea;
+        --line-2: #e7edf5;
+        --panel: #f8fbff;
+        --panel-2: #f3f7fc;
+        --blue: #2f67f6;
+        --blue-soft: #eaf1ff;
+        --blue-mid: #5d86d8;
+        --shadow: 0 20px 44px rgba(44, 65, 102, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+      }
+
+      .slide {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        background: #ffffff;
+      }
+
+      .eyebrow {
+        position: absolute;
+        left: 92px;
+        top: 72px;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #6d7f9d;
+      }
+
+      .header {
+        position: absolute;
+        left: 92px;
+        top: 101px;
+        width: 1540px;
+        margin: 0;
+        font-size: 58px;
+        line-height: 0.98;
+        font-weight: 700;
+        letter-spacing: -0.055em;
+        color: #121722;
+      }
+
+      .subheader {
+        position: absolute;
+        left: 92px;
+        top: 220px;
+        margin: 0;
+        font-size: 25px;
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        color: var(--muted);
+      }
+
+      .master {
+        position: absolute;
+        left: 112px;
+        top: 264px;
+        width: 1696px;
+        height: 838px;
+        border-radius: 28px;
+        background:
+          radial-gradient(1200px 520px at 85% 0%, rgba(67, 119, 255, 0.08) 0%, rgba(67, 119, 255, 0.03) 34%, rgba(255,255,255,0) 72%),
+          linear-gradient(180deg, #fbfdff 0%, #f5f8fc 100%);
+        border: 1px solid #dce5f1;
+        box-shadow: var(--shadow);
+      }
+
+      .master::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 110px;
+        height: 1px;
+        background: #d8e2ef;
+      }
+
+      .left-hero {
+        position: absolute;
+        left: 34px;
+        top: 34px;
+        width: 520px;
+        height: 604px;
+        border-radius: 26px;
+        background:
+          radial-gradient(420px 300px at 18% 20%, rgba(53, 106, 246, 0.05) 0%, rgba(53, 106, 246, 0.01) 60%, rgba(255,255,255,0) 100%),
+          linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+        border: 1px solid #d8e2ef;
+        box-shadow: 0 10px 28px rgba(30, 53, 92, 0.08);
+        overflow: hidden;
+      }
+
+      .hero-tag {
+        position: absolute;
+        left: 34px;
+        top: 28px;
+        padding: 10px 16px 9px;
+        border-radius: 999px;
+        background: var(--blue-soft);
+        border: 1px solid #cddcfb;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #5f7eb8;
+      }
+
+      .hero-body {
+        position: absolute;
+        left: 34px;
+        top: 108px;
+        width: 452px;
+      }
+
+      .hero-kicker {
+        margin: 0 0 14px;
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #6d7f9d;
+      }
+
+      .amount {
+        margin: 0;
+        font-size: 78px;
+        line-height: 0.9;
+        font-weight: 800;
+        letter-spacing: -0.07em;
+        color: #101114;
+      }
+
+      .safe {
+        margin: 14px 0 0;
+        font-size: 25px;
+        line-height: 1.1;
+        font-weight: 700;
+        letter-spacing: -0.035em;
+        color: #25324a;
+      }
+
+      .hero-copy {
+        margin: 22px 0 0;
+        width: 438px;
+        font-size: 21px;
+        line-height: 1.45;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        color: #33435d;
+      }
+
+      .hero-rule {
+        position: absolute;
+        left: 34px;
+        right: 34px;
+        top: 422px;
+        height: 1px;
+        background: #d8e2ef;
+      }
+
+      .hero-proof {
+        position: absolute;
+        left: 34px;
+        right: 34px;
+        top: 450px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0;
+        border: 1px solid #d8e2ef;
+        border-radius: 18px;
+        overflow: hidden;
+        background: #f9fbff;
+      }
+
+      .proof-cell {
+        min-height: 126px;
+        padding: 18px 18px 14px;
+        border-right: 1px solid #d8e2ef;
+      }
+
+      .proof-cell:last-child {
+        border-right: none;
+      }
+
+      .proof-num {
+        font-size: 38px;
+        line-height: 1;
+        font-weight: 800;
+        letter-spacing: -0.05em;
+        color: #1d2740;
+        margin-bottom: 8px;
+      }
+
+      .proof-label {
+        font-size: 16px;
+        line-height: 1.25;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: #52627b;
+      }
+
+      .proof-sub {
+        margin-top: 8px;
+        font-size: 13px;
+        line-height: 1.25;
+        font-weight: 500;
+        color: #7a8799;
+      }
+
+      .right-zone {
+        position: absolute;
+        left: 586px;
+        top: 36px;
+        width: 1074px;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .stat {
+        height: 106px;
+        border-radius: 20px;
+        background: rgba(255,255,255,0.88);
+        border: 1px solid #d8e2ef;
+        padding: 16px 18px;
+      }
+
+      .stat-big {
+        font-size: 26px;
+        line-height: 1;
+        font-weight: 800;
+        letter-spacing: -0.05em;
+        color: #1a2338;
+        margin-bottom: 8px;
+      }
+
+      .stat-small {
+        font-size: 17px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: #5e6e86;
+      }
+
+      .milestone-title {
+        margin: 8px 0 14px;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #6d7f9d;
+      }
+
+      .lane {
+        position: relative;
+        width: 100%;
+        min-height: 144px;
+        border-radius: 22px;
+        background: rgba(255,255,255,0.88);
+        border: 1px solid #d8e2ef;
+        margin-bottom: 12px;
+        padding: 18px 24px 18px 22px;
+        overflow: hidden;
+      }
+
+      .lane::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 18px;
+        bottom: 18px;
+        width: 6px;
+        border-radius: 6px;
+        background: linear-gradient(180deg, #7fa4ff 0%, #5d86d8 100%);
+      }
+
+      .lane-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .lane-left {
+        width: 58%;
+      }
+
+      .lane-right {
+        width: 38%;
+        text-align: right;
+        padding-top: 6px;
+        font-size: 17px;
+        line-height: 1.35;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: #4f607b;
+      }
+
+      .pill {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        padding: 8px 14px 7px;
+        border-radius: 999px;
+        background: var(--blue-soft);
+        border: 1px solid #cddcfb;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--blue);
+      }
+
+      .lane-headline {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 28px;
+        line-height: 1.1;
+        font-weight: 700;
+        letter-spacing: -0.045em;
+        color: #1a2439;
+      }
+
+      .chips {
+        margin-top: 18px;
+      }
+
+      .chip {
+        display: inline-block;
+        margin: 0 10px 10px 0;
+        padding: 9px 14px 8px;
+        border-radius: 999px;
+        background: #f5f8fd;
+        border: 1px solid #d7e1ef;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 600;
+        color: #607086;
+      }
+
+      .timeline {
+        position: absolute;
+        left: 586px;
+        right: 36px;
+        bottom: 150px;
+        height: 84px;
+        border-top: 1px solid #d8e2ef;
+        padding-top: 16px;
+      }
+
+      .timeline-label {
+        font-size: 16px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #6d7f9d;
+        margin-bottom: 12px;
+      }
+
+      .timeline-track {
+        position: relative;
+        height: 26px;
+      }
+
+      .timeline-track::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 12px;
+        height: 2px;
+        background: linear-gradient(90deg, #dce5f2 0%, #c7d5eb 100%);
+      }
+
+      .dot {
+        position: absolute;
+        top: 6px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--blue);
+        box-shadow: 0 0 0 4px #edf3ff;
+      }
+
+      .dot.d1 { left: 2%; }
+      .dot.d2 { left: 45%; }
+      .dot.d3 { left: 84%; }
+
+      .tlabel {
+        position: absolute;
+        top: -2px;
+        transform: translateX(-10%);
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #3f4f68;
+      }
+
+      .tlabel small {
+        display: block;
+        margin-top: 7px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #8491a4;
+      }
+
+      .t1 { left: 0%; }
+      .t2 { left: 42%; }
+      .t3 { left: 80%; }
+
+      .bottom-ribbon {
+        position: absolute;
+        left: 34px;
+        right: 34px;
+        bottom: 20px;
+        height: 68px;
+        border-radius: 22px;
+        background: rgba(255,255,255,0.94);
+        border: 1px solid #d8e2ef;
+        display: grid;
+        grid-template-columns: 168px 1fr 290px;
+        align-items: center;
+        padding: 0 26px;
+      }
+
+      .ribbon-head {
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        color: #33435d;
+      }
+
+      .allocs {
+        display: grid;
+        grid-template-columns: 1.45fr 1.15fr 1fr 1fr;
+        align-items: center;
+        gap: 18px;
+        padding: 0 26px 0 0;
+      }
+
+      .alloc {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .bar {
+        position: relative;
+        width: 132px;
+        height: 12px;
+        border-radius: 999px;
+        background: #dbe5f2;
+        overflow: hidden;
+      }
+
+      .fill {
+        height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #537dbc 0%, #6f95cf 100%);
+      }
+
+      .alloc span {
+        font-size: 14px;
+        line-height: 1.1;
+        font-weight: 700;
+        color: #576883;
+        white-space: nowrap;
+      }
+
+      .ribbon-note {
+        text-align: right;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #3a4963;
+      }
+
+      .footer-line {
+        position: absolute;
+        left: 112px;
+        top: 992px;
+        width: 1536px;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.9);
+      }
+
+      .footer-logo {
+        position: absolute;
+        left: 1692px;
+        top: 962px;
+        width: 114px;
+        height: 59px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="Designer investor deck slide 12">
+      <div class="eyebrow">The Ask</div>
+      <h1 class="header">Raising $1.25M to launch pilots, prove value, and establish repeatable deployment</h1>
+      <p class="subheader">Post-money SAFE • ~18–20 months of runway</p>
+
+      <div class="master" aria-label="Integrated financing ask figure">
+        <div class="left-hero">
+          <div class="hero-tag">The Ask</div>
+
+          <div class="hero-body">
+            <p class="hero-kicker">Pre-seed round</p>
+            <h2 class="amount">$1.25M</h2>
+            <div class="safe">Post-money SAFE</div>
+            <p class="hero-copy">
+              A disciplined proof-stage round sized to convert product readiness into live pilot evidence,
+              measured outcomes, and a repeatable deployment motion.
+            </p>
+          </div>
+
+          <div class="hero-rule"></div>
+
+          <div class="hero-proof">
+            <div class="proof-cell">
+              <div class="proof-num">2</div>
+              <div class="proof-label">key hires</div>
+              <div class="proof-sub">engineering + implementation capacity</div>
+            </div>
+            <div class="proof-cell">
+              <div class="proof-num">3</div>
+              <div class="proof-label">pilot sites</div>
+              <div class="proof-sub">real visit environments</div>
+            </div>
+            <div class="proof-cell">
+              <div class="proof-num">18–20</div>
+              <div class="proof-label">months runway</div>
+              <div class="proof-sub">enough time to build, deploy, validate</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-zone">
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-big">2</div>
+              <div class="stat-small">key hires</div>
+            </div>
+            <div class="stat">
+              <div class="stat-big">3</div>
+              <div class="stat-small">pilot sites</div>
+            </div>
+            <div class="stat">
+              <div class="stat-big">18–20</div>
+              <div class="stat-small">months runway</div>
+            </div>
+          </div>
+
+          <div class="milestone-title">What this round unlocks</div>
+
+          <div class="lane">
+            <div class="lane-top">
+              <div class="lane-left">
+                <span class="pill">Build</span>
+                <span class="lane-headline">Pilot-ready deployment foundation</span>
+                <div class="chips">
+                  <span class="chip">founding engineer in place</span>
+                  <span class="chip">clinician-grade product loop live</span>
+                  <span class="chip">workflow instrumentation in production</span>
+                </div>
+              </div>
+              <div class="lane-right">
+                Complete the minimum product and workflow layer required to go live reliably.
+              </div>
+            </div>
+          </div>
+
+          <div class="lane">
+            <div class="lane-top">
+              <div class="lane-left">
+                <span class="pill">Deploy</span>
+                <span class="lane-headline">Launch 3 pilot sites</span>
+                <div class="chips">
+                  <span class="chip">implementation / ops lead in place</span>
+                  <span class="chip">repeatable onboarding workflow</span>
+                  <span class="chip">pilot sites launched in real visit settings</span>
+                </div>
+              </div>
+              <div class="lane-right">
+                Demonstrate that Designer can be implemented and used in day-to-day clinical operations.
+              </div>
+            </div>
+          </div>
+
+          <div class="lane">
+            <div class="lane-top">
+              <div class="lane-left">
+                <span class="pill">Validate</span>
+                <span class="lane-headline">Prove value and repeatability</span>
+                <div class="chips">
+                  <span class="chip">measured pilot outcomes</span>
+                  <span class="chip">operational value metrics</span>
+                  <span class="chip">seed-ready proof package</span>
+                </div>
+              </div>
+              <div class="lane-right">
+                Generate the evidence needed to move from product story to pilot proof and seed readiness.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-label">Proof sequence</div>
+          <div class="timeline-track">
+            <div class="dot d1"></div>
+            <div class="dot d2"></div>
+            <div class="dot d3"></div>
+
+            <div class="tlabel t1">
+              Build
+              <small>product + implementation readiness</small>
+            </div>
+            <div class="tlabel t2">
+              Deploy
+              <small>launch pilots and establish rollout motion</small>
+            </div>
+            <div class="tlabel t3">
+              Validate
+              <small>measure outcomes and package proof</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-ribbon">
+          <div class="ribbon-head">Use of funds</div>
+
+          <div class="allocs">
+            <div class="alloc">
+              <div class="bar"><div class="fill" style="width: 46%;"></div></div>
+              <span>Team</span>
+            </div>
+            <div class="alloc">
+              <div class="bar"><div class="fill" style="width: 28%;"></div></div>
+              <span>Pilot deployment</span>
+            </div>
+            <div class="alloc">
+              <div class="bar"><div class="fill" style="width: 18%;"></div></div>
+              <span>Product &amp; data infrastructure</span>
+            </div>
+            <div class="alloc">
+              <div class="bar"><div class="fill" style="width: 8%;"></div></div>
+              <span>Validation / operating buffer</span>
+            </div>
+          </div>
+
+          <div class="ribbon-note">This round funds a concrete proof plan — not scale before proof.</div>
+        </div>
+      </div>
+
+      <div class="footer-line" aria-hidden="true"></div>
+      <img
+        class="footer-logo"
+        src="../../../../assets/logo/designer-health-logo-black.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </section>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+Create a premium 16:9 investor-deck central figure for Designer Health.
+
+Use the attached slide-07 version-89 image as the main composition anchor.
+Use the attached slide-07 version-99 image only as a secondary reference for
+clearer speech-bubble logic. Stay much closer to version 89 overall.
+
+This is not a full self-contained slide. It is the central horizontal graphic
+that will sit inside a slide later. Make the figure span the width confidently,
+with the same horizontal fill and rhythm as version 89.
+
+Keep only this visible text:
+- `Before visit`
+- `Visit begins`
+- `1`
+- `Invite sent`
+- `2`
+- `Adaptive interview`
+- `3`
+- `Brief prepared`
+- `4`
+- `Clinician starts prepared`
+
+Do not include any extra explanatory microcopy.
+
+Preserve from version 89:
+- the wide left-to-right storyboard composition
+- the beat-1 secure-link phone
+- the slick funnel of conversation fragments into the brief
+- the strong beat-3 brief object
+- the white background and restrained teal accent
+- the person style closer to version 89 than version 99
+
+Refine:
+- remove the separate `VOX` badge floating at the top right of the brief
+- beat 3 can still feel like a Vox brief, but no detached badge
+- in beat 2, make the conversation ownership unmistakable
+- the patient should clearly say: `I've had a bad cough.`
+- the phone should clearly ask: `How long has it been going on?`
+- optional small patient reply: `Five days.`
+- attach the patient bubble visually to the mouth / speaking position
+- attach the phone question bubble visually to the phone
+- no thought bubbles
+- beat 4 should show one clinician reading one tablet only
+
+Style:
+- premium editorial healthcare illustration
+- grayscale base with restrained teal accents
+- refined anatomy and softer shading
+- deck-native, not photoreal
+
+Avoid:
+- extra header or subtitle text
+- microcopy paragraphs
+- clipboard metaphor
+- duplicate devices in beat 4
+- busy exam room details

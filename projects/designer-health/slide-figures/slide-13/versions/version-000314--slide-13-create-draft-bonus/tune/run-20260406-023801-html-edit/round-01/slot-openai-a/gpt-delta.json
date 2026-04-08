@@ -1,0 +1,35 @@
+{
+  "provider": "gpt",
+  "status": "partial",
+  "summary": "The candidate substantially builds the requested ask slide structure with a left hero ask block, right milestone stack, and bottom use-of-funds ribbon in a Designer-like card treatment, but it is not fully presentation-ready because the header/subheader overlap badly and a broken/missing image placeholder remains at the bottom right instead of the clean shell logo treatment.",
+  "evidence": [
+    "The locked header text is present verbatim: “Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.”",
+    "The locked subheader text is present verbatim: “Post-money SAFE • ~18–20 months of runway.”",
+    "The main figure follows the requested integrated logic: a large left ask card, three stacked milestone cards on the right labeled BUILD / DEPLOY / VALIDATE, and a restrained use-of-funds ribbon across the bottom.",
+    "The left hero block surfaces the ask first with “$1.25M” and supporting proof-stage stats including core hires, pilot sites, and runway months.",
+    "The right-side cards are outcome-oriented (“Pilot-ready deployment foundation,” “Launch 3 pilot sites,” “Prove value and repeatability”) rather than generic startup activity.",
+    "Visual styling is broadly in-family: white shell, pale gray master card, rounded white cards, restrained blue accents, and clinically serious tone.",
+    "The header and subheader are visually broken: the subheader overlaps the two-line title, reducing readability and violating presentation-ready quality.",
+    "A small broken image/placeholder box appears at the bottom right where the shell logo area should remain clean and aligned; this suggests the footer/logo contract is not properly preserved.",
+    "The bottom ribbon is appropriately quieter than the milestones, but the overall slide feels slightly crowded because of text density and the top overlap issue."
+  ],
+  "nextPrompt": "Keep the current integrated ask/milestone/ribbon layout, but fix the title area so the locked header and subheader do not overlap, restore the proper Designer footer logo with no broken image placeholder, and slightly reduce text density so the slide reads cleanly at presentation distance.",
+  "needsHuman": true,
+  "raw": {
+    "status": "partial",
+    "summary": "The candidate substantially builds the requested ask slide structure with a left hero ask block, right milestone stack, and bottom use-of-funds ribbon in a Designer-like card treatment, but it is not fully presentation-ready because the header/subheader overlap badly and a broken/missing image placeholder remains at the bottom right instead of the clean shell logo treatment.",
+    "evidence": [
+      "The locked header text is present verbatim: “Raising $1.25M to launch pilots, prove value, and establish repeatable deployment.”",
+      "The locked subheader text is present verbatim: “Post-money SAFE • ~18–20 months of runway.”",
+      "The main figure follows the requested integrated logic: a large left ask card, three stacked milestone cards on the right labeled BUILD / DEPLOY / VALIDATE, and a restrained use-of-funds ribbon across the bottom.",
+      "The left hero block surfaces the ask first with “$1.25M” and supporting proof-stage stats including core hires, pilot sites, and runway months.",
+      "The right-side cards are outcome-oriented (“Pilot-ready deployment foundation,” “Launch 3 pilot sites,” “Prove value and repeatability”) rather than generic startup activity.",
+      "Visual styling is broadly in-family: white shell, pale gray master card, rounded white cards, restrained blue accents, and clinically serious tone.",
+      "The header and subheader are visually broken: the subheader overlaps the two-line title, reducing readability and violating presentation-ready quality.",
+      "A small broken image/placeholder box appears at the bottom right where the shell logo area should remain clean and aligned; this suggests the footer/logo contract is not properly preserved.",
+      "The bottom ribbon is appropriately quieter than the milestones, but the overall slide feels slightly crowded because of text density and the top overlap issue."
+    ],
+    "nextPrompt": "Keep the current integrated ask/milestone/ribbon layout, but fix the title area so the locked header and subheader do not overlap, restore the proper Designer footer logo with no broken image placeholder, and slightly reduce text density so the slide reads cleanly at presentation distance.",
+    "needsHuman": true
+  }
+}

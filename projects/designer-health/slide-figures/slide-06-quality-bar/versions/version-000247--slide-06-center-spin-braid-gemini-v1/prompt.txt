@@ -1,0 +1,31 @@
+Generate one self-contained 1920x1080 HTML slide figure for Designer Health.
+
+Use the attached reference image as a strict layout shell. Keep the overall composition, typography hierarchy, left ribbons, white chamber, right clinician-grade card, lane labels, and copy structure very close to the reference. Do not redesign the whole slide.
+
+Only change two things:
+1. the center circular object
+2. the immediate right-side handoff from that object into the three internal rails
+
+Strategic intent:
+- This is the quality-bar slide.
+- The value is not collecting more story.
+- The value is producing a clinician-grade starting point.
+- The center should feel like adaptive clinical reasoning is in motion, not like a static badge and not like a decorative abstract logo.
+
+Requirements for this variant:
+- Keep the center object circular.
+- Make the circle feel like a directional interview loop with obvious rotational movement.
+- Use integrated ring segments, not a random decorative circle.
+- Use arrow cues sparingly but clearly.
+- Avoid complex metaphors like prisms, chambers, folders, or case frames.
+- Keep the center text compact and clinically serious.
+- Make the right-side emergence feel like a braided or woven stream of signal that then settles into the three reasoning rails.
+- The three rails should still read cleanly as "What matters", "What connects", and "What still needs verification".
+- The right-side handoff should look more intentional and premium than three flat bands.
+- Stay restrained and editorial. No glowing sci-fi effects.
+
+Visual guidance:
+- Preserve the soft white-and-teal Designer deck language.
+- Make the motion read immediately even when the slide is small.
+- Keep the braid elegant and simple enough to feel credible, not ornamental.
+- Keep it plausible in HTML/SVG.

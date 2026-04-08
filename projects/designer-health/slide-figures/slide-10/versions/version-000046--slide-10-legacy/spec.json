@@ -1,0 +1,132 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-10-hero-metrics",
+    "family": "hero_metric_with_scenarios",
+    "deckId": "vox-pd-v1",
+    "theme": "vox",
+    "mode": "full-slide",
+    "sourcePath": "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/figures/specs/slide-10-hero-metrics.json"
+  },
+  "chrome": {
+    "title": "Recovered visit time creates real capacity.",
+    "subtitle": "When recovered minutes become completed visits, the impact is meaningful.",
+    "chips": [],
+    "footnote": "Hero scenario should dominate. Scenario tiles stay secondary and easy to scan."
+  },
+  "constraints": {
+    "figureJob": "Show operating leverage with one dominant scenario and compact supporting scenarios.",
+    "focalPoint": "The hero block on the left.",
+    "layout": "Large hero block on the left, three compact scenario tiles on the right, one bottom-line takeaway below.",
+    "big": [
+      "The hero metric",
+      "The hero label"
+    ],
+    "quiet": [
+      "Scenario detail lines",
+      "The footnote"
+    ],
+    "accentTargets": [
+      "Hero block"
+    ],
+    "forbidden": [
+      "spreadsheet",
+      "finance memo"
+    ],
+    "semanticGuards": []
+  },
+  "copyPolicy": {
+    "locked": [
+      "Recovered visit time creates real capacity.",
+      "+1 visit / provider / day",
+      "$11,000 / year"
+    ],
+    "preferred": [
+      "Recovered time matters when it becomes completed visits"
+    ],
+    "optional": [],
+    "forbidden": [
+      "table"
+    ]
+  },
+  "media": {
+    "strategy": "native",
+    "provider": "pexels",
+    "slots": [],
+    "selection": []
+  },
+  "body": {
+    "hero": {
+      "label": "+1 visit / provider / day",
+      "assumptions": [
+        "220 clinic days",
+        "$125 / visit",
+        "40% contribution margin"
+      ],
+      "primaryMetric": "$11,000 / year",
+      "secondaryLine": "~$917 / month break-even spend / provider"
+    },
+    "scenarios": [
+      {
+        "label": "Conservative",
+        "metric": "$7,920 / year",
+        "detail": "+1 / day at $90 / visit"
+      },
+      {
+        "label": "Base",
+        "metric": "$11,000 / year",
+        "detail": "+1 / day at $125 / visit"
+      },
+      {
+        "label": "Upside",
+        "metric": "$22,000 / year",
+        "detail": "+2 / day at $125 / visit"
+      }
+    ],
+    "bottomLine": "Recovered time matters when it becomes completed visits."
+  },
+  "trace": [
+    {
+      "excerpt": "Recovered visit time creates real capacity.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Use the slide header directly."
+    },
+    {
+      "excerpt": "When recovered minutes become completed visits, the impact is meaningful.",
+      "targetPath": "chrome.subtitle",
+      "ruleType": "chrome",
+      "note": "Retain the interpretive subtitle under the hero header."
+    },
+    {
+      "excerpt": "Show why this matters economically, without turning the slide into a spreadsheet.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Anchor the figure around operating leverage rather than tabular finance."
+    },
+    {
+      "excerpt": "Hero scenario + three scenario tiles + one interpretive bottom line.",
+      "targetPath": "body.hero",
+      "ruleType": "body",
+      "note": "Choose the hero-metric family."
+    },
+    {
+      "excerpt": "The hero scenario should dominate visually.",
+      "targetPath": "constraints.focalPoint",
+      "ruleType": "constraint",
+      "note": "Keep the left block as the eye anchor."
+    },
+    {
+      "excerpt": "Use a three-part slide layout.",
+      "targetPath": "constraints.layout",
+      "ruleType": "layout",
+      "note": "Lock hero left, scenarios right, bottom line below."
+    },
+    {
+      "excerpt": "The slide should feel like operating leverage, not a spreadsheet.",
+      "targetPath": "copyPolicy.locked",
+      "ruleType": "copy-policy",
+      "note": "Preserve hero framing over table logic."
+    }
+  ]
+}

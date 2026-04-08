@@ -1,0 +1,32 @@
+{
+  "id": "version-000028",
+  "slideId": "slide-07",
+  "slideDir": "projects/designer-health/slide-figures/slide-06",
+  "dir": "projects/designer-health/slide-figures/slide-06/versions/version-000028--slide-07",
+  "label": "slide-07",
+  "status": "archived",
+  "createdAt": "2026-03-31T17:04:29.601Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-06/anthropic-repair",
+    "projects/designer-health/slide-figures/slide-06/anthropic-review",
+    "projects/designer-health/slide-figures/slide-06/assessment-synthesis.md",
+    "projects/designer-health/slide-figures/slide-06/codex-repair.md",
+    "projects/designer-health/slide-figures/slide-06/codex-review.md",
+    "projects/designer-health/slide-figures/slide-06/coverage.json",
+    "projects/designer-health/slide-figures/slide-06/figure.html",
+    "projects/designer-health/slide-figures/slide-06/figure.png",
+    "projects/designer-health/slide-figures/slide-06/figure.svg",
+    "projects/designer-health/slide-figures/slide-06/gemini-html",
+    "projects/designer-health/slide-figures/slide-06/gemini-image",
+    "projects/designer-health/slide-figures/slide-06/gemini-repair",
+    "projects/designer-health/slide-figures/slide-06/gemini-review",
+    "projects/designer-health/slide-figures/slide-06/meta.json",
+    "projects/designer-health/slide-figures/slide-06/next-pass.md",
+    "projects/designer-health/slide-figures/slide-06/repair-synthesis.generated.md",
+    "projects/designer-health/slide-figures/slide-06/repair-synthesis.md",
+    "projects/designer-health/slide-figures/slide-06/report-preview.png",
+    "projects/designer-health/slide-figures/slide-06/spec.json"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "version-000156",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000156--slide-06-seed-starting-point-gemini-editorial-baseline-graphic-000114",
+  "label": "slide-06-seed-starting-point-gemini-editorial-baseline-graphic-000114",
+  "status": "archived",
+  "createdAt": "2026-04-03T03:58:30.365Z",
+  "sourceKind": "presentation-image-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/presentation-images/vox-adaptive-interviewer-clinician-grade-starting-point-2026-04-02/gemini/version-01--editorial-baseline",
+    "output/figures/presentation-images/vox-adaptive-interviewer-clinician-grade-starting-point-2026-04-02/gemini/version-01--editorial-baseline/image-01.jpg"
+  ],
+  "runId": "graphic-batch-000024",
+  "attempt": 1,
+  "sourceGraphicId": "graphic-000114",
+  "sourceBatchId": "graphic-batch-000024",
+  "sourceBatchSlug": "vox-adaptive-interviewer-clinician-grade-starting-point-2026-04-02",
+  "sourceProvider": "gemini",
+  "sourceVariantId": "v01-editorial",
+  "sourceVariantLabel": "Editorial Baseline",
+  "sourcePath": "output/figures/presentation-images/vox-adaptive-interviewer-clinician-grade-starting-point-2026-04-02/gemini/version-01--editorial-baseline",
+  "sourceImagePath": "output/figures/presentation-images/vox-adaptive-interviewer-clinician-grade-starting-point-2026-04-02/gemini/version-01--editorial-baseline/image-01.jpg"
+}

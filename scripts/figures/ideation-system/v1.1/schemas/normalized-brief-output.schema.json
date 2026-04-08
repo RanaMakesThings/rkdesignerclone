@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designer.health/schemas/normalized-brief-output.schema.json",
+  "title": "Normalized Brief Output",
+  "type": "object",
+  "required": [
+    "slide_job",
+    "audience_belief",
+    "core_claim",
+    "figure_burden",
+    "figure_logic",
+    "interpretation_confidence"
+  ],
+  "properties": {
+    "slide_job": {
+      "type": "string"
+    },
+    "audience_belief": {
+      "type": "string"
+    },
+    "core_claim": {
+      "type": "string"
+    },
+    "text_first_header": {
+      "type": "string"
+    },
+    "text_first_support": {
+      "type": "string"
+    },
+    "compressed_header": {
+      "type": "string"
+    },
+    "compressed_subheader": {
+      "type": "string"
+    },
+    "figure_burden": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "figure_logic": {
+      "type": "string"
+    },
+    "must_not_become": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "keep_from_current": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "change_from_current": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unresolved_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "interpretation_summary": {
+      "type": "string"
+    },
+    "what_this_slide_is_really_trying_to_do": {
+      "type": "string"
+    },
+    "what_this_slide_is_not_allowed_to_become": {
+      "type": "string"
+    },
+    "interpretation_confidence": {
+      "type": "number"
+    }
+  }
+}

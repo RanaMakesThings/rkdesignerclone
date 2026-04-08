@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designer.health/schemas/thumbnail-manifest.schema.json",
+  "title": "Thumbnail Manifest",
+  "type": "object",
+  "required": [
+    "thumbnails"
+  ],
+  "properties": {
+    "thumbnails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "thumbnail_id",
+          "source_candidate_id",
+          "source_spatial_spec_id",
+          "generator_target"
+        ],
+        "properties": {
+          "thumbnail_id": {
+            "type": "string"
+          },
+          "source_candidate_id": {
+            "type": "string"
+          },
+          "source_spatial_spec_id": {
+            "type": "string"
+          },
+          "generator_target": {
+            "type": "string"
+          },
+          "file_path": {
+            "type": "string"
+          },
+          "prompt_hash": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "what_viewer_sees_first": {
+            "type": "string"
+          },
+          "variation_dimension": {
+            "type": "string"
+          },
+          "copy_mode": {
+            "type": "string"
+          },
+          "image_mode": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "diversity_score": {
+      "type": "number"
+    }
+  }
+}

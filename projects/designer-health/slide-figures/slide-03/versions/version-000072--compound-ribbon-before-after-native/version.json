@@ -1,0 +1,14 @@
+{
+  "id": "version-000072",
+  "slideId": "slide-03",
+  "slideDir": "projects/designer-health/slide-figures/slide-03",
+  "dir": "projects/designer-health/slide-figures/slide-03/versions/version-000072--compound-ribbon-before-after-native",
+  "label": "compound-ribbon-before-after-native",
+  "status": "archived",
+  "createdAt": "2026-03-31T21:13:43.039Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/slide-03-compound-ribbon-before-after"
+  ]
+}

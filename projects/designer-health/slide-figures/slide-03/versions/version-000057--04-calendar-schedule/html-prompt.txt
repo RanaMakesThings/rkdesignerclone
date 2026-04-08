@@ -1,0 +1,20 @@
+Generate a self-contained 1920x1080 HTML pitch-deck slide mockup for Vox.
+
+Purpose:
+Translate the capacity argument into a schedule view that makes the same-day constraint obvious.
+
+Requirements:
+- Inline CSS and inline SVG only
+- Refined investor-deck design, not literal product UI
+- Headline: More efficient visits will increase supply.
+- Subheader: Small per-visit gains compound.
+
+This variant should use a schedule metaphor:
+- Left side or top: current clinic day with 5 visits
+- Right side or bottom: AI-assisted clinic day with 6 visits
+- The total day window should be unchanged
+- Story reconstruction should be the only visibly reduced segment
+- Physical exam and decisions/counseling should remain visually protected
+- The design should feel operationally believable while still deck-worthy
+
+Make the answer to "where did the sixth visit come from?" immediately legible.

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>Designer Health — Clinical Brief Artifact</title>
+<style>
+  :root{
+    --bg:#efece6;
+    --paper:#fcfbf7;
+    --ink:#1f2328;
+    --muted:#6e746f;
+    --muted2:#8a8f89;
+    --line:#d9d4ca;
+    --line2:#e8e3d9;
+    --pill:#24272b;
+    --pill-light:#cfcfc9;
+    --pill-warm:#d7cfbf;
+    --soft:#f5f2eb;
+    --soft2:#f1ede5;
+  }
+  *{box-sizing:border-box}
+  html,body{
+    margin:0;
+    width:1920px;
+    height:1080px;
+    overflow:hidden;
+    background:var(--bg);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    color:var(--ink);
+  }
+  .slide{
+    width:1920px;
+    height:1080px;
+    position:relative;
+    background:
+      radial-gradient(circle at 50% 8%, rgba(255,255,255,.22), rgba(255,255,255,0) 38%),
+      linear-gradient(180deg, #f2efe9 0%, #ebe7df 100%);
+  }
+  .artifact{
+    position:absolute;
+    left:210px;
+    top:54px;
+    width:1500px;
+    height:972px;
+    background:var(--paper);
+    border:1px solid #d7d1c6;
+    border-radius:18px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.75) inset,
+      0 10px 28px rgba(43,38,30,.08),
+      0 2px 5px rgba(43,38,30,.05);
+    overflow:hidden;
+  }
+  .inner{
+    padding:28px 34px 24px 34px;
+    height:100%;
+  }
+  .doc-header{
+    padding-bottom:18px;
+    border-bottom:1px solid var(--line);
+    display:grid;
+    grid-template-columns: 1fr auto;
+    align-items:end;
+    column-gap:24px;
+  }
+  .eyebrow{
+    font-size:11px;
+    line-height:1;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted2);
+    margin-bottom:10px;
+    font-weight:600;
+  }
+  .title{
+    font-size:30px;
+    line-height:1.15;
+    font-weight:650;
+    letter-spacing:-.02em;
+    margin:0 0 6px 0;
+  }
+  .subtitle{
+    font-size:14px;
+    color:var(--muted);
+    line-height:1.45;
+    max-width:940px;
+  }
+  .meta{
+    text-align:right;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.5;
+    padding-bottom:2px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns: 880px 1fr;
+    column-gap:34px;
+    padding-top:20px;
+    height:calc(100% - 95px);
+  }
+
+  .section{
+    margin-bottom:16px;
+  }
+  .section-label{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted2);
+    margin:0 0 10px 0;
+  }
+
+  .ledger{
+    border:1px solid var(--line2);
+    border-radius:12px;
+    overflow:hidden;
+    background:#fffdfa;
+  }
+  .row{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    align-items:start;
+    padding:11px 14px 10px 14px;
+    border-top:1px solid var(--line2);
+    min-height:58px;
+  }
+  .row:first-child{border-top:none}
+  .row-left{padding-right:16px}
+  .row-title{
+    font-size:18px;
+    line-height:1.22;
+    font-weight:560;
+    margin-bottom:3px;
+    letter-spacing:-.01em;
+  }
+  .row-sub{
+    font-size:13px;
+    color:var(--muted);
+    line-height:1.38;
+  }
+  .evidence{
+    color:var(--muted2);
+  }
+  .pill{
+    font-size:12px;
+    line-height:1;
+    padding:7px 11px;
+    border-radius:999px;
+    font-weight:700;
+    letter-spacing:.01em;
+    margin-top:2px;
+    white-space:nowrap;
+  }
+  .present{
+    background:var(--pill);
+    color:#fff;
+  }
+  .absent{
+    background:var(--pill-light);
+    color:#444;
+  }
+  .unresolved{
+    background:var(--pill-warm);
+    color:#544d42;
+  }
+
+  .timeline{
+    border:1px solid var(--line2);
+    border-radius:12px;
+    background:#fffdfa;
+    padding:14px 16px 14px 16px;
+  }
+  .t-item{
+    display:grid;
+    grid-template-columns: 100px 18px 1fr;
+    column-gap:12px;
+    align-items:start;
+    margin:8px 0;
+  }
+  .t-time{
+    font-size:12px;
+    color:var(--muted2);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    padding-top:1px;
+    font-weight:700;
+  }
+  .t-dot{
+    width:10px;height:10px;border-radius:50%;
+    background:#bbb4a8;
+    margin-top:4px;
+    position:relative;
+  }
+  .t-dot:after{
+    content:"";
+    position:absolute;
+    left:4px; top:10px;
+    width:2px; height:34px;
+    background:var(--line);
+  }
+  .t-item:last-child .t-dot:after{display:none}
+  .t-text{
+    font-size:14px;
+    line-height:1.42;
+  }
+  .left-col{
+    overflow:hidden;
+  }
+
+  .right-col{
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+  }
+
+  .reasoning-band{
+    margin-top:auto;
+    border-top:1px solid var(--line);
+    padding-top:18px;
+  }
+
+  .consideration{
+    border:1px solid var(--line2);
+    border-radius:12px;
+    padding:14px 15px 14px 15px;
+    background:#fffdfa;
+    margin-bottom:12px;
+  }
+  .cons-head{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    column-gap:10px;
+    align-items:start;
+    margin-bottom:8px;
+  }
+  .rank{
+    font-size:13px;
+    font-weight:800;
+    color:#31353a;
+    letter-spacing:.01em;
+    padding-top:1px;
+  }
+  .cons-title{
+    font-size:18px;
+    line-height:1.25;
+    font-weight:630;
+    letter-spacing:-.01em;
+  }
+  .confidence{
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:#555048;
+    background:var(--soft2);
+    border:1px solid var(--line2);
+    border-radius:999px;
+    padding:5px 9px;
+    white-space:nowrap;
+    margin-top:1px;
+  }
+  .tri{
+    display:grid;
+    grid-template-columns: 1fr;
+    row-gap:6px;
+  }
+  .tri-block{
+    display:grid;
+    grid-template-columns:88px 1fr;
+    column-gap:8px;
+    align-items:start;
+  }
+  .tri-label{
+    font-size:12px;
+    font-weight:700;
+    color:#5e645f;
+    padding-top:1px;
+  }
+  .tri ul{
+    margin:0;
+    padding-left:16px;
+  }
+  .tri li{
+    font-size:13px;
+    line-height:1.4;
+    color:#353a3f;
+    margin:1px 0;
+  }
+  .open{
+    border:1px solid var(--line2);
+    border-radius:12px;
+    background:var(--soft);
+    padding:14px 15px 14px 15px;
+    margin-top:6px;
+  }
+  .open .prompt{
+    font-size:15px;
+    line-height:1.5;
+    margin:6px 0;
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+  }
+  .q{
+    width:18px;height:18px;flex:0 0 18px;
+    border-radius:50%;
+    border:1px solid #c9c2b6;
+    color:#5f594f;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:700;
+    margin-top:2px;
+    background:#fbf8f1;
+  }
+  .footer-note{
+    margin-top:10px;
+    font-size:12px;
+    line-height:1.45;
+    color:var(--muted2);
+  }
+
+  .micro-rule{
+    height:1px;
+    background:var(--line2);
+    margin:12px 0 10px 0;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="artifact">
+      <div class="inner">
+        <div class="doc-header">
+          <div>
+            <div class="eyebrow">Designer Health · Structured Clinical Brief</div>
+            <h1 class="title">Cough case extraction with working considerations</h1>
+            <div class="subtitle">
+              Evidence-organized summary assembled from patient conversation. Designed for fast clinician scan:
+              social context, symptom extraction, key negatives, unresolved workup items, temporal pattern,
+              then ranked considerations and next questions.
+            </div>
+          </div>
+          <div class="meta">
+            Ambulatory intake summary<br/>
+            Generated from transcript evidence<br/>
+            Evidence references preserved inline
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="left-col">
+            <div class="section">
+              <div class="section-label">Social context</div>
+              <div class="ledger">
+                <div class="row">
+                  <div class="row-left">
+                    <div class="row-title">Care seeking prompted by spouse</div>
+                    <div class="row-sub">Spouse encouraged evaluation <span class="evidence">· Evidence: turn-002</span></div>
+                  </div>
+                  <div class="pill present">present</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="section-label">Symptoms</div>
+              <div class="ledger">
+                <div class="row">
+                  <div class="row-left">
+                    <div class="row-title">Cough</div>
+                    <div class="row-sub"><span class="evidence">Evidence: turn-002</span></div>
+                  </div>
+                  <div class="pill present">present</div>
+                </div>
+                <div class="row">
+                  <div class="row-left">
+                    <div class="row-title">Cough pattern / frequency</div>
+                    <div class="row-sub">Occurs in bursts with intermittent coughing fits separated by periods of relative calm <span class="evidence">· Evidence: turn-014</span></div>
+                  </div>
+                  <div class="pill present">present</div>
+                </div>
+                <div class="row">
+                  <div class="row-left">
+                    <div class="row-title">Cough worse at night</div>
+                    <div class="row-sub"><span class="evidence">Evidence: turn-016</span></div>
+                  </div>
+                  <div class="pill present">present</div>
+                </div>
+                <div class="row">
+                  <div class="row-left">
+                    <div class="row-title">Cough worsens when lying down</div>
+                    <div class="row-sub"><span class="evidence">Evidence: turn-016</span></div>
+                  </div>
+                  <div class="pill present">present</div>
+                </div>
+                <div class="row">
+                  <div class="row-left">
+                    <div class="row-title">Scratchy throat</div>
+                    <div class="row-sub"><span class="evidence">Evidence: turn-004</span></div>
+                  </div>
+                  <div class="pill present">present</div>
+                </div>
+                <div class="row">
+                  <div class="row-left">
+                    <div class="row-title">Sputum color</div>
+                    <div class="row-sub">Mostly yellow; maybe green once, uncertain due to lighting <span class="evidence">· Evidence: turn-010</span></div>
+                  </div>
+                  <div class="pill present">present</div>
+                </div>
+                <div class="row">
+                  <div class="row-left">
+                    <div class="row-title">Dyspnea / breathing impact</div>
+                    <div class="row-sub">Possible exertional breathing change mentioned, severity and progression not yet clear <span class="evidence">· Evidence: partial transcript signal</span></div>
+                  </div>
+                  <div class="pill unresolved">unresolved</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="section-label">Key negatives</div>
+              <div class="ledger">
+                <div class="row">
+                  <div class="row-left">
+                    <div class="row-title">Hemoptysis (blood in sputum)</div>
+                    <div class="row-sub"><span class="evidence">Evidence: turn-012</span></div>
+                  </div>
+                  <div class="pill absent">absent</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="section-label">Workup / uncertainties</div>
+              <div class="ledger">
+                <div class="row">
+                  <div class="row-left">
+                    <div class="row-title">Measured fever</div>
+                    <div class="row-sub">No documented temperature; ongoing vs resolved fever not yet established</div>
+                  </div>
+                  <div class="pill unresolved">not yet assessed</div>
+                </div>
+                <div class="row">
+                  <div class="row-left">
+                    <div class="row-title">Vitals and oxygenation</div>
+                    <div class="row-sub">Respiratory rate, O2 saturation, heart rate, and temperature unavailable</div>
+                  </div>
+                  <div class="pill unresolved">not yet assessed</div>
+                </div>
+                <div class="row">
+                  <div class="row-left">
+                    <div class="row-title">Lung exam / imaging</div>
+                    <div class="row-sub">No focal exam findings or chest imaging currently available</div>
+                  </div>
+                  <div class="pill unresolved">not yet assessed</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section" style="margin-bottom:0;">
+              <div class="section-label">Timeline</div>
+              <div class="timeline">
+                <div class="t-item">
+                  <div class="t-time">Initial phase</div>
+                  <div class="t-dot"></div>
+                  <div class="t-text">Scratchy throat precedes the more persistent cough, suggesting an upper-respiratory prodrome.</div>
+                </div>
+                <div class="t-item">
+                  <div class="t-time">Following days</div>
+                  <div class="t-dot"></div>
+                  <div class="t-text">Cough becomes more disruptive, arriving in bursts rather than continuous frequency.</div>
+                </div>
+                <div class="t-item">
+                  <div class="t-time">Current pattern</div>
+                  <div class="t-dot"></div>
+                  <div class="t-text">Symptoms worse at night and when lying down; intermittent productive sputum, mostly yellow.</div>
+                </div>
+                <div class="t-item">
+                  <div class="t-time">Escalation concern</div>
+                  <div class="t-dot"></div>
+                  <div class="t-text">Breathing impact remains incompletely characterized and may determine whether lower-respiratory evaluation is needed.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="right-col">
+            <div class="reasoning-band">
+              <div class="section-label">Working considerations</div>
+
+              <div class="consideration">
+                <div class="cons-head">
+                  <div class="rank">#1</div>
+                  <div class="cons-title">Acute bronchitis</div>
+                  <div class="confidence">higher confidence</div>
+                </div>
+                <div class="tri">
+                  <div class="tri-block">
+                    <div class="tri-label">Supports</div>
+                    <div>
+                      <ul>
+                        <li>URI-like prodrome: scratchy throat before cough.</li>
+                        <li>Cough occurs in waves or fits, with quieter periods between episodes.</li>
+                        <li>Intermittent productive sputum can occur, including yellow sputum.</li>
+                        <li>Nighttime worsening is compatible with ongoing airway irritation.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tri-block">
+                    <div class="tri-label">Against</div>
+                    <div>
+                      <ul>
+                        <li>Possible exertional breathing impact needs clarification; marked dyspnea would push beyond uncomplicated bronchitis.</li>
+                        <li>Positional worsening may also raise alternative explanations such as post-nasal drainage or reflux-related cough.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tri-block">
+                    <div class="tri-label">Unknowns</div>
+                    <div>
+                      <ul>
+                        <li>Measured temperature, chills, and systemic symptom burden.</li>
+                        <li>Oxygen saturation and respiratory rate.</li>
+                        <li>Functional limitation: speaking full sentences, walking, stairs.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="consideration">
+                <div class="cons-head">
+                  <div class="rank">#2</div>
+                  <div class="cons-title">Community-acquired pneumonia</div>
+                  <div class="confidence">moderate</div>
+                </div>
+                <div class="tri">
+                  <div class="tri-block">
+                    <div class="tri-label">Supports</div>
+                    <div>
+                      <ul>
+                        <li>Persistent cough with sputum production.</li>
+                        <li>If breathing has worsened with exertion, lower-respiratory involvement becomes more concerning.</li>
+                        <li>Yellow or possibly green sputum is nonspecific but often prompts rule-out.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tri-block">
+                    <div class="tri-label">Against</div>
+                    <div>
+                      <ul>
+                        <li>No hemoptysis reported.</li>
+                        <li>No confirmed fever or systemic decline documented so far.</li>
+                        <li>No objective data yet suggesting hypoxemia, tachypnea, or focal findings.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tri-block">
+                    <div class="tri-label">Unknowns</div>
+                    <div>
+                      <ul>
+                        <li>Is fever ongoing or already resolved?</li>
+                        <li>Any pleuritic chest pain, rigors, or progressive shortness of breath?</li>
+                        <li>Lung exam findings or chest imaging, if symptoms are worsening.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="consideration">
+                <div class="cons-head">
+                  <div class="rank">#3</div>
+                  <div class="cons-title">Post-viral cough / upper-airway cough syndrome</div>
+                  <div class="confidence">moderate</div>
+                </div>
+                <div class="tri">
+                  <div class="tri-block">
+                    <div class="tri-label">Supports</div>
+                    <div>
+                      <ul>
+                        <li>Scratchy-throat onset is compatible with a recent viral upper-airway process.</li>
+                        <li>Nighttime and lying-down worsening fit post-nasal drainage–related cough.</li>
+                        <li>Cough in bursts can occur with residual airway hypersensitivity after infection.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tri-block">
+                    <div class="tri-label">Against</div>
+                    <div>
+                      <ul>
+                        <li>Productive sputum and possible breathing impact keep lower-respiratory causes in consideration.</li>
+                        <li>Current transcript does not clearly establish nasal congestion, drainage, or throat clearing pattern.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tri-block">
+                    <div class="tri-label">Unknowns</div>
+                    <div>
+                      <ul>
+                        <li>Duration since initial URI symptoms.</li>
+                        <li>Presence of rhinorrhea, post-nasal drip, or reflux symptoms.</li>
+                        <li>Whether cough is improving, plateaued, or worsening overall.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="micro-rule"></div>
+
+              <div class="section-label" style="margin-bottom:8px;">Open questions / suggested next step</div>
+              <div class="open">
+                <div class="prompt"><span class="q">?</span><span>How has your breathing changed — only with coughing, or also when walking, climbing stairs, or speaking?</span></div>
+                <div class="prompt"><span class="q">?</span><span>Any chest pain with a deep breath, or pain that localizes to one side?</span></div>
+                <div class="prompt"><span class="q">?</span><span>Is fever ongoing, already resolved, or never measured?</span></div>
+                <div class="footer-note">
+                  Suggested next step: clarify dyspnea severity and fever trajectory, obtain basic vitals if available, and escalate to in-person exam or imaging if shortness of breath is progressive, pleuritic pain is present, or oxygenation is concerning.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

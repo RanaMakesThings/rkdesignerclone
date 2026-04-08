@@ -1,0 +1,19 @@
+## Diagnosis
+
+- **The HPSA stat is buried.** "1 in 4+ Americans" is arguably the most visceral proof point on the slide, but it's relegated to a beige footnote box at the bottom with body-copy-weight text. It reads like a supporting citation, not a co-equal argument. The visual weight hierarchy inverts the rhetorical hierarchy.
+- **The slide is doing three visual jobs simultaneously and none of them dominates.** The line chart, the specialty bar panel, and the HPSA callout are three independent dashboard widgets sitting in proximity rather than forming a composed argument. There is no clear eye-entry point or reading path — the viewer scans rather than lands.
+- **The bar chart panel is too literal and too cramped.** Five specialties with near-identical bar lengths compressed into a small box reads as data appendix, not editorial proof. The 41.8-day OB/GYN figure and 23.5-day Family Medicine figure are nearly indistinguishable at a glance, which defeats the point of showing the range.
+
+---
+
+## Recommendations
+
+- **Elevate the HPSA stat to headline-class typography.** Give "1 in 4+" the same or greater visual weight as "31 days." These are two separate proofs of the same thesis — treat them as a two-punch structure, not a primary claim and a footnote. Consider splitting the slide into a clear left/right or top/bottom diptych with each proof owning its zone.
+- **Collapse the specialty bar chart to its sharpest version: one number, one contrast.** Show only the most extreme case (OB/GYN, 41.8 days) against the trendline endpoint (31 days) to make the point that some patients wait 6 weeks before they even begin care. Cutting three bars removes noise and sharpens the editorial edge.
+- **Move citations to 8pt, flush-left, below the slide boundary or in a hairline-separated footer strip.** Right now the footnote block at bottom-left competes with the HPSA box for low-hierarchy real estate and creates visual clutter in the lower third. Shrink them, unify them in one line, and let the data breathe.
+
+---
+
+## Strongest Alternate Composition
+
+Run the slide as a **two-column tension layout** with a single vertical rule dividing it. Left column: the line chart stripped to its spine — no gridlines, no axis labels except 2004 and 2025, with "31 days" rendered in display type directly on the endpoint. Right column: the "1 in 4+" stat in matching display scale, with a single supporting sentence and the 48% unmet-need figure as a secondary callout. The specialty data gets distilled to one callout line — "OB/GYN patients wait 42 days" — anchored beneath the chart as a bridge between the two columns. This composition creates a clear left-to-right reading path (wait times rising → coverage failing), makes both proof points feel editorial rather than tabular, and gives the slide a magazine-feature quality that signals strategic confidence rather than data reporting.

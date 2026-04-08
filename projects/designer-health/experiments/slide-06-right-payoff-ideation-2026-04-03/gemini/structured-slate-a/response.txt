@@ -1,0 +1,509 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vox Pitch Deck Slide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC; /* Fallback outside the slide */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1920px;
+            height: 1080px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+        }
+
+        /* Typography & Headers */
+        .header-section {
+            position: absolute;
+            top: 85px;
+            left: 110px;
+            width: 1600px;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+        }
+
+        h1 span.brand {
+            color: #2A8E8A;
+        }
+
+        .subheader {
+            font-size: 22px;
+            color: #4B5563;
+            line-height: 1.5;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        /* Left Side Ribbons */
+        .ribbon-stack {
+            position: absolute;
+            top: 460px;
+            left: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            z-index: 5;
+        }
+
+        .ribbon {
+            position: relative;
+            width: 360px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            color: #374151;
+            padding-left: 40px;
+        }
+
+        .ribbon.teal {
+            color: #0F766E;
+            font-weight: 600;
+        }
+
+        .ribbon svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Center Chamber */
+        .chamber {
+            position: absolute;
+            top: 410px;
+            left: 530px;
+            width: 780px;
+            height: 520px;
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 32px;
+            z-index: 2;
+        }
+
+        .chamber-logo {
+            position: absolute;
+            top: 40px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .chamber-logo h2 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #2A8E8A;
+            letter-spacing: -0.04em;
+            margin-bottom: 4px;
+        }
+
+        .chamber-logo p {
+            font-size: 16px;
+            color: #4B5563;
+            font-weight: 500;
+        }
+
+        .hub-container {
+            position: absolute;
+            top: 250px;
+            left: 210px;
+            transform: translate(-50%, -50%);
+            width: 180px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 50%;
+            background: #F8FAFC;
+        }
+
+        .hub-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #111827;
+            line-height: 1.2;
+            z-index: 2;
+        }
+
+        .hub-ring {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .pill-stack {
+            position: absolute;
+            top: 150px;
+            left: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .chamber-pill {
+            display: flex;
+            align-items: center;
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 20px;
+            padding: 12px 24px;
+            width: 260px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            font-size: 16px;
+            font-weight: 600;
+            color: #111827;
+            position: relative;
+        }
+
+        .chamber-pill::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 24px;
+            background: linear-gradient(90deg, rgba(42,142,138,0) 0%, rgba(42,142,138,0.15) 100%);
+            border-radius: 12px;
+            z-index: -1;
+        }
+
+        .pill-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #2A8E8A;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        /* Right Side - Structured Slate (Redesign) */
+        .right-section {
+            position: absolute;
+            top: 450px;
+            left: 1460px;
+            z-index: 10;
+        }
+
+        .right-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 24px;
+            text-align: center;
+            letter-spacing: -0.01em;
+        }
+
+        .structured-slate {
+            width: 380px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 16px;
+            box-shadow: 0 24px 48px -12px rgba(0,0,0,0.08), 0 4px 12px -4px rgba(0,0,0,0.04);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Premium subtle top border accent */
+        .structured-slate::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #2A8E8A;
+        }
+
+        .slate-badge {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 9px;
+            font-weight: 800;
+            color: #4F46E5;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .slate-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .slate-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: #9CA3AF;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        /* Abstracted Anatomy */
+        .abstract-line {
+            height: 12px;
+            border-radius: 6px;
+            background: #E5E7EB;
+        }
+
+        .abstract-line.dark { background: #374151; width: 90%; height: 16px; }
+        .abstract-line.medium { background: #9CA3AF; width: 75%; }
+        .abstract-line.light { background: #D1D5DB; width: 40%; }
+        
+        .assessment-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .assessment-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .assessment-dot.high { background: #2A8E8A; }
+        .assessment-dot.med { background: #F59E0B; }
+
+        .clarify-pills {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .clarify-pill {
+            height: 24px;
+            border-radius: 12px;
+            background: #EEF2FF;
+            border: 1px solid #C7D2FE;
+            width: 80px;
+        }
+        .clarify-pill.short { width: 60px; }
+        .clarify-pill.long { width: 100px; }
+
+        /* Connecting Lines (SVG Overlay) */
+        .connections {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        path {
+            fill: none;
+            stroke-width: 3;
+            stroke-linecap: round;
+        }
+
+        .line-gray { stroke: #CBD5E1; opacity: 0.8; }
+        .line-teal { stroke: #2A8E8A; opacity: 0.6; }
+        .line-handoff { stroke: #99F6E4; stroke-width: 4; opacity: 0.8; }
+
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- Header -->
+    <div class="header-section">
+        <h1>
+            <span class="brand">Vox</span> is the adaptive interviewing system that takes on the<br>
+            hard clinical reasoning work needed to turn patient story<br>
+            into a clinician-grade starting point.
+        </h1>
+        <div class="subheader">
+            Vox is an adaptive clinical interviewer built to produce a clinician-grade starting point.<br>
+            By combining adaptive follow-up, clinical reasoning, and medical knowledge, Vox identifies what matters, organizes what connects, and surfaces<br>
+            what still needs verification before the visit begins.
+        </div>
+    </div>
+
+    <!-- SVG Connections Overlay -->
+    <svg class="connections">
+        <!-- Left to Hub Lines -->
+        <path class="line-gray" d="M 450 492 C 550 492, 650 660, 720 660" />
+        <path class="line-teal" d="M 450 580 C 550 580, 650 660, 720 660" />
+        <path class="line-gray" d="M 450 668 C 550 668, 600 660, 720 660" />
+        <path class="line-teal" d="M 450 756 C 550 756, 650 660, 720 660" />
+        <path class="line-gray" d="M 450 844 C 550 844, 650 660, 720 660" />
+
+        <!-- Hub to Pills Lines -->
+        <path class="line-teal" style="opacity: 0.2; stroke-width: 20;" d="M 740 660 C 800 660, 820 584, 880 584" />
+        <path class="line-teal" style="opacity: 0.2; stroke-width: 20;" d="M 740 660 L 880 660" />
+        <path class="line-teal" style="opacity: 0.2; stroke-width: 20;" d="M 740 660 C 800 660, 820 756, 880 756" />
+
+        <!-- Handoff Lines: Chamber to Slate (Resolving Signal) -->
+        <!-- These start wavy from the pills and straighten out perfectly horizontal before hitting the slate -->
+        <!-- Pill 1 to Complaint -->
+        <path class="line-handoff" d="M 1140 584 C 1260 584, 1320 560, 1400 560 L 1460 560" />
+        <!-- Pill 2 to Assessment -->
+        <path class="line-handoff" d="M 1140 660 C 1260 660, 1320 648, 1400 648 L 1460 648" />
+        <!-- Pill 3 to Clarify -->
+        <path class="line-handoff" d="M 1140 756 C 1260 756, 1320 740, 1400 740 L 1460 740" />
+    </svg>
+
+    <!-- Left Ribbon Stack -->
+    <div class="ribbon-stack">
+        <!-- Ribbon 1: Gray -->
+        <div class="ribbon">
+            <svg viewBox="0 0 360 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0 L340 0 L360 32 L340 64 L16 64 L36 32 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            </svg>
+            My back has been hurting...
+        </div>
+        <!-- Ribbon 2: Teal -->
+        <div class="ribbon teal">
+            <svg viewBox="0 0 360 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36 0 L360 0 L360 64 L36 64 L16 32 Z" fill="#F0FDF4" stroke="#2A8E8A" stroke-width="2"/>
+            </svg>
+            Vox: What makes it worse?
+        </div>
+        <!-- Ribbon 3: Gray -->
+        <div class="ribbon">
+            <svg viewBox="0 0 360 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0 L340 0 L360 32 L340 64 L16 64 L36 32 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            </svg>
+            It's worse in the morning.
+        </div>
+        <!-- Ribbon 4: Teal -->
+        <div class="ribbon teal">
+            <svg viewBox="0 0 360 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36 0 L360 0 L360 64 L36 64 L16 32 Z" fill="#F0FDF4" stroke="#2A8E8A" stroke-width="2"/>
+            </svg>
+            Vox: When did this start?
+        </div>
+        <!-- Ribbon 5: Gray -->
+        <div class="ribbon">
+            <svg viewBox="0 0 360 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0 L340 0 L360 32 L340 64 L16 64 L36 32 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+            </svg>
+            Started last Tuesday.
+        </div>
+    </div>
+
+    <!-- Center Chamber -->
+    <div class="chamber">
+        <div class="chamber-logo">
+            <h2>Vox</h2>
+            <p>Adaptive clinical interviewer</p>
+        </div>
+
+        <div class="hub-container">
+            <svg class="hub-ring" viewBox="0 0 200 200">
+                <!-- Background ring -->
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#F1F5F9" stroke-width="12" />
+                <!-- Teal active segments -->
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#2A8E8A" stroke-width="12" stroke-dasharray="140 400" stroke-linecap="round" transform="rotate(-45 100 100)" />
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#2A8E8A" stroke-width="12" stroke-dasharray="80 400" stroke-linecap="round" transform="rotate(120 100 100)" />
+            </svg>
+            <div class="hub-text">Adaptive<br>clinical<br>interviewer</div>
+        </div>
+
+        <div class="pill-stack">
+            <div class="chamber-pill">
+                <div class="pill-dot"></div>
+                What matters
+            </div>
+            <div class="chamber-pill">
+                <div class="pill-dot"></div>
+                What connects
+            </div>
+            <div class="chamber-pill">
+                <div class="pill-dot"></div>
+                What still needs<br>verification
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Section: Structured Slate Redesign -->
+    <div class="right-section">
+        <div class="right-title">Clinician-grade starting point</div>
+        
+        <div class="structured-slate">
+            <div class="slate-badge">Vox Summary</div>
+            
+            <!-- Anatomy: Complaint -->
+            <div class="slate-section" style="margin-top: 8px;">
+                <div class="slate-label">Chief Complaint</div>
+                <div class="abstract-line dark"></div>
+                <div class="abstract-line medium" style="width: 60%; margin-top: -4px;"></div>
+            </div>
+
+            <!-- Anatomy: Prioritized Assessment -->
+            <div class="slate-section" style="margin-top: 12px;">
+                <div class="slate-label">Prioritized Assessment</div>
+                <div class="assessment-row">
+                    <div class="assessment-dot high"></div>
+                    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 8px;">
+                        <div class="abstract-line medium" style="width: 100%;"></div>
+                        <div class="abstract-line light" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="assessment-row" style="margin-top: 4px;">
+                    <div class="assessment-dot med"></div>
+                    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 8px;">
+                        <div class="abstract-line medium" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anatomy: Clarify / Verify -->
+            <div class="slate-section" style="margin-top: 12px;">
+                <div class="slate-label">Clarify / Verify</div>
+                <div class="clarify-pills">
+                    <div class="clarify-pill long"></div>
+                    <div class="clarify-pill short"></div>
+                    <div class="clarify-pill"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+```

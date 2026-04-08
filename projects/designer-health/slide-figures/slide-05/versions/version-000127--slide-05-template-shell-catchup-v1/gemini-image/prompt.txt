@@ -1,0 +1,173 @@
+You are designing ONE conceptual figure for an investor pitch deck.
+
+I am attaching:
+1. the current stamped Slide 3 image
+2. a shelved merged-slide reference image whose TOP BEAT is directionally useful
+
+Use Slide 3 as the source object and family anchor.
+Use the shelved merged reference only as a composition hint for how the
+peeled-out wedge and grouped support block can feel clean and editorial.
+
+IMPORTANT STRATEGIC CONTEXT
+
+This is NOT the old merged slide 4/5.
+This is now a standalone Slide 5 that sits immediately after Slide 3.
+
+Slide 3 established where the time is.
+This slide's only job is to show WHY history is the wedge to pull.
+
+Do NOT explain the lower story-to-structure mechanism here.
+Do NOT show a second beat.
+Do NOT show workflow mechanics.
+Do NOT show software UI.
+Do NOT show a lower panel.
+
+This slide should land in under 3 seconds.
+
+==================================================
+USE THIS EXACT COPY
+==================================================
+
+HEADER
+History is the cleanest place to reclaim minutes
+
+GROUPED SUPPORT BLOCK HEADING
+Why this wedge
+
+REASON 1
+Repeated across visits
+The same story gets repeated across encounters
+
+REASON 2
+Time-variable
+Time required depends on complexity and communication
+
+REASON 3
+Can begin before the encounter
+Much of it can happen before the clinician is on the clock
+
+SOURCE BAR TEXT
+Story reconstruction
+Decisions + counseling
+Exam + workflow
+0 / 5 / 10 / 15 / 20
+
+OPTIONAL HERO TEXT
+History reconstruction
+
+==================================================
+COMPOSITION
+==================================================
+
+This slide should have ONE main beat only:
+- quoted Slide 3 source bar
+- peeled-out history wedge
+- grouped support block
+
+Recommended layout:
+- top-left: header
+- upper-right: quoted Slide 3 source bar
+- center-left: peeled-out history wedge / compact hero module
+- center-right: grouped support block
+- one elegant curved peel arrow connecting source wedge to hero
+
+This should feel like:
+source wedge -> pull out -> why this wedge
+
+==================================================
+OBJECT-BY-OBJECT INSTRUCTIONS
+==================================================
+
+OBJECT 1 — SOURCE BAR
+Use the Slide 3 top bar as the geometric and stylistic reference.
+Keep:
+- same ruler
+- same rounded geometry
+- same blue first segment
+- same neutral remaining segments
+- same label family
+
+Remove:
+- bracket text
+- repeated mini-bars
+- new visit block
+
+This is a quoted object, not the hero.
+
+OBJECT 2 — PEEL / PULL MOTION
+Start from the blue history wedge in the source bar.
+Move leftward and slightly downward into the hero.
+This should feel like pulling out the key wedge, not moving a box later in time.
+
+Keep it elegant and editorial.
+Not thick.
+Not cartoonish.
+Not a dramatic infographic arrow.
+
+OBJECT 3 — HERO MODULE
+Create one compact blue module that feels like an extracted band, not a billboard.
+
+Preferred text:
+History reconstruction
+
+If a second line is used at all, keep it extremely restrained.
+This slide should remain simpler than the shelved merged concept.
+
+OBJECT 4 — GROUPED SUPPORT BLOCK
+Place one grouped block to the right of the hero:
+
+Why this wedge
+
+Repeated across visits
+The same story gets repeated across encounters
+
+Time-variable
+Time required depends on complexity and communication
+
+Can begin before the encounter
+Much of it can happen before the clinician is on the clock
+
+These reasons must be grouped as one support cluster.
+Do NOT scatter them around the canvas.
+
+==================================================
+STYLE
+==================================================
+
+- white background
+- premium investor-deck feel
+- grayscale base
+- one restrained blue accent
+- rounded geometry
+- clean hierarchy
+- generous but purposeful whitespace
+- conceptual, not operational
+- simple and sparse
+
+==================================================
+DO NOT
+==================================================
+
+Do NOT:
+- add the lower story-to-structure zoom panel
+- turn this into the old merged 4/5 slide
+- show workflow mechanics or a pre-visit timeline
+- add icons
+- add infographic clutter
+- create a giant blue billboard
+- place the support block below the hero
+- center everything symmetrically
+
+==================================================
+QUALITY BAR
+==================================================
+
+This should feel like the clean bridge from:
+- Slide 3 = where the time is
+to
+- Slide 4 = what that wedge is actually doing
+
+The final result should make one thing obvious:
+history is the wedge to pull first.
+
+Produce ONE strong static slide figure concept that follows this closely.

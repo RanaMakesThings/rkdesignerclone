@@ -1,0 +1,56 @@
+Create a premium 16:9 investor-deck central figure for Designer Health.
+
+Use the attached slide-07 version-89 image as the main composition reference.
+Use the attached slide-07 version-99 image only as a secondary reference for
+speech-bubble clarity. Stay much closer to version 89 overall.
+
+This should read as a strong horizontal middle graphic, not a complete slide.
+Preserve the wide fill and confident left-to-right spacing from version 89.
+
+Keep only this visible text:
+- `Before visit`
+- `Visit begins`
+- `1`
+- `Invite sent`
+- `2`
+- `Adaptive interview`
+- `3`
+- `Brief prepared`
+- `4`
+- `Clinician starts prepared`
+
+Do not include any extra explanatory microcopy.
+
+Preserve from version 89:
+- beat 1 secure-link phone
+- beat 3 brief-preparation hero object
+- the slick funnel from conversation into the brief
+- the clean white background with restrained teal
+- the more appealing human style from version 89
+
+Change:
+- remove the detached `VOX` badge at the top right
+- beat 3 should still feel like a tech-forward brief object, just without that
+  extra badge
+- in beat 2, clearly show patient speech and phone follow-up as different
+  speakers
+- patient bubble: `I've had a bad cough.`
+- phone bubble: `How long has it been going on?`
+- optional small patient reply: `Five days.`
+- make the patient bubble clearly originate from the patient
+- make the phone bubble clearly originate from the phone
+- no thought bubbles
+- beat 4 should be one clinician, one tablet, no extra object
+
+Style:
+- editorial healthcare illustration
+- grayscale with restrained teal accents
+- softer, more refined faces and hands
+- graphic and deck-native, not photoreal
+
+Important:
+- no extra title text
+- no microcopy blocks
+- no clipboard
+- no duplicate device in beat 4
+- no clutter

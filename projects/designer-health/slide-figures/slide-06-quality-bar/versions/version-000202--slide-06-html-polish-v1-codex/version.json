@@ -1,0 +1,17 @@
+{
+  "id": "version-000202",
+  "slideId": "slide-06",
+  "slideDir": "projects/designer-health/slide-figures/slide-06-quality-bar",
+  "dir": "projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000202--slide-06-html-polish-v1-codex",
+  "label": "slide-06-html-polish-v1-codex",
+  "status": "archived",
+  "createdAt": "2026-04-03T17:07:33.198Z",
+  "sourceKind": "html-experiment-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "output/figures/vox-slide6-html-polish-v1.html"
+  ],
+  "sourcePath": "output/figures/vox-slide6-html-polish-v1.html",
+  "sourceProvider": "codex",
+  "sourceVariantLabel": "html-polish-v1-codex"
+}

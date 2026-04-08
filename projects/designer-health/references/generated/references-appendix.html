@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designer Health Deck References Appendix</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f1f5f9;
+        --card: #ffffff;
+        --ink: #0f172a;
+        --ink-soft: #475569;
+        --line: #e2e8f0;
+        --accent: #0f766e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Montserrat", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+      }
+
+      .slide-page {
+        width: 1920px;
+        height: 1080px;
+        margin: 0 auto;
+        padding: 48px;
+        background:
+          radial-gradient(circle at top left, rgba(15, 118, 110, 0.08), transparent 38%),
+          linear-gradient(180deg, #f8fbfd 0%, var(--bg) 100%);
+      }
+
+      .slide-shell {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.84);
+        border-radius: 24px;
+        padding: 54px 62px 34px;
+      }
+
+      .slide-header,
+      .slide-footer,
+      .reference-card-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .slide-header {
+        align-items: end;
+        border-bottom: 2px solid var(--line);
+        padding-bottom: 22px;
+      }
+
+      .slide-kicker {
+        margin: 0 0 10px;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 52px;
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+      }
+
+      .slide-header-meta {
+        text-align: right;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--ink-soft);
+      }
+
+      .slide-header-meta p,
+      .reference-label,
+      .reference-citation,
+      .reference-url,
+      .slide-footer {
+        margin: 0;
+      }
+
+      .reference-list {
+        display: grid;
+        gap: 18px;
+        align-content: start;
+        padding: 28px 0 18px;
+      }
+
+      .reference-card {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--card);
+        padding: 22px 24px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+      }
+
+      .reference-index {
+        flex: 0 0 auto;
+        width: 54px;
+        height: 54px;
+        border-radius: 14px;
+        background: rgba(15, 118, 110, 0.12);
+        color: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      .reference-meta {
+        display: grid;
+        gap: 10px;
+        flex: 1;
+      }
+
+      .reference-label {
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--ink-soft);
+      }
+
+      .reference-slides {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .slide-badge {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(15, 118, 110, 0.08);
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 700;
+        padding: 6px 10px;
+      }
+
+      .reference-citation {
+        margin-top: 16px;
+        font-size: 23px;
+        line-height: 1.45;
+        letter-spacing: -0.02em;
+      }
+
+      .reference-url {
+        margin-top: 12px;
+        font-size: 14px;
+        color: var(--ink-soft);
+        word-break: break-all;
+      }
+
+      .reference-url a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .slide-footer {
+        align-items: center;
+        font-size: 14px;
+        color: var(--ink-soft);
+        border-top: 2px solid var(--line);
+        padding-top: 18px;
+      }
+    </style>
+  </head>
+  <body>
+
+        <section class="slide-page">
+          <div class="slide-shell">
+            <header class="slide-header">
+              <div>
+                <p class="slide-kicker">Appendix</p>
+                <h1>References</h1>
+              </div>
+              <div class="slide-header-meta">
+                <p>Designer Health Deck</p>
+                <p>Current running references</p>
+              </div>
+            </header>
+            <div class="reference-list">
+            <article class="reference-card">
+              <div class="reference-card-head">
+                <span class="reference-index">01</span>
+                <div class="reference-meta">
+                  <p class="reference-label">AMN Healthcare 2025 appointment wait times</p>
+                  <div class="reference-slides"><span class="slide-badge">Slide 2</span></div>
+                </div>
+              </div>
+              <p class="reference-citation">AMN Healthcare. 2025 Survey of Physician Appointment Wait Times. 2025. Reported average physician appointment wait time of 31 days in 2025, up 19% from 2022.</p>
+              <p class="reference-url"><a href="https://www.amnhealthcare.com/amn-insights/physician/whitepapers/2025-survey-of-physician-appointment-wait-times/?utm_source=chatgpt.com">https://www.amnhealthcare.com/amn-insights/physician/whitepapers/2025-survey-of-physician-appointment-wait-times/?utm_source=chatgpt.com</a></p>
+            </article>
+
+            <article class="reference-card">
+              <div class="reference-card-head">
+                <span class="reference-index">02</span>
+                <div class="reference-meta">
+                  <p class="reference-label">HRSA 2025 primary care HPSA quarterly report</p>
+                  <div class="reference-slides"><span class="slide-badge">Slide 2</span></div>
+                </div>
+              </div>
+              <p class="reference-citation">Health Resources and Services Administration. Primary Care Health Professional Shortage Areas Quarterly Summary. December 31, 2025. Reported 92.3 million people living in designated primary care shortage areas and only 48.18% of primary care need met in those areas.</p>
+
+            </article>
+
+            <article class="reference-card">
+              <div class="reference-card-head">
+                <span class="reference-index">03</span>
+                <div class="reference-meta">
+                  <p class="reference-label">Abbo et al. 2008 crowded primary care visits</p>
+                  <div class="reference-slides"><span class="slide-badge">Slide 3</span></div>
+                </div>
+              </div>
+              <p class="reference-citation">Abbo ED, Zhang Q, Zelder M, Huang ES. The Increasing Number of Clinical Items Addressed During the Time of Adult Primary Care Visits. Journal of General Internal Medicine. 2008;23(12):2058-2065. Found visits increased from 18.0 to 20.9 minutes while clinical items increased from 5.4 to 7.1 per visit.</p>
+              <p class="reference-url"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2596516/?utm_source=chatgpt.com">https://pmc.ncbi.nlm.nih.gov/articles/PMC2596516/?utm_source=chatgpt.com</a></p>
+            </article>
+
+            <article class="reference-card">
+              <div class="reference-card-head">
+                <span class="reference-index">04</span>
+                <div class="reference-meta">
+                  <p class="reference-label">Ma et al. 2025 ambient AI scribes utilization study</p>
+                  <div class="reference-slides"><span class="slide-badge">Slide 8</span></div>
+                </div>
+              </div>
+              <p class="reference-citation">Ma SP, Liang AS, Shah SJ, et al. Ambient artificial intelligence scribes: utilization and impact on documentation time. Journal of the American Medical Informatics Association. 2025;32(2):381-385. Reported 55.25% utilization and reductions in documentation, after-hours, and total EHR time.</p>
+
+            </article>
+          </div>
+            <footer class="slide-footer">
+              <span>Generated from projects/designer-health/references/manifest.json</span>
+              <span>1 / 2</span>
+            </footer>
+          </div>
+        </section>
+
+        <section class="slide-page">
+          <div class="slide-shell">
+            <header class="slide-header">
+              <div>
+                <p class="slide-kicker">Appendix</p>
+                <h1>References (cont.)</h1>
+              </div>
+              <div class="slide-header-meta">
+                <p>Designer Health Deck</p>
+                <p>Current running references</p>
+              </div>
+            </header>
+            <div class="reference-list">
+            <article class="reference-card">
+              <div class="reference-card-head">
+                <span class="reference-index">05</span>
+                <div class="reference-meta">
+                  <p class="reference-label">Lukac et al. 2025 ambient AI scribes randomized trial</p>
+                  <div class="reference-slides"><span class="slide-badge">Slide 8</span></div>
+                </div>
+              </div>
+              <p class="reference-citation">Lukac PJ, Turner W, Vangala S, et al. Ambient AI Scribes in Clinical Practice: A Randomized Trial. NEJM AI. 2025. Reported a 9.5% decrease in time-in-note and improvements in workload-related measures.</p>
+
+            </article>
+
+            <article class="reference-card">
+              <div class="reference-card-head">
+                <span class="reference-index">06</span>
+                <div class="reference-meta">
+                  <p class="reference-label">AASM 2025 E/M payment comparison</p>
+                  <div class="reference-slides"><span class="slide-badge">Slide 9</span></div>
+                </div>
+              </div>
+              <p class="reference-citation">American Academy of Sleep Medicine. Evaluation and Management Services: 2024 vs 2025 National Payment Comparison. 2025. Reported 2025 national payments of $88.95 for CPT 99213, $125.18 for CPT 99214, and $15.53 for G2211.</p>
+              <p class="reference-url"><a href="https://aasm.org/wp-content/uploads/2024/11/evaluation-management-comparison-2024-2025.pdf?utm_source=chatgpt.com">https://aasm.org/wp-content/uploads/2024/11/evaluation-management-comparison-2024-2025.pdf?utm_source=chatgpt.com</a></p>
+            </article>
+
+            <article class="reference-card">
+              <div class="reference-card-head">
+                <span class="reference-index">07</span>
+                <div class="reference-meta">
+                  <p class="reference-label">Appold 2016 practice overhead survey</p>
+                  <div class="reference-slides"><span class="slide-badge">Slide 9</span></div>
+                </div>
+              </div>
+              <p class="reference-citation">Appold K. Keeping Medical Practice Overhead Down. Physicians Practice. 2016. Reported that 40.4% of physician-survey respondents placed overhead in the 41%-60% of revenue range.</p>
+
+            </article>
+
+            <article class="reference-card">
+              <div class="reference-card-head">
+                <span class="reference-index">08</span>
+                <div class="reference-meta">
+                  <p class="reference-label">Weiss 2003 practice expenses survey</p>
+                  <div class="reference-slides"><span class="slide-badge">Slide 9</span></div>
+                </div>
+              </div>
+              <p class="reference-citation">Weiss GG. Exclusive Survey: Practice Expenses. Medical Economics. 2003. Reported median practice expenses commonly around 50%-55% of revenue across regions and practice sizes.</p>
+
+            </article>
+          </div>
+            <footer class="slide-footer">
+              <span>Generated from projects/designer-health/references/manifest.json</span>
+              <span>2 / 2</span>
+            </footer>
+          </div>
+        </section>
+
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "provider": "gpt",
+  "verdict": "blocker",
+  "rationale": "The candidate is largely resolved, but it still contains concrete visible regressions that would block signoff: a stray broken-image/placeholder box remains at bottom right, the use-of-funds ribbon text is clipped/overflowing, and the footer area no longer matches the clean official shell because the logo is missing and replaced by the artifact.",
+  "blockers": [
+    "A visible broken-image/placeholder box remains in the bottom-right corner.",
+    "The bottom use-of-funds ribbon is clipped/overflowing, with copy cut off and intruding into other content.",
+    "The footer shell has drifted: the official Designer logo/footer treatment is missing and the bottom-right area is broken."
+  ],
+  "nextMove": "Remove the bottom-right artifact, restore the official footer/logo placement, and resize/reflow the use-of-funds ribbon so all locked copy fits cleanly within the slide bounds.",
+  "raw": {
+    "verdict": "blocker",
+    "rationale": "The candidate is largely resolved, but it still contains concrete visible regressions that would block signoff: a stray broken-image/placeholder box remains at bottom right, the use-of-funds ribbon text is clipped/overflowing, and the footer area no longer matches the clean official shell because the logo is missing and replaced by the artifact.",
+    "blockers": [
+      "A visible broken-image/placeholder box remains in the bottom-right corner.",
+      "The bottom use-of-funds ribbon is clipped/overflowing, with copy cut off and intruding into other content.",
+      "The footer shell has drifted: the official Designer logo/footer treatment is missing and the bottom-right area is broken."
+    ],
+    "nextMove": "Remove the bottom-right artifact, restore the official footer/logo placement, and resize/reflow the use-of-funds ribbon so all locked copy fits cleanly within the slide bounds."
+  }
+}

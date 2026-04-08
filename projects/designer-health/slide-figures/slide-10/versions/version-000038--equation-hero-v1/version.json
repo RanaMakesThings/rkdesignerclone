@@ -1,0 +1,17 @@
+{
+  "id": "version-000038",
+  "slideId": "slide-10",
+  "slideDir": "projects/designer-health/slide-figures/slide-10",
+  "dir": "projects/designer-health/slide-figures/slide-10/versions/version-000038--equation-hero-v1",
+  "label": "equation-hero-v1",
+  "status": "current",
+  "createdAt": "2026-03-31T17:04:29.810Z",
+  "sourceKind": "legacy-import",
+  "baseVersionId": null,
+  "legacySourcePaths": [
+    "projects/designer-health/slide-figures/slide-10/equation-hero-v1",
+    "projects/designer-health/slide-figures/slide-10/callback-review",
+    "projects/designer-health/slide-figures/slide-10/callback-reference-board.png",
+    "projects/designer-health/slide-figures/slide-10/left-right-variants-board.png"
+  ]
+}

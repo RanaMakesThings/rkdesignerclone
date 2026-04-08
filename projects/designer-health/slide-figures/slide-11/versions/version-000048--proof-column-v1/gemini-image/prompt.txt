@@ -1,0 +1,56 @@
+Create one premium 16:9 investor pitch-deck slide on a white background.
+
+Use this exact on-slide copy:
+
+Header:
+Start where throughput proof is fastest.
+
+Subheader:
+The best first market is any setting with visible visit pressure, simple buying, and low deployment friction.
+
+Main figure:
+Build the slide as one disciplined vertical argument in the center of the page.
+
+Stack these three qualifying conditions first, with generous spacing:
+- visible visit pressure
+- simple buying
+- low deployment friction
+
+Below that, place one profile statement:
+High-throughput groups with simple deployment
+
+Optional small support line:
+A profile, not a specialty
+
+Below that, place one compact proof panel titled:
+What the first pilot must prove
+
+Include these rows:
+- patient completion before visit
+- clinician verification time
+- re-asking reduction in the room
+- visit throughput or schedule lift
+
+At the very bottom, add a small quiet footer group of equal-weight example
+settings:
+- Primary care
+- GI / gastroenterology
+- Orthopedics
+- Urgent care
+- Multi-site specialty groups
+
+Visual rules:
+- white background
+- grayscale base
+- one restrained blue accent
+- premium typography
+- strong whitespace
+- editorial, memo-like layout
+- no funnels
+- no filters
+- no market map
+- no consulting matrix
+- no fake software UI
+
+Overall feel:
+precise, strategic, premium, and immediately legible to an investor.

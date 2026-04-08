@@ -1,0 +1,26 @@
+Create a 16:9 pitch-deck slide mockup for Vox that reframes the capacity argument as a real clinic schedule.
+
+Core message:
+The clinic day stays the same length, but if story reconstruction takes less time before each visit, one more patient can fit into the day.
+
+Constraint:
+Do not suggest rushed care or shortened exam/counseling. The change is upstream prep efficiency, not lower-quality patient time.
+
+Style:
+- Premium healthcare investor deck
+- Editorial, quiet, executive
+- Off-white background with restrained blue, green, gray
+- Strong typography, minimal copy
+- No software UI chrome, but it can borrow the visual logic of a schedule
+
+Variant concept:
+Calendar-style day schedule.
+- Show two vertical day columns or two schedule stacks
+- Left: Current day with 5 visits
+- Right: AI-assisted day with 6 visits in the same overall time window
+- Use color to show the smaller story-reconstruction portion on each visit
+- Make it obvious that the day boundaries are unchanged
+- Headline: More efficient visits will increase supply.
+- Subheader: Small per-visit gains compound.
+
+The result should feel like a real operational schedule made beautiful enough for a pitch deck.

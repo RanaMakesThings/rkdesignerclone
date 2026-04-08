@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Pitch Deck - Slide</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            background-color: #e5e5e5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1600px;
+            height: 900px;
+            background-color: #ffffff;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* =========================================
+           BEAT 1: UPPER / MIDDLE CLAIM
+           ========================================= */
+
+        .header {
+            position: absolute;
+            top: 70px;
+            left: 80px;
+            font-size: 36px;
+            font-weight: 600;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+        }
+
+        /* Source Bar (Quoted Object) */
+        .source-container {
+            position: absolute;
+            top: 70px;
+            right: 80px;
+            width: 640px;
+        }
+
+        .ruler {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 12px;
+            margin-bottom: 6px;
+            color: #64748b;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .ruler-mark {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ruler-tick {
+            width: 1px;
+            height: 5px;
+            background-color: #cbd5e1;
+            margin-top: 4px;
+        }
+
+        .source-bar {
+            display: flex;
+            height: 52px;
+            border-radius: 6px;
+            overflow: hidden;
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 52px;
+        }
+
+        .segment-blue {
+            width: 28%;
+            background-color: #4a83c4;
+            color: #ffffff;
+        }
+
+        .segment-gray {
+            width: 36%;
+            background-color: #9ca3af;
+            color: #ffffff;
+        }
+
+        .segment-light {
+            width: 36%;
+            background-color: #e2e8f0;
+            color: #1e293b;
+        }
+
+        /* Hero Module */
+        .hero-module {
+            position: absolute;
+            top: 260px;
+            left: 80px;
+            width: 480px;
+            background-color: #4a83c4;
+            border-radius: 10px;
+            padding: 28px 36px;
+            color: #ffffff;
+            box-shadow: 0 10px 25px rgba(74, 131, 196, 0.2);
+            z-index: 10;
+        }
+
+        .hero-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        .hero-subtitle {
+            font-size: 17px;
+            font-weight: 400;
+            opacity: 0.9;
+            letter-spacing: 0.2px;
+        }
+
+        /* Grouped Support Block */
+        .support-block {
+            position: absolute;
+            top: 240px;
+            left: 660px;
+            width: 540px;
+            border-left: 3px solid #f1f5f9;
+            padding-left: 36px;
+        }
+
+        .support-heading {
+            font-size: 14px;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 28px;
+        }
+
+        .support-item {
+            margin-bottom: 28px;
+        }
+
+        .support-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .support-item-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+
+        .support-item-desc {
+            font-size: 17px;
+            font-weight: 400;
+            color: #475569;
+            line-height: 1.4;
+        }
+
+        /* Peel-back Arrow SVG */
+        .arrow-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        /* =========================================
+           BEAT 2: LOWER EXPLANATORY CLAIM
+           ========================================= */
+
+        .lower-heading {
+            position: absolute;
+            top: 560px;
+            left: 80px;
+            font-size: 24px;
+            font-weight: 500;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+        }
+
+        /* Zoom Panel */
+        .zoom-panel {
+            position: absolute;
+            top: 620px;
+            left: 80px;
+            width: 1440px;
+            height: 200px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        .zoom-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .zoom-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .zoom-box {
+            width: 380px;
+            height: 120px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Abstract Story Representation */
+        .story-line {
+            height: 8px;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .story-line:last-child { margin-bottom: 0; }
+        .w-100 { width: 100%; }
+        .w-85 { width: 85%; }
+        .w-90 { width: 90%; }
+        .w-60 { width: 60%; }
+        .w-75 { width: 75%; }
+
+        /* Abstract Structure Representation */
+        .struct-header {
+            height: 10px;
+            background-color: #cbd5e1;
+            border-radius: 4px;
+            width: 40%;
+            margin-bottom: 16px;
+        }
+        .struct-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .struct-row:last-child { margin-bottom: 0; }
+        .struct-bullet {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #94a3b8;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .struct-line {
+            height: 8px;
+            background-color: #f1f5f9;
+            border-radius: 4px;
+        }
+
+        /* Bridge Arrow */
+        .bridge-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            margin-top: 30px; /* Align with boxes, offset label height */
+        }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+
+    <!-- BEAT 1: UPPER / MIDDLE CLAIM -->
+    
+    <div class="header">History is the cleanest place to reclaim minutes</div>
+
+    <!-- Quoted Source Bar -->
+    <div class="source-container">
+        <div class="ruler">
+            <div class="ruler-mark"><span>0</span><div class="ruler-tick"></div></div>
+            <div class="ruler-mark"><span>5</span><div class="ruler-tick"></div></div>
+            <div class="ruler-mark"><span>10</span><div class="ruler-tick"></div></div>
+            <div class="ruler-mark"><span>15</span><div class="ruler-tick"></div></div>
+            <div class="ruler-mark"><span>20</span><div class="ruler-tick"></div></div>
+        </div>
+        <div class="source-bar">
+            <div class="segment-blue">Story reconstruction</div>
+            <div class="segment-gray">Decisions + counseling</div>
+            <div class="segment-light">Exam + workflow</div>
+        </div>
+    </div>
+
+    <!-- Curved Peel-back Arrow -->
+    <svg class="arrow-layer" viewBox="0 0 1600 900">
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+            </marker>
+        </defs>
+        <!-- Starts from bottom center of the blue source segment, curves down and left to top center of hero -->
+        <path d="M 970 145 C 970 210, 320 180, 320 245" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)" />
+    </svg>
+
+    <!-- Extracted Hero Module -->
+    <div class="hero-module">
+        <div class="hero-title">History reconstruction</div>
+        <div class="hero-subtitle">Patient story &rarr; decision-ready structure</div>
+    </div>
+
+    <!-- Grouped Support Block -->
+    <div class="support-block">
+        <div class="support-heading">Why this wedge</div>
+        
+        <div class="support-item">
+            <div class="support-item-title">Repeated across visits</div>
+            <div class="support-item-desc">The same story gets repeated across encounters</div>
+        </div>
+        
+        <div class="support-item">
+            <div class="support-item-title">Time-variable</div>
+            <div class="support-item-desc">Time required depends on complexity and communication</div>
+        </div>
+        
+        <div class="support-item">
+            <div class="support-item-title">Can begin before the encounter</div>
+            <div class="support-item-desc">Much of it can happen before the clinician is on the clock</div>
+        </div>
+    </div>
+
+    <!-- BEAT 2: LOWER EXPLANATORY CLAIM -->
+
+    <div class="lower-heading">Valuable visit time is spent turning patient story into decision-ready structure</div>
+
+    <!-- Compact Zoom Panel -->
+    <div class="zoom-panel">
+        
+        <!-- Left: Patient Story -->
+        <div class="zoom-column">
+            <div class="zoom-label">Patient story</div>
+            <div class="zoom-box">
+                <div class="story-line w-100"></div>
+                <div class="story-line w-85"></div>
+                <div class="story-line w-90"></div>
+                <div class="story-line w-60"></div>
+                <div class="story-line w-75"></div>
+            </div>
+        </div>
+
+        <!-- Middle: Organizing Bridge -->
+        <div class="bridge-container">
+            <svg width="120" height="24" viewBox="0 0 120 24">
+                <path d="M 0 12 L 110 12" fill="none" stroke="#94a3b8" stroke-width="2" />
+                <polygon points="110 6, 120 12, 110 18" fill="#94a3b8" />
+            </svg>
+        </div>
+
+        <!-- Right: Decision-Ready Structure -->
+        <div class="zoom-column">
+            <div class="zoom-label">Decision-ready structure</div>
+            <div class="zoom-box">
+                <div class="struct-header"></div>
+                <div class="struct-row">
+                    <div class="struct-bullet"></div>
+                    <div class="struct-line w-100"></div>
+                </div>
+                <div class="struct-row">
+                    <div class="struct-bullet"></div>
+                    <div class="struct-line w-85"></div>
+                </div>
+                <div class="struct-row">
+                    <div class="struct-bullet"></div>
+                    <div class="struct-line w-90"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

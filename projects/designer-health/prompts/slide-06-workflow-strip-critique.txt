@@ -1,0 +1,42 @@
+You are reviewing ONE static investor pitch-deck figure.
+
+Context:
+- Deck: Designer Health
+- Slide: current slide 6
+- Slide role: workflow explanation
+- Lead-in: slide 5 says the output must be clinician-grade
+- Follow-on: slide 7 will show the structured brief itself
+
+What this slide needs to do:
+- explain that Vox prepares the visit before it starts
+- show a calm four-step flow: Invite -> Interview -> Structure -> Verify
+- make the workflow feel credible without looking like fake software UI
+- keep Structure as the visual star
+- stay clean, premium, restrained, and obvious at a glance
+
+Specific concern:
+This version added a small handoff brief between Structure and Verify. I want a blunt critique of whether that move actually helps or whether it breaks the slide.
+
+Please answer in exactly these sections:
+
+1. Verdict
+One short paragraph. Say whether this figure is working or not.
+
+2. What works
+3 flat bullets max.
+
+3. What is broken
+Up to 6 flat bullets. Be specific about overlap, duplication, hierarchy, readability, occlusion, or anything that makes the slide worse.
+
+4. Is the handoff card necessary?
+Answer yes or no, then explain in 2 to 4 sentences.
+
+5. Best next move
+One short paragraph telling me what to change next. Prefer concrete design direction over generic advice.
+
+Important:
+- prioritize visual reasoning over generic design commentary
+- if an object is covering important content, say that explicitly
+- if the same semantic object is being shown twice, say that explicitly
+- do not rewrite the whole slide strategy
+- do not praise the slide unless it is deserved

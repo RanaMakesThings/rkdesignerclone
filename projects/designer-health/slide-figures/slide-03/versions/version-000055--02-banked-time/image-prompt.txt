@@ -1,0 +1,26 @@
+Create a 16:9 pitch-deck slide mockup for Vox that explains a capacity argument visually.
+
+Core message:
+AI-assisted prep reduces the story-reconstruction portion of each visit. The minutes saved across five visits add up into one additional patient visit.
+
+Important constraint:
+Avoid any implication that physical exam or counseling is being shortened. The only thing that should visibly shrink is story reconstruction.
+
+Style:
+- Premium healthcare investor deck
+- Clean, calm, editorial
+- Off-white background with restrained blue, green, and warm gray
+- Strong typography, sparse copy
+- No legend box, no dashboard UI
+
+Variant concept:
+Banked-time accumulation.
+- Show a before row of five visits
+- Show an after row where the story-reconstruction segment is smaller
+- The removed blue time from each visit should appear as light extracted slivers, dashed ghosts, or pooled fragments
+- Those fragments should visually accumulate into one complete new visit at the end
+- The accumulation should feel elegant and intelligible, not cluttered
+- Headline at top: More efficient visits will increase supply.
+- Subheader: Small per-visit gains compound.
+
+The key thing is to make the visual math obvious: the saved blue pieces combine into the new visit.

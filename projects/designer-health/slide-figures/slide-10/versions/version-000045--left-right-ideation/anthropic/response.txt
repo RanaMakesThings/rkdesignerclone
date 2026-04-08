@@ -1,0 +1,137 @@
+# Slide 10 Redesign: Left/Right Layout Analysis
+
+---
+
+## Q1 & Q2: Best Reduced Callback Object
+
+**Recommendation: 2 shortened bars + 1 green `New visit` block, no before/after.**
+
+Here's why:
+
+- A before/after comparison **re-explains** slide 3. You want a **reference**, not a recap.
+- A single "unlocked slot" object is too abstract without prior context on this slide alone.
+- 2 bars + green block is the **minimum recognizable unit** — it says *"same pattern, one result"* without replaying the full sequence.
+- The green block does the narrative work. The shortened bars just anchor it to slide 3's visual language.
+
+**The key constraint:** the bars should feel **already compressed** — not in the process of compressing. The efficiency already happened. You're showing the output state, not the mechanism.
+
+---
+
+## Q3: Should the Right Side Include a `+2` Upside Check?
+
+**Yes, but only as a single suppressed line — not a second proof.**
+
+The risk of showing `+2` as a parallel calculation is that it invites the reader to mentally arbitrate between the two cases, which dilutes the `+1 → $11,000` punch.
+
+**Best treatment:**
+```
+$11,000 / year          ← dominant, large
++2 visits → $22,000     ← 11px, muted gray, below the assumption stack
+```
+
+One line. No separate column. No separate math shown. It signals optionality without competing.
+
+**If the deck is early-stage / seed:** omit it entirely. The simplicity of one number is more confident.
+**If the deck is growth / Series A+:** include it as the quiet line. Sophisticated investors will notice it and do the mental math themselves — which is better than you doing it for them.
+
+---
+
+## Q4 + Q5: Three Concrete Layout Ideas
+
+---
+
+### Layout A — **"Compressed Trail → Dollar"**
+*The bars are a trail; the green block is the destination*
+
+**LEFT SIDE**
+```
+[ bar ]  [ bar ]  [ NEW VISIT ]
+                   ↑ green block, slightly larger
+                   label: "recovered capacity"
+```
+Two muted blue bars (shorter than slide 3's bars, same style). One green `New visit` block. Small label underneath: *"recovered capacity"* or nothing at all. No arrows, no animation cues. The green block sits flush at the end like it belongs there.
+
+**RIGHT SIDE**
+```
++1 visit
+/ provider / day
+
+→  220 clinic days
+   $125 / visit
+   40% contribution margin
+
+= $11,000 / year
+
+   +2 visits → $22,000  [quiet gray]
+
+   –$917 / month break-even
+```
+
+**Why it works:**
+- Bars are a visual echo, not a re-explanation
+- The green block physically bridges left and right — *"this block = that number"*
+- Right side reads as a clean proof, not a model
+- The spatial flow is left-to-right and matches the logical flow: efficiency → capacity → dollars
+
+**Main risk:**
+The two bars with nothing else on the left can feel underdeveloped. The left needs enough visual weight to justify its half of the slide. Solve by giving the bars and green block more vertical centering breathing room, and possibly a single quiet label like *"1 visit recovered per provider day"* underneath.
+
+---
+
+### Layout B — **"Single Unlocked Slot"**
+*Reduce the motif to its atomic unit: one slot, one outcome*
+
+**LEFT SIDE**
+```
+[ · ]  [ · ]  [ + ]
+               ↑ teal/green plus-in-a-box
+               "one slot unlocked"
+```
+No bars at all. Three small squares in a row — two are muted/gray (existing visits, implied), one is a green `+` square (new slot). Label: *"one slot, per provider, per day."* This is the most minimal callback — it references slide 3's row without reproducing it.
+
+**RIGHT SIDE**
+Same as Layout A.
+
+**Why it works:**
+- Extremely sparse — nothing competes with the right side
+- The `+` square is a universally readable "new capacity" symbol
+- Feels like a product icon, not a chart
+- The right side economics become the entire story; left is just a trigger
+
+**Main risk:**
+Too abstract. A reader who hasn't deeply absorbed slide 3 won't decode the three squares quickly. The callback may be **too** reduced — it loses the visual connection to the bar motif. Can be partially solved by keeping the rectangular bar shape rather than squares, but the risk remains.
+
+---
+
+### Layout C — **"Before / After Mini Strip"** *(conditional recommendation)*
+*A tight two-row motif: one compressed row, one row with the new visit*
+
+**LEFT SIDE**
+```
+BEFORE   [ ██ ]  [ ██ ]  [ ██ ]  [ ██ ]  [ ██ ]
+AFTER    [ █ ]   [ █ ]   [ █ ]   [ █ ]   [ █ ]  [ NEW VISIT ]
+```
+Two rows, very small, no labels except `before` / `after` in light gray caps. Bars are shorter in the after row. New visit block appears at the end.
+
+**RIGHT SIDE**
+Same as Layout A.
+
+**Why it works:**
+- Makes the delta **undeniable** — you can see the gap close
+- Serves readers who are seeing this slide without full recall of slide 3
+- The `New visit` block at the row end is a clean visual payoff
+
+**Main risk:**
+This is the highest risk of the three. It **does** re-explain slide 3 — it just does it in miniature. In a live pitch, slides move fast and this may read as repetition, making the deck feel padded. Also introduces two labels (`before`/`after`) which add text load. **Only use this if slide 3 is not directly preceding this slide in the flow, or if the deck is designed for asynchronous reading** (e.g., sent as a PDF without a presenter).
+
+---
+
+## Summary Recommendation
+
+| Layout | Best for | Left motif | Risk level |
+|---|---|---|---|
+| **A** | Live pitch, slide 3 adjacent | 2 bars + green block | Low |
+| **B** | Design-forward, minimal deck | 3 squares, 1 green `+` | Medium |
+| **C** | Async / PDF read-through | Mini before/after strip | High |
+
+**Start with Layout A.** It is the most direct translation of your constraint — fewer bars, clear callback, green block bridges to the dollar proof — and it is the hardest to misread in a fast-moving pitch.

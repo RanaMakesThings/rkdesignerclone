@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slide 08 ChatGPT Recreation - Attempt E</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="shell">
+        <div class="topbar">
+          <div class="title-block">
+            <div class="eyebrow">Slide 08 / ChatGPT Recreation</div>
+            <h1>Attempt E: action-first clinical primer</h1>
+            <p>
+              This flips the hierarchy. Instead of leading with a report, it leads with what the clinician should focus
+              on next and uses the patient story mainly as context.
+            </p>
+          </div>
+          <nav class="nav-pills" aria-label="Variant navigation">
+            <a href="./attempt-a.html">Attempt A</a>
+            <a href="./attempt-c.html">Attempt C</a>
+            <a href="./attempt-d.html">Attempt D</a>
+            <a class="active" href="./attempt-e.html">Attempt E</a>
+            <a href="./compare.html">Compare</a>
+          </nav>
+        </div>
+
+        <div class="slide-shell">
+          <div class="slide-frame e-layout">
+            <div class="e-sidebar">
+              <div>
+                <div class="kicker"><span class="dot"></span> Patient context</div>
+                <h2 style="margin: 0; font-size: 24px; letter-spacing: -0.03em;">Acute Cough</h2>
+                <p style="margin: 4px 0 0; color: var(--muted); font-size: 14px;">Five-day duration</p>
+              </div>
+
+              <div class="context-block">
+                <h3 class="section-title">The narrative</h3>
+                <p>
+                  Scratchy throat followed by five days of intermittent cough with yellow sputum. Symptoms are worse at
+                  night. The patient recently developed mild exertional dyspnea, wheeze, and a measured fever of 101.8.
+                  Denies hemoptysis or chest pain.
+                </p>
+              </div>
+
+              <div class="context-block">
+                <h3 class="section-title">Known positives</h3>
+                <div class="tags">
+                  <span class="tag pos">Productive cough</span>
+                  <span class="tag pos">Fever 101.8</span>
+                  <span class="tag pos">Exertional dyspnea</span>
+                  <span class="tag pos">Wheeze</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="e-main">
+              <div>
+                <h3 class="section-title" style="color: var(--teal); border-color: rgba(24, 122, 112, 0.18);">AI clinical primer</h3>
+                <div class="big-action">
+                  The primary focus is distinguishing uncomplicated acute bronchitis from emerging pneumonia or an
+                  asthma/COPD-type exacerbation.
+                </div>
+              </div>
+
+              <h3 class="section-title" style="margin-top: 10px;">Recommended interview paths</h3>
+              <div class="action-cards">
+                <div class="action-card">
+                  <h4>1. Assess airway history</h4>
+                  <p>The presence of wheeze makes underlying disease highly relevant.</p>
+                  <ul class="bullet-list">
+                    <li>History of childhood asthma?</li>
+                    <li>Previous inhaler use?</li>
+                    <li>Smoking history or pack-years?</li>
+                  </ul>
+                </div>
+
+                <div class="action-card">
+                  <h4>2. Gauge functional limitation</h4>
+                  <p>“Mild exertional dyspnea” is subjective and needs quantification.</p>
+                  <ul class="bullet-list">
+                    <li>Can the patient climb a flight of stairs today?</li>
+                    <li>Are they short of breath while talking?</li>
+                  </ul>
+                </div>
+
+                <div class="action-card" style="grid-column: 1 / -1; background: var(--amber-soft); border-color: rgba(245, 158, 11, 0.3);">
+                  <h4 style="color: var(--amber);">3. Rule out red flags for pneumonia</h4>
+                  <p style="margin: 0; color: #92400e;">
+                    Fever to 101.8 requires attention. Ask about rigors, chills, pleuritic chest pain on deep inspiration,
+                    and whether symptoms are progressively worsening hour by hour.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

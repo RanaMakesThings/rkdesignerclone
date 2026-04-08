@@ -1,0 +1,16 @@
+Premium investor pitch-deck infographic on a white background with generous
+whitespace. Create one centered horizontal figure in a calm editorial style
+with muted grays, one restrained blue accent, rounded rectangles, and no UI
+chrome. On the left, place a soft rounded panel labeled Patient story with one
+compact paragraph of natural language: This started maybe three days ago. It's
+worse when I'm walking around. I was up a lot last night because of it. I don't
+think I've had a fever. I've had something kind of like this before. In the
+center, place a rounded blue-accent chamber labeled Turn story into structure
+with three soft horizontal streams containing only short grouped phrases: Worse
+w/ walking and No fever; 3-day course and Worse overnight; Prior episode? and
+Trigger / severity? Beneath the chamber, attach a thin callout reading
+Essential work that can start before the visit. On the right, place a clean
+rounded card labeled Decision-ready structure with three sections: Relevant
+positives / negatives, Timeline, and What to verify, each containing short rows
+that echo the chamber streams. No icons, no people, no thick arrows, no
+funnel, no software UI, no heavy shadow.

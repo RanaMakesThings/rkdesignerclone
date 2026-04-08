@@ -1,0 +1,21 @@
+{
+  "class": "blocked",
+  "numeric": 0.05,
+  "status": "blocked",
+  "outcome": "block",
+  "reason": "Regression review found a concrete blocker.",
+  "blockers": [
+    "Locked subheader overlaps the header and is visibly mispositioned",
+    "Multiple body text areas are clipped/colliding in the milestone cards and bottom ribbon, making required content unreadable",
+    "A broken image/placeholder box is visible at the bottom right of the slide",
+    "Footer shell drift: the official Designer footer/logo treatment is misaligned/replaced and no longer matches the baseline family",
+    "Footer logo is a broken image placeholder — Designer Health lockup is missing entirely",
+    "Subheader text ('Post-money SAFE • ~18–20 months of runway') is overlapped and partially hidden beneath the oversized two-line header",
+    "Left hero block overflow: '3 pilots' stat row and its descriptor text collide with the use-of-funds ribbon layer below, producing illegible stacked text",
+    "Build milestone card bullet list is clipped at the card's bottom edge — at least one bullet is cut off",
+    "Use-of-funds ribbon text strings overlap each other and the milestone card boundary, making the ribbon unreadable"
+  ],
+  "warnings": [
+    "Footer Logo drifted beyond semantic-stable threshold."
+  ]
+}

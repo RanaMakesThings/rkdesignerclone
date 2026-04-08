@@ -1,0 +1,8 @@
+{
+  "model": "gpt-5.4",
+  "images": [
+    "/Users/kabeer/Code/rkdesignerclone/projects/designer-health/slide-figures/slide-06-quality-bar/versions/version-000208--slide-06-cycle-variant-208/preview.png",
+    "/Users/kabeer/Downloads/IMG_B65CB234C248-1.jpeg"
+  ],
+  "maxOutputTokens": 6000
+}

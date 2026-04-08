@@ -1,0 +1,16 @@
+{
+  "id": "version-000314",
+  "slideId": "slide-13",
+  "slideDir": "projects/designer-health/slide-figures/slide-13",
+  "dir": "projects/designer-health/slide-figures/slide-13/versions/version-000314--slide-13-create-draft-bonus",
+  "label": "slide-13-create-draft-bonus",
+  "status": "current",
+  "createdAt": "2026-04-06T02:38:01.228Z",
+  "sourceKind": "create-draft",
+  "baseVersionId": null,
+  "legacySourcePaths": [],
+  "createLane": "html",
+  "templateId": "designer-deck-template-v1",
+  "bootstrapMode": "from-spec",
+  "runType": "slide-create"
+}

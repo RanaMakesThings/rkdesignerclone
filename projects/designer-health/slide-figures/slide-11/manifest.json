@@ -1,0 +1,51 @@
+{
+  "slideId": "slide-11",
+  "slideDir": "projects/designer-health/slide-figures/slide-11",
+  "currentVersionId": "version-000047",
+  "versions": [
+    {
+      "id": "version-000047",
+      "label": "beachhead-profile-hero-v1",
+      "status": "current",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:04:30.032Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-11/versions/version-000047--beachhead-profile-hero-v1",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000048",
+      "label": "proof-column-v1",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:04:30.046Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-11/versions/version-000048--proof-column-v1",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000049",
+      "label": "claude-ideation",
+      "status": "archived",
+      "sourceKind": "legacy-import",
+      "createdAt": "2026-03-31T17:04:30.058Z",
+      "baseVersionId": null,
+      "dir": "projects/designer-health/slide-figures/slide-11/versions/version-000049--claude-ideation",
+      "runId": null,
+      "attempt": null
+    },
+    {
+      "id": "version-000132",
+      "label": "slide-11-template-shell-catchup-v1",
+      "status": "draft",
+      "sourceKind": "fine-tune-draft",
+      "createdAt": "2026-04-01T23:21:28.140Z",
+      "baseVersionId": "version-000047",
+      "dir": "projects/designer-health/slide-figures/slide-11/versions/version-000132--slide-11-template-shell-catchup-v1",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

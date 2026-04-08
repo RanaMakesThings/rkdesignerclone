@@ -1,0 +1,12 @@
+{
+  "id": "version-000084",
+  "slideId": "slide-08",
+  "slideDir": "projects/designer-health/slide-figures/slide-08",
+  "dir": "projects/designer-health/slide-figures/slide-08/versions/version-000084--clinician-brief-attempt-a-v7-bigger-type-and-clean-frame",
+  "label": "clinician-brief-attempt-a-v7-bigger-type-and-clean-frame",
+  "status": "draft",
+  "createdAt": "2026-04-01T15:23:31.288Z",
+  "sourceKind": "fine-tune",
+  "baseVersionId": "version-000082",
+  "legacySourcePaths": []
+}
