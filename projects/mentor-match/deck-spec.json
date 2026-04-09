@@ -1,0 +1,250 @@
+{
+  "deckId": "mentor-match",
+  "title": "Mentor Match",
+  "version": "2026-04-09.1",
+  "status": "active",
+  "numberingPolicy": {
+    "summary": "Use simple linear numbering for a concise seven-minute overview deck.",
+    "activeSequence": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "deprecatedSlides": [],
+    "notes": [
+      "Keep the talk short enough for roughly forty-five to sixty seconds per slide.",
+      "Add new slides only when they replace an existing idea or materially improve the story."
+    ]
+  },
+  "narrativeSpine": [
+    "Mentorship is valuable, but access to the right mentor is still too dependent on chance, visibility, and manual coordination.",
+    "Mentor Match turns mentor discovery and pairing into a lightweight workflow with clearer inputs, better fit, and easier first contact.",
+    "The first milestone is a narrow pilot that proves demand, match quality, and operational repeatability before the concept scales."
+  ],
+  "slides": [
+    {
+      "id": "slide-01",
+      "displayNumber": "1",
+      "importedSlides": [
+        1
+      ],
+      "status": "active",
+      "title": "Title and Promise",
+      "purpose": "Open with a clear product promise and set expectations for a short overview talk.",
+      "header": "Mentor Match",
+      "subheader": "A simpler way to connect people to the right mentor with more clarity, confidence, and follow-through",
+      "takeaway": "This talk covers the problem, the product, and the goals of an early Mentor Match pilot.",
+      "figureRole": "Create a confident title slide that pairs a human-centered matching visual with a tight three-part talk promise.",
+      "family": "opening-title",
+      "buildStatus": "packet drafted; canonical visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/mentor-match/slide-packets/slide-01-title-promise.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/mentor-match/slide-assets/slide-01/manifest.json"
+      },
+      "selectedDirection": "Packet is the current source of truth; no official visual has been generated yet.",
+      "notes": [
+        "Use a warm, optimistic opening rather than a corporate title block.",
+        "Make the promise feel product-shaped and specific."
+      ],
+      "selectedVariantId": null,
+      "variants": [],
+      "specText": "# Title and Promise\n\n- Header: Mentor Match\n- Subheader: A simpler way to connect people to the right mentor with more clarity, confidence, and follow-through\n- Takeaway: This talk covers the problem, the product, and the goals of an early Mentor Match pilot."
+    },
+    {
+      "id": "slide-02",
+      "displayNumber": "2",
+      "importedSlides": [
+        2
+      ],
+      "status": "active",
+      "title": "The Access Problem",
+      "purpose": "Show why a mentorship product is needed before explaining how Mentor Match works.",
+      "header": "Mentorship is too important to leave to chance.",
+      "subheader": "People often find mentors through luck, visibility, or whoever has time, not through a process designed for fit.",
+      "takeaway": "The current matching experience is uneven, manual, and easy to miss.",
+      "figureRole": "Visualize fragmented mentor search paths, dead ends, and overload on the most visible mentors.",
+      "family": "problem-frame",
+      "buildStatus": "packet drafted; canonical visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/mentor-match/slide-packets/slide-02-access-problem.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/mentor-match/slide-assets/slide-02/manifest.json"
+      },
+      "selectedDirection": "Packet is the current source of truth; no official visual has been generated yet.",
+      "notes": [
+        "Keep the problem human and operational, not abstract.",
+        "Avoid promising outcomes that are not sourced yet."
+      ],
+      "selectedVariantId": null,
+      "variants": [],
+      "specText": "# The Access Problem\n\n- Header: Mentorship is too important to leave to chance.\n- Subheader: People often find mentors through luck, visibility, or whoever has time, not through a process designed for fit.\n- Takeaway: The current matching experience is uneven, manual, and easy to miss."
+    },
+    {
+      "id": "slide-03",
+      "displayNumber": "3",
+      "importedSlides": [
+        3
+      ],
+      "status": "active",
+      "title": "What Mentor Match Is",
+      "purpose": "Define the product plainly before moving into workflow or goals.",
+      "header": "Mentor Match turns matching into a lightweight workflow.",
+      "subheader": "Capture what a mentee needs, surface aligned mentors, and support the first introduction with shared context.",
+      "takeaway": "The product reduces friction for both sides and makes matching more intentional.",
+      "figureRole": "Use a simple three-step product flow rather than a dense product architecture diagram.",
+      "family": "solution-flow",
+      "buildStatus": "packet drafted; canonical visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/mentor-match/slide-packets/slide-03-solution-overview.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/mentor-match/slide-assets/slide-03/manifest.json"
+      },
+      "selectedDirection": "Packet is the current source of truth; no official visual has been generated yet.",
+      "notes": [
+        "Make the system feel simple enough to trust.",
+        "Keep the workflow legible in one glance."
+      ],
+      "selectedVariantId": null,
+      "variants": [],
+      "specText": "# What Mentor Match Is\n\n- Header: Mentor Match turns matching into a lightweight workflow.\n- Subheader: Capture what a mentee needs, surface aligned mentors, and support the first introduction with shared context.\n- Takeaway: The product reduces friction for both sides and makes matching more intentional."
+    },
+    {
+      "id": "slide-04",
+      "displayNumber": "4",
+      "importedSlides": [
+        4
+      ],
+      "status": "active",
+      "title": "How Matching Works",
+      "purpose": "Explain the end-to-end flow from intake to first meeting in a repeatable way.",
+      "header": "From intake to introduction, the process stays simple.",
+      "subheader": "A good match combines goals, context, availability, and a guided first step so conversations start with purpose.",
+      "takeaway": "Mentor Match is not just a directory; it is a repeatable matching and activation flow.",
+      "figureRole": "Show a four-step journey from intake to follow-up with clear inputs, handoffs, and outcomes.",
+      "family": "workflow-diagram",
+      "buildStatus": "packet drafted; canonical visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/mentor-match/slide-packets/slide-04-workflow.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/mentor-match/slide-assets/slide-04/manifest.json"
+      },
+      "selectedDirection": "Packet is the current source of truth; no official visual has been generated yet.",
+      "notes": [
+        "Emphasize repeatability over technical complexity.",
+        "Make the first conversation feel supported, not forced."
+      ],
+      "selectedVariantId": null,
+      "variants": [],
+      "specText": "# How Matching Works\n\n- Header: From intake to introduction, the process stays simple.\n- Subheader: A good match combines goals, context, availability, and a guided first step so conversations start with purpose.\n- Takeaway: Mentor Match is not just a directory; it is a repeatable matching and activation flow."
+    },
+    {
+      "id": "slide-05",
+      "displayNumber": "5",
+      "importedSlides": [
+        5
+      ],
+      "status": "active",
+      "title": "Why It Matters",
+      "purpose": "Translate the product into stakeholder value rather than feature language alone.",
+      "header": "Better matches can improve trust, access, and follow-through.",
+      "subheader": "When people find relevant guidance faster, mentorship feels easier to start and more worth sustaining.",
+      "takeaway": "The value is not only more matches; it is better-quality connections.",
+      "figureRole": "Use a three-column stakeholder view for mentees, mentors, and operators with concrete outcome language.",
+      "family": "stakeholder-outcomes",
+      "buildStatus": "packet drafted; canonical visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/mentor-match/slide-packets/slide-05-why-it-matters.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/mentor-match/slide-assets/slide-05/manifest.json"
+      },
+      "selectedDirection": "Packet is the current source of truth; no official visual has been generated yet.",
+      "notes": [
+        "Keep value claims directional until real data exists.",
+        "Make all three stakeholder groups feel visible."
+      ],
+      "selectedVariantId": null,
+      "variants": [],
+      "specText": "# Why It Matters\n\n- Header: Better matches can improve trust, access, and follow-through.\n- Subheader: When people find relevant guidance faster, mentorship feels easier to start and more worth sustaining.\n- Takeaway: The value is not only more matches; it is better-quality connections."
+    },
+    {
+      "id": "slide-06",
+      "displayNumber": "6",
+      "importedSlides": [
+        6
+      ],
+      "status": "active",
+      "title": "Pilot Goals and Success Measures",
+      "purpose": "Show that the near-term plan is focused, measurable, and realistic.",
+      "header": "Start narrow, learn fast, and measure what good looks like.",
+      "subheader": "The first phase should prove usefulness with a focused pilot rather than trying to solve every mentoring scenario at once.",
+      "takeaway": "Early success means clear demand, credible match quality, and repeatable operations.",
+      "figureRole": "Use a compact scorecard or roadmap that shows pilot goals, sample signals, and near-term next steps.",
+      "family": "roadmap-metrics",
+      "buildStatus": "packet drafted; canonical visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/mentor-match/slide-packets/slide-06-pilot-goals.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/mentor-match/slide-assets/slide-06/manifest.json"
+      },
+      "selectedDirection": "Packet is the current source of truth; no official visual has been generated yet.",
+      "notes": [
+        "Keep the pilot scope credible and operational.",
+        "Replace sample success signals with real metrics once the program defines them."
+      ],
+      "selectedVariantId": null,
+      "variants": [],
+      "specText": "# Pilot Goals and Success Measures\n\n- Header: Start narrow, learn fast, and measure what good looks like.\n- Subheader: The first phase should prove usefulness with a focused pilot rather than trying to solve every mentoring scenario at once.\n- Takeaway: Early success means clear demand, credible match quality, and repeatable operations."
+    },
+    {
+      "id": "slide-07",
+      "displayNumber": "7",
+      "importedSlides": [
+        7
+      ],
+      "status": "active",
+      "title": "Closing Vision and Next Steps",
+      "purpose": "Close on the long-term value and the concrete next step for the project.",
+      "header": "Make mentorship more accessible, intentional, and scalable.",
+      "subheader": "Mentor Match aims to help more people get the guidance they need without adding heavy coordination overhead.",
+      "takeaway": "The next step is to replace assumptions with real program inputs and design the first pilot-ready deck and demo.",
+      "figureRole": "Close with a strong vision frame and a simple three-part next-step panel rather than introducing a new product mechanic.",
+      "family": "closing-vision",
+      "buildStatus": "packet drafted; canonical visual pending",
+      "proof": [],
+      "paths": {
+        "packet": "projects/mentor-match/slide-packets/slide-07-close-next-steps.md",
+        "specs": [],
+        "stampedDir": null,
+        "assetsManifest": "projects/mentor-match/slide-assets/slide-07/manifest.json"
+      },
+      "selectedDirection": "Packet is the current source of truth; no official visual has been generated yet.",
+      "notes": [
+        "End on momentum and clarity.",
+        "Point directly at the decisions needed to move into a real pilot."
+      ],
+      "selectedVariantId": null,
+      "variants": [],
+      "specText": "# Closing Vision and Next Steps\n\n- Header: Make mentorship more accessible, intentional, and scalable.\n- Subheader: Mentor Match aims to help more people get the guidance they need without adding heavy coordination overhead.\n- Takeaway: The next step is to replace assumptions with real program inputs and design the first pilot-ready deck and demo."
+    }
+  ],
+  "paths": {
+    "deckAssetsManifest": "projects/mentor-match/assets/manifest.json"
+  }
+}
