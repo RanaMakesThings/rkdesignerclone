@@ -1,0 +1,81 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-33-takeaways-and-q-a",
+    "family": "closing-summary",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-33-takeaways-qa.md"
+  },
+  "chrome": {
+    "title": "Build small, ground it well, test it hard, and govern it like it matters",
+    "subtitle": "That is how a custom GPT becomes a useful policy-support tool instead of an impressive but fragile demo",
+    "chips": [
+      "Takeaways and Q&A",
+      "Slide 33"
+    ],
+    "footnote": "The audience should leave with a practical first move and a realistic quality bar."
+  },
+  "constraints": {
+    "figureJob": "Use a crisp closing summary with optional contact or QR space.",
+    "focalPoint": "Build small and specific.",
+    "layout": "closing-summary",
+    "big": [
+      "Build small, ground it well, test it hard, and govern it like it matters",
+      "Build small and specific."
+    ],
+    "quiet": [
+      "That is how a custom GPT becomes a useful policy-support tool instead of an impressive but fragile demo",
+      "The audience should leave with a practical first move and a realistic quality bar."
+    ],
+    "accentTargets": [
+      "The audience should leave with a practical first move and a realistic quality bar."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Build small, ground it well, test it hard, and govern it like it matters",
+      "That is how a custom GPT becomes a useful policy-support tool instead of an impressive but fragile demo",
+      "The audience should leave with a practical first move and a realistic quality bar."
+    ],
+    "preferred": [
+      "Build small and specific.",
+      "Ground it in current files.",
+      "Test edge cases before sharing.",
+      "Govern it like a real tool."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Close the workshop cleanly with practical next steps and room for discussion.",
+    "figureRole": "Use a crisp closing summary with optional contact or QR space.",
+    "notes": [
+      "Build small and specific.",
+      "Ground it in current files.",
+      "Test edge cases before sharing.",
+      "Govern it like a real tool."
+    ],
+    "selectedDirection": "Takeaways and Q&A V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Build small, ground it well, test it hard, and govern it like it matters",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Use a crisp closing summary with optional contact or QR space.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-14-source-prep",
+    "family": "workflow-checklist",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-14-source-prep.md"
+  },
+  "chrome": {
+    "title": "The files matter as much as the model",
+    "subtitle": "Start with current, resident-facing, text-forward operational documents before you expand into everything else",
+    "chips": [
+      "Source Prep",
+      "Slide 14"
+    ],
+    "footnote": "The hidden implementation work is knowledge hygiene."
+  },
+  "constraints": {
+    "figureJob": "Turn source prep into a clean checklist the audience can copy later.",
+    "focalPoint": "Start with resident-facing operational policies.",
+    "layout": "workflow-checklist",
+    "big": [
+      "The files matter as much as the model",
+      "Start with resident-facing operational policies."
+    ],
+    "quiet": [
+      "Start with current, resident-facing, text-forward operational documents before you expand into everything else",
+      "The hidden implementation work is knowledge hygiene."
+    ],
+    "accentTargets": [
+      "The hidden implementation work is knowledge hygiene."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "The files matter as much as the model",
+      "Start with current, resident-facing, text-forward operational documents before you expand into everything else",
+      "The hidden implementation work is knowledge hygiene."
+    ],
+    "preferred": [
+      "Start with resident-facing operational policies.",
+      "Prefer text-native PDFs over scans whenever possible.",
+      "Keep the scope narrow for the first build.",
+      "Choose files that people actually consult."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Show the preparation work that determines whether the assistant is any good.",
+    "figureRole": "Turn source prep into a clean checklist the audience can copy later.",
+    "notes": [
+      "Start with resident-facing operational policies.",
+      "Prefer text-native PDFs over scans whenever possible.",
+      "Keep the scope narrow for the first build.",
+      "Choose files that people actually consult."
+    ],
+    "selectedDirection": "Source Prep V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "The files matter as much as the model",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Turn source prep into a clean checklist the audience can copy later.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

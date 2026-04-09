@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" fill="none">
+  <rect width="1600" height="800" rx="36" fill="#F7FAFD"/>
+  <circle cx="800" cy="400" r="198" fill="white" stroke="#DCE6EE" stroke-width="6"/>
+  <circle cx="800" cy="400" r="110" fill="#0E2841"/>
+  <text x="800" y="376" text-anchor="middle" fill="white" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="38" font-weight="800">Useful GPT</text>
+  <text x="800" y="424" text-anchor="middle" fill="#CDEAF5" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Program asset</text>
+
+  <path d="M800 92C942 92 1068 170 1136 288" stroke="#156082" stroke-width="12" stroke-linecap="round"/>
+  <path d="M1124 254L1150 308L1090 302" stroke="#156082" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1248 400C1248 544 1164 668 1036 732" stroke="#E97132" stroke-width="12" stroke-linecap="round"/>
+  <path d="M1072 706L1018 740L1018 676" stroke="#E97132" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M796 736C654 736 530 658 464 542" stroke="#156082" stroke-width="12" stroke-linecap="round"/>
+  <path d="M510 570L450 532L510 516" stroke="#156082" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M356 400C356 256 440 132 568 68" stroke="#E97132" stroke-width="12" stroke-linecap="round"/>
+  <path d="M534 94L588 60L588 124" stroke="#E97132" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="666" y="34" width="268" height="92" rx="28" fill="white" stroke="#DCE6EE" stroke-width="4"/>
+    <text x="800" y="72" text-anchor="middle" fill="#156082" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">01 OWNER</text>
+    <text x="800" y="106" text-anchor="middle" fill="#0E2841" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="28" font-weight="800">Named person or team</text>
+  </g>
+  <g>
+    <rect x="1088" y="266" width="356" height="92" rx="28" fill="white" stroke="#DCE6EE" stroke-width="4"/>
+    <text x="1266" y="304" text-anchor="middle" fill="#156082" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">02 SOURCES</text>
+    <text x="1266" y="338" text-anchor="middle" fill="#0E2841" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="28" font-weight="800">Review source set</text>
+  </g>
+  <g>
+    <rect x="1038" y="658" width="328" height="92" rx="28" fill="white" stroke="#DCE6EE" stroke-width="4"/>
+    <text x="1202" y="696" text-anchor="middle" fill="#156082" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">03 TESTING</text>
+    <text x="1202" y="730" text-anchor="middle" fill="#0E2841" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="28" font-weight="800">Re-run critical questions</text>
+  </g>
+  <g>
+    <rect x="220" y="658" width="330" height="92" rx="28" fill="white" stroke="#DCE6EE" stroke-width="4"/>
+    <text x="385" y="696" text-anchor="middle" fill="#156082" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">04 SHARING</text>
+    <text x="385" y="730" text-anchor="middle" fill="#0E2841" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="28" font-weight="800">Check access</text>
+  </g>
+</svg>

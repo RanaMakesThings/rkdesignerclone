@@ -1,41 +1,55 @@
 # Restructure Plan
 
-## Working recommendation
+## Current recommendation
 
-Rebuild the current 51-slide deck into an 11-slide workshop sequence that does
-three things well:
+The earlier compressed 11-slide rebuild is now superseded.
 
-1. defines the object
-2. demonstrates the workflow
-3. leaves the audience with safe governance rules
+Rebuild the current 51-slide source deck into an expanded 32-slide workshop
+sequence that keeps Connor's strongest material while reorganizing it into a
+clearer teaching flow.
 
-## Timing
+## Why this direction changed
 
-- minutes `0` to `20`:
-  what it is, why it works, what good looks like
-- minutes `20` to `40`:
-  live build, testing, and governance
+- the talk needs more room to break down the concepts slide by slide
+- Connor's original work contains several strong pieces worth preserving
+- the Studio workspace is more useful when the deck behaves like a real master
+  deck rather than a minimal summary
 
-## Rebuilt slide spine
+## Expanded slide spine
 
-1. Workshop title and promise
-2. Why this matters
-3. What this tool is
-4. Why it works
-5. What good looks like
-6. Source prep
-7. Live walkthrough setup
-8. Live build
-9. Live testing
-10. Governance and maintenance
-11. Takeaways and Q&A
-
-## Why this structure is better
-
-- the audience understands the product before the mechanism
-- the workshop demonstrates value earlier
-- the live build is framed as the centerpiece, not the appendix
-- governance remains present, but no longer bloats the close
+1. Workshop Title and Promise
+2. Who We Are
+3. Why This Matters
+4. What This Tool Is
+5. What Good Looks Like
+6. Good Answer Versus Bad Answer
+7. Why It Works
+8. Limits and Failure Modes
+9. Our Solution at a Glance
+10. Where This Fits in Program Operations
+11. Residency Policy Work Is Repetitive
+12. Administrative Burden Shows Up in Burnout and Friction
+13. Retrieval in Plain Language
+14. Benefits of Grounding
+15. Source Prep
+16. What to Upload
+17. File Hygiene and Versioning
+18. Garbage In, Garbage Out
+19. Privacy and Security Boundaries
+20. The Five-Step Build Workflow
+21. Live Walkthrough Setup
+22. Start a Custom GPT
+23. Create Versus Configure
+24. Instructions: Role and Scope
+25. Knowledge and Capabilities
+26. Guardrails: Citations, Refusals, Tone
+27. Test in Preview
+28. Push on Unknowns and Conflicts
+29. Deploy and Share
+30. Governance and Maintenance
+31. Best Practices
+32. Future Opportunities
+33. Takeaways and Q&A
 
 ## Product-state updates to reflect
 
@@ -49,7 +63,7 @@ Use the current OpenAI product surface, not the older deck assumptions:
 
 ## Visual priorities
 
-- annotated interface slides
-- a strong `good answer vs bad answer` comparison
-- tighter governance cards
-- less text density on every slide
+- a dense master-deck Studio view with visible mockups for every slide
+- screenshot-backed interface slides for the build sequence
+- stronger comparison slides for answer quality and failure modes
+- one consolidated best-practice board rather than repeated near-duplicate slides

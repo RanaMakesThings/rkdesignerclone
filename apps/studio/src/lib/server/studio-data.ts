@@ -21,13 +21,29 @@ const repoRoot = resolveDesignerRepoRoot({
   env: process.env,
 });
 
+const LEGACY_STUDIO_PROJECT_IDS = new Set(["designer-health"]);
+
 export const getRepoRoot = () => repoRoot;
+
+export const isLegacyStudioProject = (projectId: string) =>
+  LEGACY_STUDIO_PROJECT_IDS.has(projectId);
 
 export const getProjectManifests = async (forceRefresh = false) =>
   (await listProjectManifests({
     repoRoot,
     forceRefresh,
   })) as ProjectManifest[];
+
+export const getVisibleProjectManifests = async (forceRefresh = false) =>
+  (await getProjectManifests(forceRefresh)).filter(
+    (entry) => !isLegacyStudioProject(entry.projectId)
+  );
+
+export const toVisibleProjectOptions = (projects: ProjectManifest[]) =>
+  projects.map((entry) => ({
+    projectId: entry.projectId,
+    title: entry.title,
+  }));
 
 export const getProjectManifestById = async (
   projectId: string,

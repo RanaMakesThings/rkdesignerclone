@@ -30,7 +30,7 @@ await yargs(hideBin(process.argv))
   .option("project", {
     type: "string",
     default: "designer-health",
-    describe: "Project id. v1 currently supports only designer-health.",
+    describe: "Project id to export when --packet is not provided.",
   })
   .option("packet", {
     type: "string",

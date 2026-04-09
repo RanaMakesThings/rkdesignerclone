@@ -58,6 +58,7 @@ type StudioPreviewLightboxProps = Omit<
   "src" | "previewSrc" | "modalType"
 > & {
   projectId: string;
+  cacheKey?: string | number | null;
   preview?: CandidateRef;
   html?: CandidateRef;
   svg?: CandidateRef;
@@ -67,6 +68,7 @@ type StudioPreviewLightboxProps = Omit<
 
 export function StudioPreviewLightbox({
   projectId,
+  cacheKey = null,
   preview = null,
   html = null,
   svg = null,
@@ -90,16 +92,16 @@ export function StudioPreviewLightbox({
 
   const modalTarget = htmlRef?.path
     ? {
-        src: studioHtmlHref(projectId, htmlRef.path),
+        src: studioHtmlHref(projectId, htmlRef.path, cacheKey),
         modalType: "iframe" as const,
       }
     : svgRef?.path
       ? {
-          src: studioFileHref(projectId, svgRef.path),
+        src: studioFileHref(projectId, svgRef.path, cacheKey),
           modalType: "image" as const,
         }
       : {
-          src: studioFileHref(projectId, imageRef.path),
+          src: studioFileHref(projectId, imageRef.path, cacheKey),
           modalType: "image" as const,
         };
 
@@ -107,7 +109,7 @@ export function StudioPreviewLightbox({
     <LightboxImage
       src={modalTarget.src}
       modalType={modalTarget.modalType}
-      previewSrc={studioThumbHref(projectId, imageRef.path, previewWidth)}
+      previewSrc={studioThumbHref(projectId, imageRef.path, previewWidth, cacheKey)}
       {...lightboxProps}
     />
   );

@@ -1,0 +1,81 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-19-tooling-options",
+    "family": "tool-landscape",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-19-tooling-options.md"
+  },
+  "chrome": {
+    "title": "There are several no-code or low-code ways to build grounded assistants",
+    "subtitle": "The workshop uses Custom GPTs, but the design logic also maps to NotebookLM, Claude Projects, and enterprise copilots",
+    "chips": [
+      "Tooling Options",
+      "Slide 19"
+    ],
+    "footnote": "The product surface can change. The design principles are more durable."
+  },
+  "constraints": {
+    "figureJob": "Show the tool landscape without turning it into a shopping slide.",
+    "focalPoint": "OpenAI Custom GPTs.",
+    "layout": "tool-landscape",
+    "big": [
+      "There are several no-code or low-code ways to build grounded assistants",
+      "OpenAI Custom GPTs."
+    ],
+    "quiet": [
+      "The workshop uses Custom GPTs, but the design logic also maps to NotebookLM, Claude Projects, and enterprise copilots",
+      "The product surface can change. The design principles are more durable."
+    ],
+    "accentTargets": [
+      "The product surface can change. The design principles are more durable."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "There are several no-code or low-code ways to build grounded assistants",
+      "The workshop uses Custom GPTs, but the design logic also maps to NotebookLM, Claude Projects, and enterprise copilots",
+      "The product surface can change. The design principles are more durable."
+    ],
+    "preferred": [
+      "OpenAI Custom GPTs.",
+      "Google NotebookLM.",
+      "Claude Projects.",
+      "Copilot or other enterprise copilots."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Integrate Connor's tool-landscape slide while modernizing the framing.",
+    "figureRole": "Show the tool landscape without turning it into a shopping slide.",
+    "notes": [
+      "OpenAI Custom GPTs.",
+      "Google NotebookLM.",
+      "Claude Projects.",
+      "Copilot or other enterprise copilots."
+    ],
+    "selectedDirection": "Tooling Options V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "There are several no-code or low-code ways to build grounded assistants",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show the tool landscape without turning it into a shopping slide.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

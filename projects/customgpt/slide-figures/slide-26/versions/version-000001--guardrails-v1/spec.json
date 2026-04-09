@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-26-guardrails-citations-refusals-tone",
+    "family": "guardrail-grid",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-26-guardrails.md"
+  },
+  "chrome": {
+    "title": "Citations, refusal language, and tone are product features",
+    "subtitle": "The assistant should cite the source, refuse unsupported claims, and stay concise, neutral, and action-oriented",
+    "chips": [
+      "Guardrails: Citations, Refusals, Tone",
+      "Slide 26"
+    ],
+    "footnote": "Guardrails are what make the assistant safe to trust operationally."
+  },
+  "constraints": {
+    "figureJob": "Show the instruction guardrails as visible build choices.",
+    "focalPoint": "Always cite the source file and page or section.",
+    "layout": "guardrail-grid",
+    "big": [
+      "Citations, refusal language, and tone are product features",
+      "Always cite the source file and page or section."
+    ],
+    "quiet": [
+      "The assistant should cite the source, refuse unsupported claims, and stay concise, neutral, and action-oriented",
+      "Guardrails are what make the assistant safe to trust operationally."
+    ],
+    "accentTargets": [
+      "Guardrails are what make the assistant safe to trust operationally."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Citations, refusal language, and tone are product features",
+      "The assistant should cite the source, refuse unsupported claims, and stay concise, neutral, and action-oriented",
+      "Guardrails are what make the assistant safe to trust operationally."
+    ],
+    "preferred": [
+      "Always cite the source file and page or section.",
+      "Refuse unsupported answers instead of guessing.",
+      "Keep the tone concise, neutral, and helpful."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Preserve Connor's strong instruction guardrails as a dedicated design checkpoint.",
+    "figureRole": "Show the instruction guardrails as visible build choices.",
+    "notes": [
+      "Always cite the source file and page or section.",
+      "Refuse unsupported answers instead of guessing.",
+      "Keep the tone concise, neutral, and helpful."
+    ],
+    "selectedDirection": "Guardrails V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Citations, refusal language, and tone are product features",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show the instruction guardrails as visible build choices.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

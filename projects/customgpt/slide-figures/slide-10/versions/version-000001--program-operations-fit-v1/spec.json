@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-10-where-this-fits-in-program-operations",
+    "family": "stakeholder-map",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-10-program-operations-fit.md"
+  },
+  "chrome": {
+    "title": "This assistant supports the people already answering these questions",
+    "subtitle": "Residents, chiefs, coordinators, and program leaders all gain from faster, more standardized access to the same operational guidance",
+    "chips": [
+      "Where This Fits in Program Operations",
+      "Slide 10"
+    ],
+    "footnote": "The right mental model is team support, not AI replacement."
+  },
+  "constraints": {
+    "figureJob": "Map the assistant to the real roles in the residency workflow.",
+    "focalPoint": "Residents need faster answers to common operational questions.",
+    "layout": "stakeholder-map",
+    "big": [
+      "This assistant supports the people already answering these questions",
+      "Residents need faster answers to common operational questions."
+    ],
+    "quiet": [
+      "Residents, chiefs, coordinators, and program leaders all gain from faster, more standardized access to the same operational guidance",
+      "The right mental model is team support, not AI replacement."
+    ],
+    "accentTargets": [
+      "The right mental model is team support, not AI replacement."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "This assistant supports the people already answering these questions",
+      "Residents, chiefs, coordinators, and program leaders all gain from faster, more standardized access to the same operational guidance",
+      "The right mental model is team support, not AI replacement."
+    ],
+    "preferred": [
+      "Residents need faster answers to common operational questions.",
+      "Chiefs need consistency when they are triaging the same asks.",
+      "Coordinators and leaders need fewer repetitive interruptions."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Show who benefits from the tool and where it belongs in day-to-day work.",
+    "figureRole": "Map the assistant to the real roles in the residency workflow.",
+    "notes": [
+      "Residents need faster answers to common operational questions.",
+      "Chiefs need consistency when they are triaging the same asks.",
+      "Coordinators and leaders need fewer repetitive interruptions."
+    ],
+    "selectedDirection": "Program Operations Fit V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "This assistant supports the people already answering these questions",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Map the assistant to the real roles in the residency workflow.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

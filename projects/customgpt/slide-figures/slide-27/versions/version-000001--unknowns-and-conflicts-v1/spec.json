@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-27-push-on-unknowns-and-conflicts",
+    "family": "edge-case-grid",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-27-unknowns-and-conflicts.md"
+  },
+  "chrome": {
+    "title": "A strong GPT should handle missing answers and conflicting files gracefully",
+    "subtitle": "The goal is not just one good answer. It is reliable behavior when the evidence is thin, absent, or inconsistent.",
+    "chips": [
+      "Push on Unknowns and Conflicts",
+      "Slide 27"
+    ],
+    "footnote": "Good refusals and conflict flags are signs of quality, not weakness."
+  },
+  "constraints": {
+    "figureJob": "Compare the behavior we want under uncertainty with the behavior we do not want.",
+    "focalPoint": "Desired behavior: say what the files support, what they do not support, and where the human should go next.",
+    "layout": "edge-case-grid",
+    "big": [
+      "A strong GPT should handle missing answers and conflicting files gracefully",
+      "Desired behavior: say what the files support, what they do not support, and where the human should go next."
+    ],
+    "quiet": [
+      "The goal is not just one good answer. It is reliable behavior when the evidence is thin, absent, or inconsistent.",
+      "Good refusals and conflict flags are signs of quality, not weakness."
+    ],
+    "accentTargets": [
+      "Good refusals and conflict flags are signs of quality, not weakness."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "A strong GPT should handle missing answers and conflicting files gracefully",
+      "The goal is not just one good answer. It is reliable behavior when the evidence is thin, absent, or inconsistent.",
+      "Good refusals and conflict flags are signs of quality, not weakness."
+    ],
+    "preferred": [
+      "Desired behavior: say what the files support, what they do not support, and where the human should go next.",
+      "Risky behavior: smooth over ambiguity, hide conflict, or turn a gap in the files into a confident answer.",
+      "Reliable behavior under uncertainty is one of the strongest signs of a mature build."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Make edge-case testing explicit so the audience sees what safe behavior looks like.",
+    "figureRole": "Compare the behavior we want under uncertainty with the behavior we do not want.",
+    "notes": [
+      "Desired behavior: say what the files support, what they do not support, and where the human should go next.",
+      "Risky behavior: smooth over ambiguity, hide conflict, or turn a gap in the files into a confident answer.",
+      "Reliable behavior under uncertainty is one of the strongest signs of a mature build."
+    ],
+    "selectedDirection": "Unknowns and Conflicts V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "A strong GPT should handle missing answers and conflicting files gracefully",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Compare the behavior we want under uncertainty with the behavior we do not want.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

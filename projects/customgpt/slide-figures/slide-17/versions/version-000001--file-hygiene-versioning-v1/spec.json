@@ -1,0 +1,81 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-17-file-hygiene-and-versioning",
+    "family": "file-hygiene",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-17-file-hygiene-versioning.md"
+  },
+  "chrome": {
+    "title": "Name files clearly and keep the source set clean",
+    "subtitle": "Deduplicate overlapping documents, use obvious names, and replace outdated files quickly so the GPT does not drift into stale guidance",
+    "chips": [
+      "File Hygiene and Versioning",
+      "Slide 17"
+    ],
+    "footnote": "Versioning is part of the product, not an afterthought."
+  },
+  "constraints": {
+    "figureJob": "Show the difference between messy and maintainable document practices.",
+    "focalPoint": "Deduplicate overlapping files.",
+    "layout": "file-hygiene",
+    "big": [
+      "Name files clearly and keep the source set clean",
+      "Deduplicate overlapping files."
+    ],
+    "quiet": [
+      "Deduplicate overlapping documents, use obvious names, and replace outdated files quickly so the GPT does not drift into stale guidance",
+      "Versioning is part of the product, not an afterthought."
+    ],
+    "accentTargets": [
+      "Versioning is part of the product, not an afterthought."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Name files clearly and keep the source set clean",
+      "Deduplicate overlapping documents, use obvious names, and replace outdated files quickly so the GPT does not drift into stale guidance",
+      "Versioning is part of the product, not an afterthought."
+    ],
+    "preferred": [
+      "Deduplicate overlapping files.",
+      "Use simple names with year or version in them.",
+      "Swap out outdated documents fast.",
+      "Know who is responsible for the next update."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Carry Connor's document-prep advice into a maintainable operating habit.",
+    "figureRole": "Show the difference between messy and maintainable document practices.",
+    "notes": [
+      "Deduplicate overlapping files.",
+      "Use simple names with year or version in them.",
+      "Swap out outdated documents fast.",
+      "Know who is responsible for the next update."
+    ],
+    "selectedDirection": "File Hygiene and Versioning V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Name files clearly and keep the source set clean",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show the difference between messy and maintainable document practices.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

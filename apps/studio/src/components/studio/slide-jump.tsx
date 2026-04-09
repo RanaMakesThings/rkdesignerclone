@@ -2,7 +2,6 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 
-import { studioSlideHref } from "@/lib/presentation/links";
 import type { SlideManifest } from "@/lib/presentation/studio-types";
 
 export function SlideJump({
@@ -26,11 +25,7 @@ export function SlideJump({
             return;
           }
           const query = searchParams.toString();
-          const nextSlide = slides.find((slide) => slide.id === event.target.value);
-          const href =
-            projectId === "designer-health" && nextSlide
-              ? studioSlideHref(nextSlide.displayNumber, nextSlide.id)
-              : `/projects/${projectId}/slides/${event.target.value}`;
+          const href = `/projects/${projectId}/slides/${event.target.value}`;
           router.push(`${href}${query ? `?${query}` : ""}`);
         }}
       >

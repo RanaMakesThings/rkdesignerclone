@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-29-deploy-and-share",
+    "family": "deployment-roadmap",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-29-deploy-and-share.md"
+  },
+  "chrome": {
+    "title": "Share only after the tool has earned it",
+    "subtitle": "Once the build is tested, choose the right sharing mode, explain the expectations, and keep the audience aware of access or capacity limits",
+    "chips": [
+      "Deploy and Share",
+      "Slide 29"
+    ],
+    "footnote": "Deployment is a product decision, not a finish button."
+  },
+  "constraints": {
+    "figureJob": "Show deployment as a final gate rather than a casual click.",
+    "focalPoint": "Finalize after testing and revisions.",
+    "layout": "deployment-roadmap",
+    "big": [
+      "Share only after the tool has earned it",
+      "Finalize after testing and revisions."
+    ],
+    "quiet": [
+      "Once the build is tested, choose the right sharing mode, explain the expectations, and keep the audience aware of access or capacity limits",
+      "Deployment is a product decision, not a finish button."
+    ],
+    "accentTargets": [
+      "Deployment is a product decision, not a finish button."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Share only after the tool has earned it",
+      "Once the build is tested, choose the right sharing mode, explain the expectations, and keep the audience aware of access or capacity limits",
+      "Deployment is a product decision, not a finish button."
+    ],
+    "preferred": [
+      "Finalize after testing and revisions.",
+      "Choose the right sharing audience or link mode.",
+      "Set expectations about access, limits, and support."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Preserve Connor's deployment step while keeping the audience focused on readiness.",
+    "figureRole": "Show deployment as a final gate rather than a casual click.",
+    "notes": [
+      "Finalize after testing and revisions.",
+      "Choose the right sharing audience or link mode.",
+      "Set expectations about access, limits, and support."
+    ],
+    "selectedDirection": "Deploy and Share V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Share only after the tool has earned it",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show deployment as a final gate rather than a casual click.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Manrope, Space_Grotesk } from "next/font/google";
+import {
+  Manrope,
+  Plus_Jakarta_Sans,
+  Sora,
+  Space_Grotesk,
+} from "next/font/google";
 
 import "./globals.css";
 
@@ -8,8 +13,18 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-body-alt",
+  subsets: ["latin"],
+});
+
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
+  subsets: ["latin"],
+});
+
+const sora = Sora({
+  variable: "--font-display-alt",
   subsets: ["latin"],
 });
 
@@ -24,7 +39,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${spaceGrotesk.variable}`}>
+    <html
+      lang="en"
+      className={`${manrope.variable} ${spaceGrotesk.variable} ${plusJakartaSans.variable} ${sora.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "title-placeholder",
+    "label": "Title Placeholder",
+    "x": 240,
+    "y": 177,
+    "width": 1440,
+    "height": 376,
+    "freezeLevel": "semantic-stable",
+    "note": "Centered SAEM title region from the title-slide layout."
+  },
+  {
+    "id": "subtitle-placeholder",
+    "label": "Subtitle Placeholder",
+    "x": 240,
+    "y": 567,
+    "width": 1440,
+    "height": 261,
+    "freezeLevel": "semantic-stable",
+    "note": "Subtitle/body region from the SAEM title-slide layout."
+  },
+  {
+    "id": "footer-date",
+    "label": "Date Placeholder",
+    "x": 132,
+    "y": 1001,
+    "width": 432,
+    "height": 58,
+    "freezeLevel": "pixel-strict",
+    "note": "Conference date placeholder region from the PPTX layout."
+  },
+  {
+    "id": "footer-copy",
+    "label": "Footer Placeholder",
+    "x": 636,
+    "y": 1001,
+    "width": 648,
+    "height": 58,
+    "freezeLevel": "pixel-strict",
+    "note": "Footer copy placeholder region from the PPTX layout."
+  },
+  {
+    "id": "footer-slide-number",
+    "label": "Slide Number Placeholder",
+    "x": 1356,
+    "y": 1001,
+    "width": 432,
+    "height": 58,
+    "freezeLevel": "pixel-strict",
+    "note": "Slide number placeholder region from the PPTX layout."
+  }
+]

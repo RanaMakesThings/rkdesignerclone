@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-06-our-solution-at-a-glance",
+    "family": "solution-card",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-06-solution-at-a-glance.md"
+  },
+  "chrome": {
+    "title": "A custom GPT can become a grounded residency policy assistant",
+    "subtitle": "Ask a plain-language question, retrieve relevant guidance from approved files, and return a cited answer or a refusal",
+    "chips": [
+      "Our Solution at a Glance",
+      "Slide 6"
+    ],
+    "footnote": "The workshop is about building a narrow, grounded assistant, not a general chatbot."
+  },
+  "constraints": {
+    "figureJob": "Show the assistant as a practical input-output workflow.",
+    "focalPoint": "Ask a residency policy question in ordinary language.",
+    "layout": "solution-card",
+    "big": [
+      "A custom GPT can become a grounded residency policy assistant",
+      "Ask a residency policy question in ordinary language."
+    ],
+    "quiet": [
+      "Ask a plain-language question, retrieve relevant guidance from approved files, and return a cited answer or a refusal",
+      "The workshop is about building a narrow, grounded assistant, not a general chatbot."
+    ],
+    "accentTargets": [
+      "The workshop is about building a narrow, grounded assistant, not a general chatbot."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "A custom GPT can become a grounded residency policy assistant",
+      "Ask a plain-language question, retrieve relevant guidance from approved files, and return a cited answer or a refusal",
+      "The workshop is about building a narrow, grounded assistant, not a general chatbot."
+    ],
+    "preferred": [
+      "Ask a residency policy question in ordinary language.",
+      "Search only the approved residency and GME documents.",
+      "Answer with citation, limits, and next step when needed."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Translate Connor's solution slide into a clear product-shaped promise.",
+    "figureRole": "Show the assistant as a practical input-output workflow.",
+    "notes": [
+      "Ask a residency policy question in ordinary language.",
+      "Search only the approved residency and GME documents.",
+      "Answer with citation, limits, and next step when needed."
+    ],
+    "selectedDirection": "Solution at a Glance V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "A custom GPT can become a grounded residency policy assistant",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show the assistant as a practical input-output workflow.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

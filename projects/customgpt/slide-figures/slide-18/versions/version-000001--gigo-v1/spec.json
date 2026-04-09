@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-18-garbage-in-garbage-out",
+    "family": "input-output-compare",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-18-gigo.md"
+  },
+  "chrome": {
+    "title": "The assistant can only be as good as the policy set you feed it",
+    "subtitle": "Messy, conflicting, or outdated inputs create brittle outputs even when the interface looks polished",
+    "chips": [
+      "Garbage In, Garbage Out",
+      "Slide 18"
+    ],
+    "footnote": "Bad inputs are a product risk, not just a content issue."
+  },
+  "constraints": {
+    "figureJob": "Use a stark compare that makes the warning memorable.",
+    "focalPoint": "Clean in: current files, clear names, and scoped coverage create answers that are easier to trust and test.",
+    "layout": "input-output-compare",
+    "big": [
+      "The assistant can only be as good as the policy set you feed it",
+      "Clean in: current files, clear names, and scoped coverage create answers that are easier to trust and test."
+    ],
+    "quiet": [
+      "Messy, conflicting, or outdated inputs create brittle outputs even when the interface looks polished",
+      "Bad inputs are a product risk, not just a content issue."
+    ],
+    "accentTargets": [
+      "Bad inputs are a product risk, not just a content issue."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "The assistant can only be as good as the policy set you feed it",
+      "Messy, conflicting, or outdated inputs create brittle outputs even when the interface looks polished",
+      "Bad inputs are a product risk, not just a content issue."
+    ],
+    "preferred": [
+      "Clean in: current files, clear names, and scoped coverage create answers that are easier to trust and test.",
+      "Messy in: outdated, duplicated, or vague documents push the GPT toward confusion, omission, or false certainty.",
+      "Document quality is product quality."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Keep Connor's GIGO point as a memorable quality-control warning.",
+    "figureRole": "Use a stark compare that makes the warning memorable.",
+    "notes": [
+      "Clean in: current files, clear names, and scoped coverage create answers that are easier to trust and test.",
+      "Messy in: outdated, duplicated, or vague documents push the GPT toward confusion, omission, or false certainty.",
+      "Document quality is product quality."
+    ],
+    "selectedDirection": "GIGO V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "The assistant can only be as good as the policy set you feed it",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Use a stark compare that makes the warning memorable.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

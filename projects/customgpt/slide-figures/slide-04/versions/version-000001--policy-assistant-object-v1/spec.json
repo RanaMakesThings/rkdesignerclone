@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-04-what-this-tool-is",
+    "family": "concept-card",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-04-policy-assistant-object.md"
+  },
+  "chrome": {
+    "title": "A custom GPT can act like a residency policy assistant.",
+    "subtitle": "It answers with uploaded policies and explicit instructions inside ChatGPT, returning a cited answer or a bounded refusal.",
+    "chips": [
+      "What This Tool Is",
+      "Slide 4"
+    ],
+    "footnote": "Understand the object before hearing how it is built."
+  },
+  "constraints": {
+    "figureJob": "Show a realistic question, grounded answer, and the design ingredients that make the object useful.",
+    "focalPoint": "The assistant is narrow on purpose.",
+    "layout": "concept-card",
+    "big": [
+      "A custom GPT can act like a residency policy assistant.",
+      "The assistant is narrow on purpose."
+    ],
+    "quiet": [
+      "It answers with uploaded policies and explicit instructions inside ChatGPT, returning a cited answer or a bounded refusal.",
+      "Understand the object before hearing how it is built."
+    ],
+    "accentTargets": [
+      "Understand the object before hearing how it is built."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "A custom GPT can act like a residency policy assistant.",
+      "It answers with uploaded policies and explicit instructions inside ChatGPT, returning a cited answer or a bounded refusal.",
+      "Understand the object before hearing how it is built."
+    ],
+    "preferred": [
+      "The assistant is narrow on purpose.",
+      "It answers from uploaded files, not general web knowledge.",
+      "It should cite the source or say the answer is unsupported."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Define the product object plainly before any theory or build mechanics.",
+    "figureRole": "Show a realistic question, grounded answer, and the design ingredients that make the object useful.",
+    "notes": [
+      "The assistant is narrow on purpose.",
+      "It answers from uploaded files, not general web knowledge.",
+      "It should cite the source or say the answer is unsupported."
+    ],
+    "selectedDirection": "Policy Assistant Object V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "A custom GPT can act like a residency policy assistant.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show a realistic question, grounded answer, and the design ingredients that make the object useful.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

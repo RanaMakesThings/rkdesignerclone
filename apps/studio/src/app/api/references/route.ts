@@ -9,7 +9,7 @@ export async function POST(request: Request) {
   const projectId =
     typeof body?.projectId === "string" && body.projectId.trim()
       ? body.projectId.trim()
-      : "designer-health";
+      : null;
   const action =
     typeof body?.action === "string" && body.action.trim() ? body.action.trim() : null;
   const payload =
@@ -22,6 +22,16 @@ export async function POST(request: Request) {
       {
         ok: false,
         error: "action is required.",
+      },
+      { status: 400 }
+    );
+  }
+
+  if (!projectId) {
+    return Response.json(
+      {
+        ok: false,
+        error: "projectId is required.",
       },
       { status: 400 }
     );

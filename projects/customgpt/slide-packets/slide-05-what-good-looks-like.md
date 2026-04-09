@@ -2,27 +2,27 @@
 
 ## Objective
 
-- define the answer-quality bar
-- teach the audience how to judge the demo
+- Set the answer-quality bar before the audience sees the build.
+- Use three quality pillars instead of abstract prompting advice.
 
 ## Copy
 
 - Header:
   `A good answer is specific, sourced, and bounded`
 - Subheader:
-  `It cites the policy, stays in scope, and says when it does not know`
+  `The assistant should answer from the documents, cite the source, and say when it does not know`
 - Takeaway:
-  `This is how we will evaluate the assistant live`
+  `This is the quality bar we will hold the live demo to.`
 
 ## Visual direction
 
 - preferred family:
-  good-answer vs bad-answer compare
+  Quality Pillars
 - assets needed:
-  canonical example question, strong answer, weak answer
+  none yet
 - references:
-  workshop packet preview
+  Connor original slides 31, 35
 
 ## Open questions
 
-- should the bad answer be hallucination, unsupported confidence, or vague non-answer?
+- Which one or two points deserve the strongest visual weight later?

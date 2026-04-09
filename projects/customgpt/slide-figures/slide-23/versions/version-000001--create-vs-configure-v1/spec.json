@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-23-create-versus-configure",
+    "family": "ui-split",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-23-create-vs-configure.md"
+  },
+  "chrome": {
+    "title": "The friendly builder helps, but the Configure view is where control really lives",
+    "subtitle": "Create can get you started. Configure is where you lock the role, files, capabilities, and sharing behavior.",
+    "chips": [
+      "Create Versus Configure",
+      "Slide 23"
+    ],
+    "footnote": "Teach the audience where the durable controls actually are."
+  },
+  "constraints": {
+    "figureJob": "Compare the two surfaces while making Configure feel primary.",
+    "focalPoint": "Create is a conversational helper for the first draft.",
+    "layout": "ui-split",
+    "big": [
+      "The friendly builder helps, but the Configure view is where control really lives",
+      "Create is a conversational helper for the first draft."
+    ],
+    "quiet": [
+      "Create can get you started. Configure is where you lock the role, files, capabilities, and sharing behavior.",
+      "Teach the audience where the durable controls actually are."
+    ],
+    "accentTargets": [
+      "Teach the audience where the durable controls actually are."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "The friendly builder helps, but the Configure view is where control really lives",
+      "Create can get you started. Configure is where you lock the role, files, capabilities, and sharing behavior.",
+      "Teach the audience where the durable controls actually are."
+    ],
+    "preferred": [
+      "Create is a conversational helper for the first draft.",
+      "Configure is where you lock the actual product behavior.",
+      "Preview is the running checkpoint beside both views."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Keep Connor's create-versus-configure distinction because it is genuinely helpful to learners.",
+    "figureRole": "Compare the two surfaces while making Configure feel primary.",
+    "notes": [
+      "Create is a conversational helper for the first draft.",
+      "Configure is where you lock the actual product behavior.",
+      "Preview is the running checkpoint beside both views."
+    ],
+    "selectedDirection": "Create Versus Configure V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "The friendly builder helps, but the Configure view is where control really lives",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Compare the two surfaces while making Configure feel primary.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

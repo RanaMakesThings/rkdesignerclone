@@ -1204,9 +1204,6 @@ export const exportSlidesPacket = async ({
   slideFilter = null,
   importPlaywrightImpl = importPlaywright,
 } = {}) => {
-  if (String(projectId) !== DESIGNER_PROJECT_ID) {
-    throw new Error(`slides:export:packet currently supports only ${DESIGNER_PROJECT_ID}.`);
-  }
   if (!outputDir) {
     throw new Error("Provide an output directory via --out.");
   }

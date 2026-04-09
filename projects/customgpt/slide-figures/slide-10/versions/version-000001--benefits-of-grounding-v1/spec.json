@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-10-benefits-of-grounding",
+    "family": "benefit-grid",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-10-benefits-of-grounding.md"
+  },
+  "chrome": {
+    "title": "Grounding makes the assistant more useful and more governable",
+    "subtitle": "The payoff is not magic. It is better source control, better citations, and more consistent answers.",
+    "chips": [
+      "Benefits of Grounding",
+      "Slide 10"
+    ],
+    "footnote": "Grounding is why this feels operationally trustworthy."
+  },
+  "constraints": {
+    "figureJob": "Use a benefit grid with clear operational payoffs.",
+    "focalPoint": "Answers can cite the source document.",
+    "layout": "benefit-grid",
+    "big": [
+      "Grounding makes the assistant more useful and more governable",
+      "Answers can cite the source document."
+    ],
+    "quiet": [
+      "The payoff is not magic. It is better source control, better citations, and more consistent answers.",
+      "Grounding is why this feels operationally trustworthy."
+    ],
+    "accentTargets": [
+      "Grounding is why this feels operationally trustworthy."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Grounding makes the assistant more useful and more governable",
+      "The payoff is not magic. It is better source control, better citations, and more consistent answers.",
+      "Grounding is why this feels operationally trustworthy."
+    ],
+    "preferred": [
+      "Answers can cite the source document.",
+      "Hallucination risk drops when the answer stays in-bounds.",
+      "Common questions get answered more consistently."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Land the upside of grounded answers without overselling the tool.",
+    "figureRole": "Use a benefit grid with clear operational payoffs.",
+    "notes": [
+      "Answers can cite the source document.",
+      "Hallucination risk drops when the answer stays in-bounds.",
+      "Common questions get answered more consistently."
+    ],
+    "selectedDirection": "Benefits of Grounding V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Grounding makes the assistant more useful and more governable",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Use a benefit grid with clear operational payoffs.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

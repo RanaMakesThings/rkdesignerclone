@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" fill="none">
+  <rect width="1600" height="800" rx="36" fill="#F7FAFD"/>
+  <rect x="628" y="150" width="344" height="356" rx="42" fill="#0E2841"/>
+  <path d="M800 198L912 242V356C912 438 852 498 800 526C748 498 688 438 688 356V242L800 198Z" fill="#156082"/>
+  <text x="800" y="330" text-anchor="middle" fill="white" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="40" font-weight="800">Policy</text>
+  <text x="800" y="376" text-anchor="middle" fill="white" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="40" font-weight="800">Support GPT</text>
+  <text x="800" y="430" text-anchor="middle" fill="#CDEAF5" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Grounded, narrow, auditable</text>
+
+  <rect x="112" y="172" width="372" height="108" rx="28" fill="white" stroke="#DCE6EE" stroke-width="4"/>
+  <rect x="112" y="308" width="372" height="108" rx="28" fill="white" stroke="#DCE6EE" stroke-width="4"/>
+  <rect x="112" y="444" width="372" height="108" rx="28" fill="white" stroke="#DCE6EE" stroke-width="4"/>
+  <text x="150" y="216" fill="#156082" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">ALLOWED INPUTS</text>
+  <text x="150" y="256" fill="#0E2841" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="32" font-weight="800">Current program policies</text>
+  <text x="150" y="352" fill="#0E2841" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="32" font-weight="800">Resident-facing guidance</text>
+  <text x="150" y="488" fill="#0E2841" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="32" font-weight="800">Approved institutional docs</text>
+
+  <rect x="1116" y="172" width="372" height="108" rx="28" fill="#FFF7F3" stroke="#F2D8C8" stroke-width="4"/>
+  <rect x="1116" y="308" width="372" height="108" rx="28" fill="#FFF7F3" stroke="#F2D8C8" stroke-width="4"/>
+  <rect x="1116" y="444" width="372" height="108" rx="28" fill="#FFF7F3" stroke="#F2D8C8" stroke-width="4"/>
+  <text x="1154" y="216" fill="#E97132" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">DO NOT FEED IT</text>
+  <text x="1154" y="256" fill="#0E2841" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="32" font-weight="800">PHI or patient-care data</text>
+  <text x="1154" y="352" fill="#0E2841" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="32" font-weight="800">Messy personal inbox context</text>
+  <text x="1154" y="488" fill="#0E2841" font-family="Aptos Display, Aptos, Arial, sans-serif" font-size="32" font-weight="800">Unapproved broad sharing</text>
+
+  <path d="M496 356H612" stroke="#156082" stroke-width="12" stroke-linecap="round"/>
+  <path d="M588 332L628 356L588 380" stroke="#156082" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M988 356H1104" stroke="#E97132" stroke-width="12" stroke-linecap="round"/>
+  <path d="M1080 332L1120 356L1080 380" stroke="#E97132" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="430" y="620" width="742" height="96" rx="26" fill="white" stroke="#DCE6EE" stroke-width="4"/>
+  <text x="801" y="676" text-anchor="middle" fill="#0E2841" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Sharing is an access decision: know the audience, the files, and the privacy boundary.</text>
+</svg>

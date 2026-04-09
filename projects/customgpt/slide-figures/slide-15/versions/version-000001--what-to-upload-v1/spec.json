@@ -1,0 +1,83 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-15-what-to-upload",
+    "family": "document-stack",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-15-what-to-upload.md"
+  },
+  "chrome": {
+    "title": "Start with the documents people already trust",
+    "subtitle": "A resident handbook alone is rarely enough. Combine program, institutional, and requirement-level guidance thoughtfully.",
+    "chips": [
+      "What to Upload",
+      "Slide 15"
+    ],
+    "footnote": "Choose a small, high-value document set for the first version."
+  },
+  "constraints": {
+    "figureJob": "Show the starter document stack clearly.",
+    "focalPoint": "Residency handbook.",
+    "layout": "document-stack",
+    "big": [
+      "Start with the documents people already trust",
+      "Residency handbook."
+    ],
+    "quiet": [
+      "A resident handbook alone is rarely enough. Combine program, institutional, and requirement-level guidance thoughtfully.",
+      "Choose a small, high-value document set for the first version."
+    ],
+    "accentTargets": [
+      "Choose a small, high-value document set for the first version."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Start with the documents people already trust",
+      "A resident handbook alone is rarely enough. Combine program, institutional, and requirement-level guidance thoughtfully.",
+      "Choose a small, high-value document set for the first version."
+    ],
+    "preferred": [
+      "Residency handbook.",
+      "Program-specific policies.",
+      "Institutional GME guidance.",
+      "ACGME requirements.",
+      "Contact and link sheet."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Make the first knowledge-base contents concrete for the audience.",
+    "figureRole": "Show the starter document stack clearly.",
+    "notes": [
+      "Residency handbook.",
+      "Program-specific policies.",
+      "Institutional GME guidance.",
+      "ACGME requirements.",
+      "Contact and link sheet."
+    ],
+    "selectedDirection": "What to Upload V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Start with the documents people already trust",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show the starter document stack clearly.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-21-live-walkthrough-setup",
+    "family": "demo-roadmap",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-21-live-walkthrough-setup.md"
+  },
+  "chrome": {
+    "title": "We are about to build the assistant live",
+    "subtitle": "Watch how scope, files, and testing decisions shape the result more than any single prompt flourish",
+    "chips": [
+      "Live Walkthrough Setup",
+      "Slide 21"
+    ],
+    "footnote": "The live demo is a lesson in judgment, not just button-clicking."
+  },
+  "constraints": {
+    "figureJob": "Frame the walkthrough with a few watch-fors.",
+    "focalPoint": "Watch how the scope gets defined.",
+    "layout": "demo-roadmap",
+    "big": [
+      "We are about to build the assistant live",
+      "Watch how the scope gets defined."
+    ],
+    "quiet": [
+      "Watch how scope, files, and testing decisions shape the result more than any single prompt flourish",
+      "The live demo is a lesson in judgment, not just button-clicking."
+    ],
+    "accentTargets": [
+      "The live demo is a lesson in judgment, not just button-clicking."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "We are about to build the assistant live",
+      "Watch how scope, files, and testing decisions shape the result more than any single prompt flourish",
+      "The live demo is a lesson in judgment, not just button-clicking."
+    ],
+    "preferred": [
+      "Watch how the scope gets defined.",
+      "Watch which files are intentionally included.",
+      "Watch how testing changes the build."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Tell the audience what to watch for during the live build.",
+    "figureRole": "Frame the walkthrough with a few watch-fors.",
+    "notes": [
+      "Watch how the scope gets defined.",
+      "Watch which files are intentionally included.",
+      "Watch how testing changes the build."
+    ],
+    "selectedDirection": "Live Walkthrough Setup V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "We are about to build the assistant live",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Frame the walkthrough with a few watch-fors.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

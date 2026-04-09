@@ -2,9 +2,8 @@
 
 ## Objective
 
-- open the workshop cleanly
-- establish speaker context
-- state the promise of the session
+- Open the workshop with a clear thesis and a visually strong product promise.
+- Use a strong SAEM opener with a clear promise panel and a custom hero graphic rather than speaker portraits.
 
 ## Copy
 
@@ -12,20 +11,18 @@
   `From PDF to Policy Assistant`
 - Subheader:
   `Designing a practical custom GPT for residency administration support`
-- Presenter line:
-  `Connor Grant, MD · Rana Kabeer, MD · Eddie Garcia, MD`
-- Workshop structure:
-  `What it is -> Why it works -> Live build`
+- Takeaway:
+  `This workshop will show what the tool is, why it works, and how to build one.`
 
 ## Visual direction
 
 - preferred family:
-  SAEM conference title shell with strong workshop subtitle
+  Conference Title
 - assets needed:
-  SAEM template
+  conference shell, custom document-to-answer hero graphic, and workshop promise panel
 - references:
-  conference template and workshop packet preview
+  Connor original slides 1, 3
 
 ## Open questions
 
-- keep this mostly typographic or add one restrained workshop-diagram element
+- Does the opening need a different workshop promise, title emphasis, or speaker treatment later?

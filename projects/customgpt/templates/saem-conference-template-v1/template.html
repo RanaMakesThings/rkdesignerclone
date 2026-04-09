@@ -1,0 +1,119 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAEM Conference Template</title>
+    <style>
+      :root {
+        --navy: #0E2841;
+        --teal: #156082;
+        --muted: rgba(14, 40, 65, 0.64);
+        --line: rgba(14, 40, 65, 0.14);
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+        color: var(--navy);
+      }
+
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background:
+          url("../../assets/powerpoint-template/saem-master-background.png")
+            center bottom / cover no-repeat,
+          #ffffff;
+      }
+
+      .title-box,
+      .subtitle-box,
+      .footer-box {
+        position: absolute;
+        border: 2px dashed rgba(14, 40, 65, 0.16);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.72);
+      }
+
+      .title-box {
+        left: 240px;
+        top: 177px;
+        width: 1440px;
+        height: 376px;
+      }
+
+      .subtitle-box {
+        left: 240px;
+        top: 567px;
+        width: 1440px;
+        height: 261px;
+      }
+
+      .footer-date {
+        left: 132px;
+        top: 1001px;
+        width: 432px;
+        height: 58px;
+      }
+
+      .footer-copy {
+        left: 636px;
+        top: 1001px;
+        width: 648px;
+        height: 58px;
+      }
+
+      .footer-slide {
+        left: 1356px;
+        top: 1001px;
+        width: 432px;
+        height: 58px;
+      }
+
+      .label {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 20px;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--muted);
+      }
+
+      .template-note {
+        position: absolute;
+        right: 96px;
+        top: 68px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid var(--line);
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--teal);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="SAEM conference slide template">
+      <div class="template-note">Locked SAEM Template</div>
+      <div class="title-box"><div class="label">Title Placeholder</div></div>
+      <div class="subtitle-box"><div class="label">Subtitle / Body Placeholder</div></div>
+      <div class="footer-box footer-date"><div class="label">Date</div></div>
+      <div class="footer-box footer-copy"><div class="label">Footer</div></div>
+      <div class="footer-box footer-slide"><div class="label">Slide Number</div></div>
+    </section>
+  </body>
+</html>

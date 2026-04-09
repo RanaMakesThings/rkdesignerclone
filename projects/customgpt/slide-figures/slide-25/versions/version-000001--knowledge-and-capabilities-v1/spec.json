@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-25-knowledge-and-capabilities",
+    "family": "capability-stack",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-25-knowledge-and-capabilities.md"
+  },
+  "chrome": {
+    "title": "Knowledge files and capabilities should both be chosen intentionally",
+    "subtitle": "Upload only what helps the job, and enable only the capabilities that support the workflow you actually want",
+    "chips": [
+      "Knowledge and Capabilities",
+      "Slide 25"
+    ],
+    "footnote": "More tools do not automatically make a better assistant."
+  },
+  "constraints": {
+    "figureJob": "Make the file and capability choices feel concrete and governable.",
+    "focalPoint": "Upload the right documents, not every document.",
+    "layout": "capability-stack",
+    "big": [
+      "Knowledge files and capabilities should both be chosen intentionally",
+      "Upload the right documents, not every document."
+    ],
+    "quiet": [
+      "Upload only what helps the job, and enable only the capabilities that support the workflow you actually want",
+      "More tools do not automatically make a better assistant."
+    ],
+    "accentTargets": [
+      "More tools do not automatically make a better assistant."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Knowledge files and capabilities should both be chosen intentionally",
+      "Upload only what helps the job, and enable only the capabilities that support the workflow you actually want",
+      "More tools do not automatically make a better assistant."
+    ],
+    "preferred": [
+      "Upload the right documents, not every document.",
+      "Choose only capabilities that help the task.",
+      "Disable open web if grounding matters most."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Separate files and capabilities into their own build decision slide.",
+    "figureRole": "Make the file and capability choices feel concrete and governable.",
+    "notes": [
+      "Upload the right documents, not every document.",
+      "Choose only capabilities that help the task.",
+      "Disable open web if grounding matters most."
+    ],
+    "selectedDirection": "Knowledge and Capabilities V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Knowledge files and capabilities should both be chosen intentionally",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Make the file and capability choices feel concrete and governable.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

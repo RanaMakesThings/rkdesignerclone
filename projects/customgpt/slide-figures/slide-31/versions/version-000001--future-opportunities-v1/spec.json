@@ -1,0 +1,81 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-31-future-opportunities",
+    "family": "opportunity-grid",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-31-future-opportunities.md"
+  },
+  "chrome": {
+    "title": "The same design pattern can support other educational and operational jobs",
+    "subtitle": "Once the team understands scope, grounding, and governance, the pattern can extend into onboarding, teaching, and study workflows",
+    "chips": [
+      "Future Opportunities",
+      "Slide 31"
+    ],
+    "footnote": "A well-governed policy assistant can be the starting point, not the endpoint."
+  },
+  "constraints": {
+    "figureJob": "Show adjacent opportunities without making the current talk feel unfocused.",
+    "focalPoint": "Rotation onboarding assistants.",
+    "layout": "opportunity-grid",
+    "big": [
+      "The same design pattern can support other educational and operational jobs",
+      "Rotation onboarding assistants."
+    ],
+    "quiet": [
+      "Once the team understands scope, grounding, and governance, the pattern can extend into onboarding, teaching, and study workflows",
+      "A well-governed policy assistant can be the starting point, not the endpoint."
+    ],
+    "accentTargets": [
+      "A well-governed policy assistant can be the starting point, not the endpoint."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "The same design pattern can support other educational and operational jobs",
+      "Once the team understands scope, grounding, and governance, the pattern can extend into onboarding, teaching, and study workflows",
+      "A well-governed policy assistant can be the starting point, not the endpoint."
+    ],
+    "preferred": [
+      "Rotation onboarding assistants.",
+      "Didactic support and summarization tools.",
+      "Study and resource guides.",
+      "Simulation or research helpers."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Keep Connor's future-opportunities slide as the optimistic near-close.",
+    "figureRole": "Show adjacent opportunities without making the current talk feel unfocused.",
+    "notes": [
+      "Rotation onboarding assistants.",
+      "Didactic support and summarization tools.",
+      "Study and resource guides.",
+      "Simulation or research helpers."
+    ],
+    "selectedDirection": "Future Opportunities V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "The same design pattern can support other educational and operational jobs",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show adjacent opportunities without making the current talk feel unfocused.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

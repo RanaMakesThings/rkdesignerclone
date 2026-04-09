@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-06-good-answer-versus-bad-answer",
+    "family": "answer-compare",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-06-good-vs-bad-answer.md"
+  },
+  "chrome": {
+    "title": "Teach the audience to evaluate the answer, not just admire the build",
+    "subtitle": "A grounded answer looks very different from a vague or overconfident answer even when both sound polished",
+    "chips": [
+      "Good Answer Versus Bad Answer",
+      "Slide 6"
+    ],
+    "footnote": "This workshop is really about quality control."
+  },
+  "constraints": {
+    "figureJob": "Show a good answer and a risky answer side by side.",
+    "focalPoint": "Grounded answer: cites the policy, stays in scope, and names the limit when the files do not fully support an answer.",
+    "layout": "answer-compare",
+    "big": [
+      "Teach the audience to evaluate the answer, not just admire the build",
+      "Grounded answer: cites the policy, stays in scope, and names the limit when the files do not fully support an answer."
+    ],
+    "quiet": [
+      "A grounded answer looks very different from a vague or overconfident answer even when both sound polished",
+      "This workshop is really about quality control."
+    ],
+    "accentTargets": [
+      "This workshop is really about quality control."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Teach the audience to evaluate the answer, not just admire the build",
+      "A grounded answer looks very different from a vague or overconfident answer even when both sound polished",
+      "This workshop is really about quality control."
+    ],
+    "preferred": [
+      "Grounded answer: cites the policy, stays in scope, and names the limit when the files do not fully support an answer.",
+      "Risky answer: sounds confident, skips the citation, and blurs the difference between what the files say and what the model is guessing.",
+      "Use the same question across both panels so the contrast is obvious."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Turn the quality bar into a side-by-side comparison the audience can judge quickly.",
+    "figureRole": "Show a good answer and a risky answer side by side.",
+    "notes": [
+      "Grounded answer: cites the policy, stays in scope, and names the limit when the files do not fully support an answer.",
+      "Risky answer: sounds confident, skips the citation, and blurs the difference between what the files say and what the model is guessing.",
+      "Use the same question across both panels so the contrast is obvious."
+    ],
+    "selectedDirection": "Good vs Bad Answer V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Teach the audience to evaluate the answer, not just admire the build",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show a good answer and a risky answer side by side.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

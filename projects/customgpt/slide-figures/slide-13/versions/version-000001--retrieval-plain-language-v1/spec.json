@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-13-retrieval-in-plain-language",
+    "family": "grounded-flow",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-13-retrieval-plain-language.md"
+  },
+  "chrome": {
+    "title": "The GPT does not magically know your residency handbook",
+    "subtitle": "It has to find relevant passages, bring them into context, and then answer from that evidence",
+    "chips": [
+      "Retrieval in Plain Language",
+      "Slide 13"
+    ],
+    "footnote": "Retrieval is the bridge between the question and the source files."
+  },
+  "constraints": {
+    "figureJob": "Break retrieval into a few memorable steps.",
+    "focalPoint": "A user asks a question.",
+    "layout": "grounded-flow",
+    "big": [
+      "The GPT does not magically know your residency handbook",
+      "A user asks a question."
+    ],
+    "quiet": [
+      "It has to find relevant passages, bring them into context, and then answer from that evidence",
+      "Retrieval is the bridge between the question and the source files."
+    ],
+    "accentTargets": [
+      "Retrieval is the bridge between the question and the source files."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "The GPT does not magically know your residency handbook",
+      "It has to find relevant passages, bring them into context, and then answer from that evidence",
+      "Retrieval is the bridge between the question and the source files."
+    ],
+    "preferred": [
+      "A user asks a question.",
+      "Relevant document passages are pulled into context.",
+      "The model answers from those passages."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Give the audience one simple retrieval explanation they can repeat later.",
+    "figureRole": "Break retrieval into a few memorable steps.",
+    "notes": [
+      "A user asks a question.",
+      "Relevant document passages are pulled into context.",
+      "The model answers from those passages."
+    ],
+    "selectedDirection": "Retrieval Plain Language V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "The GPT does not magically know your residency handbook",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Break retrieval into a few memorable steps.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-29-governance-and-maintenance",
+    "family": "governance-grid",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-29-governance-and-maintenance.md"
+  },
+  "chrome": {
+    "title": "The tool needs an owner, an update habit, and a source-of-truth policy set",
+    "subtitle": "Governance means someone knows what files belong in the GPT, when they get updated, and how the tool gets re-tested",
+    "chips": [
+      "Governance and Maintenance",
+      "Slide 29"
+    ],
+    "footnote": "A useful GPT is maintained like a real program asset."
+  },
+  "constraints": {
+    "figureJob": "Use an operational governance grid, not a compliance wall of text.",
+    "focalPoint": "Assign a named owner or small governance team.",
+    "layout": "governance-grid",
+    "big": [
+      "The tool needs an owner, an update habit, and a source-of-truth policy set",
+      "Assign a named owner or small governance team."
+    ],
+    "quiet": [
+      "Governance means someone knows what files belong in the GPT, when they get updated, and how the tool gets re-tested",
+      "A useful GPT is maintained like a real program asset."
+    ],
+    "accentTargets": [
+      "A useful GPT is maintained like a real program asset."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "The tool needs an owner, an update habit, and a source-of-truth policy set",
+      "Governance means someone knows what files belong in the GPT, when they get updated, and how the tool gets re-tested",
+      "A useful GPT is maintained like a real program asset."
+    ],
+    "preferred": [
+      "Assign a named owner or small governance team.",
+      "Review and replace important files on a schedule.",
+      "Keep one approved source set and re-test after updates."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Carry Connor's maintenance slide into the operational close of the talk.",
+    "figureRole": "Use an operational governance grid, not a compliance wall of text.",
+    "notes": [
+      "Assign a named owner or small governance team.",
+      "Review and replace important files on a schedule.",
+      "Keep one approved source set and re-test after updates."
+    ],
+    "selectedDirection": "Governance and Maintenance V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "The tool needs an owner, an update habit, and a source-of-truth policy set",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Use an operational governance grid, not a compliance wall of text.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-01-workshop-title-and-promise",
+    "family": "conference-title",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-01-title-promise.md"
+  },
+  "chrome": {
+    "title": "From PDF to Policy Assistant",
+    "subtitle": "Designing a practical custom GPT for residency administration support",
+    "chips": [
+      "Workshop Title and Promise",
+      "Slide 1"
+    ],
+    "footnote": "This workshop will show what the tool is, why it works, and how to build one."
+  },
+  "constraints": {
+    "figureJob": "Use a strong SAEM opener with a clear promise panel and a custom hero graphic rather than speaker portraits.",
+    "focalPoint": "What this is",
+    "layout": "conference-title",
+    "big": [
+      "From PDF to Policy Assistant",
+      "What this is"
+    ],
+    "quiet": [
+      "Designing a practical custom GPT for residency administration support",
+      "This workshop will show what the tool is, why it works, and how to build one."
+    ],
+    "accentTargets": [
+      "This workshop will show what the tool is, why it works, and how to build one."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "From PDF to Policy Assistant",
+      "Designing a practical custom GPT for residency administration support",
+      "This workshop will show what the tool is, why it works, and how to build one."
+    ],
+    "preferred": [
+      "What this is",
+      "Why it works",
+      "How to build it live"
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Open the workshop with a clear thesis and a visually strong product promise.",
+    "figureRole": "Use a strong SAEM opener with a clear promise panel and a custom hero graphic rather than speaker portraits.",
+    "notes": [
+      "What this is",
+      "Why it works",
+      "How to build it live"
+    ],
+    "selectedDirection": "Title Promise V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "From PDF to Policy Assistant",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Use a strong SAEM opener with a clear promise panel and a custom hero graphic rather than speaker portraits.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

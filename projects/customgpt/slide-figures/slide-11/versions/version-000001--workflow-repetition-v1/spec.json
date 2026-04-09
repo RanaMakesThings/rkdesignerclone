@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-11-residency-policy-work-is-repetitive",
+    "family": "problem-loop",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-11-workflow-repetition.md"
+  },
+  "chrome": {
+    "title": "The same policy questions keep getting answered from scratch",
+    "subtitle": "Leave, scheduling, conference, evaluation, and remediation questions keep cycling through the same small set of people",
+    "chips": [
+      "Residency Policy Work Is Repetitive",
+      "Slide 11"
+    ],
+    "footnote": "The pain point is repetitive operational lookup work, not lack of effort."
+  },
+  "constraints": {
+    "figureJob": "Show a repeated question loop hitting the same program roles.",
+    "focalPoint": "The same leave and duty-hour questions recur every block.",
+    "layout": "problem-loop",
+    "big": [
+      "The same policy questions keep getting answered from scratch",
+      "The same leave and duty-hour questions recur every block."
+    ],
+    "quiet": [
+      "Leave, scheduling, conference, evaluation, and remediation questions keep cycling through the same small set of people",
+      "The pain point is repetitive operational lookup work, not lack of effort."
+    ],
+    "accentTargets": [
+      "The pain point is repetitive operational lookup work, not lack of effort."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "The same policy questions keep getting answered from scratch",
+      "Leave, scheduling, conference, evaluation, and remediation questions keep cycling through the same small set of people",
+      "The pain point is repetitive operational lookup work, not lack of effort."
+    ],
+    "preferred": [
+      "The same leave and duty-hour questions recur every block.",
+      "People reopen PDFs and email chains to reconstruct the answer.",
+      "Chiefs, coordinators, APDs, and faculty absorb the interruption."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Make the repeated lookup work concrete before we talk about product mechanics.",
+    "figureRole": "Show a repeated question loop hitting the same program roles.",
+    "notes": [
+      "The same leave and duty-hour questions recur every block.",
+      "People reopen PDFs and email chains to reconstruct the answer.",
+      "Chiefs, coordinators, APDs, and faculty absorb the interruption."
+    ],
+    "selectedDirection": "Workflow Repetition V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "The same policy questions keep getting answered from scratch",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show a repeated question loop hitting the same program roles.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

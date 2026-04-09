@@ -1,0 +1,83 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-20-the-five-step-build-workflow",
+    "family": "step-roadmap",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-20-five-step-build-workflow.md"
+  },
+  "chrome": {
+    "title": "The workshop build follows five practical steps",
+    "subtitle": "Prepare the files, start the GPT, configure it carefully, test in preview, then deploy with an owner and clear rules",
+    "chips": [
+      "The Five-Step Build Workflow",
+      "Slide 20"
+    ],
+    "footnote": "The build flow is straightforward once the sequence is visible."
+  },
+  "constraints": {
+    "figureJob": "Use the five-step map as the workshop backbone.",
+    "focalPoint": "Prepare the policy files.",
+    "layout": "step-roadmap",
+    "big": [
+      "The workshop build follows five practical steps",
+      "Prepare the policy files."
+    ],
+    "quiet": [
+      "Prepare the files, start the GPT, configure it carefully, test in preview, then deploy with an owner and clear rules",
+      "The build flow is straightforward once the sequence is visible."
+    ],
+    "accentTargets": [
+      "The build flow is straightforward once the sequence is visible."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "The workshop build follows five practical steps",
+      "Prepare the files, start the GPT, configure it carefully, test in preview, then deploy with an owner and clear rules",
+      "The build flow is straightforward once the sequence is visible."
+    ],
+    "preferred": [
+      "Prepare the policy files.",
+      "Start a new GPT.",
+      "Configure instructions and knowledge.",
+      "Test in preview.",
+      "Deploy and govern."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Preserve Connor's five-step build map as the main workshop sequence.",
+    "figureRole": "Use the five-step map as the workshop backbone.",
+    "notes": [
+      "Prepare the policy files.",
+      "Start a new GPT.",
+      "Configure instructions and knowledge.",
+      "Test in preview.",
+      "Deploy and govern."
+    ],
+    "selectedDirection": "Five-Step Build Workflow V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "The workshop build follows five practical steps",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Use the five-step map as the workshop backbone.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

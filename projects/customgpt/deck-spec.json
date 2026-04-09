@@ -1,10 +1,34 @@
 {
   "deckId": "customgpt",
   "title": "CustomGPT Creation",
-  "version": "2026-04-08.1",
+  "version": "2026-04-08.2",
   "status": "active",
+  "template": {
+    "id": "saem-conference-template-v1",
+    "status": "locked",
+    "themeId": "saem-annual-meeting-2026",
+    "sourceBoard": null,
+    "summary": "Use the checked-in SAEM conference PowerPoint template as the canonical deck shell, including the Atlanta skyline footer art, Aptos typography, and conference footer geometry.",
+    "paths": {
+      "contractPath": "projects/customgpt/assets/powerpoint-template/template-integration.md",
+      "templateDir": "projects/customgpt/templates/saem-conference-template-v1",
+      "previewPath": "projects/customgpt/templates/saem-conference-template-v1/template.png",
+      "htmlPath": "projects/customgpt/templates/saem-conference-template-v1/template.html"
+    },
+    "rules": [
+      "Use the SAEM conference master art and skyline footer as part of the locked shell.",
+      "Respect the 16:9 conference slide size and footer placeholder behavior from the PowerPoint template.",
+      "Use Aptos Display for strong display moments and Aptos for supporting text.",
+      "Keep the canvas predominantly white and avoid introducing unrelated frame chrome around the slide.",
+      "Treat the checked-in PowerPoint template as the final conference packaging target, not just a loose mood board."
+    ],
+    "notes": [
+      "The template source file lives in assets/powerpoint-template/saem-annual-meeting-powerpoint-template.pptx.",
+      "The Studio preview shell uses the extracted master background art so the live deck reads like the conference template."
+    ]
+  },
   "numberingPolicy": {
-    "summary": "Use simple linear numbering for the rebuilt workshop deck and keep the back half reserved for the live walkthrough block.",
+    "summary": "Use simple linear numbering for the expanded workshop deck and keep the story moving from problem to build to governance.",
     "activeSequence": [
       "1",
       "2",
@@ -16,43 +40,73 @@
       "8",
       "9",
       "10",
-      "11"
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33"
     ],
     "deprecatedSlides": [],
     "notes": [
-      "Keep numbering stable once the workshop narrative is locked.",
-      "Reserve the back half for the live build and testing walkthrough."
+      "The compressed 11-slide experiment has been superseded by this expanded workshop master deck.",
+      "Keep the first third concept-light, the middle third build-heavy, and the close operational."
     ]
   },
   "narrativeSpine": [
-    "Administrative policy lookup in residency is slow, repetitive, and frustrating.",
-    "A custom GPT can become a grounded policy assistant if instructions and source files are designed carefully.",
-    "The audience should leave knowing what to build, how to test it, and how to govern it safely."
+    "Buried policy answers create real administrative drag in residency programs.",
+    "A custom GPT can become a grounded policy assistant when scope, files, and guardrails are designed well.",
+    "The audience should leave knowing how to build, test, deploy, and maintain one responsibly.",
+    "Connor's original workshop deck remains the source backbone, but the material is now reorganized into a more teachable sequence."
   ],
   "slides": [
     {
       "id": "slide-01",
       "displayNumber": "1",
-      "importedSlides": [1],
+      "importedSlides": [
+        1,
+        3
+      ],
       "status": "active",
       "title": "Workshop Title and Promise",
-      "purpose": "Open the talk, establish presenters, and frame the workshop promise.",
+      "purpose": "Open the workshop with a clear thesis and a visually strong product promise.",
       "header": "From PDF to Policy Assistant",
       "subheader": "Designing a practical custom GPT for residency administration support",
       "takeaway": "This workshop will show what the tool is, why it works, and how to build one.",
-      "figureRole": "Orient the audience with title, presenters, and workshop structure.",
+      "figureRole": "Use a strong SAEM opener with a clear promise panel and a custom hero graphic rather than speaker portraits.",
       "family": "conference-title",
-      "buildStatus": "packet and mockup drafted",
+      "buildStatus": "packet and seeded mockup drafted",
       "proof": [],
       "paths": {
         "packet": "projects/customgpt/slide-packets/slide-01-title-promise.md",
-        "specs": [],
-        "stampedDir": null,
+        "specs": [
+          "projects/customgpt/slide-figures/slide-01/versions/version-000001--title-promise-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-01/versions/version-000001--title-promise-v1",
         "assetsManifest": "projects/customgpt/slide-assets/slide-01/manifest.json"
       },
-      "selectedDirection": "Title-promise v1 is the current selected opener.",
+      "selectedDirection": "Title Promise V1 is the current selected mockup.",
       "notes": [
-        "Use this as the clean typographic opener while the rest of the workshop visual language settles."
+        "What this is",
+        "Why it works",
+        "How to build it live"
       ],
       "selectedVariantId": "title-promise-v1",
       "variants": [
@@ -60,7 +114,7 @@
           "id": "title-promise-v1",
           "label": "Title Promise V1",
           "status": "selected",
-          "summary": "Typographic opener that uses the SAEM palette and a three-step workshop promise panel.",
+          "summary": "Typographic opener that uses the SAEM shell, a document-to-answer hero graphic, and a three-step workshop promise panel.",
           "previewPath": "projects/customgpt/slide-figures/slide-01/versions/version-000001--title-promise-v1/preview.png",
           "files": [
             {
@@ -77,31 +131,96 @@
             }
           ]
         }
-      ]
+      ],
+      "specText": "# Workshop Title and Promise\n\n## Purpose\n\n- Open the workshop with a clear thesis and a visually strong product promise.\n- Use a strong SAEM opener with a clear promise panel and a custom hero graphic rather than speaker portraits.\n\n## Core copy\n\n- Header: From PDF to Policy Assistant\n- Subheader: Designing a practical custom GPT for residency administration support\n- Takeaway: This workshop will show what the tool is, why it works, and how to build one.\n\n## Visual notes\n\n- What this is\n- Why it works\n- How to build it live\n"
     },
     {
       "id": "slide-02",
       "displayNumber": "2",
-      "importedSlides": [4, 6],
+      "importedSlides": [
+        2
+      ],
+      "status": "active",
+      "title": "Who We Are",
+      "purpose": "Introduce the presenters once, explain why this group is teaching this workshop, and set expectations for the session.",
+      "header": "Who we are and what we are building together",
+      "subheader": "This is a practical workshop from people who live the residency workflow problem, teach within it, and build within current product constraints.",
+      "takeaway": "The session is operational, grounded, and intentionally narrow.",
+      "figureRole": "Use presenter portraits only here, paired with a compact session roadmap and practical framing.",
+      "family": "speaker-intro",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-02-who-we-are.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-02/versions/version-000001--who-we-are-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-02/versions/version-000001--who-we-are-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-02/manifest.json"
+      },
+      "selectedDirection": "Who We Are V1 is the current selected mockup.",
+      "notes": [
+        "Connor brings the real residency workflow pain point and the original workshop backbone.",
+        "Rana brings implementation, product-shaping, and faculty translation for a mixed audience.",
+        "Eddie helps connect the build pattern to teaching, operations, and audience adoption."
+      ],
+      "selectedVariantId": "who-we-are-v1",
+      "variants": [
+        {
+          "id": "who-we-are-v1",
+          "label": "Who We Are V1",
+          "status": "selected",
+          "summary": "Dedicated presenter-intro slide with portraits, role framing, and the practical workshop promise.",
+          "previewPath": "projects/customgpt/slide-figures/slide-02/versions/version-000001--who-we-are-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-02/versions/version-000001--who-we-are-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-02/versions/version-000001--who-we-are-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-02/versions/version-000001--who-we-are-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Who We Are\n\n## Purpose\n\n- Introduce the presenters once, explain why this group is teaching this workshop, and set expectations for the session.\n- Use presenter portraits only here, paired with a compact session roadmap and practical framing.\n\n## Core copy\n\n- Header: Who we are and what we are building together\n- Subheader: This is a practical workshop from people who live the residency workflow problem, teach within it, and build within current product constraints.\n- Takeaway: The session is operational, grounded, and intentionally narrow.\n\n## Visual notes\n\n- Connor brings the real residency workflow pain point and the original workshop backbone.\n- Rana brings implementation, product-shaping, and faculty translation for a mixed audience.\n- Eddie helps connect the build pattern to teaching, operations, and audience adoption.\n"
+    },
+    {
+      "id": "slide-03",
+      "displayNumber": "3",
+      "importedSlides": [
+        4,
+        6,
+        47
+      ],
       "status": "active",
       "title": "Why This Matters",
       "purpose": "Show the administrative pain point and why the audience should care immediately.",
-      "header": "Policy questions keep landing on the same people",
-      "subheader": "Program directors, chiefs, coordinators, and residents repeatedly search static documents for operational answers",
-      "takeaway": "This is a workflow problem worth fixing, not just a novelty demo.",
-      "figureRole": "Make the administrative burden tangible without overloading the audience.",
+      "header": "Policy questions keep landing on the same people.",
+      "subheader": "Residency leaders and chiefs repeatedly search static documents for operational answers that should be fast, consistent, and source-bounded.",
+      "takeaway": "This is a repeated workflow problem that creates delay, inconsistency, and interruption.",
+      "figureRole": "Make the workflow burden visible with role cards, repeated question loops, and an operational payoff.",
       "family": "problem-frame",
-      "buildStatus": "packet and mockup drafted",
+      "buildStatus": "packet and seeded mockup drafted",
       "proof": [],
       "paths": {
-        "packet": "projects/customgpt/slide-packets/slide-02-why-this-matters.md",
-        "specs": [],
-        "stampedDir": null,
-        "assetsManifest": "projects/customgpt/slide-assets/slide-02/manifest.json"
+        "packet": "projects/customgpt/slide-packets/slide-03-workflow-burden.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-03/versions/version-000001--workflow-burden-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-03/versions/version-000001--workflow-burden-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-03/manifest.json"
       },
-      "selectedDirection": "Workflow-burden v1 is the current selected problem frame.",
+      "selectedDirection": "Workflow Burden V1 is the current selected mockup.",
       "notes": [
-        "This replaces a denser theory-first opening with a direct operational burden frame."
+        "Program leaders absorb decision bottlenecks.",
+        "Chief residents keep translating policy PDFs into real-time coverage answers.",
+        "Program coordinators reopen the same documents instead of advancing the work."
       ],
       "selectedVariantId": "workflow-burden-v1",
       "variants": [
@@ -109,48 +228,55 @@
           "id": "workflow-burden-v1",
           "label": "Workflow Burden V1",
           "status": "selected",
-          "summary": "Two-panel burden slide showing the people who absorb policy lookup work and the repeated question loop they face.",
-          "previewPath": "projects/customgpt/slide-figures/slide-02/versions/version-000001--workflow-burden-v1/preview.png",
+          "summary": "Operational burden frame showing the same questions cycling through the same people and files.",
+          "previewPath": "projects/customgpt/slide-figures/slide-03/versions/version-000001--workflow-burden-v1/preview.png",
           "files": [
             {
               "label": "Version dir",
-              "path": "projects/customgpt/slide-figures/slide-02/versions/version-000001--workflow-burden-v1"
+              "path": "projects/customgpt/slide-figures/slide-03/versions/version-000001--workflow-burden-v1"
             },
             {
               "label": "HTML",
-              "path": "projects/customgpt/slide-figures/slide-02/versions/version-000001--workflow-burden-v1/generated.html"
+              "path": "projects/customgpt/slide-figures/slide-03/versions/version-000001--workflow-burden-v1/generated.html"
             },
             {
               "label": "Preview",
-              "path": "projects/customgpt/slide-figures/slide-02/versions/version-000001--workflow-burden-v1/preview.png"
+              "path": "projects/customgpt/slide-figures/slide-03/versions/version-000001--workflow-burden-v1/preview.png"
             }
           ]
         }
-      ]
+      ],
+      "specText": "# Why This Matters\n\n## Purpose\n\n- Show the administrative pain point and why the audience should care immediately.\n- Make the workflow burden visible with role cards, repeated question loops, and an operational payoff.\n\n## Core copy\n\n- Header: Policy questions keep landing on the same people.\n- Subheader: Residency leaders and chiefs repeatedly search static documents for operational answers that should be fast, consistent, and source-bounded.\n- Takeaway: This is a repeated workflow problem that creates delay, inconsistency, and interruption.\n\n## Visual notes\n\n- Program leaders absorb decision bottlenecks.\n- Chief residents keep translating policy PDFs into real-time coverage answers.\n- Program coordinators reopen the same documents instead of advancing the work.\n"
     },
     {
-      "id": "slide-03",
-      "displayNumber": "3",
-      "importedSlides": [7],
+      "id": "slide-04",
+      "displayNumber": "4",
+      "importedSlides": [
+        7
+      ],
       "status": "active",
       "title": "What This Tool Is",
-      "purpose": "Define the product plainly before theory.",
-      "header": "A custom GPT can act like a residency policy assistant",
-      "subheader": "It answers questions using uploaded policies, instructions, and selected capabilities inside ChatGPT",
-      "takeaway": "The audience should understand the object before hearing how it is built.",
-      "figureRole": "Show a concrete input/output example of a grounded policy answer.",
+      "purpose": "Define the product object plainly before any theory or build mechanics.",
+      "header": "A custom GPT can act like a residency policy assistant.",
+      "subheader": "It answers with uploaded policies and explicit instructions inside ChatGPT, returning a cited answer or a bounded refusal.",
+      "takeaway": "Understand the object before hearing how it is built.",
+      "figureRole": "Show a realistic question, grounded answer, and the design ingredients that make the object useful.",
       "family": "concept-card",
-      "buildStatus": "packet and mockup drafted",
+      "buildStatus": "packet and seeded mockup drafted",
       "proof": [],
       "paths": {
-        "packet": "projects/customgpt/slide-packets/slide-03-what-this-tool-is.md",
-        "specs": [],
-        "stampedDir": null,
-        "assetsManifest": "projects/customgpt/slide-assets/slide-03/manifest.json"
+        "packet": "projects/customgpt/slide-packets/slide-04-policy-assistant-object.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-04/versions/version-000001--policy-assistant-object-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-04/versions/version-000001--policy-assistant-object-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-04/manifest.json"
       },
-      "selectedDirection": "Policy-assistant-object v1 is the current selected concept card.",
+      "selectedDirection": "Policy Assistant Object V1 is the current selected mockup.",
       "notes": [
-        "Keep the example clearly illustrative so it teaches the object without implying specific institutional policy."
+        "The assistant is narrow on purpose.",
+        "It answers from uploaded files, not general web knowledge.",
+        "It should cite the source or say the answer is unsupported."
       ],
       "selectedVariantId": "policy-assistant-object-v1",
       "variants": [
@@ -158,227 +284,1690 @@
           "id": "policy-assistant-object-v1",
           "label": "Policy Assistant Object V1",
           "status": "selected",
-          "summary": "Question-to-answer concept card that shows the assistant as a grounded policy Q&A workflow before the build walkthrough.",
-          "previewPath": "projects/customgpt/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1/preview.png",
+          "summary": "Question-to-answer concept card that defines the assistant as a grounded, bounded policy-support tool.",
+          "previewPath": "projects/customgpt/slide-figures/slide-04/versions/version-000001--policy-assistant-object-v1/preview.png",
           "files": [
             {
               "label": "Version dir",
-              "path": "projects/customgpt/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1"
+              "path": "projects/customgpt/slide-figures/slide-04/versions/version-000001--policy-assistant-object-v1"
             },
             {
               "label": "HTML",
-              "path": "projects/customgpt/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1/generated.html"
+              "path": "projects/customgpt/slide-figures/slide-04/versions/version-000001--policy-assistant-object-v1/generated.html"
             },
             {
               "label": "Preview",
-              "path": "projects/customgpt/slide-figures/slide-03/versions/version-000001--policy-assistant-object-v1/preview.png"
+              "path": "projects/customgpt/slide-figures/slide-04/versions/version-000001--policy-assistant-object-v1/preview.png"
             }
           ]
         }
-      ]
-    },
-    {
-      "id": "slide-04",
-      "displayNumber": "4",
-      "importedSlides": [10, 11, 12, 13, 14, 15],
-      "status": "active",
-      "title": "Why It Works",
-      "purpose": "Explain the mechanism without drowning the audience in transformer theory.",
-      "header": "Good policy assistants are configured, grounded ChatGPT workflows",
-      "subheader": "Instructions guide behavior, knowledge files provide source material, and capabilities extend what the GPT can do",
-      "takeaway": "This is enough conceptual depth for the workshop audience.",
-      "figureRole": "Use a simple three-part system diagram rather than a dense technical stack.",
-      "family": "system-diagram",
-      "buildStatus": "packet drafted, visual pending",
-      "proof": [],
-      "paths": {
-        "packet": "projects/customgpt/slide-packets/slide-04-why-it-works.md",
-        "specs": [],
-        "stampedDir": null,
-        "assetsManifest": null
-      },
-      "selectedDirection": "No selected visual yet.",
-      "notes": [],
-      "selectedVariantId": null,
-      "variants": []
+      ],
+      "specText": "# What This Tool Is\n\n## Purpose\n\n- Define the product object plainly before any theory or build mechanics.\n- Show a realistic question, grounded answer, and the design ingredients that make the object useful.\n\n## Core copy\n\n- Header: A custom GPT can act like a residency policy assistant.\n- Subheader: It answers with uploaded policies and explicit instructions inside ChatGPT, returning a cited answer or a bounded refusal.\n- Takeaway: Understand the object before hearing how it is built.\n\n## Visual notes\n\n- The assistant is narrow on purpose.\n- It answers from uploaded files, not general web knowledge.\n- It should cite the source or say the answer is unsupported.\n"
     },
     {
       "id": "slide-05",
       "displayNumber": "5",
-      "importedSlides": [31, 35],
+      "importedSlides": [
+        31,
+        35
+      ],
       "status": "active",
       "title": "What Good Looks Like",
-      "purpose": "Define the output standard before the walkthrough.",
+      "purpose": "Set the answer-quality bar before the audience sees the build.",
       "header": "A good answer is specific, sourced, and bounded",
-      "subheader": "The assistant should answer from the documents, cite its source, and say when it does not know",
-      "takeaway": "This slide sets the quality bar for the live demo.",
-      "figureRole": "Show a policy question paired with a good answer and a bad answer.",
-      "family": "answer-compare",
-      "buildStatus": "packet drafted, visual pending",
+      "subheader": "The assistant should answer from the documents, cite the source, and say when it does not know",
+      "takeaway": "This is the quality bar we will hold the live demo to.",
+      "figureRole": "Use three quality pillars instead of abstract prompting advice.",
+      "family": "quality-pillars",
+      "buildStatus": "packet and seeded mockup drafted",
       "proof": [],
       "paths": {
         "packet": "projects/customgpt/slide-packets/slide-05-what-good-looks-like.md",
-        "specs": [],
-        "stampedDir": null,
-        "assetsManifest": null
+        "specs": [
+          "projects/customgpt/slide-figures/slide-05/versions/version-000001--what-good-looks-like-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-05/versions/version-000001--what-good-looks-like-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-05/manifest.json"
       },
-      "selectedDirection": "No selected visual yet.",
-      "notes": [],
-      "selectedVariantId": null,
-      "variants": []
+      "selectedDirection": "What Good Looks Like V1 is the current selected mockup.",
+      "notes": [
+        "Specific enough to resolve the question.",
+        "Cited to the right file and page or section.",
+        "Bounded enough to refuse unsupported claims."
+      ],
+      "selectedVariantId": "what-good-looks-like-v1",
+      "variants": [
+        {
+          "id": "what-good-looks-like-v1",
+          "label": "What Good Looks Like V1",
+          "status": "selected",
+          "summary": "Three-pillar answer-quality slide that defines success before the walkthrough.",
+          "previewPath": "projects/customgpt/slide-figures/slide-05/versions/version-000001--what-good-looks-like-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-05/versions/version-000001--what-good-looks-like-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-05/versions/version-000001--what-good-looks-like-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-05/versions/version-000001--what-good-looks-like-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# What Good Looks Like\n\n## Purpose\n\n- Set the answer-quality bar before the audience sees the build.\n- Use three quality pillars instead of abstract prompting advice.\n\n## Core copy\n\n- Header: A good answer is specific, sourced, and bounded\n- Subheader: The assistant should answer from the documents, cite the source, and say when it does not know\n- Takeaway: This is the quality bar we will hold the live demo to.\n\n## Visual notes\n\n- Specific enough to resolve the question.\n- Cited to the right file and page or section.\n- Bounded enough to refuse unsupported claims.\n"
     },
     {
       "id": "slide-06",
       "displayNumber": "6",
-      "importedSlides": [20, 21, 22],
+      "importedSlides": [
+        31,
+        35,
+        40,
+        46
+      ],
       "status": "active",
-      "title": "Source Prep",
-      "purpose": "Show the file and knowledge design decisions that matter most.",
-      "header": "The files matter as much as the model",
-      "subheader": "Clear, current, text-forward policy documents improve retrieval and reduce confusion",
-      "takeaway": "Knowledge quality and instruction quality are the real implementation work.",
-      "figureRole": "Make document prep concrete and non-technical.",
-      "family": "workflow-checklist",
-      "buildStatus": "packet drafted, visual pending",
+      "title": "Good Answer Versus Bad Answer",
+      "purpose": "Turn the quality bar into a side-by-side comparison the audience can judge quickly.",
+      "header": "Teach the audience to evaluate the answer, not just admire the build",
+      "subheader": "A grounded answer looks very different from a vague or overconfident answer even when both sound polished",
+      "takeaway": "This workshop is really about quality control.",
+      "figureRole": "Show a good answer and a risky answer side by side.",
+      "family": "answer-compare",
+      "buildStatus": "packet and seeded mockup drafted",
       "proof": [],
       "paths": {
-        "packet": "projects/customgpt/slide-packets/slide-06-source-prep.md",
-        "specs": [],
-        "stampedDir": null,
-        "assetsManifest": null
+        "packet": "projects/customgpt/slide-packets/slide-06-good-vs-bad-answer.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-06/versions/version-000001--good-vs-bad-answer-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-06/versions/version-000001--good-vs-bad-answer-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-06/manifest.json"
       },
-      "selectedDirection": "No selected visual yet.",
-      "notes": [],
-      "selectedVariantId": null,
-      "variants": []
+      "selectedDirection": "Good vs Bad Answer V1 is the current selected mockup.",
+      "notes": [
+        "Grounded answer: cites the policy, stays in scope, and names the limit when the files do not fully support an answer.",
+        "Risky answer: sounds confident, skips the citation, and blurs the difference between what the files say and what the model is guessing.",
+        "Use the same question across both panels so the contrast is obvious."
+      ],
+      "selectedVariantId": "good-vs-bad-answer-v1",
+      "variants": [
+        {
+          "id": "good-vs-bad-answer-v1",
+          "label": "Good vs Bad Answer V1",
+          "status": "selected",
+          "summary": "Side-by-side answer comparison showing what good grounding looks like in practice.",
+          "previewPath": "projects/customgpt/slide-figures/slide-06/versions/version-000001--good-vs-bad-answer-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-06/versions/version-000001--good-vs-bad-answer-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-06/versions/version-000001--good-vs-bad-answer-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-06/versions/version-000001--good-vs-bad-answer-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Good Answer Versus Bad Answer\n\n## Purpose\n\n- Turn the quality bar into a side-by-side comparison the audience can judge quickly.\n- Show a good answer and a risky answer side by side.\n\n## Core copy\n\n- Header: Teach the audience to evaluate the answer, not just admire the build\n- Subheader: A grounded answer looks very different from a vague or overconfident answer even when both sound polished\n- Takeaway: This workshop is really about quality control.\n\n## Visual notes\n\n- Grounded answer: cites the policy, stays in scope, and names the limit when the files do not fully support an answer.\n- Risky answer: sounds confident, skips the citation, and blurs the difference between what the files say and what the model is guessing.\n- Use the same question across both panels so the contrast is obvious.\n"
     },
     {
       "id": "slide-07",
       "displayNumber": "7",
-      "importedSlides": [19],
+      "importedSlides": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
       "status": "active",
-      "title": "Live Walkthrough Setup",
-      "purpose": "Start the live build with a clear map of the steps.",
-      "header": "We are about to build the assistant live",
-      "subheader": "Create the GPT, define the instructions, upload files, test it, then refine it",
-      "takeaway": "The audience should know what to watch for in the demo.",
-      "figureRole": "Provide a clean agenda card for the walkthrough block.",
-      "family": "demo-roadmap",
-      "buildStatus": "packet drafted, visual pending",
+      "title": "Why It Works",
+      "purpose": "Explain the mechanism in plain language without turning this into a theory lecture.",
+      "header": "Good policy assistants are configured, grounded workflows",
+      "subheader": "Instructions shape behavior, knowledge files provide source material, and selected capabilities extend what the GPT can do",
+      "takeaway": "This is configuration work more than deep engineering.",
+      "figureRole": "Use a simple three-part system map rather than dense architecture.",
+      "family": "system-diagram",
+      "buildStatus": "packet and seeded mockup drafted",
       "proof": [],
       "paths": {
-        "packet": "projects/customgpt/slide-packets/slide-07-live-walkthrough-setup.md",
-        "specs": [],
-        "stampedDir": null,
-        "assetsManifest": null
+        "packet": "projects/customgpt/slide-packets/slide-07-why-it-works.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-07/versions/version-000001--why-it-works-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-07/versions/version-000001--why-it-works-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-07/manifest.json"
       },
-      "selectedDirection": "No selected visual yet.",
-      "notes": [],
-      "selectedVariantId": null,
-      "variants": []
+      "selectedDirection": "Why It Works V1 is the current selected mockup.",
+      "notes": [
+        "Instructions set the role and rules.",
+        "Knowledge files supply the source material.",
+        "Capabilities extend what the GPT can do."
+      ],
+      "selectedVariantId": "why-it-works-v1",
+      "variants": [
+        {
+          "id": "why-it-works-v1",
+          "label": "Why It Works V1",
+          "status": "selected",
+          "summary": "Plain-language systems slide showing instructions, knowledge, and capabilities working together.",
+          "previewPath": "projects/customgpt/slide-figures/slide-07/versions/version-000001--why-it-works-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-07/versions/version-000001--why-it-works-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-07/versions/version-000001--why-it-works-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-07/versions/version-000001--why-it-works-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Why It Works\n\n## Purpose\n\n- Explain the mechanism in plain language without turning this into a theory lecture.\n- Use a simple three-part system map rather than dense architecture.\n\n## Core copy\n\n- Header: Good policy assistants are configured, grounded workflows\n- Subheader: Instructions shape behavior, knowledge files provide source material, and selected capabilities extend what the GPT can do\n- Takeaway: This is configuration work more than deep engineering.\n\n## Visual notes\n\n- Instructions set the role and rules.\n- Knowledge files supply the source material.\n- Capabilities extend what the GPT can do.\n"
     },
     {
       "id": "slide-08",
       "displayNumber": "8",
-      "importedSlides": [23, 26, 28],
+      "importedSlides": [
+        15
+      ],
       "status": "active",
-      "title": "Live Build",
-      "purpose": "Walk through the current GPT creation surface in ChatGPT.",
-      "header": "Create the GPT in ChatGPT",
-      "subheader": "Use the GPTs area, choose Create, then work through configuration directly",
-      "takeaway": "The workshop should focus on the actual current UI, not the old product assumptions.",
-      "figureRole": "Use annotated interface screenshots rather than abstract diagrams.",
-      "family": "ui-walkthrough",
-      "buildStatus": "packet drafted, visual pending",
+      "title": "Limits and Failure Modes",
+      "purpose": "Make the boundaries explicit before the live build creates false confidence.",
+      "header": "Grounded systems still fail when the inputs or expectations are wrong",
+      "subheader": "Outdated files, conflicting policies, or ambiguous questions can still produce weak answers even with good instructions",
+      "takeaway": "A grounded assistant is useful, but it still needs judgement and upkeep.",
+      "figureRole": "Show the main failure modes as bounded risks.",
+      "family": "limitation-grid",
+      "buildStatus": "packet and seeded mockup drafted",
       "proof": [],
       "paths": {
-        "packet": "projects/customgpt/slide-packets/slide-08-live-build.md",
-        "specs": [],
-        "stampedDir": null,
-        "assetsManifest": null
+        "packet": "projects/customgpt/slide-packets/slide-08-limits-and-failure-modes.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-08/versions/version-000001--limits-and-failure-modes-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-08/versions/version-000001--limits-and-failure-modes-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-08/manifest.json"
       },
-      "selectedDirection": "No selected visual yet.",
-      "notes": [],
-      "selectedVariantId": null,
-      "variants": []
+      "selectedDirection": "Limits and Failure Modes V1 is the current selected mockup.",
+      "notes": [
+        "Outdated files produce outdated guidance.",
+        "Conflicting policies need explicit conflict handling.",
+        "The tool cannot replace human judgement."
+      ],
+      "selectedVariantId": "limits-and-failure-modes-v1",
+      "variants": [
+        {
+          "id": "limits-and-failure-modes-v1",
+          "label": "Limits and Failure Modes V1",
+          "status": "selected",
+          "summary": "Risk grid showing document quality, conflict, and judgement limits without alarmism.",
+          "previewPath": "projects/customgpt/slide-figures/slide-08/versions/version-000001--limits-and-failure-modes-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-08/versions/version-000001--limits-and-failure-modes-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-08/versions/version-000001--limits-and-failure-modes-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-08/versions/version-000001--limits-and-failure-modes-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Limits and Failure Modes\n\n## Purpose\n\n- Make the boundaries explicit before the live build creates false confidence.\n- Show the main failure modes as bounded risks.\n\n## Core copy\n\n- Header: Grounded systems still fail when the inputs or expectations are wrong\n- Subheader: Outdated files, conflicting policies, or ambiguous questions can still produce weak answers even with good instructions\n- Takeaway: A grounded assistant is useful, but it still needs judgement and upkeep.\n\n## Visual notes\n\n- Outdated files produce outdated guidance.\n- Conflicting policies need explicit conflict handling.\n- The tool cannot replace human judgement.\n"
     },
     {
       "id": "slide-09",
       "displayNumber": "9",
-      "importedSlides": [35, 36],
+      "importedSlides": [
+        7
+      ],
       "status": "active",
-      "title": "Live Testing",
-      "purpose": "Demonstrate preview testing, refusals, and source-bounded answers.",
-      "header": "Testing matters more than builder theatrics",
-      "subheader": "A good workshop demo should show a strong answer, a weak answer, and an explicit refusal",
-      "takeaway": "Testing is where trust is earned.",
-      "figureRole": "Compare good and bad preview interactions with callouts.",
-      "family": "preview-compare",
-      "buildStatus": "packet drafted, visual pending",
+      "title": "Our Solution at a Glance",
+      "purpose": "Translate Connor's solution slide into a clear product-shaped promise.",
+      "header": "A custom GPT can become a grounded residency policy assistant",
+      "subheader": "Ask a plain-language question, retrieve relevant guidance from approved files, and return a cited answer or a refusal",
+      "takeaway": "The workshop is about building a narrow, grounded assistant, not a general chatbot.",
+      "figureRole": "Show the assistant as a practical input-output workflow.",
+      "family": "solution-card",
+      "buildStatus": "packet and seeded mockup drafted",
       "proof": [],
       "paths": {
-        "packet": "projects/customgpt/slide-packets/slide-09-live-testing.md",
-        "specs": [],
-        "stampedDir": null,
-        "assetsManifest": null
+        "packet": "projects/customgpt/slide-packets/slide-09-solution-at-a-glance.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-09/versions/version-000001--solution-at-a-glance-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-09/versions/version-000001--solution-at-a-glance-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-09/manifest.json"
       },
-      "selectedDirection": "No selected visual yet.",
-      "notes": [],
-      "selectedVariantId": null,
-      "variants": []
+      "selectedDirection": "Solution at a Glance V1 is the current selected mockup.",
+      "notes": [
+        "Ask a residency policy question in ordinary language.",
+        "Search only the approved residency and GME documents.",
+        "Answer with citation, limits, and next step when needed."
+      ],
+      "selectedVariantId": "solution-at-a-glance-v1",
+      "variants": [
+        {
+          "id": "solution-at-a-glance-v1",
+          "label": "Solution at a Glance V1",
+          "status": "selected",
+          "summary": "Three-card solution frame that makes the assistant feel concrete and bounded.",
+          "previewPath": "projects/customgpt/slide-figures/slide-09/versions/version-000001--solution-at-a-glance-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-09/versions/version-000001--solution-at-a-glance-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-09/versions/version-000001--solution-at-a-glance-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-09/versions/version-000001--solution-at-a-glance-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Our Solution at a Glance\n\n## Purpose\n\n- Translate Connor's solution slide into a clear product-shaped promise.\n- Show the assistant as a practical input-output workflow.\n\n## Core copy\n\n- Header: A custom GPT can become a grounded residency policy assistant\n- Subheader: Ask a plain-language question, retrieve relevant guidance from approved files, and return a cited answer or a refusal\n- Takeaway: The workshop is about building a narrow, grounded assistant, not a general chatbot.\n\n## Visual notes\n\n- Ask a residency policy question in ordinary language.\n- Search only the approved residency and GME documents.\n- Answer with citation, limits, and next step when needed.\n"
     },
     {
       "id": "slide-10",
       "displayNumber": "10",
-      "importedSlides": [39, 40, 46],
+      "importedSlides": [
+        2,
+        4,
+        7
+      ],
       "status": "active",
-      "title": "Governance and Maintenance",
-      "purpose": "Land the operational rules for safe use.",
-      "header": "The tool needs ownership, updates, and clear boundaries",
-      "subheader": "No PHI, current documents only, citations expected, and a named owner for updates",
-      "takeaway": "This is the adult supervision slide.",
-      "figureRole": "Summarize governance in a compact card set.",
-      "family": "governance-grid",
-      "buildStatus": "packet drafted, visual pending",
+      "title": "Where This Fits in Program Operations",
+      "purpose": "Show who benefits from the tool and where it belongs in day-to-day work.",
+      "header": "This assistant supports the people already answering these questions",
+      "subheader": "Residents, chiefs, coordinators, and program leaders all gain from faster, more standardized access to the same operational guidance",
+      "takeaway": "The right mental model is team support, not AI replacement.",
+      "figureRole": "Map the assistant to the real roles in the residency workflow.",
+      "family": "stakeholder-map",
+      "buildStatus": "packet and seeded mockup drafted",
       "proof": [],
       "paths": {
-        "packet": "projects/customgpt/slide-packets/slide-10-governance-maintenance.md",
-        "specs": [],
-        "stampedDir": null,
-        "assetsManifest": null
+        "packet": "projects/customgpt/slide-packets/slide-10-program-operations-fit.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-10/versions/version-000001--program-operations-fit-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-10/versions/version-000001--program-operations-fit-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-10/manifest.json"
       },
-      "selectedDirection": "No selected visual yet.",
-      "notes": [],
-      "selectedVariantId": null,
-      "variants": []
+      "selectedDirection": "Program Operations Fit V1 is the current selected mockup.",
+      "notes": [
+        "Residents need faster answers to common operational questions.",
+        "Chiefs need consistency when they are triaging the same asks.",
+        "Coordinators and leaders need fewer repetitive interruptions."
+      ],
+      "selectedVariantId": "program-operations-fit-v1",
+      "variants": [
+        {
+          "id": "program-operations-fit-v1",
+          "label": "Program Operations Fit V1",
+          "status": "selected",
+          "summary": "Role-based support map showing where the assistant reduces repeated policy interrupts.",
+          "previewPath": "projects/customgpt/slide-figures/slide-10/versions/version-000001--program-operations-fit-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-10/versions/version-000001--program-operations-fit-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-10/versions/version-000001--program-operations-fit-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-10/versions/version-000001--program-operations-fit-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Where This Fits in Program Operations\n\n## Purpose\n\n- Show who benefits from the tool and where it belongs in day-to-day work.\n- Map the assistant to the real roles in the residency workflow.\n\n## Core copy\n\n- Header: This assistant supports the people already answering these questions\n- Subheader: Residents, chiefs, coordinators, and program leaders all gain from faster, more standardized access to the same operational guidance\n- Takeaway: The right mental model is team support, not AI replacement.\n\n## Visual notes\n\n- Residents need faster answers to common operational questions.\n- Chiefs need consistency when they are triaging the same asks.\n- Coordinators and leaders need fewer repetitive interruptions.\n"
     },
     {
       "id": "slide-11",
       "displayNumber": "11",
-      "importedSlides": [49, 51],
+      "importedSlides": [
+        4
+      ],
       "status": "active",
-      "title": "Takeaways and Q&A",
-      "purpose": "Close with memorable decisions, not more theory.",
-      "header": "Build small, ground it well, test it hard",
-      "subheader": "Custom GPTs can reduce administrative friction when they are well-scoped and well-governed",
-      "takeaway": "Leave the audience with a practical next step and discussion prompts.",
-      "figureRole": "Clean closing summary with optional QR or link area.",
-      "family": "closing-summary",
-      "buildStatus": "packet drafted, visual pending",
+      "title": "Residency Policy Work Is Repetitive",
+      "purpose": "Make the repeated lookup work concrete before we talk about product mechanics.",
+      "header": "The same policy questions keep getting answered from scratch",
+      "subheader": "Leave, scheduling, conference, evaluation, and remediation questions keep cycling through the same small set of people",
+      "takeaway": "The pain point is repetitive operational lookup work, not lack of effort.",
+      "figureRole": "Show a repeated question loop hitting the same program roles.",
+      "family": "problem-loop",
+      "buildStatus": "packet and seeded mockup drafted",
       "proof": [],
       "paths": {
-        "packet": "projects/customgpt/slide-packets/slide-11-takeaways-qa.md",
-        "specs": [],
-        "stampedDir": null,
-        "assetsManifest": null
+        "packet": "projects/customgpt/slide-packets/slide-11-workflow-repetition.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-11/versions/version-000001--workflow-repetition-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-11/versions/version-000001--workflow-repetition-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-11/manifest.json"
       },
-      "selectedDirection": "No selected visual yet.",
-      "notes": [],
-      "selectedVariantId": null,
-      "variants": []
+      "selectedDirection": "Workflow Repetition V1 is the current selected mockup.",
+      "notes": [
+        "The same leave and duty-hour questions recur every block.",
+        "People reopen PDFs and email chains to reconstruct the answer.",
+        "Chiefs, coordinators, APDs, and faculty absorb the interruption."
+      ],
+      "selectedVariantId": "workflow-repetition-v1",
+      "variants": [
+        {
+          "id": "workflow-repetition-v1",
+          "label": "Workflow Repetition V1",
+          "status": "selected",
+          "summary": "Loop-based problem frame that shows the same operational questions recurring across the residency team.",
+          "previewPath": "projects/customgpt/slide-figures/slide-11/versions/version-000001--workflow-repetition-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-11/versions/version-000001--workflow-repetition-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-11/versions/version-000001--workflow-repetition-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-11/versions/version-000001--workflow-repetition-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Residency Policy Work Is Repetitive\n\n## Purpose\n\n- Make the repeated lookup work concrete before we talk about product mechanics.\n- Show a repeated question loop hitting the same program roles.\n\n## Core copy\n\n- Header: The same policy questions keep getting answered from scratch\n- Subheader: Leave, scheduling, conference, evaluation, and remediation questions keep cycling through the same small set of people\n- Takeaway: The pain point is repetitive operational lookup work, not lack of effort.\n\n## Visual notes\n\n- The same leave and duty-hour questions recur every block.\n- People reopen PDFs and email chains to reconstruct the answer.\n- Chiefs, coordinators, APDs, and faculty absorb the interruption.\n"
+    },
+    {
+      "id": "slide-12",
+      "displayNumber": "12",
+      "importedSlides": [
+        6,
+        47
+      ],
+      "status": "active",
+      "title": "Administrative Burden Shows Up in Burnout and Friction",
+      "purpose": "Connect the policy-lookup problem to resident stress and administrative drag.",
+      "header": "Administrative confusion is not a small annoyance",
+      "subheader": "Connor's original deck linked administrative load, schedule stress, and support bottlenecks to the lived experience of residency operations",
+      "takeaway": "Reducing answer-friction is a meaningful workflow improvement.",
+      "figureRole": "Use evidence-backed burden cards instead of a wall of text.",
+      "family": "burden-data",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-12-burden-data.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-12/versions/version-000001--burden-data-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-12/versions/version-000001--burden-data-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-12/manifest.json"
+      },
+      "selectedDirection": "Burden Data V1 is the current selected mockup.",
+      "notes": [
+        "Administrative tasks are a visible contributor to burnout.",
+        "Schedule and policy uncertainty become recurring stressors.",
+        "Support bottlenecks force the same questions back onto leaders."
+      ],
+      "selectedVariantId": "burden-data-v1",
+      "variants": [
+        {
+          "id": "burden-data-v1",
+          "label": "Burden Data V1",
+          "status": "selected",
+          "summary": "Evidence-flavored burden board tying policy confusion to burnout, interruptions, and avoidable stress.",
+          "previewPath": "projects/customgpt/slide-figures/slide-12/versions/version-000001--burden-data-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-12/versions/version-000001--burden-data-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-12/versions/version-000001--burden-data-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-12/versions/version-000001--burden-data-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Administrative Burden Shows Up in Burnout and Friction\n\n## Purpose\n\n- Connect the policy-lookup problem to resident stress and administrative drag.\n- Use evidence-backed burden cards instead of a wall of text.\n\n## Core copy\n\n- Header: Administrative confusion is not a small annoyance\n- Subheader: Connor's original deck linked administrative load, schedule stress, and support bottlenecks to the lived experience of residency operations\n- Takeaway: Reducing answer-friction is a meaningful workflow improvement.\n\n## Visual notes\n\n- Administrative tasks are a visible contributor to burnout.\n- Schedule and policy uncertainty become recurring stressors.\n- Support bottlenecks force the same questions back onto leaders.\n"
+    },
+    {
+      "id": "slide-13",
+      "displayNumber": "13",
+      "importedSlides": [
+        11,
+        12
+      ],
+      "status": "active",
+      "title": "Retrieval in Plain Language",
+      "purpose": "Give the audience one simple retrieval explanation they can repeat later.",
+      "header": "The GPT does not magically know your residency handbook",
+      "subheader": "It has to find relevant passages, bring them into context, and then answer from that evidence",
+      "takeaway": "Retrieval is the bridge between the question and the source files.",
+      "figureRole": "Break retrieval into a few memorable steps.",
+      "family": "grounded-flow",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-13-retrieval-plain-language.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-13/versions/version-000001--retrieval-plain-language-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-13/versions/version-000001--retrieval-plain-language-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-13/manifest.json"
+      },
+      "selectedDirection": "Retrieval Plain Language V1 is the current selected mockup.",
+      "notes": [
+        "A user asks a question.",
+        "Relevant document passages are pulled into context.",
+        "The model answers from those passages."
+      ],
+      "selectedVariantId": "retrieval-plain-language-v1",
+      "variants": [
+        {
+          "id": "retrieval-plain-language-v1",
+          "label": "Retrieval Plain Language V1",
+          "status": "selected",
+          "summary": "Three-step retrieval explainer that keeps the mechanism teachable and concrete.",
+          "previewPath": "projects/customgpt/slide-figures/slide-13/versions/version-000001--retrieval-plain-language-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-13/versions/version-000001--retrieval-plain-language-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-13/versions/version-000001--retrieval-plain-language-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-13/versions/version-000001--retrieval-plain-language-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Retrieval in Plain Language\n\n## Purpose\n\n- Give the audience one simple retrieval explanation they can repeat later.\n- Break retrieval into a few memorable steps.\n\n## Core copy\n\n- Header: The GPT does not magically know your residency handbook\n- Subheader: It has to find relevant passages, bring them into context, and then answer from that evidence\n- Takeaway: Retrieval is the bridge between the question and the source files.\n\n## Visual notes\n\n- A user asks a question.\n- Relevant document passages are pulled into context.\n- The model answers from those passages.\n"
+    },
+    {
+      "id": "slide-14",
+      "displayNumber": "14",
+      "importedSlides": [
+        13,
+        14
+      ],
+      "status": "active",
+      "title": "Benefits of Grounding",
+      "purpose": "Land the upside of grounded answers without overselling the tool.",
+      "header": "Grounding makes the assistant more useful and more governable",
+      "subheader": "The payoff is not magic. It is better source control, better citations, and more consistent answers.",
+      "takeaway": "Grounding is why this feels operationally trustworthy.",
+      "figureRole": "Use a benefit grid with clear operational payoffs.",
+      "family": "benefit-grid",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-14-benefits-of-grounding.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-14/versions/version-000001--benefits-of-grounding-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-14/versions/version-000001--benefits-of-grounding-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-14/manifest.json"
+      },
+      "selectedDirection": "Benefits of Grounding V1 is the current selected mockup.",
+      "notes": [
+        "Answers can cite the source document.",
+        "Hallucination risk drops when the answer stays in-bounds.",
+        "Common questions get answered more consistently."
+      ],
+      "selectedVariantId": "benefits-of-grounding-v1",
+      "variants": [
+        {
+          "id": "benefits-of-grounding-v1",
+          "label": "Benefits of Grounding V1",
+          "status": "selected",
+          "summary": "Benefit grid showing why grounded answers are easier to trust and deploy.",
+          "previewPath": "projects/customgpt/slide-figures/slide-14/versions/version-000001--benefits-of-grounding-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-14/versions/version-000001--benefits-of-grounding-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-14/versions/version-000001--benefits-of-grounding-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-14/versions/version-000001--benefits-of-grounding-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Benefits of Grounding\n\n## Purpose\n\n- Land the upside of grounded answers without overselling the tool.\n- Use a benefit grid with clear operational payoffs.\n\n## Core copy\n\n- Header: Grounding makes the assistant more useful and more governable\n- Subheader: The payoff is not magic. It is better source control, better citations, and more consistent answers.\n- Takeaway: Grounding is why this feels operationally trustworthy.\n\n## Visual notes\n\n- Answers can cite the source document.\n- Hallucination risk drops when the answer stays in-bounds.\n- Common questions get answered more consistently.\n"
+    },
+    {
+      "id": "slide-15",
+      "displayNumber": "15",
+      "importedSlides": [
+        20
+      ],
+      "status": "active",
+      "title": "Source Prep",
+      "purpose": "Show the preparation work that determines whether the assistant is any good.",
+      "header": "The files matter as much as the model",
+      "subheader": "Start with current, resident-facing, text-forward operational documents before you expand into everything else",
+      "takeaway": "The hidden implementation work is knowledge hygiene.",
+      "figureRole": "Turn source prep into a clean checklist the audience can copy later.",
+      "family": "workflow-checklist",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-15-source-prep.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-15/versions/version-000001--source-prep-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-15/versions/version-000001--source-prep-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-15/manifest.json"
+      },
+      "selectedDirection": "Source Prep V1 is the current selected mockup.",
+      "notes": [
+        "Start with resident-facing operational policies.",
+        "Prefer text-native PDFs over scans whenever possible.",
+        "Keep the scope narrow for the first build.",
+        "Choose files that people actually consult."
+      ],
+      "selectedVariantId": "source-prep-v1",
+      "variants": [
+        {
+          "id": "source-prep-v1",
+          "label": "Source Prep V1",
+          "status": "selected",
+          "summary": "Checklist-first slide that makes source preparation feel concrete and manageable.",
+          "previewPath": "projects/customgpt/slide-figures/slide-15/versions/version-000001--source-prep-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-15/versions/version-000001--source-prep-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-15/versions/version-000001--source-prep-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-15/versions/version-000001--source-prep-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Source Prep\n\n## Purpose\n\n- Show the preparation work that determines whether the assistant is any good.\n- Turn source prep into a clean checklist the audience can copy later.\n\n## Core copy\n\n- Header: The files matter as much as the model\n- Subheader: Start with current, resident-facing, text-forward operational documents before you expand into everything else\n- Takeaway: The hidden implementation work is knowledge hygiene.\n\n## Visual notes\n\n- Start with resident-facing operational policies.\n- Prefer text-native PDFs over scans whenever possible.\n- Keep the scope narrow for the first build.\n- Choose files that people actually consult.\n"
+    },
+    {
+      "id": "slide-16",
+      "displayNumber": "16",
+      "importedSlides": [
+        21
+      ],
+      "status": "active",
+      "title": "What to Upload",
+      "purpose": "Make the first knowledge-base contents concrete for the audience.",
+      "header": "Start with the documents people already trust",
+      "subheader": "A resident handbook alone is rarely enough. Combine program, institutional, and requirement-level guidance thoughtfully.",
+      "takeaway": "Choose a small, high-value document set for the first version.",
+      "figureRole": "Show the starter document stack clearly.",
+      "family": "document-stack",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-16-what-to-upload.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-16/versions/version-000001--what-to-upload-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-16/versions/version-000001--what-to-upload-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-16/manifest.json"
+      },
+      "selectedDirection": "What to Upload V1 is the current selected mockup.",
+      "notes": [
+        "Residency handbook.",
+        "Program-specific policies.",
+        "Institutional GME guidance.",
+        "ACGME requirements.",
+        "Contact and link sheet."
+      ],
+      "selectedVariantId": "what-to-upload-v1",
+      "variants": [
+        {
+          "id": "what-to-upload-v1",
+          "label": "What to Upload V1",
+          "status": "selected",
+          "summary": "Starter document stack for the first grounded policy assistant knowledge base.",
+          "previewPath": "projects/customgpt/slide-figures/slide-16/versions/version-000001--what-to-upload-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-16/versions/version-000001--what-to-upload-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-16/versions/version-000001--what-to-upload-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-16/versions/version-000001--what-to-upload-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# What to Upload\n\n## Purpose\n\n- Make the first knowledge-base contents concrete for the audience.\n- Show the starter document stack clearly.\n\n## Core copy\n\n- Header: Start with the documents people already trust\n- Subheader: A resident handbook alone is rarely enough. Combine program, institutional, and requirement-level guidance thoughtfully.\n- Takeaway: Choose a small, high-value document set for the first version.\n\n## Visual notes\n\n- Residency handbook.\n- Program-specific policies.\n- Institutional GME guidance.\n- ACGME requirements.\n- Contact and link sheet.\n"
+    },
+    {
+      "id": "slide-17",
+      "displayNumber": "17",
+      "importedSlides": [
+        20,
+        21,
+        39
+      ],
+      "status": "active",
+      "title": "File Hygiene and Versioning",
+      "purpose": "Carry Connor's document-prep advice into a maintainable operating habit.",
+      "header": "Name files clearly and keep the source set clean",
+      "subheader": "Deduplicate overlapping documents, use obvious names, and replace outdated files quickly so the GPT does not drift into stale guidance",
+      "takeaway": "Versioning is part of the product, not an afterthought.",
+      "figureRole": "Show the difference between messy and maintainable document practices.",
+      "family": "file-hygiene",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-17-file-hygiene-versioning.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-17/versions/version-000001--file-hygiene-versioning-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-17/versions/version-000001--file-hygiene-versioning-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-17/manifest.json"
+      },
+      "selectedDirection": "File Hygiene and Versioning V1 is the current selected mockup.",
+      "notes": [
+        "Deduplicate overlapping files.",
+        "Use simple names with year or version in them.",
+        "Swap out outdated documents fast.",
+        "Know who is responsible for the next update."
+      ],
+      "selectedVariantId": "file-hygiene-versioning-v1",
+      "variants": [
+        {
+          "id": "file-hygiene-versioning-v1",
+          "label": "File Hygiene and Versioning V1",
+          "status": "selected",
+          "summary": "Document-hygiene slide that reframes versioning as part of safe deployment.",
+          "previewPath": "projects/customgpt/slide-figures/slide-17/versions/version-000001--file-hygiene-versioning-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-17/versions/version-000001--file-hygiene-versioning-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-17/versions/version-000001--file-hygiene-versioning-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-17/versions/version-000001--file-hygiene-versioning-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# File Hygiene and Versioning\n\n## Purpose\n\n- Carry Connor's document-prep advice into a maintainable operating habit.\n- Show the difference between messy and maintainable document practices.\n\n## Core copy\n\n- Header: Name files clearly and keep the source set clean\n- Subheader: Deduplicate overlapping documents, use obvious names, and replace outdated files quickly so the GPT does not drift into stale guidance\n- Takeaway: Versioning is part of the product, not an afterthought.\n\n## Visual notes\n\n- Deduplicate overlapping files.\n- Use simple names with year or version in them.\n- Swap out outdated documents fast.\n- Know who is responsible for the next update.\n"
+    },
+    {
+      "id": "slide-18",
+      "displayNumber": "18",
+      "importedSlides": [
+        22
+      ],
+      "status": "active",
+      "title": "Garbage In, Garbage Out",
+      "purpose": "Keep Connor's GIGO point as a memorable quality-control warning.",
+      "header": "The assistant can only be as good as the policy set you feed it",
+      "subheader": "Messy, conflicting, or outdated inputs create brittle outputs even when the interface looks polished",
+      "takeaway": "Bad inputs are a product risk, not just a content issue.",
+      "figureRole": "Use a stark compare that makes the warning memorable.",
+      "family": "input-output-compare",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-18-gigo.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-18/versions/version-000001--gigo-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-18/versions/version-000001--gigo-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-18/manifest.json"
+      },
+      "selectedDirection": "GIGO V1 is the current selected mockup.",
+      "notes": [
+        "Clean in: current files, clear names, and scoped coverage create answers that are easier to trust and test.",
+        "Messy in: outdated, duplicated, or vague documents push the GPT toward confusion, omission, or false certainty.",
+        "Document quality is product quality."
+      ],
+      "selectedVariantId": "gigo-v1",
+      "variants": [
+        {
+          "id": "gigo-v1",
+          "label": "GIGO V1",
+          "status": "selected",
+          "summary": "Sharp clean-vs-messy input comparison that keeps the GIGO warning easy to remember.",
+          "previewPath": "projects/customgpt/slide-figures/slide-18/versions/version-000001--gigo-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-18/versions/version-000001--gigo-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-18/versions/version-000001--gigo-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-18/versions/version-000001--gigo-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Garbage In, Garbage Out\n\n## Purpose\n\n- Keep Connor's GIGO point as a memorable quality-control warning.\n- Use a stark compare that makes the warning memorable.\n\n## Core copy\n\n- Header: The assistant can only be as good as the policy set you feed it\n- Subheader: Messy, conflicting, or outdated inputs create brittle outputs even when the interface looks polished\n- Takeaway: Bad inputs are a product risk, not just a content issue.\n\n## Visual notes\n\n- Clean in: current files, clear names, and scoped coverage create answers that are easier to trust and test.\n- Messy in: outdated, duplicated, or vague documents push the GPT toward confusion, omission, or false certainty.\n- Document quality is product quality.\n"
+    },
+    {
+      "id": "slide-19",
+      "displayNumber": "19",
+      "importedSlides": [
+        40,
+        41,
+        44
+      ],
+      "status": "active",
+      "title": "Privacy and Security Boundaries",
+      "purpose": "Make privacy, access, and security boundaries explicit before the audience leaves with an overly casual mental model.",
+      "header": "Privacy and security boundaries matter more than novelty",
+      "subheader": "A useful custom GPT stays narrow, uses approved documents, avoids sensitive data, and is shared only with the right audience",
+      "takeaway": "Sharing and source selection are governance decisions, not convenience features.",
+      "figureRole": "Use a strong boundary graphic that makes the allowed-vs-not-allowed distinction unmistakable.",
+      "family": "privacy-boundary",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-19-privacy-and-security.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-19/versions/version-000001--privacy-and-security-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-19/versions/version-000001--privacy-and-security-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-19/manifest.json"
+      },
+      "selectedDirection": "Privacy and Security V1 is the current selected mockup.",
+      "notes": [
+        "Do not upload PHI, patient-care notes, or sensitive personal data.",
+        "Use approved policy and administrative documents only.",
+        "Know who can access the GPT and the files behind it.",
+        "Treat sharing as an access decision with real consequences."
+      ],
+      "selectedVariantId": "privacy-and-security-v1",
+      "variants": [
+        {
+          "id": "privacy-and-security-v1",
+          "label": "Privacy and Security V1",
+          "status": "selected",
+          "summary": "Boundary-setting slide that frames privacy, access, and source approval as core design decisions.",
+          "previewPath": "projects/customgpt/slide-figures/slide-19/versions/version-000001--privacy-and-security-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-19/versions/version-000001--privacy-and-security-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-19/versions/version-000001--privacy-and-security-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-19/versions/version-000001--privacy-and-security-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Privacy and Security Boundaries\n\n## Purpose\n\n- Make privacy, access, and security boundaries explicit before the audience leaves with an overly casual mental model.\n- Use a strong boundary graphic that makes the allowed-vs-not-allowed distinction unmistakable.\n\n## Core copy\n\n- Header: Privacy and security boundaries matter more than novelty\n- Subheader: A useful custom GPT stays narrow, uses approved documents, avoids sensitive data, and is shared only with the right audience\n- Takeaway: Sharing and source selection are governance decisions, not convenience features.\n\n## Visual notes\n\n- Do not upload PHI, patient-care notes, or sensitive personal data.\n- Use approved policy and administrative documents only.\n- Know who can access the GPT and the files behind it.\n- Treat sharing as an access decision with real consequences.\n"
+    },
+    {
+      "id": "slide-20",
+      "displayNumber": "20",
+      "importedSlides": [
+        19
+      ],
+      "status": "active",
+      "title": "The Five-Step Build Workflow",
+      "purpose": "Preserve Connor's five-step build map as the main workshop sequence.",
+      "header": "The workshop build follows five practical steps",
+      "subheader": "Prepare the files, start the GPT, configure it carefully, test in preview, then deploy with an owner and clear rules",
+      "takeaway": "The build flow is straightforward once the sequence is visible.",
+      "figureRole": "Use the five-step map as the workshop backbone.",
+      "family": "step-roadmap",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-20-five-step-build-workflow.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-20/versions/version-000001--five-step-build-workflow-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-20/versions/version-000001--five-step-build-workflow-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-20/manifest.json"
+      },
+      "selectedDirection": "Five-Step Build Workflow V1 is the current selected mockup.",
+      "notes": [
+        "Prepare the policy files.",
+        "Start a new GPT.",
+        "Configure instructions and knowledge.",
+        "Test in preview.",
+        "Deploy and govern."
+      ],
+      "selectedVariantId": "five-step-build-workflow-v1",
+      "variants": [
+        {
+          "id": "five-step-build-workflow-v1",
+          "label": "Five-Step Build Workflow V1",
+          "status": "selected",
+          "summary": "Five-step workflow map adapted from Connor's original build sequence.",
+          "previewPath": "projects/customgpt/slide-figures/slide-20/versions/version-000001--five-step-build-workflow-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-20/versions/version-000001--five-step-build-workflow-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-20/versions/version-000001--five-step-build-workflow-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-20/versions/version-000001--five-step-build-workflow-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# The Five-Step Build Workflow\n\n## Purpose\n\n- Preserve Connor's five-step build map as the main workshop sequence.\n- Use the five-step map as the workshop backbone.\n\n## Core copy\n\n- Header: The workshop build follows five practical steps\n- Subheader: Prepare the files, start the GPT, configure it carefully, test in preview, then deploy with an owner and clear rules\n- Takeaway: The build flow is straightforward once the sequence is visible.\n\n## Visual notes\n\n- Prepare the policy files.\n- Start a new GPT.\n- Configure instructions and knowledge.\n- Test in preview.\n- Deploy and govern.\n"
+    },
+    {
+      "id": "slide-21",
+      "displayNumber": "21",
+      "importedSlides": [
+        19
+      ],
+      "status": "active",
+      "title": "Live Walkthrough Setup",
+      "purpose": "Tell the audience what to watch for during the live build.",
+      "header": "We are about to build the assistant live",
+      "subheader": "Watch how scope, files, and testing decisions shape the result more than any single prompt flourish",
+      "takeaway": "The live demo is a lesson in judgment, not just button-clicking.",
+      "figureRole": "Frame the walkthrough with a few watch-fors.",
+      "family": "demo-roadmap",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-21-live-walkthrough-setup.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-21/versions/version-000001--live-walkthrough-setup-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-21/versions/version-000001--live-walkthrough-setup-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-21/manifest.json"
+      },
+      "selectedDirection": "Live Walkthrough Setup V1 is the current selected mockup.",
+      "notes": [
+        "Watch how the scope gets defined.",
+        "Watch which files are intentionally included.",
+        "Watch how testing changes the build."
+      ],
+      "selectedVariantId": "live-walkthrough-setup-v1",
+      "variants": [
+        {
+          "id": "live-walkthrough-setup-v1",
+          "label": "Live Walkthrough Setup V1",
+          "status": "selected",
+          "summary": "Demo-orientation slide that tells the audience what to pay attention to during the build.",
+          "previewPath": "projects/customgpt/slide-figures/slide-21/versions/version-000001--live-walkthrough-setup-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-21/versions/version-000001--live-walkthrough-setup-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-21/versions/version-000001--live-walkthrough-setup-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-21/versions/version-000001--live-walkthrough-setup-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Live Walkthrough Setup\n\n## Purpose\n\n- Tell the audience what to watch for during the live build.\n- Frame the walkthrough with a few watch-fors.\n\n## Core copy\n\n- Header: We are about to build the assistant live\n- Subheader: Watch how scope, files, and testing decisions shape the result more than any single prompt flourish\n- Takeaway: The live demo is a lesson in judgment, not just button-clicking.\n\n## Visual notes\n\n- Watch how the scope gets defined.\n- Watch which files are intentionally included.\n- Watch how testing changes the build.\n"
+    },
+    {
+      "id": "slide-22",
+      "displayNumber": "22",
+      "importedSlides": [
+        23
+      ],
+      "status": "active",
+      "title": "Start a Custom GPT",
+      "purpose": "Modernize Connor's start-here instructions into a clean visual checkpoint.",
+      "header": "Start in the GPTs area of ChatGPT",
+      "subheader": "From there you create a new GPT, give it a narrow job, and move into the configuration surface",
+      "takeaway": "The product entry point is concrete and accessible.",
+      "figureRole": "Show the start surface clearly without drowning the slide in tiny UI text.",
+      "family": "ui-entry",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-22-start-a-custom-gpt.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-22/versions/version-000001--start-a-custom-gpt-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-22/versions/version-000001--start-a-custom-gpt-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-22/manifest.json"
+      },
+      "selectedDirection": "Start a Custom GPT V1 is the current selected mockup.",
+      "notes": [
+        "Open the GPTs area inside ChatGPT.",
+        "Create a new GPT around one narrow admin job.",
+        "Move into the configuration flow with preview beside you."
+      ],
+      "selectedVariantId": "start-a-custom-gpt-v1",
+      "variants": [
+        {
+          "id": "start-a-custom-gpt-v1",
+          "label": "Start a Custom GPT V1",
+          "status": "selected",
+          "summary": "Seed interface mockup for the GPTs entry point and new-GPT start state.",
+          "previewPath": "projects/customgpt/slide-figures/slide-22/versions/version-000001--start-a-custom-gpt-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-22/versions/version-000001--start-a-custom-gpt-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-22/versions/version-000001--start-a-custom-gpt-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-22/versions/version-000001--start-a-custom-gpt-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Start a Custom GPT\n\n## Purpose\n\n- Modernize Connor's start-here instructions into a clean visual checkpoint.\n- Show the start surface clearly without drowning the slide in tiny UI text.\n\n## Core copy\n\n- Header: Start in the GPTs area of ChatGPT\n- Subheader: From there you create a new GPT, give it a narrow job, and move into the configuration surface\n- Takeaway: The product entry point is concrete and accessible.\n\n## Visual notes\n\n- Open the GPTs area inside ChatGPT.\n- Create a new GPT around one narrow admin job.\n- Move into the configuration flow with preview beside you.\n"
+    },
+    {
+      "id": "slide-23",
+      "displayNumber": "23",
+      "importedSlides": [
+        26,
+        28
+      ],
+      "status": "active",
+      "title": "Create Versus Configure",
+      "purpose": "Keep Connor's create-versus-configure distinction because it is genuinely helpful to learners.",
+      "header": "The friendly builder helps, but the Configure view is where control really lives",
+      "subheader": "Create can get you started. Configure is where you lock the role, files, capabilities, and sharing behavior.",
+      "takeaway": "Teach the audience where the durable controls actually are.",
+      "figureRole": "Compare the two surfaces while making Configure feel primary.",
+      "family": "ui-split",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-23-create-vs-configure.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-23/versions/version-000001--create-vs-configure-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-23/versions/version-000001--create-vs-configure-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-23/manifest.json"
+      },
+      "selectedDirection": "Create Versus Configure V1 is the current selected mockup.",
+      "notes": [
+        "Create is a conversational helper for the first draft.",
+        "Configure is where you lock the actual product behavior.",
+        "Preview is the running checkpoint beside both views."
+      ],
+      "selectedVariantId": "create-vs-configure-v1",
+      "variants": [
+        {
+          "id": "create-vs-configure-v1",
+          "label": "Create Versus Configure V1",
+          "status": "selected",
+          "summary": "Split-surface interface slide showing why Configure is the durable build surface.",
+          "previewPath": "projects/customgpt/slide-figures/slide-23/versions/version-000001--create-vs-configure-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-23/versions/version-000001--create-vs-configure-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-23/versions/version-000001--create-vs-configure-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-23/versions/version-000001--create-vs-configure-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Create Versus Configure\n\n## Purpose\n\n- Keep Connor's create-versus-configure distinction because it is genuinely helpful to learners.\n- Compare the two surfaces while making Configure feel primary.\n\n## Core copy\n\n- Header: The friendly builder helps, but the Configure view is where control really lives\n- Subheader: Create can get you started. Configure is where you lock the role, files, capabilities, and sharing behavior.\n- Takeaway: Teach the audience where the durable controls actually are.\n\n## Visual notes\n\n- Create is a conversational helper for the first draft.\n- Configure is where you lock the actual product behavior.\n- Preview is the running checkpoint beside both views.\n"
+    },
+    {
+      "id": "slide-24",
+      "displayNumber": "24",
+      "importedSlides": [
+        31
+      ],
+      "status": "active",
+      "title": "Instructions: Role and Scope",
+      "purpose": "Turn Connor's role-and-scope guidance into a dedicated builder step.",
+      "header": "Tell the GPT exactly what job it has and what job it does not have",
+      "subheader": "A strong role statement narrows the assistant to uploaded policy support and defines what it should do when the answer is missing",
+      "takeaway": "A good scope statement prevents both drift and overconfidence.",
+      "figureRole": "Show the role and scope instructions as the core guardrail.",
+      "family": "instruction-card",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-24-role-and-scope.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-24/versions/version-000001--role-and-scope-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-24/versions/version-000001--role-and-scope-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-24/manifest.json"
+      },
+      "selectedDirection": "Role and Scope V1 is the current selected mockup.",
+      "notes": [
+        "Define the assistant as a policy-support tool.",
+        "Limit answers to the uploaded documents.",
+        "Instruct it to say when the answer is unsupported."
+      ],
+      "selectedVariantId": "role-and-scope-v1",
+      "variants": [
+        {
+          "id": "role-and-scope-v1",
+          "label": "Role and Scope V1",
+          "status": "selected",
+          "summary": "Instruction-focused UI seed showing the importance of a narrow, explicit role statement.",
+          "previewPath": "projects/customgpt/slide-figures/slide-24/versions/version-000001--role-and-scope-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-24/versions/version-000001--role-and-scope-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-24/versions/version-000001--role-and-scope-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-24/versions/version-000001--role-and-scope-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Instructions: Role and Scope\n\n## Purpose\n\n- Turn Connor's role-and-scope guidance into a dedicated builder step.\n- Show the role and scope instructions as the core guardrail.\n\n## Core copy\n\n- Header: Tell the GPT exactly what job it has and what job it does not have\n- Subheader: A strong role statement narrows the assistant to uploaded policy support and defines what it should do when the answer is missing\n- Takeaway: A good scope statement prevents both drift and overconfidence.\n\n## Visual notes\n\n- Define the assistant as a policy-support tool.\n- Limit answers to the uploaded documents.\n- Instruct it to say when the answer is unsupported.\n"
+    },
+    {
+      "id": "slide-25",
+      "displayNumber": "25",
+      "importedSlides": [
+        28,
+        31
+      ],
+      "status": "active",
+      "title": "Knowledge and Capabilities",
+      "purpose": "Separate files and capabilities into their own build decision slide.",
+      "header": "Knowledge files and capabilities should both be chosen intentionally",
+      "subheader": "Upload only what helps the job, and enable only the capabilities that support the workflow you actually want",
+      "takeaway": "More tools do not automatically make a better assistant.",
+      "figureRole": "Make the file and capability choices feel concrete and governable.",
+      "family": "capability-stack",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-25-knowledge-and-capabilities.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-25/versions/version-000001--knowledge-and-capabilities-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-25/versions/version-000001--knowledge-and-capabilities-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-25/manifest.json"
+      },
+      "selectedDirection": "Knowledge and Capabilities V1 is the current selected mockup.",
+      "notes": [
+        "Upload the right documents, not every document.",
+        "Choose only capabilities that help the task.",
+        "Disable open web if grounding matters most."
+      ],
+      "selectedVariantId": "knowledge-and-capabilities-v1",
+      "variants": [
+        {
+          "id": "knowledge-and-capabilities-v1",
+          "label": "Knowledge and Capabilities V1",
+          "status": "selected",
+          "summary": "Configuration-focused slide for file uploads, capability selection, and intentional scope control.",
+          "previewPath": "projects/customgpt/slide-figures/slide-25/versions/version-000001--knowledge-and-capabilities-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-25/versions/version-000001--knowledge-and-capabilities-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-25/versions/version-000001--knowledge-and-capabilities-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-25/versions/version-000001--knowledge-and-capabilities-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Knowledge and Capabilities\n\n## Purpose\n\n- Separate files and capabilities into their own build decision slide.\n- Make the file and capability choices feel concrete and governable.\n\n## Core copy\n\n- Header: Knowledge files and capabilities should both be chosen intentionally\n- Subheader: Upload only what helps the job, and enable only the capabilities that support the workflow you actually want\n- Takeaway: More tools do not automatically make a better assistant.\n\n## Visual notes\n\n- Upload the right documents, not every document.\n- Choose only capabilities that help the task.\n- Disable open web if grounding matters most.\n"
+    },
+    {
+      "id": "slide-26",
+      "displayNumber": "26",
+      "importedSlides": [
+        31,
+        35,
+        40
+      ],
+      "status": "active",
+      "title": "Guardrails: Citations, Refusals, Tone",
+      "purpose": "Preserve Connor's strong instruction guardrails as a dedicated design checkpoint.",
+      "header": "Citations, refusal language, and tone are product features",
+      "subheader": "The assistant should cite the source, refuse unsupported claims, and stay concise, neutral, and action-oriented",
+      "takeaway": "Guardrails are what make the assistant safe to trust operationally.",
+      "figureRole": "Show the instruction guardrails as visible build choices.",
+      "family": "guardrail-grid",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-26-guardrails.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-26/versions/version-000001--guardrails-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-26/versions/version-000001--guardrails-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-26/manifest.json"
+      },
+      "selectedDirection": "Guardrails V1 is the current selected mockup.",
+      "notes": [
+        "Always cite the source file and page or section.",
+        "Refuse unsupported answers instead of guessing.",
+        "Keep the tone concise, neutral, and helpful."
+      ],
+      "selectedVariantId": "guardrails-v1",
+      "variants": [
+        {
+          "id": "guardrails-v1",
+          "label": "Guardrails V1",
+          "status": "selected",
+          "summary": "Guardrail board showing citation, refusal, and tone as the key instruction controls.",
+          "previewPath": "projects/customgpt/slide-figures/slide-26/versions/version-000001--guardrails-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-26/versions/version-000001--guardrails-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-26/versions/version-000001--guardrails-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-26/versions/version-000001--guardrails-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Guardrails: Citations, Refusals, Tone\n\n## Purpose\n\n- Preserve Connor's strong instruction guardrails as a dedicated design checkpoint.\n- Show the instruction guardrails as visible build choices.\n\n## Core copy\n\n- Header: Citations, refusal language, and tone are product features\n- Subheader: The assistant should cite the source, refuse unsupported claims, and stay concise, neutral, and action-oriented\n- Takeaway: Guardrails are what make the assistant safe to trust operationally.\n\n## Visual notes\n\n- Always cite the source file and page or section.\n- Refuse unsupported answers instead of guessing.\n- Keep the tone concise, neutral, and helpful.\n"
+    },
+    {
+      "id": "slide-27",
+      "displayNumber": "27",
+      "importedSlides": [
+        35
+      ],
+      "status": "active",
+      "title": "Test in Preview",
+      "purpose": "Keep preview testing central instead of treating it as a final polish step.",
+      "header": "Preview is where you learn whether the build is actually working",
+      "subheader": "Test known-answer questions, unsupported questions, and ambiguity before you ever think about sharing the tool",
+      "takeaway": "The build is not real until it survives preview testing.",
+      "figureRole": "Turn testing into a concrete checklist of scenarios.",
+      "family": "preview-testing",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-27-test-in-preview.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-27/versions/version-000001--test-in-preview-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-27/versions/version-000001--test-in-preview-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-27/manifest.json"
+      },
+      "selectedDirection": "Test in Preview V1 is the current selected mockup.",
+      "notes": [
+        "Ask a question the files can clearly answer.",
+        "Ask one the files cannot support.",
+        "Ask one that requires a citation to be useful.",
+        "Watch whether the first answer is clear enough to resolve the task."
+      ],
+      "selectedVariantId": "test-in-preview-v1",
+      "variants": [
+        {
+          "id": "test-in-preview-v1",
+          "label": "Test in Preview V1",
+          "status": "selected",
+          "summary": "Preview-testing checklist that frames validation as part of the build itself.",
+          "previewPath": "projects/customgpt/slide-figures/slide-27/versions/version-000001--test-in-preview-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-27/versions/version-000001--test-in-preview-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-27/versions/version-000001--test-in-preview-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-27/versions/version-000001--test-in-preview-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Test in Preview\n\n## Purpose\n\n- Keep preview testing central instead of treating it as a final polish step.\n- Turn testing into a concrete checklist of scenarios.\n\n## Core copy\n\n- Header: Preview is where you learn whether the build is actually working\n- Subheader: Test known-answer questions, unsupported questions, and ambiguity before you ever think about sharing the tool\n- Takeaway: The build is not real until it survives preview testing.\n\n## Visual notes\n\n- Ask a question the files can clearly answer.\n- Ask one the files cannot support.\n- Ask one that requires a citation to be useful.\n- Watch whether the first answer is clear enough to resolve the task.\n"
+    },
+    {
+      "id": "slide-28",
+      "displayNumber": "28",
+      "importedSlides": [
+        31,
+        35
+      ],
+      "status": "active",
+      "title": "Push on Unknowns and Conflicts",
+      "purpose": "Make edge-case testing explicit so the audience sees what safe behavior looks like.",
+      "header": "A strong GPT should handle missing answers and conflicting files gracefully",
+      "subheader": "The goal is not just one good answer. It is reliable behavior when the evidence is thin, absent, or inconsistent.",
+      "takeaway": "Good refusals and conflict flags are signs of quality, not weakness.",
+      "figureRole": "Compare the behavior we want under uncertainty with the behavior we do not want.",
+      "family": "edge-case-grid",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-28-unknowns-and-conflicts.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-28/versions/version-000001--unknowns-and-conflicts-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-28/versions/version-000001--unknowns-and-conflicts-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-28/manifest.json"
+      },
+      "selectedDirection": "Unknowns and Conflicts V1 is the current selected mockup.",
+      "notes": [
+        "Desired behavior: say what the files support, what they do not support, and where the human should go next.",
+        "Risky behavior: smooth over ambiguity, hide conflict, or turn a gap in the files into a confident answer.",
+        "Reliable behavior under uncertainty is one of the strongest signs of a mature build."
+      ],
+      "selectedVariantId": "unknowns-and-conflicts-v1",
+      "variants": [
+        {
+          "id": "unknowns-and-conflicts-v1",
+          "label": "Unknowns and Conflicts V1",
+          "status": "selected",
+          "summary": "Edge-case testing slide that makes refusals and conflict flags feel like product wins.",
+          "previewPath": "projects/customgpt/slide-figures/slide-28/versions/version-000001--unknowns-and-conflicts-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-28/versions/version-000001--unknowns-and-conflicts-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-28/versions/version-000001--unknowns-and-conflicts-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-28/versions/version-000001--unknowns-and-conflicts-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Push on Unknowns and Conflicts\n\n## Purpose\n\n- Make edge-case testing explicit so the audience sees what safe behavior looks like.\n- Compare the behavior we want under uncertainty with the behavior we do not want.\n\n## Core copy\n\n- Header: A strong GPT should handle missing answers and conflicting files gracefully\n- Subheader: The goal is not just one good answer. It is reliable behavior when the evidence is thin, absent, or inconsistent.\n- Takeaway: Good refusals and conflict flags are signs of quality, not weakness.\n\n## Visual notes\n\n- Desired behavior: say what the files support, what they do not support, and where the human should go next.\n- Risky behavior: smooth over ambiguity, hide conflict, or turn a gap in the files into a confident answer.\n- Reliable behavior under uncertainty is one of the strongest signs of a mature build.\n"
+    },
+    {
+      "id": "slide-29",
+      "displayNumber": "29",
+      "importedSlides": [
+        36
+      ],
+      "status": "active",
+      "title": "Deploy and Share",
+      "purpose": "Preserve Connor's deployment step while keeping the audience focused on readiness.",
+      "header": "Share only after the tool has earned it",
+      "subheader": "Once the build is tested, choose the right sharing mode, explain the expectations, and keep the audience aware of access or capacity limits",
+      "takeaway": "Deployment is a product decision, not a finish button.",
+      "figureRole": "Show deployment as a final gate rather than a casual click.",
+      "family": "deployment-roadmap",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-29-deploy-and-share.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-29/versions/version-000001--deploy-and-share-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-29/versions/version-000001--deploy-and-share-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-29/manifest.json"
+      },
+      "selectedDirection": "Deploy and Share V1 is the current selected mockup.",
+      "notes": [
+        "Finalize after testing and revisions.",
+        "Choose the right sharing audience or link mode.",
+        "Set expectations about access, limits, and support."
+      ],
+      "selectedVariantId": "deploy-and-share-v1",
+      "variants": [
+        {
+          "id": "deploy-and-share-v1",
+          "label": "Deploy and Share V1",
+          "status": "selected",
+          "summary": "Deployment slide that reframes sharing as a readiness gate with audience expectations attached.",
+          "previewPath": "projects/customgpt/slide-figures/slide-29/versions/version-000001--deploy-and-share-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-29/versions/version-000001--deploy-and-share-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-29/versions/version-000001--deploy-and-share-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-29/versions/version-000001--deploy-and-share-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Deploy and Share\n\n## Purpose\n\n- Preserve Connor's deployment step while keeping the audience focused on readiness.\n- Show deployment as a final gate rather than a casual click.\n\n## Core copy\n\n- Header: Share only after the tool has earned it\n- Subheader: Once the build is tested, choose the right sharing mode, explain the expectations, and keep the audience aware of access or capacity limits\n- Takeaway: Deployment is a product decision, not a finish button.\n\n## Visual notes\n\n- Finalize after testing and revisions.\n- Choose the right sharing audience or link mode.\n- Set expectations about access, limits, and support.\n"
+    },
+    {
+      "id": "slide-30",
+      "displayNumber": "30",
+      "importedSlides": [
+        39
+      ],
+      "status": "active",
+      "title": "Governance and Maintenance",
+      "purpose": "Carry Connor's maintenance slide into the operational close of the talk.",
+      "header": "The tool needs an owner, an update habit, and a source-of-truth policy set",
+      "subheader": "Governance means someone knows what files belong in the GPT, when they get updated, and how the tool gets re-tested",
+      "takeaway": "A useful GPT is maintained like a real program asset.",
+      "figureRole": "Use an operational governance grid, not a compliance wall of text.",
+      "family": "governance-grid",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-30-governance-and-maintenance.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-30/versions/version-000001--governance-and-maintenance-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-30/versions/version-000001--governance-and-maintenance-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-30/manifest.json"
+      },
+      "selectedDirection": "Governance and Maintenance V1 is the current selected mockup.",
+      "notes": [
+        "Assign a named owner or small governance team.",
+        "Review and replace important files on a schedule.",
+        "Keep one approved source set and re-test after updates."
+      ],
+      "selectedVariantId": "governance-and-maintenance-v1",
+      "variants": [
+        {
+          "id": "governance-and-maintenance-v1",
+          "label": "Governance and Maintenance V1",
+          "status": "selected",
+          "summary": "Governance grid showing ownership, update cadence, and source control as the core maintenance habits.",
+          "previewPath": "projects/customgpt/slide-figures/slide-30/versions/version-000001--governance-and-maintenance-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-30/versions/version-000001--governance-and-maintenance-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-30/versions/version-000001--governance-and-maintenance-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-30/versions/version-000001--governance-and-maintenance-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Governance and Maintenance\n\n## Purpose\n\n- Carry Connor's maintenance slide into the operational close of the talk.\n- Use an operational governance grid, not a compliance wall of text.\n\n## Core copy\n\n- Header: The tool needs an owner, an update habit, and a source-of-truth policy set\n- Subheader: Governance means someone knows what files belong in the GPT, when they get updated, and how the tool gets re-tested\n- Takeaway: A useful GPT is maintained like a real program asset.\n\n## Visual notes\n\n- Assign a named owner or small governance team.\n- Review and replace important files on a schedule.\n- Keep one approved source set and re-test after updates.\n"
+    },
+    {
+      "id": "slide-31",
+      "displayNumber": "31",
+      "importedSlides": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "status": "active",
+      "title": "Best Practices",
+      "purpose": "Consolidate Connor's repeated best-practice slides into one stronger board.",
+      "header": "A few best practices do most of the safety work",
+      "subheader": "No PHI, strong prompt guardrails, visible citations, and a clear source-of-truth disclaimer will carry you far",
+      "takeaway": "A compact best-practice board is more useful than six nearly duplicated slides.",
+      "figureRole": "Turn the repeated best-practice content into one memorable grid.",
+      "family": "practice-grid",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-31-best-practices.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-31/versions/version-000001--best-practices-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-31/versions/version-000001--best-practices-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-31/manifest.json"
+      },
+      "selectedDirection": "Best Practices V1 is the current selected mockup.",
+      "notes": [
+        "No PHI in uploads or prompts.",
+        "The policy document stays authoritative.",
+        "Strong guardrails matter more than clever phrasing.",
+        "Citations should always be visible."
+      ],
+      "selectedVariantId": "best-practices-v1",
+      "variants": [
+        {
+          "id": "best-practices-v1",
+          "label": "Best Practices V1",
+          "status": "selected",
+          "summary": "Consolidated best-practice board built from Connor's repeated close-section guidance.",
+          "previewPath": "projects/customgpt/slide-figures/slide-31/versions/version-000001--best-practices-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-31/versions/version-000001--best-practices-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-31/versions/version-000001--best-practices-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-31/versions/version-000001--best-practices-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Best Practices\n\n## Purpose\n\n- Consolidate Connor's repeated best-practice slides into one stronger board.\n- Turn the repeated best-practice content into one memorable grid.\n\n## Core copy\n\n- Header: A few best practices do most of the safety work\n- Subheader: No PHI, strong prompt guardrails, visible citations, and a clear source-of-truth disclaimer will carry you far\n- Takeaway: A compact best-practice board is more useful than six nearly duplicated slides.\n\n## Visual notes\n\n- No PHI in uploads or prompts.\n- The policy document stays authoritative.\n- Strong guardrails matter more than clever phrasing.\n- Citations should always be visible.\n"
+    },
+    {
+      "id": "slide-32",
+      "displayNumber": "32",
+      "importedSlides": [
+        48
+      ],
+      "status": "active",
+      "title": "Future Opportunities",
+      "purpose": "Keep Connor's future-opportunities slide as the optimistic near-close.",
+      "header": "The same design pattern can support other educational and operational jobs",
+      "subheader": "Once the team understands scope, grounding, and governance, the pattern can extend into onboarding, teaching, and study workflows",
+      "takeaway": "A well-governed policy assistant can be the starting point, not the endpoint.",
+      "figureRole": "Show adjacent opportunities without making the current talk feel unfocused.",
+      "family": "opportunity-grid",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-32-future-opportunities.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-32/versions/version-000001--future-opportunities-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-32/versions/version-000001--future-opportunities-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-32/manifest.json"
+      },
+      "selectedDirection": "Future Opportunities V1 is the current selected mockup.",
+      "notes": [
+        "Rotation onboarding assistants.",
+        "Didactic support and summarization tools.",
+        "Study and resource guides.",
+        "Simulation or research helpers."
+      ],
+      "selectedVariantId": "future-opportunities-v1",
+      "variants": [
+        {
+          "id": "future-opportunities-v1",
+          "label": "Future Opportunities V1",
+          "status": "selected",
+          "summary": "Opportunity grid that keeps Connor's forward-looking energy while staying connected to the workshop theme.",
+          "previewPath": "projects/customgpt/slide-figures/slide-32/versions/version-000001--future-opportunities-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-32/versions/version-000001--future-opportunities-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-32/versions/version-000001--future-opportunities-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-32/versions/version-000001--future-opportunities-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Future Opportunities\n\n## Purpose\n\n- Keep Connor's future-opportunities slide as the optimistic near-close.\n- Show adjacent opportunities without making the current talk feel unfocused.\n\n## Core copy\n\n- Header: The same design pattern can support other educational and operational jobs\n- Subheader: Once the team understands scope, grounding, and governance, the pattern can extend into onboarding, teaching, and study workflows\n- Takeaway: A well-governed policy assistant can be the starting point, not the endpoint.\n\n## Visual notes\n\n- Rotation onboarding assistants.\n- Didactic support and summarization tools.\n- Study and resource guides.\n- Simulation or research helpers.\n"
+    },
+    {
+      "id": "slide-33",
+      "displayNumber": "33",
+      "importedSlides": [
+        49,
+        51
+      ],
+      "status": "active",
+      "title": "Takeaways and Q&A",
+      "purpose": "Close the workshop cleanly with practical next steps and room for discussion.",
+      "header": "Build small, ground it well, test it hard, and govern it like it matters",
+      "subheader": "That is how a custom GPT becomes a useful policy-support tool instead of an impressive but fragile demo",
+      "takeaway": "The audience should leave with a practical first move and a realistic quality bar.",
+      "figureRole": "Use a crisp closing summary with optional contact or QR space.",
+      "family": "closing-summary",
+      "buildStatus": "packet and seeded mockup drafted",
+      "proof": [],
+      "paths": {
+        "packet": "projects/customgpt/slide-packets/slide-33-takeaways-qa.md",
+        "specs": [
+          "projects/customgpt/slide-figures/slide-33/versions/version-000001--takeaways-qa-v1/spec.json"
+        ],
+        "stampedDir": "projects/customgpt/slide-figures/slide-33/versions/version-000001--takeaways-qa-v1",
+        "assetsManifest": "projects/customgpt/slide-assets/slide-33/manifest.json"
+      },
+      "selectedDirection": "Takeaways and Q&A V1 is the current selected mockup.",
+      "notes": [
+        "Build small and specific.",
+        "Ground it in current files.",
+        "Test edge cases before sharing.",
+        "Govern it like a real tool."
+      ],
+      "selectedVariantId": "takeaways-qa-v1",
+      "variants": [
+        {
+          "id": "takeaways-qa-v1",
+          "label": "Takeaways and Q&A V1",
+          "status": "selected",
+          "summary": "Closing summary slide that turns the workshop into a compact operating checklist.",
+          "previewPath": "projects/customgpt/slide-figures/slide-33/versions/version-000001--takeaways-qa-v1/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/customgpt/slide-figures/slide-33/versions/version-000001--takeaways-qa-v1"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/customgpt/slide-figures/slide-33/versions/version-000001--takeaways-qa-v1/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/customgpt/slide-figures/slide-33/versions/version-000001--takeaways-qa-v1/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Takeaways and Q&A\n\n## Purpose\n\n- Close the workshop cleanly with practical next steps and room for discussion.\n- Use a crisp closing summary with optional contact or QR space.\n\n## Core copy\n\n- Header: Build small, ground it well, test it hard, and govern it like it matters\n- Subheader: That is how a custom GPT becomes a useful policy-support tool instead of an impressive but fragile demo\n- Takeaway: The audience should leave with a practical first move and a realistic quality bar.\n\n## Visual notes\n\n- Build small and specific.\n- Ground it in current files.\n- Test edge cases before sharing.\n- Govern it like a real tool.\n"
     }
-  ],
-  "paths": {
-    "deckAssetsManifest": "projects/customgpt/assets/manifest.json"
-  }
+  ]
 }

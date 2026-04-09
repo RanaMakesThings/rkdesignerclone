@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-11-limits-and-failure-modes",
+    "family": "limitation-grid",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-11-limits-and-failure-modes.md"
+  },
+  "chrome": {
+    "title": "Grounded systems still fail when the inputs or expectations are wrong",
+    "subtitle": "Outdated files, conflicting policies, or ambiguous questions can still produce weak answers even with good instructions",
+    "chips": [
+      "Limits and Failure Modes",
+      "Slide 11"
+    ],
+    "footnote": "A grounded assistant is useful, but it still needs judgement and upkeep."
+  },
+  "constraints": {
+    "figureJob": "Show the main failure modes as bounded risks.",
+    "focalPoint": "Outdated files produce outdated guidance.",
+    "layout": "limitation-grid",
+    "big": [
+      "Grounded systems still fail when the inputs or expectations are wrong",
+      "Outdated files produce outdated guidance."
+    ],
+    "quiet": [
+      "Outdated files, conflicting policies, or ambiguous questions can still produce weak answers even with good instructions",
+      "A grounded assistant is useful, but it still needs judgement and upkeep."
+    ],
+    "accentTargets": [
+      "A grounded assistant is useful, but it still needs judgement and upkeep."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Grounded systems still fail when the inputs or expectations are wrong",
+      "Outdated files, conflicting policies, or ambiguous questions can still produce weak answers even with good instructions",
+      "A grounded assistant is useful, but it still needs judgement and upkeep."
+    ],
+    "preferred": [
+      "Outdated files produce outdated guidance.",
+      "Conflicting policies need explicit conflict handling.",
+      "The tool cannot replace human judgement."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Make the boundaries explicit before the live build creates false confidence.",
+    "figureRole": "Show the main failure modes as bounded risks.",
+    "notes": [
+      "Outdated files produce outdated guidance.",
+      "Conflicting policies need explicit conflict handling.",
+      "The tool cannot replace human judgement."
+    ],
+    "selectedDirection": "Limits and Failure Modes V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Grounded systems still fail when the inputs or expectations are wrong",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show the main failure modes as bounded risks.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

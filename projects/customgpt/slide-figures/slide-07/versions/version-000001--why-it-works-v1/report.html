@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Why It Works report</title>
+    <style>
+      :root {
+        --navy: #0E2841;
+        --teal: #156082;
+        --orange: #E97132;
+        --line: rgba(14, 40, 65, 0.12);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 32px;
+        font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+        color: #13273b;
+        background: linear-gradient(180deg, #f9fbfd 0%, #eef3f8 100%);
+      }
+      .shell {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        gap: 24px;
+      }
+      .hero {
+        display: grid;
+        gap: 10px;
+        padding: 24px 28px;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.94);
+      }
+      .kicker {
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--teal);
+      }
+      h1 {
+        margin: 0;
+        font-size: 42px;
+        line-height: 1.04;
+        letter-spacing: -0.04em;
+        color: var(--navy);
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .pill {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(21, 96, 130, 0.1);
+        border: 1px solid rgba(21, 96, 130, 0.12);
+        color: var(--navy);
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.6fr);
+        gap: 24px;
+      }
+      .panel {
+        padding: 20px 22px;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.94);
+      }
+      h2 {
+        margin: 0 0 14px;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+        color: var(--navy);
+      }
+      p, li {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      img {
+        display: block;
+        width: 100%;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="kicker">CustomGPT Creation · Canonical slide report</div>
+        <h1>Why It Works</h1>
+        <p>Explain the mechanism in plain language without turning this into a theory lecture.</p>
+        <div class="meta">
+          <span class="pill">slide-07</span>
+          <span class="pill">Why It Works V1</span>
+          <span class="pill">Imported slides: 10, 11, 12, 13, 14, 15</span>
+        </div>
+      </section>
+      <section class="grid">
+        <div class="panel">
+          <h2>Selected preview</h2>
+          <img src="./preview.png" alt="Why It Works preview" />
+        </div>
+        <div class="panel">
+          <h2>Working notes</h2>
+          <p><strong>Header:</strong> Good policy assistants are configured, grounded workflows</p>
+          <p><strong>Takeaway:</strong> This is configuration work more than deep engineering.</p>
+          <ul><li>Instructions set the role and rules.</li><li>Knowledge files supply the source material.</li><li>Capabilities extend what the GPT can do.</li></ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-30-best-practices",
+    "family": "practice-grid",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-30-best-practices.md"
+  },
+  "chrome": {
+    "title": "A few best practices do most of the safety work",
+    "subtitle": "No PHI, strong prompt guardrails, visible citations, and a clear source-of-truth disclaimer will carry you far",
+    "chips": [
+      "Best Practices",
+      "Slide 30"
+    ],
+    "footnote": "A compact best-practice board is more useful than six nearly duplicated slides."
+  },
+  "constraints": {
+    "figureJob": "Turn the repeated best-practice content into one memorable grid.",
+    "focalPoint": "No PHI in uploads or prompts.",
+    "layout": "practice-grid",
+    "big": [
+      "A few best practices do most of the safety work",
+      "No PHI in uploads or prompts."
+    ],
+    "quiet": [
+      "No PHI, strong prompt guardrails, visible citations, and a clear source-of-truth disclaimer will carry you far",
+      "A compact best-practice board is more useful than six nearly duplicated slides."
+    ],
+    "accentTargets": [
+      "A compact best-practice board is more useful than six nearly duplicated slides."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "A few best practices do most of the safety work",
+      "No PHI, strong prompt guardrails, visible citations, and a clear source-of-truth disclaimer will carry you far",
+      "A compact best-practice board is more useful than six nearly duplicated slides."
+    ],
+    "preferred": [
+      "No PHI in uploads or prompts.",
+      "The policy document stays authoritative.",
+      "Strong guardrails matter more than clever phrasing.",
+      "Citations should always be visible."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Consolidate Connor's repeated best-practice slides into one stronger board.",
+    "figureRole": "Turn the repeated best-practice content into one memorable grid.",
+    "notes": [
+      "No PHI in uploads or prompts.",
+      "The policy document stays authoritative.",
+      "Strong guardrails matter more than clever phrasing.",
+      "Citations should always be visible."
+    ],
+    "selectedDirection": "Best Practices V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "A few best practices do most of the safety work",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Turn the repeated best-practice content into one memorable grid.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

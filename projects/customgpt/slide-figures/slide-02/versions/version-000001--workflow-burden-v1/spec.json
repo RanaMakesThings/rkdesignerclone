@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-why-this-matters",
+    "family": "problem-frame",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-02-workflow-burden.md"
+  },
+  "chrome": {
+    "title": "Policy questions keep landing on the same people.",
+    "subtitle": "Residency leaders and chiefs repeatedly search static documents for operational answers that should be fast, consistent, and source-bounded.",
+    "chips": [
+      "Why This Matters",
+      "Slide 2"
+    ],
+    "footnote": "This is a repeated workflow problem that creates delay, inconsistency, and interruption."
+  },
+  "constraints": {
+    "figureJob": "Make the workflow burden visible with role cards, repeated question loops, and an operational payoff.",
+    "focalPoint": "Program leaders absorb decision bottlenecks.",
+    "layout": "problem-frame",
+    "big": [
+      "Policy questions keep landing on the same people.",
+      "Program leaders absorb decision bottlenecks."
+    ],
+    "quiet": [
+      "Residency leaders and chiefs repeatedly search static documents for operational answers that should be fast, consistent, and source-bounded.",
+      "This is a repeated workflow problem that creates delay, inconsistency, and interruption."
+    ],
+    "accentTargets": [
+      "This is a repeated workflow problem that creates delay, inconsistency, and interruption."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Policy questions keep landing on the same people.",
+      "Residency leaders and chiefs repeatedly search static documents for operational answers that should be fast, consistent, and source-bounded.",
+      "This is a repeated workflow problem that creates delay, inconsistency, and interruption."
+    ],
+    "preferred": [
+      "Program leaders absorb decision bottlenecks.",
+      "Chief residents keep translating policy PDFs into real-time coverage answers.",
+      "Program coordinators reopen the same documents instead of advancing the work."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Show the administrative pain point and why the audience should care immediately.",
+    "figureRole": "Make the workflow burden visible with role cards, repeated question loops, and an operational payoff.",
+    "notes": [
+      "Program leaders absorb decision bottlenecks.",
+      "Chief residents keep translating policy PDFs into real-time coverage answers.",
+      "Program coordinators reopen the same documents instead of advancing the work."
+    ],
+    "selectedDirection": "Workflow Burden V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Policy questions keep landing on the same people.",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Make the workflow burden visible with role cards, repeated question loops, and an operational payoff.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

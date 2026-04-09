@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-08-why-it-works",
+    "family": "system-diagram",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-08-why-it-works.md"
+  },
+  "chrome": {
+    "title": "Good policy assistants are configured, grounded workflows",
+    "subtitle": "Instructions shape behavior, knowledge files provide source material, and selected capabilities extend what the GPT can do",
+    "chips": [
+      "Why It Works",
+      "Slide 8"
+    ],
+    "footnote": "This is configuration work more than deep engineering."
+  },
+  "constraints": {
+    "figureJob": "Use a simple three-part system map rather than dense architecture.",
+    "focalPoint": "Instructions set the role and rules.",
+    "layout": "system-diagram",
+    "big": [
+      "Good policy assistants are configured, grounded workflows",
+      "Instructions set the role and rules."
+    ],
+    "quiet": [
+      "Instructions shape behavior, knowledge files provide source material, and selected capabilities extend what the GPT can do",
+      "This is configuration work more than deep engineering."
+    ],
+    "accentTargets": [
+      "This is configuration work more than deep engineering."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Good policy assistants are configured, grounded workflows",
+      "Instructions shape behavior, knowledge files provide source material, and selected capabilities extend what the GPT can do",
+      "This is configuration work more than deep engineering."
+    ],
+    "preferred": [
+      "Instructions set the role and rules.",
+      "Knowledge files supply the source material.",
+      "Capabilities extend what the GPT can do."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Explain the mechanism in plain language without turning this into a theory lecture.",
+    "figureRole": "Use a simple three-part system map rather than dense architecture.",
+    "notes": [
+      "Instructions set the role and rules.",
+      "Knowledge files supply the source material.",
+      "Capabilities extend what the GPT can do."
+    ],
+    "selectedDirection": "Why It Works V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Good policy assistants are configured, grounded workflows",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Use a simple three-part system map rather than dense architecture.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

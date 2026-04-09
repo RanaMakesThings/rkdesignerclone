@@ -5,8 +5,9 @@ import { ProjectShell } from "@/components/studio/project-shell";
 import { StudioPreviewLightbox } from "@/components/studio/studio-preview-lightbox";
 import {
   getProjectManifestById,
-  getProjectManifests,
+  getVisibleProjectManifests,
   groupPrimaryProjectDocs,
+  toVisibleProjectOptions,
 } from "@/lib/server/studio-data";
 
 export const dynamic = "force-dynamic";
@@ -19,14 +20,13 @@ export default async function ProjectPage({
   const { projectId } = await params;
   const [project, manifests] = await Promise.all([
     getProjectManifestById(projectId),
-    getProjectManifests(),
+    getVisibleProjectManifests(),
   ]);
-  const projects = manifests.map((entry) => ({
-    projectId: entry.projectId,
-    title: entry.title,
-  }));
+  const projects = toVisibleProjectOptions(manifests);
+  const isCustomGpt = project.projectId === "customgpt";
   const primaryDocs = groupPrimaryProjectDocs(project);
   const activeSlides = project.slides.filter((slide) => slide.status === "active");
+  const previewCacheKey = `${project.generatedAt}:${project.sourceFingerprint.deckSpecMtimeMs}`;
 
   return (
     <ProjectShell project={project} projects={projects}>
@@ -36,9 +36,23 @@ export default async function ProjectPage({
             <p className="eyebrow">Project Overview</p>
             <h2>{project.title}</h2>
             <p className="studio-body-copy">
-              Repo-native project workspace for deck docs, packets, assets, and slide-level
-              iteration.
+              {isCustomGpt
+                ? "Project summary and source material for the talk. Use the deck board for the full slide-by-slide creation view."
+                : "Repo-native project workspace for deck docs, packets, assets, and slide-level iteration."}
             </p>
+            {isCustomGpt ? (
+              <div className="studio-link-row">
+                <Link href={`/projects/${project.projectId}/deck`} className="primary-link">
+                  Open Master Deck
+                </Link>
+                <Link
+                  href={`/projects/${project.projectId}/slides/slide-01`}
+                  className="ghost-button"
+                >
+                  Open Slide Workbench
+                </Link>
+              </div>
+            ) : null}
           </div>
           <div className="studio-intro-stats">
             <div>
@@ -126,6 +140,7 @@ export default async function ProjectPage({
                 {slide.previews.selected ? (
                   <StudioPreviewLightbox
                     projectId={project.projectId}
+                    cacheKey={previewCacheKey}
                     preview={slide.previews.selected}
                     previewWidth={900}
                     alt={`${slide.title} preview`}

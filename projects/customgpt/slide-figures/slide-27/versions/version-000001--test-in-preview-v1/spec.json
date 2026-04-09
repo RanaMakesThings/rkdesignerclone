@@ -1,0 +1,81 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-27-test-in-preview",
+    "family": "preview-testing",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-27-test-in-preview.md"
+  },
+  "chrome": {
+    "title": "Preview is where you learn whether the build is actually working",
+    "subtitle": "Test known-answer questions, unsupported questions, and ambiguity before you ever think about sharing the tool",
+    "chips": [
+      "Test in Preview",
+      "Slide 27"
+    ],
+    "footnote": "The build is not real until it survives preview testing."
+  },
+  "constraints": {
+    "figureJob": "Turn testing into a concrete checklist of scenarios.",
+    "focalPoint": "Ask a question the files can clearly answer.",
+    "layout": "preview-testing",
+    "big": [
+      "Preview is where you learn whether the build is actually working",
+      "Ask a question the files can clearly answer."
+    ],
+    "quiet": [
+      "Test known-answer questions, unsupported questions, and ambiguity before you ever think about sharing the tool",
+      "The build is not real until it survives preview testing."
+    ],
+    "accentTargets": [
+      "The build is not real until it survives preview testing."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Preview is where you learn whether the build is actually working",
+      "Test known-answer questions, unsupported questions, and ambiguity before you ever think about sharing the tool",
+      "The build is not real until it survives preview testing."
+    ],
+    "preferred": [
+      "Ask a question the files can clearly answer.",
+      "Ask one the files cannot support.",
+      "Ask one that requires a citation to be useful.",
+      "Watch whether the first answer is clear enough to resolve the task."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Keep preview testing central instead of treating it as a final polish step.",
+    "figureRole": "Turn testing into a concrete checklist of scenarios.",
+    "notes": [
+      "Ask a question the files can clearly answer.",
+      "Ask one the files cannot support.",
+      "Ask one that requires a citation to be useful.",
+      "Watch whether the first answer is clear enough to resolve the task."
+    ],
+    "selectedDirection": "Test in Preview V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Preview is where you learn whether the build is actually working",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Turn testing into a concrete checklist of scenarios.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

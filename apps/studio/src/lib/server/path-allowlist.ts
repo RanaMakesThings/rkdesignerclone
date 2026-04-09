@@ -20,11 +20,21 @@ const normalizeRepoRelativePath = (value: string) =>
 
 const getTrustedPrefixes = (projectId: string | null) => {
   const normalizedProjectId = normalizeProjectId(projectId);
-  if (normalizedProjectId && normalizedProjectId !== DESIGNER_PROJECT_ID) {
-    return new Set<string>();
+  if (!normalizedProjectId) {
+    return new Set(DESIGNER_PREFIXES.map((prefix) => normalizeRepoRelativePath(prefix)));
   }
 
-  return new Set(DESIGNER_PREFIXES.map((prefix) => normalizeRepoRelativePath(prefix)));
+  const prefixes = new Set<string>();
+
+  prefixes.add(normalizeRepoRelativePath(`projects/${normalizedProjectId}/`));
+
+  if (normalizedProjectId === DESIGNER_PROJECT_ID) {
+    for (const prefix of DESIGNER_PREFIXES) {
+      prefixes.add(normalizeRepoRelativePath(prefix));
+    }
+  }
+
+  return prefixes;
 };
 
 export const isTrustedStudioPath = (

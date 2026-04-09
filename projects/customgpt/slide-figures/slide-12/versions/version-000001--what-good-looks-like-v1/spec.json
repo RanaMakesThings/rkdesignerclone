@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-12-what-good-looks-like",
+    "family": "quality-pillars",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-12-what-good-looks-like.md"
+  },
+  "chrome": {
+    "title": "A good answer is specific, sourced, and bounded",
+    "subtitle": "The assistant should answer from the documents, cite the source, and say when it does not know",
+    "chips": [
+      "What Good Looks Like",
+      "Slide 12"
+    ],
+    "footnote": "This is the quality bar we will hold the live demo to."
+  },
+  "constraints": {
+    "figureJob": "Use three quality pillars instead of abstract prompting advice.",
+    "focalPoint": "Specific enough to resolve the question.",
+    "layout": "quality-pillars",
+    "big": [
+      "A good answer is specific, sourced, and bounded",
+      "Specific enough to resolve the question."
+    ],
+    "quiet": [
+      "The assistant should answer from the documents, cite the source, and say when it does not know",
+      "This is the quality bar we will hold the live demo to."
+    ],
+    "accentTargets": [
+      "This is the quality bar we will hold the live demo to."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "A good answer is specific, sourced, and bounded",
+      "The assistant should answer from the documents, cite the source, and say when it does not know",
+      "This is the quality bar we will hold the live demo to."
+    ],
+    "preferred": [
+      "Specific enough to resolve the question.",
+      "Cited to the right file and page or section.",
+      "Bounded enough to refuse unsupported claims."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Set the answer-quality bar before the audience sees the build.",
+    "figureRole": "Use three quality pillars instead of abstract prompting advice.",
+    "notes": [
+      "Specific enough to resolve the question.",
+      "Cited to the right file and page or section.",
+      "Bounded enough to refuse unsupported claims."
+    ],
+    "selectedDirection": "What Good Looks Like V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "A good answer is specific, sourced, and bounded",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Use three quality pillars instead of abstract prompting advice.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

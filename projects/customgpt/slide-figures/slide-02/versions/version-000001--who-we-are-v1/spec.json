@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-02-who-we-are",
+    "family": "speaker-intro",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-02-who-we-are.md"
+  },
+  "chrome": {
+    "title": "Who we are and what we are building together",
+    "subtitle": "This is a practical workshop from people who live the residency workflow problem, teach within it, and build within current product constraints.",
+    "chips": [
+      "Who We Are",
+      "Slide 2"
+    ],
+    "footnote": "The session is operational, grounded, and intentionally narrow."
+  },
+  "constraints": {
+    "figureJob": "Use presenter portraits only here, paired with a compact session roadmap and practical framing.",
+    "focalPoint": "Connor brings the real residency workflow pain point and the original workshop backbone.",
+    "layout": "speaker-intro",
+    "big": [
+      "Who we are and what we are building together",
+      "Connor brings the real residency workflow pain point and the original workshop backbone."
+    ],
+    "quiet": [
+      "This is a practical workshop from people who live the residency workflow problem, teach within it, and build within current product constraints.",
+      "The session is operational, grounded, and intentionally narrow."
+    ],
+    "accentTargets": [
+      "The session is operational, grounded, and intentionally narrow."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Who we are and what we are building together",
+      "This is a practical workshop from people who live the residency workflow problem, teach within it, and build within current product constraints.",
+      "The session is operational, grounded, and intentionally narrow."
+    ],
+    "preferred": [
+      "Connor brings the real residency workflow pain point and the original workshop backbone.",
+      "Rana brings implementation, product-shaping, and faculty translation for a mixed audience.",
+      "Eddie helps connect the build pattern to teaching, operations, and audience adoption."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Introduce the presenters once, explain why this group is teaching this workshop, and set expectations for the session.",
+    "figureRole": "Use presenter portraits only here, paired with a compact session roadmap and practical framing.",
+    "notes": [
+      "Connor brings the real residency workflow pain point and the original workshop backbone.",
+      "Rana brings implementation, product-shaping, and faculty translation for a mixed audience.",
+      "Eddie helps connect the build pattern to teaching, operations, and audience adoption."
+    ],
+    "selectedDirection": "Who We Are V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Who we are and what we are building together",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Use presenter portraits only here, paired with a compact session roadmap and practical framing.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

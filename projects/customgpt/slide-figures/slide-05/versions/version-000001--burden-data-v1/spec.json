@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-05-administrative-burden-shows-up-in-burnout-and-friction",
+    "family": "burden-data",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-05-burden-data.md"
+  },
+  "chrome": {
+    "title": "Administrative confusion is not a small annoyance",
+    "subtitle": "Connor's original deck linked administrative load, schedule stress, and support bottlenecks to the lived experience of residency operations",
+    "chips": [
+      "Administrative Burden Shows Up in Burnout and Friction",
+      "Slide 5"
+    ],
+    "footnote": "Reducing answer-friction is a meaningful workflow improvement."
+  },
+  "constraints": {
+    "figureJob": "Use evidence-backed burden cards instead of a wall of text.",
+    "focalPoint": "Administrative tasks are a visible contributor to burnout.",
+    "layout": "burden-data",
+    "big": [
+      "Administrative confusion is not a small annoyance",
+      "Administrative tasks are a visible contributor to burnout."
+    ],
+    "quiet": [
+      "Connor's original deck linked administrative load, schedule stress, and support bottlenecks to the lived experience of residency operations",
+      "Reducing answer-friction is a meaningful workflow improvement."
+    ],
+    "accentTargets": [
+      "Reducing answer-friction is a meaningful workflow improvement."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Administrative confusion is not a small annoyance",
+      "Connor's original deck linked administrative load, schedule stress, and support bottlenecks to the lived experience of residency operations",
+      "Reducing answer-friction is a meaningful workflow improvement."
+    ],
+    "preferred": [
+      "Administrative tasks are a visible contributor to burnout.",
+      "Schedule and policy uncertainty become recurring stressors.",
+      "Support bottlenecks force the same questions back onto leaders."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Connect the policy-lookup problem to resident stress and administrative drag.",
+    "figureRole": "Use evidence-backed burden cards instead of a wall of text.",
+    "notes": [
+      "Administrative tasks are a visible contributor to burnout.",
+      "Schedule and policy uncertainty become recurring stressors.",
+      "Support bottlenecks force the same questions back onto leaders."
+    ],
+    "selectedDirection": "Burden Data V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Administrative confusion is not a small annoyance",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Use evidence-backed burden cards instead of a wall of text.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

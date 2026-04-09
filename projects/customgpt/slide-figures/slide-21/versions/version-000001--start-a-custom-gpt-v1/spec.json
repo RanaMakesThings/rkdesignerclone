@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-21-start-a-custom-gpt",
+    "family": "ui-entry",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-21-start-a-custom-gpt.md"
+  },
+  "chrome": {
+    "title": "Start in the GPTs area of ChatGPT",
+    "subtitle": "From there you create a new GPT, give it a narrow job, and move into the configuration surface",
+    "chips": [
+      "Start a Custom GPT",
+      "Slide 21"
+    ],
+    "footnote": "The product entry point is concrete and accessible."
+  },
+  "constraints": {
+    "figureJob": "Show the start surface clearly without drowning the slide in tiny UI text.",
+    "focalPoint": "Open the GPTs area inside ChatGPT.",
+    "layout": "ui-entry",
+    "big": [
+      "Start in the GPTs area of ChatGPT",
+      "Open the GPTs area inside ChatGPT."
+    ],
+    "quiet": [
+      "From there you create a new GPT, give it a narrow job, and move into the configuration surface",
+      "The product entry point is concrete and accessible."
+    ],
+    "accentTargets": [
+      "The product entry point is concrete and accessible."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Start in the GPTs area of ChatGPT",
+      "From there you create a new GPT, give it a narrow job, and move into the configuration surface",
+      "The product entry point is concrete and accessible."
+    ],
+    "preferred": [
+      "Open the GPTs area inside ChatGPT.",
+      "Create a new GPT around one narrow admin job.",
+      "Move into the configuration flow with preview beside you."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Modernize Connor's start-here instructions into a clean visual checkpoint.",
+    "figureRole": "Show the start surface clearly without drowning the slide in tiny UI text.",
+    "notes": [
+      "Open the GPTs area inside ChatGPT.",
+      "Create a new GPT around one narrow admin job.",
+      "Move into the configuration flow with preview beside you."
+    ],
+    "selectedDirection": "Start a Custom GPT V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Start in the GPTs area of ChatGPT",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show the start surface clearly without drowning the slide in tiny UI text.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-19-privacy-and-security-boundaries",
+    "family": "privacy-boundary",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-19-privacy-and-security.md"
+  },
+  "chrome": {
+    "title": "Privacy and security boundaries matter more than novelty",
+    "subtitle": "A useful custom GPT stays narrow, uses approved documents, avoids sensitive data, and is shared only with the right audience",
+    "chips": [
+      "Privacy and Security Boundaries",
+      "Slide 19"
+    ],
+    "footnote": "Sharing and source selection are governance decisions, not convenience features."
+  },
+  "constraints": {
+    "figureJob": "Use a strong boundary graphic that makes the allowed-vs-not-allowed distinction unmistakable.",
+    "focalPoint": "Do not upload PHI, patient-care notes, or sensitive personal data.",
+    "layout": "privacy-boundary",
+    "big": [
+      "Privacy and security boundaries matter more than novelty",
+      "Do not upload PHI, patient-care notes, or sensitive personal data."
+    ],
+    "quiet": [
+      "A useful custom GPT stays narrow, uses approved documents, avoids sensitive data, and is shared only with the right audience",
+      "Sharing and source selection are governance decisions, not convenience features."
+    ],
+    "accentTargets": [
+      "Sharing and source selection are governance decisions, not convenience features."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Privacy and security boundaries matter more than novelty",
+      "A useful custom GPT stays narrow, uses approved documents, avoids sensitive data, and is shared only with the right audience",
+      "Sharing and source selection are governance decisions, not convenience features."
+    ],
+    "preferred": [
+      "Do not upload PHI, patient-care notes, or sensitive personal data.",
+      "Use approved policy and administrative documents only.",
+      "Know who can access the GPT and the files behind it.",
+      "Treat sharing as an access decision with real consequences."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Make privacy, access, and security boundaries explicit before the audience leaves with an overly casual mental model.",
+    "figureRole": "Use a strong boundary graphic that makes the allowed-vs-not-allowed distinction unmistakable.",
+    "notes": [
+      "Do not upload PHI, patient-care notes, or sensitive personal data.",
+      "Use approved policy and administrative documents only.",
+      "Know who can access the GPT and the files behind it.",
+      "Treat sharing as an access decision with real consequences."
+    ],
+    "selectedDirection": "Privacy and Security V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Privacy and security boundaries matter more than novelty",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Use a strong boundary graphic that makes the allowed-vs-not-allowed distinction unmistakable.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

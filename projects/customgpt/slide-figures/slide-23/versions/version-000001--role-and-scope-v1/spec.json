@@ -1,0 +1,79 @@
+{
+  "specVersion": 1,
+  "meta": {
+    "slug": "slide-23-instructions-role-and-scope",
+    "family": "instruction-card",
+    "deckId": "customgpt",
+    "theme": "saem",
+    "mode": "full-slide",
+    "sourcePath": "projects/customgpt/slide-packets/slide-23-role-and-scope.md"
+  },
+  "chrome": {
+    "title": "Tell the GPT exactly what job it has and what job it does not have",
+    "subtitle": "A strong role statement narrows the assistant to uploaded policy support and defines what it should do when the answer is missing",
+    "chips": [
+      "Instructions: Role and Scope",
+      "Slide 23"
+    ],
+    "footnote": "A good scope statement prevents both drift and overconfidence."
+  },
+  "constraints": {
+    "figureJob": "Show the role and scope instructions as the core guardrail.",
+    "focalPoint": "Define the assistant as a policy-support tool.",
+    "layout": "instruction-card",
+    "big": [
+      "Tell the GPT exactly what job it has and what job it does not have",
+      "Define the assistant as a policy-support tool."
+    ],
+    "quiet": [
+      "A strong role statement narrows the assistant to uploaded policy support and defines what it should do when the answer is missing",
+      "A good scope statement prevents both drift and overconfidence."
+    ],
+    "accentTargets": [
+      "A good scope statement prevents both drift and overconfidence."
+    ],
+    "forbidden": [],
+    "semanticGuards": [
+      "saem-shell",
+      "studio-seeded-mockup"
+    ]
+  },
+  "copyPolicy": {
+    "locked": [
+      "Tell the GPT exactly what job it has and what job it does not have",
+      "A strong role statement narrows the assistant to uploaded policy support and defines what it should do when the answer is missing",
+      "A good scope statement prevents both drift and overconfidence."
+    ],
+    "preferred": [
+      "Define the assistant as a policy-support tool.",
+      "Limit answers to the uploaded documents.",
+      "Instruct it to say when the answer is unsupported."
+    ],
+    "optional": [],
+    "forbidden": []
+  },
+  "body": {
+    "purpose": "Turn Connor's role-and-scope guidance into a dedicated builder step.",
+    "figureRole": "Show the role and scope instructions as the core guardrail.",
+    "notes": [
+      "Define the assistant as a policy-support tool.",
+      "Limit answers to the uploaded documents.",
+      "Instruct it to say when the answer is unsupported."
+    ],
+    "selectedDirection": "Role and Scope V1 is the current selected mockup."
+  },
+  "trace": [
+    {
+      "excerpt": "Tell the GPT exactly what job it has and what job it does not have",
+      "targetPath": "chrome.title",
+      "ruleType": "chrome",
+      "note": "Carry the working slide headline into the generated canonical spec."
+    },
+    {
+      "excerpt": "Show the role and scope instructions as the core guardrail.",
+      "targetPath": "constraints.figureJob",
+      "ruleType": "constraint",
+      "note": "Preserve the intended teaching job of the slide."
+    }
+  ]
+}

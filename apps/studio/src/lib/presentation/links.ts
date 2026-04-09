@@ -1,11 +1,41 @@
-export const studioFileHref = (projectId: string, path: string) =>
-  `/api/file?projectId=${encodeURIComponent(projectId)}&path=${encodeURIComponent(path)}`;
+const withCacheBust = (href: string, cacheKey?: string | number | null) => {
+  if (cacheKey === undefined || cacheKey === null || String(cacheKey).trim() === "") {
+    return href;
+  }
+  const joiner = href.includes("?") ? "&" : "?";
+  return `${href}${joiner}v=${encodeURIComponent(String(cacheKey))}`;
+};
 
-export const studioThumbHref = (projectId: string, path: string, width = 720) =>
-  `/api/thumb?projectId=${encodeURIComponent(projectId)}&path=${encodeURIComponent(path)}&w=${encodeURIComponent(String(width))}`;
+export const studioFileHref = (
+  projectId: string,
+  path: string,
+  cacheKey?: string | number | null
+) =>
+  withCacheBust(
+    `/api/file?projectId=${encodeURIComponent(projectId)}&path=${encodeURIComponent(path)}`,
+    cacheKey
+  );
 
-export const studioHtmlHref = (projectId: string, path: string) =>
-  `/api/report?projectId=${encodeURIComponent(projectId)}&path=${encodeURIComponent(path)}`;
+export const studioThumbHref = (
+  projectId: string,
+  path: string,
+  width = 720,
+  cacheKey?: string | number | null
+) =>
+  withCacheBust(
+    `/api/thumb?projectId=${encodeURIComponent(projectId)}&path=${encodeURIComponent(path)}&w=${encodeURIComponent(String(width))}`,
+    cacheKey
+  );
+
+export const studioHtmlHref = (
+  projectId: string,
+  path: string,
+  cacheKey?: string | number | null
+) =>
+  withCacheBust(
+    `/api/report?projectId=${encodeURIComponent(projectId)}&path=${encodeURIComponent(path)}`,
+    cacheKey
+  );
 
 const normalizeStudioSlideParam = (
   displayNumber: string | number | null | undefined,
