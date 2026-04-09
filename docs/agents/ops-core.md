@@ -1,27 +1,20 @@
-# ops-core integration
+# Repo Ops Tooling
 
-<!-- managed-by: ops-core-bootstrap-host -->
+This trimmed checkout does not vendor the historical `ops-core/` submodule.
 
-This repo vendors `ops-core` at `ops-core/` as a git submodule.
+## Available local commands
 
-## Bootstrap
+- `doppler:init`: `node scripts/doppler/init.mjs`
+- `doppler:verify`: `node scripts/doppler/verify.mjs`
+- `doppler:upload`: `node scripts/doppler/upload-env.mjs`
+- `doppler:set-admin-token`: `node scripts/doppler/set-admin-token.mjs`
+- `ops-core:init`: no-op message; there is no submodule to initialize in this checkout
 
-- Initialize/refresh submodule checkout:
-  - `npm run ops-core:init`
+## Unavailable shared commands
 
-## Shared npm script wiring
+- `zip:repo`
+- `pr:from-zip`
+- `gh:pr`
 
-- `ops-core:init`: `git submodule update --init --recursive ops-core`
-- `doppler:init`: `node ops-core/scripts/doppler/init.mjs`
-- `doppler:verify`: `node ops-core/scripts/doppler/verify.mjs`
-- `doppler:upload`: `node ops-core/scripts/doppler/upload-env.mjs`
-- `doppler:set-admin-token`: `node ops-core/scripts/doppler/set-admin-token.mjs`
-- `zip:repo`: `node ops-core/scripts/repo/repo-zip.mjs`
-- `pr:from-zip`: `node ops-core/scripts/repo/zip-pr.mjs`
-- `gh:pr`: `node ops-core/scripts/github/gh-pr.mjs`
-
-## Notes
-
-- Run shared ops commands from the host repo root.
-- Keep repo-specific domain tooling local to the host repo.
-- If this repo has an `AGENTS.md` or docs index, link this file from there.
+These currently return a clear message explaining that the shared `ops-core`
+scripts are not vendored here.

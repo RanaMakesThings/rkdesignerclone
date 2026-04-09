@@ -124,7 +124,7 @@ export const groupPrimaryProjectDocs = (project: ProjectManifest) =>
     project.references.generated.markdown,
     project.references.generated.appendixHtml,
     ...project.docs.inputs,
-  ].filter(Boolean) as RefLike[];
+  ].filter((item): item is RefLike => Boolean(item?.path && item.exists !== false));
 
 export const groupSlideDocs = (_projectId: string, slide: SlideManifest) => {
   const stampedReadme = getStampedReadmeRef(slide);
@@ -161,7 +161,7 @@ export const groupSlideDocs = (_projectId: string, slide: SlideManifest) => {
     ...slide.discovered.references,
     ...slide.discovered.prompts,
   ]
-    .filter((item): item is RefLike => Boolean(item?.path))
+    .filter((item): item is RefLike => Boolean(item?.path && item.exists !== false))
     .map((item) => ({
       ...item,
       label: item.label ?? basename(item.path),

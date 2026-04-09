@@ -10,7 +10,7 @@ export const DESIGNER_DESIGN_SYSTEM_STYLESHEET_PATH =
 
 const extractTitle = (html: string) => {
   const match = html.match(/<title>([\s\S]*?)<\/title>/i);
-  return match?.[1]?.trim() || "Vox Design System Reference";
+  return match?.[1]?.trim() || "Design System Reference";
 };
 
 const extractCss = (html: string) =>

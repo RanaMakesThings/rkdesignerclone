@@ -165,7 +165,12 @@ function DeckSlideCard({
     slide.canonical.variants.find((variant) => variant.id === selectedVariantId) ?? null;
   const selectedFiles = selectedVariant ? asCandidateFiles(selectedVariant.files) : [];
   const deckCandidates = buildDeckCandidates(slide);
-  const hasPreview = Boolean(slide.previews.selected?.path);
+  const preferredPreview =
+    slide.previews.selected ??
+    slide.previews.stampedNative ??
+    slide.previews.bestDiscovered ??
+    null;
+  const hasPreview = Boolean(preferredPreview?.path);
 
   return (
     <article
@@ -244,11 +249,11 @@ function DeckSlideCard({
 
         <div className="deck-slide-card-visuals">
           <div className="deck-slide-preview">
-            {slide.previews.selected?.path ? (
+            {preferredPreview?.path ? (
               <StudioPreviewLightbox
                 projectId={projectId}
                 cacheKey={cacheKey}
-                preview={slide.previews.selected}
+                preview={preferredPreview}
                 candidateFiles={selectedFiles}
                 previewWidth={720}
                 alt={`${slide.title} selected mockup`}
@@ -279,8 +284,9 @@ function DeckSlideCard({
               ))
             ) : (
               <div className="empty-block deck-card-empty">
-                This slide does not have saved mockups yet. Start in the slide workbench, generate
-                a version, and it will appear here.
+                {hasPreview
+                  ? "A draft preview exists, but no canonical variant has been promoted yet. Open the slide workbench to review or make it official."
+                  : "This slide does not have saved mockups yet. Start in the slide workbench, generate a version, and it will appear here."}
               </div>
             )}
           </div>
@@ -315,7 +321,12 @@ export default async function ProjectDeckPage({
     (slide) => matchesSearchQuery(slide.searchText, query) && matchesStudioFocus(slide, focus)
   );
   const previewCacheKey = `${project.generatedAt}:${project.sourceFingerprint.deckSpecMtimeMs}`;
-  const readySlides = activeSlides.filter((slide) => slide.previews.selected?.exists).length;
+  const readySlides = activeSlides.filter(
+    (slide) =>
+      slide.previews.selected?.exists ||
+      slide.previews.stampedNative?.exists ||
+      slide.previews.bestDiscovered?.exists
+  ).length;
   const pendingSlides = activeSlides.length - readySlides;
   const promotionEntryCount = activeSlides.reduce(
     (sum, slide) => sum + buildDeckCandidates(slide).length,

@@ -1,0 +1,18 @@
+{
+  "slideId": "slide-01",
+  "slideDir": "projects/mentor-match/slide-figures/slide-01",
+  "currentVersionId": null,
+  "versions": [
+    {
+      "id": "version-000001",
+      "label": "slide-01-create-draft",
+      "status": "draft",
+      "sourceKind": "create-draft",
+      "createdAt": "2026-04-09T16:46:53.489Z",
+      "baseVersionId": null,
+      "dir": "projects/mentor-match/slide-figures/slide-01/versions/version-000001--slide-01-create-draft",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "saem-footer-brand",
+    "label": "SAEM Footer Brand",
+    "x": 0,
+    "y": 790,
+    "width": 1920,
+    "height": 290,
+    "freezeLevel": "pixel-strict",
+    "note": "Preserve the official SAEM26 footer treatment, including the logo block, geometric ribbon, date line, and Atlanta skyline."
+  },
+  {
+    "id": "saem-logo-block",
+    "label": "SAEM Logo Block",
+    "x": 0,
+    "y": 835,
+    "width": 530,
+    "height": 220,
+    "freezeLevel": "semantic-stable",
+    "note": "Do not obscure or redraw the SAEM26 logo/date block in the lower left."
+  }
+]

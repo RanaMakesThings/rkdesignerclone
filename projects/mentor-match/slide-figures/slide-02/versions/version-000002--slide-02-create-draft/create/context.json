@@ -1,0 +1,101 @@
+{
+  "slideId": "slide-02",
+  "displayNumber": "2",
+  "lane": "html",
+  "laneReason": "The Access Problem defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000002",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-02/versions/version-000002--slide-02-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-02",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-packets/slide-02-access-problem.md",
+  "packetText": "# Slide 02 Packet — The Access Problem\n\n## Objective\n\n- Show the current mentorship problem clearly and quickly.\n- Make the pain feel real without needing data that we do not have yet.\n\n## Copy\n\n- Header:\n  `Mentorship is too important to leave to chance.`\n- Subheader:\n  People often find mentors through luck, visibility, or whoever has time, not\n  through a process designed for fit.\n- Takeaway:\n  `The current matching experience is uneven, manual, and easy to miss.`\n\n## Visual direction\n\n- preferred family:\n  Problem Frame\n- assets needed:\n  fragmented path diagram, visible bottlenecks, overloaded mentor nodes\n- references:\n  none yet\n\n## Open questions\n\n- Is the strongest problem access, quality of fit, admin burden, or all three?\n- Do we have any current user quotes or anecdotes that could anchor this slide?\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-02",
+    "displayNumber": "2",
+    "importedSlides": [
+      2
+    ],
+    "status": "active",
+    "title": "The Access Problem",
+    "purpose": "Show why a mentorship product is needed before explaining how Mentor Match works.",
+    "header": "Mentorship is too important to leave to chance.",
+    "subheader": "People often find mentors through luck, visibility, or whoever has time, not through a process designed for fit.",
+    "takeaway": "The current matching experience is uneven, manual, and easy to miss.",
+    "figureRole": "Visualize fragmented mentor search paths, dead ends, and overload on the most visible mentors.",
+    "family": "problem-frame",
+    "buildStatus": "packet drafted; canonical visual pending",
+    "proof": [],
+    "paths": {
+      "packet": "projects/mentor-match/slide-packets/slide-02-access-problem.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/mentor-match/slide-assets/slide-02/manifest.json"
+    },
+    "selectedDirection": "Packet is the current source of truth; no official visual has been generated yet.",
+    "notes": [
+      "Keep the problem human and operational, not abstract.",
+      "Avoid promising outcomes that are not sourced yet."
+    ],
+    "selectedVariantId": null,
+    "variants": [],
+    "specText": "# The Access Problem\n\n- Header: Mentorship is too important to leave to chance.\n- Subheader: People often find mentors through luck, visibility, or whoever has time, not through a process designed for fit.\n- Takeaway: The current matching experience is uneven, manual, and easy to miss."
+  },
+  "slideEntry": {
+    "id": "slide-02",
+    "displayNumber": "2",
+    "importedSlides": [
+      2
+    ],
+    "status": "active",
+    "title": "The Access Problem",
+    "purpose": "Show why a mentorship product is needed before explaining how Mentor Match works.",
+    "header": "Mentorship is too important to leave to chance.",
+    "subheader": "People often find mentors through luck, visibility, or whoever has time, not through a process designed for fit.",
+    "takeaway": "The current matching experience is uneven, manual, and easy to miss.",
+    "figureRole": "Visualize fragmented mentor search paths, dead ends, and overload on the most visible mentors.",
+    "family": "problem-frame",
+    "buildStatus": "packet drafted; canonical visual pending",
+    "proof": [],
+    "paths": {
+      "packet": "projects/mentor-match/slide-packets/slide-02-access-problem.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/mentor-match/slide-assets/slide-02/manifest.json"
+    },
+    "selectedDirection": "Packet is the current source of truth; no official visual has been generated yet.",
+    "notes": [
+      "Keep the problem human and operational, not abstract.",
+      "Avoid promising outcomes that are not sourced yet."
+    ],
+    "selectedVariantId": null,
+    "variants": [],
+    "specText": "# The Access Problem\n\n- Header: Mentorship is too important to leave to chance.\n- Subheader: People often find mentors through luck, visibility, or whoever has time, not through a process designed for fit.\n- Takeaway: The current matching experience is uneven, manual, and easy to miss."
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-02/versions/version-000002--slide-02-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-02/versions/version-000002--slide-02-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-02/versions/version-000002--slide-02-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-02/versions/version-000002--slide-02-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-02/versions/version-000002--slide-02-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-02/versions/version-000002--slide-02-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-02/versions/version-000002--slide-02-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-notes/slide-02/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-02/versions/version-000002--slide-02-create-draft/create/create-request.snapshot.md"
+}

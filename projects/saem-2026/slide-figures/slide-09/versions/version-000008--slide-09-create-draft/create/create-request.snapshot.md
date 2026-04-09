@@ -43,7 +43,7 @@ Official slide context:
 
 ## Requested change
 
-Create a finished Machina deck slide from the seeded blank template.
+Create a finished Designer deck slide from the seeded blank template.
 
 Slide id: slide-09
 Lane: html
@@ -133,13 +133,13 @@ Must not become:
 - The header reads: AI can personalize and accelerate microlearning.
 - The subheader reads: The emerging opportunity is adaptive support, not full automation.
 - The figure visibly carries the specified burden.
-- The slide stays inside the locked Machina shell contract.
+- The slide stays inside the locked Designer shell contract.
 - The footer rule and footer logo remain aligned with the shell.
 - The slide feels in-family with the adjacent official slides.
 
 ## Guardrails
 
-- preserve the white Machina shell
+- preserve the white Designer shell
 - preserve the footer rule and footer logo
 - do not leave the figure stub or placeholder copy visible
 - do not turn the slide into a browser page, app UI, or card grid unless the brief explicitly requires it

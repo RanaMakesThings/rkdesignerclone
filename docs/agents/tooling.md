@@ -329,7 +329,6 @@ or prompts.
     `--slide slide-06`
 
 - Doppler / shared ops tooling:
-  - `npm run ops-core:init`
   - `npm run doppler:init`
   - `npm run doppler:verify -- --require-value OPENAI_API_KEY`
   - `npm run doppler:verify -- --require-value PEXELS_API_KEY`

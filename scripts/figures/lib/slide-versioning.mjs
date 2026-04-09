@@ -337,6 +337,20 @@ const loadDeckSpecMaybe = async (projectRoot) => {
   return readJson(deckSpecPath);
 };
 
+const normalizeStampedSlideDir = (slideDir) => {
+  const raw = String(slideDir ?? "").trim();
+  if (!raw) {
+    return null;
+  }
+  const normalized = raw.replaceAll("\\", "/");
+  const versionMarker = "/versions/";
+  const versionIndex = normalized.indexOf(versionMarker);
+  if (versionIndex >= 0) {
+    return normalized.slice(0, versionIndex);
+  }
+  return raw;
+};
+
 const findSlideEntryById = async (projectRoot, slideId) => {
   const deckSpec = await loadDeckSpecMaybe(projectRoot);
   if (!Array.isArray(deckSpec?.slides)) {
@@ -351,7 +365,7 @@ const findLogicalSlideIdForDirectory = async (projectRoot, directoryName) => {
     return normalizeSlideId(directoryName);
   }
   const matched = deckSpec.slides.find((entry) => {
-    const stampedDir = String(entry?.paths?.stampedDir ?? "").trim();
+    const stampedDir = normalizeStampedSlideDir(entry?.paths?.stampedDir);
     return stampedDir && basename(stampedDir) === directoryName;
   });
   return matched?.id ? normalizeSlideId(matched.id) : normalizeSlideId(directoryName);
@@ -365,10 +379,12 @@ export const resolveSlideVersionContext = async ({
   const resolvedProjectRoot = resolve(String(projectRoot));
   const normalizedSlideId = normalizeSlideId(slideId);
   const slideEntry = await findSlideEntryById(resolvedProjectRoot, normalizedSlideId);
+  const normalizedInputSlideDir = normalizeStampedSlideDir(slideDir);
+  const normalizedStampedDir = normalizeStampedSlideDir(slideEntry?.paths?.stampedDir);
   const resolvedSlideDir = slideDir
-    ? resolve(String(slideDir))
-    : slideEntry?.paths?.stampedDir
-      ? resolve(REPO_ROOT, slideEntry.paths.stampedDir)
+    ? resolve(String(normalizedInputSlideDir))
+    : normalizedStampedDir
+      ? resolve(REPO_ROOT, normalizedStampedDir)
       : resolve(resolvedProjectRoot, "slide-figures", normalizedSlideId);
   return {
     projectRoot: resolvedProjectRoot,

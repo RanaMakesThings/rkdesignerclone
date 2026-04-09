@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAEM Annual Meeting Template v1</title>
+    <style>
+      :root {
+        --ink: #15355f;
+        --ink-soft: rgba(21, 53, 95, 0.74);
+        --blue: #1f83d1;
+        --red: #d03443;
+        --line: rgba(31, 131, 209, 0.18);
+        --panel: rgba(255, 255, 255, 0.9);
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        font-family:
+          "Aptos",
+          "Avenir Next",
+          "Segoe UI",
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        color: var(--ink);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background:
+          radial-gradient(circle at 84% 12%, rgba(31, 131, 209, 0.08), transparent 18%),
+          linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(252, 253, 255, 1) 100%);
+      }
+
+      .shell {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .top-rule {
+        position: absolute;
+        left: 110px;
+        top: 90px;
+        width: 240px;
+        height: 6px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--red) 0%, var(--blue) 100%);
+      }
+
+      .header {
+        position: absolute;
+        left: 110px;
+        top: 126px;
+        width: 1350px;
+        margin: 0;
+        font-size: 72px;
+        line-height: 1.02;
+        letter-spacing: -0.055em;
+        font-weight: 700;
+      }
+
+      .subheader {
+        position: absolute;
+        left: 110px;
+        top: 228px;
+        width: 1240px;
+        margin: 0;
+        font-size: 31px;
+        line-height: 1.28;
+        letter-spacing: -0.02em;
+        font-weight: 400;
+        color: var(--ink-soft);
+      }
+
+      .content-stub {
+        position: absolute;
+        left: 110px;
+        top: 332px;
+        width: 1510px;
+        height: 420px;
+        border: 2px dashed rgba(31, 131, 209, 0.25);
+        border-radius: 34px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 250, 255, 0.94));
+        box-shadow:
+          0 26px 52px rgba(21, 53, 95, 0.08),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+      }
+
+      .content-stub::before {
+        content: "";
+        position: absolute;
+        inset: 28px;
+        border-radius: 26px;
+        border: 1px solid rgba(31, 131, 209, 0.08);
+      }
+
+      .stub-label {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 14px 22px;
+        border-radius: 999px;
+        background: var(--panel);
+        border: 1px solid rgba(31, 131, 209, 0.18);
+        box-shadow: 0 18px 36px rgba(21, 53, 95, 0.08);
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: var(--ink-soft);
+      }
+
+      .note {
+        position: absolute;
+        left: 110px;
+        top: 780px;
+        width: 1120px;
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.35;
+        letter-spacing: -0.01em;
+        color: rgba(21, 53, 95, 0.58);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide" aria-label="SAEM blank slide template">
+      <img class="shell" src="./template.png" alt="" aria-hidden="true" />
+      <div class="top-rule" aria-hidden="true"></div>
+      <h1 class="header">Header</h1>
+      <p class="subheader">Subheader</p>
+      <div class="content-stub" aria-label="Graphic placeholder">
+        <div class="stub-label">Core visual / evidence layout</div>
+      </div>
+      <p class="note">Use designer for composition first, then package into the official SAEM deck.</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, initial-scale=1.0" />
+<title>What Mentor Match Is</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#15355f;
+    --muted:rgba(21, 53, 95, 0.74);
+    --soft:rgba(21, 53, 95, 0.58);
+    --line:#d9e2f1;
+    --line-2:#e9eef7;
+    --blue:#1f83d1;
+    --blue-2:#7fa2ff;
+    --blue-3:#eef4ff;
+    --navy:#15355f;
+    --teal:#46b8c8;
+    --shadow:0 12px 34px rgba(35,62,120,.08);
+    --red:#d03443;
+  }
+  *{box-sizing:border-box}
+  html,body{
+    margin:0;
+    width:1920px;
+    height:1080px;
+    overflow:hidden;
+    background:var(--bg);
+    font-family: "Aptos", "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color:var(--ink);
+  }
+  .slide{
+    position:relative;
+    width:1920px;
+    height:1080px;
+    background:
+      radial-gradient(circle at 84% 12%, rgba(31, 131, 209, 0.08), transparent 18%),
+      linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(252, 253, 255, 1) 100%);
+  }
+
+  .top-rule{
+    position:absolute;
+    left:92px;
+    top:30px;
+    width:240px;
+    height:6px;
+    border-radius:999px;
+    background:linear-gradient(90deg, var(--red) 0%, var(--blue) 100%);
+  }
+
+  .title{
+    position:absolute;
+    left:92px;
+    top:62px;
+    width:1360px;
+    margin:0;
+    font-size:54px;
+    line-height:1.07;
+    font-weight:800;
+    letter-spacing:-0.03em;
+    color:var(--ink);
+  }
+  .sub{
+    position:absolute;
+    left:92px;
+    top:192px;
+    width:1280px;
+    margin:0;
+    font-size:28px;
+    line-height:1.35;
+    font-weight:400;
+    color:var(--muted);
+    letter-spacing:-0.01em;
+  }
+
+  .flow-wrap{
+    position:absolute;
+    left:124px;
+    top:308px;
+    width:1672px;
+    height:570px;
+  }
+
+  .eyebrow{
+    position:absolute;
+    left:0;
+    top:0;
+    font-size:15px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    color:#7d8aa4;
+  }
+
+  .flow{
+    position:absolute;
+    left:0;
+    top:38px;
+    width:1672px;
+    height:520px;
+    display:flex;
+    align-items:stretch;
+    gap:30px;
+  }
+
+  .step{
+    position:relative;
+    width:calc((1672px - 60px) / 3);
+    border:1.5px solid var(--line);
+    border-radius:32px;
+    background:linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+
+  .step::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(circle at 86% 14%, rgba(127,162,255,.11), transparent 28%),
+      radial-gradient(circle at 12% 100%, rgba(70,184,200,.08), transparent 30%);
+    pointer-events:none;
+  }
+
+  .step-head{
+    position:absolute;
+    left:30px;
+    top:26px;
+    right:30px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    z-index:2;
+  }
+
+  .num{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:var(--blue-3);
+    color:var(--navy);
+    border:1px solid #cfe0ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    font-size:20px;
+    flex:0 0 auto;
+  }
+
+  .step-title{
+    font-size:28px;
+    line-height:1.1;
+    font-weight:750;
+    letter-spacing:-0.02em;
+    color:var(--ink);
+  }
+
+  .icon{
+    position:absolute;
+    right:28px;
+    top:24px;
+    width:66px;
+    height:66px;
+    border-radius:18px;
+    background:#f5f8ff;
+    border:1px solid #dde7fb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:2;
+  }
+
+  .desc{
+    position:absolute;
+    left:30px;
+    right:30px;
+    top:92px;
+    font-size:19px;
+    line-height:1.42;
+    color:var(--muted);
+    z-index:2;
+  }
+
+  .mini{
+    position:absolute;
+    left:30px;
+    right:30px;
+    height:172px;
+    top:196px;
+    border-radius:24px;
+    border:1px solid var(--line-2);
+    background:#fff;
+    z-index:2;
+  }
+
+  .mini-label{
+    position:absolute;
+    left:22px;
+    top:18px;
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    color:#7d8aa4;
+  }
+
+  .tag{
+    position:absolute;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:9px 14px;
+    border-radius:999px;
+    background:#f7faff;
+    border:1px solid #dce8ff;
+    color:#3e5a88;
+    font-size:15px;
+    font-weight:650;
+    white-space:nowrap;
+  }
+
+  .bottom-note{
+    position:absolute;
+    left:30px;
+    right:30px;
+    bottom:30px;
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding-top:18px;
+    border-top:1px solid var(--line-2);
+    z-index:2;
+  }
+  .bottom-note .dot{
+    width:10px;
+    height:10px;
+    margin-top:7px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--blue), var(--teal));
+    flex:0 0 auto;
+  }
+  .bottom-note .txt{
+    font-size:18px;
+    line-height:1.38;
+    color:#43526d;
+    font-weight:500;
+  }
+
+  .arrow{
+    position:absolute;
+    top:255px;
+    width:30px;
+    height:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#89a0c9;
+  }
+  .arrow.a1{ left:547px; }
+  .arrow.a2{ left:1106px; }
+
+  .takeaway{
+    position:absolute;
+    left:388px;
+    top:578px;
+    width:1144px;
+    min-height:88px;
+    border-radius:24px;
+    border:1.5px solid #dbe6fb;
+    background:linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    box-shadow:0 10px 28px rgba(55,87,151,.07);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:18px 36px;
+    text-align:center;
+    z-index:3;
+  }
+  .takeaway span{
+    font-size:28px;
+    line-height:1.3;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    color:#20345f;
+  }
+
+  .tiny{
+    font-size:13px;
+    color:#8090ac;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="top-rule" aria-hidden="true"></div>
+    <h1 class="title">Mentor Match turns matching into a lightweight workflow.</h1>
+    <p class="sub">Capture what a mentee needs, surface aligned mentors, and support the first introduction with shared context.</p>
+
+    <div class="flow-wrap">
+      <div class="eyebrow">Simple product flow</div>
+
+      <div class="flow">
+        <div class="step">
+          <div class="step-head">
+            <div class="num">1</div>
+            <div class="step-title">Capture needs</div>
+          </div>
+          <div class="icon">
+            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+              <rect x="6" y="5.5" width="22" height="24" rx="5" stroke="#4069C8" stroke-width="2"/>
+              <path d="M11 13H23" stroke="#4069C8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M11 18H23" stroke="#4069C8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M11 23H18" stroke="#46B8C8" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="desc">A short intake gathers what the mentee is trying to achieve, preferred guidance areas, and practical constraints.</div>
+          <div class="mini">
+            <div class="mini-label">Example inputs</div>
+            <div class="tag" style="left:22px; top:54px;">Career goal</div>
+            <div class="tag" style="left:138px; top:54px;">Skill focus</div>
+            <div class="tag" style="left:256px; top:54px;">Availability</div>
+
+            <div class="tag" style="left:22px; top:103px;">Industry interest</div>
+            <div class="tag" style="left:167px; top:103px;">Stage / role</div>
+            <div class="tag" style="left:291px; top:103px;">Communication style</div>
+          </div>
+          <div class="bottom-note">
+            <div class="dot"></div>
+            <div class="txt">Reduces guesswork up front so mentors are considered against clear signals, not informal memory.</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-head">
+            <div class="num">2</div>
+            <div class="step-title">Surface aligned mentors</div>
+          </div>
+          <div class="icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <circle cx="14" cy="14" r="7" stroke="#4069C8" stroke-width="2"/>
+              <path d="M19 19L29 29" stroke="#4069C8" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M14 10.5V17.5" stroke="#46B8C8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10.5 14H17.5" stroke="#46B8C8" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="desc">The workflow highlights mentors whose experience, interests, and timing fit the request, making the shortlist intentional.</div>
+          <div class="mini">
+            <div class="mini-label">What the match view weighs</div>
+            <svg width="100%" height="100%" viewBox="0 0 497 172" preserveAspectRatio="none" style="position:absolute; inset:0;">
+              <rect x="22" y="74" width="453" height="12" rx="6" fill="#EEF3FB"/>
+              <rect x="22" y="74" width="367" height="12" rx="6" fill="url(#gradBar)"/>
+              <rect x="22" y="110" width="453" height="12" rx="6" fill="#EEF3FB"/>
+              <rect x="22" y="110" width="322" height="12" rx="6" fill="url(#gradBar)"/>
+              <rect x="22" y="146" width="453" height="12" rx="6" fill="#EEF3FB"/>
+              <rect x="22" y="146" width="279" height="12" rx="6" fill="url(#gradBar)"/>
+              <defs>
+                <linearGradient id="gradBar" x1="22" y1="80" x2="389" y2="80" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#4F7CFF"/>
+                  <stop offset="1" stop-color="#46B8C8"/>
+                </linearGradient>
+              </defs>
+              <text x="22" y="64" font-size="14" font-weight="700" fill="#637492">Relevant experience</text>
+              <text x="22" y="100" font-size="14" font-weight="700" fill="#637492">Shared goals / interests</text>
+              <text x="22" y="136" font-size="14" font-weight="700" fill="#637492">Practical fit and availability</text>
+            </svg>
+          </div>
+          <div class="bottom-note">
+            <div class="dot"></div>
+            <div class="txt">Makes selection faster while still keeping human judgment in the loop for the final pairing.</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-head">
+            <div class="num">3</div>
+            <div class="step-title">Support the introduction</div>
+          </div>
+          <div class="icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <rect x="5" y="8" width="26" height="20" rx="5" stroke="#4069C8" stroke-width="2"/>
+              <path d="M8.5 11.5L18 19L27.5 11.5" stroke="#4069C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="27" cy="25" r="4" fill="#46B8C8"/>
+            </svg>
+          </div>
+          <div class="desc">A shared summary gives both sides enough context to start well, so the first outreach is informed and easier to act on.</div>
+          <div class="mini">
+            <div class="mini-label">Shared context packet</div>
+            <div class="tag" style="left:22px; top:56px;">Why they were matched</div>
+            <div class="tag" style="left:222px; top:56px;">Goals to discuss</div>
+            <div class="tag" style="left:369px; top:56px;">Suggested first step</div>
+
+            <div class="tag" style="left:22px; top:105px;">Short bio / background</div>
+            <div class="tag" style="left:210px; top:105px;">Availability notes</div>
+            <div class="tag" style="left:360px; top:105px;">Intro prompt</div>
+          </div>
+          <div class="bottom-note">
+            <div class="dot"></div>
+            <div class="txt">Turns the handoff into a warm start instead of a blank introduction for either person.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrow a1" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <path d="M6 15H22" stroke="#8EA4CC" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M16 9L22 15L16 21" stroke="#8EA4CC" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="arrow a2" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <path d="M6 15H22" stroke="#8EA4CC" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M16 9L22 15L16 21" stroke="#8EA4CC" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="takeaway">
+        <span>The product reduces friction for both sides and makes matching more intentional.</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -12,14 +12,13 @@ The repo is intentionally narrow:
 - `projects/workspaces/` is optional scratch space for cross-project or
   throwaway prompt experiments.
 - `scripts/figures/` holds the HTML/PNG figure pipeline.
+- `scripts/doppler/` holds repo-local Doppler setup and verification helpers.
 - `projects/pitch-deck/` holds deck-specific prototype files.
-- `ops-core/` is vendored as a submodule for shared host-repo ops commands.
 
 ## Quick start
 
 - `npm install`
 - `npm run studio:install`
-- `npm run ops-core:init`
 - `npm run doppler:init`
 - `npm run help`
 - `npm run doppler:verify -- --require-value OPENAI_API_KEY`
@@ -143,5 +142,4 @@ current environment and is Doppler-wrapped by default.
 - `projects/designer-health/` — current deck source of truth and stamped slide assets
 - `projects/workspaces/` — optional scratch folders for non-project-specific iteration
 - `scripts/` — figure pipeline, LLM helpers, and local wrappers
-- `ops-core/` — shared ops-core submodule
 - `output/` — generated artifacts (gitignored)

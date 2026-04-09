@@ -96,71 +96,81 @@ export default async function ProjectPage({
         </section>
 
         <section className="slide-wall">
-          {activeSlides.map((slide) => (
-            <article
-              key={slide.id}
-              className={`slide-wall-row${slide.previews.selected ? "" : " slide-wall-row-unavailable"}`}
-            >
-              <div className="slide-wall-copy">
-                <div className="slide-wall-identity">
-                  <span className="studio-step-label">Slide {slide.displayNumber}</span>
-                  <span className="studio-id-pill studio-id-pill-muted">{slide.id}</span>
-                </div>
-                <h3>{slide.title}</h3>
-                <p className="studio-body-copy">
-                  {slide.selectedDirection || slide.buildStatus || "No selected direction yet."}
-                </p>
-                <div className="studio-chip-row">
-                  <span className="studio-chip">
-                    <span>Status</span>
-                    <strong>{slide.buildStatus ?? "pending"}</strong>
-                  </span>
-                  <span className="studio-chip">
-                    <span>Assets</span>
-                    <strong>{slide.canonical.slideAssets.length}</strong>
-                  </span>
-                </div>
-                <div className="studio-link-row">
-                  <Link
-                    href={`/projects/${project.projectId}/slides/${slide.id}`}
-                    className="primary-link"
-                  >
-                    Open Slide
-                  </Link>
-                  {slide.canonical.packet ? (
-                    <FileChip
-                      projectId={project.projectId}
-                      refLike={slide.canonical.packet}
-                      label="Packet"
-                    />
-                  ) : null}
-                </div>
-              </div>
-              <div className="slide-wall-media">
-                {slide.previews.selected ? (
-                  <StudioPreviewLightbox
-                    projectId={project.projectId}
-                    cacheKey={previewCacheKey}
-                    preview={slide.previews.selected}
-                    previewWidth={900}
-                    alt={`${slide.title} preview`}
-                    title={slide.title}
-                    meta={`Slide ${slide.displayNumber}`}
-                  />
-                ) : (
-                  <div className="studio-empty-preview studio-empty-preview-placeholder">
-                    <div className="studio-empty-preview-copy">
-                      <span className="studio-empty-preview-kicker">
-                        Slide {slide.displayNumber}
-                      </span>
-                      <strong>{slide.title}</strong>
-                      <p>No selected preview yet</p>
-                    </div>
+          {activeSlides.map((slide) => {
+            const preferredPreview =
+              slide.previews.selected ??
+              slide.previews.stampedNative ??
+              slide.previews.bestDiscovered ??
+              null;
+
+            return (
+              <article
+                key={slide.id}
+                className={`slide-wall-row${
+                  preferredPreview ? "" : " slide-wall-row-unavailable"
+                }`}
+              >
+                <div className="slide-wall-copy">
+                  <div className="slide-wall-identity">
+                    <span className="studio-step-label">Slide {slide.displayNumber}</span>
+                    <span className="studio-id-pill studio-id-pill-muted">{slide.id}</span>
                   </div>
-                )}
-              </div>
-            </article>
-          ))}
+                  <h3>{slide.title}</h3>
+                  <p className="studio-body-copy">
+                    {slide.selectedDirection || slide.buildStatus || "No selected direction yet."}
+                  </p>
+                  <div className="studio-chip-row">
+                    <span className="studio-chip">
+                      <span>Status</span>
+                      <strong>{slide.buildStatus ?? "pending"}</strong>
+                    </span>
+                    <span className="studio-chip">
+                      <span>Assets</span>
+                      <strong>{slide.canonical.slideAssets.length}</strong>
+                    </span>
+                  </div>
+                  <div className="studio-link-row">
+                    <Link
+                      href={`/projects/${project.projectId}/slides/${slide.id}`}
+                      className="primary-link"
+                    >
+                      Open Slide
+                    </Link>
+                    {slide.canonical.packet ? (
+                      <FileChip
+                        projectId={project.projectId}
+                        refLike={slide.canonical.packet}
+                        label="Packet"
+                      />
+                    ) : null}
+                  </div>
+                </div>
+                <div className="slide-wall-media">
+                  {preferredPreview ? (
+                    <StudioPreviewLightbox
+                      projectId={project.projectId}
+                      cacheKey={previewCacheKey}
+                      preview={preferredPreview}
+                      previewWidth={900}
+                      alt={`${slide.title} preview`}
+                      title={slide.title}
+                      meta={`Slide ${slide.displayNumber}`}
+                    />
+                  ) : (
+                    <div className="studio-empty-preview studio-empty-preview-placeholder">
+                      <div className="studio-empty-preview-copy">
+                        <span className="studio-empty-preview-kicker">
+                          Slide {slide.displayNumber}
+                        </span>
+                        <strong>{slide.title}</strong>
+                        <p>No selected preview yet</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </article>
+            );
+          })}
         </section>
       </div>
     </ProjectShell>

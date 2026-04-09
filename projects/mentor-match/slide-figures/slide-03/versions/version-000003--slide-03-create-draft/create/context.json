@@ -1,0 +1,101 @@
+{
+  "slideId": "slide-03",
+  "displayNumber": "3",
+  "lane": "html",
+  "laneReason": "What Mentor Match Is defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000003",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-03/versions/version-000003--slide-03-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-03",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-packets/slide-03-solution-overview.md",
+  "packetText": "# Slide 03 Packet — What Mentor Match Is\n\n## Objective\n\n- Define the product plainly before discussing implementation or pilot scope.\n- Make the solution feel lightweight and approachable.\n\n## Copy\n\n- Header:\n  `Mentor Match turns matching into a lightweight workflow.`\n- Subheader:\n  Capture what a mentee needs, surface aligned mentors, and support the first\n  introduction with shared context.\n- Takeaway:\n  `The product reduces friction for both sides and makes matching more intentional.`\n\n## Visual direction\n\n- preferred family:\n  Solution Flow\n- assets needed:\n  three-step flow for intake, match, and introduction\n- references:\n  none yet\n\n## Open questions\n\n- Is the actual product a software workflow, a service layer, or a hybrid?\n- Are availability, goals, or shared interests the most important matching\n  inputs?\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-03",
+    "displayNumber": "3",
+    "importedSlides": [
+      3
+    ],
+    "status": "active",
+    "title": "What Mentor Match Is",
+    "purpose": "Define the product plainly before moving into workflow or goals.",
+    "header": "Mentor Match turns matching into a lightweight workflow.",
+    "subheader": "Capture what a mentee needs, surface aligned mentors, and support the first introduction with shared context.",
+    "takeaway": "The product reduces friction for both sides and makes matching more intentional.",
+    "figureRole": "Use a simple three-step product flow rather than a dense product architecture diagram.",
+    "family": "solution-flow",
+    "buildStatus": "packet drafted; canonical visual pending",
+    "proof": [],
+    "paths": {
+      "packet": "projects/mentor-match/slide-packets/slide-03-solution-overview.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/mentor-match/slide-assets/slide-03/manifest.json"
+    },
+    "selectedDirection": "Packet is the current source of truth; no official visual has been generated yet.",
+    "notes": [
+      "Make the system feel simple enough to trust.",
+      "Keep the workflow legible in one glance."
+    ],
+    "selectedVariantId": null,
+    "variants": [],
+    "specText": "# What Mentor Match Is\n\n- Header: Mentor Match turns matching into a lightweight workflow.\n- Subheader: Capture what a mentee needs, surface aligned mentors, and support the first introduction with shared context.\n- Takeaway: The product reduces friction for both sides and makes matching more intentional."
+  },
+  "slideEntry": {
+    "id": "slide-03",
+    "displayNumber": "3",
+    "importedSlides": [
+      3
+    ],
+    "status": "active",
+    "title": "What Mentor Match Is",
+    "purpose": "Define the product plainly before moving into workflow or goals.",
+    "header": "Mentor Match turns matching into a lightweight workflow.",
+    "subheader": "Capture what a mentee needs, surface aligned mentors, and support the first introduction with shared context.",
+    "takeaway": "The product reduces friction for both sides and makes matching more intentional.",
+    "figureRole": "Use a simple three-step product flow rather than a dense product architecture diagram.",
+    "family": "solution-flow",
+    "buildStatus": "packet drafted; canonical visual pending",
+    "proof": [],
+    "paths": {
+      "packet": "projects/mentor-match/slide-packets/slide-03-solution-overview.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/mentor-match/slide-assets/slide-03/manifest.json"
+    },
+    "selectedDirection": "Packet is the current source of truth; no official visual has been generated yet.",
+    "notes": [
+      "Make the system feel simple enough to trust.",
+      "Keep the workflow legible in one glance."
+    ],
+    "selectedVariantId": null,
+    "variants": [],
+    "specText": "# What Mentor Match Is\n\n- Header: Mentor Match turns matching into a lightweight workflow.\n- Subheader: Capture what a mentee needs, surface aligned mentors, and support the first introduction with shared context.\n- Takeaway: The product reduces friction for both sides and makes matching more intentional."
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-03/versions/version-000003--slide-03-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-03/versions/version-000003--slide-03-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-03/versions/version-000003--slide-03-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-03/versions/version-000003--slide-03-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-03/versions/version-000003--slide-03-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-03/versions/version-000003--slide-03-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-03/versions/version-000003--slide-03-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-notes/slide-03/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-03/versions/version-000003--slide-03-create-draft/create/create-request.snapshot.md"
+}

@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
 import { FileChip } from "@/components/studio/file-chip";
@@ -217,6 +216,11 @@ export default async function ProjectSlidePage({
     archived: StudioReferenceUsage[];
   };
   const referenceLibrary = project.references.library as unknown as StudioReference[];
+  const preferredPreview =
+    slide.previews.selected ??
+    slide.previews.stampedNative ??
+    slide.previews.bestDiscovered ??
+    null;
 
   return (
     <ProjectShell project={project} projects={projects}>
@@ -283,11 +287,11 @@ export default async function ProjectSlidePage({
           </div>
 
           <div className="slide-detail-visual">
-            {slide.previews.selected?.path ? (
+            {preferredPreview?.path ? (
               <StudioPreviewLightbox
                 projectId={project.projectId}
                 cacheKey={previewCacheKey}
-                preview={slide.previews.selected}
+                preview={preferredPreview}
                 candidateFiles={selectedVariant ? asCandidateFiles(selectedVariant.files) : []}
                 previewLoading="eager"
                 alt={`${slide.title} selected mockup`}
@@ -366,8 +370,8 @@ export default async function ProjectSlidePage({
             <div className="studio-empty-preview studio-empty-preview-placeholder">
               <div className="studio-empty-preview-copy">
                 <span className="studio-empty-preview-kicker">No variants yet</span>
-                <strong>This slide does not have any saved mockups on disk yet.</strong>
-                <p>Once a preview lands, this page will show the mockup, files, and promotion actions here.</p>
+                <strong>No canonical variant has been promoted for this slide yet.</strong>
+                <p>Draft previews can still appear below until one is made official.</p>
               </div>
             </div>
           )}

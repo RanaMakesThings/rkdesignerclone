@@ -76,7 +76,7 @@
       "takeaway": "This talk is about workflow-aligned learning design, not lightweight content for its own sake.",
       "figureRole": "Establish the deck's tone with a serious, elegant opening visual that implies clarity under pressure.",
       "family": "editorial title hero",
-      "buildStatus": "first mockup generated; refine only if needed",
+      "buildStatus": "figure variation test pass generated; choose a winning concept",
       "proof": [],
       "paths": {
         "packet": "projects/saem-2026/slide-packets/slide-01-title.md",
@@ -111,9 +111,114 @@
               "path": "projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft/preview.png"
             }
           ]
+        },
+        {
+          "id": "slide-01-figure-rings",
+          "label": "Slide 01 Figure Rings",
+          "status": "candidate",
+          "summary": "Connected rings motif for workflow fit, retrieval, and adaptation.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-rings/preview.png",
+          "files": [
+            {
+              "label": "Variant dir",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-rings"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-rings/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-rings/preview.png"
+            }
+          ]
+        },
+        {
+          "id": "slide-01-figure-timeline",
+          "label": "Slide 01 Figure Timeline",
+          "status": "candidate",
+          "summary": "Interrupted shift timeline with a highlighted micro-window for learning.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-timeline/preview.png",
+          "files": [
+            {
+              "label": "Variant dir",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-timeline"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-timeline/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-timeline/preview.png"
+            }
+          ]
+        },
+        {
+          "id": "slide-01-figure-cards",
+          "label": "Slide 01 Figure Cards",
+          "status": "candidate",
+          "summary": "Stacked microlearning cards that frame trigger, pearl, and retrieval loop.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-cards/preview.png",
+          "files": [
+            {
+              "label": "Variant dir",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-cards"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-cards/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-cards/preview.png"
+            }
+          ]
+        },
+        {
+          "id": "slide-01-figure-lattice",
+          "label": "Slide 01 Figure Lattice",
+          "status": "candidate",
+          "summary": "Signal-to-structure lattice showing how small exposures become usable knowledge.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-lattice/preview.png",
+          "files": [
+            {
+              "label": "Variant dir",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-lattice"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-lattice/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-lattice/preview.png"
+            }
+          ]
+        },
+        {
+          "id": "slide-01-figure-pulse",
+          "label": "Slide 01 Figure Pulse",
+          "status": "candidate",
+          "summary": "Pulse-window system emphasizing short, interruptible learning rhythm.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-pulse/preview.png",
+          "files": [
+            {
+              "label": "Variant dir",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-pulse"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-pulse/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-01/variants/slide-01-figure-pulse/preview.png"
+            }
+          ]
         }
       ],
-      "specText": "# Slide 1 — Microlearning for Emergency Medicine\n\n## Status\n\n- current deck numbering: slide 1\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- establish seriousness\n- frame the talk as rigorous rather than trendy\n- make the audience trust the deck before the argument begins\n\n## Locked slide thesis\n\nMicrolearning belongs in emergency medicine because the environment rewards\nlearning formats that respect time pressure and interruption.\n\n## Slide purpose brief\n\n- top claim:\n  this is a serious educational argument, not a lightweight med-ed fad talk\n- support claim:\n  the deck should open with confidence and restraint\n- non-goals:\n  - do not explain the whole concept here\n  - do not show a workflow yet\n\n## Figure job\n\n- set the emotional and aesthetic tone\n- imply clarity under pressure\n- avoid generic medical conference opener clichés\n\n## Locked copy\n\n- header:\n  `Microlearning for Emergency Medicine`\n- subheader:\n  `Small learning episodes, durable clinical impact.`\n- presenter line:\n  `Rana Kabeer · Timothy J. Batchelor · Moises Gallegos`\n- institution line:\n  `Stanford Department of Emergency Medicine`\n- figure labels:\n  - `SAEM`\n  - `Emergency medicine`\n\n## Visual rules\n\n- restrained editorial hero, not a logo wall\n- high hierarchy, low clutter\n- avoid cheesy stock imagery\n- keep the right-side visual field abstract and editorial rather than literal\n- save presenter portraits for the dedicated intro slide immediately after this\n  opener\n\n## Existing useful source assets\n\n- `inputs/saem_microlearning_talk_outline.md`\n- `templates/saem-annual-meeting-template-v1/saem_annual_meeting_template.pptx`\n\n## Immediate next refinement\n\n- explore two to three title-slide concepts\n- decide how directly the SAEM shell should appear in the opening frame\n"
+      "specText": "# Slide 1 - Microlearning for Emergency Medicine\n\n## Status\n\n- current deck numbering: slide 1\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- establish seriousness\n- frame the talk as rigorous rather than trendy\n- make the audience trust the deck before the argument begins\n\n## Locked slide thesis\n\nMicrolearning belongs in emergency medicine because the environment rewards\nlearning formats that respect time pressure and interruption.\n\n## Slide purpose brief\n\n- top claim:\n  this is a serious educational argument, not a lightweight med-ed fad talk\n- support claim:\n  the deck should open with confidence and restraint\n- non-goals:\n  - do not explain the whole concept here\n  - do not show a workflow yet\n\n## Figure job\n\n- set the emotional and aesthetic tone\n- imply clarity under pressure\n- avoid generic medical conference opener cliches\n- keep the title, subtitle, and SAEM shell stable\n- generate five figure-only alternatives for right-side exploration\n\n## Locked copy\n\n- header:\n  `Microlearning for Emergency Medicine`\n- subheader:\n  `Small learning episodes, durable clinical impact.`\n- presenter line:\n  `Rana Kabeer · Timothy J. Batchelor · Moises Gallegos`\n- institution line:\n  `Stanford Department of Emergency Medicine`\n\n## Visual rules\n\n- restrained editorial hero, not a logo wall\n- high hierarchy, low clutter\n- avoid cheesy stock imagery\n- keep the right-side visual field abstract and editorial rather than literal\n- save presenter portraits for the dedicated intro slide immediately after this opener\n- modern academic editorial style, not startup dashboard polish\n\n## Immediate next refinement\n\n- produce five title-slide figure alternatives:\n  - connected rings for workflow fit, retrieval, and adaptation\n  - interrupted shift timeline with a micro-window\n  - stacked microlearning cards\n  - signal-to-structure lattice\n  - pulse-window rhythm system\n- choose one winner and then refine spacing, density, and label tone\n"
     },
     {
       "id": "slide-02-authors",

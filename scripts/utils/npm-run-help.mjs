@@ -175,6 +175,8 @@ const SCRIPT_DESCRIPTIONS = {
     "Create, import, promote, and migrate manifest-backed slide figure versions",
   "slide:assets":
     "Attach canonical repo-owned assets to a Designer slide asset manifest",
+  "references:sync":
+    "Sync a project reference directory into the repo-native Designer layout",
   "slide:create:prep":
     "Allocate a Designer create draft, seed it from the deck template, and scaffold a create request",
   "slide:create:run":
@@ -189,10 +191,12 @@ const SCRIPT_DESCRIPTIONS = {
   "zip:code":
     "Create a designer-specific code-only repo zip that filters artifact-heavy paths",
   "zip:repo":
-    "Create a local or remote repo zip (with injected .github/repo-stamp.json)",
-  "pr:from-zip": "Apply a modified repo zip to a branch and open a PR",
-  "gh:pr": "Create a GitHub PR via gh with a structured body",
-  "ops-core:init": "Initialize/update ops-core submodule checkout",
+    "Unavailable in this trimmed checkout; shared repo-zip helper is not vendored",
+  "pr:from-zip":
+    "Unavailable in this trimmed checkout; shared zip-to-PR helper is not vendored",
+  "gh:pr":
+    "Unavailable in this trimmed checkout; shared GitHub PR helper is not vendored",
+  "ops-core:init": "No-op in this trimmed checkout; there is no ops-core submodule",
 };
 
 const SCRIPT_DETAILS = {
@@ -385,6 +389,10 @@ const SCRIPT_DETAILS = {
     "Usage: npm run slide:assets -- add --slide <slide-XX|N> --source <path> --label <text> [--summary <text>] [--status <value>] [--kind <value>] [--role <value>] [--asset-id <id>] [--tag <text>] [--note <text>] [--json]",
     "Notes: creates or updates projects/designer-health/slide-assets/slide-XX/manifest.json, copies the chosen canonical preview into the checked-in slide-assets folder, and preserves repo-local provenance back to the source run when possible.",
   ],
+  "references:sync": [
+    "Usage: npm run references:sync -- --project-root <path> [--json]",
+    "Notes: normalizes project reference material into the checked-in Designer references layout.",
+  ],
   "slide:create:prep": [
     "Usage: npm run slide:create:prep -- --slide <slide-XX|N> [--project-root <path>] [--lane <auto|html|native|hybrid>] [--reference-image <path> ...] [--reference-file <path> ...] [--version-id <id>] [--force] [--json]",
     "Notes: local-only Designer bootstrap prep; resolves the slide through deck-spec.json, allocates or reuses a create-draft version bundle, seeds version-root generated.html and preview.png from the deck template shell, snapshots context under versions/version-*/create/, and writes slide-notes/<slide>/create-request.md.",
@@ -405,19 +413,17 @@ const SCRIPT_DETAILS = {
     "Notes: includes tracked plus untracked non-ignored files, excludes designer artifact trees via scripts/repo/code-zip-policy.json, and injects .github/repo-stamp.json.",
   ],
   "zip:repo": [
-    "Options: --mode <local|remote>, --out <path>, --ref <name>, --source <text>, --help",
-    "Notes: remote uses gh to download an archive; local uses git ls-files and zip.",
+    "Notes: unavailable in this trimmed checkout because the shared ops-core zip helper is not vendored.",
   ],
   "pr:from-zip": [
-    "Options: --zip <path>, --branch <name>, --base <ref>, --message <msg>, --title <title>, --body <text>, --allow-delete, --no-pr, --no-push, --reuse-branch, --force",
+    "Notes: unavailable in this trimmed checkout because the shared ops-core zip-to-PR helper is not vendored.",
   ],
   "gh:pr": [
-    "Options: --title, --summary (repeatable), --test (repeatable), --body, --body-file, --base, --head, --draft, --web",
-    "Notes: uses gh; accepts body via stdin when piped.",
+    "Notes: unavailable in this trimmed checkout because the shared ops-core GitHub PR helper is not vendored.",
   ],
   "ops-core:init": [
     "Usage: npm run ops-core:init",
-    "Notes: runs `git submodule update --init --recursive ops-core`.",
+    "Notes: prints a no-op message because this checkout does not vendor ops-core.",
   ],
 };
 

@@ -1,0 +1,17 @@
+{
+  "nextVersionNumber": 4,
+  "versions": {
+    "version-000001": {
+      "slideId": "slide-01",
+      "dir": "projects/mentor-match/slide-figures/slide-01/versions/version-000001--slide-01-create-draft"
+    },
+    "version-000002": {
+      "slideId": "slide-02",
+      "dir": "projects/mentor-match/slide-figures/slide-02/versions/version-000002--slide-02-create-draft"
+    },
+    "version-000003": {
+      "slideId": "slide-03",
+      "dir": "projects/mentor-match/slide-figures/slide-03/versions/version-000003--slide-03-create-draft"
+    }
+  }
+}

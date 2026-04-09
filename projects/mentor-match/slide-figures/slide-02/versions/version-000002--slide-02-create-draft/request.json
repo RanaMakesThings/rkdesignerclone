@@ -1,0 +1,11 @@
+{
+  "provider": "openai",
+  "model": "gpt-5.4",
+  "referenceImages": [
+    "/Users/rkhome/code/rkdesignerclone/projects/mentor-match/slide-figures/slide-02/versions/version-000002--slide-02-create-draft/create/template.png"
+  ],
+  "maxOutputTokens": 8000,
+  "reasoning": {
+    "effort": "low"
+  }
+}

@@ -32,6 +32,8 @@ learning formats that respect time pressure and interruption.
 - set the emotional and aesthetic tone
 - imply clarity under pressure
 - avoid generic medical conference opener clichés
+- keep the title, subtitle, and SAEM shell stable
+- generate five figure-only alternatives for right-side exploration
 
 ## Locked copy
 
@@ -55,6 +57,7 @@ learning formats that respect time pressure and interruption.
 - keep the right-side visual field abstract and editorial rather than literal
 - save presenter portraits for the dedicated intro slide immediately after this
   opener
+- modern academic editorial style, not startup dashboard polish
 
 ## Existing useful source assets
 
@@ -63,5 +66,10 @@ learning formats that respect time pressure and interruption.
 
 ## Immediate next refinement
 
-- explore two to three title-slide concepts
-- decide how directly the SAEM shell should appear in the opening frame
+- produce five title-slide figure alternatives:
+  - connected rings for workflow fit, retrieval, and adaptation
+  - interrupted shift timeline with a micro-window
+  - stacked microlearning cards
+  - signal-to-structure lattice
+  - pulse-window rhythm system
+- choose one winner and then refine spacing, density, and label tone

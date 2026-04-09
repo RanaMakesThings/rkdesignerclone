@@ -192,7 +192,7 @@ export const buildDesignerSlidesExportZip = async () => {
       "",
       "Structure:",
       "- deck/deck-export.json: deck-level metadata and current slide identities",
-      "- design-system/preview.html: checked-in Vox design-system reference preview",
+      "- design-system/preview.html: checked-in design-system reference preview",
       "- design-system/reference.css: extracted inline CSS from the design-system reference",
       "- design-system/metadata.json: source path and exported design-system files",
       "- slides/<NN-title>/metadata.json: public slide number, repo slide id, stamped root id, current version",

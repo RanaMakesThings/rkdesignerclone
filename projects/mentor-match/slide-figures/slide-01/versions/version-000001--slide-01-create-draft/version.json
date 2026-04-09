@@ -1,0 +1,16 @@
+{
+  "id": "version-000001",
+  "slideId": "slide-01",
+  "slideDir": "projects/mentor-match/slide-figures/slide-01",
+  "dir": "projects/mentor-match/slide-figures/slide-01/versions/version-000001--slide-01-create-draft",
+  "label": "slide-01-create-draft",
+  "status": "draft",
+  "createdAt": "2026-04-09T16:46:53.489Z",
+  "sourceKind": "create-draft",
+  "baseVersionId": null,
+  "legacySourcePaths": [],
+  "createLane": "html",
+  "templateId": "designer-deck-template-v1",
+  "bootstrapMode": "from-spec",
+  "runType": "slide-create"
+}
