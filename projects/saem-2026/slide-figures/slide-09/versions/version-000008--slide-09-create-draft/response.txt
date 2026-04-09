@@ -1,0 +1,272 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Can Personalize and Accelerate Microlearning</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body, html {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #0B1930;
+  }
+  .slide-container {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+  }
+  .shell {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: 1;
+  }
+  .content {
+    position: relative;
+    z-index: 2;
+    padding: 120px 140px 0 140px;
+    height: 100%;
+  }
+  h1 {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: #0B1930;
+    margin-bottom: 24px;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #4A5568;
+    margin-bottom: 80px;
+    line-height: 1.3;
+  }
+  .citation {
+    font-size: 20px;
+    color: #718096;
+    vertical-align: super;
+    font-weight: 500;
+  }
+  
+  .diagram-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .node {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 140px;
+    background: #ffffff;
+    border: 2px solid #E2E8F0;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(11, 25, 48, 0.05);
+    z-index: 10;
+  }
+
+  .node-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #F0F4F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .node-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: #0B1930;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .node-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0B1930;
+    text-transform: lowercase;
+    letter-spacing: -0.5px;
+  }
+
+  .node-desc {
+    font-size: 16px;
+    color: #4A5568;
+    margin-top: 8px;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  /* Node Positions */
+  .node-cases { top: 50px; left: 200px; }
+  .node-gaps { top: 300px; left: 450px; }
+  .node-timing { top: 50px; left: 800px; }
+  .node-feedback { top: 300px; left: 1050px; }
+
+  /* AI Layer Styling */
+  .ai-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+
+  .ai-label {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #F0F4F8;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2B6CB0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #E2E8F0;
+  }
+
+  /* Connecting Lines */
+  .pathway-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .path-line {
+    fill: none;
+    stroke: #CBD5E0;
+    stroke-width: 3;
+    stroke-dasharray: 8 8;
+  }
+
+  .path-arrow {
+    fill: none;
+    stroke: #CBD5E0;
+    stroke-width: 3;
+  }
+
+  .highlight-path {
+    stroke: #E53E3E;
+    stroke-width: 4;
+    stroke-dasharray: none;
+  }
+  
+  .highlight-arrow {
+    fill: #E53E3E;
+  }
+
+</style>
+</head>
+<body>
+  <div class="slide-container">
+    <img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />
+    
+    <div class="content">
+      <h1>AI can personalize and accelerate microlearning.</h1>
+      <h2>The emerging opportunity is adaptive support, not full automation.<span class="citation">[9, 18]</span></h2>
+
+      <div class="diagram-container">
+        
+        <!-- AI Adaptive Layer Background -->
+        <div class="ai-layer">
+          <div class="ai-label">Adaptive Learning Layer</div>
+          <svg class="pathway-svg" viewBox="0 0 1640 500">
+            <!-- Background grid/mesh to imply "layer" -->
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1" fill="#E2E8F0" />
+              </pattern>
+              <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#CBD5E0" />
+              </marker>
+              <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#E53E3E" />
+              </marker>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" opacity="0.5" rx="20" />
+            
+            <!-- Connection Lines -->
+            <!-- Cases to Gaps -->
+            <path class="path-line" d="M 310 190 C 310 250, 450 250, 560 300" marker-end="url(#arrowhead)" />
+            
+            <!-- Gaps to Timing -->
+            <path class="path-line highlight-path" d="M 560 300 C 650 250, 800 250, 910 190" marker-end="url(#arrowhead-red)" />
+            
+            <!-- Timing to Feedback -->
+            <path class="path-line" d="M 910 190 C 910 250, 1050 250, 1160 300" marker-end="url(#arrowhead)" />
+            
+            <!-- Feedback loop back to Cases -->
+            <path class="path-line" d="M 1160 440 C 1160 480, 310 480, 310 190" stroke-dasharray="4 12" />
+          </svg>
+        </div>
+
+        <!-- Nodes -->
+        <div class="node node-cases">
+          <div class="node-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <div class="node-title">cases</div>
+          <div class="node-desc">Dynamic selection</div>
+        </div>
+
+        <div class="node node-gaps">
+          <div class="node-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          </div>
+          <div class="node-title">gaps</div>
+          <div class="node-desc">Knowledge mapping</div>
+        </div>
+
+        <div class="node node-timing">
+          <div class="node-icon" style="background: #FFF5F5; stroke: #E53E3E;">
+            <svg viewBox="0 0 24 24" style="stroke: #E53E3E;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div class="node-title" style="color: #E53E3E;">timing</div>
+          <div class="node-desc">Spaced retrieval</div>
+        </div>
+
+        <div class="node node-feedback">
+          <div class="node-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          </div>
+          <div class="node-title">feedback</div>
+          <div class="node-desc">Targeted rationale</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+```

@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-04",
+  "displayNumber": "4",
+  "lane": "html",
+  "laneReason": "Short Is Not the Intervention defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000003",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-04",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-04-short-is-not-the-intervention.md",
+  "packetText": "# Slide 4 — Short Is Not the Intervention\n\n## Status\n\n- current deck numbering: slide 4\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- anchor the talk in learning science\n- prevent the audience from reducing microlearning to \"shorter slides\"\n- create a framework the rest of the deck can reference\n\n## Locked slide thesis\n\nMicrolearning works when it applies learning science, not when it merely shortens content.\n\n## Slide purpose brief\n\n- top claim:\n  the mechanism is design, not duration\n- support claim:\n  four pillars make the approach coherent\n- non-goals:\n  - do not over-explain each pillar with dense text\n  - do not look like a consulting framework slide\n\n## Figure job\n\n- make four pillars instantly understandable\n- create a memorable framework image\n- keep enough elegance that it feels like a keynote slide, not a handout\n\n## Locked copy\n\n- header:\n  `Short is not the intervention.`\n- subheader:\n  `Microlearning works when it applies learning science.`\n- figure labels:\n  - `Spaced repetition`\n  - `Active recall`\n  - `Cognitive load`\n  - `Just-in-time relevance`\n\n## Visual rules\n\n- strong center of gravity\n- clear four-part logic\n- no generic quadrant with tiny text\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- generate a first framework concept\n- compare a radial model versus a stacked pillar model\n\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-04",
+    "displayNumber": "4",
+    "importedSlides": [
+      4
+    ],
+    "status": "active",
+    "title": "Short Is Not the Intervention",
+    "purpose": "teach the four-pillar learning-science frame",
+    "header": "Short is not the intervention.",
+    "subheader": "Microlearning works when it applies learning science.",
+    "takeaway": "Spacing, retrieval, cognitive load management, and just-in-time relevance are the mechanism.",
+    "figureRole": "Build a memorable four-part framework image that feels like a keynote centerpiece rather than a consulting diagram.",
+    "family": "four-pillar framework",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Spacing, retrieval, cognitive load management, and just-in-time relevance appear repeatedly across the microlearning literature [4, 11, 20, 27, 30]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-04-short-is-not-the-intervention.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-04/manifest.json"
+    },
+    "selectedDirection": "Compare a radial or stacked-pillar composition and choose the one with the strongest center of gravity.",
+    "notes": [
+      "Do not let the slide collapse into tiny explanatory text.",
+      "This is the conceptual backbone of the deck."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-04",
+    "displayNumber": "4",
+    "importedSlides": [
+      4
+    ],
+    "status": "active",
+    "title": "Short Is Not the Intervention",
+    "purpose": "teach the four-pillar learning-science frame",
+    "header": "Short is not the intervention.",
+    "subheader": "Microlearning works when it applies learning science.",
+    "takeaway": "Spacing, retrieval, cognitive load management, and just-in-time relevance are the mechanism.",
+    "figureRole": "Build a memorable four-part framework image that feels like a keynote centerpiece rather than a consulting diagram.",
+    "family": "four-pillar framework",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Spacing, retrieval, cognitive load management, and just-in-time relevance appear repeatedly across the microlearning literature [4, 11, 20, 27, 30]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-04-short-is-not-the-intervention.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-04/manifest.json"
+    },
+    "selectedDirection": "Compare a radial or stacked-pillar composition and choose the one with the strongest center of gravity.",
+    "notes": [
+      "Do not let the slide collapse into tiny explanatory text.",
+      "This is the conceptual backbone of the deck."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-04/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft/create/create-request.snapshot.md"
+}

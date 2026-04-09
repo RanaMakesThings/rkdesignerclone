@@ -1,0 +1,116 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This slide belongs to a SAEM annual meeting talk on microlearning in emergency medicine.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Put all real content above the branded footer region so the SAEM26 logo/date block and skyline stay readable.
+- Do not obscure the lower-left logo block or the lower skyline/footer band.
+- Use inline CSS only.
+- Use inline SVG if helpful for lines, frameworks, diagrams, or geometry.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Style continuity:
+
+- Match the existing deck family: clean academic keynote, white or near-white canvas, deep navy typography, restrained SAEM blue and red accents, modern but calm.
+- Do not make this look like a browser page, product UI, hospital dashboard, or poster session handout.
+- Avoid cheesy stock-photo logic, cartoon medical iconography, or AI-hype visuals.
+
+Locked text:
+
+- Header: `Short is not the intervention.`
+- Subheader: `Microlearning works when it applies learning science.`
+
+Slide contract:
+
+- Slide title: Short Is Not the Intervention
+- Purpose: teach the four-pillar learning-science frame
+- Takeaway: Spacing, retrieval, cognitive load management, and just-in-time relevance are the mechanism.
+- Figure role: Build a memorable four-part framework image that feels like a keynote centerpiece rather than a consulting diagram.
+- Visual family: four-pillar framework
+- Selected direction: Compare a radial or stacked-pillar composition and choose the one with the strongest center of gravity.
+- Additional note: Do not let the slide collapse into tiny explanatory text.
+- Additional note: This is the conceptual backbone of the deck.
+
+Evidence and citations:
+
+- Preferred citation anchors: [4], [11], [20], [27], [30]
+- Spacing, retrieval, cognitive load management, and just-in-time relevance appear repeatedly across the microlearning literature [4, 11, 20, 27, 30].
+- Where citations fit, render them as subtle evidence chips or compact bracket references.
+- Keep citation styling quiet and professional; they should support the claim, not dominate the slide.
+
+Reference images:
+
+- If reference images are attached, use them for family continuity, composition discipline, text density, and citation styling.
+- Do not literally copy the reference slides.
+
+Slide packet:
+
+# Slide 4 — Short Is Not the Intervention
+
+## Status
+
+- current deck numbering: slide 4
+- legacy source mapping: same as current
+- decision state: OPEN
+
+## Why this slide exists
+
+- anchor the talk in learning science
+- prevent the audience from reducing microlearning to "shorter slides"
+- create a framework the rest of the deck can reference
+
+## Locked slide thesis
+
+Microlearning works when it applies learning science, not when it merely shortens content.
+
+## Slide purpose brief
+
+- top claim:
+  the mechanism is design, not duration
+- support claim:
+  four pillars make the approach coherent
+- non-goals:
+  - do not over-explain each pillar with dense text
+  - do not look like a consulting framework slide
+
+## Figure job
+
+- make four pillars instantly understandable
+- create a memorable framework image
+- keep enough elegance that it feels like a keynote slide, not a handout
+
+## Locked copy
+
+- header:
+  `Short is not the intervention.`
+- subheader:
+  `Microlearning works when it applies learning science.`
+- figure labels:
+  - `Spaced repetition`
+  - `Active recall`
+  - `Cognitive load`
+  - `Just-in-time relevance`
+
+## Visual rules
+
+- strong center of gravity
+- clear four-part logic
+- no generic quadrant with tiny text
+
+## Existing useful source assets
+
+- `inputs/microlearning_emergency_medicine_review.md`
+- `inputs/saem_microlearning_talk_outline.md`
+
+## Immediate next refinement
+
+- generate a first framework concept
+- compare a radial model versus a stacked pillar model
+
+Output:
+
+- Return one complete HTML document only.

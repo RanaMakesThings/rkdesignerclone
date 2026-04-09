@@ -1,0 +1,18 @@
+{
+  "slideId": "slide-02-authors",
+  "slideDir": "projects/saem-2026/slide-figures/slide-02-authors",
+  "currentVersionId": "version-000015",
+  "versions": [
+    {
+      "id": "version-000015",
+      "label": "slide-02-authors-intro",
+      "status": "current",
+      "sourceKind": "create-draft",
+      "createdAt": "2026-04-08T23:59:00.000Z",
+      "baseVersionId": null,
+      "dir": "projects/saem-2026/slide-figures/slide-02-authors/versions/version-000015--slide-02-authors-intro",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

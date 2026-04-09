@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-09",
+  "displayNumber": "9",
+  "lane": "html",
+  "laneReason": "AI Can Personalize and Accelerate Microlearning defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000008",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-09",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-09-ai-can-personalize-and-accelerate.md",
+  "packetText": "# Slide 9 — AI Can Personalize and Accelerate Microlearning\n\n## Status\n\n- current deck numbering: slide 9\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- modernize the talk\n- show a credible educational role for AI\n- keep the conversation focused on pedagogy rather than hype\n\n## Locked slide thesis\n\nAI is most promising when it helps adapt cases, sequence review, and provide\ntargeted educational feedback.\n\n## Slide purpose brief\n\n- top claim:\n  AI may improve personalization and timing\n- support claim:\n  the value is adaptive support around good educational design\n- non-goals:\n  - do not build a chatbot hero slide\n  - do not imply autonomous education is the goal\n\n## Figure job\n\n- show targeted adaptation\n- make AI feel like a quiet layer around the workflow\n- keep the visual language premium and calm\n\n## Locked copy\n\n- header:\n  `AI can personalize and accelerate microlearning.`\n- subheader:\n  `The emerging opportunity is adaptive support, not full automation.`\n- figure labels:\n  - `cases`\n  - `feedback`\n  - `timing`\n  - `gaps`\n\n## Visual rules\n\n- no robots\n- no futuristic command center\n- no hype gradients or glowing neon AI clichés\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test an adaptive-pathway composition\n- compare a closed-loop learning system with a targeted-review map\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-09",
+    "displayNumber": "9",
+    "importedSlides": [
+      9
+    ],
+    "status": "active",
+    "title": "AI Can Personalize and Accelerate Microlearning",
+    "purpose": "show the audience where AI may add real educational value without sounding breathless",
+    "header": "AI can personalize and accelerate microlearning.",
+    "subheader": "The emerging opportunity is adaptive support, not full automation.",
+    "takeaway": "AI is most promising when it identifies gaps, adapts cases, and supports feedback or review timing.",
+    "figureRole": "Create a modern adaptive-learning graphic showing targeted cases, feedback, and timing rather than generic chatbot imagery.",
+    "family": "adaptive learning pathway",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Emerging AI-augmented curricula can personalize cases, identify knowledge gaps, and adapt feedback or review timing [9, 18]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-09-ai-can-personalize-and-accelerate.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-09/manifest.json"
+    },
+    "selectedDirection": "Show AI as a quiet adaptive layer around cases, feedback, and sequencing rather than as a giant central robot.",
+    "notes": [
+      "This is a modernization slide, not a hype slide.",
+      "Keep the visual language premium and evidence-forward."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-09",
+    "displayNumber": "9",
+    "importedSlides": [
+      9
+    ],
+    "status": "active",
+    "title": "AI Can Personalize and Accelerate Microlearning",
+    "purpose": "show the audience where AI may add real educational value without sounding breathless",
+    "header": "AI can personalize and accelerate microlearning.",
+    "subheader": "The emerging opportunity is adaptive support, not full automation.",
+    "takeaway": "AI is most promising when it identifies gaps, adapts cases, and supports feedback or review timing.",
+    "figureRole": "Create a modern adaptive-learning graphic showing targeted cases, feedback, and timing rather than generic chatbot imagery.",
+    "family": "adaptive learning pathway",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Emerging AI-augmented curricula can personalize cases, identify knowledge gaps, and adapt feedback or review timing [9, 18]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-09-ai-can-personalize-and-accelerate.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-09/manifest.json"
+    },
+    "selectedDirection": "Show AI as a quiet adaptive layer around cases, feedback, and sequencing rather than as a giant central robot.",
+    "notes": [
+      "This is a modernization slide, not a hype slide.",
+      "Keep the visual language premium and evidence-forward."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-09/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft/create/create-request.snapshot.md"
+}

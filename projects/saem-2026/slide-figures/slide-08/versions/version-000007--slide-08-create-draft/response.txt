@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Tool Stack Already Exists</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #001530;
+            position: relative;
+        }
+        
+        .shell {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1920px;
+            height: 1080px;
+            z-index: 1;
+        }
+        
+        .content-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1920px;
+            height: 1080px;
+            z-index: 3;
+            padding: 110px 140px;
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            font-size: 64px;
+            font-weight: 800;
+            color: #001530;
+            margin: 0 0 15px 0;
+            letter-spacing: -1px;
+        }
+        
+        h2 {
+            font-size: 36px;
+            font-weight: 400;
+            color: #4a5568;
+            margin: 0 0 60px 0;
+            max-width: 1500px;
+            line-height: 1.4;
+        }
+        
+        .citation {
+            font-size: 22px;
+            color: #718096;
+            vertical-align: super;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .map-background {
+            position: absolute;
+            top: 310px;
+            left: 100px;
+            width: 1720px;
+            height: 520px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            z-index: 2;
+        }
+        
+        .figure-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        
+        .stack-column {
+            width: 31%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 4;
+        }
+        
+        .column-header {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .column-header::before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .header-now { color: #0055a4; border-bottom: 3px solid #0055a4; }
+        .header-now::before { background-color: #0055a4; }
+        
+        .header-next { color: #4a5568; border-bottom: 3px solid #4a5568; }
+        .header-next::before { background-color: #4a5568; }
+        
+        .header-emerging { color: #c8102e; border-bottom: 3px solid #c8102e; }
+        .header-emerging::before { background-color: #c8102e; }
+        
+        .card {
+            background: #ffffff;
+            border-left: 6px solid #cbd5e1;
+            padding: 25px 30px;
+            margin-bottom: 20px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-top: 1px solid #f1f5f9;
+            border-right: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        
+        .card.now { border-left-color: #0055a4; }
+        .card.next { border-left-color: #4a5568; }
+        .card.emerging { border-left-color: #c8102e; }
+        
+        .card-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #001530;
+            margin-bottom: 8px;
+        }
+        
+        .card-desc {
+            font-size: 20px;
+            color: #4a5568;
+            line-height: 1.4;
+        }
+        
+        .arrow-layer {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />
+    
+    <div class="map-background">
+        <svg class="arrow-layer">
+            <!-- Arrow Now to Next -->
+            <line x1="32.5%" y1="20" x2="35.5%" y2="20" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="6 6" />
+            <polygon points="35.5%,15 36.5%,20 35.5%,25" fill="#cbd5e1" />
+            
+            <!-- Arrow Next to Emerging -->
+            <line x1="65.5%" y1="20" x2="68.5%" y2="20" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="6 6" />
+            <polygon points="68.5%,15 69.5%,20 68.5%,25" fill="#cbd5e1" />
+        </svg>
+    </div>
+    
+    <div class="content-layer">
+        <h1>The tool stack already exists.</h1>
+        <h2>Anki, mobile apps, LMS workflows, and curated FOAM can start today. <span class="citation">[1, 2, 11, 12, 17, 18]</span></h2>
+        
+        <div class="figure-container">
+            <!-- Now Column -->
+            <div class="stack-column">
+                <div class="column-header header-now">Now</div>
+                
+                <div class="card now">
+                    <div class="card-title">Spaced Repetition</div>
+                    <div class="card-desc">Anki and dedicated flashcard apps for durable knowledge retention.</div>
+                </div>
+                <div class="card now">
+                    <div class="card-title">Curated FOAM</div>
+                    <div class="card-desc">Podcasts, blogs, and visual abstracts mapped directly to core curricula.</div>
+                </div>
+                <div class="card now">
+                    <div class="card-title">LMS Workflows</div>
+                    <div class="card-desc">Short-form modules and high-yield quizzes built into existing platforms.</div>
+                </div>
+            </div>
+            
+            <!-- Next Column -->
+            <div class="stack-column">
+                <div class="column-header header-next">Next</div>
+                
+                <div class="card next">
+                    <div class="card-title">Adaptive Pathways</div>
+                    <div class="card-desc">Content that automatically scales difficulty based on resident performance.</div>
+                </div>
+                <div class="card next">
+                    <div class="card-title">Contextual Delivery</div>
+                    <div class="card-desc">Targeted push notifications tied to clinical shifts and rotation schedules.</div>
+                </div>
+            </div>
+            
+            <!-- Emerging Column -->
+            <div class="stack-column">
+                <div class="column-header header-emerging">Emerging</div>
+                
+                <div class="card emerging">
+                    <div class="card-title">Generative AI Models</div>
+                    <div class="card-desc">Automated clinical case generation and dynamic, personalized question banks.</div>
+                </div>
+                <div class="card emerging">
+                    <div class="card-title">Ambient Clinical Support</div>
+                    <div class="card-desc">Just-in-time microlearning triggered seamlessly by live EHR documentation.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

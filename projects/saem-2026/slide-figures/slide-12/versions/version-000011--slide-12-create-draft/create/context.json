@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-12",
+  "displayNumber": "12",
+  "lane": "html",
+  "laneReason": "Fit It Into Workflow, Not Around Workflow defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000011",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-12",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-12-fit-it-into-workflow.md",
+  "packetText": "# Slide 12 — Fit It Into Workflow, Not Around Workflow\n\n## Status\n\n- current deck numbering: slide 12\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- make implementation feel realistic\n- show where microlearning actually lives in practice\n- move the audience from agreement to feasibility\n\n## Locked slide thesis\n\nMicrolearning works best when it lives inside the rhythms clinicians already\nhave.\n\n## Slide purpose brief\n\n- top claim:\n  workflow fit matters more than formal scheduling\n- support claim:\n  clinicians are more likely to use resources that meet them at real moments of need\n- non-goals:\n  - do not build a fake EHR screen\n  - do not overcomplicate the workflow map\n\n## Figure job\n\n- show touchpoints across a shift or week\n- make the implementation pattern feel realistic\n- avoid the look of an operations dashboard\n\n## Locked copy\n\n- header:\n  `Fit it into workflow, not around workflow.`\n- subheader:\n  `Microlearning works best when it lives where clinicians already are.`\n- figure labels:\n  - `question`\n  - `pearl`\n  - `case follow-up`\n  - `curated module`\n\n## Visual rules\n\n- time-based or workflow-based structure\n- calm layout, clear sequence\n- no dashboard chrome\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a shift-touchpoint timeline\n- compare a daily cadence map with a patient-encounter loop\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-12",
+    "displayNumber": "12",
+    "importedSlides": [
+      12
+    ],
+    "status": "active",
+    "title": "Fit It Into Workflow, Not Around Workflow",
+    "purpose": "show how microlearning actually enters clinical routines",
+    "header": "Fit it into workflow, not around workflow.",
+    "subheader": "Microlearning works best when it lives where clinicians already are.",
+    "takeaway": "Workflow fit matters more than forcing clinicians into additional scheduled learning time.",
+    "figureRole": "Create a clean workflow-touchpoint timeline that shows where brief learning moments can sit in real practice.",
+    "family": "workflow touchpoint timeline",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Workflow integration and point-of-care relevance matter more than forcing learners into extra scheduled time [2, 7, 8, 15, 23]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-12-fit-it-into-workflow.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-12/manifest.json"
+    },
+    "selectedDirection": "Use an ED-day or shift-flow structure with brief learning touchpoints rather than a formal schedule grid.",
+    "notes": [
+      "This should make implementation feel realistic.",
+      "Keep it grounded in clinician behavior."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-12",
+    "displayNumber": "12",
+    "importedSlides": [
+      12
+    ],
+    "status": "active",
+    "title": "Fit It Into Workflow, Not Around Workflow",
+    "purpose": "show how microlearning actually enters clinical routines",
+    "header": "Fit it into workflow, not around workflow.",
+    "subheader": "Microlearning works best when it lives where clinicians already are.",
+    "takeaway": "Workflow fit matters more than forcing clinicians into additional scheduled learning time.",
+    "figureRole": "Create a clean workflow-touchpoint timeline that shows where brief learning moments can sit in real practice.",
+    "family": "workflow touchpoint timeline",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Workflow integration and point-of-care relevance matter more than forcing learners into extra scheduled time [2, 7, 8, 15, 23]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-12-fit-it-into-workflow.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-12/manifest.json"
+    },
+    "selectedDirection": "Use an ED-day or shift-flow structure with brief learning touchpoints rather than a formal schedule grid.",
+    "notes": [
+      "This should make implementation feel realistic.",
+      "Keep it grounded in clinician behavior."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-12/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft/create/create-request.snapshot.md"
+}

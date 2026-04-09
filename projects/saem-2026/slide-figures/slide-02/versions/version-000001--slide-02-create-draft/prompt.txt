@@ -1,0 +1,51 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This is slide 2 of a SAEM annual meeting talk on microlearning in emergency medicine.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Preserve the official SAEM26 footer treatment by leaving the lower band readable and unobscured.
+- Keep all major content above the branded footer region.
+- Use inline CSS only.
+- Use inline SVG for the main visual if helpful.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Locked text:
+
+- Header: `The ED creates a learning-design problem.`
+- Subheader: `Emergency medicine is built around interruption, uncertainty, and time scarcity.`
+
+Core message:
+
+- The challenge is structural: the learning format has to fit the work.
+
+Visual job:
+
+- Show the fractured rhythm of emergency medicine.
+- Make it immediately obvious that long-form teaching often arrives out of sync with clinical need.
+- Make the audience feel interruptions, micro-windows, and just-in-time learning demand.
+
+Composition direction:
+
+- Build a strong interruption-map or fractured shift timeline in the center of the slide.
+- The visual should read in one glance.
+- A good direction is a horizontal shift timeline broken into irregular segments with interruption markers, short learning windows, and one or two contrasting long-form blocks that visibly do not fit.
+- Use elegant editorial spacing, not dashboard styling.
+- Include a small evidence anchor treatment if it helps, such as subtle reference chips like `[15]` and `[23]`.
+
+Style guardrails:
+
+- Serious, evidence-forward, and calm.
+- White or near-white canvas.
+- Deep navy and slate text.
+- SAEM blue and red may be used for accents and interruptions.
+- No browser window chrome, no app UI, no mock hospital monitor, no card grid.
+- No placeholder boxes or stub labels.
+- Keep the visual clean enough for live presentation from a distance.
+
+Output:
+
+- Return one complete HTML document only.

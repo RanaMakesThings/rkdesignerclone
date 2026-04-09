@@ -1,47 +1,42 @@
-# SAEM 2026
+# SAEM Microlearning
 
-Working project for a Society for Academic Emergency Medicine annual meeting
-deck under `projects/saem-2026/`.
+Project-local deck workspace for the SAEM talk on microlearning in emergency
+medicine.
 
-This folder is the project home for:
+## Intent
 
-- deck backbone and slide inventory in `deck-spec.json`
-- narrative and copy review in `master-slide-specs.md`
-- execution tracking in `deck-matrix.md`
-- project-local workflow in `workflow.md`
-- source inputs in `inputs/`
-- per-slide packets in `slide-packets/`
-- figure specs and briefs in `figures/`
-- stamped outputs in `slide-figures/`
+This project should use `designer` as a reusable slide engine without changing
+the repo's core assumptions or the existing `machina-health` project.
 
-## Starter checklist
+The isolation rule is:
 
-- Drop source material into `inputs/`.
-- Replace the placeholder talk metadata in `deck-spec.json`.
-- Sync `master-slide-specs.md` and `deck-matrix.md` to match the deck spec.
-- Start one packet per active slide in `slide-packets/`.
-- Add reusable deck assets in `assets/manifest.json`.
-- Add slide-local assets in `slide-assets/slide-XX/manifest.json`.
-- Generate slide reports into `slide-reports/`.
-- Regenerate the deck report whenever the active backbone changes.
+- keep all SAEM work under `projects/saem-2026/`
+- keep changes scoped to this project unless a shared tooling bug blocks the deck
+- treat Designer Studio as stable tooling, not as a one-off deck folder
 
-## Suggested source docs
+## Source docs
 
-- `inputs/COPY_SOURCE_DOC.md`
-- `inputs/VISUAL_SOURCE_DOC.md`
-- `inputs/CITATION_SOURCE_DOC.md`
-- `inputs/PROGRAM_NOTES.md`
+- [inputs/microlearning_emergency_medicine_review.md](./inputs/microlearning_emergency_medicine_review.md)
+- [inputs/saem_microlearning_talk_outline.md](./inputs/saem_microlearning_talk_outline.md)
+- [inputs/COPY_SOURCE_DOC.md](./inputs/COPY_SOURCE_DOC.md)
+- [inputs/VISUAL_SOURCE_DOC.md](./inputs/VISUAL_SOURCE_DOC.md)
 
-## Conference template
+## Template
 
-- the canonical SAEM PowerPoint shell lives at
-  `assets/powerpoint-template/saem-annual-meeting-powerpoint-template.pptx`
-- template notes and integration guidance live at
-  `assets/powerpoint-template/template-integration.md`
+The official SAEM annual meeting template is stored at:
 
-## Notes
+- [templates/saem-annual-meeting-template-v1/saem_annual_meeting_template.pptx](./templates/saem-annual-meeting-template-v1/saem_annual_meeting_template.pptx)
 
-- Keep project-specific content in this folder.
-- Keep reusable tooling and shared prompt infrastructure at the repo level.
-- Use `projects/figures/README.md` for shared ideation, composition, and
-  render-brief patterns.
+Designer should be used for concept generation, mockup previews, and iterative
+visual refinement. The SAEM PowerPoint template is the final packaging layer.
+
+## First practical next step
+
+Once `GEMINI_API_KEY` is available in the `designer` environment, start with
+one concept-heavy slide rather than the whole deck at once:
+
+- slide 2: the ED learning-design problem
+- or slide 4: the learning-science framework
+
+Those are good tests of whether the project brief and template constraints are
+working.

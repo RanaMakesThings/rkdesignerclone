@@ -1,0 +1,117 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This slide belongs to a SAEM annual meeting talk on microlearning in emergency medicine.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Put all real content above the branded footer region so the SAEM26 logo/date block and skyline stay readable.
+- Do not obscure the lower-left logo block or the lower skyline/footer band.
+- Use inline CSS only.
+- Use inline SVG if helpful for lines, frameworks, diagrams, or geometry.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Style continuity:
+
+- Match the existing deck family: clean academic keynote, white or near-white canvas, deep navy typography, restrained SAEM blue and red accents, modern but calm.
+- Do not make this look like a browser page, product UI, hospital dashboard, or poster session handout.
+- Avoid cheesy stock-photo logic, cartoon medical iconography, or AI-hype visuals.
+
+Locked text:
+
+- Header: `What counts as microlearning?`
+- Subheader: `Brief, focused, high-yield learning episodes designed for action.`
+
+Slide contract:
+
+- Slide title: What Counts as Microlearning?
+- Purpose: define the intervention tightly before the deck expands into tools and theory
+- Takeaway: Shortness alone is not the intervention; the unit has to be focused, useful, and repeatable.
+- Figure role: Create a crisp four-part definition grid or modular structure that tightens the audience's mental model.
+- Visual family: definition framework
+- Selected direction: Use a precise definition slide with four clean components rather than a paragraph or checklist wall.
+- Additional note: This is a definition slide, but it should still feel elegant.
+- Additional note: Keep the visual hierarchy strong enough that the audience gets the frame in one glance.
+
+Evidence and citations:
+
+- Preferred citation anchors: [1], [13], [27]
+- Microlearning is usually brief, focused, action-oriented, and often mobile or asynchronous [1, 13, 27].
+- Where citations fit, render them as subtle evidence chips or compact bracket references.
+- Keep citation styling quiet and professional; they should support the claim, not dominate the slide.
+
+Reference images:
+
+- If reference images are attached, use them for family continuity, composition discipline, text density, and citation styling.
+- Do not literally copy the reference slides.
+
+Slide packet:
+
+# Slide 3 — What Counts as Microlearning?
+
+## Status
+
+- current deck numbering: slide 3
+- legacy source mapping: same as current
+- decision state: OPEN
+
+## Why this slide exists
+
+- define the intervention tightly
+- prevent the deck from calling every short digital object "microlearning"
+- prepare the audience for the learning-science argument
+
+## Locked slide thesis
+
+Microlearning is a focused unit of action-oriented learning, not just shorter
+content.
+
+## Slide purpose brief
+
+- top claim:
+  microlearning needs a tighter definition than "anything brief"
+- support claim:
+  the useful unit is focused, high-yield, and built for reuse or repetition
+- non-goals:
+  - do not turn this into a wordy taxonomy slide
+  - do not jump ahead to AI or FOAMed here
+
+## Figure job
+
+- make the definition feel crisp
+- give the audience a clean mental model
+- keep enough elegance that the slide still feels keynote-like
+
+## Locked copy
+
+- header:
+  `What counts as microlearning?`
+- subheader:
+  `Brief, focused, high-yield learning episodes designed for action.`
+- figure labels:
+  - `brief`
+  - `focused`
+  - `actionable`
+  - `repeatable`
+
+## Visual rules
+
+- one-glance structure
+- disciplined, modular composition
+- no dictionary-style text block
+
+## Existing useful source assets
+
+- `inputs/microlearning_emergency_medicine_review.md`
+- `inputs/saem_microlearning_talk_outline.md`
+
+## Immediate next refinement
+
+- test a four-block definition grid
+- compare a modular card system with a single integrated frame
+
+Output:
+
+- Return one complete HTML document only.

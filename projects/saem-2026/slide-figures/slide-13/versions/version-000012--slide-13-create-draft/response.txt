@@ -1,0 +1,242 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0">
+    <title>Engagement Is Not Enough</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+        .slide-container {
+            position: relative;
+            width: 1920px;
+            height: 1080px;
+        }
+        .shell {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .content {
+            position: absolute;
+            top: 130px;
+            left: 140px;
+            right: 140px;
+            z-index: 1;
+        }
+        h1 {
+            font-size: 64px;
+            font-weight: 800;
+            color: #002855;
+            margin: 0;
+            letter-spacing: -1.5px;
+        }
+        h2 {
+            font-size: 36px;
+            font-weight: 400;
+            color: #4A5568;
+            margin: 12px 0 0 0;
+        }
+        .ladder-container {
+            position: absolute;
+            top: 340px;
+            left: 140px;
+            width: 1640px;
+            height: 440px;
+            z-index: 2;
+        }
+        .ladder-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .card {
+            position: absolute;
+            width: 330px;
+            height: 240px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 16px 32px -12px rgba(0, 40, 85, 0.15);
+            padding: 32px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
+        }
+        .card-level {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+        .card-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #002855;
+            margin-bottom: 16px;
+        }
+        .card-desc {
+            font-size: 18px;
+            color: #4A5568;
+            line-height: 1.5;
+        }
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .badge {
+            font-size: 13px;
+            font-weight: 700;
+            padding: 6px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .citation {
+            font-size: 15px;
+            font-weight: 600;
+            color: #718096;
+        }
+        .axis-container {
+            position: absolute;
+            top: 820px;
+            left: 140px;
+            width: 1640px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+        }
+        .axis-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #E2E8F0;
+            z-index: 1;
+        }
+        .axis-label {
+            background: #ffffff;
+            padding: 0 16px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Background Template -->
+        <img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />
+
+        <!-- Header -->
+        <div class="content">
+            <h1>Engagement is not enough.</h1>
+            <h2>Measure more than clicks.</h2>
+        </div>
+
+        <!-- Ladder Visualization -->
+        <div class="ladder-container">
+            <!-- Connecting SVG Line -->
+            <svg class="ladder-svg" viewBox="0 0 1640 440">
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#CBD5E1" />
+                    </marker>
+                </defs>
+                <polyline points="165,320 595,240 1025,160 1455,80" fill="none" stroke="#E2E8F0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowhead)" />
+            </svg>
+
+            <!-- Step 1: Engagement -->
+            <div class="card" style="left: 0; bottom: 0; border-top: 8px solid #94A3B8;">
+                <div>
+                    <div class="card-level" style="color: #94A3B8;">Level 1</div>
+                    <div class="card-title">Engagement</div>
+                    <div class="card-desc">Module views, clicks, and completion rates.</div>
+                </div>
+                <div class="card-footer">
+                    <span class="badge" style="background: #F1F5F9; color: #64748B;">Baseline</span>
+                </div>
+            </div>
+
+            <!-- Step 2: Retention -->
+            <div class="card" style="left: 436px; bottom: 80px; border-top: 8px solid #004B87;">
+                <div>
+                    <div class="card-level" style="color: #004B87;">Level 2</div>
+                    <div class="card-title">Retention</div>
+                    <div class="card-desc">Knowledge recall and decay over time.</div>
+                </div>
+                <div class="card-footer">
+                    <span class="badge" style="background: #E6F0F9; color: #004B87;">Strong Evidence</span>
+                    <span class="citation">[1, 6]</span>
+                </div>
+            </div>
+
+            <!-- Step 3: Behavior -->
+            <div class="card" style="left: 873px; bottom: 160px; border-top: 8px solid #002855;">
+                <div>
+                    <div class="card-level" style="color: #002855;">Level 3</div>
+                    <div class="card-title">Behavior</div>
+                    <div class="card-desc">Protocol adherence and clinical practice change.</div>
+                </div>
+                <div class="card-footer">
+                    <span class="badge" style="background: #E2E8F0; color: #002855;">High Value</span>
+                </div>
+            </div>
+
+            <!-- Step 4: Outcomes -->
+            <div class="card" style="left: 1310px; bottom: 240px; border-top: 8px dashed #C8102E;">
+                <div>
+                    <div class="card-level" style="color: #C8102E;">Level 4</div>
+                    <div class="card-title">Outcomes</div>
+                    <div class="card-desc">Downstream patient and system-level impact.</div>
+                </div>
+                <div class="card-footer">
+                    <span class="badge" style="background: #FDE8E8; color: #C8102E;">Thinner Evidence</span>
+                    <span class="citation">[11, 13, 17]</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Axis Footer -->
+        <div class="axis-container">
+            <div class="axis-line"></div>
+            <div class="axis-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Easier to measure, lower clinical value
+            </div>
+            <div class="axis-label">
+                Harder to measure, higher clinical value
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```

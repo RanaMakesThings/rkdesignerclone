@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-14",
+  "displayNumber": "14",
+  "lane": "html",
+  "laneReason": "What to Do Monday Morning defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000013",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-14",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-14-what-to-do-monday-morning.md",
+  "packetText": "# Slide 14 — What to Do Monday Morning\n\n## Status\n\n- current deck numbering: slide 14\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- give the audience a realistic next step\n- end the practical section with momentum\n- reduce implementation anxiety\n\n## Locked slide thesis\n\nThe best next move is a small, curated, measurable pilot.\n\n## Slide purpose brief\n\n- top claim:\n  start with one pilot\n- support claim:\n  one audience, one topic, and one metric is enough to begin\n- non-goals:\n  - do not make this a long project plan\n  - do not sound administratively heavy\n\n## Figure job\n\n- create a clean three-step action pathway\n- make the call to action feel feasible\n- preserve energy near the end of the deck\n\n## Locked copy\n\n- header:\n  `What to do Monday morning.`\n- subheader:\n  `Start with one pilot, one audience, and one metric.`\n- figure labels:\n  - `pick one topic`\n  - `curate or build one unit`\n  - `measure one outcome`\n\n## Visual rules\n\n- simple action roadmap\n- no process-document look\n- keep it confident\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a three-step runway\n- compare a left-to-right roadmap with a central action triad\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-14",
+    "displayNumber": "14",
+    "importedSlides": [
+      14
+    ],
+    "status": "active",
+    "title": "What to Do Monday Morning",
+    "purpose": "give the audience a low-friction implementation plan",
+    "header": "What to do Monday morning.",
+    "subheader": "Start with one pilot, one audience, and one metric.",
+    "takeaway": "Start small, curate aggressively, and decide upfront how you will know whether it helped.",
+    "figureRole": "Build a clean three-step roadmap with enough energy to feel actionable at the end of the talk.",
+    "family": "implementation roadmap",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Implementation is most feasible when programs start small, curate selectively, and define evaluation upfront [2, 8, 15, 23]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-14-what-to-do-monday-morning.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-14/manifest.json"
+    },
+    "selectedDirection": "Use a practical three-step runway or roadmap rather than a verbose implementation checklist.",
+    "notes": [
+      "The slide should feel empowering, not administratively heavy.",
+      "End with something people can actually try."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-14",
+    "displayNumber": "14",
+    "importedSlides": [
+      14
+    ],
+    "status": "active",
+    "title": "What to Do Monday Morning",
+    "purpose": "give the audience a low-friction implementation plan",
+    "header": "What to do Monday morning.",
+    "subheader": "Start with one pilot, one audience, and one metric.",
+    "takeaway": "Start small, curate aggressively, and decide upfront how you will know whether it helped.",
+    "figureRole": "Build a clean three-step roadmap with enough energy to feel actionable at the end of the talk.",
+    "family": "implementation roadmap",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Implementation is most feasible when programs start small, curate selectively, and define evaluation upfront [2, 8, 15, 23]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-14-what-to-do-monday-morning.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-14/manifest.json"
+    },
+    "selectedDirection": "Use a practical three-step runway or roadmap rather than a verbose implementation checklist.",
+    "notes": [
+      "The slide should feel empowering, not administratively heavy.",
+      "End with something people can actually try."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-14/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft/create/create-request.snapshot.md"
+}

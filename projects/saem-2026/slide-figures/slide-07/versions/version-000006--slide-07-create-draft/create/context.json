@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-07",
+  "displayNumber": "7",
+  "lane": "html",
+  "laneReason": "Accessibility Is a Strength. Curation Is a Requirement. defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000006",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-07",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-07-accessibility-strength-curation-requirement.md",
+  "packetText": "# Slide 7 — Accessibility Is a Strength. Curation Is a Requirement.\n\n## Status\n\n- current deck numbering: slide 7\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- preserve credibility\n- acknowledge FOAMed limitations directly\n- reinforce the need for faculty judgment\n\n## Locked slide thesis\n\nOpen access is powerful, but quality still depends on appraisal, curation, and\ndigital literacy.\n\n## Slide purpose brief\n\n- top claim:\n  accessibility is not the same thing as reliability\n- support claim:\n  polish and reach can falsely signal authority\n- non-goals:\n  - do not sound anti-FOAM\n  - do not become a punitive warning slide\n\n## Figure job\n\n- distinguish signal from noise\n- keep the slide credible and calm\n- suggest judgment rather than fear\n\n## Locked copy\n\n- header:\n  `Accessibility is a strength. Curation is a requirement.`\n- subheader:\n  `Open access is useful. Quality still needs judgment.`\n- figure labels:\n  - `signal`\n  - `noise`\n  - `curation`\n\n## Visual rules\n\n- refined comparison, not cartoon metaphor\n- no red-alert design language\n- no logo battle\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a signal-filter composition\n- compare a curated funnel with a split-screen authority contrast\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-07",
+    "displayNumber": "7",
+    "importedSlides": [
+      7
+    ],
+    "status": "active",
+    "title": "Accessibility Is a Strength. Curation Is a Requirement.",
+    "purpose": "preserve credibility by naming FOAMed risks directly",
+    "header": "Accessibility is a strength. Curation is a requirement.",
+    "subheader": "Open access is useful. Quality still needs judgment.",
+    "takeaway": "Openness expands access, but credibility still depends on appraisal and curation.",
+    "figureRole": "Build a signal-versus-noise comparison with enough elegance that it feels like a warning, not a scolding list.",
+    "family": "signal-vs-noise comparison",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Open publishing broadens access, but quality appraisal and curation remain essential [5, 15, 29]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-07-accessibility-strength-curation-requirement.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-07/manifest.json"
+    },
+    "selectedDirection": "Show the difference between visible polish and trustworthy signal without using a cartoon metaphor.",
+    "notes": [
+      "This is the deck's credibility slide.",
+      "Keep the tone calm and faculty-friendly."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-07",
+    "displayNumber": "7",
+    "importedSlides": [
+      7
+    ],
+    "status": "active",
+    "title": "Accessibility Is a Strength. Curation Is a Requirement.",
+    "purpose": "preserve credibility by naming FOAMed risks directly",
+    "header": "Accessibility is a strength. Curation is a requirement.",
+    "subheader": "Open access is useful. Quality still needs judgment.",
+    "takeaway": "Openness expands access, but credibility still depends on appraisal and curation.",
+    "figureRole": "Build a signal-versus-noise comparison with enough elegance that it feels like a warning, not a scolding list.",
+    "family": "signal-vs-noise comparison",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Open publishing broadens access, but quality appraisal and curation remain essential [5, 15, 29]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-07-accessibility-strength-curation-requirement.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-07/manifest.json"
+    },
+    "selectedDirection": "Show the difference between visible polish and trustworthy signal without using a cartoon metaphor.",
+    "notes": [
+      "This is the deck's credibility slide.",
+      "Keep the tone calm and faculty-friendly."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-07/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft/create/create-request.snapshot.md"
+}

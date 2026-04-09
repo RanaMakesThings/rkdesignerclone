@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Best Learning Design Respects How Clinicians Actually Work</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            position: relative;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Background template */
+        .shell {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1920px;
+            height: 1080px;
+            z-index: 1;
+            pointer-events: none;
+        }
+        /* Content container */
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1920px;
+            height: 1080px;
+            z-index: 2;
+            padding: 140px 120px;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Typography */
+        h1 {
+            font-size: 76px;
+            font-weight: 800;
+            color: #0b1c2c;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            max-width: 1500px;
+        }
+        .accent-line {
+            width: 80px;
+            height: 6px;
+            background-color: #e31837;
+            margin: 36px 0;
+        }
+        h2 {
+            font-size: 42px;
+            font-weight: 400;
+            color: #475569;
+            line-height: 1.4;
+            max-width: 1400px;
+        }
+        /* Graphic container */
+        .graphic-container {
+            margin-top: 100px;
+            width: 100%;
+            flex-grow: 1;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Required background template -->
+    <img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />
+
+    <!-- Main content -->
+    <div class="content">
+        
+        <h1>The best learning design respects<br>how clinicians actually work.</h1>
+        
+        <div class="accent-line"></div>
+        
+        <h2>Microlearning is not a shortcut. It is a better fit.</h2>
+
+        <!-- Resolved Hero Graphic -->
+        <div class="graphic-container">
+            <svg width="1680" height="350" viewBox="0 0 1680 350" style="overflow: visible;">
+                
+                <!-- Background tracks (representing the noise/complexity that has been resolved) -->
+                <line x1="0" y1="80" x2="1680" y2="80" stroke="#f1f5f9" stroke-width="2" />
+                <line x1="0" y1="280" x2="1680" y2="280" stroke="#f1f5f9" stroke-width="2" />
+                <line x1="0" y1="180" x2="1680" y2="180" stroke="#e2e8f0" stroke-width="2" />
+
+                <!-- The main unified workflow line -->
+                <line x1="100" y1="180" x2="1580" y2="180" stroke="#0b1c2c" stroke-width="6" stroke-linecap="round" />
+
+                <!-- Node 1: Reach -->
+                <g transform="translate(340, 180)">
+                    <line x1="0" y1="-24" x2="0" y2="-100" stroke="#0055a5" stroke-width="2" stroke-dasharray="6 6" opacity="0.6" />
+                    <circle cx="0" cy="0" r="22" fill="#0055a5" />
+                    <circle cx="0" cy="0" r="40" fill="none" stroke="#0055a5" stroke-width="2" opacity="0.25" />
+                    <text x="0" y="80" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#0055a5" text-anchor="middle" letter-spacing="0.1em" text-transform="uppercase">REACH</text>
+                </g>
+
+                <!-- Node 2: Remember -->
+                <g transform="translate(840, 180)">
+                    <line x1="0" y1="-24" x2="0" y2="-100" stroke="#0b1c2c" stroke-width="2" stroke-dasharray="6 6" opacity="0.4" />
+                    <circle cx="0" cy="0" r="22" fill="#0b1c2c" />
+                    <circle cx="0" cy="0" r="40" fill="none" stroke="#0b1c2c" stroke-width="2" opacity="0.25" />
+                    <text x="0" y="80" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#0b1c2c" text-anchor="middle" letter-spacing="0.1em" text-transform="uppercase">REMEMBER</text>
+                </g>
+
+                <!-- Node 3: Use -->
+                <g transform="translate(1340, 180)">
+                    <line x1="0" y1="-24" x2="0" y2="-100" stroke="#e31837" stroke-width="2" stroke-dasharray="6 6" opacity="0.6" />
+                    <circle cx="0" cy="0" r="22" fill="#e31837" />
+                    <circle cx="0" cy="0" r="40" fill="none" stroke="#e31837" stroke-width="2" opacity="0.25" />
+                    <text x="0" y="80" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#e31837" text-anchor="middle" letter-spacing="0.1em" text-transform="uppercase">USE</text>
+                </g>
+
+            </svg>
+        </div>
+
+    </div>
+
+</body>
+</html>

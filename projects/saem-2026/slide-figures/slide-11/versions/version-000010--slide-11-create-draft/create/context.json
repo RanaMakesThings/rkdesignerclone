@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-11",
+  "displayNumber": "11",
+  "lane": "html",
+  "laneReason": "Design Rules for Good Microlearning defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000010",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-11",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-11-design-rules.md",
+  "packetText": "# Slide 11 — Design Rules for Good Microlearning\n\n## Status\n\n- current deck numbering: slide 11\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- give the audience a practical checklist\n- convert theory into design guidance\n- make the talk easier to remember and reuse\n\n## Locked slide thesis\n\nGood microlearning is brief, specific, active, and built for low-friction use.\n\n## Slide purpose brief\n\n- top claim:\n  good microlearning is intentionally constrained\n- support claim:\n  relevance, activation, and ease of use matter more than production gloss\n- non-goals:\n  - do not become a bullet wall\n  - do not look like a product feature list\n\n## Figure job\n\n- organize the design rules cleanly\n- let the audience remember them at a glance\n- keep the slide feeling premium\n\n## Locked copy\n\n- header:\n  `Design rules for good microlearning.`\n- subheader:\n  `Keep it brief, specific, active, and mobile-first.`\n- figure labels:\n  - `one objective`\n  - `clinical relevance`\n  - `active response`\n  - `mobile friction`\n  - `feedback`\n\n## Visual rules\n\n- elegant checklist logic\n- no dense body text\n- keep typography strong\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a stacked-rules composition\n- compare a vertical system with modular rule cards\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-11",
+    "displayNumber": "11",
+    "importedSlides": [
+      11
+    ],
+    "status": "active",
+    "title": "Design Rules for Good Microlearning",
+    "purpose": "give the audience a portable design checklist",
+    "header": "Design rules for good microlearning.",
+    "subheader": "Keep it brief, specific, active, and mobile-first.",
+    "takeaway": "Good microlearning is intentionally constrained, clinically relevant, and active rather than passive.",
+    "figureRole": "Build a clear design-rules stack that can function like a memorable checklist without becoming a bullet wall.",
+    "family": "design rules stack",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Good microlearning is brief, specific, active, and designed for low-friction mobile use [1, 7, 13, 20, 27]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-11-design-rules.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-11/manifest.json"
+    },
+    "selectedDirection": "Use five compact rules as a disciplined visual stack or modular card system, but keep the slide feeling keynote-ready.",
+    "notes": [
+      "This is the practical checklist slide.",
+      "Do not let it become a dense handout."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-11",
+    "displayNumber": "11",
+    "importedSlides": [
+      11
+    ],
+    "status": "active",
+    "title": "Design Rules for Good Microlearning",
+    "purpose": "give the audience a portable design checklist",
+    "header": "Design rules for good microlearning.",
+    "subheader": "Keep it brief, specific, active, and mobile-first.",
+    "takeaway": "Good microlearning is intentionally constrained, clinically relevant, and active rather than passive.",
+    "figureRole": "Build a clear design-rules stack that can function like a memorable checklist without becoming a bullet wall.",
+    "family": "design rules stack",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Good microlearning is brief, specific, active, and designed for low-friction mobile use [1, 7, 13, 20, 27]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-11-design-rules.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-11/manifest.json"
+    },
+    "selectedDirection": "Use five compact rules as a disciplined visual stack or modular card system, but keep the slide feeling keynote-ready.",
+    "notes": [
+      "This is the practical checklist slide.",
+      "Do not let it become a dense handout."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-11/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft/create/create-request.snapshot.md"
+}

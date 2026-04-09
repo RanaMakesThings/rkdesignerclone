@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Counts as Microlearning?</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Slide Container */
+        .slide-container {
+            width: 1920px;
+            height: 1080px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* Background Template */
+        .shell {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Content Area */
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            padding: 120px 140px 280px 140px; /* Bottom padding protects footer/skyline */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Section */
+        .header-section {
+            margin-bottom: 90px;
+            max-width: 1400px;
+        }
+
+        h1 {
+            font-size: 72px;
+            font-weight: 800;
+            color: #0B1E36; /* Deep Navy */
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 42px;
+            font-weight: 400;
+            color: #334155; /* Slate Gray */
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+
+        .citation {
+            font-size: 24px;
+            color: #94A3B8;
+            font-weight: 500;
+            vertical-align: super;
+            margin-left: 8px;
+        }
+
+        /* Definition Framework Grid */
+        .framework-grid {
+            display: flex;
+            gap: 40px;
+            width: 100%;
+            flex: 1;
+        }
+
+        /* Individual Cards */
+        .card {
+            flex: 1;
+            background: #ffffff;
+            border: 2px solid #E2E8F0;
+            border-radius: 16px;
+            padding: 48px 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 12px 36px rgba(11, 30, 54, 0.04);
+        }
+
+        /* Card Top Accents */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            height: 8px;
+            border-radius: 16px 16px 0 0;
+            background-color: #0B1E36; /* Default Navy */
+        }
+
+        .card.action-card::before {
+            background-color: #D22730; /* SAEM Red for Actionable */
+        }
+
+        /* Icons */
+        .icon-wrapper {
+            width: 72px;
+            height: 72px;
+            border-radius: 14px;
+            background: #F1F5F9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 32px;
+            color: #0057B8; /* SAEM Blue */
+        }
+
+        .action-card .icon-wrapper {
+            background: #FEF2F2;
+            color: #D22730; /* SAEM Red */
+        }
+
+        .icon-wrapper svg {
+            width: 36px;
+            height: 36px;
+            stroke-width: 2.5;
+        }
+
+        /* Card Typography */
+        .card h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0B1E36;
+            margin-bottom: 16px;
+            text-transform: capitalize;
+        }
+
+        .card p {
+            font-size: 22px;
+            font-weight: 400;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        /* Subtle connecting line behind cards (optional structural element) */
+        .connection-line {
+            position: absolute;
+            top: 450px; /* Align with icons */
+            left: 180px;
+            right: 180px;
+            height: 2px;
+            background: #E2E8F0;
+            z-index: -1;
+            border-style: dashed;
+            border-width: 2px;
+            border-color: #CBD5E1;
+            background: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="slide-container">
+        <!-- Required Background Image -->
+        <img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />
+
+        <!-- Main Content -->
+        <div class="content">
+            
+            <!-- Header -->
+            <div class="header-section">
+                <h1>What counts as microlearning?</h1>
+                <h2>Brief, focused, high-yield learning episodes designed for action.<span class="citation">[1, 13, 27]</span></h2>
+            </div>
+
+            <!-- Framework Grid -->
+            <div class="framework-grid">
+                
+                <!-- Card 1: Brief -->
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 15 15"></polyline>
+                        </svg>
+                    </div>
+                    <h3>brief</h3>
+                    <p>Short duration, typically 3–5 minutes. Designed to fit seamlessly into natural clinical workflow pauses.</p>
+                </div>
+
+                <!-- Card 2: Focused -->
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="3" fill="currentColor"></circle>
+                        </svg>
+                    </div>
+                    <h3>focused</h3>
+                    <p>Targets a single, specific learning objective per episode, eliminating all extraneous cognitive load.</p>
+                </div>
+
+                <!-- Card 3: Actionable -->
+                <div class="card action-card">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                        </svg>
+                    </div>
+                    <h3>actionable</h3>
+                    <p>Directly applicable to patient care. Built to drive immediate behavior change and clinical impact.</p>
+                </div>
+
+                <!-- Card 4: Repeatable -->
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                            <path d="M3 3v5h5"></path>
+                        </svg>
+                    </div>
+                    <h3>repeatable</h3>
+                    <p>Structured for spaced repetition and rapid retrieval exactly when needed at the point of care.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAEM Slide 2 - Authors Intro</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      position: relative;
+      background: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .shell {
+      position: absolute;
+      inset: 0;
+      width: 1920px;
+      height: 1080px;
+      z-index: 1;
+    }
+
+    .content {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      padding: 116px 124px 290px;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      gap: 22px;
+    }
+
+    .kicker {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #5B6B7D;
+    }
+
+    h1 {
+      max-width: 1200px;
+      font-size: 64px;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      color: #0F2040;
+      margin-bottom: 14px;
+    }
+
+    .subheader {
+      max-width: 1260px;
+      font-size: 31px;
+      line-height: 1.3;
+      color: #4A5D73;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      align-items: stretch;
+      min-height: 0;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      padding: 28px 30px 30px;
+      border-radius: 34px;
+      border: 1px solid rgba(15, 32, 64, 0.09);
+      background: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(246,249,252,0.96) 100%);
+      box-shadow: 0 18px 34px rgba(15, 32, 64, 0.08);
+      display: grid;
+      justify-items: center;
+      align-content: start;
+      text-align: center;
+      gap: 12px;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      right: -48px;
+      bottom: -72px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,90,156,0.10) 0%, rgba(0,90,156,0.02) 58%, rgba(0,90,156,0) 72%);
+      z-index: 0;
+    }
+
+    .card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .portrait-shell {
+      width: 148px;
+      height: 148px;
+      padding: 7px;
+      border-radius: 50%;
+      box-shadow: 0 18px 36px rgba(15, 32, 64, 0.16);
+    }
+
+    .portrait-shell.blue {
+      background: linear-gradient(145deg, #0E2544 0%, #005A9C 100%);
+    }
+
+    .portrait-shell.red {
+      background: linear-gradient(145deg, #FFFFFF 0%, #F38DA0 100%);
+    }
+
+    .portrait-shell.dark {
+      background: linear-gradient(145deg, #0A192F 0%, #6B7A8C 100%);
+    }
+
+    .portrait-shell img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .name {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: #10233E;
+    }
+
+    .department {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #6B7A8C;
+    }
+
+    .title {
+      font-size: 18px;
+      line-height: 1.3;
+      color: #41576E;
+      max-width: 420px;
+    }
+
+    .bridge {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 22px 28px;
+      border-radius: 24px;
+      border: 1px solid rgba(15, 32, 64, 0.09);
+      background: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(247,250,253,0.96) 100%);
+      box-shadow: 0 12px 24px rgba(15, 32, 64, 0.06);
+      color: #10233E;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .bridge svg {
+      flex: 0 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true">
+
+  <div class="content">
+    <div>
+      <div class="kicker">Stanford Emergency Medicine</div>
+      <h1>Who is bringing this lens to microlearning?</h1>
+      <p class="subheader">
+        Stanford emergency medicine educators working at the bedside, in curriculum design, and inside the real cadence of clinical teaching.
+      </p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="portrait-shell blue">
+          <img src="../../../../assets/authors/rana-kabeer.jpg" alt="Rana Kabeer">
+        </div>
+        <div class="name">Rana Kabeer</div>
+        <div class="department">Stanford Emergency Medicine</div>
+        <div class="title">Clinical Assistant Professor, Emergency Medicine</div>
+      </div>
+
+      <div class="card">
+        <div class="portrait-shell red">
+          <img src="../../../../assets/authors/timothy-batchelor.jpg" alt="Timothy J. Batchelor">
+        </div>
+        <div class="name">Timothy J. Batchelor</div>
+        <div class="department">Stanford Emergency Medicine</div>
+        <div class="title">Clinical Assistant Professor, Emergency Medicine</div>
+      </div>
+
+      <div class="card">
+        <div class="portrait-shell dark">
+          <img src="../../../../assets/authors/moises-gallegos.jpg" alt="Moises Gallegos">
+        </div>
+        <div class="name">Moises Gallegos</div>
+        <div class="department">Stanford Emergency Medicine</div>
+        <div class="title">Clinical Associate Professor, Emergency Medicine</div>
+      </div>
+    </div>
+
+    <div class="bridge">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#005A9C" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 20h9"></path>
+        <path d="M12 4h9"></path>
+        <path d="M4 9h16"></path>
+        <path d="M4 15h16"></path>
+      </svg>
+      This talk comes from bedside teaching, curriculum design, and the daily workflow reality of emergency medicine.
+    </div>
+  </div>
+</body>
+</html>

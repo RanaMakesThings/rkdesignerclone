@@ -1,0 +1,116 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This slide belongs to a SAEM annual meeting talk on microlearning in emergency medicine.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Put all real content above the branded footer region so the SAEM26 logo/date block and skyline stay readable.
+- Do not obscure the lower-left logo block or the lower skyline/footer band.
+- Use inline CSS only.
+- Use inline SVG if helpful for lines, frameworks, diagrams, or geometry.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Style continuity:
+
+- Match the existing deck family: clean academic keynote, white or near-white canvas, deep navy typography, restrained SAEM blue and red accents, modern but calm.
+- Do not make this look like a browser page, product UI, hospital dashboard, or poster session handout.
+- Avoid cheesy stock-photo logic, cartoon medical iconography, or AI-hype visuals.
+
+Locked text:
+
+- Header: `Engagement is not enough.`
+- Subheader: `Measure more than clicks.`
+
+Slide contract:
+
+- Slide title: Engagement Is Not Enough
+- Purpose: distinguish attention metrics from real educational impact
+- Takeaway: The evidence is stronger for retention and thinner for downstream clinical outcomes, so evaluation has to stay honest.
+- Figure role: Build a measurement ladder from clicks to retention to behavior and outcomes.
+- Visual family: measurement ladder
+- Selected direction: Use a progression or ladder visual with a clear difference between easy metrics and meaningful ones.
+- Additional note: This slide should sound credible, not cynical.
+- Additional note: Do not overclaim patient-outcome evidence.
+
+Evidence and citations:
+
+- Preferred citation anchors: [1], [6], [11], [13], [17]
+- Many digital-learning studies show positive engagement, but downstream clinical outcomes are measured less often [1, 6, 11, 13, 17].
+- Where citations fit, render them as subtle evidence chips or compact bracket references.
+- Keep citation styling quiet and professional; they should support the claim, not dominate the slide.
+
+Reference images:
+
+- If reference images are attached, use them for family continuity, composition discipline, text density, and citation styling.
+- Do not literally copy the reference slides.
+
+Slide packet:
+
+# Slide 13 — Engagement Is Not Enough
+
+## Status
+
+- current deck numbering: slide 13
+- legacy source mapping: same as current
+- decision state: OPEN
+
+## Why this slide exists
+
+- keep the evaluation section honest
+- distinguish useful metrics from easy metrics
+- reinforce the deck's academic credibility
+
+## Locked slide thesis
+
+Engagement matters, but it is not the same thing as learning impact.
+
+## Slide purpose brief
+
+- top claim:
+  clicks are not enough
+- support claim:
+  stronger measures include retrieval, behavior, and downstream use
+- non-goals:
+  - do not overclaim patient outcomes
+  - do not become a methods-heavy slide
+
+## Figure job
+
+- create a visible hierarchy of metrics
+- make it obvious which measures are easiest and which matter most
+- keep the slide sharp and readable
+
+## Locked copy
+
+- header:
+  `Engagement is not enough.`
+- subheader:
+  `Measure more than clicks.`
+- figure labels:
+  - `engagement`
+  - `retention`
+  - `behavior`
+  - `outcomes`
+
+## Visual rules
+
+- ladder or progression logic
+- no spreadsheet aesthetic
+- keep it visually clean
+
+## Existing useful source assets
+
+- `inputs/microlearning_emergency_medicine_review.md`
+- `inputs/saem_microlearning_talk_outline.md`
+
+## Immediate next refinement
+
+- test a vertical ladder
+- compare a staircase model with a widening evidence ladder
+
+Output:
+
+- Return one complete HTML document only.

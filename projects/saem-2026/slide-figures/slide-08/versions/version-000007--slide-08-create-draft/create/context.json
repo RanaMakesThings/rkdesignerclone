@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-08",
+  "displayNumber": "8",
+  "lane": "html",
+  "laneReason": "The Tool Stack Already Exists defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000007",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-08",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-08-tool-stack-already-exists.md",
+  "packetText": "# Slide 8 — The Tool Stack Already Exists\n\n## Status\n\n- current deck numbering: slide 8\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- make the talk practical\n- show that good microlearning does not require futuristic infrastructure\n- set up the AI section that follows\n\n## Locked slide thesis\n\nPrograms can start microlearning now using tools that already exist.\n\n## Slide purpose brief\n\n- top claim:\n  the stack is already here\n- support claim:\n  Anki, mobile tools, LMS flows, and curated FOAM can cover most starting needs\n- non-goals:\n  - do not make this an app marketplace slide\n  - do not imply all tools are equally mature\n\n## Figure job\n\n- organize the stack cleanly\n- distinguish now versus emerging\n- keep the slide modern and practical\n\n## Locked copy\n\n- header:\n  `The tool stack already exists.`\n- subheader:\n  `Anki, mobile apps, LMS workflows, and curated FOAM can start today.`\n- figure labels:\n  - `now`\n  - `next`\n  - `emerging`\n\n## Visual rules\n\n- maturity or capability framing\n- no screenshot wall\n- avoid gadget worship\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a maturity stack\n- compare a ladder versus clustered capability map\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-08",
+    "displayNumber": "8",
+    "importedSlides": [
+      8
+    ],
+    "status": "active",
+    "title": "The Tool Stack Already Exists",
+    "purpose": "shift the talk from theory to practical platforms already in use",
+    "header": "The tool stack already exists.",
+    "subheader": "Anki, mobile apps, LMS workflows, and curated FOAM can start today.",
+    "takeaway": "Most programs can start with low-cost tools before chasing fully novel infrastructure.",
+    "figureRole": "Organize current tools into a clear maturity stack or capability map that feels modern and practical.",
+    "family": "tool maturity map",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Practical microlearning platforms already include Anki-style review, mobile learning apps, LMS modules, and curated FOAM workflows [1, 2, 11, 12, 17, 18]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-08-tool-stack-already-exists.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-08/manifest.json"
+    },
+    "selectedDirection": "Use a now-next-experimental frame or maturity stack that makes current versus emerging tools obvious.",
+    "notes": [
+      "This should read as pragmatic, not gadget-driven.",
+      "Set up the dedicated AI slides that follow."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-08",
+    "displayNumber": "8",
+    "importedSlides": [
+      8
+    ],
+    "status": "active",
+    "title": "The Tool Stack Already Exists",
+    "purpose": "shift the talk from theory to practical platforms already in use",
+    "header": "The tool stack already exists.",
+    "subheader": "Anki, mobile apps, LMS workflows, and curated FOAM can start today.",
+    "takeaway": "Most programs can start with low-cost tools before chasing fully novel infrastructure.",
+    "figureRole": "Organize current tools into a clear maturity stack or capability map that feels modern and practical.",
+    "family": "tool maturity map",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Practical microlearning platforms already include Anki-style review, mobile learning apps, LMS modules, and curated FOAM workflows [1, 2, 11, 12, 17, 18]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-08-tool-stack-already-exists.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-08/manifest.json"
+    },
+    "selectedDirection": "Use a now-next-experimental frame or maturity stack that makes current versus emerging tools obvious.",
+    "notes": [
+      "This should read as pragmatic, not gadget-driven.",
+      "Set up the dedicated AI slides that follow."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-08/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft/create/create-request.snapshot.md"
+}

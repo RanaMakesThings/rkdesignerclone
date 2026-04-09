@@ -1,25 +1,65 @@
 {
   "deckId": "saem-2026",
-  "title": "SAEM 2026 Annual Meeting",
-  "version": "2026-04-08.1",
+  "title": "Microlearning for Emergency Medicine",
+  "version": "2026-04-08.4",
   "status": "active",
+  "studioTheme": "nightmode",
+  "template": {
+    "id": "saem-annual-meeting-template-v1",
+    "status": "locked",
+    "themeId": "saem-annual-meeting-2026",
+    "summary": "Use the checked-in SAEM annual meeting template as the canonical conference shell while Designer handles concept generation, mockup previews, and visual refinement.",
+    "paths": {
+      "contractPath": "projects/saem-2026/saem-deck-template.md",
+      "templateDir": "projects/saem-2026/templates/saem-annual-meeting-template-v1",
+      "previewPath": "projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+      "htmlPath": "projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+      "pptxPath": "projects/saem-2026/assets/powerpoint-template/saem-annual-meeting-powerpoint-template.pptx"
+    },
+    "rules": [
+      "Use the SAEM conference shell and footer treatment as the locked presentation frame.",
+      "Respect the official template as the final packaging target for live presentation deliverables.",
+      "Use Designer for concept generation, composition testing, and visual refinement before final export.",
+      "Preserve a serious academic emergency medicine tone: evidence-forward, readable, and calm.",
+      "Avoid bullet walls, startup-dashboard aesthetics, and decorative visuals that overpower the claim."
+    ],
+    "notes": [
+      "The PowerPoint source file lives in assets/powerpoint-template/saem-annual-meeting-powerpoint-template.pptx.",
+      "The Studio shell uses the extracted template HTML and preview so localhost mirrors the conference frame."
+    ]
+  },
   "numberingPolicy": {
-    "summary": "Use simple linear numbering until a merge or split is necessary. Introduce displayNumber only when a real merge happens.",
+    "summary": "This deck uses straightforward sequential numbering, with one dedicated presenter-intro slide added after the title slide.",
     "activeSequence": [
       "1",
       "2",
-      "3"
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
     ],
     "deprecatedSlides": [],
     "notes": [
-      "Use displayNumber only when the deck genuinely merges or splits slides.",
-      "Keep numbering stable once the abstract narrative is locked."
+      "Keep numbering simple unless a later hardening pass merges or deletes a slide.",
+      "If the live talk is shortened, deprecate slides rather than silently renumbering history."
     ]
   },
   "narrativeSpine": [
-    "Why this emergency medicine problem matters now.",
-    "What the audience should understand or adopt.",
-    "What action or framing should stick after the talk."
+    "Emergency medicine has a learning-design problem, not a learner-motivation problem.",
+    "Microlearning works because of learning science, not because it is short.",
+    "FOAMed, mobile platforms, and AI-enabled tools can make delivery and adaptation practical.",
+    "Workflow fit, curation, and governance matter as much as novelty.",
+    "Start with one small pilot and measure honestly."
   ],
   "slides": [
     {
@@ -29,82 +69,870 @@
         1
       ],
       "status": "active",
-      "title": "Talk Setup",
-      "purpose": "Open the talk, establish speaker context, and frame the clinical problem.",
-      "header": "TODO",
-      "subheader": "TODO",
-      "takeaway": "Define the opening claim for the deck.",
-      "figureRole": "Support the opening frame or orient the audience.",
-      "family": "TBD",
-      "buildStatus": "missing canonical spec",
+      "title": "Microlearning for Emergency Medicine",
+      "purpose": "set the tone and frame the talk as rigorous, modern, and clinically grounded",
+      "header": "Microlearning for Emergency Medicine",
+      "subheader": "Small learning episodes, durable clinical impact.",
+      "takeaway": "This talk is about workflow-aligned learning design, not lightweight content for its own sake.",
+      "figureRole": "Establish the deck's tone with a serious, elegant opening visual that implies clarity under pressure.",
+      "family": "editorial title hero",
+      "buildStatus": "first mockup generated; refine only if needed",
       "proof": [],
       "paths": {
-        "packet": "projects/saem-2026/slide-packets/slide-01-talk-setup.md",
+        "packet": "projects/saem-2026/slide-packets/slide-01-title.md",
         "specs": [],
-        "stampedDir": null,
+        "stampedDir": "projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft",
         "assetsManifest": "projects/saem-2026/slide-assets/slide-01/manifest.json"
       },
-      "selectedDirection": "No selected visual yet.",
-      "notes": [],
-      "selectedVariantId": null,
-      "variants": []
+      "selectedDirection": "Use a restrained editorial title-slide concept that feels academic, modern, and high-signal without startup polish.",
+      "notes": [
+        "Avoid over-designed title-card tropes.",
+        "The slide should imply seriousness before any evidence appears."
+      ],
+      "selectedVariantId": "slide-01-create-draft",
+      "variants": [
+        {
+          "id": "slide-01-create-draft",
+          "label": "Slide 01 Create Draft",
+          "status": "selected",
+          "summary": "Use a restrained editorial title-slide concept that feels academic, modern, and high-signal without startup polish.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 1 — Microlearning for Emergency Medicine\n\n## Status\n\n- current deck numbering: slide 1\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- establish seriousness\n- frame the talk as rigorous rather than trendy\n- make the audience trust the deck before the argument begins\n\n## Locked slide thesis\n\nMicrolearning belongs in emergency medicine because the environment rewards\nlearning formats that respect time pressure and interruption.\n\n## Slide purpose brief\n\n- top claim:\n  this is a serious educational argument, not a lightweight med-ed fad talk\n- support claim:\n  the deck should open with confidence and restraint\n- non-goals:\n  - do not explain the whole concept here\n  - do not show a workflow yet\n\n## Figure job\n\n- set the emotional and aesthetic tone\n- imply clarity under pressure\n- avoid generic medical conference opener clichés\n\n## Locked copy\n\n- header:\n  `Microlearning for Emergency Medicine`\n- subheader:\n  `Small learning episodes, durable clinical impact.`\n- presenter line:\n  `Rana Kabeer · Timothy J. Batchelor · Moises Gallegos`\n- institution line:\n  `Stanford Department of Emergency Medicine`\n- figure labels:\n  - `SAEM`\n  - `Emergency medicine`\n\n## Visual rules\n\n- restrained editorial hero, not a logo wall\n- high hierarchy, low clutter\n- avoid cheesy stock imagery\n- keep the right-side visual field abstract and editorial rather than literal\n- save presenter portraits for the dedicated intro slide immediately after this\n  opener\n\n## Existing useful source assets\n\n- `inputs/saem_microlearning_talk_outline.md`\n- `templates/saem-annual-meeting-template-v1/saem_annual_meeting_template.pptx`\n\n## Immediate next refinement\n\n- explore two to three title-slide concepts\n- decide how directly the SAEM shell should appear in the opening frame\n"
+    },
+    {
+      "id": "slide-02-authors",
+      "displayNumber": "2",
+      "importedSlides": [],
+      "status": "active",
+      "title": "Who We Are",
+      "purpose": "introduce the presenters once, establish credibility, and bridge from the title slide into the actual talk",
+      "header": "Who is bringing this lens to microlearning?",
+      "subheader": "Stanford emergency medicine educators working at the bedside, in curriculum design, and inside the real cadence of clinical teaching.",
+      "takeaway": "This talk comes from bedside teaching, curriculum design, and the daily workflow reality of emergency medicine.",
+      "figureRole": "Use a single polished speaker-intro composition with circular headshots, concise academic identifiers, and one grounding statement about the team perspective.",
+      "family": "speaker intro editorial trio",
+      "buildStatus": "author intro mockup generated and inserted after title slide",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-02-authors-intro.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-02-authors/versions/version-000015--slide-02-authors-intro",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-02-authors/manifest.json"
+      },
+      "selectedDirection": "Use a calm editorial speaker-intro slide with circular portraits, concise Stanford role lines, and one bridge statement before the real content begins.",
+      "notes": [
+        "Portraits appear only on this slide in the deck.",
+        "Keep the slide brisk so it adds credibility without slowing momentum."
+      ],
+      "selectedVariantId": "slide-02-authors-intro",
+      "variants": [
+        {
+          "id": "slide-02-authors-intro",
+          "label": "Slide 02 Authors Intro",
+          "status": "selected",
+          "summary": "Use a calm editorial speaker-intro slide with circular portraits, concise Stanford role lines, and one bridge statement before the real content begins.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-02-authors/versions/version-000015--slide-02-authors-intro/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-02-authors/versions/version-000015--slide-02-authors-intro"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-02-authors/versions/version-000015--slide-02-authors-intro/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-02-authors/versions/version-000015--slide-02-authors-intro/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 2 — Who We Are\n\n## Status\n\n- current deck numbering: slide 2\n- legacy source mapping: newly added presenter-intro slide\n- decision state: OPEN\n\n## Why this slide exists\n\n- introduce the presenters once and only once\n- establish why this perspective on microlearning is clinically grounded\n- create a clean transition from title slide into the real argument\n\n## Locked slide thesis\n\nThis talk is grounded in bedside emergency medicine, curriculum design, and the\nreal workflow constraints of clinical education.\n\n## Slide purpose brief\n\n- top claim:\n  this perspective comes from people who teach and work inside the disrupted ED\n  environment\n- support claim:\n  the audience should understand why this team is talking about workflow-fit,\n  microlearning, and educational design\n- non-goals:\n  - do not turn this into a long bio slide\n  - do not slow the deck with a speaker-resume wall\n\n## Figure job\n\n- use the three portraits as an elegant editorial cluster\n- pair each portrait with a short, credible academic identifier\n- make the slide feel intentional, not like a conference template placeholder\n\n## Locked copy\n\n- header:\n  `Who is bringing this lens to microlearning?`\n- subheader:\n  `Stanford emergency medicine educators working at the bedside, in curriculum design, and inside the real cadence of clinical teaching.`\n- bottom bridge line:\n  `This talk comes from bedside teaching, curriculum design, and the daily workflow reality of emergency medicine.`\n\n## Visual rules\n\n- portraits appear only on this slide\n- circular portrait treatment should feel polished and editorial\n- keep the slide airy, calm, and credible\n- use concise academic role text, not mini biographies\n\n## Existing useful source assets\n\n- `assets/authors/rana-kabeer.jpg`\n- `assets/authors/timothy-batchelor.jpg`\n- `assets/authors/moises-gallegos.jpg`\n- `assets/authors/README.md`\n\n## Immediate next refinement\n\n- tune portrait scale and spacing after deck review\n- keep the opening sequence brisk before the content-heavy section begins\n"
     },
     {
       "id": "slide-02",
-      "displayNumber": "2",
+      "displayNumber": "3",
       "importedSlides": [
         2
       ],
       "status": "active",
-      "title": "Core Argument",
-      "purpose": "Present the main analysis, framework, or intervention claim.",
-      "header": "TODO",
-      "subheader": "TODO OR NONE",
-      "takeaway": "Capture the central message of the presentation.",
-      "figureRole": "Make the main relationship or comparison legible in one look.",
-      "family": "TBD",
-      "buildStatus": "packet and canonical spec pending",
-      "proof": [],
+      "title": "Why This Matters in the ED",
+      "purpose": "make the audience feel that emergency medicine's environment naturally favors microlearning",
+      "header": "The ED creates a learning-design problem.",
+      "subheader": "Emergency medicine is built around interruption, uncertainty, and time scarcity.",
+      "takeaway": "The challenge is structural: the learning format has to fit the work.",
+      "figureRole": "Show the fractured rhythm of emergency medicine and the mismatch between long-form teaching and point-of-care questions.",
+      "family": "clinical-fragmentation timeline",
+      "buildStatus": "polished mockup generated with footer-safe summary band",
+      "proof": [
+        "Emergency medicine learning is constrained by shift work, time pressure, and point-of-care information needs [15, 23]."
+      ],
       "paths": {
-        "packet": "projects/saem-2026/slide-packets/slide-02-core-argument.md",
+        "packet": "projects/saem-2026/slide-packets/slide-02-why-this-matters.md",
         "specs": [],
-        "stampedDir": null,
+        "stampedDir": "projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft",
         "assetsManifest": "projects/saem-2026/slide-assets/slide-02/manifest.json"
       },
-      "selectedDirection": "No selected visual yet.",
-      "notes": [],
-      "selectedVariantId": null,
-      "variants": []
+      "selectedDirection": "Aim for a fractured shift timeline or interruption map that makes fragmented learning windows instantly legible.",
+      "notes": [
+        "The slide should diagnose the environment, not blame learners.",
+        "Avoid hospital-dashboard aesthetics."
+      ],
+      "selectedVariantId": "slide-02-create-draft",
+      "variants": [
+        {
+          "id": "slide-02-create-draft",
+          "label": "Slide 02 Create Draft",
+          "status": "selected",
+          "summary": "Aim for a fractured shift timeline or interruption map that makes fragmented learning windows instantly legible.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 3 — Why This Matters in the ED\n\n## Status\n\n- current deck numbering: slide 3\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- establish the environment problem\n- show why emergency medicine is especially suited to microlearning\n- frame the rest of the deck as a response to workflow reality\n\n## Locked slide thesis\n\nEmergency medicine naturally favors microlearning because clinical work is\nfragmented, time-constrained, and full of just-in-time information needs.\n\n## Slide purpose brief\n\n- top claim:\n  the ED creates a learning-design problem\n- support claim:\n  long-form education often arrives out of sync with clinical need\n- non-goals:\n  - do not define microlearning in detail yet\n  - do not introduce FOAMed yet\n\n## Figure job\n\n- show interruption and fragmentation visually\n- make the mismatch between work rhythm and traditional education obvious\n- avoid a boring process diagram\n\n## Locked copy\n\n- header:\n  `The ED creates a learning-design problem.`\n- subheader:\n  `Emergency medicine is built around interruption, uncertainty, and time scarcity.`\n- figure labels:\n  - `interruptions`\n  - `micro-windows`\n\n## Visual rules\n\n- use a strong time-based structure\n- make the rhythm legible in one glance\n- do not turn it into a dashboard\n- keep the lower summary band safely above the locked SAEM footer\n- reserve speaker portraits for the dedicated intro slide only\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- generate a first interruption-map concept\n- test whether a fractured shift timeline is clearer than a workflow loop\n"
     },
     {
       "id": "slide-03",
-      "displayNumber": "3",
+      "displayNumber": "4",
       "importedSlides": [
         3
       ],
       "status": "active",
-      "title": "Close / Implications",
-      "purpose": "Land the implication, recommendation, or call to action.",
-      "header": "TODO",
-      "subheader": "TODO OR NONE",
-      "takeaway": "Leave the audience with the change in thinking or behavior.",
-      "figureRole": "Reinforce the synthesis, roadmap, or closing takeaway.",
-      "family": "TBD",
-      "buildStatus": "packet and canonical spec pending",
-      "proof": [],
+      "title": "What Counts as Microlearning?",
+      "purpose": "define the intervention tightly before the deck expands into tools and theory",
+      "header": "What counts as microlearning?",
+      "subheader": "Brief, focused, high-yield learning episodes designed for action.",
+      "takeaway": "Shortness alone is not the intervention; the unit has to be focused, useful, and repeatable.",
+      "figureRole": "Create a crisp four-part definition grid or modular structure that tightens the audience's mental model.",
+      "family": "definition framework",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [
+        "Microlearning is usually brief, focused, action-oriented, and often mobile or asynchronous [1, 13, 27]."
+      ],
       "paths": {
-        "packet": "projects/saem-2026/slide-packets/slide-03-close-implications.md",
+        "packet": "projects/saem-2026/slide-packets/slide-03-what-counts-as-microlearning.md",
         "specs": [],
-        "stampedDir": null,
+        "stampedDir": "projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft",
         "assetsManifest": "projects/saem-2026/slide-assets/slide-03/manifest.json"
       },
-      "selectedDirection": "No selected visual yet.",
-      "notes": [],
-      "selectedVariantId": null,
-      "variants": []
+      "selectedDirection": "Use a precise definition slide with four clean components rather than a paragraph or checklist wall.",
+      "notes": [
+        "This is a definition slide, but it should still feel elegant.",
+        "Keep the visual hierarchy strong enough that the audience gets the frame in one glance."
+      ],
+      "selectedVariantId": "slide-03-create-draft",
+      "variants": [
+        {
+          "id": "slide-03-create-draft",
+          "label": "Slide 03 Create Draft",
+          "status": "selected",
+          "summary": "Use a precise definition slide with four clean components rather than a paragraph or checklist wall.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 4 — What Counts as Microlearning?\n\n## Status\n\n- current deck numbering: slide 4\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- define the intervention tightly\n- prevent the deck from calling every short digital object \"microlearning\"\n- prepare the audience for the learning-science argument\n\n## Locked slide thesis\n\nMicrolearning is a focused unit of action-oriented learning, not just shorter\ncontent.\n\n## Slide purpose brief\n\n- top claim:\n  microlearning needs a tighter definition than \"anything brief\"\n- support claim:\n  the useful unit is focused, high-yield, and built for reuse or repetition\n- non-goals:\n  - do not turn this into a wordy taxonomy slide\n  - do not jump ahead to AI or FOAMed here\n\n## Figure job\n\n- make the definition feel crisp\n- give the audience a clean mental model\n- keep enough elegance that the slide still feels keynote-like\n\n## Locked copy\n\n- header:\n  `What counts as microlearning?`\n- subheader:\n  `Brief, focused, high-yield learning episodes designed for action.`\n- figure labels:\n  - `brief`\n  - `focused`\n  - `actionable`\n  - `repeatable`\n\n## Visual rules\n\n- one-glance structure\n- disciplined, modular composition\n- no dictionary-style text block\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a four-block definition grid\n- compare a modular card system with a single integrated frame\n"
+    },
+    {
+      "id": "slide-04",
+      "displayNumber": "5",
+      "importedSlides": [
+        4
+      ],
+      "status": "active",
+      "title": "Short Is Not the Intervention",
+      "purpose": "teach the four-pillar learning-science frame",
+      "header": "Short is not the intervention.",
+      "subheader": "Microlearning works when it applies learning science.",
+      "takeaway": "Spacing, retrieval, cognitive load management, and just-in-time relevance are the mechanism.",
+      "figureRole": "Build a memorable four-part framework image that feels like a keynote centerpiece rather than a consulting diagram.",
+      "family": "four-pillar framework",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [
+        "Spacing, retrieval, cognitive load management, and just-in-time relevance appear repeatedly across the microlearning literature [4, 11, 20, 27, 30]."
+      ],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-04-short-is-not-the-intervention.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-04/manifest.json"
+      },
+      "selectedDirection": "Compare a radial or stacked-pillar composition and choose the one with the strongest center of gravity.",
+      "notes": [
+        "Do not let the slide collapse into tiny explanatory text.",
+        "This is the conceptual backbone of the deck."
+      ],
+      "selectedVariantId": "slide-04-create-draft",
+      "variants": [
+        {
+          "id": "slide-04-create-draft",
+          "label": "Slide 04 Create Draft",
+          "status": "selected",
+          "summary": "Compare a radial or stacked-pillar composition and choose the one with the strongest center of gravity.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 5 — Short Is Not the Intervention\n\n## Status\n\n- current deck numbering: slide 5\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- anchor the talk in learning science\n- prevent the audience from reducing microlearning to \"shorter slides\"\n- create a framework the rest of the deck can reference\n\n## Locked slide thesis\n\nMicrolearning works when it applies learning science, not when it merely shortens content.\n\n## Slide purpose brief\n\n- top claim:\n  the mechanism is design, not duration\n- support claim:\n  four pillars make the approach coherent\n- non-goals:\n  - do not over-explain each pillar with dense text\n  - do not look like a consulting framework slide\n\n## Figure job\n\n- make four pillars instantly understandable\n- create a memorable framework image\n- keep enough elegance that it feels like a keynote slide, not a handout\n\n## Locked copy\n\n- header:\n  `Short is not the intervention.`\n- subheader:\n  `Microlearning works when it applies learning science.`\n- figure labels:\n  - `Spaced repetition`\n  - `Active recall`\n  - `Cognitive load`\n  - `Just-in-time relevance`\n\n## Visual rules\n\n- strong center of gravity\n- clear four-part logic\n- no generic quadrant with tiny text\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- generate a first framework concept\n- compare a radial model versus a stacked pillar model\n\n"
+    },
+    {
+      "id": "slide-05",
+      "displayNumber": "6",
+      "importedSlides": [
+        5
+      ],
+      "status": "active",
+      "title": "Repeated Retrieval Beats Passive Exposure",
+      "purpose": "make retrieval practice feel practical and evidence-based",
+      "header": "Repeated retrieval beats passive exposure.",
+      "subheader": "Daily questions and spaced review make retention more durable.",
+      "takeaway": "Small repeated retrieval strengthens retention more reliably than one large passive exposure.",
+      "figureRole": "Show a forgetting-curve or pulse-based rhythm that visually rewards repeated reactivation over single-session exposure.",
+      "family": "retrieval pulse graphic",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [
+        "Spaced repetition and repeated retrieval improve retention across health-professions education settings [11, 12, 20, 28]."
+      ],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-05-retrieval-beats-passive-exposure.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-05/manifest.json"
+      },
+      "selectedDirection": "Favor a calm, elegant retention graphic over a textbook forgetting-curve cliché.",
+      "notes": [
+        "This slide should feel like one of the strongest evidence slides in the talk.",
+        "Make the Anki-style logic intuitive without turning the slide into an app screenshot."
+      ],
+      "selectedVariantId": "slide-05-create-draft",
+      "variants": [
+        {
+          "id": "slide-05-create-draft",
+          "label": "Slide 05 Create Draft",
+          "status": "selected",
+          "summary": "Favor a calm, elegant retention graphic over a textbook forgetting-curve cliché.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 6 — Repeated Retrieval Beats Passive Exposure\n\n## Status\n\n- current deck numbering: slide 6\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- make retrieval practice concrete\n- show one of the strongest evidence-backed mechanisms in the deck\n- bridge theory to practice\n\n## Locked slide thesis\n\nRepeated retrieval and spaced review create more durable retention than one\nlarge passive exposure.\n\n## Slide purpose brief\n\n- top claim:\n  repeated retrieval is one of the strongest mechanisms in this talk\n- support claim:\n  daily questions and spaced review are practical versions of that mechanism\n- non-goals:\n  - do not show a literal app screenshot\n  - do not overload the slide with exam-prep language\n\n## Figure job\n\n- make the retention benefit visually intuitive\n- suggest pulses or reactivation over time\n- keep the slide elegant rather than textbook-like\n\n## Locked copy\n\n- header:\n  `Repeated retrieval beats passive exposure.`\n- subheader:\n  `Daily questions and spaced review make retention more durable.`\n- figure labels:\n  - `retrieve`\n  - `reactivate`\n  - `retain`\n\n## Visual rules\n\n- strong temporal rhythm\n- avoid generic forgetting-curve clip art\n- no app-store aesthetic\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a pulse-based memory curve\n- compare a ladder of retrieval hits with a fading passive-exposure line\n"
+    },
+    {
+      "id": "slide-06",
+      "displayNumber": "7",
+      "importedSlides": [
+        6
+      ],
+      "status": "active",
+      "title": "FOAMed Made Microlearning Scalable",
+      "purpose": "name the existing emergency medicine delivery ecosystem",
+      "header": "FOAMed made microlearning scalable.",
+      "subheader": "Emergency medicine already has a delivery ecosystem.",
+      "takeaway": "FOAMed enabled distributed, timely microlearning, but delivery is not the same thing as validation.",
+      "figureRole": "Map the FOAMed ecosystem without turning it into a logo collage.",
+      "family": "ecosystem map",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [
+        "FOAMed accelerated open, distributed emergency medicine learning, but its strength is delivery rather than automatic validation [2, 5, 15, 29]."
+      ],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-06-foamed-made-microlearning-scalable.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-06/manifest.json"
+      },
+      "selectedDirection": "Use an ecosystem or network metaphor that suggests blogs, podcasts, video, and curated modules as a connected delivery layer.",
+      "notes": [
+        "Do not make the slide feel nostalgic or anti-FOAM.",
+        "The point is distribution, reach, and speed."
+      ],
+      "selectedVariantId": "slide-06-create-draft",
+      "variants": [
+        {
+          "id": "slide-06-create-draft",
+          "label": "Slide 06 Create Draft",
+          "status": "selected",
+          "summary": "Use an ecosystem or network metaphor that suggests blogs, podcasts, video, and curated modules as a connected delivery layer.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 7 — FOAMed Made Microlearning Scalable\n\n## Status\n\n- current deck numbering: slide 7\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- show that emergency medicine already has a functioning delivery ecosystem\n- explain why microlearning spread so effectively in EM\n- prepare the audience for the curation warning\n\n## Locked slide thesis\n\nFOAMed made distributed, timely microlearning practical at scale in emergency\nmedicine.\n\n## Slide purpose brief\n\n- top claim:\n  emergency medicine already has a delivery system for microlearning\n- support claim:\n  blogs, podcasts, videos, and curated modules created reach and speed\n- non-goals:\n  - do not turn the slide into logo soup\n  - do not imply that delivery equals quality\n\n## Figure job\n\n- map the ecosystem clearly\n- suggest reach, circulation, and speed\n- preserve visual seriousness\n\n## Locked copy\n\n- header:\n  `FOAMed made microlearning scalable.`\n- subheader:\n  `Emergency medicine already has a delivery ecosystem.`\n- figure labels:\n  - `blogs`\n  - `podcasts`\n  - `videos`\n  - `curated modules`\n\n## Visual rules\n\n- network or ecosystem logic\n- no logo wall\n- avoid social-media collage aesthetics\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a hub-and-network concept\n- compare a channel ecosystem with a flow-through-delivery model\n"
+    },
+    {
+      "id": "slide-07",
+      "displayNumber": "8",
+      "importedSlides": [
+        7
+      ],
+      "status": "active",
+      "title": "Accessibility Is a Strength. Curation Is a Requirement.",
+      "purpose": "preserve credibility by naming FOAMed risks directly",
+      "header": "Accessibility is a strength. Curation is a requirement.",
+      "subheader": "Open access is useful. Quality still needs judgment.",
+      "takeaway": "Openness expands access, but credibility still depends on appraisal and curation.",
+      "figureRole": "Build a signal-versus-noise comparison with enough elegance that it feels like a warning, not a scolding list.",
+      "family": "signal-vs-noise comparison",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [
+        "Open publishing broadens access, but quality appraisal and curation remain essential [5, 15, 29]."
+      ],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-07-accessibility-strength-curation-requirement.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-07/manifest.json"
+      },
+      "selectedDirection": "Show the difference between visible polish and trustworthy signal without using a cartoon metaphor.",
+      "notes": [
+        "This is the deck's credibility slide.",
+        "Keep the tone calm and faculty-friendly."
+      ],
+      "selectedVariantId": "slide-07-create-draft",
+      "variants": [
+        {
+          "id": "slide-07-create-draft",
+          "label": "Slide 07 Create Draft",
+          "status": "selected",
+          "summary": "Show the difference between visible polish and trustworthy signal without using a cartoon metaphor.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 8 — Accessibility Is a Strength. Curation Is a Requirement.\n\n## Status\n\n- current deck numbering: slide 8\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- preserve credibility\n- acknowledge FOAMed limitations directly\n- reinforce the need for faculty judgment\n\n## Locked slide thesis\n\nOpen access is powerful, but quality still depends on appraisal, curation, and\ndigital literacy.\n\n## Slide purpose brief\n\n- top claim:\n  accessibility is not the same thing as reliability\n- support claim:\n  polish and reach can falsely signal authority\n- non-goals:\n  - do not sound anti-FOAM\n  - do not become a punitive warning slide\n\n## Figure job\n\n- distinguish signal from noise\n- keep the slide credible and calm\n- suggest judgment rather than fear\n\n## Locked copy\n\n- header:\n  `Accessibility is a strength. Curation is a requirement.`\n- subheader:\n  `Open access is useful. Quality still needs judgment.`\n- figure labels:\n  - `signal`\n  - `noise`\n  - `curation`\n\n## Visual rules\n\n- refined comparison, not cartoon metaphor\n- no red-alert design language\n- no logo battle\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a signal-filter composition\n- compare a curated funnel with a split-screen authority contrast\n"
+    },
+    {
+      "id": "slide-08",
+      "displayNumber": "9",
+      "importedSlides": [
+        8
+      ],
+      "status": "active",
+      "title": "The Tool Stack Already Exists",
+      "purpose": "shift the talk from theory to practical platforms already in use",
+      "header": "The tool stack already exists.",
+      "subheader": "Anki, mobile apps, LMS workflows, and curated FOAM can start today.",
+      "takeaway": "Most programs can start with low-cost tools before chasing fully novel infrastructure.",
+      "figureRole": "Organize current tools into a clear maturity stack or capability map that feels modern and practical.",
+      "family": "tool maturity map",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [
+        "Practical microlearning platforms already include Anki-style review, mobile learning apps, LMS modules, and curated FOAM workflows [1, 2, 11, 12, 17, 18]."
+      ],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-08-tool-stack-already-exists.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-08/manifest.json"
+      },
+      "selectedDirection": "Use a now-next-experimental frame or maturity stack that makes current versus emerging tools obvious.",
+      "notes": [
+        "This should read as pragmatic, not gadget-driven.",
+        "Set up the dedicated AI slides that follow."
+      ],
+      "selectedVariantId": "slide-08-create-draft",
+      "variants": [
+        {
+          "id": "slide-08-create-draft",
+          "label": "Slide 08 Create Draft",
+          "status": "selected",
+          "summary": "Use a now-next-experimental frame or maturity stack that makes current versus emerging tools obvious.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 9 — The Tool Stack Already Exists\n\n## Status\n\n- current deck numbering: slide 9\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- make the talk practical\n- show that good microlearning does not require futuristic infrastructure\n- set up the AI section that follows\n\n## Locked slide thesis\n\nPrograms can start microlearning now using tools that already exist.\n\n## Slide purpose brief\n\n- top claim:\n  the stack is already here\n- support claim:\n  Anki, mobile tools, LMS flows, and curated FOAM can cover most starting needs\n- non-goals:\n  - do not make this an app marketplace slide\n  - do not imply all tools are equally mature\n\n## Figure job\n\n- organize the stack cleanly\n- distinguish now versus emerging\n- keep the slide modern and practical\n\n## Locked copy\n\n- header:\n  `The tool stack already exists.`\n- subheader:\n  `Anki, mobile apps, LMS workflows, and curated FOAM can start today.`\n- figure labels:\n  - `now`\n  - `next`\n  - `emerging`\n\n## Visual rules\n\n- maturity or capability framing\n- no screenshot wall\n- avoid gadget worship\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a maturity stack\n- compare a ladder versus clustered capability map\n"
+    },
+    {
+      "id": "slide-09",
+      "displayNumber": "10",
+      "importedSlides": [
+        9
+      ],
+      "status": "active",
+      "title": "AI Can Personalize and Accelerate Microlearning",
+      "purpose": "show the audience where AI may add real educational value without sounding breathless",
+      "header": "AI can personalize and accelerate microlearning.",
+      "subheader": "The emerging opportunity is adaptive support, not full automation.",
+      "takeaway": "AI is most promising when it identifies gaps, adapts cases, and supports feedback or review timing.",
+      "figureRole": "Create a modern adaptive-learning graphic showing targeted cases, feedback, and timing rather than generic chatbot imagery.",
+      "family": "adaptive learning pathway",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [
+        "Emerging AI-augmented curricula can personalize cases, identify knowledge gaps, and adapt feedback or review timing [9, 18]."
+      ],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-09-ai-can-personalize-and-accelerate.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-09/manifest.json"
+      },
+      "selectedDirection": "Show AI as a quiet adaptive layer around cases, feedback, and sequencing rather than as a giant central robot.",
+      "notes": [
+        "This is a modernization slide, not a hype slide.",
+        "Keep the visual language premium and evidence-forward."
+      ],
+      "selectedVariantId": "slide-09-create-draft",
+      "variants": [
+        {
+          "id": "slide-09-create-draft",
+          "label": "Slide 09 Create Draft",
+          "status": "selected",
+          "summary": "Show AI as a quiet adaptive layer around cases, feedback, and sequencing rather than as a giant central robot.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 10 — AI Can Personalize and Accelerate Microlearning\n\n## Status\n\n- current deck numbering: slide 10\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- modernize the talk\n- show a credible educational role for AI\n- keep the conversation focused on pedagogy rather than hype\n\n## Locked slide thesis\n\nAI is most promising when it helps adapt cases, sequence review, and provide\ntargeted educational feedback.\n\n## Slide purpose brief\n\n- top claim:\n  AI may improve personalization and timing\n- support claim:\n  the value is adaptive support around good educational design\n- non-goals:\n  - do not build a chatbot hero slide\n  - do not imply autonomous education is the goal\n\n## Figure job\n\n- show targeted adaptation\n- make AI feel like a quiet layer around the workflow\n- keep the visual language premium and calm\n\n## Locked copy\n\n- header:\n  `AI can personalize and accelerate microlearning.`\n- subheader:\n  `The emerging opportunity is adaptive support, not full automation.`\n- figure labels:\n  - `cases`\n  - `feedback`\n  - `timing`\n  - `gaps`\n\n## Visual rules\n\n- no robots\n- no futuristic command center\n- no hype gradients or glowing neon AI clichés\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test an adaptive-pathway composition\n- compare a closed-loop learning system with a targeted-review map\n"
+    },
+    {
+      "id": "slide-10",
+      "displayNumber": "11",
+      "importedSlides": [
+        10
+      ],
+      "status": "active",
+      "title": "AI Needs Guardrails, Curation, and Privacy Discipline",
+      "purpose": "make the AI section credible and educator-safe",
+      "header": "AI needs guardrails, curation, and privacy discipline.",
+      "subheader": "In educational workflows, human oversight becomes more important, not less.",
+      "takeaway": "AI should be framed as promising but emerging, and every workflow still needs human curation and governance.",
+      "figureRole": "Build a governance or guardrail frame that balances promise against oversight without killing the modern tone.",
+      "family": "guardrail framework",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [
+        "AI in education should be framed as promising rather than standard; privacy, oversight, and faculty curation remain core safeguards [6, 9, 15, 18]."
+      ],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-10-ai-needs-guardrails.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-10/manifest.json"
+      },
+      "selectedDirection": "Use a modern governance visual or triad that keeps the slide confident rather than fearful.",
+      "notes": [
+        "Avoid generic AI ethics iconography.",
+        "This slide should reassure the skeptics without draining energy from the deck."
+      ],
+      "selectedVariantId": "slide-10-create-draft",
+      "variants": [
+        {
+          "id": "slide-10-create-draft",
+          "label": "Slide 10 Create Draft",
+          "status": "selected",
+          "summary": "Use a modern governance visual or triad that keeps the slide confident rather than fearful.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 11 — AI Needs Guardrails, Curation, and Privacy Discipline\n\n## Status\n\n- current deck numbering: slide 11\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- keep the AI section credible\n- reassure skeptical educators\n- prevent the deck from sounding trend-driven\n\n## Locked slide thesis\n\nAI should be used as an emerging aid inside a governed educational system, not\nas an unsupervised replacement for faculty judgment.\n\n## Slide purpose brief\n\n- top claim:\n  AI needs guardrails\n- support claim:\n  privacy, curation, and oversight matter more once automation enters the loop\n- non-goals:\n  - do not make this a fear slide\n  - do not collapse into generic AI ethics boilerplate\n\n## Figure job\n\n- show governance clearly\n- balance promise with discipline\n- preserve the deck's modern tone\n\n## Locked copy\n\n- header:\n  `AI needs guardrails, curation, and privacy discipline.`\n- subheader:\n  `In educational workflows, human oversight becomes more important, not less.`\n- figure labels:\n  - `oversight`\n  - `privacy`\n  - `curation`\n\n## Visual rules\n\n- calm, structured, and faculty-facing\n- no stop signs or alarm visuals\n- no abstract matrix of buzzwords\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a three-guardrail system\n- compare nested oversight rings with a governed workflow frame\n"
+    },
+    {
+      "id": "slide-11",
+      "displayNumber": "12",
+      "importedSlides": [
+        11
+      ],
+      "status": "active",
+      "title": "Design Rules for Good Microlearning",
+      "purpose": "give the audience a portable design checklist",
+      "header": "Design rules for good microlearning.",
+      "subheader": "Keep it brief, specific, active, and mobile-first.",
+      "takeaway": "Good microlearning is intentionally constrained, clinically relevant, and active rather than passive.",
+      "figureRole": "Build a clear design-rules stack that can function like a memorable checklist without becoming a bullet wall.",
+      "family": "design rules stack",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [
+        "Good microlearning is brief, specific, active, and designed for low-friction mobile use [1, 7, 13, 20, 27]."
+      ],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-11-design-rules.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-11/manifest.json"
+      },
+      "selectedDirection": "Use five compact rules as a disciplined visual stack or modular card system, but keep the slide feeling keynote-ready.",
+      "notes": [
+        "This is the practical checklist slide.",
+        "Do not let it become a dense handout."
+      ],
+      "selectedVariantId": "slide-11-create-draft",
+      "variants": [
+        {
+          "id": "slide-11-create-draft",
+          "label": "Slide 11 Create Draft",
+          "status": "selected",
+          "summary": "Use five compact rules as a disciplined visual stack or modular card system, but keep the slide feeling keynote-ready.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 12 — Design Rules for Good Microlearning\n\n## Status\n\n- current deck numbering: slide 12\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- give the audience a practical checklist\n- convert theory into design guidance\n- make the talk easier to remember and reuse\n\n## Locked slide thesis\n\nGood microlearning is brief, specific, active, and built for low-friction use.\n\n## Slide purpose brief\n\n- top claim:\n  good microlearning is intentionally constrained\n- support claim:\n  relevance, activation, and ease of use matter more than production gloss\n- non-goals:\n  - do not become a bullet wall\n  - do not look like a product feature list\n\n## Figure job\n\n- organize the design rules cleanly\n- let the audience remember them at a glance\n- keep the slide feeling premium\n\n## Locked copy\n\n- header:\n  `Design rules for good microlearning.`\n- subheader:\n  `Keep it brief, specific, active, and mobile-first.`\n- figure labels:\n  - `one objective`\n    `one decision or skill per unit`\n  - `clinical relevance`\n    `anchor every unit to a patient problem`\n  - `active response`\n    `prompt retrieval, not passive recognition`\n  - `mobile friction`\n    `zero login, zero setup, zero pinch-zoom`\n  - `feedback`\n    `show why the answer works`\n\n## Visual rules\n\n- elegant checklist logic\n- no dense body text\n- keep typography strong\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a stacked-rules composition\n- compare a vertical system with modular rule cards\n"
+    },
+    {
+      "id": "slide-12",
+      "displayNumber": "13",
+      "importedSlides": [
+        12
+      ],
+      "status": "active",
+      "title": "Fit It Into Workflow, Not Around Workflow",
+      "purpose": "show how microlearning actually enters clinical routines",
+      "header": "Fit it into workflow, not around workflow.",
+      "subheader": "Microlearning works best when it lives where clinicians already are.",
+      "takeaway": "Workflow fit matters more than forcing clinicians into additional scheduled learning time.",
+      "figureRole": "Create a clean workflow-touchpoint timeline that shows where brief learning moments can sit in real practice.",
+      "family": "workflow touchpoint timeline",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [
+        "Workflow integration and point-of-care relevance matter more than forcing learners into extra scheduled time [2, 7, 8, 15, 23]."
+      ],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-12-fit-it-into-workflow.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-12/manifest.json"
+      },
+      "selectedDirection": "Use an ED-day or shift-flow structure with brief learning touchpoints rather than a formal schedule grid.",
+      "notes": [
+        "This should make implementation feel realistic.",
+        "Keep it grounded in clinician behavior."
+      ],
+      "selectedVariantId": "slide-12-create-draft",
+      "variants": [
+        {
+          "id": "slide-12-create-draft",
+          "label": "Slide 12 Create Draft",
+          "status": "selected",
+          "summary": "Use an ED-day or shift-flow structure with brief learning touchpoints rather than a formal schedule grid.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 13 — Fit It Into Workflow, Not Around Workflow\n\n## Status\n\n- current deck numbering: slide 13\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- make implementation feel realistic\n- show where microlearning actually lives in practice\n- move the audience from agreement to feasibility\n\n## Locked slide thesis\n\nMicrolearning works best when it lives inside the rhythms clinicians already\nhave.\n\n## Slide purpose brief\n\n- top claim:\n  workflow fit matters more than formal scheduling\n- support claim:\n  clinicians are more likely to use resources that meet them at real moments of need\n- non-goals:\n  - do not build a fake EHR screen\n  - do not overcomplicate the workflow map\n\n## Figure job\n\n- show touchpoints across a shift or week\n- make the implementation pattern feel realistic\n- avoid the look of an operations dashboard\n\n## Locked copy\n\n- header:\n  `Fit it into workflow, not around workflow.`\n- subheader:\n  `Microlearning works best when it lives where clinicians already are.`\n- figure labels:\n  - `question`\n  - `pearl`\n  - `case follow-up`\n  - `curated module`\n\n## Visual rules\n\n- time-based or workflow-based structure\n- calm layout, clear sequence\n- no dashboard chrome\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a shift-touchpoint timeline\n- compare a daily cadence map with a patient-encounter loop\n"
+    },
+    {
+      "id": "slide-13",
+      "displayNumber": "14",
+      "importedSlides": [
+        13
+      ],
+      "status": "active",
+      "title": "Engagement Is Not Enough",
+      "purpose": "distinguish attention metrics from real educational impact",
+      "header": "Engagement is not enough.",
+      "subheader": "Measure more than clicks.",
+      "takeaway": "The evidence is stronger for retention and thinner for downstream clinical outcomes, so evaluation has to stay honest.",
+      "figureRole": "Build a measurement ladder from clicks to retention to behavior and outcomes.",
+      "family": "measurement ladder",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [
+        "Many digital-learning studies show positive engagement, but downstream clinical outcomes are measured less often [1, 6, 11, 13, 17]."
+      ],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-13-engagement-is-not-enough.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-13/manifest.json"
+      },
+      "selectedDirection": "Use a progression or ladder visual with a clear difference between easy metrics and meaningful ones.",
+      "notes": [
+        "This slide should sound credible, not cynical.",
+        "Do not overclaim patient-outcome evidence."
+      ],
+      "selectedVariantId": "slide-13-create-draft",
+      "variants": [
+        {
+          "id": "slide-13-create-draft",
+          "label": "Slide 13 Create Draft",
+          "status": "selected",
+          "summary": "Use a progression or ladder visual with a clear difference between easy metrics and meaningful ones.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 14 — Engagement Is Not Enough\n\n## Status\n\n- current deck numbering: slide 14\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- keep the evaluation section honest\n- distinguish useful metrics from easy metrics\n- reinforce the deck's academic credibility\n\n## Locked slide thesis\n\nEngagement matters, but it is not the same thing as learning impact.\n\n## Slide purpose brief\n\n- top claim:\n  clicks are not enough\n- support claim:\n  stronger measures include retrieval, behavior, and downstream use\n- non-goals:\n  - do not overclaim patient outcomes\n  - do not become a methods-heavy slide\n\n## Figure job\n\n- create a visible hierarchy of metrics\n- make it obvious which measures are easiest and which matter most\n- keep the slide sharp and readable\n\n## Locked copy\n\n- header:\n  `Engagement is not enough.`\n- subheader:\n  `Measure more than clicks.`\n- figure labels:\n  - `engagement`\n  - `retention`\n  - `behavior`\n  - `outcomes`\n\n## Visual rules\n\n- ladder or progression logic\n- no spreadsheet aesthetic\n- keep it visually clean\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a vertical ladder\n- compare a staircase model with a widening evidence ladder\n"
+    },
+    {
+      "id": "slide-14",
+      "displayNumber": "15",
+      "importedSlides": [
+        14
+      ],
+      "status": "active",
+      "title": "What to Do Monday Morning",
+      "purpose": "give the audience a low-friction implementation plan",
+      "header": "What to do Monday morning.",
+      "subheader": "Start with one pilot, one audience, and one metric.",
+      "takeaway": "Start small, curate aggressively, and decide upfront how you will know whether it helped.",
+      "figureRole": "Build a clean three-step roadmap with enough energy to feel actionable at the end of the talk.",
+      "family": "implementation roadmap",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [
+        "Implementation is most feasible when programs start small, curate selectively, and define evaluation upfront [2, 8, 15, 23]."
+      ],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-14-what-to-do-monday-morning.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-14/manifest.json"
+      },
+      "selectedDirection": "Use a practical three-step runway or roadmap rather than a verbose implementation checklist.",
+      "notes": [
+        "The slide should feel empowering, not administratively heavy.",
+        "End with something people can actually try."
+      ],
+      "selectedVariantId": "slide-14-create-draft",
+      "variants": [
+        {
+          "id": "slide-14-create-draft",
+          "label": "Slide 14 Create Draft",
+          "status": "selected",
+          "summary": "Use a practical three-step runway or roadmap rather than a verbose implementation checklist.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 15 — What to Do Monday Morning\n\n## Status\n\n- current deck numbering: slide 15\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- give the audience a realistic next step\n- end the practical section with momentum\n- reduce implementation anxiety\n\n## Locked slide thesis\n\nThe best next move is a small, curated, measurable pilot.\n\n## Slide purpose brief\n\n- top claim:\n  start with one pilot\n- support claim:\n  one audience, one topic, and one metric is enough to begin\n- non-goals:\n  - do not make this a long project plan\n  - do not sound administratively heavy\n\n## Figure job\n\n- create a clean three-step action pathway\n- make the call to action feel feasible\n- preserve energy near the end of the deck\n\n## Locked copy\n\n- header:\n  `What to do Monday morning.`\n- subheader:\n  `Start with one pilot, one audience, and one metric.`\n- figure labels:\n  - `pick one topic`\n    `choose one high-yield complaint or decision`\n  - `curate or build one unit`\n    `one case, one question, one takeaway`\n  - `measure one outcome`\n    `track completion, recall, or practice change`\n\n## Visual rules\n\n- simple action roadmap\n- no process-document look\n- keep it confident\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a three-step runway\n- compare a left-to-right roadmap with a central action triad\n"
+    },
+    {
+      "id": "slide-15",
+      "displayNumber": "16",
+      "importedSlides": [
+        15
+      ],
+      "status": "active",
+      "title": "The Best Learning Design Respects How Clinicians Actually Work",
+      "purpose": "close with a memorable final line that resolves the deck",
+      "header": "The best learning design respects how clinicians actually work.",
+      "subheader": "Microlearning is not a shortcut. It is a better fit.",
+      "takeaway": "Microlearning is a format for making evidence easier to reach, remember, and use in the real world of emergency medicine.",
+      "figureRole": "Return to the opening visual language with a more resolved and confident closing composition.",
+      "family": "resolved closing hero",
+      "buildStatus": "starter packet drafted; first mockup needed",
+      "proof": [],
+      "paths": {
+        "packet": "projects/saem-2026/slide-packets/slide-15-closing-takeaway.md",
+        "specs": [],
+        "stampedDir": "projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft",
+        "assetsManifest": "projects/saem-2026/slide-assets/slide-15/manifest.json"
+      },
+      "selectedDirection": "Echo the opening tone, but with more confidence and a stronger sense of integration and motion.",
+      "notes": [
+        "This is the emotional closing slide.",
+        "Keep it elegant and uncluttered."
+      ],
+      "selectedVariantId": "slide-15-create-draft",
+      "variants": [
+        {
+          "id": "slide-15-create-draft",
+          "label": "Slide 15 Create Draft",
+          "status": "selected",
+          "summary": "Echo the opening tone, but with more confidence and a stronger sense of integration and motion.",
+          "previewPath": "projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft/preview.png",
+          "files": [
+            {
+              "label": "Version dir",
+              "path": "projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft"
+            },
+            {
+              "label": "HTML",
+              "path": "projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft/generated.html"
+            },
+            {
+              "label": "Preview",
+              "path": "projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft/preview.png"
+            }
+          ]
+        }
+      ],
+      "specText": "# Slide 16 — The Best Learning Design Respects How Clinicians Actually Work\n\n## Status\n\n- current deck numbering: slide 16\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- resolve the deck with one memorable line\n- bring the audience back to workflow fit\n- leave the talk feeling confident and coherent\n\n## Locked slide thesis\n\nMicrolearning matters because it respects how clinicians actually learn, not\nbecause it is trendy or compressed.\n\n## Slide purpose brief\n\n- top claim:\n  the best learning design fits the work\n- support claim:\n  microlearning makes evidence easier to reach, remember, and use\n- non-goals:\n  - do not re-teach the deck\n  - do not end with a policy memo tone\n\n## Figure job\n\n- echo the opening\n- feel more resolved and confident than slide 1\n- preserve elegance and space\n\n## Locked copy\n\n- header:\n  `The best learning design respects how clinicians actually work.`\n- subheader:\n  `Microlearning is not a shortcut. It is a better fit.`\n- figure labels:\n  - `reach`\n  - `remember`\n  - `use`\n\n## Visual rules\n\n- resolved editorial hero\n- low clutter, strong hierarchy\n- no decorative overreach\n\n## Existing useful source assets\n\n- `inputs/saem_microlearning_talk_outline.md`\n- `inputs/COPY_SOURCE_DOC.md`\n\n## Immediate next refinement\n\n- echo the title-slide visual language\n- decide whether the close should lean more toward cadence, integration, or signal\n"
     }
-  ],
-  "paths": {
-    "deckAssetsManifest": "projects/saem-2026/assets/manifest.json"
-  }
+  ]
 }

@@ -1,0 +1,99 @@
+{
+  "slideId": "slide-01",
+  "displayNumber": "1",
+  "lane": "html",
+  "laneReason": "Microlearning for Emergency Medicine defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000001",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-01",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-01-title.md",
+  "packetText": "# Slide 1 — Microlearning for Emergency Medicine\n\n## Status\n\n- current deck numbering: slide 1\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- establish seriousness\n- frame the talk as rigorous rather than trendy\n- make the audience trust the deck before the argument begins\n\n## Locked slide thesis\n\nMicrolearning belongs in emergency medicine because the environment rewards\nlearning formats that respect time pressure and interruption.\n\n## Slide purpose brief\n\n- top claim:\n  this is a serious educational argument, not a lightweight med-ed fad talk\n- support claim:\n  the deck should open with confidence and restraint\n- non-goals:\n  - do not explain the whole concept here\n  - do not show a workflow yet\n\n## Figure job\n\n- set the emotional and aesthetic tone\n- imply clarity under pressure\n- avoid generic medical conference opener clichés\n\n## Locked copy\n\n- header:\n  `Microlearning for Emergency Medicine`\n- subheader:\n  `Small learning episodes, durable clinical impact.`\n- figure labels:\n  - `SAEM`\n  - `Emergency medicine`\n\n## Visual rules\n\n- restrained editorial hero, not a logo wall\n- high hierarchy, low clutter\n- avoid cheesy stock imagery\n\n## Existing useful source assets\n\n- `inputs/saem_microlearning_talk_outline.md`\n- `templates/saem-annual-meeting-template-v1/saem_annual_meeting_template.pptx`\n\n## Immediate next refinement\n\n- explore two to three title-slide concepts\n- decide how directly the SAEM shell should appear in the opening frame\n\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-01",
+    "displayNumber": "1",
+    "importedSlides": [
+      1
+    ],
+    "status": "active",
+    "title": "Microlearning for Emergency Medicine",
+    "purpose": "set the tone and frame the talk as rigorous, modern, and clinically grounded",
+    "header": "Microlearning for Emergency Medicine",
+    "subheader": "Small learning episodes, durable clinical impact.",
+    "takeaway": "This talk is about workflow-aligned learning design, not lightweight content for its own sake.",
+    "figureRole": "Establish the deck's tone with a serious, elegant opening visual that implies clarity under pressure.",
+    "family": "editorial title hero",
+    "buildStatus": "starter packet drafted; visual direction still open",
+    "proof": [],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-01-title.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-01/manifest.json"
+    },
+    "selectedDirection": "No selected visual yet. Start with a restrained title-slide concept that feels academic and high-signal, not startup-polished.",
+    "notes": [
+      "Avoid over-designed title-card tropes.",
+      "The slide should imply seriousness before any evidence appears."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-01",
+    "displayNumber": "1",
+    "importedSlides": [
+      1
+    ],
+    "status": "active",
+    "title": "Microlearning for Emergency Medicine",
+    "purpose": "set the tone and frame the talk as rigorous, modern, and clinically grounded",
+    "header": "Microlearning for Emergency Medicine",
+    "subheader": "Small learning episodes, durable clinical impact.",
+    "takeaway": "This talk is about workflow-aligned learning design, not lightweight content for its own sake.",
+    "figureRole": "Establish the deck's tone with a serious, elegant opening visual that implies clarity under pressure.",
+    "family": "editorial title hero",
+    "buildStatus": "starter packet drafted; visual direction still open",
+    "proof": [],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-01-title.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-01/manifest.json"
+    },
+    "selectedDirection": "No selected visual yet. Start with a restrained title-slide concept that feels academic and high-signal, not startup-polished.",
+    "notes": [
+      "Avoid over-designed title-card tropes.",
+      "The slide should imply seriousness before any evidence appears."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-01/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-01/versions/version-000001--slide-01-create-draft/create/create-request.snapshot.md"
+}

@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-03",
+  "displayNumber": "3",
+  "lane": "html",
+  "laneReason": "What Counts as Microlearning? defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000002",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-03",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-03-what-counts-as-microlearning.md",
+  "packetText": "# Slide 3 — What Counts as Microlearning?\n\n## Status\n\n- current deck numbering: slide 3\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- define the intervention tightly\n- prevent the deck from calling every short digital object \"microlearning\"\n- prepare the audience for the learning-science argument\n\n## Locked slide thesis\n\nMicrolearning is a focused unit of action-oriented learning, not just shorter\ncontent.\n\n## Slide purpose brief\n\n- top claim:\n  microlearning needs a tighter definition than \"anything brief\"\n- support claim:\n  the useful unit is focused, high-yield, and built for reuse or repetition\n- non-goals:\n  - do not turn this into a wordy taxonomy slide\n  - do not jump ahead to AI or FOAMed here\n\n## Figure job\n\n- make the definition feel crisp\n- give the audience a clean mental model\n- keep enough elegance that the slide still feels keynote-like\n\n## Locked copy\n\n- header:\n  `What counts as microlearning?`\n- subheader:\n  `Brief, focused, high-yield learning episodes designed for action.`\n- figure labels:\n  - `brief`\n  - `focused`\n  - `actionable`\n  - `repeatable`\n\n## Visual rules\n\n- one-glance structure\n- disciplined, modular composition\n- no dictionary-style text block\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a four-block definition grid\n- compare a modular card system with a single integrated frame\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-03",
+    "displayNumber": "3",
+    "importedSlides": [
+      3
+    ],
+    "status": "active",
+    "title": "What Counts as Microlearning?",
+    "purpose": "define the intervention tightly before the deck expands into tools and theory",
+    "header": "What counts as microlearning?",
+    "subheader": "Brief, focused, high-yield learning episodes designed for action.",
+    "takeaway": "Shortness alone is not the intervention; the unit has to be focused, useful, and repeatable.",
+    "figureRole": "Create a crisp four-part definition grid or modular structure that tightens the audience's mental model.",
+    "family": "definition framework",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Microlearning is usually brief, focused, action-oriented, and often mobile or asynchronous [1, 13, 27]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-03-what-counts-as-microlearning.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-03/manifest.json"
+    },
+    "selectedDirection": "Use a precise definition slide with four clean components rather than a paragraph or checklist wall.",
+    "notes": [
+      "This is a definition slide, but it should still feel elegant.",
+      "Keep the visual hierarchy strong enough that the audience gets the frame in one glance."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-03",
+    "displayNumber": "3",
+    "importedSlides": [
+      3
+    ],
+    "status": "active",
+    "title": "What Counts as Microlearning?",
+    "purpose": "define the intervention tightly before the deck expands into tools and theory",
+    "header": "What counts as microlearning?",
+    "subheader": "Brief, focused, high-yield learning episodes designed for action.",
+    "takeaway": "Shortness alone is not the intervention; the unit has to be focused, useful, and repeatable.",
+    "figureRole": "Create a crisp four-part definition grid or modular structure that tightens the audience's mental model.",
+    "family": "definition framework",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Microlearning is usually brief, focused, action-oriented, and often mobile or asynchronous [1, 13, 27]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-03-what-counts-as-microlearning.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-03/manifest.json"
+    },
+    "selectedDirection": "Use a precise definition slide with four clean components rather than a paragraph or checklist wall.",
+    "notes": [
+      "This is a definition slide, but it should still feel elegant.",
+      "Keep the visual hierarchy strong enough that the audience gets the frame in one glance."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-03/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft/create/create-request.snapshot.md"
+}

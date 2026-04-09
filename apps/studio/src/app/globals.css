@@ -2199,3 +2199,610 @@ a.studio-chip:hover {
     display: none;
   }
 }
+
+.deck-board-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+  align-items: start;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.deck-slide-card {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 26px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(246, 248, 243, 0.96));
+  box-shadow: var(--shadow);
+}
+
+.deck-slide-card-head,
+.deck-slide-card-content {
+  display: grid;
+  gap: 16px;
+}
+
+.deck-slide-card-head {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+}
+
+.deck-slide-card-head h3 {
+  margin-top: 6px;
+}
+
+.deck-slide-card-content {
+  grid-template-columns: minmax(280px, 0.92fr) minmax(320px, 1.08fr);
+  align-items: start;
+}
+
+.deck-slide-card-copy,
+.deck-slide-card-meta,
+.deck-slide-card-visuals {
+  display: grid;
+  gap: 14px;
+}
+
+.deck-slide-preview {
+  min-height: 260px;
+  aspect-ratio: 16 / 9;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-strong);
+}
+
+.deck-slide-preview .lightbox-trigger {
+  display: block;
+  height: 100%;
+}
+
+.deck-slide-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.deck-slide-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.deck-variant-strip {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.deck-variant-tile {
+  display: grid;
+  grid-template-rows: 148px auto;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.deck-variant-tile-selected {
+  border-color: var(--accent);
+}
+
+.deck-variant-preview {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-strong);
+  min-height: 140px;
+}
+
+.deck-variant-preview .lightbox-trigger {
+  display: block;
+  height: 100%;
+}
+
+.deck-variant-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.deck-variant-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.deck-variant-title {
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.96rem;
+  letter-spacing: -0.03em;
+}
+
+.deck-variant-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.deck-card-empty,
+.deck-board-empty {
+  min-height: 140px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Shared dark shell theme for project workspaces. Keep the legacy
+   `.project-shell-customgpt` selector for compatibility while projects migrate
+   to the semantic `studioTheme: "nightmode"` hook. */
+.app-shell.project-shell-customgpt,
+.app-shell.project-shell-nightmode {
+  --paper: #0b1220;
+  --paper-strong: #111827;
+  --paper-deep: #0f172a;
+  --ink: #f8fbff;
+  --ink-soft: rgba(231, 238, 250, 0.9);
+  --line: rgba(148, 163, 184, 0.2);
+  --line-strong: rgba(148, 163, 184, 0.32);
+  --accent: #7dd3fc;
+  --accent-soft: rgba(56, 189, 248, 0.18);
+  --warning: #fbbf24;
+  --warning-soft: rgba(251, 191, 36, 0.16);
+  --danger: #fb7185;
+  --danger-soft: rgba(251, 113, 133, 0.16);
+  --shadow: 0 30px 90px rgba(2, 6, 23, 0.42);
+  --studio-surface: rgba(12, 18, 31, 0.94);
+  --studio-surface-strong: rgba(16, 24, 41, 0.98);
+  --studio-surface-raised: rgba(22, 32, 54, 0.96);
+  --studio-surface-soft: rgba(26, 38, 63, 0.9);
+  --studio-copy: rgba(232, 238, 250, 0.92);
+  --studio-copy-muted: rgba(193, 205, 227, 0.86);
+  --studio-copy-subtle: rgba(170, 184, 210, 0.8);
+  background:
+    radial-gradient(circle at top left, rgba(34, 211, 238, 0.12), transparent 24%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.16), transparent 28%),
+    linear-gradient(180deg, #060b15 0%, #0a1220 100%);
+  color: var(--ink);
+  font-family: var(--font-body-alt), sans-serif;
+  grid-template-columns: 370px minmax(0, 1fr);
+}
+
+.app-shell.project-shell-customgpt h1,
+.app-shell.project-shell-customgpt h2,
+.app-shell.project-shell-customgpt h3,
+.app-shell.project-shell-customgpt .studio-hero-metric,
+.app-shell.project-shell-customgpt .studio-rail-stat-value,
+.app-shell.project-shell-customgpt .deck-variant-title,
+.app-shell.project-shell-customgpt .metric-value {
+  font-family: var(--font-display-alt), sans-serif;
+  color: var(--ink);
+}
+
+.app-shell.project-shell-customgpt .shell-sidebar {
+  padding: 28px 24px 32px;
+  border-right-color: var(--line);
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 30%),
+    linear-gradient(180deg, rgba(7, 12, 22, 0.96) 0%, rgba(10, 16, 28, 0.98) 100%);
+}
+
+.app-shell.project-shell-customgpt .shell-main {
+  padding: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(125, 211, 252, 0.08), transparent 22%),
+    radial-gradient(circle at 70% 0%, rgba(96, 165, 250, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(9, 14, 25, 0.96) 0%, rgba(7, 12, 22, 0.98) 100%);
+}
+
+.app-shell.project-shell-customgpt .shell-sidebar,
+.app-shell.project-shell-customgpt .shell-topbar,
+.app-shell.project-shell-customgpt .shell-content > section:not(.deck-board-grid),
+.app-shell.project-shell-customgpt .studio-intro,
+.app-shell.project-shell-customgpt .asset-section,
+.app-shell.project-shell-customgpt .slide-wall-row,
+.app-shell.project-shell-customgpt .slide-wall-row-unavailable,
+.app-shell.project-shell-customgpt .slide-detail-hero,
+.app-shell.project-shell-customgpt .version-row,
+.app-shell.project-shell-customgpt .archive-section,
+.app-shell.project-shell-customgpt .studio-not-found-panel,
+.app-shell.project-shell-customgpt .deck-slide-card,
+.app-shell.project-shell-customgpt .deck-variant-tile,
+.app-shell.project-shell-customgpt .studio-spec-block,
+.app-shell.project-shell-customgpt .empty-block,
+.app-shell.project-shell-customgpt .inline-note,
+.app-shell.project-shell-customgpt .detail-nav-link {
+  border-color: var(--line);
+  background:
+    linear-gradient(180deg, var(--studio-surface) 0%, var(--studio-surface-strong) 100%);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(20px);
+}
+
+.app-shell.project-shell-customgpt .deck-board-grid,
+.app-shell.project-shell-customgpt .deck-board-grid:hover {
+  box-shadow: none !important;
+}
+
+.app-shell.project-shell-customgpt .shell-sidebar h1 {
+  font-size: clamp(2.25rem, 3.2vw, 3.5rem);
+  line-height: 0.92;
+}
+
+.app-shell.project-shell-customgpt h2 {
+  font-size: clamp(2rem, 2.6vw, 2.9rem);
+  line-height: 0.98;
+}
+
+.app-shell.project-shell-customgpt h3 {
+  font-size: 1.48rem;
+  line-height: 1.05;
+}
+
+.app-shell.project-shell-customgpt .eyebrow,
+.app-shell.project-shell-customgpt .sidebar-label,
+.app-shell.project-shell-customgpt .jump-label,
+.app-shell.project-shell-customgpt .studio-step-label,
+.app-shell.project-shell-customgpt .studio-spec-kicker,
+.app-shell.project-shell-customgpt .slide-fact-label,
+.app-shell.project-shell-customgpt .lightbox-meta {
+  color: rgba(203, 214, 235, 0.84);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+}
+
+.app-shell.project-shell-customgpt .sidebar-copy,
+.app-shell.project-shell-customgpt .hero-text,
+.app-shell.project-shell-customgpt .page-copy,
+.app-shell.project-shell-customgpt .preview-copy,
+.app-shell.project-shell-customgpt .studio-body-copy,
+.app-shell.project-shell-customgpt .studio-spec-copy,
+.app-shell.project-shell-customgpt .markdown-body,
+.app-shell.project-shell-customgpt .inline-note,
+.app-shell.project-shell-customgpt .empty-block,
+.app-shell.project-shell-customgpt .studio-chip span,
+.app-shell.project-shell-customgpt .slide-fact-label,
+.app-shell.project-shell-customgpt .metric-label,
+.app-shell.project-shell-customgpt .studio-empty-preview-copy p {
+  color: var(--studio-copy);
+  font-size: 1.02rem;
+  line-height: 1.72;
+}
+
+.app-shell.project-shell-customgpt .micro-copy {
+  color: var(--studio-copy-muted);
+}
+
+.app-shell.project-shell-customgpt .micro-copy-success {
+  color: #7dd3fc;
+}
+
+.app-shell.project-shell-customgpt .micro-copy-danger {
+  color: #fda4af;
+}
+
+.app-shell.project-shell-customgpt .shell-topbar,
+.app-shell.project-shell-customgpt .studio-intro,
+.app-shell.project-shell-customgpt .slide-detail-hero,
+.app-shell.project-shell-customgpt .slide-wall-row,
+.app-shell.project-shell-customgpt .version-row,
+.app-shell.project-shell-customgpt .archive-section {
+  padding: 22px 24px;
+}
+
+.app-shell.project-shell-customgpt .studio-intro-stats > div,
+.app-shell.project-shell-customgpt .slide-fact,
+.app-shell.project-shell-customgpt .overview-stat,
+.app-shell.project-shell-customgpt .warning-list li,
+.app-shell.project-shell-customgpt .detail-list li,
+.app-shell.project-shell-customgpt .stacked-panel,
+.app-shell.project-shell-customgpt .artifact-tile,
+.app-shell.project-shell-customgpt .studio-asset-card {
+  border-color: var(--line);
+  background: var(--studio-surface-raised);
+}
+
+.app-shell.project-shell-customgpt .toolbar-search,
+.app-shell.project-shell-customgpt .filter-chip,
+.app-shell.project-shell-customgpt .breadcrumb-link,
+.app-shell.project-shell-customgpt .jump-select,
+.app-shell.project-shell-customgpt .nav-link,
+.app-shell.project-shell-customgpt .ghost-button,
+.app-shell.project-shell-customgpt .studio-chip,
+.app-shell.project-shell-customgpt .status-pill,
+.app-shell.project-shell-customgpt .studio-id-pill,
+.app-shell.project-shell-customgpt .asset-section-chevron,
+.app-shell.project-shell-customgpt .tab-button,
+.app-shell.project-shell-customgpt .sequence-token {
+  border-color: var(--line);
+  background: var(--studio-surface-soft);
+  color: var(--ink);
+}
+
+.app-shell.project-shell-customgpt .toolbar-search-input,
+.app-shell.project-shell-customgpt .toolbar-select,
+.app-shell.project-shell-customgpt .jump-select {
+  color: var(--ink);
+  background: transparent;
+}
+
+.app-shell.project-shell-customgpt .toolbar-search-input::placeholder {
+  color: rgba(197, 209, 231, 0.72);
+}
+
+.app-shell.project-shell-customgpt .nav-link:hover,
+.app-shell.project-shell-customgpt .nav-link-active,
+.app-shell.project-shell-customgpt .ghost-button:hover,
+.app-shell.project-shell-customgpt .jump-select:hover,
+.app-shell.project-shell-customgpt .tab-button:hover,
+.app-shell.project-shell-customgpt .asset-section-chevron:hover {
+  background: rgba(35, 47, 70, 0.98);
+  border-color: rgba(125, 211, 252, 0.18);
+  color: #f8fbff;
+}
+
+.app-shell.project-shell-customgpt .primary-link,
+.app-shell.project-shell-customgpt .promote-action .ghost-button,
+.app-shell.project-shell-customgpt .filter-chip-active,
+.app-shell.project-shell-customgpt .tab-button-active {
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+  color: #f8fbff;
+  border-color: transparent;
+}
+
+.app-shell.project-shell-customgpt .primary-link:hover,
+.app-shell.project-shell-customgpt .promote-action .ghost-button:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #22d3ee 100%);
+}
+
+.app-shell.project-shell-customgpt .status-pill-muted {
+  background: rgba(20, 30, 49, 0.96);
+  color: rgba(225, 234, 248, 0.86);
+}
+
+.app-shell.project-shell-customgpt .status-pill-accent {
+  background: rgba(56, 189, 248, 0.18);
+  color: #8be1ff;
+  border-color: rgba(56, 189, 248, 0.26);
+}
+
+.app-shell.project-shell-customgpt .status-pill-warning {
+  background: rgba(251, 191, 36, 0.16);
+  color: #ffd772;
+  border-color: rgba(251, 191, 36, 0.26);
+}
+
+.app-shell.project-shell-customgpt .status-pill-danger {
+  background: rgba(251, 113, 133, 0.16);
+  color: #ffb4c0;
+  border-color: rgba(251, 113, 133, 0.24);
+}
+
+.app-shell.project-shell-customgpt .studio-chip strong,
+.app-shell.project-shell-customgpt .slide-fact strong,
+.app-shell.project-shell-customgpt .studio-spec-copy strong {
+  color: #f8fbff;
+}
+
+.app-shell.project-shell-customgpt .slide-wall-media,
+.app-shell.project-shell-customgpt .slide-detail-visual,
+.app-shell.project-shell-customgpt .version-row-preview,
+.app-shell.project-shell-customgpt .deck-slide-preview,
+.app-shell.project-shell-customgpt .deck-variant-preview {
+  border-color: var(--line);
+  background: rgba(7, 11, 20, 0.98);
+}
+
+.app-shell.project-shell-customgpt .studio-empty-preview,
+.app-shell.project-shell-customgpt .studio-empty-preview-placeholder {
+  background:
+    linear-gradient(180deg, rgba(10, 14, 25, 0.98) 0%, rgba(18, 27, 46, 0.98) 100%);
+  color: var(--studio-copy);
+}
+
+.app-shell.project-shell-customgpt .studio-empty-preview-copy strong,
+.app-shell.project-shell-customgpt .slide-fact strong,
+.app-shell.project-shell-customgpt .studio-chip strong,
+.app-shell.project-shell-customgpt .studio-spec-copy strong,
+.app-shell.project-shell-customgpt .detail-nav-link strong {
+  color: var(--ink);
+}
+
+.app-shell.project-shell-customgpt .deck-slide-card-pending {
+  border-style: dashed;
+}
+
+.app-shell.project-shell-customgpt .studio-hero-metric {
+  font-size: clamp(1.75rem, 2.6vw, 2.45rem);
+}
+
+.app-shell.project-shell-customgpt .studio-hero-label,
+.app-shell.project-shell-customgpt .detail-nav-label {
+  color: var(--studio-copy-subtle);
+  font-size: 0.84rem;
+}
+
+.app-shell.project-shell-customgpt .promote-action {
+  gap: 10px;
+}
+
+.app-shell.project-shell-customgpt .deck-workbench-hero h2 {
+  max-width: 18ch;
+}
+
+.app-shell.project-shell-customgpt .slide-wall-row-unavailable {
+  border-style: dashed;
+}
+
+/* Keep the slide-spec workbench readable inside the dark shell. */
+.app-shell.project-shell-customgpt .studio-spec-panel-surface,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface {
+  border-color: rgba(148, 163, 184, 0.22);
+  background:
+    radial-gradient(circle at top left, rgba(125, 211, 252, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(248, 251, 255, 0.98) 0%, rgba(241, 246, 252, 0.98) 100%);
+  box-shadow:
+    0 26px 60px rgba(2, 6, 23, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.88);
+  backdrop-filter: none;
+}
+
+.app-shell.project-shell-customgpt .studio-spec-panel-surface h3,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface h3,
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .studio-spec-copy,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .studio-spec-copy,
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .markdown-body,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .markdown-body,
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .micro-copy,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .micro-copy,
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .empty-block,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .empty-block {
+  color: rgba(15, 23, 42, 0.9);
+}
+
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .eyebrow,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .eyebrow,
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .studio-spec-kicker,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .studio-spec-kicker,
+.app-shell.project-shell-customgpt .studio-spec-panel-note,
+.app-shell.project-shell-nightmode .studio-spec-panel-note,
+.app-shell.project-shell-customgpt .studio-spec-panel-toolbar-meta,
+.app-shell.project-shell-nightmode .studio-spec-panel-toolbar-meta {
+  color: rgba(71, 85, 105, 0.88);
+}
+
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .ghost-button,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .ghost-button,
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .studio-spec-expand,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .studio-spec-expand {
+  border-color: rgba(148, 163, 184, 0.28);
+  background: rgba(255, 255, 255, 0.82);
+  color: rgba(15, 23, 42, 0.9);
+}
+
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .ghost-button:hover,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .ghost-button:hover,
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .studio-spec-expand:hover,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .studio-spec-expand:hover {
+  border-color: rgba(37, 99, 235, 0.24);
+  background: rgba(255, 255, 255, 0.96);
+  color: #0f172a;
+}
+
+.app-shell.project-shell-customgpt .studio-spec-panel-dropzone,
+.app-shell.project-shell-nightmode .studio-spec-panel-dropzone,
+.app-shell.project-shell-customgpt .studio-spec-panel-preview,
+.app-shell.project-shell-nightmode .studio-spec-panel-preview,
+.app-shell.project-shell-customgpt .studio-spec-panel-readframe,
+.app-shell.project-shell-nightmode .studio-spec-panel-readframe,
+.app-shell.project-shell-customgpt .studio-spec-panel-collapsed,
+.app-shell.project-shell-nightmode .studio-spec-panel-collapsed {
+  border-color: rgba(148, 163, 184, 0.24);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(247, 250, 252, 0.98) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 14px 34px rgba(15, 23, 42, 0.08);
+}
+
+.app-shell.project-shell-customgpt .studio-spec-panel-editor,
+.app-shell.project-shell-nightmode .studio-spec-panel-editor {
+  border-color: rgba(148, 163, 184, 0.26);
+  background: rgba(255, 255, 255, 0.99);
+  color: rgba(15, 23, 42, 0.94);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.app-shell.project-shell-customgpt .studio-spec-panel-editor::placeholder,
+.app-shell.project-shell-nightmode .studio-spec-panel-editor::placeholder {
+  color: rgba(100, 116, 139, 0.88);
+}
+
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .studio-spec-copy.markdown-body h2,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .studio-spec-copy.markdown-body h2,
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .studio-spec-copy.markdown-body h4,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .studio-spec-copy.markdown-body h4,
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .studio-spec-copy.markdown-body h5,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .studio-spec-copy.markdown-body h5,
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .studio-spec-copy strong,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .studio-spec-copy strong {
+  color: rgba(15, 23, 42, 0.96);
+}
+
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .studio-spec-copy.markdown-body h3,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .studio-spec-copy.markdown-body h3 {
+  color: rgba(71, 85, 105, 0.88);
+}
+
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .studio-spec-copy.markdown-body pre,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .studio-spec-copy.markdown-body pre,
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .studio-spec-copy.markdown-body code,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .studio-spec-copy.markdown-body code {
+  color: rgba(15, 23, 42, 0.94);
+  background: rgba(226, 232, 240, 0.7);
+}
+
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .micro-copy-success,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .micro-copy-success {
+  color: #0369a1;
+}
+
+.app-shell.project-shell-customgpt .studio-spec-panel-surface .micro-copy-danger,
+.app-shell.project-shell-nightmode .studio-spec-panel-surface .micro-copy-danger {
+  color: #be123c;
+}
+
+@media (max-width: 1100px) {
+  .deck-board-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deck-slide-card-head,
+  .deck-slide-card-content {
+    grid-template-columns: 1fr;
+  }
+
+  .deck-slide-preview {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 720px) {
+  .deck-slide-card {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .deck-slide-preview {
+    min-height: 260px;
+  }
+
+  .deck-variant-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .deck-variant-tile {
+    grid-template-rows: 160px auto;
+  }
+
+  .app-shell.project-shell-customgpt {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell.project-shell-customgpt .shell-sidebar,
+  .app-shell.project-shell-customgpt .shell-main {
+    padding: 18px;
+  }
+}

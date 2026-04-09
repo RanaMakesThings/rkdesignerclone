@@ -1,0 +1,18 @@
+{
+  "slideId": "slide-10",
+  "slideDir": "projects/saem-2026/slide-figures/slide-10",
+  "currentVersionId": "version-000009",
+  "versions": [
+    {
+      "id": "version-000009",
+      "label": "slide-10-create-draft",
+      "status": "current",
+      "sourceKind": "create-draft",
+      "createdAt": "2026-04-09T03:07:19.910Z",
+      "baseVersionId": null,
+      "dir": "projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

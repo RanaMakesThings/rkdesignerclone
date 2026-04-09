@@ -232,12 +232,12 @@ export function SlideSpecPanel({
 
   return (
     <>
-      <section className={`studio-spec-block ${styles.section}`}>
+      <section className={`studio-spec-block studio-spec-panel-surface ${styles.section}`}>
         <div className={styles.sectionHead}>
           <div className={styles.sectionCopy}>
             <p className="studio-spec-kicker">Slide Spec</p>
             <h3 className={styles.sectionTitle}>Working markdown for this slide</h3>
-            <p className={styles.sectionNote}>
+            <p className={`${styles.sectionNote} studio-spec-panel-note`}>
               This is the slide-local spec stored in <code>deck-spec.json</code>. Keep it current
               here, and update <code>master-slide-specs.md</code> when the broader deck narrative
               changes.
@@ -292,7 +292,7 @@ export function SlideSpecPanel({
         {editing ? (
           <div className={styles.editorStack}>
             <div className={styles.toolbar}>
-              <div className={styles.toolbarMeta}>
+              <div className={`${styles.toolbarMeta} studio-spec-panel-toolbar-meta`}>
                 <span>{lineCount} lines</span>
                 <span>{draft.length.toLocaleString()} chars</span>
                 {activeFileName ? <span className={styles.filePill}>{activeFileName}</span> : null}
@@ -322,7 +322,7 @@ export function SlideSpecPanel({
             </div>
 
             <div
-              className={`${styles.dropZone}${dragActive ? ` ${styles.dropZoneActive}` : ""}`}
+              className={`studio-spec-panel-dropzone ${styles.dropZone}${dragActive ? ` ${styles.dropZoneActive}` : ""}`}
               onDragEnter={(event) => {
                 event.preventDefault();
                 setDragActive(true);
@@ -378,7 +378,7 @@ export function SlideSpecPanel({
                   <span>Paste or edit the slide-local spec text for this slide.</span>
                 </div>
                 <textarea
-                  className={styles.editor}
+                  className={`${styles.editor} studio-spec-panel-editor`}
                   spellCheck={false}
                   value={draft}
                   onChange={(event) => updateDraft(event.target.value)}
@@ -392,16 +392,16 @@ export function SlideSpecPanel({
                   <p className="eyebrow">Styled Preview</p>
                   <span>Rendered with the same markdown styling used on the slide page.</span>
                 </div>
-                <div className={styles.preview}>{editorPreview}</div>
+                <div className={`${styles.preview} studio-spec-panel-preview`}>{editorPreview}</div>
               </div>
             </div>
           </div>
         ) : contentHidden ? (
-          <div className={styles.collapsedState}>
+          <div className={`${styles.collapsedState} studio-spec-panel-collapsed`}>
             <p>{DEFAULT_COLLAPSED_HELP}</p>
           </div>
         ) : (
-          <div className={styles.readFrame}>{readPreview}</div>
+          <div className={`${styles.readFrame} studio-spec-panel-readframe`}>{readPreview}</div>
         )}
       </section>
       {specDialog}

@@ -1,0 +1,99 @@
+{
+  "slideId": "slide-15",
+  "displayNumber": "15",
+  "lane": "html",
+  "laneReason": "The Best Learning Design Respects How Clinicians Actually Work defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000014",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-15",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-15-closing-takeaway.md",
+  "packetText": "# Slide 15 — The Best Learning Design Respects How Clinicians Actually Work\n\n## Status\n\n- current deck numbering: slide 15\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- resolve the deck with one memorable line\n- bring the audience back to workflow fit\n- leave the talk feeling confident and coherent\n\n## Locked slide thesis\n\nMicrolearning matters because it respects how clinicians actually learn, not\nbecause it is trendy or compressed.\n\n## Slide purpose brief\n\n- top claim:\n  the best learning design fits the work\n- support claim:\n  microlearning makes evidence easier to reach, remember, and use\n- non-goals:\n  - do not re-teach the deck\n  - do not end with a policy memo tone\n\n## Figure job\n\n- echo the opening\n- feel more resolved and confident than slide 1\n- preserve elegance and space\n\n## Locked copy\n\n- header:\n  `The best learning design respects how clinicians actually work.`\n- subheader:\n  `Microlearning is not a shortcut. It is a better fit.`\n- figure labels:\n  - `reach`\n  - `remember`\n  - `use`\n\n## Visual rules\n\n- resolved editorial hero\n- low clutter, strong hierarchy\n- no decorative overreach\n\n## Existing useful source assets\n\n- `inputs/saem_microlearning_talk_outline.md`\n- `inputs/COPY_SOURCE_DOC.md`\n\n## Immediate next refinement\n\n- echo the title-slide visual language\n- decide whether the close should lean more toward cadence, integration, or signal\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-15",
+    "displayNumber": "15",
+    "importedSlides": [
+      15
+    ],
+    "status": "active",
+    "title": "The Best Learning Design Respects How Clinicians Actually Work",
+    "purpose": "close with a memorable final line that resolves the deck",
+    "header": "The best learning design respects how clinicians actually work.",
+    "subheader": "Microlearning is not a shortcut. It is a better fit.",
+    "takeaway": "Microlearning is a format for making evidence easier to reach, remember, and use in the real world of emergency medicine.",
+    "figureRole": "Return to the opening visual language with a more resolved and confident closing composition.",
+    "family": "resolved closing hero",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-15-closing-takeaway.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-15/manifest.json"
+    },
+    "selectedDirection": "Echo the opening tone, but with more confidence and a stronger sense of integration and motion.",
+    "notes": [
+      "This is the emotional closing slide.",
+      "Keep it elegant and uncluttered."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-15",
+    "displayNumber": "15",
+    "importedSlides": [
+      15
+    ],
+    "status": "active",
+    "title": "The Best Learning Design Respects How Clinicians Actually Work",
+    "purpose": "close with a memorable final line that resolves the deck",
+    "header": "The best learning design respects how clinicians actually work.",
+    "subheader": "Microlearning is not a shortcut. It is a better fit.",
+    "takeaway": "Microlearning is a format for making evidence easier to reach, remember, and use in the real world of emergency medicine.",
+    "figureRole": "Return to the opening visual language with a more resolved and confident closing composition.",
+    "family": "resolved closing hero",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-15-closing-takeaway.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-15/manifest.json"
+    },
+    "selectedDirection": "Echo the opening tone, but with more confidence and a stronger sense of integration and motion.",
+    "notes": [
+      "This is the emotional closing slide.",
+      "Keep it elegant and uncluttered."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-15/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft/create/create-request.snapshot.md"
+}

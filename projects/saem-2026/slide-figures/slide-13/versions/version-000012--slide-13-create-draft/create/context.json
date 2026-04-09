@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-13",
+  "displayNumber": "13",
+  "lane": "html",
+  "laneReason": "Engagement Is Not Enough defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000012",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-13",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-13-engagement-is-not-enough.md",
+  "packetText": "# Slide 13 — Engagement Is Not Enough\n\n## Status\n\n- current deck numbering: slide 13\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- keep the evaluation section honest\n- distinguish useful metrics from easy metrics\n- reinforce the deck's academic credibility\n\n## Locked slide thesis\n\nEngagement matters, but it is not the same thing as learning impact.\n\n## Slide purpose brief\n\n- top claim:\n  clicks are not enough\n- support claim:\n  stronger measures include retrieval, behavior, and downstream use\n- non-goals:\n  - do not overclaim patient outcomes\n  - do not become a methods-heavy slide\n\n## Figure job\n\n- create a visible hierarchy of metrics\n- make it obvious which measures are easiest and which matter most\n- keep the slide sharp and readable\n\n## Locked copy\n\n- header:\n  `Engagement is not enough.`\n- subheader:\n  `Measure more than clicks.`\n- figure labels:\n  - `engagement`\n  - `retention`\n  - `behavior`\n  - `outcomes`\n\n## Visual rules\n\n- ladder or progression logic\n- no spreadsheet aesthetic\n- keep it visually clean\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a vertical ladder\n- compare a staircase model with a widening evidence ladder\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-13",
+    "displayNumber": "13",
+    "importedSlides": [
+      13
+    ],
+    "status": "active",
+    "title": "Engagement Is Not Enough",
+    "purpose": "distinguish attention metrics from real educational impact",
+    "header": "Engagement is not enough.",
+    "subheader": "Measure more than clicks.",
+    "takeaway": "The evidence is stronger for retention and thinner for downstream clinical outcomes, so evaluation has to stay honest.",
+    "figureRole": "Build a measurement ladder from clicks to retention to behavior and outcomes.",
+    "family": "measurement ladder",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Many digital-learning studies show positive engagement, but downstream clinical outcomes are measured less often [1, 6, 11, 13, 17]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-13-engagement-is-not-enough.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-13/manifest.json"
+    },
+    "selectedDirection": "Use a progression or ladder visual with a clear difference between easy metrics and meaningful ones.",
+    "notes": [
+      "This slide should sound credible, not cynical.",
+      "Do not overclaim patient-outcome evidence."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-13",
+    "displayNumber": "13",
+    "importedSlides": [
+      13
+    ],
+    "status": "active",
+    "title": "Engagement Is Not Enough",
+    "purpose": "distinguish attention metrics from real educational impact",
+    "header": "Engagement is not enough.",
+    "subheader": "Measure more than clicks.",
+    "takeaway": "The evidence is stronger for retention and thinner for downstream clinical outcomes, so evaluation has to stay honest.",
+    "figureRole": "Build a measurement ladder from clicks to retention to behavior and outcomes.",
+    "family": "measurement ladder",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Many digital-learning studies show positive engagement, but downstream clinical outcomes are measured less often [1, 6, 11, 13, 17]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-13-engagement-is-not-enough.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-13/manifest.json"
+    },
+    "selectedDirection": "Use a progression or ladder visual with a clear difference between easy metrics and meaningful ones.",
+    "notes": [
+      "This slide should sound credible, not cynical.",
+      "Do not overclaim patient-outcome evidence."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-13/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft/create/create-request.snapshot.md"
+}

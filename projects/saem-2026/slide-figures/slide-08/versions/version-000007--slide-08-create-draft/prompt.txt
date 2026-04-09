@@ -1,0 +1,115 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This slide belongs to a SAEM annual meeting talk on microlearning in emergency medicine.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Put all real content above the branded footer region so the SAEM26 logo/date block and skyline stay readable.
+- Do not obscure the lower-left logo block or the lower skyline/footer band.
+- Use inline CSS only.
+- Use inline SVG if helpful for lines, frameworks, diagrams, or geometry.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Style continuity:
+
+- Match the existing deck family: clean academic keynote, white or near-white canvas, deep navy typography, restrained SAEM blue and red accents, modern but calm.
+- Do not make this look like a browser page, product UI, hospital dashboard, or poster session handout.
+- Avoid cheesy stock-photo logic, cartoon medical iconography, or AI-hype visuals.
+
+Locked text:
+
+- Header: `The tool stack already exists.`
+- Subheader: `Anki, mobile apps, LMS workflows, and curated FOAM can start today.`
+
+Slide contract:
+
+- Slide title: The Tool Stack Already Exists
+- Purpose: shift the talk from theory to practical platforms already in use
+- Takeaway: Most programs can start with low-cost tools before chasing fully novel infrastructure.
+- Figure role: Organize current tools into a clear maturity stack or capability map that feels modern and practical.
+- Visual family: tool maturity map
+- Selected direction: Use a now-next-experimental frame or maturity stack that makes current versus emerging tools obvious.
+- Additional note: This should read as pragmatic, not gadget-driven.
+- Additional note: Set up the dedicated AI slides that follow.
+
+Evidence and citations:
+
+- Preferred citation anchors: [1], [2], [11], [12], [17], [18]
+- Practical microlearning platforms already include Anki-style review, mobile learning apps, LMS modules, and curated FOAM workflows [1, 2, 11, 12, 17, 18].
+- Where citations fit, render them as subtle evidence chips or compact bracket references.
+- Keep citation styling quiet and professional; they should support the claim, not dominate the slide.
+
+Reference images:
+
+- If reference images are attached, use them for family continuity, composition discipline, text density, and citation styling.
+- Do not literally copy the reference slides.
+
+Slide packet:
+
+# Slide 8 — The Tool Stack Already Exists
+
+## Status
+
+- current deck numbering: slide 8
+- legacy source mapping: same as current
+- decision state: OPEN
+
+## Why this slide exists
+
+- make the talk practical
+- show that good microlearning does not require futuristic infrastructure
+- set up the AI section that follows
+
+## Locked slide thesis
+
+Programs can start microlearning now using tools that already exist.
+
+## Slide purpose brief
+
+- top claim:
+  the stack is already here
+- support claim:
+  Anki, mobile tools, LMS flows, and curated FOAM can cover most starting needs
+- non-goals:
+  - do not make this an app marketplace slide
+  - do not imply all tools are equally mature
+
+## Figure job
+
+- organize the stack cleanly
+- distinguish now versus emerging
+- keep the slide modern and practical
+
+## Locked copy
+
+- header:
+  `The tool stack already exists.`
+- subheader:
+  `Anki, mobile apps, LMS workflows, and curated FOAM can start today.`
+- figure labels:
+  - `now`
+  - `next`
+  - `emerging`
+
+## Visual rules
+
+- maturity or capability framing
+- no screenshot wall
+- avoid gadget worship
+
+## Existing useful source assets
+
+- `inputs/microlearning_emergency_medicine_review.md`
+- `inputs/saem_microlearning_talk_outline.md`
+
+## Immediate next refinement
+
+- test a maturity stack
+- compare a ladder versus clustered capability map
+
+Output:
+
+- Return one complete HTML document only.

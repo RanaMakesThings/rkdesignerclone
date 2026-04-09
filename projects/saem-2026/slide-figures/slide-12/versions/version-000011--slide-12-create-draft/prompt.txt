@@ -1,0 +1,117 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This slide belongs to a SAEM annual meeting talk on microlearning in emergency medicine.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Put all real content above the branded footer region so the SAEM26 logo/date block and skyline stay readable.
+- Do not obscure the lower-left logo block or the lower skyline/footer band.
+- Use inline CSS only.
+- Use inline SVG if helpful for lines, frameworks, diagrams, or geometry.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Style continuity:
+
+- Match the existing deck family: clean academic keynote, white or near-white canvas, deep navy typography, restrained SAEM blue and red accents, modern but calm.
+- Do not make this look like a browser page, product UI, hospital dashboard, or poster session handout.
+- Avoid cheesy stock-photo logic, cartoon medical iconography, or AI-hype visuals.
+
+Locked text:
+
+- Header: `Fit it into workflow, not around workflow.`
+- Subheader: `Microlearning works best when it lives where clinicians already are.`
+
+Slide contract:
+
+- Slide title: Fit It Into Workflow, Not Around Workflow
+- Purpose: show how microlearning actually enters clinical routines
+- Takeaway: Workflow fit matters more than forcing clinicians into additional scheduled learning time.
+- Figure role: Create a clean workflow-touchpoint timeline that shows where brief learning moments can sit in real practice.
+- Visual family: workflow touchpoint timeline
+- Selected direction: Use an ED-day or shift-flow structure with brief learning touchpoints rather than a formal schedule grid.
+- Additional note: This should make implementation feel realistic.
+- Additional note: Keep it grounded in clinician behavior.
+
+Evidence and citations:
+
+- Preferred citation anchors: [2], [7], [8], [15], [23]
+- Workflow integration and point-of-care relevance matter more than forcing learners into extra scheduled time [2, 7, 8, 15, 23].
+- Where citations fit, render them as subtle evidence chips or compact bracket references.
+- Keep citation styling quiet and professional; they should support the claim, not dominate the slide.
+
+Reference images:
+
+- If reference images are attached, use them for family continuity, composition discipline, text density, and citation styling.
+- Do not literally copy the reference slides.
+
+Slide packet:
+
+# Slide 12 — Fit It Into Workflow, Not Around Workflow
+
+## Status
+
+- current deck numbering: slide 12
+- legacy source mapping: same as current
+- decision state: OPEN
+
+## Why this slide exists
+
+- make implementation feel realistic
+- show where microlearning actually lives in practice
+- move the audience from agreement to feasibility
+
+## Locked slide thesis
+
+Microlearning works best when it lives inside the rhythms clinicians already
+have.
+
+## Slide purpose brief
+
+- top claim:
+  workflow fit matters more than formal scheduling
+- support claim:
+  clinicians are more likely to use resources that meet them at real moments of need
+- non-goals:
+  - do not build a fake EHR screen
+  - do not overcomplicate the workflow map
+
+## Figure job
+
+- show touchpoints across a shift or week
+- make the implementation pattern feel realistic
+- avoid the look of an operations dashboard
+
+## Locked copy
+
+- header:
+  `Fit it into workflow, not around workflow.`
+- subheader:
+  `Microlearning works best when it lives where clinicians already are.`
+- figure labels:
+  - `question`
+  - `pearl`
+  - `case follow-up`
+  - `curated module`
+
+## Visual rules
+
+- time-based or workflow-based structure
+- calm layout, clear sequence
+- no dashboard chrome
+
+## Existing useful source assets
+
+- `inputs/microlearning_emergency_medicine_review.md`
+- `inputs/saem_microlearning_talk_outline.md`
+
+## Immediate next refinement
+
+- test a shift-touchpoint timeline
+- compare a daily cadence map with a patient-encounter loop
+
+Output:
+
+- Return one complete HTML document only.

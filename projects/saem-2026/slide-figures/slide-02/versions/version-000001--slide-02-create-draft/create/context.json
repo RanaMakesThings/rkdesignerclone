@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-02",
+  "displayNumber": "2",
+  "lane": "html",
+  "laneReason": "Explicit lane override selected: html.",
+  "createdDraftVersion": false,
+  "draftVersionId": "version-000001",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-02",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-02-why-this-matters.md",
+  "packetText": "# Slide 2 — Why This Matters in the ED\n\n## Status\n\n- current deck numbering: slide 2\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- establish the environment problem\n- show why emergency medicine is especially suited to microlearning\n- frame the rest of the deck as a response to workflow reality\n\n## Locked slide thesis\n\nEmergency medicine naturally favors microlearning because clinical work is\nfragmented, time-constrained, and full of just-in-time information needs.\n\n## Slide purpose brief\n\n- top claim:\n  the ED creates a learning-design problem\n- support claim:\n  long-form education often arrives out of sync with clinical need\n- non-goals:\n  - do not define microlearning in detail yet\n  - do not introduce FOAMed yet\n\n## Figure job\n\n- show interruption and fragmentation visually\n- make the mismatch between work rhythm and traditional education obvious\n- avoid a boring process diagram\n\n## Locked copy\n\n- header:\n  `The ED creates a learning-design problem.`\n- subheader:\n  `Emergency medicine is built around interruption, uncertainty, and time scarcity.`\n- figure labels:\n  - `interruptions`\n  - `micro-windows`\n\n## Visual rules\n\n- use a strong time-based structure\n- make the rhythm legible in one glance\n- do not turn it into a dashboard\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- generate a first interruption-map concept\n- test whether a fractured shift timeline is clearer than a workflow loop\n\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-02",
+    "displayNumber": "2",
+    "importedSlides": [
+      2
+    ],
+    "status": "active",
+    "title": "Why This Matters in the ED",
+    "purpose": "make the audience feel that emergency medicine's environment naturally favors microlearning",
+    "header": "The ED creates a learning-design problem.",
+    "subheader": "Emergency medicine is built around interruption, uncertainty, and time scarcity.",
+    "takeaway": "The challenge is structural: the learning format has to fit the work.",
+    "figureRole": "Show the fractured rhythm of emergency medicine and the mismatch between long-form teaching and point-of-care questions.",
+    "family": "clinical-fragmentation timeline",
+    "buildStatus": "starter packet drafted; first concept slide candidate",
+    "proof": [
+      "Emergency medicine learning is constrained by shift work, time pressure, and point-of-care information needs [15, 23]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-02-why-this-matters.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-02/manifest.json"
+    },
+    "selectedDirection": "No selected visual yet. Aim for a timeline or interruption map that makes fragmented learning windows instantly legible.",
+    "notes": [
+      "The slide should diagnose the environment, not blame learners.",
+      "Avoid hospital-dashboard aesthetics."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-02",
+    "displayNumber": "2",
+    "importedSlides": [
+      2
+    ],
+    "status": "active",
+    "title": "Why This Matters in the ED",
+    "purpose": "make the audience feel that emergency medicine's environment naturally favors microlearning",
+    "header": "The ED creates a learning-design problem.",
+    "subheader": "Emergency medicine is built around interruption, uncertainty, and time scarcity.",
+    "takeaway": "The challenge is structural: the learning format has to fit the work.",
+    "figureRole": "Show the fractured rhythm of emergency medicine and the mismatch between long-form teaching and point-of-care questions.",
+    "family": "clinical-fragmentation timeline",
+    "buildStatus": "starter packet drafted; first concept slide candidate",
+    "proof": [
+      "Emergency medicine learning is constrained by shift work, time pressure, and point-of-care information needs [15, 23]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-02-why-this-matters.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-02/manifest.json"
+    },
+    "selectedDirection": "No selected visual yet. Aim for a timeline or interruption map that makes fragmented learning windows instantly legible.",
+    "notes": [
+      "The slide should diagnose the environment, not blame learners.",
+      "Avoid hospital-dashboard aesthetics."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "machina-deck-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-02/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft/create/create-request.snapshot.md"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "version-000005",
+  "slideId": "slide-06",
+  "slideDir": "projects/saem-2026/slide-figures/slide-06",
+  "dir": "projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft",
+  "label": "slide-06-create-draft",
+  "status": "current",
+  "createdAt": "2026-04-09T03:04:40.321Z",
+  "sourceKind": "create-draft",
+  "baseVersionId": null,
+  "legacySourcePaths": [],
+  "createLane": "html",
+  "templateId": "saem-annual-meeting-template-v1",
+  "bootstrapMode": "from-spec",
+  "runType": "slide-create"
+}

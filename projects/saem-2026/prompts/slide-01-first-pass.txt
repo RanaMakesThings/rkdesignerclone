@@ -1,0 +1,46 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This is the title slide for a SAEM annual meeting talk.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Preserve the official SAEM26 footer treatment by leaving the lower band readable and unobscured.
+- Keep all important talk content above the branded footer region.
+- Use inline CSS only.
+- Use inline SVG if you need simple editorial geometry.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Locked text:
+
+- Header: `Microlearning for Emergency Medicine`
+- Subheader: `Small learning episodes, durable clinical impact.`
+
+Goal:
+
+- Make the slide feel rigorous, calm, and visually elegant.
+- It should feel academic and modern, not startup-polished and not like a generic hospital template.
+- The opening should imply clarity under pressure rather than showing a literal emergency department scene.
+
+Composition direction:
+
+- Use the SAEM shell as the branded base layer.
+- Build a restrained editorial title treatment in the upper two-thirds of the slide.
+- Add one sophisticated supporting visual gesture in the content area:
+  this can be a soft field of staggered learning pulses, a subtle cadence motif, or a disciplined abstract structure that suggests compressed learning over time.
+- The content area should not look empty, but it also should not look busy.
+
+Style guardrails:
+
+- White or near-white canvas.
+- Deep navy text.
+- Use the SAEM blue and red sparingly as accents.
+- Avoid cheesy medical icons, device mockups, dashboards, stock-photo look, or 3D illustration.
+- Avoid bullet lists on the title slide.
+- No placeholder boxes or stub labels.
+
+Output:
+
+- Return one complete HTML document only.

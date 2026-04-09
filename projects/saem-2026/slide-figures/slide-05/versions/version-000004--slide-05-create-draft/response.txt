@@ -1,0 +1,257 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Repeated Retrieval Beats Passive Exposure</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    position: relative;
+    color: #0d1b2a;
+  }
+  .shell {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .content-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: 20;
+    padding: 120px 140px;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    margin-bottom: 80px;
+  }
+  h1 {
+    font-size: 64px;
+    font-weight: 800;
+    color: #0d1b2a;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .subheader {
+    font-size: 36px;
+    font-weight: 400;
+    color: #4a5568;
+    max-width: 1400px;
+    line-height: 1.4;
+  }
+  .subheader sup {
+    font-size: 20px;
+    color: #a0aec0;
+    margin-left: 4px;
+    font-weight: 500;
+  }
+  
+  .figure-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 140px; /* Keep clear of footer */
+  }
+
+  .chart-area {
+    width: 1400px;
+    height: 450px;
+    position: relative;
+  }
+
+  .axis-line {
+    stroke: #e2e8f0;
+    stroke-width: 2;
+  }
+  
+  .axis-label {
+    font-size: 18px;
+    fill: #718096;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .curve-passive {
+    fill: none;
+    stroke: #cbd5e0;
+    stroke-width: 4;
+    stroke-dasharray: 8 8;
+  }
+
+  .curve-active {
+    fill: none;
+    stroke: #0d1b2a;
+    stroke-width: 5;
+  }
+
+  .pulse-line {
+    stroke: #e53e3e;
+    stroke-width: 3;
+    stroke-dasharray: 4 4;
+  }
+
+  .pulse-dot {
+    fill: #e53e3e;
+  }
+
+  .retention-dot {
+    fill: #0d1b2a;
+  }
+
+  .annotation-text {
+    font-size: 22px;
+    font-weight: 600;
+    fill: #0d1b2a;
+  }
+
+  .annotation-sub {
+    font-size: 18px;
+    fill: #4a5568;
+  }
+
+  .legend {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    display: flex;
+    gap: 40px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    color: #4a5568;
+    font-weight: 500;
+  }
+
+  .legend-line {
+    width: 40px;
+    height: 4px;
+  }
+  .legend-line.passive {
+    background-color: #cbd5e0;
+    border-top: 4px dashed #cbd5e0;
+    height: 0;
+  }
+  .legend-line.active {
+    background-color: #0d1b2a;
+  }
+
+  .callout-box {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f7fafc;
+    border-left: 4px solid #3182ce;
+    padding: 20px 32px;
+    font-size: 24px;
+    color: #2d3748;
+    font-weight: 500;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+</style>
+</head>
+<body>
+
+<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />
+
+<div class="content-layer">
+  <header>
+    <h1>Repeated retrieval beats passive exposure.</h1>
+    <div class="subheader">
+      Daily questions and spaced review make retention more durable.<sup>[11, 12, 20, 28]</sup>
+    </div>
+  </header>
+
+  <div class="figure-container">
+    <div class="chart-area">
+      
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-line passive"></div>
+          Passive Exposure (Single Session)
+        </div>
+        <div class="legend-item">
+          <div class="legend-line active"></div>
+          Spaced Retrieval
+        </div>
+      </div>
+
+      <svg width="1400" height="450" viewBox="0 0 1400 450">
+        <!-- Axes -->
+        <line x1="50" y1="400" x2="1350" y2="400" class="axis-line" />
+        <line x1="50" y1="50" x2="50" y2="400" class="axis-line" />
+        
+        <text x="50" y="30" class="axis-label">Retention Level</text>
+        <text x="1350" y="430" class="axis-label" text-anchor="end">Time</text>
+
+        <!-- Passive Curve (Ebbinghaus style decay) -->
+        <path d="M 50 80 Q 200 380 1300 390" class="curve-passive" />
+
+        <!-- Active Curve (Spaced Repetition) -->
+        <!-- Initial learning -->
+        <path d="M 50 80 Q 150 250 250 280" class="curve-active" />
+        
+        <!-- Pulse 1 -->
+        <line x1="250" y1="400" x2="250" y2="120" class="pulse-line" />
+        <circle cx="250" cy="120" r="6" class="pulse-dot" />
+        <text x="250" y="100" class="annotation-text" text-anchor="middle">Retrieve</text>
+        <path d="M 250 120 Q 400 220 550 240" class="curve-active" />
+
+        <!-- Pulse 2 -->
+        <line x1="550" y1="400" x2="550" y2="100" class="pulse-line" />
+        <circle cx="550" cy="100" r="6" class="pulse-dot" />
+        <text x="550" y="80" class="annotation-text" text-anchor="middle">Reactivate</text>
+        <path d="M 550 100 Q 750 160 950 170" class="curve-active" />
+
+        <!-- Pulse 3 -->
+        <line x1="950" y1="400" x2="950" y2="90" class="pulse-line" />
+        <circle cx="950" cy="90" r="6" class="pulse-dot" />
+        <text x="950" y="70" class="annotation-text" text-anchor="middle">Retain</text>
+        <path d="M 950 90 Q 1150 110 1300 120" class="curve-active" />
+
+        <!-- End points -->
+        <circle cx="1300" cy="390" r="8" fill="#cbd5e0" />
+        <circle cx="1300" cy="120" r="10" class="retention-dot" />
+        
+        <!-- Final Annotation -->
+        <text x="1320" y="126" class="annotation-text" fill="#0d1b2a">Durable Knowledge</text>
+
+      </svg>
+
+      <div class="callout-box">
+        Each retrieval attempt flattens the forgetting curve.
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+```

@@ -1,0 +1,117 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This slide belongs to a SAEM annual meeting talk on microlearning in emergency medicine.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Put all real content above the branded footer region so the SAEM26 logo/date block and skyline stay readable.
+- Do not obscure the lower-left logo block or the lower skyline/footer band.
+- Use inline CSS only.
+- Use inline SVG if helpful for lines, frameworks, diagrams, or geometry.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Style continuity:
+
+- Match the existing deck family: clean academic keynote, white or near-white canvas, deep navy typography, restrained SAEM blue and red accents, modern but calm.
+- Do not make this look like a browser page, product UI, hospital dashboard, or poster session handout.
+- Avoid cheesy stock-photo logic, cartoon medical iconography, or AI-hype visuals.
+
+Locked text:
+
+- Header: `Design rules for good microlearning.`
+- Subheader: `Keep it brief, specific, active, and mobile-first.`
+
+Slide contract:
+
+- Slide title: Design Rules for Good Microlearning
+- Purpose: give the audience a portable design checklist
+- Takeaway: Good microlearning is intentionally constrained, clinically relevant, and active rather than passive.
+- Figure role: Build a clear design-rules stack that can function like a memorable checklist without becoming a bullet wall.
+- Visual family: design rules stack
+- Selected direction: Use five compact rules as a disciplined visual stack or modular card system, but keep the slide feeling keynote-ready.
+- Additional note: This is the practical checklist slide.
+- Additional note: Do not let it become a dense handout.
+
+Evidence and citations:
+
+- Preferred citation anchors: [1], [7], [13], [20], [27]
+- Good microlearning is brief, specific, active, and designed for low-friction mobile use [1, 7, 13, 20, 27].
+- Where citations fit, render them as subtle evidence chips or compact bracket references.
+- Keep citation styling quiet and professional; they should support the claim, not dominate the slide.
+
+Reference images:
+
+- If reference images are attached, use them for family continuity, composition discipline, text density, and citation styling.
+- Do not literally copy the reference slides.
+
+Slide packet:
+
+# Slide 11 — Design Rules for Good Microlearning
+
+## Status
+
+- current deck numbering: slide 11
+- legacy source mapping: same as current
+- decision state: OPEN
+
+## Why this slide exists
+
+- give the audience a practical checklist
+- convert theory into design guidance
+- make the talk easier to remember and reuse
+
+## Locked slide thesis
+
+Good microlearning is brief, specific, active, and built for low-friction use.
+
+## Slide purpose brief
+
+- top claim:
+  good microlearning is intentionally constrained
+- support claim:
+  relevance, activation, and ease of use matter more than production gloss
+- non-goals:
+  - do not become a bullet wall
+  - do not look like a product feature list
+
+## Figure job
+
+- organize the design rules cleanly
+- let the audience remember them at a glance
+- keep the slide feeling premium
+
+## Locked copy
+
+- header:
+  `Design rules for good microlearning.`
+- subheader:
+  `Keep it brief, specific, active, and mobile-first.`
+- figure labels:
+  - `one objective`
+  - `clinical relevance`
+  - `active response`
+  - `mobile friction`
+  - `feedback`
+
+## Visual rules
+
+- elegant checklist logic
+- no dense body text
+- keep typography strong
+
+## Existing useful source assets
+
+- `inputs/microlearning_emergency_medicine_review.md`
+- `inputs/saem_microlearning_talk_outline.md`
+
+## Immediate next refinement
+
+- test a stacked-rules composition
+- compare a vertical system with modular rule cards
+
+Output:
+
+- Return one complete HTML document only.

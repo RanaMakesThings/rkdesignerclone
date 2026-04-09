@@ -1,0 +1,117 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This slide belongs to a SAEM annual meeting talk on microlearning in emergency medicine.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Put all real content above the branded footer region so the SAEM26 logo/date block and skyline stay readable.
+- Do not obscure the lower-left logo block or the lower skyline/footer band.
+- Use inline CSS only.
+- Use inline SVG if helpful for lines, frameworks, diagrams, or geometry.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Style continuity:
+
+- Match the existing deck family: clean academic keynote, white or near-white canvas, deep navy typography, restrained SAEM blue and red accents, modern but calm.
+- Do not make this look like a browser page, product UI, hospital dashboard, or poster session handout.
+- Avoid cheesy stock-photo logic, cartoon medical iconography, or AI-hype visuals.
+
+Locked text:
+
+- Header: `AI can personalize and accelerate microlearning.`
+- Subheader: `The emerging opportunity is adaptive support, not full automation.`
+
+Slide contract:
+
+- Slide title: AI Can Personalize and Accelerate Microlearning
+- Purpose: show the audience where AI may add real educational value without sounding breathless
+- Takeaway: AI is most promising when it identifies gaps, adapts cases, and supports feedback or review timing.
+- Figure role: Create a modern adaptive-learning graphic showing targeted cases, feedback, and timing rather than generic chatbot imagery.
+- Visual family: adaptive learning pathway
+- Selected direction: Show AI as a quiet adaptive layer around cases, feedback, and sequencing rather than as a giant central robot.
+- Additional note: This is a modernization slide, not a hype slide.
+- Additional note: Keep the visual language premium and evidence-forward.
+
+Evidence and citations:
+
+- Preferred citation anchors: [9], [18]
+- Emerging AI-augmented curricula can personalize cases, identify knowledge gaps, and adapt feedback or review timing [9, 18].
+- Where citations fit, render them as subtle evidence chips or compact bracket references.
+- Keep citation styling quiet and professional; they should support the claim, not dominate the slide.
+
+Reference images:
+
+- If reference images are attached, use them for family continuity, composition discipline, text density, and citation styling.
+- Do not literally copy the reference slides.
+
+Slide packet:
+
+# Slide 9 — AI Can Personalize and Accelerate Microlearning
+
+## Status
+
+- current deck numbering: slide 9
+- legacy source mapping: same as current
+- decision state: OPEN
+
+## Why this slide exists
+
+- modernize the talk
+- show a credible educational role for AI
+- keep the conversation focused on pedagogy rather than hype
+
+## Locked slide thesis
+
+AI is most promising when it helps adapt cases, sequence review, and provide
+targeted educational feedback.
+
+## Slide purpose brief
+
+- top claim:
+  AI may improve personalization and timing
+- support claim:
+  the value is adaptive support around good educational design
+- non-goals:
+  - do not build a chatbot hero slide
+  - do not imply autonomous education is the goal
+
+## Figure job
+
+- show targeted adaptation
+- make AI feel like a quiet layer around the workflow
+- keep the visual language premium and calm
+
+## Locked copy
+
+- header:
+  `AI can personalize and accelerate microlearning.`
+- subheader:
+  `The emerging opportunity is adaptive support, not full automation.`
+- figure labels:
+  - `cases`
+  - `feedback`
+  - `timing`
+  - `gaps`
+
+## Visual rules
+
+- no robots
+- no futuristic command center
+- no hype gradients or glowing neon AI clichés
+
+## Existing useful source assets
+
+- `inputs/microlearning_emergency_medicine_review.md`
+- `inputs/saem_microlearning_talk_outline.md`
+
+## Immediate next refinement
+
+- test an adaptive-pathway composition
+- compare a closed-loop learning system with a targeted-review map
+
+Output:
+
+- Return one complete HTML document only.

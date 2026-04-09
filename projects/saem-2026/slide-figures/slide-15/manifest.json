@@ -1,0 +1,18 @@
+{
+  "slideId": "slide-15",
+  "slideDir": "projects/saem-2026/slide-figures/slide-15",
+  "currentVersionId": "version-000014",
+  "versions": [
+    {
+      "id": "version-000014",
+      "label": "slide-15-create-draft",
+      "status": "current",
+      "sourceKind": "create-draft",
+      "createdAt": "2026-04-09T03:14:20.373Z",
+      "baseVersionId": null,
+      "dir": "projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft",
+      "runId": null,
+      "attempt": null
+    }
+  ]
+}

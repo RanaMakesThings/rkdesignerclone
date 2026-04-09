@@ -1,0 +1,155 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0">
+  <title>Short Is Not the Intervention</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background-color: #ffffff;
+      position: relative;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .shell {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1920px;
+      height: 1080px;
+      z-index: 1;
+    }
+    .content-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1920px;
+      height: 1080px;
+      z-index: 10;
+    }
+    .header-container {
+      position: absolute;
+      top: 120px;
+      left: 160px;
+      width: 1600px;
+    }
+    h1 {
+      font-size: 64px;
+      font-weight: 800;
+      color: #001529;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .accent-bar {
+      width: 80px;
+      height: 6px;
+      background-color: #da291c;
+      margin: 24px 0;
+    }
+    h2 {
+      font-size: 36px;
+      font-weight: 400;
+      color: #4b5563;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Template -->
+  <img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />
+
+  <!-- Content Layer -->
+  <div class="content-layer">
+    
+    <!-- Header -->
+    <div class="header-container">
+      <h1>Short is not the intervention.</h1>
+      <div class="accent-bar"></div>
+      <h2>Microlearning works when it applies learning science.</h2>
+    </div>
+
+    <!-- Framework Graphics -->
+    <svg width="1920" height="1080" viewBox="0 0 1920 1080" style="position: absolute; top: 0; left: 0;">
+      <defs>
+        <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#001529" />
+        </marker>
+        <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#da291c" />
+        </marker>
+        <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.04" />
+        </filter>
+      </defs>
+
+      <!-- Cards Backgrounds -->
+      <rect x="200" y="340" width="320" height="460" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2" filter="url(#card-shadow)" />
+      <rect x="600" y="340" width="320" height="460" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2" filter="url(#card-shadow)" />
+      <rect x="1000" y="340" width="320" height="460" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2" filter="url(#card-shadow)" />
+      <rect x="1400" y="340" width="320" height="460" rx="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2" filter="url(#card-shadow)" />
+
+      <!-- Pillar 1: Spaced Repetition -->
+      <g>
+        <rect x="240" y="430" width="24" height="140" rx="12" fill="#001529" />
+        <rect x="288" y="430" width="24" height="140" rx="12" fill="#001529" />
+        <rect x="360" y="430" width="24" height="140" rx="12" fill="#001529" />
+        <rect x="456" y="430" width="24" height="140" rx="12" fill="#da291c" />
+        
+        <text x="360" y="680" font-size="26" font-weight="700" fill="#001529" text-anchor="middle">Spaced repetition</text>
+        <text x="360" y="720" font-size="20" font-weight="500" fill="#6b7280" text-anchor="middle">[4, 11]</text>
+      </g>
+
+      <!-- Pillar 2: Active Recall -->
+      <g>
+        <circle cx="760" cy="500" r="70" stroke="#d1d5db" stroke-width="4" stroke-dasharray="8 8" fill="none" />
+        <circle cx="760" cy="500" r="20" fill="#005eb8" />
+        
+        <path d="M 760 470 L 760 410" stroke="#001529" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow-navy)" />
+        <path d="M 734 515 L 691 540" stroke="#001529" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow-navy)" />
+        <path d="M 786 515 L 829 540" stroke="#001529" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow-navy)" />
+        
+        <text x="760" y="680" font-size="26" font-weight="700" fill="#001529" text-anchor="middle">Active recall</text>
+        <text x="760" y="720" font-size="20" font-weight="500" fill="#6b7280" text-anchor="middle">[20]</text>
+      </g>
+
+      <!-- Pillar 3: Cognitive Load -->
+      <g>
+        <path d="M 1080 540 A 80 80 0 0 1 1160 460" stroke="#005eb8" stroke-width="16" fill="none" stroke-linecap="round" />
+        <path d="M 1160 460 A 80 80 0 0 1 1216.5 483.5" stroke="#001529" stroke-width="16" fill="none" />
+        <path d="M 1216.5 483.5 A 80 80 0 0 1 1240 540" stroke="#da291c" stroke-width="16" fill="none" stroke-linecap="round" />
+        
+        <circle cx="1160" cy="540" r="12" fill="#001529" />
+        <line x1="1160" y1="540" x2="1120" y2="480" stroke="#001529" stroke-width="8" stroke-linecap="round" />
+        
+        <text x="1160" y="680" font-size="26" font-weight="700" fill="#001529" text-anchor="middle">Cognitive load</text>
+        <text x="1160" y="720" font-size="20" font-weight="500" fill="#6b7280" text-anchor="middle">[27]</text>
+      </g>
+
+      <!-- Pillar 4: Just-in-time Relevance -->
+      <g>
+        <line x1="1440" y1="540" x2="1680" y2="540" stroke="#001529" stroke-width="8" stroke-linecap="round" />
+        <circle cx="1460" cy="540" r="6" fill="#001529" />
+        <circle cx="1500" cy="540" r="6" fill="#001529" />
+        <circle cx="1660" cy="540" r="6" fill="#001529" />
+        
+        <circle cx="1600" cy="540" r="12" fill="#da291c" />
+        <line x1="1600" y1="430" x2="1600" y2="515" stroke="#da291c" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow-red)" />
+        
+        <text x="1600" y="680" font-size="26" font-weight="700" fill="#001529" text-anchor="middle">Just-in-time relevance</text>
+        <text x="1600" y="720" font-size="20" font-weight="500" fill="#6b7280" text-anchor="middle">[30]</text>
+      </g>
+    </svg>
+
+  </div>
+</body>
+</html>
+```

@@ -1,0 +1,115 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This slide belongs to a SAEM annual meeting talk on microlearning in emergency medicine.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Put all real content above the branded footer region so the SAEM26 logo/date block and skyline stay readable.
+- Do not obscure the lower-left logo block or the lower skyline/footer band.
+- Use inline CSS only.
+- Use inline SVG if helpful for lines, frameworks, diagrams, or geometry.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Style continuity:
+
+- Match the existing deck family: clean academic keynote, white or near-white canvas, deep navy typography, restrained SAEM blue and red accents, modern but calm.
+- Do not make this look like a browser page, product UI, hospital dashboard, or poster session handout.
+- Avoid cheesy stock-photo logic, cartoon medical iconography, or AI-hype visuals.
+
+Locked text:
+
+- Header: `What to do Monday morning.`
+- Subheader: `Start with one pilot, one audience, and one metric.`
+
+Slide contract:
+
+- Slide title: What to Do Monday Morning
+- Purpose: give the audience a low-friction implementation plan
+- Takeaway: Start small, curate aggressively, and decide upfront how you will know whether it helped.
+- Figure role: Build a clean three-step roadmap with enough energy to feel actionable at the end of the talk.
+- Visual family: implementation roadmap
+- Selected direction: Use a practical three-step runway or roadmap rather than a verbose implementation checklist.
+- Additional note: The slide should feel empowering, not administratively heavy.
+- Additional note: End with something people can actually try.
+
+Evidence and citations:
+
+- Preferred citation anchors: [2], [8], [15], [23]
+- Implementation is most feasible when programs start small, curate selectively, and define evaluation upfront [2, 8, 15, 23].
+- Where citations fit, render them as subtle evidence chips or compact bracket references.
+- Keep citation styling quiet and professional; they should support the claim, not dominate the slide.
+
+Reference images:
+
+- If reference images are attached, use them for family continuity, composition discipline, text density, and citation styling.
+- Do not literally copy the reference slides.
+
+Slide packet:
+
+# Slide 14 — What to Do Monday Morning
+
+## Status
+
+- current deck numbering: slide 14
+- legacy source mapping: same as current
+- decision state: OPEN
+
+## Why this slide exists
+
+- give the audience a realistic next step
+- end the practical section with momentum
+- reduce implementation anxiety
+
+## Locked slide thesis
+
+The best next move is a small, curated, measurable pilot.
+
+## Slide purpose brief
+
+- top claim:
+  start with one pilot
+- support claim:
+  one audience, one topic, and one metric is enough to begin
+- non-goals:
+  - do not make this a long project plan
+  - do not sound administratively heavy
+
+## Figure job
+
+- create a clean three-step action pathway
+- make the call to action feel feasible
+- preserve energy near the end of the deck
+
+## Locked copy
+
+- header:
+  `What to do Monday morning.`
+- subheader:
+  `Start with one pilot, one audience, and one metric.`
+- figure labels:
+  - `pick one topic`
+  - `curate or build one unit`
+  - `measure one outcome`
+
+## Visual rules
+
+- simple action roadmap
+- no process-document look
+- keep it confident
+
+## Existing useful source assets
+
+- `inputs/microlearning_emergency_medicine_review.md`
+- `inputs/saem_microlearning_talk_outline.md`
+
+## Immediate next refinement
+
+- test a three-step runway
+- compare a left-to-right roadmap with a central action triad
+
+Output:
+
+- Return one complete HTML document only.

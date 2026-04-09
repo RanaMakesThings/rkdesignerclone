@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-06",
+  "displayNumber": "6",
+  "lane": "html",
+  "laneReason": "FOAMed Made Microlearning Scalable defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000005",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-06",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-06-foamed-made-microlearning-scalable.md",
+  "packetText": "# Slide 6 — FOAMed Made Microlearning Scalable\n\n## Status\n\n- current deck numbering: slide 6\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- show that emergency medicine already has a functioning delivery ecosystem\n- explain why microlearning spread so effectively in EM\n- prepare the audience for the curation warning\n\n## Locked slide thesis\n\nFOAMed made distributed, timely microlearning practical at scale in emergency\nmedicine.\n\n## Slide purpose brief\n\n- top claim:\n  emergency medicine already has a delivery system for microlearning\n- support claim:\n  blogs, podcasts, videos, and curated modules created reach and speed\n- non-goals:\n  - do not turn the slide into logo soup\n  - do not imply that delivery equals quality\n\n## Figure job\n\n- map the ecosystem clearly\n- suggest reach, circulation, and speed\n- preserve visual seriousness\n\n## Locked copy\n\n- header:\n  `FOAMed made microlearning scalable.`\n- subheader:\n  `Emergency medicine already has a delivery ecosystem.`\n- figure labels:\n  - `blogs`\n  - `podcasts`\n  - `videos`\n  - `curated modules`\n\n## Visual rules\n\n- network or ecosystem logic\n- no logo wall\n- avoid social-media collage aesthetics\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a hub-and-network concept\n- compare a channel ecosystem with a flow-through-delivery model\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-06",
+    "displayNumber": "6",
+    "importedSlides": [
+      6
+    ],
+    "status": "active",
+    "title": "FOAMed Made Microlearning Scalable",
+    "purpose": "name the existing emergency medicine delivery ecosystem",
+    "header": "FOAMed made microlearning scalable.",
+    "subheader": "Emergency medicine already has a delivery ecosystem.",
+    "takeaway": "FOAMed enabled distributed, timely microlearning, but delivery is not the same thing as validation.",
+    "figureRole": "Map the FOAMed ecosystem without turning it into a logo collage.",
+    "family": "ecosystem map",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "FOAMed accelerated open, distributed emergency medicine learning, but its strength is delivery rather than automatic validation [2, 5, 15, 29]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-06-foamed-made-microlearning-scalable.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-06/manifest.json"
+    },
+    "selectedDirection": "Use an ecosystem or network metaphor that suggests blogs, podcasts, video, and curated modules as a connected delivery layer.",
+    "notes": [
+      "Do not make the slide feel nostalgic or anti-FOAM.",
+      "The point is distribution, reach, and speed."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-06",
+    "displayNumber": "6",
+    "importedSlides": [
+      6
+    ],
+    "status": "active",
+    "title": "FOAMed Made Microlearning Scalable",
+    "purpose": "name the existing emergency medicine delivery ecosystem",
+    "header": "FOAMed made microlearning scalable.",
+    "subheader": "Emergency medicine already has a delivery ecosystem.",
+    "takeaway": "FOAMed enabled distributed, timely microlearning, but delivery is not the same thing as validation.",
+    "figureRole": "Map the FOAMed ecosystem without turning it into a logo collage.",
+    "family": "ecosystem map",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "FOAMed accelerated open, distributed emergency medicine learning, but its strength is delivery rather than automatic validation [2, 5, 15, 29]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-06-foamed-made-microlearning-scalable.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-06/manifest.json"
+    },
+    "selectedDirection": "Use an ecosystem or network metaphor that suggests blogs, podcasts, video, and curated modules as a connected delivery layer.",
+    "notes": [
+      "Do not make the slide feel nostalgic or anti-FOAM.",
+      "The point is distribution, reach, and speed."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-06/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft/create/create-request.snapshot.md"
+}

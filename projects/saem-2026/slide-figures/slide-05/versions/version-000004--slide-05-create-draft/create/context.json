@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-05",
+  "displayNumber": "5",
+  "lane": "html",
+  "laneReason": "Repeated Retrieval Beats Passive Exposure defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000004",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-05",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-05-retrieval-beats-passive-exposure.md",
+  "packetText": "# Slide 5 — Repeated Retrieval Beats Passive Exposure\n\n## Status\n\n- current deck numbering: slide 5\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- make retrieval practice concrete\n- show one of the strongest evidence-backed mechanisms in the deck\n- bridge theory to practice\n\n## Locked slide thesis\n\nRepeated retrieval and spaced review create more durable retention than one\nlarge passive exposure.\n\n## Slide purpose brief\n\n- top claim:\n  repeated retrieval is one of the strongest mechanisms in this talk\n- support claim:\n  daily questions and spaced review are practical versions of that mechanism\n- non-goals:\n  - do not show a literal app screenshot\n  - do not overload the slide with exam-prep language\n\n## Figure job\n\n- make the retention benefit visually intuitive\n- suggest pulses or reactivation over time\n- keep the slide elegant rather than textbook-like\n\n## Locked copy\n\n- header:\n  `Repeated retrieval beats passive exposure.`\n- subheader:\n  `Daily questions and spaced review make retention more durable.`\n- figure labels:\n  - `retrieve`\n  - `reactivate`\n  - `retain`\n\n## Visual rules\n\n- strong temporal rhythm\n- avoid generic forgetting-curve clip art\n- no app-store aesthetic\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a pulse-based memory curve\n- compare a ladder of retrieval hits with a fading passive-exposure line\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-05",
+    "displayNumber": "5",
+    "importedSlides": [
+      5
+    ],
+    "status": "active",
+    "title": "Repeated Retrieval Beats Passive Exposure",
+    "purpose": "make retrieval practice feel practical and evidence-based",
+    "header": "Repeated retrieval beats passive exposure.",
+    "subheader": "Daily questions and spaced review make retention more durable.",
+    "takeaway": "Small repeated retrieval strengthens retention more reliably than one large passive exposure.",
+    "figureRole": "Show a forgetting-curve or pulse-based rhythm that visually rewards repeated reactivation over single-session exposure.",
+    "family": "retrieval pulse graphic",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Spaced repetition and repeated retrieval improve retention across health-professions education settings [11, 12, 20, 28]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-05-retrieval-beats-passive-exposure.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-05/manifest.json"
+    },
+    "selectedDirection": "Favor a calm, elegant retention graphic over a textbook forgetting-curve cliché.",
+    "notes": [
+      "This slide should feel like one of the strongest evidence slides in the talk.",
+      "Make the Anki-style logic intuitive without turning the slide into an app screenshot."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-05",
+    "displayNumber": "5",
+    "importedSlides": [
+      5
+    ],
+    "status": "active",
+    "title": "Repeated Retrieval Beats Passive Exposure",
+    "purpose": "make retrieval practice feel practical and evidence-based",
+    "header": "Repeated retrieval beats passive exposure.",
+    "subheader": "Daily questions and spaced review make retention more durable.",
+    "takeaway": "Small repeated retrieval strengthens retention more reliably than one large passive exposure.",
+    "figureRole": "Show a forgetting-curve or pulse-based rhythm that visually rewards repeated reactivation over single-session exposure.",
+    "family": "retrieval pulse graphic",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "Spaced repetition and repeated retrieval improve retention across health-professions education settings [11, 12, 20, 28]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-05-retrieval-beats-passive-exposure.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-05/manifest.json"
+    },
+    "selectedDirection": "Favor a calm, elegant retention graphic over a textbook forgetting-curve cliché.",
+    "notes": [
+      "This slide should feel like one of the strongest evidence slides in the talk.",
+      "Make the Anki-style logic intuitive without turning the slide into an app screenshot."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-05/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft/create/create-request.snapshot.md"
+}

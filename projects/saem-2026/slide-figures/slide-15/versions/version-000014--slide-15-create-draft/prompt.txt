@@ -1,0 +1,115 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This slide belongs to a SAEM annual meeting talk on microlearning in emergency medicine.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Put all real content above the branded footer region so the SAEM26 logo/date block and skyline stay readable.
+- Do not obscure the lower-left logo block or the lower skyline/footer band.
+- Use inline CSS only.
+- Use inline SVG if helpful for lines, frameworks, diagrams, or geometry.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Style continuity:
+
+- Match the existing deck family: clean academic keynote, white or near-white canvas, deep navy typography, restrained SAEM blue and red accents, modern but calm.
+- Do not make this look like a browser page, product UI, hospital dashboard, or poster session handout.
+- Avoid cheesy stock-photo logic, cartoon medical iconography, or AI-hype visuals.
+
+Locked text:
+
+- Header: `The best learning design respects how clinicians actually work.`
+- Subheader: `Microlearning is not a shortcut. It is a better fit.`
+
+Slide contract:
+
+- Slide title: The Best Learning Design Respects How Clinicians Actually Work
+- Purpose: close with a memorable final line that resolves the deck
+- Takeaway: Microlearning is a format for making evidence easier to reach, remember, and use in the real world of emergency medicine.
+- Figure role: Return to the opening visual language with a more resolved and confident closing composition.
+- Visual family: resolved closing hero
+- Selected direction: Echo the opening tone, but with more confidence and a stronger sense of integration and motion.
+- Additional note: This is the emotional closing slide.
+- Additional note: Keep it elegant and uncluttered.
+
+Evidence and citations:
+
+- Preferred citation anchors: none required
+- Where citations fit, render them as subtle evidence chips or compact bracket references.
+- Keep citation styling quiet and professional; they should support the claim, not dominate the slide.
+
+Reference images:
+
+- If reference images are attached, use them for family continuity, composition discipline, text density, and citation styling.
+- Do not literally copy the reference slides.
+
+Slide packet:
+
+# Slide 15 — The Best Learning Design Respects How Clinicians Actually Work
+
+## Status
+
+- current deck numbering: slide 15
+- legacy source mapping: same as current
+- decision state: OPEN
+
+## Why this slide exists
+
+- resolve the deck with one memorable line
+- bring the audience back to workflow fit
+- leave the talk feeling confident and coherent
+
+## Locked slide thesis
+
+Microlearning matters because it respects how clinicians actually learn, not
+because it is trendy or compressed.
+
+## Slide purpose brief
+
+- top claim:
+  the best learning design fits the work
+- support claim:
+  microlearning makes evidence easier to reach, remember, and use
+- non-goals:
+  - do not re-teach the deck
+  - do not end with a policy memo tone
+
+## Figure job
+
+- echo the opening
+- feel more resolved and confident than slide 1
+- preserve elegance and space
+
+## Locked copy
+
+- header:
+  `The best learning design respects how clinicians actually work.`
+- subheader:
+  `Microlearning is not a shortcut. It is a better fit.`
+- figure labels:
+  - `reach`
+  - `remember`
+  - `use`
+
+## Visual rules
+
+- resolved editorial hero
+- low clutter, strong hierarchy
+- no decorative overreach
+
+## Existing useful source assets
+
+- `inputs/saem_microlearning_talk_outline.md`
+- `inputs/COPY_SOURCE_DOC.md`
+
+## Immediate next refinement
+
+- echo the title-slide visual language
+- decide whether the close should lean more toward cadence, integration, or signal
+
+Output:
+
+- Return one complete HTML document only.

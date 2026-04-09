@@ -1,0 +1,65 @@
+{
+  "nextVersionNumber": 16,
+  "versions": {
+    "version-000001": {
+      "slideId": "slide-02",
+      "dir": "projects/saem-2026/slide-figures/slide-02/versions/version-000001--slide-02-create-draft"
+    },
+    "version-000002": {
+      "slideId": "slide-03",
+      "dir": "projects/saem-2026/slide-figures/slide-03/versions/version-000002--slide-03-create-draft"
+    },
+    "version-000003": {
+      "slideId": "slide-04",
+      "dir": "projects/saem-2026/slide-figures/slide-04/versions/version-000003--slide-04-create-draft"
+    },
+    "version-000004": {
+      "slideId": "slide-05",
+      "dir": "projects/saem-2026/slide-figures/slide-05/versions/version-000004--slide-05-create-draft"
+    },
+    "version-000005": {
+      "slideId": "slide-06",
+      "dir": "projects/saem-2026/slide-figures/slide-06/versions/version-000005--slide-06-create-draft"
+    },
+    "version-000006": {
+      "slideId": "slide-07",
+      "dir": "projects/saem-2026/slide-figures/slide-07/versions/version-000006--slide-07-create-draft"
+    },
+    "version-000007": {
+      "slideId": "slide-08",
+      "dir": "projects/saem-2026/slide-figures/slide-08/versions/version-000007--slide-08-create-draft"
+    },
+    "version-000008": {
+      "slideId": "slide-09",
+      "dir": "projects/saem-2026/slide-figures/slide-09/versions/version-000008--slide-09-create-draft"
+    },
+    "version-000009": {
+      "slideId": "slide-10",
+      "dir": "projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft"
+    },
+    "version-000010": {
+      "slideId": "slide-11",
+      "dir": "projects/saem-2026/slide-figures/slide-11/versions/version-000010--slide-11-create-draft"
+    },
+    "version-000011": {
+      "slideId": "slide-12",
+      "dir": "projects/saem-2026/slide-figures/slide-12/versions/version-000011--slide-12-create-draft"
+    },
+    "version-000012": {
+      "slideId": "slide-13",
+      "dir": "projects/saem-2026/slide-figures/slide-13/versions/version-000012--slide-13-create-draft"
+    },
+    "version-000013": {
+      "slideId": "slide-14",
+      "dir": "projects/saem-2026/slide-figures/slide-14/versions/version-000013--slide-14-create-draft"
+    },
+    "version-000014": {
+      "slideId": "slide-15",
+      "dir": "projects/saem-2026/slide-figures/slide-15/versions/version-000014--slide-15-create-draft"
+    },
+    "version-000015": {
+      "slideId": "slide-02-authors",
+      "dir": "projects/saem-2026/slide-figures/slide-02-authors/versions/version-000015--slide-02-authors-intro"
+    }
+  }
+}

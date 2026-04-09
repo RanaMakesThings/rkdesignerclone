@@ -1,5 +1,4 @@
 import type { ProjectManifest } from "@/lib/presentation/studio-types";
-import { studioSlideHref } from "@/lib/presentation/links";
 
 import { NavLink } from "./nav-link";
 import { ProjectBreadcrumb } from "./project-breadcrumb";
@@ -18,18 +17,26 @@ export function ProjectShell({
   projects: Array<{ projectId: string; title: string }>;
   children: React.ReactNode;
 }) {
+  const isCustomGpt = project.projectId === "customgpt";
+  const studioTheme = project.studioTheme?.trim() || null;
+  const usesNightmodeShell = studioTheme === "nightmode" || project.projectId === "customgpt";
   const activeSlides = project.slides.filter((slide) => slide.status === "active");
   const deprecatedSlides = project.slides.filter((slide) => slide.status === "deprecated");
 
   return (
-    <div className="app-shell page-enter">
+    <div
+      className={`app-shell page-enter${
+        usesNightmodeShell ? " project-shell-nightmode project-shell-customgpt" : ""
+      }`}
+    >
       <aside className="shell-sidebar">
         <div className="brand-block">
           <p className="eyebrow">Designer Studio</p>
           <h1>{project.title}</h1>
           <p className="sidebar-copy">
-            Local-first deck explorer for canonical truth, discovered work, and the
-            current deck backbone.
+            {isCustomGpt
+              ? "Master deck workspace for the talk, its mockups, promoted variants, and source files."
+              : "Local-first deck explorer for canonical truth, discovered work, and the current deck backbone."}
           </p>
         </div>
 
@@ -46,9 +53,9 @@ export function ProjectShell({
         </div>
 
         <div className="sidebar-section">
-          <NavLink href={`/projects/${project.projectId}`} label="Overview" />
-          <NavLink href={`/projects/${project.projectId}/deck`} label="Deck" />
-          <NavLink href={`/projects/${project.projectId}/history`} label="History" />
+          <NavLink href={`/projects/${project.projectId}`} label="Overview" match="exact" />
+          <NavLink href={`/projects/${project.projectId}/deck`} label="Deck" match="exact" />
+          <NavLink href={`/projects/${project.projectId}/history`} label="History" match="exact" />
         </div>
 
         <div className="sidebar-section">
@@ -61,12 +68,9 @@ export function ProjectShell({
             {activeSlides.map((slide) => (
               <NavLink
                 key={slide.id}
-                href={
-                  project.projectId === "designer-health"
-                    ? studioSlideHref(slide.displayNumber, slide.id)
-                    : `/projects/${project.projectId}/slides/${slide.id}`
-                }
+                href={`/projects/${project.projectId}/slides/${slide.id}`}
                 label={`${slide.displayNumber} ${slide.title}`}
+                match="exact"
               />
             ))}
           </div>
@@ -79,12 +83,9 @@ export function ProjectShell({
               {deprecatedSlides.map((slide) => (
                 <NavLink
                   key={slide.id}
-                  href={
-                    project.projectId === "designer-health"
-                      ? studioSlideHref(slide.displayNumber, slide.id)
-                      : `/projects/${project.projectId}/slides/${slide.id}`
-                  }
+                  href={`/projects/${project.projectId}/slides/${slide.id}`}
                   label={`${slide.displayNumber} ${slide.title}`}
+                  match="exact"
                 />
               ))}
             </div>

@@ -109,6 +109,7 @@ export type SlideManifest = {
   importedSlides: number[];
   status: "active" | "deprecated";
   title: string;
+  specText?: string;
   header?: string;
   subheader?: string;
   purpose?: string;
@@ -201,6 +202,7 @@ export type ProjectManifest = {
   title: string;
   version: string;
   status: string;
+  studioTheme?: string | null;
   projectRoot: string;
   deckSpecPath: string;
   generatedAt: string;

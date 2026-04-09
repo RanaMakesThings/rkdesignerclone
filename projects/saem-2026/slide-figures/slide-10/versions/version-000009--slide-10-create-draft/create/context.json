@@ -1,0 +1,103 @@
+{
+  "slideId": "slide-10",
+  "displayNumber": "10",
+  "lane": "html",
+  "laneReason": "AI Needs Guardrails, Curation, and Privacy Discipline defaults to the template-seeded HTML lane in v1.",
+  "createdDraftVersion": true,
+  "draftVersionId": "version-000009",
+  "draftVersionDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft",
+  "projectRoot": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026",
+  "slideDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-10",
+  "deckSpecPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/deck-spec.json",
+  "packetPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-packets/slide-10-ai-needs-guardrails.md",
+  "packetText": "# Slide 10 — AI Needs Guardrails, Curation, and Privacy Discipline\n\n## Status\n\n- current deck numbering: slide 10\n- legacy source mapping: same as current\n- decision state: OPEN\n\n## Why this slide exists\n\n- keep the AI section credible\n- reassure skeptical educators\n- prevent the deck from sounding trend-driven\n\n## Locked slide thesis\n\nAI should be used as an emerging aid inside a governed educational system, not\nas an unsupervised replacement for faculty judgment.\n\n## Slide purpose brief\n\n- top claim:\n  AI needs guardrails\n- support claim:\n  privacy, curation, and oversight matter more once automation enters the loop\n- non-goals:\n  - do not make this a fear slide\n  - do not collapse into generic AI ethics boilerplate\n\n## Figure job\n\n- show governance clearly\n- balance promise with discipline\n- preserve the deck's modern tone\n\n## Locked copy\n\n- header:\n  `AI needs guardrails, curation, and privacy discipline.`\n- subheader:\n  `In educational workflows, human oversight becomes more important, not less.`\n- figure labels:\n  - `oversight`\n  - `privacy`\n  - `curation`\n\n## Visual rules\n\n- calm, structured, and faculty-facing\n- no stop signs or alarm visuals\n- no abstract matrix of buzzwords\n\n## Existing useful source assets\n\n- `inputs/microlearning_emergency_medicine_review.md`\n- `inputs/saem_microlearning_talk_outline.md`\n\n## Immediate next refinement\n\n- test a three-guardrail system\n- compare nested oversight rings with a governed workflow frame\n",
+  "noteReadmePath": null,
+  "noteReadmeText": "",
+  "deckSlide": {
+    "id": "slide-10",
+    "displayNumber": "10",
+    "importedSlides": [
+      10
+    ],
+    "status": "active",
+    "title": "AI Needs Guardrails, Curation, and Privacy Discipline",
+    "purpose": "make the AI section credible and educator-safe",
+    "header": "AI needs guardrails, curation, and privacy discipline.",
+    "subheader": "In educational workflows, human oversight becomes more important, not less.",
+    "takeaway": "AI should be framed as promising but emerging, and every workflow still needs human curation and governance.",
+    "figureRole": "Build a governance or guardrail frame that balances promise against oversight without killing the modern tone.",
+    "family": "guardrail framework",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "AI in education should be framed as promising rather than standard; privacy, oversight, and faculty curation remain core safeguards [6, 9, 15, 18]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-10-ai-needs-guardrails.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-10/manifest.json"
+    },
+    "selectedDirection": "Use a modern governance visual or triad that keeps the slide confident rather than fearful.",
+    "notes": [
+      "Avoid generic AI ethics iconography.",
+      "This slide should reassure the skeptics without draining energy from the deck."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "slideEntry": {
+    "id": "slide-10",
+    "displayNumber": "10",
+    "importedSlides": [
+      10
+    ],
+    "status": "active",
+    "title": "AI Needs Guardrails, Curation, and Privacy Discipline",
+    "purpose": "make the AI section credible and educator-safe",
+    "header": "AI needs guardrails, curation, and privacy discipline.",
+    "subheader": "In educational workflows, human oversight becomes more important, not less.",
+    "takeaway": "AI should be framed as promising but emerging, and every workflow still needs human curation and governance.",
+    "figureRole": "Build a governance or guardrail frame that balances promise against oversight without killing the modern tone.",
+    "family": "guardrail framework",
+    "buildStatus": "starter packet drafted; first mockup needed",
+    "proof": [
+      "AI in education should be framed as promising rather than standard; privacy, oversight, and faculty curation remain core safeguards [6, 9, 15, 18]."
+    ],
+    "paths": {
+      "packet": "projects/saem-2026/slide-packets/slide-10-ai-needs-guardrails.md",
+      "specs": [],
+      "stampedDir": null,
+      "assetsManifest": "projects/saem-2026/slide-assets/slide-10/manifest.json"
+    },
+    "selectedDirection": "Use a modern governance visual or triad that keeps the slide confident rather than fearful.",
+    "notes": [
+      "Avoid generic AI ethics iconography.",
+      "This slide should reassure the skeptics without draining energy from the deck."
+    ],
+    "selectedVariantId": null,
+    "variants": []
+  },
+  "adjacentSlides": [],
+  "referenceImagePaths": [],
+  "referenceFilePaths": [],
+  "referenceFileSnapshots": [],
+  "template": {
+    "templateId": "saem-annual-meeting-template-v1",
+    "templateDir": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1",
+    "contractPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/saem-deck-template.md",
+    "canonicalHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.html",
+    "canonicalPreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/templates/saem-annual-meeting-template-v1/shell-regions.json",
+    "seededTemplateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft/create/template.html",
+    "seededTemplatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft/create/template.png"
+  },
+  "seed": {
+    "generatedHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft/generated.html",
+    "previewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft/preview.png",
+    "templateHtmlPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft/create/template.html",
+    "templatePreviewPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft/create/template.png",
+    "shellRegionsPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft/create/shell-regions.json"
+  },
+  "createRequestPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-notes/slide-10/create-request.md",
+  "createRequestSnapshotPath": "/Users/rkhome/code/rkdesignerclone/projects/saem-2026/slide-figures/slide-10/versions/version-000009--slide-10-create-draft/create/create-request.snapshot.md"
+}

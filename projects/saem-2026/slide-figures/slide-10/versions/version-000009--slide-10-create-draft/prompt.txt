@@ -1,0 +1,116 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This slide belongs to a SAEM annual meeting talk on microlearning in emergency medicine.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Put all real content above the branded footer region so the SAEM26 logo/date block and skyline stay readable.
+- Do not obscure the lower-left logo block or the lower skyline/footer band.
+- Use inline CSS only.
+- Use inline SVG if helpful for lines, frameworks, diagrams, or geometry.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Style continuity:
+
+- Match the existing deck family: clean academic keynote, white or near-white canvas, deep navy typography, restrained SAEM blue and red accents, modern but calm.
+- Do not make this look like a browser page, product UI, hospital dashboard, or poster session handout.
+- Avoid cheesy stock-photo logic, cartoon medical iconography, or AI-hype visuals.
+
+Locked text:
+
+- Header: `AI needs guardrails, curation, and privacy discipline.`
+- Subheader: `In educational workflows, human oversight becomes more important, not less.`
+
+Slide contract:
+
+- Slide title: AI Needs Guardrails, Curation, and Privacy Discipline
+- Purpose: make the AI section credible and educator-safe
+- Takeaway: AI should be framed as promising but emerging, and every workflow still needs human curation and governance.
+- Figure role: Build a governance or guardrail frame that balances promise against oversight without killing the modern tone.
+- Visual family: guardrail framework
+- Selected direction: Use a modern governance visual or triad that keeps the slide confident rather than fearful.
+- Additional note: Avoid generic AI ethics iconography.
+- Additional note: This slide should reassure the skeptics without draining energy from the deck.
+
+Evidence and citations:
+
+- Preferred citation anchors: [6], [9], [15], [18]
+- AI in education should be framed as promising rather than standard; privacy, oversight, and faculty curation remain core safeguards [6, 9, 15, 18].
+- Where citations fit, render them as subtle evidence chips or compact bracket references.
+- Keep citation styling quiet and professional; they should support the claim, not dominate the slide.
+
+Reference images:
+
+- If reference images are attached, use them for family continuity, composition discipline, text density, and citation styling.
+- Do not literally copy the reference slides.
+
+Slide packet:
+
+# Slide 10 — AI Needs Guardrails, Curation, and Privacy Discipline
+
+## Status
+
+- current deck numbering: slide 10
+- legacy source mapping: same as current
+- decision state: OPEN
+
+## Why this slide exists
+
+- keep the AI section credible
+- reassure skeptical educators
+- prevent the deck from sounding trend-driven
+
+## Locked slide thesis
+
+AI should be used as an emerging aid inside a governed educational system, not
+as an unsupervised replacement for faculty judgment.
+
+## Slide purpose brief
+
+- top claim:
+  AI needs guardrails
+- support claim:
+  privacy, curation, and oversight matter more once automation enters the loop
+- non-goals:
+  - do not make this a fear slide
+  - do not collapse into generic AI ethics boilerplate
+
+## Figure job
+
+- show governance clearly
+- balance promise with discipline
+- preserve the deck's modern tone
+
+## Locked copy
+
+- header:
+  `AI needs guardrails, curation, and privacy discipline.`
+- subheader:
+  `In educational workflows, human oversight becomes more important, not less.`
+- figure labels:
+  - `oversight`
+  - `privacy`
+  - `curation`
+
+## Visual rules
+
+- calm, structured, and faculty-facing
+- no stop signs or alarm visuals
+- no abstract matrix of buzzwords
+
+## Existing useful source assets
+
+- `inputs/microlearning_emergency_medicine_review.md`
+- `inputs/saem_microlearning_talk_outline.md`
+
+## Immediate next refinement
+
+- test a three-guardrail system
+- compare nested oversight rings with a governed workflow frame
+
+Output:
+
+- Return one complete HTML document only.

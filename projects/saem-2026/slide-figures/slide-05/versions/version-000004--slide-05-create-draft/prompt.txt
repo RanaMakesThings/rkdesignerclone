@@ -1,0 +1,116 @@
+Create one finished 1920x1080 academic-conference slide as a self-contained HTML document.
+
+This slide belongs to a SAEM annual meeting talk on microlearning in emergency medicine.
+
+Hard requirements:
+
+- Use a full-slide background image layer with this exact element:
+  `<img class="shell" src="../../../../templates/saem-annual-meeting-template-v1/template.png" alt="" aria-hidden="true" />`
+- Put all real content above the branded footer region so the SAEM26 logo/date block and skyline stay readable.
+- Do not obscure the lower-left logo block or the lower skyline/footer band.
+- Use inline CSS only.
+- Use inline SVG if helpful for lines, frameworks, diagrams, or geometry.
+- Do not use external fonts, scripts, libraries, or remote assets.
+- Do not return markdown or explanation.
+
+Style continuity:
+
+- Match the existing deck family: clean academic keynote, white or near-white canvas, deep navy typography, restrained SAEM blue and red accents, modern but calm.
+- Do not make this look like a browser page, product UI, hospital dashboard, or poster session handout.
+- Avoid cheesy stock-photo logic, cartoon medical iconography, or AI-hype visuals.
+
+Locked text:
+
+- Header: `Repeated retrieval beats passive exposure.`
+- Subheader: `Daily questions and spaced review make retention more durable.`
+
+Slide contract:
+
+- Slide title: Repeated Retrieval Beats Passive Exposure
+- Purpose: make retrieval practice feel practical and evidence-based
+- Takeaway: Small repeated retrieval strengthens retention more reliably than one large passive exposure.
+- Figure role: Show a forgetting-curve or pulse-based rhythm that visually rewards repeated reactivation over single-session exposure.
+- Visual family: retrieval pulse graphic
+- Selected direction: Favor a calm, elegant retention graphic over a textbook forgetting-curve cliché.
+- Additional note: This slide should feel like one of the strongest evidence slides in the talk.
+- Additional note: Make the Anki-style logic intuitive without turning the slide into an app screenshot.
+
+Evidence and citations:
+
+- Preferred citation anchors: [11], [12], [20], [28]
+- Spaced repetition and repeated retrieval improve retention across health-professions education settings [11, 12, 20, 28].
+- Where citations fit, render them as subtle evidence chips or compact bracket references.
+- Keep citation styling quiet and professional; they should support the claim, not dominate the slide.
+
+Reference images:
+
+- If reference images are attached, use them for family continuity, composition discipline, text density, and citation styling.
+- Do not literally copy the reference slides.
+
+Slide packet:
+
+# Slide 5 — Repeated Retrieval Beats Passive Exposure
+
+## Status
+
+- current deck numbering: slide 5
+- legacy source mapping: same as current
+- decision state: OPEN
+
+## Why this slide exists
+
+- make retrieval practice concrete
+- show one of the strongest evidence-backed mechanisms in the deck
+- bridge theory to practice
+
+## Locked slide thesis
+
+Repeated retrieval and spaced review create more durable retention than one
+large passive exposure.
+
+## Slide purpose brief
+
+- top claim:
+  repeated retrieval is one of the strongest mechanisms in this talk
+- support claim:
+  daily questions and spaced review are practical versions of that mechanism
+- non-goals:
+  - do not show a literal app screenshot
+  - do not overload the slide with exam-prep language
+
+## Figure job
+
+- make the retention benefit visually intuitive
+- suggest pulses or reactivation over time
+- keep the slide elegant rather than textbook-like
+
+## Locked copy
+
+- header:
+  `Repeated retrieval beats passive exposure.`
+- subheader:
+  `Daily questions and spaced review make retention more durable.`
+- figure labels:
+  - `retrieve`
+  - `reactivate`
+  - `retain`
+
+## Visual rules
+
+- strong temporal rhythm
+- avoid generic forgetting-curve clip art
+- no app-store aesthetic
+
+## Existing useful source assets
+
+- `inputs/microlearning_emergency_medicine_review.md`
+- `inputs/saem_microlearning_talk_outline.md`
+
+## Immediate next refinement
+
+- test a pulse-based memory curve
+- compare a ladder of retrieval hits with a fading passive-exposure line
+
+Output:
+
+- Return one complete HTML document only.
